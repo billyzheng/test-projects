@@ -8,8 +8,8 @@
   #   name: win_baseline_1052_state_Name
   #   data: win_baseline_1052_state_Data
   #   type: win_baseline_1052_state_Type
-  debug:
-    msg: "hello world"
+  - debug:
+      msg: "hello world"
   when:
     win_baseline_1052_state_Manage
 # win baseline 1149 state
