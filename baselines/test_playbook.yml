@@ -1,7 +1,5 @@
 ---
 - name: "this is a test playbook"
   hosts: localhost
-  tasks:
-    - name: "print test"
-      debug:
-        msg: "hello world"
+  roles:
+    - win_baseline
