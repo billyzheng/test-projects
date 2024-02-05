@@ -2,4 +2,4 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - win
+    - win_baseline
