@@ -1,0 +1,50 @@
+---
+# tasks file for linux_baseline
+- name: "1911-state | Ensure the rhnsd service is disabled and stopped."
+  serivce:
+    name: linux_baseline_1911_state_Name
+    enabled: linux_baseline_1911_state_Enabled
+    state: linux_baseline_1911_state_State
+  ignore_errors: true
+  when: 
+    linux_baseline_1911_state_Manage
+
+- name: "17125-state | Ensure the sudo package is installed."
+  dnf:
+    name: linux_baseline_17125_state_Name
+    state: linux_baseline_17125_state_State
+  when:
+    linux_baseline_17125_state_Management
+
+- name: "7435-state | Ensure the fs.suid_dumpable sysctl is set to 0."
+  sysctl:
+    name: linux_baseline_7435_state_Name
+    value: linux_baseline_7435_state_value
+    state: linux_baseline_7435_state_State
+    reload: linux_baseline_7435_state_Reload
+  when:
+    linux_baseline_7435_state_Management
+
+- name: "7436-state | Ensure the kernel.randomize_va_space sysctl is set to 2."
+  sysctl:
+    name: linux_baseline_7436_state_Name
+    value: linux_baseline_7436_state_value
+    state: linux_baseline_7436_state_State
+    reload: linux_baseline_7436_state_Reload
+    sysctl: linux_baseline_7436_state_Sysctl_set
+  when: 
+    linux_baseline_7436_state_Management
+  
+- name: "9365-state | Ensure the xinetd package is removed."
+  dnf:
+    name: linux_baseline_9365_state_Name
+    state: linux_baseline_9365_state_State
+  when:
+    linux_baseline_9365_state_Management
+
+- name: "11328-state | Ensure the chrony package is installed."
+  dnf:
+    name: linux_baseline_11328_state_Name
+    state: linux_baseline_11328_state_State
+  when:
+    linux_baseline_11328_state_Management

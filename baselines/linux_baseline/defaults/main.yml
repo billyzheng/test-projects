@@ -1,0 +1,33 @@
+---
+# defaults file for linux_baseline
+
+# Linux_baseline_1911-state | Ensure the rhnsd service is disabled and stopped.
+linux_baseline_1911_state_Manage: ansible_distribute == "RedHat"
+linux_baseline_1911_state_Name: "rhnsd"
+linux_baseline_1911_state_Enabled: no
+linux_baseline_1911_state_State: stopped
+# Linux_baseline_17125-state | Ensure the sudo package is installed.
+linux_baseline_17125_state_Management: True
+linux_baseline_17125_state_Name: "sudo"
+linux_baseline_17125_state_State: present
+# Linux_baseline_7435-state | Ensure the fs.suid_dumpable sysctl is set to 0.
+linux_baseline_7435_state_Management: True
+linux_baseline_7435_state_Name: "fs.suid_dumpable"
+linux_baseline_7435_state_value: "0"
+linux_baseline_7435_state_State: present
+linux_baseline_7435_state_Reload: yes
+# Linux_baseline_7436-state | Ensure the kernel.randomize_va_space sysctl is set to 2.
+linux_baseline_7436_state_Management: True
+linux_baseline_7436_state_Name: "kernel.randomize_va_space"
+linux_baseline_7436_state_value: "2"
+linux_baseline_7436_state_State: present
+linux_baseline_7436_state_Reload: yes
+linux_baseline_7436_state_Sysctl_set: yes
+# Linux_baseline_9365-state | Ensure the xinetd package is removed.
+linux_baseline_9365_state_Management: True
+linux_baseline_9365_state_Name: xinetd
+linux_baseline_9365_state_State: adsent
+# Linux_baseline_11328-state | Ensure the chrony package is installed.
+linux_baseline_11328_state_Management: True
+linux_baseline_11328_state_Name: "chrony"
+linux_baseline_11328_state_State: present
