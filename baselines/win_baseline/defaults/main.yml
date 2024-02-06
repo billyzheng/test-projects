@@ -9,37 +9,37 @@ win_baseline_1052_state_Data: "0"
 win_baseline_1052_state_Type: string
 # "win_baseline_1149_state | Ensure 'Microsoft network client - Digitally sign communications (always)' is set to 'Enabled'.
 win_baseline_1149_state_Manage: True
-win_baseline_1149_state_Path: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters
+win_baseline_1149_state_Path: HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters
 win_baseline_1149_state_Name: "RequireSecuritySignature"
 win_baseline_1149_state_Data: "1"
 win_baseline_1149_state_Type: dword
 # win_baseline_1153_state | Ensure 'Network access: Do not allow anonymous enumeration of SAM accounts' is set to 'Enabled'.
 win_baseline_1153_state_Manage: True
-win_baseline_1153_state_Path: HKLM\System\Currentcontrolset\control\lsa
+win_baseline_1153_state_Path: HKLM:\System\Currentcontrolset\control\lsa
 win_baseline_1153_state_Name: "RestrictAnonymous"
 win_baseline_1153_state_Data: "1"
 win_baseline_1153_state_Type: dword
 # win_baseline_1155_state | Ensure 'Interactive logon: Number of previous logons to cache (in case domain controller is not available)' is set to '1'.
 win_baseline_1155_state_Manage: True
-win_baseline_1155_state_Path: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon
+win_baseline_1155_state_Path: HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon
 win_baseline_1155_state_Name: "CachedLogonsCount"
 win_baseline_1155_state_Data: "1"
 win_baseline_1155_state_Type: string
 # win_baseline_5263_state | Ensure 'No auto-restart with logged on users for scheduled automatic updates installations' is set to 'Disabled'win_baseline_263_state | Ensure 'No auto-restart with logged on users for scheduled automatic updates installations' is set to 'Disabled'.
 win_baseline_5263_state_Manage: True
-win_baseline_5263_state_Path: HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\WindowsUpdate\AU
+win_baseline_5263_state_Path: HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\AU
 win_baseline_5263_state_Name: "NoAutoRebootWithLoggedOnUsers"
 win_baseline_5263_state_Data: "0"
 win_baseline_5263_state_Type: dword
 # win_baseline_7805_state | Ensure 'Configure Automatic Updates' is set to 'Enabled'.
 win_baseline_7805_state_Manage: True
-win_baseline_7805_state_Path: HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\WindowsUpdate\AU
+win_baseline_7805_state_Path: HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\AU
 win_baseline_7805_state_Name: "NoAutoUpdate"
 win_baseline_7805_state_Data: "0"
 win_baseline_7805_state_Type: dword
 # win_baseline_8248_state | Ensure 'Allow Digest Authentication' is set to 'Enabled'.
 win_baseline_8248_state_Manage: True
-win_baseline_8248_state_Path: HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\WinRM\Client
+win_baseline_8248_state_Path: HKLM:\Software\Policies\Microsoft\Windows\WinRM\Client
 win_baseline_8248_state_Name: "AllowDigest"
 win_baseline_8248_state_Data: "0"
 win_baseline_8248_state_Type: dword
