@@ -59,6 +59,6 @@
     path: "{{ win_baseline_8248_state_Path }}"
     name: "{{ win_baseline_8248_state_Name }}"
     data: "{{ win_baseline_8248_state_Data }}"
-    type: "{{ in_baseline_8248_state_Type }}"
+    type: "{{ win_baseline_8248_state_Type }}"
   when:
     win_baseline_8248_state_Manage
