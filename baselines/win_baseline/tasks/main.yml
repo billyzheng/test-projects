@@ -1,6 +1,6 @@
 ---
 - name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)'"
-  win_security_policy:
+  ansible.windows.win_security_policy:
     section: "{{ win_baseline_1071_state_Section }}"
     key: "{{ win_baseline_1071_state_Key }}"
     value: "{{ win_baseline_1071_state_Value }}"
