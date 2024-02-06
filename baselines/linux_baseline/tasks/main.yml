@@ -1,7 +1,7 @@
 ---
 # tasks file for linux_baseline
 - name: "1911-state | Ensure the rhnsd service is disabled and stopped."
-  serivce:
+  service:
     name: "{{ linux_baseline_1911_state_Name }}"
     enabled: "{{ linux_baseline_1911_state_Enabled }}"
     state: "{{ linux_baseline_1911_state_State }}"
