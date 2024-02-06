@@ -5,10 +5,10 @@
 # win baseline 1052 state
 - name: "win_baseline_1052_state | Ensure 'Devices - Allowed to format and eject removable media' is set to 'Administrators'"
   win_regedit:
-    path: win_baseline_1052_state_Path
+    path: "{{ win_baseline_1052_state_Path }}"
     name: "AllocateDASD"
-    data: win_baseline_1052_state_Data
-    type: win_baseline_1052_state_Type
+    data: "{{ win_baseline_1052_state_Data }}"
+    type: "{{ win_baseline_1052_state_Type }}"
   when:
     win_baseline_1052_state_Manage
     
