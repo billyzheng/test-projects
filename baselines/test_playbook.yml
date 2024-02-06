@@ -1,4 +1,11 @@
 ---
 - name: "this is a test playbook"
+  hosts: localhost
+  vars:
+    ansible_port: 5985
+    ansible_connection: winrm
+    ansible_winrm_scheme: http
+    ansible_winrm_transport: ntlm
+    ansible_winrm_server_cert_validation: ignore
   roles:
     - win_baseline
