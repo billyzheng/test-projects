@@ -14,9 +14,6 @@
   register: result
   when:
     win_baseline_1052_state_Manage
-- name: "print:
-  debug:
-    msg: result
     
 # win baseline 1149 state
 # - name: "win_baseline_1149_state | Ensure 'Microsoft network client - Digitally sign communications (always)' is set to 'Enabled'"
