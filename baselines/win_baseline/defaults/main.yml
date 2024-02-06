@@ -1,6 +1,12 @@
 ---
 # defaults file for win
 
+# win baseline 1071 state | Ensure "Minimum password length" is set to "14 or more characters"
+win_baseline_1071_state_Manage: True
+win_baseline_1071_state_Section: "System Access"
+win_baseline_1071_state_Key: "MinimumPasswordLength"
+win_baseline_1071_state_Value: "14"
+
 # win_baseline_1052_state | Ensure 'Devices - Allowed to format and eject removable media' is set to 'Administrators'.
 win_baseline_1052_state_Manage: True
 win_baseline_1052_state_Path: 'HKLM:\Software\Microsoft\Windows NT\Currentversion\Winlogon'
