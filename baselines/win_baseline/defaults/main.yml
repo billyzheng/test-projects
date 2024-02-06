@@ -3,7 +3,7 @@
 
 # win_baseline_1052_state | Ensure 'Devices - Allowed to format and eject removable media' is set to 'Administrators'.
 win_baseline_1052_state_Manage: True
-win_baseline_1052_state_Path: HKLM:\Software\Microsoft\Windows NT\Currentversion\Winlogon
+win_baseline_1052_state_Path: "HKLM:\\Software\\Microsoft\\Windows NT\\Currentversion\\Winlogon"
 win_baseline_1052_state_Name: "AllocateDASD"
 win_baseline_1052_state_Data: "0"
 win_baseline_1052_state_Type: string
