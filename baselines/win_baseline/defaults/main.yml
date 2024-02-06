@@ -74,3 +74,6 @@ win_baseline_1134_state_Manage: True
 win_baseline_1134_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
 win_baseline_1134_state_Name: "LegalNoticeCaption"
 win_baseline_1134_state_Data: "This is an interest computer system of ABB Asea Brown Boveri Ltd"
+win_baseline_1134_state_Type: string
+
+
