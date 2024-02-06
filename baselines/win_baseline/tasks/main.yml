@@ -12,6 +12,7 @@
 - name: "win_baseline_1149_state | Ensure 'Microsoft network client - Digitally sign communications (always)' is set to 'Enabled'"
   win_regedit:
     path: "{{ win_baseline_1149_state_Path }}"
+    name: "{{ win_baseline_1149_state_Name}}"
     data: "{{ win_baseline_1149_state_Data }}"
     type: "{{ win_baseline_1149_state_Type }}"
   when:
