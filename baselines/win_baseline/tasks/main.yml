@@ -1,4 +1,7 @@
 ---
+- name: Create registry path MyCompany
+  ansible.windows.win_regedit:
+    path: HKLM:\Software\Microsoft\WindowsNT\Currentversion\Winlogon
 # win baseline 1052 state
 - name: "win_baseline_1052_state | Ensure 'Devices - Allowed to format and eject removable media' is set to 'Administrators'"
   win_regedit:
