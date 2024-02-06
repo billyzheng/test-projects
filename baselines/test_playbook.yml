@@ -1,5 +1,4 @@
 ---
 - name: "this is a test playbook"
-  hosts: 10.0.0.10
   roles:
     - win_baseline
