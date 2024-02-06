@@ -62,10 +62,31 @@
 #     type: "{{ win_baseline_8248_state_Type }}"
 #   when:
 #     win_baseline_8248_state_Manage
-- name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)'"
-  win_security_policy:
-    section: "{{ win_baseline_1071_state_Section }}"
-    key: "{{ win_baseline_1071_state_Key }}"
-    value: "{{ win_baseline_1071_state_Value }}"
+
+# Windows total playbooks
+
+# error:https://stackoverflow.com/questions/66335800/error-couldnt-resolve-module-action-this-often-indicates-a-misspelling-miss
+# - name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)'"
+#   win_security_policy:
+#     section: "{{ win_baseline_1071_state_Section }}"
+#     key: "{{ win_baseline_1071_state_Key }}"
+#     value: "{{ win_baseline_1071_state_Value }}"
+#   when:
+#     win_baseline_1071_state_Manage
+
+# - name: "win_baseline_1072 | Ensure 'Minimum password age' is set to '1 or more day(s)'"
+#   win_security_policy:
+#     section: "{{win_baseline_1072_state_Section }}"
+#     key: "{{ win_baseline_1072_state_Key }}"
+#     value: "{{ win_baseline_1072_state_Value }}"
+#   when:
+#     win_baseline_1072_state_Manage
+
+- name: "win_baseline_1091 | Ensure 'Interactive logon - Prompt user to change password before expiration' is set to 'between 5 and 14 days'"
+  win_regedit:
+    path: "{{ win_baseline_1091_state_Path }}"
+    name: "{{ win_baseline_1091_state_Name }}"
+    data: "{{ win_baseline_1091_state_Data }}"
+    type: "{{ win_baseline_1091_state_Type }}"
   when:
-    win_baseline_1071_state_Manage
+    win_baseline_1091_state_Manage

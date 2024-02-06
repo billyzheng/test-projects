@@ -1,12 +1,5 @@
 ---
 # defaults file for win
-
-# win baseline 1071 state | Ensure "Minimum password length" is set to "14 or more characters"
-win_baseline_1071_state_Manage: True
-win_baseline_1071_state_Section: "System Access"
-win_baseline_1071_state_Key: "MinimumPasswordLength"
-win_baseline_1071_state_Value: "14"
-
 # win_baseline_1052_state | Ensure 'Devices - Allowed to format and eject removable media' is set to 'Administrators'.
 win_baseline_1052_state_Manage: True
 win_baseline_1052_state_Path: 'HKLM:\Software\Microsoft\Windows NT\Currentversion\Winlogon'
@@ -49,3 +42,23 @@ win_baseline_8248_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WinRM\C
 win_baseline_8248_state_Name: "AllowDigest"
 win_baseline_8248_state_Data: "0"
 win_baseline_8248_state_Type: dword
+
+
+# win baseline 1071 state | Ensure "Minimum password length" is set to "14 or more characters"
+win_baseline_1071_state_Manage: True
+win_baseline_1071_state_Section: "System Access"
+win_baseline_1071_state_Key: "MinimumPasswordLength"
+win_baseline_1071_state_Value: "14"
+
+# win baseline 1072 state | Ensure "Minimum password age" is set to "1 or more days"
+win_baseline_1072_state_Manage: True
+win_baseline_1072_state_Section: "System Access"
+win_baseline_1072_state_Key: "MinimumPasswordAge"
+win_baseline_1072_state_Value: "1"
+
+# win baseline 1091 state | Ensure 'Interactive logon - Prompt user to change password before expiration' is set to 'between 5 and 14 days'
+win_baseline_1091_state_Manage: True
+win_baseline_1091_state_Path: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon'
+win_baseline_1091_state_Name: "PasswordExpiryWarning"
+win_baseline_1091_state_Data: "14"
+win_baseline_1091_state_Type: dword
