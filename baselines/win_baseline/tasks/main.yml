@@ -149,3 +149,5 @@
     name: "{{ win_baseline_1169_state_Name }}"
     data: "{{ win_baseline_1169_state_Data }}"
     type:  "{{ win_baseline_1169_state_Type }}"
+  when:
+    win_baseline_1169_state_Manage
