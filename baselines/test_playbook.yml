@@ -4,7 +4,3 @@
   gather_facts: yes
   roles:
     - win_baseline
-  # tasks:
-  #   - name: Display gathered facts
-  #     debug:
-  #       var: ansible_facts
