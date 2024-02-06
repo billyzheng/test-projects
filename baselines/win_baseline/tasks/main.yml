@@ -8,9 +8,7 @@
   #   name: win_baseline_1052_state_Name
   #   data: win_baseline_1052_state_Data
   #   type: win_baseline_1052_state_Type
-  ansible.windows.win_powershell:
-    script: |
-      echo "Hello World"
+  ansible.builtin.setup:
   when:
     win_baseline_1052_state_Manage
 # win baseline 1149 state
