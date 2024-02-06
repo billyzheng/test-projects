@@ -1,6 +1,6 @@
 ---
 - name: "this is a test playbook"
-  hosts: localhost
+  hosts: 10.0.0.10
   gather_facts: yes
   roles:
     - win_baseline
