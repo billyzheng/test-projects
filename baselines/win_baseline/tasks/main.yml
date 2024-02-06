@@ -3,15 +3,11 @@
 
 # win baseline 1052 state
 - name: "win_baseline_1052_state | Ensure 'Devices - Allowed to format and eject removable media' is set to 'Administrators'"
-  # win_regedit:
-  #   path: HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\Currentversion\Winlogon
-  #   name: win_baseline_1052_state_Name
-  #   data: win_baseline_1052_state_Data
-  #   type: string
-  win_shell: echo "hello world"
-  args:
-    exexutable: cmd
-  register: result
+  win_regedit:
+    path: win_baseline_1052_state_Path
+    name: win_baseline_1052_state_Name
+    data: win_baseline_1052_state_Data
+    type: string
   when:
     win_baseline_1052_state_Manage
     
