@@ -2,8 +2,8 @@
 - name: "this is a test playbook"
   hosts: localhost
   gather_facts: yes
-  roles:
-    - win_baseline
+  # roles:
+  #   - win_baseline
   tasks:
     - name: Display gathered facts
       debug:
