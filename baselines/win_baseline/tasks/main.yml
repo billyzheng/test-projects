@@ -1,15 +1,23 @@
 ---
 # tasks file for win
+- name: Create registry path MyCompany
+  ansible.windows.win_regedit:
+    path: HKCU:\Software\MyCompany
 
+- name: Add or update registry path MyCompany, with entry 'hello', and containing 'world'
+  ansible.windows.win_regedit:
+    path: HKCU:\Software\MyCompany
+    name: hello
+    data: world
 # win baseline 1052 state
-- name: "win_baseline_1052_state | Ensure 'Devices - Allowed to format and eject removable media' is set to 'Administrators'"
-  win_regedit:
-    path: win_baseline_1052_state_Path
-    name: win_baseline_1052_state_Name
-    data: win_baseline_1052_state_Data
-    type: string
-  when:
-    win_baseline_1052_state_Manage
+# - name: "win_baseline_1052_state | Ensure 'Devices - Allowed to format and eject removable media' is set to 'Administrators'"
+#   win_regedit:
+#     path: win_baseline_1052_state_Path
+#     name: win_baseline_1052_state_Name
+#     data: win_baseline_1052_state_Data
+#     type: string
+#   when:
+#     win_baseline_1052_state_Manage
     
 # win baseline 1149 state
 # - name: "win_baseline_1149_state | Ensure 'Microsoft network client - Digitally sign communications (always)' is set to 'Enabled'"
