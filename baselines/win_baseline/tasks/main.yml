@@ -8,7 +8,7 @@
   #   name: win_baseline_1052_state_Name
   #   data: win_baseline_1052_state_Data
   #   type: string
-  win_command: echo "hello world"
+  win_shell: echo "hello world"
   when:
     win_baseline_1052_state_Manage
 # win baseline 1149 state
