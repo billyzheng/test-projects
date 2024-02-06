@@ -11,53 +11,53 @@
 # win baseline 1149 state
 - name: "win_baseline_1149_state | Ensure 'Microsoft network client - Digitally sign communications (always)' is set to 'Enabled'"
   win_regedit:
-    path: "{{win_baseline_1149_state_Path}}"
-    data: "{{win_baseline_1149_state_Data}}"
-    type: "{{win_baseline_1149_state_Type}}"
+    path: "{{ win_baseline_1149_state_Path }}"
+    data: "{{ win_baseline_1149_state_Data }}"
+    type: "{{ win_baseline_1149_state_Type }}"
   when:
     win_baseline_1149_state_Manage
 # win baseline 1153 state
 - name: "win_baseline_1153_state | Ensure 'Network access: Do not allow anonymous enumeration of SAM accounts' is set to 'Enabled'"
   win_regedit:
-    path: "{{win_baseline_1153_state_Path}}"
-    name: "{{win_baseline_1153_state_Name}}"
-    data: "{{win_baseline_1153_state_Data}}"
-    type: "{{win_baseline_1153_state_Type}}"
+    path: "{{ win_baseline_1153_state_Path }}"
+    name: "{{ win_baseline_1153_state_Name }}"
+    data: "{{ win_baseline_1153_state_Data }}"
+    type: "{{ win_baseline_1153_state_Type }}"
   when:
     win_baseline_1153_state_Manage
 # win baseline 1155 state
 - name: "win_baseline_1155_state | Ensure 'Interactive logon: Number of previous logons to cache (in case domain controller is not available)' is set to '1'"
   win_regedit:
-    path: "{{win_baseline_1155_state_Path}}"
-    name: "{{win_baseline_1155_state_Name}}"
-    data: "{{win_baseline_1155_state_Data}}"
-    type: "{{win_baseline_1155_state_Type}}"
+    path: "{{ win_baseline_1155_state_Path }}"
+    name: "{{ win_baseline_1155_state_Name }}"
+    data: "{{ win_baseline_1155_state_Data }}"
+    type: "{{ win_baseline_1155_state_Type }}"
   when:
     win_baseline_1155_state_Manage
 # win_baseline 5263 state
 - name: "win_baseline_5263_state | Ensure 'No auto-restart with logged on users for scheduled automatic updates installations' is set to 'Disabled'"
   win_regedit:
-    path: "{{win_baseline_5263_state_Path}}"
-    name: "{{win_baseline_5263_state_Name}}"
-    data: "{{win_baseline_5263_state_Data}}"
-    type: "{{win_baseline_5263_state_Type}}"
+    path: "{{ win_baseline_5263_state_Path }}"
+    name: "{{ win_baseline_5263_state_Name }}"
+    data: "{{ win_baseline_5263_state_Data }}"
+    type: "{{ win_baseline_5263_state_Type }}"
   when:
     win_baseline_5263_state_Manage
 # win baseline 7805 state
 - name: "win_baseline_7805_state | Ensure 'Configure Automatic Updates' is set to 'Enabled'"
   win_regedit:
-    path: "{{win_baseline_7805_state_Path}}"
-    name: "{{win_baseline_7805_state_Name}}"
-    data: "{{win_baseline_7805_state_Data}}"
-    type: "{{win_baseline_7805_state_Type}}"
+    path: "{{ win_baseline_7805_state_Path }}"
+    name: "{{ win_baseline_7805_state_Name }}"
+    data: "{{ win_baseline_7805_state_Data }}"
+    type: "{{ win_baseline_7805_state_Type }}"
   when:
     win_baseline_7805_state_Manage
 # win baseline 8248 state
 - name: "win_baseline_8248_state | Ensure 'Allow Digest Authentication' is set to 'Enabled'"
   win_regedit:
-    path: "{{win_baseline_8248_state_Path}}"
-    name: "{{win_baseline_8248_state_Name}}"
-    data: "{{win_baseline_8248_state_Data}}"
-    type: "{{win_baseline_8248_state_Type}}"
+    path: "{{ win_baseline_8248_state_Path }}"
+    name: "{{ win_baseline_8248_state_Name }}"
+    data: "{{ win_baseline_8248_state_Data }}"
+    type: "{{ in_baseline_8248_state_Type }}"
   when:
     win_baseline_8248_state_Manage
