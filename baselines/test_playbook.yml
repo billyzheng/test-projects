@@ -3,4 +3,4 @@
   hosts: 10.0.0.10
   gather_facts: yes
   roles:
-    - win_baseline
+    - linux_baseline
