@@ -9,8 +9,14 @@
   #   data: win_baseline_1052_state_Data
   #   type: string
   win_shell: echo "hello world"
+  args:
+    exexutable: cmd
+  register: result
   when:
     win_baseline_1052_state_Manage
+- name: "print:
+  debug:
+    result
 # win baseline 1149 state
 # - name: "win_baseline_1149_state | Ensure 'Microsoft network client - Digitally sign communications (always)' is set to 'Enabled'"
 #   win_regedit:
