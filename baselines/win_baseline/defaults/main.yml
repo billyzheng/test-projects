@@ -76,4 +76,23 @@ win_baseline_1134_state_Name: "LegalNoticeCaption"
 win_baseline_1134_state_Data: "This is an interest computer system of ABB Asea Brown Boveri Ltd"
 win_baseline_1134_state_Type: string
 
+# win baseline 1156 state | Ensure 'Audit - Shut down system immediately if unable to log security audits' is set to 'Disabled'
+win_baseline_1156_state_Manage: True
+win_baseline_1156_state_Path: 'HKLM:\System\CurrentControlSet\Control\Lsa'
+win_baseline_1156_state_Name: "CrashOnAuditFail"
+win_baseline_1156_state_Data: "0"
+win_baseline_1156_state_Type: dword
 
+# win baseline 1162 state | Ensure 'Devices: Restrict floppy access to locally logged-on user only' is set to 'Enabled'"
+win_baseline_1162_state_Manage: True
+win_baseline_1162_state_Path: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon'
+win_baseline_1162_state_Name: "Allocatefloppies"
+win_baseline_1162_state_Data: "1"
+win_baseline_1162_state_Type: dword
+
+# win baseline 1163 state | Ensure 'Devices - Prevent users from installing printer drivers' is set to 'Enabled'
+win_baseline_1163_state_Manage: True
+win_baseline_1163_state_Path: 'HKLM:\HKLM:\SYSTEM\Currentcontrolset\Control\Print\Providers\Lanman Print Services\servers'
+win_baseline_1163_state_Name: "addPrinterDrivers"
+win_baseline_1163_state_Data: "1"
+win_baseline_1163_state_Type: dword
