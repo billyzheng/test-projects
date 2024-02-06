@@ -82,7 +82,7 @@
 #   when:
 #     win_baseline_1072_state_Manage
 
-- name: "win_baseline_1091 | Ensure 'Interactive logon - Prompt user to change password before expiration' is set to 'between 5 and 14 days'"
+- name: "win_baseline_1091_state | Ensure 'Interactive logon - Prompt user to change password before expiration' is set to 'between 5 and 14 days'"
   win_regedit:
     path: "{{ win_baseline_1091_state_Path }}"
     name: "{{ win_baseline_1091_state_Name }}"
@@ -90,3 +90,19 @@
     type: "{{ win_baseline_1091_state_Type }}"
   when:
     win_baseline_1091_state_Manage
+
+# error
+# - name: "win_baseline_1092_state | Ensure 'Password must meet complexity requirements' is set to 'Enabled'"
+#   win_security_policy:
+#     section: "{{ win_baseline_1092_state_Section }}"
+#     key: "{{ win_baseline_1092_state_Key }}"
+#     value: "{{ win_baseline_1092_state_Value }}"
+
+- name: "win_baseline_1134_state | Ensure 'Logon banner title' is ser to 'This is an interest computer system of ABB Asea Brown Boveri Ltd'"
+  win_regedit:
+    path: "{{ win_baseline_1134_state_Path }}"
+    name: "{{ win_baseline_1134_state_Name }}"
+    data: "{{ win_baseline_1134_state_Data }}"
+    type: "{{ win_baseline_1134_state_Type }}"
+  when:
+    win_baseline_1134_state_Manage
