@@ -8,8 +8,8 @@
   #   name: win_baseline_1052_state_Name
   #   data: win_baseline_1052_state_Data
   #   type: win_baseline_1052_state_Type
-  ansible.builtin.setup:
-    fact_path: C:\Users\azureuser\Desktop\
+  ansible.builtin.gather_facts:
+    facts: true
   when:
     win_baseline_1052_state_Manage
 # win baseline 1149 state
