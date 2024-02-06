@@ -38,8 +38,8 @@
 - name: "win_baseline_5263_state | Ensure 'No auto-restart with logged on users for scheduled automatic updates installations' is set to 'Disabled'"
   win_regedit:
     path: "{{win_baseline_5263_state_Path}}"
-    name: "{{winbaseline_5263_state_Name}}"
-    data: "{{winbaseline_5263_state_Data}}"
+    name: "{{win_baseline_5263_state_Name}}"
+    data: "{{win_baseline_5263_state_Data}}"
     type: "{{win_baseline_5263_state_Type}}"
   when:
     win_baseline_5263_state_Manage
