@@ -9,6 +9,10 @@
   #   data: win_baseline_1052_state_Data
   #   type: win_baseline_1052_state_Type
   ansible.builtin.setup:
+    gather_subset:
+      - '!all'
+      - '!<any valid subset>'
+      - facter
   when:
     win_baseline_1052_state_Manage
 # win baseline 1149 state
