@@ -1,10 +1,4 @@
 ---
-- name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)'"
-  win_security_policy:
-    section: "{{ win_baseline_1071_state_Section }}"
-    key: "{{ win_baseline_1071_state_Key }}"
-    value: "{{ win_baseline_1071_state_Value }}"
-
 # # win baseline 1052 state
 # - name: "win_baseline_1052_state | Ensure 'Devices - Allowed to format and eject removable media' is set to 'Administrators'"
 #   win_regedit:
@@ -68,3 +62,10 @@
 #     type: "{{ win_baseline_8248_state_Type }}"
 #   when:
 #     win_baseline_8248_state_Manage
+- name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)'"
+  win_security_policy:
+    section: "{{ win_baseline_1071_state_Section }}"
+    key: "{{ win_baseline_1071_state_Key }}"
+    value: "{{ win_baseline_1071_state_Value }}"
+  when:
+    win_baseline_1071_state_Manage
