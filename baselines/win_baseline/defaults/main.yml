@@ -104,3 +104,9 @@ win_baseline_1164_state_Name: "NoLMHash"
 win_baseline_1164_state_Data: "1"
 win_baseline_1164_state_Type: dword
 
+# win baseline 1169 state | Ensure 'MSS - (AutoAdminLogon) Enable Automatic Logon (not recommended)' is set to 'Disabled'"
+win_baseline_1169_state_Manage: True
+win_baseline_1169_state_Path: 'HKLM:\Software\Microsoft\Windows Nt\Currentversion\Winlogon'
+win_baseline_1169_state_Name: "AutoAdminLogon"
+win_baseline_1169_state_Data: "0"
+win_baseline_1169_state_Type: string
