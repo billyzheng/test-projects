@@ -15,7 +15,7 @@
     data: "{{win_baseline_1149_state_Data}}"
     type: "{{win_baseline_1149_state_Type}}"
   when:
-    win_baseline_114_state9_Manage
+    win_baseline_114_state_Manage
 # win baseline 1153 state
 - name: "win_baseline_1153_state | Ensure 'Network access: Do not allow anonymous enumeration of SAM accounts' is set to 'Enabled'"
   win_regedit:
