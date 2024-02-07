@@ -664,12 +664,18 @@
 #   debug:
 #     var: privilege_info
 
-- name: "win_baseline_1071_state"
-  win_security_policy:
+# - name: "win_baseline_1071_state"
+#   win_security_policy:
+#     section: System Access
+#     key: MinimumPasswordLength
+#     value: 14 #16
+#   tags:
+#   - level_1
+#   - rule_1.1.4
+
+- name: Set the maximum password age
+  community.windows.win_security_policy:
     section: System Access
-    key: MinimumPasswordLength
-    value: 14 #16
-  tags:
-  - level_1
-  - rule_1.1.4
+    key: MaximumPasswordAge
+    value: 15
 
