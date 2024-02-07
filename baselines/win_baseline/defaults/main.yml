@@ -53,7 +53,7 @@ win_baseline_1071_state_Value: "14"
 win_baseline_1072_state_Manage: True
 win_baseline_1072_state_Section: "System Access"
 win_baseline_1072_state_Key: "MinimumPasswordAge"
-win_baseline_1072_state_Value: "2"
+win_baseline_1072_state_Value: "1"
 
 # win baseline 1091 state | Ensure 'Interactive logon - Prompt user to change password before expiration' is set to 'between 5 and 14 days'
 win_baseline_1091_state_Manage: True
