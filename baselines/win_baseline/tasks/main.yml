@@ -649,10 +649,10 @@
 #     win_baseline_2183_state_Manage
 
 - name: Export local security policy
-  win_shell: echo "hello world"
-  register: Message
+  win_shell: secedit /export /cfg C:\temp\secpol.cfg
+  register: result
 
-- name: Print the message
+- name: Show output
   debug:
-    var: Message.stdout_lines
+    var: result.stdout_lines
 
