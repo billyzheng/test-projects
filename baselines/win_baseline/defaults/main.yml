@@ -187,3 +187,18 @@ win_baseline_1195_state_Path: 'HKLM:\System\Currentcontrolset\Services\Netbt\Par
 win_baseline_1195_state_Name: "NoNameReleaseOnDemand"
 win_baseline_1195_state_Data: "1"
 win_baseline_1195_state_Type: dword
+
+# win_baseline_1196_state | Ensure 'MSS - (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled - 5 or fewer seconds'
+win_baseline_1196_state_Manage: True
+win_baseline_1196_state_Path: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon'
+win_baseline_1196_state_Name: "ScreenSaverGracePeriod"
+win_baseline_1196_state_Data: "5"
+win_baseline_1196_state_Type: dword
+
+
+# win_baseline_1197 | Ensure 'Network access - Do not allow anonymous enumeration of SAM accounts' is set to 'Enabled'
+win_baseline_1197_state_Manage: True
+win_baseline_1197_state_Path: 'HKLM:\System\Currentcontrolset\Control\Lsa'
+win_baseline_1197_state_Name: "RestrictAnonymous"
+win_baseline_1197_state_Data: "1"
+win_baseline_1197_state_Type: dword
