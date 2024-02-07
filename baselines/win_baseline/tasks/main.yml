@@ -83,14 +83,6 @@
   when:
     win_baseline_1072_state_Manage
 
-# - name: "win_baseline_1072 | Ensure 'Minimum password age' is set to '1 or more day(s)'"
-#   win_security_policy:
-#     section: "{{win_baseline_1072_state_Section }}"
-#     key: "{{ win_baseline_1072_state_Key }}"
-#     value: "{{ win_baseline_1072_state_Value }}"
-#   when:
-#     win_baseline_1072_state_Manage
-
 # - name: "win_baseline_1091_state | Ensure 'Interactive logon - Prompt user to change password before expiration' is set to 'between 5 and 14 days'"
 #   win_regedit:
 #     path: "{{ win_baseline_1091_state_Path }}"
@@ -99,6 +91,14 @@
 #     type: "{{ win_baseline_1091_state_Type }}"
 #   when:
 #     win_baseline_1091_state_Manage
+
+- name: "win_baseline_1115_state | Ensure 'Password Complexity Requirements' is set to 'Enabled'"
+  win_security_policy:
+    section: "{{ win_baseline_1115_state_Section }}"
+    key: "{{ win_baseline_1115_state_Key }}"
+    value: "{{ win_baseline_1115_state_Value }}"
+  when:
+    win_baseline_1115_state_Manage
 
 # ! error
 # - name: "win_baseline_1092_state | Ensure 'Password must meet complexity requirements' is set to 'Enabled'"
