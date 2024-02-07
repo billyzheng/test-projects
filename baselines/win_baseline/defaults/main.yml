@@ -53,13 +53,13 @@ win_baseline_1071_state_Value: "14"
 win_baseline_1072_state_Manage: True
 win_baseline_1072_state_Section: "System Access"
 win_baseline_1072_state_Key: "MinimumPasswordAge"
-win_baseline_1072_state_Value: "1"
+win_baseline_1072_state_Value: "2"
 
 # win baseline 1091 state | Ensure 'Interactive logon - Prompt user to change password before expiration' is set to 'between 5 and 14 days'
 win_baseline_1091_state_Manage: True
 win_baseline_1091_state_Path: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon'
 win_baseline_1091_state_Name: "PasswordExpiryWarning"
-win_baseline_1091_state_Data: "20"
+win_baseline_1091_state_Data: "14"
 win_baseline_1091_state_Type: dword
 
 # win baseline 1092 state | Ensure 'Password must meet complexity requirements' is set to 'Enabled'
@@ -67,12 +67,6 @@ win_baseline_1092_state_Manage: True
 win_baseline_1092_state_Section: "System Access"
 win_baseline_1092_state_Key: "PasswordComplexity"
 win_baseline_1092_state_Value: "1"
-
-# win_baseline_1115_state | Ensure 'Password Complexity Requirements' is set to 'Enabled'
-win_baseline_1115_state_Manage: True
-win_baseline_1115_state_Section: "System Access"
-win_baseline_1115_state_Key: "PasswordComplexity"
-win_baseline_1115_state_Value: ""
 
 # win baseline 1134 state | Ensure 'Logon banner title' is ser to 'This is an interest computer system of ABB Asea Brown Boveri Ltd'
 win_baseline_1134_state_Manage: True
