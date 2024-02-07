@@ -350,3 +350,31 @@ win_baseline_1386_state_Path: 'HKLM:\System\Currentcontrolset\Control\Lsa'
 win_baseline_1386_state_Name: "ForceGuest"
 win_baseline_1386_state_Data: "0"
 win_baseline_1386_state_Type: dword
+
+# win_baseline_1387_state | Ensure 'Network security - LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM&NTLM'
+win_baseline_1387_state_Manage: True
+win_baseline_1387_state_Path: 'HKLM:\System\Currentcontrolset\Control\Lsa'
+win_baseline_1387_state_Name: "LmCompatibilityLevel"
+win_baseline_1387_state_Data: "5"
+win_baseline_1387_state_Type: dword
+
+# win_baseline_1388_state | Ensure 'Network security - LDAP client signing requirements' is set to 'Negotiate signing' or higher'
+win_baseline_1388_state_Manage: True
+win_baseline_1388_state_Path: 'HKLM:\System\Currentcontrolset\Services\LDAP'
+win_baseline_1388_state_Name: "LDAPClientIntegrity"
+win_baseline_1388_state_Data: "2"
+win_baseline_1388_state_Type: dword
+
+# win_baseline_1388_state | Ensure 'Network security - Minimum session security for NTLM SSP based (including secure RPC) clients' is set to 'Require NTLMv2 session security, Require 128-bit encryption'
+win_baseline_1389_state_Manage: True
+win_baseline_1389_state_Path: 'HKLM:\System\Currentcontrolset\Control\Lsa\MSV1_0'
+win_baseline_1389_state_Name: "NTLMMinClientSec"
+win_baseline_1389_state_Data: "537395200"
+win_baseline_1389_state_Type: dword
+
+# win_baseline_1390_state | Ensure 'Network security - Minimum session security for NTLM SSP based (including secure RPC) servers' is set to 'Require NTLMv2 session security, Require 128-bit encryption'
+win_baseline_1390_state_Manage: True
+win_baseline_1390_state_Path: 'HKLM:\System\Currentcontrolset\Control\Lsa\MSV1_0'
+win_baseline_1390_state_Name: "NTLMMinServerSec"
+win_baseline_1390_state_Data: "537395200"
+win_baseline_1390_state_Type: dword
