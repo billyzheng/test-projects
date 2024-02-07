@@ -293,3 +293,31 @@ win_baseline_1376_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\P
 win_baseline_1376_state_Name: "DisableCAD"
 win_baseline_1376_state_Data: "0"
 win_baseline_1376_state_Type: dword
+
+# win_baseline_1177_state | Ensure 'Interactive logon - Require Domain Controller Authentication to unlock workstation' is set to 'Enabled'
+win_baseline_1377_state_Manage: True
+win_baseline_1377_state_Path: 'HKLM:\Software\Microsoft\Windows Nt\Currentversion\Winlogon'
+win_baseline_1377_state_Name: "ForceUnlockLogon"
+win_baseline_1377_state_Data: "1"
+win_baseline_1377_state_Type: dword
+
+# win_baseline_1178_state | Ensure 'Interactive logon - Smart card removal behavior' is set to 'Lock Workstation'
+win_baseline_1378_state_Manage: True
+win_baseline_1378_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\'
+win_baseline_1378_state_Name: "Winlogon (ScRemoveOption) Registry Key"
+win_baseline_1378_state_Data: "1"
+win_baseline_1378_state_Type: dword
+
+# win_baseline_1379_state | Ensure 'Microsoft network client - Digitally sign communications (if server agrees)' is set to 'Enabled'
+win_baseline_1379_state_Manage: True
+win_baseline_1379_state_Path: 'HKLM:\System\Currentcontrolset\Services\LanmanWorkstation\Parameters'
+win_baseline_1379_state_Name: "EnableSecuritySignature"
+win_baseline_1379_state_Data: "1"
+win_baseline_1379_state_Type: dword
+
+# win_baseline_1380_state | Ensure 'Microsoft network client - Send unencrypted password to third-party SMB servers' is set to 'Disabled'
+win_baseline_1380_state_Manage: True
+win_baseline_1380_state_Path: 'HKLM:\System\Currentcontrolset\Services\LanmanWorkstation\Parameters'
+win_baseline_1380_state_Name: "EnablePlainTextPassword"
+win_baseline_1380_state_Data: "0"
+win_baseline_1380_state_Type: dword
