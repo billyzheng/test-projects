@@ -664,19 +664,12 @@
 #   debug:
 #     var: privilege_info
 
-- name: Get Local Security Policy
-  win_command: secedit /export /cfg C:\secpol.cfg
-
-- name: Read Security Policy File
-  slurp:
-    src: C:\secpol.cfg
-  register: policy_file
-
-- name: Parse Security Policy
-  set_fact:
-    privilege_info: "{{ policy_file['content'] | b64decode | regex_findall('SeIncreaseQuotaPrivilege\\\\n\\s+Accounts:\\\\n\\s+(.*)') }}"
-
-- name: Display Privilege Info
-  debug:
-    var: privilege_info
+- name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)' [GSA-16]"
+  win_security_policy:
+    section: System Access
+    key: MinimumPasswordLength
+    value: 14 #16
+  tags:
+  - level_1
+  - rule_1.1.4
 
