@@ -476,6 +476,7 @@ win_baseline_1514_state_Manage: True
 win_baseline_1514_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows NT\Rpc'
 win_baseline_1514_state_Name: "RestrictRemoteClients"
 win_baseline_1514_state_Data: "1"
+win_baseline_1514_state_Type: dword
 
 # win_baseline_2181_state | Ensure 'Access this computer from the network' is set to 'Administrators, Authenticated Users'
 win_baseline_2181_state_Manage: True
