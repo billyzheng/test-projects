@@ -378,3 +378,32 @@ win_baseline_1390_state_Path: 'HKLM:\System\Currentcontrolset\Control\Lsa\MSV1_0
 win_baseline_1390_state_Name: "NTLMMinServerSec"
 win_baseline_1390_state_Data: "537395200"
 win_baseline_1390_state_Type: dword
+
+# win_baseline_1391_state | Ensure 'Recovery Console: Allow automatic administrative logon' is set to 'Disabled'
+win_baseline_1391_state_Manage: True
+win_baseline_1391_state_Path: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Setup\RecoveryConsole'
+win_baseline_1391_state_Name: "SecurityLevel"
+win_baseline_1391_state_Data: "0"
+win_baseline_1391_state_Type: dword
+
+# win_baseline_1392_state | Ensure 'Recovery Console: Allow floppy copy and access to all drives and all folders' is set to 'Disabled'
+win_baseline_1392_state_Manage: True
+win_baseline_1392_state_Path: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Setup\RecoveryConsole'
+win_baseline_1392_state_Name: "SetCommand"
+win_baseline_1392_state_Data: "0"
+win_baseline_1392_state_Type: dword
+
+# win_baseline_1426_state | Ensure 'System objects - Strengthen default permissions of internal system objects (e.g. Symbolic Links)' is set to 'Enabled'
+win_baseline_1426_state_Manage: True
+win_baseline_1426_state_Path: 'HKLM:\System\Currentcontrolset\Control\Session Manager'
+win_baseline_1426_state_Name: "ProtectionMode"
+win_baseline_1426_state_Data: "1"
+win_baseline_1426_state_Type: dword
+
+# win_baseline_1430_state | Ensure 'Terminal Services' is set to 'Automatic'
+win_baseline_1430_state_Manage: True
+win_baseline_1430_state_Path: 'HKLM:\System\Currentcontrolset\Services\TermService'
+win_baseline_1430_state_Name: "Start"
+win_baseline_1430_state_Data: "2"
+win_baseline_1430_state_Type: dword
+

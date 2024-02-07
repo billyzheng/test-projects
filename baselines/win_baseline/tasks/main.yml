@@ -388,14 +388,14 @@
 #   when:
 #     win_baseline_1375_state_Manage
 
-- name: "win_baseline_1376_state | Ensure 'Interactive logon - Do not require CTRL+ALT+DEL' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1376_state_Path }}"
-    name: "{{ win_baseline_1376_state_Name }}"
-    data: "{{ win_baseline_1376_state_Data }}"
-    type: "{{ win_baseline_1376_state_Type }}"
-  when:
-    win_baseline_1376_state_Manage
+# - name: "win_baseline_1376_state | Ensure 'Interactive logon - Do not require CTRL+ALT+DEL' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1376_state_Path }}"
+#     name: "{{ win_baseline_1376_state_Name }}"
+#     data: "{{ win_baseline_1376_state_Data }}"
+#     type: "{{ win_baseline_1376_state_Type }}"
+#   when:
+    # win_baseline_1376_state_Manage
 
 # - name: "win_baseline_1377_state | Ensure 'Interactive logon - Require Domain Controller Authentication to unlock workstation' is set to 'Enabled'"
 #   win_regedit:
@@ -505,3 +505,39 @@
     type: "{{ win_baseline_1390_state_Type }}"
   when:
     win_baseline_1390_state_Manage
+
+- name: "win_baseline_1391_state | Ensure 'Recovery Console: Allow automatic administrative logon' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1391_state_Path }}"
+    name: "{{ win_baseline_1391_state_Name }}"
+    data: "{{ win_baseline_1391_state_Data }}"
+    type: "{{ win_baseline_1391_state_Type }}"
+  when:
+    win_baseline_1391_state_Manage
+
+- name: "win_baseline_1392_state | Ensure 'Recovery Console: Allow floppy copy and access to all drives and all folders' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1392_state_Path }}"
+    name: "{{ win_baseline_1392_state_Name }}"
+    data: "{{ win_baseline_1392_state_Data }}"
+    type: "{{ win_baseline_1392_state_Type }}"
+  when:
+    win_baseline_1392_state_Manage
+
+- name: "win_baseline_1426_state | Ensure 'System objects - Strengthen default permissions of internal system objects (e.g. Symbolic Links)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1426_state_Path }}"
+    name: "{{ win_baseline_1426_state_Name }}"
+    data: "{{ win_baseline_1426_state_Data }}"
+    type: "{{ win_baseline_1426_state_Type }}"
+  when:
+    win_baseline_1426_state_Manage
+
+- name: "win_baseline_1430_state | Ensure 'Terminal Services' is set to 'Automatic'"
+  win_regedit:
+    path: "{{ win_baseline_1430_state_Path }}"
+    name: "{{ win_baseline_1430_state_Name }}"
+    data: "{{ win_baseline_1430_state_Data }}"
+    type: "{{ win_baseline_1430_state_Type }}"
+  when:
+    win_baseline_1430_state_Manage
