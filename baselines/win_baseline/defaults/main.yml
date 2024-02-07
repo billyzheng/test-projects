@@ -454,7 +454,7 @@ win_baseline_1509_state_Manage: True
 win_baseline_1509_state_Path: 'HKLM:\System\Currentcontrolset\Services'
 win_baseline_1509_state_Name: "Netlogon"
 win_baseline_1509_state_Data: "2"
-winbaline_1509_state_Type: dword
+win_baline_1509_state_Type: dword
 
 # win_baseline_1510_state | Ensure 'Routing and Remote Access' is set to 'Disabled'
 win_baseline_1510_state_Manage: True
