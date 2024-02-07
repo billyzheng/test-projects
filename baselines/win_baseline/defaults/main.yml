@@ -166,3 +166,17 @@ win_baseline_1189_state_Path: 'HKLM:\System\Currentcontrolset\Services\Lanmanser
 win_baseline_1189_state_Name: "requiresecuritysignature"
 win_baseline_1189_state_Data: "1"
 win_baseline_1189_state_Type: dword
+
+# win_baseline_1190_state | Ensure 'Interactive logon - Do not display last user name' is set to 'Enabled'
+win_baseline_1190_state_Manage: True
+win_baseline_1190_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
+win_baseline_1190_state_Name: "DontDisplayLastUserName"
+win_baseline_1190_state_Data: "1"
+win_baseline_1190_state_Type: dword
+
+# win_baseline_1193_state | Ensure 'MSS - (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes' is set to 'Disabled'
+win_baseline_1193_state_Manage: True
+win_baseline_1193_state_Path: 'HKLM:\System\Currentcontrolset\Services\Tcpip\Parameters'
+win_baseline_1193_state_Name: "EnableICMPRedirect"
+win_baseline_1193_state_Data: "0"
+win_baseline_1193_state_Type: dword
