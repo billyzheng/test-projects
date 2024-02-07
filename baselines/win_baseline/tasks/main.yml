@@ -244,3 +244,12 @@
     type: "{{ win_baseline_1193_state_Type }}"
   when:
     win_baseline_1193_state_Manage
+
+- name: "win_baseline_1195_state | Ensure 'MSS - (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers' is set"
+  win_regedit:
+    path: "{{ win_baseline_1195_state_Path }}"
+    name: "{{ win_baseline_1195_state_Name }}"
+    data: "{{ win_baseline_1195_state_Data }}"
+    type: "{{ win_baseline_1195_state_Type }}"
+  when:
+    win_baseline_1195_state_Manage

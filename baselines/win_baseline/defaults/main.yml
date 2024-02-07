@@ -180,3 +180,10 @@ win_baseline_1193_state_Path: 'HKLM:\System\Currentcontrolset\Services\Tcpip\Par
 win_baseline_1193_state_Name: "EnableICMPRedirect"
 win_baseline_1193_state_Data: "0"
 win_baseline_1193_state_Type: dword
+
+# win_baseline_1195_state | Ensure 'MSS - (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers' is set
+win_baseline_1195_state_Manage: True
+win_baseline_1195_state_Path: 'HKLM:\System\Currentcontrolset\Services\Netbt\Parameters'
+win_baseline_1195_state_Name: "NoNameReleaseOnDemand"
+win_baseline_1195_state_Data: "1"
+win_baseline_1195_state_Type: dword
