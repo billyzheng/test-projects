@@ -524,59 +524,59 @@
 #   when:
 #     win_baseline_1392_state_Manage
 
-- name: "win_baseline_1426_state | Ensure 'System objects - Strengthen default permissions of internal system objects (e.g. Symbolic Links)' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1426_state_Path }}"
-    name: "{{ win_baseline_1426_state_Name }}"
-    data: "{{ win_baseline_1426_state_Data }}"
-    type: "{{ win_baseline_1426_state_Type }}"
-  when:
-    win_baseline_1426_state_Manage
+# - name: "win_baseline_1426_state | Ensure 'System objects - Strengthen default permissions of internal system objects (e.g. Symbolic Links)' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1426_state_Path }}"
+#     name: "{{ win_baseline_1426_state_Name }}"
+#     data: "{{ win_baseline_1426_state_Data }}"
+#     type: "{{ win_baseline_1426_state_Type }}"
+#   when:
+#     win_baseline_1426_state_Manage
 
-- name: "win_baseline_1430_state | Ensure 'Terminal Services' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_1430_state_Path }}"
-    name: "{{ win_baseline_1430_state_Name }}"
-    data: "{{ win_baseline_1430_state_Data }}"
-    type: "{{ win_baseline_1430_state_Type }}"
-  when:
-    win_baseline_1430_state_Manage
+# - name: "win_baseline_1430_state | Ensure 'Terminal Services' is set to 'Automatic'"
+#   win_regedit:
+#     path: "{{ win_baseline_1430_state_Path }}"
+#     name: "{{ win_baseline_1430_state_Name }}"
+#     data: "{{ win_baseline_1430_state_Data }}"
+#     type: "{{ win_baseline_1430_state_Type }}"
+#   when:
+#     win_baseline_1430_state_Manage
 
-- name: "win_baseline_1432_state | Ensure 'Domain Controller: LDAP server signing requirements' is set to 'Require signing'"
-  win_regedit:
-    path: "{{ win_baseline_1432_state_Path }}"
-    name: "{{ win_baseline_1432_state_Name }}"
-    data: "{{ win_baseline_1432_state_Data }}"
-    type: "{{ win_baseline_1432_state_Type }}"
-  when:
-    win_baseline_1432_state_Manage
+# - name: "win_baseline_1432_state | Ensure 'Domain Controller: LDAP server signing requirements' is set to 'Require signing'"
+#   win_regedit:
+#     path: "{{ win_baseline_1432_state_Path }}"
+#     name: "{{ win_baseline_1432_state_Name }}"
+#     data: "{{ win_baseline_1432_state_Data }}"
+#     type: "{{ win_baseline_1432_state_Type }}"
+#   when:
+#     win_baseline_1432_state_Manage
 
-- name: "win_baseline_1434_state | Ensure 'Network access: Rediect anonymous access to Named Pipes and Shares' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1434_state_Path }}"
-    name: "{{ win_baseline_1434_state_Name }}"
-    data: "{{ win_baseline_1434_state_Data }}"
-    type: "{{ win_baseline_1434_state_Type }}"
-  when:
-    win_baseline_1434_state_Manage
+# - name: "win_baseline_1434_state | Ensure 'Network access: Rediect anonymous access to Named Pipes and Shares' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1434_state_Path }}"
+#     name: "{{ win_baseline_1434_state_Name }}"
+#     data: "{{ win_baseline_1434_state_Data }}"
+#     type: "{{ win_baseline_1434_state_Type }}"
+#   when:
+#     win_baseline_1434_state_Manage
 
-- name: "win_baseline_1436_state | Ensure 'System crytography: Force strong key protection for user keys stored on the computer' is set to 'User must enter a password each time they use a key'"
-  win_regedit:
-    path: "{{ win_baseline_1436_state_Path }}"
-    name: "{{ win_baseline_1436_state_Name }}"
-    data: "{{ win_baseline_1436_state_Data }}"
-    type: "{{ win_baseline_1436_state_Type }}"
-  when:
-    win_baseline_1436_state_Manage
+# - name: "win_baseline_1436_state | Ensure 'System crytography: Force strong key protection for user keys stored on the computer' is set to 'User must enter a password each time they use a key'"
+#   win_regedit:
+#     path: "{{ win_baseline_1436_state_Path }}"
+#     name: "{{ win_baseline_1436_state_Name }}"
+#     data: "{{ win_baseline_1436_state_Data }}"
+#     type: "{{ win_baseline_1436_state_Type }}"
+#   when:
+#     win_baseline_1436_state_Manage
 
-- name: "win_baseline_1458_state | Ensure 'MSS - (SafeDllSearchMode) Enable Safe DLL search mode (recommended)' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1458_state_Path }}"
-    name: "{{ win_baseline_1458_state_Name }}"
-    data: "{{ win_baseline_1458_state_Data }}"
-    type: "{{ win_baseline_1458_state_Type }}"
-  when:
-    win_baseline_1458_state_Manage
+# - name: "win_baseline_1458_state | Ensure 'MSS - (SafeDllSearchMode) Enable Safe DLL search mode (recommended)' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1458_state_Path }}"
+#     name: "{{ win_baseline_1458_state_Name }}"
+#     data: "{{ win_baseline_1458_state_Data }}"
+#     type: "{{ win_baseline_1458_state_Type }}"
+#   when:
+#     win_baseline_1458_state_Manage
 
 - name: "win_baseline_1463_state | Ensure 'MSS - (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set"
   win_regedit:
@@ -596,3 +596,37 @@
   when:
     win_baseline_1476_state_Manage
 
+- name: "win_baseline_1509_state | Ensure 'Netlogon' is set to 'Automatic'"
+  win_regedit:
+    path: "{{ win_baseline_1509_state_Path }}"
+    name: "{{ win_baseline_1509_state_Name }}"
+    data: "{{ win_baseline_1509_state_Data }}"
+    type: "{{ win_baseline_1509_state_Type }}"
+  when:
+    win_baseline_1509_state_Manage
+
+- name: "win_baseline_1510_state | Ensure 'Routing and Remote Access' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1510_state_Path }}"
+    name: "{{ win_baseline_1510_state_Name }}"
+    data: "{{ win_baseline_1510_state_Data }}"
+    type: "{{ win_baseline_1510_state_Type }}"
+  when:
+    win_baseline_1510_state_Manage
+
+- name: "win_baseline_1514_state | Ensure 'Restrictions for Unauthenticated RPC clients' is set to 'Authenticated without exceptions'"
+  win_regedit:
+    path: "{{ win_baseline_1514_state_Path }}"
+    name: "{{ win_baseline_1514_state_Name }}"
+    data: "{{ win_baseline_1514_state_Data }}"
+    type: "{{ win_baseline_1514_state_Type }}"
+  when:
+    win_baseline_1514_state_Manage
+
+- name: "win_baseline_2181_state | Ensure 'Access this computer from the network' is set to 'Administrators, Authenticated Users'"
+  win_user_right:
+    name: "{{ win_baseline_2181_state_Name }}"
+    users: "{{ win_baseline_2181_state_Users }}"
+    action: "{{ win_baseline_2181_state_Action }}"
+  when:
+    win_baseline_2181_state_Manage
