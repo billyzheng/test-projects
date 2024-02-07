@@ -92,13 +92,13 @@
 #   when:
 #     win_baseline_1091_state_Manage
 
-- name: "win_baseline_1115_state | Ensure 'Password Complexity Requirements' is set to 'Enabled'"
+- name: "win_baseline_1092_state | Ensure 'Password Complexity Requirements' is set to 'Enabled'"
   win_security_policy:
-    section: "{{ win_baseline_1115_state_Section }}"
-    key: "{{ win_baseline_1115_state_Key }}"
-    value: "{{ win_baseline_1115_state_Value }}"
+    section: "{{ win_baseline_1092_state_Section }}"
+    key: "{{ win_baseline_1092_state_Key }}"
+    value: "{{ win_baseline_1092_state_Value }}"
   when:
-    win_baseline_1115_state_Manage
+    win_baseline_1092_state_Manage
 
 # ! error
 # - name: "win_baseline_1092_state | Ensure 'Password must meet complexity requirements' is set to 'Enabled'"
