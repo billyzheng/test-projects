@@ -427,3 +427,24 @@ win_baseline_1436_state_Path: 'HKLM:\Software\Microsoft\Cryptography'
 win_baseline_1436_state_Name: "ForceKeyProtection"
 win_baseline_1436_state_Data: "2"
 win_baseline_1436_state_Type: dword
+
+# win_baseline_1458_state | Ensure 'MSS - (SafeDllSearchMode) Enable Safe DLL search mode (recommended)' is set to 'Enabled'
+win_baseline_1458_state_Manage: True
+win_baseline_1458_state_Path: 'HKLM:\System\Currentcontrolset\Control\Session Manager'
+win_baseline_1458_state_Name: "SafeDllSearchMode"
+win_baseline_1458_state_Data: "1"
+win_baseline_1458_state_Type: dword
+
+# win_baseline_1463_state | Ensure 'MSS - (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set
+win_baseline_1463_state_Manage: True
+win_baseline_1463_state_Path: 'HKLM:\System\Currentcontrolset\Services\Eventlog\Security'
+win_baseline_1463_state_Name: "WarningLevel"
+win_baseline_1463_state_Data: "75"
+win_baseline_1463_state_Type: dword
+
+# win_baseline_1476_state | Ensure 'Romote Access Connection Manager (RasMan)' is set to 'Disabled'
+win_baseline_1476_state_Manage: True
+win_baseline_1476_state_Path: 'HKLM:\System\Currentcontrolset\Services\RasMan'
+win_baseline_1476_state_Name: "Start"
+win_baseline_1476_state_Data: "4"
+win_baseline_1476_state_Type: dword
