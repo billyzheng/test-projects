@@ -388,30 +388,30 @@
 #   when:
 #     win_baseline_1375_state_Manage
 
-# - name: "win_baseline_1176_state | Ensure 'Interactive logon - Do not require CTRL+ALT+DEL' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1176_state_Path }}"
-#     name: "{{ win_baseline_1176_state_Name }}"
-#     data: "{{ win_baseline_1176_state_Data }}"
-#     type: "{{ win_baseline_1176_state_Type }}"
-#   when:
-#     win_baseline_1176_state_Manage
-
-# - name: "win_baseline_1177_state | Ensure 'Interactive logon - Require Domain Controller Authentication to unlock workstation' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1177_state_Path }}"
-#     name: "{{ win_baseline_1177_state_Name }}"
-#     data: "{{ win_baseline_1177_state_Data }}"
-#     type: "{{ win_baseline_1177_state_Type }}"
-#   when:
-#     win_baseline_1177_state_Manage
-
-- name: "win_baseline_1178_state | Ensure 'Interactive logon - Smart card removal behavior' is set to 'Lock Workstation'"
+- name: "win_baseline_1376_state | Ensure 'Interactive logon - Do not require CTRL+ALT+DEL' is set to 'Disabled'"
   win_regedit:
-    path: "{{ win_baseline_1178_state_Path }}"
-    name: "{{ win_baseline_1178_state_Name }}"
-    data: "{{ win_baseline_1178_state_Data }}"
-    type: "{{ win_baseline_1178_state_Type }}"
+    path: "{{ win_baseline_1376_state_Path }}"
+    name: "{{ win_baseline_1376_state_Name }}"
+    data: "{{ win_baseline_1376_state_Data }}"
+    type: "{{ win_baseline_1376_state_Type }}"
+  when:
+    win_baseline_1376_state_Manage
+
+- name: "win_baseline_1377_state | Ensure 'Interactive logon - Require Domain Controller Authentication to unlock workstation' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1377_state_Path }}"
+    name: "{{ win_baseline_1377_state_Name }}"
+    data: "{{ win_baseline_1377_state_Data }}"
+    type: "{{ win_baseline_1377_state_Type }}"
+  when:
+    win_baseline_1377_state_Manage
+
+- name: "win_baseline_1378_state | Ensure 'Interactive logon - Smart card removal behavior' is set to 'Lock Workstation'"
+  win_regedit:
+    path: "{{ win_baseline_1378_state_Path }}"
+    name: "{{ win_baseline_1378_state_Name }}"
+    data: "{{ win_baseline_1378_state_Data }}"
+    type: "{{ win_baseline_1378_state_Type }}"
   when:
     win_baseline_1178_state_Manage
 
