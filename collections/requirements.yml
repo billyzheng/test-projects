@@ -1,0 +1,3 @@
+collections:
+  - name: community.windows.win_security_policy
+    source: https://galaxy.ansible.com
