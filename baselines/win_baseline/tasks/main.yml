@@ -674,7 +674,7 @@
 #   - rule_1.1.4
 
 - name: Set the maximum password age
-  community.windows.win_security_policy:
+  win_security_policy:
     section: System Access
     key: MaximumPasswordAge
     value: 15
