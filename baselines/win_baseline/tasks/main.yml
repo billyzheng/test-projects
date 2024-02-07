@@ -649,11 +649,11 @@
 #     win_baseline_2183_state_Manage
 
 - name: Get Local Security Policy
-  win_command: secedit /export /cfg c:\secpol.cfg
+  win_command: secedit /export /cfg C:\secpol.cfg
 
 - name: Read Security Policy File
   slurp:
-    src: c:\secpol.cfg
+    src: C:\secpol.cfg
   register: policy_file
 
 - name: Parse Security Policy
