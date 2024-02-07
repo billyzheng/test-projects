@@ -664,7 +664,7 @@
 #   debug:
 #     var: privilege_info
 
-- name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)' [GSA-16]"
+- name: "win_baseline_1071_state"
   win_security_policy:
     section: System Access
     key: MinimumPasswordLength
