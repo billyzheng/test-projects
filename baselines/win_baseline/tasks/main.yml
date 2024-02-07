@@ -648,17 +648,33 @@
 #   when:
 #     win_baseline_2183_state_Manage
 
+# - name: Get Local Security Policy
+#   win_command: secedit /export /cfg C:\secpol.cfg
+
+# - name: Read Security Policy File
+#   slurp:
+#     src: C:\secpol.cfg
+#   register: policy_file
+
+# - name: Parse Security Policy
+#   set_fact:
+#     privilege_info: "{{ policy_file['content'] | b64decode | regex_findall('SeTcbPrivilege\\\\n\\s+Accounts:\\\\n\\s+(.*)') }}"
+
+# - name: Display Privilege Info
+#   debug:
+#     var: privilege_info
+
 - name: Get Local Security Policy
-  win_command: secedit /export /cfg C:\secpol.cfg
+  win_command: secedit /export /cfg c:\secpol.cfg
 
 - name: Read Security Policy File
   slurp:
-    src: C:\secpol.cfg
+    src: c:\secpol.cfg
   register: policy_file
 
 - name: Parse Security Policy
   set_fact:
-    privilege_info: "{{ policy_file['content'] | b64decode | regex_findall('SeTcbPrivilege\\\\n\\s+Accounts:\\\\n\\s+(.*)') }}"
+    privilege_info: "{{ policy_file['content'] | b64decode | regex_findall('SeIncreaseQuotaPrivilege\\\\n\\s+Accounts:\\\\n\\s+(.*)') }}"
 
 - name: Display Privilege Info
   debug:
