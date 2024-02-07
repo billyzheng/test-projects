@@ -648,11 +648,19 @@
 #   when:
 #     win_baseline_2183_state_Manage
 
-- name: Export local security policy
-  win_shell: secedit /export /cfg C:\temp\secpol.cfg
-  register: result
+- name: Get Local Security Policy
+  win_command: secedit /export /cfg c:\secpol.cfg
 
-- name: Show output
+- name: Read Security Policy File
+  slurp:
+    src: c:\secpol.cfg
+  register: policy_file
+
+- name: Parse Security Policy
+  set_fact:
+    privilege_info: "{{ policy_file['content'] | b64decode | regex_findall('SeTcbPrivilege\\\\n\\s+Accounts:\\\\n\\s+(.*)') }}"
+
+- name: Display Privilege Info
   debug:
-    var: result.stdout_lines
+    var: privilege_info
 
