@@ -324,3 +324,39 @@
     type: "{{ win_baseline_1368_state_Type }}"
   when:
     win_baseline_1368_state_Manage
+
+- name: "win_baseline_1369_state | Ensure 'Shutdown - Allow system to be shut down without having to log on' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1369_state_Path }}"
+    name: "{{ win_baseline_1369_state_Name }}"
+    data: "{{ win_baseline_1369_state_Data }}"
+    type: "{{ win_baseline_1369_state_Type }}"
+  when:
+    win_baseline_1369_state_Manage
+
+- name: "win_baseline_1370_state | Ensure 'Domain member - Digitally encrypt or sign secure channel data (always)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1370_state_Path }}"
+    name: "{{ win_baseline_1370_state_Name }}"
+    data: "{{ win_baseline_1370_state_Data }}"
+    type: "{{ win_baseline_1370_state_Type }}"
+  when:
+    win_baseline_1370_state_Manage
+
+- name: "win_baseline_1371_state | Ensure 'Domain member - Digitally encrypt secure channel data (when possible)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1371_state_Path }}"
+    name: "{{ win_baseline_1371_state_Name }}"
+    data: "{{ win_baseline_1371_state_Data }}"
+    type: "{{ win_baseline_1371_state_Type }}"
+  when:
+    win_baseline_1371_state_Manage
+
+- name: "win_baseline_1372_state | Ensure 'Domain member - Digitally sign secure channel data (when possible)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1372_state_Path }}"
+    name: "{{ win_baseline_1372_state_Name }}"
+    data: "{{ win_baseline_1372_state_Data }}"
+    type: "{{ win_baseline_1372_state_Type }}"
+  when:
+    win_baseline_1372_state_Manage
