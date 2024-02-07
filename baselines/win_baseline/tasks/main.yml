@@ -199,3 +199,31 @@
     type: "{{ win_baseline_1183_state_Type }}"
   when:
     win_baseline_1183_state_Manage
+
+- name: "win_baseline_1184_state | Ensure 'MSS - (PerformRouterDiscovery) Allow IRDP to detect and configure Default Gateway addresses (could lead to DoS)' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1184_state_Path }}"
+    name: "{{ win_baseline_1184_state_Name }}"
+    data: "{{ win_baseline_1184_state_Data }}"
+    type: "{{ win_baseline_1184_state_Type }}"
+  when:
+    win_baseline_1184_state_Manage
+
+- name: "win_baseline_1188_state | Ensure 'System objects - Require case insensitivity for non-Windows subsystems' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1188_state_Path }}"
+    name: "{{ win_baseline_1188_state_Name }}"
+    data: "{{ win_baseline_1188_state_Data }}"
+    type: "{{ win_baseline_1188_state_Type }}"
+  when:
+    win_baseline_1188_state_Manage
+
+- name: "win_baseline_1189_state | Ensure 'Microsoft network server - Digitally sign communications (always)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1189_state_Path }}"
+    name: "{{ win_baseline_1189_state_Name }}"
+    data: "{{ win_baseline_1189_state_Data }}"
+    type: "{{ win_baseline_1189_state_Type }}"
+  when:
+    win_baseline_1189_state_Manage
+  
