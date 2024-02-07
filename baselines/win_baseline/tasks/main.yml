@@ -151,3 +151,18 @@
     type:  "{{ win_baseline_1169_state_Type }}"
   when:
     win_baseline_1169_state_Manage
+
+# 2.7
+- name: "win_baseline_1172_state | Ensure 'MSS - (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)' is set"
+  win_regedit:
+    path: HKLM:\System\Currentcontrolset\Services\Tcpip\Parameters
+    name: "DisableIPSourceRouting"
+    data: "2"
+    type: dword
+
+- name: "win_baseline_1176_state | Devices: Restrict CD-ROM access to locally logged-on user only"
+  win_regedit:
+    path: HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon
+    name: AllocateCDRoms
+    data: 1
+    type: dword
