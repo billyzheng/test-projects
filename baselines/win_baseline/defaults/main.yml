@@ -166,4 +166,3 @@ win_baseline_1189_state_Path: 'HKLM:\System\Currentcontrolset\Services\Lanmanser
 win_baseline_1189_state_Name: "requiresecuritysignature"
 win_baseline_1189_state_Data: "1"
 win_baseline_1189_state_Type: dword
-```
