@@ -650,4 +650,9 @@
 
 - name: Export local security policy
   win_shell: echo "hello world"
+  register: Message
+
+- name: Print the message
+  debug:
+    var: Message.stdout_lines
 
