@@ -67,7 +67,7 @@
 # Windows total playbooks
 # -----------------------
 
-# error:https://stackoverflow.com/questions/66335800/error-couldnt-resolve-module-action-this-often-indicates-a-misspelling-miss
+# ! error:https://stackoverflow.com/questions/66335800/error-couldnt-resolve-module-action-this-often-indicates-a-misspelling-miss
 # - name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)'"
 #   win_security_policy:
 #     section: "{{ win_baseline_1071_state_Section }}"
@@ -93,7 +93,7 @@
 #   when:
 #     win_baseline_1091_state_Manage
 
-# error
+# ! error
 # - name: "win_baseline_1092_state | Ensure 'Password must meet complexity requirements' is set to 'Enabled'"
 #   win_security_policy:
 #     section: "{{ win_baseline_1092_state_Section }}"
@@ -182,7 +182,7 @@
 #   when:
 #     win_baseline_1177_state_Manage
 
-# not sure
+# ! not sure
 # - name: "win_baseline_1181_state | Ensure 'Simple Netowrk Management Protocol trap' service is diabled"
 #   win_service:
 #     name: snmptrap
@@ -281,7 +281,7 @@
 #   when:
 #     win_baseline_1199_state_Manage
 
-# not sure
+# ! not sure
 # - name" "win_baseline_1200_state | Ensure 'Dynamic Controller: Resuse machine account password changes' is set to 'Disabled'"
 #   win_regedit:
 #     path: "{{ win_baseline_1200_state_Path }}"
@@ -300,7 +300,7 @@
 #   when:
 #     win_baseline_1264_state_Manage
 
-# not sure
+# ! not sure
 # - name: "win_baseline_1318_state | Ensure 'Enforce password history' is set to '24 or more password(s)'"
 #   win_security_policy:
 #     section: System Access
@@ -406,6 +406,7 @@
   when:
     win_baseline_1377_state_Manage
 
+# ! problem
 - name: "win_baseline_1378_state | Ensure 'Interactive logon - Smart card removal behavior' is set to 'Lock Workstation'"
   win_regedit:
     path: "{{ win_baseline_1378_state_Path }}"
@@ -432,3 +433,37 @@
     type: "{{ win_baseline_1380_state_Type }}"
   when:
     win_baseline_1380_state_Manage
+
+- name: "win_baseline_1381_state | Ensure 'Microsoft network server - Digitally sign communications (if client agrees)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1381_state_Path }}"
+    name: "{{ win_baseline_1381_state_Name }}"
+    data: "{{ win_baseline_1381_state_Data }}"
+    type:  "{{ win_baseline_1381_state_Type }}"
+
+- name: "win_baseline_1382_state | Ensure 'Microsoft network server - Disconnect clients when logon hours expire' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1382_state_Path }}"
+    name: "{{ win_baseline_1382_state_Name }}"
+    data: "{{ win_baseline_1382_state_Data }}"
+    type: "{{ win_baseline_1382_state_Type }}"
+  when:
+    win_baseline_1382_state_Manage
+
+- name: "win_baseline_1383_state | Ensure 'Network access - Let Everyone permissions apply to anonymous users' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1383_state_Path }}"
+    name: "{{ win_baseline_1383_state_Name }}"
+    data: "{{ win_baseline_1383_state_Data }}"
+    type: "{{ win_baseline_1383_state_Type }}"
+  when:
+    win_baseline_1383_state_Manage
+
+- name: "win_baseline_1386_state | Ensure 'Network access - Sharing and security model for local accounts' is 'Classic - local users authenticate as themselves'"
+  win_regedit:
+    path: "{{ win_baseline_1386_state_Path }}"
+    name: "{{ win_baseline_1386_state_Name }}"
+    data: "{{ win_baseline_1386_state_Data }}"
+    type: "{{ win_baseline_1386_state_Type }}"
+  when:
+    win_baseline_1386_state_Manage
