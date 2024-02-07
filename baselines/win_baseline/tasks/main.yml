@@ -578,50 +578,50 @@
 #   when:
 #     win_baseline_1458_state_Manage
 
-- name: "win_baseline_1463_state | Ensure 'MSS - (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set"
-  win_regedit:
-    path: "{{ win_baseline_1463_state_Path }}"
-    name: "{{ win_baseline_1463_state_Name }}"
-    data: "{{ win_baseline_1463_state_Data }}"
-    type: "{{ win_baseline_1463_state_Type }}"
-  when:
-    win_baseline_1463_state_Manage
+# - name: "win_baseline_1463_state | Ensure 'MSS - (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set"
+#   win_regedit:
+#     path: "{{ win_baseline_1463_state_Path }}"
+#     name: "{{ win_baseline_1463_state_Name }}"
+#     data: "{{ win_baseline_1463_state_Data }}"
+#     type: "{{ win_baseline_1463_state_Type }}"
+#   when:
+#     win_baseline_1463_state_Manage
 
-- name: "win_baseline_1476_state | Ensure 'Romote Access Connection Manager (RasMan)' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1476_state_Path }}"
-    name: "{{ win_baseline_1476_state_Name }}"
-    data: "{{ win_baseline_1476_state_Data }}"
-    type: "{{ win_baseline_1476_state_Type }}"
-  when:
-    win_baseline_1476_state_Manage
+# - name: "win_baseline_1476_state | Ensure 'Romote Access Connection Manager (RasMan)' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1476_state_Path }}"
+#     name: "{{ win_baseline_1476_state_Name }}"
+#     data: "{{ win_baseline_1476_state_Data }}"
+#     type: "{{ win_baseline_1476_state_Type }}"
+#   when:
+#     win_baseline_1476_state_Manage
 
-- name: "win_baseline_1509_state | Ensure 'Netlogon' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_1509_state_Path }}"
-    name: "{{ win_baseline_1509_state_Name }}"
-    data: "{{ win_baseline_1509_state_Data }}"
-    type: "{{ win_baseline_1509_state_Type }}"
-  when:
-    win_baseline_1509_state_Manage
+# - name: "win_baseline_1509_state | Ensure 'Netlogon' is set to 'Automatic'"
+#   win_regedit:
+#     path: "{{ win_baseline_1509_state_Path }}"
+#     name: "{{ win_baseline_1509_state_Name }}"
+#     data: "{{ win_baseline_1509_state_Data }}"
+#     type: "{{ win_baseline_1509_state_Type }}"
+#   when:
+#     win_baseline_1509_state_Manage
 
-- name: "win_baseline_1510_state | Ensure 'Routing and Remote Access' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1510_state_Path }}"
-    name: "{{ win_baseline_1510_state_Name }}"
-    data: "{{ win_baseline_1510_state_Data }}"
-    type: "{{ win_baseline_1510_state_Type }}"
-  when:
-    win_baseline_1510_state_Manage
+# - name: "win_baseline_1510_state | Ensure 'Routing and Remote Access' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1510_state_Path }}"
+#     name: "{{ win_baseline_1510_state_Name }}"
+#     data: "{{ win_baseline_1510_state_Data }}"
+#     type: "{{ win_baseline_1510_state_Type }}"
+#   when:
+#     win_baseline_1510_state_Manage
 
-- name: "win_baseline_1514_state | Ensure 'Restrictions for Unauthenticated RPC clients' is set to 'Authenticated without exceptions'"
-  win_regedit:
-    path: "{{ win_baseline_1514_state_Path }}"
-    name: "{{ win_baseline_1514_state_Name }}"
-    data: "{{ win_baseline_1514_state_Data }}"
-    type: "{{ win_baseline_1514_state_Type }}"
-  when:
-    win_baseline_1514_state_Manage
+# - name: "win_baseline_1514_state | Ensure 'Restrictions for Unauthenticated RPC clients' is set to 'Authenticated without exceptions'"
+#   win_regedit:
+#     path: "{{ win_baseline_1514_state_Path }}"
+#     name: "{{ win_baseline_1514_state_Name }}"
+#     data: "{{ win_baseline_1514_state_Data }}"
+#     type: "{{ win_baseline_1514_state_Type }}"
+#   when:
+#     win_baseline_1514_state_Manage
 
 - name: "win_baseline_2181_state | Ensure 'Access this computer from the network' is set to 'Administrators, Authenticated Users'"
   win_user_right:
@@ -630,3 +630,28 @@
     action: "{{ win_baseline_2181_state_Action }}"
   when:
     win_baseline_2181_state_Manage
+
+# ! not sure
+# - name: "win_baseline_2182_state | Ensure 'Act as part of the operating system' is set to 'No One'"
+#   win_user_right:
+#     name: SeTcbPrivilege
+#     users:
+#     action: set
+#   ignore_errors: yes
+
+# ! not sure
+# - name: "win_baseline_2183_state | Ensure 'Add workstations to domain' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2183_state_Name }}"
+#     users: "{{ win_baseline_2183_state_Users }}"
+#     action: "{{ win_baseline_2183_state_Action }}"
+#   when:
+#     win_baseline_2183_state_Manage
+
+- name: Export local security policy
+  win_shell: secedit /export /cfg C:\temp\secpol.cfg
+  register: result
+
+- name: Show output
+  debug:
+    var: result.stdout_lines

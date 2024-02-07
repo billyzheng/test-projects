@@ -483,3 +483,4 @@ win_baseline_2181_state_Manage: True
 win_baseline_2181_state_Name: "SeNetworkLogonRight"
 win_baseline_2181_state_Users: "Administrators, Authenticated Users"
 win_baseline_2181_state_Action: set
+
