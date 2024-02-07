@@ -67,14 +67,21 @@
 # Windows total playbooks
 # -----------------------
 
-# ! error:https://stackoverflow.com/questions/66335800/error-couldnt-resolve-module-action-this-often-indicates-a-misspelling-miss
-# - name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)'"
-#   win_security_policy:
-#     section: "{{ win_baseline_1071_state_Section }}"
-#     key: "{{ win_baseline_1071_state_Key }}"
-#     value: "{{ win_baseline_1071_state_Value }}"
-#   when:
-#     win_baseline_1071_state_Manage
+- name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)'"
+  win_security_policy:
+    section: "{{ win_baseline_1071_state_Section }}"
+    key: "{{ win_baseline_1071_state_Key }}"
+    value: "{{ win_baseline_1071_state_Value }}"
+  when:
+    win_baseline_1071_state_Manage
+
+- name: "win_baseline_1072_state | Ensure 'Minimum password age' is set to '1 or more day(s)' [GSA-0]"
+  win_security_policy:
+    section: "{{win_baseline_1072_state_Section }}"
+    key: "{{ win_baseline_1072_state_Key }}"
+    value: "{{ win_baseline_1072_state_Value }}"
+  when:
+    win_baseline_1072_state_Manage
 
 # - name: "win_baseline_1072 | Ensure 'Minimum password age' is set to '1 or more day(s)'"
 #   win_security_policy:
@@ -648,34 +655,7 @@
 #   when:
 #     win_baseline_2183_state_Manage
 
-# - name: Get Local Security Policy
-#   win_command: secedit /export /cfg C:\secpol.cfg
 
-# - name: Read Security Policy File
-#   slurp:
-#     src: C:\secpol.cfg
-#   register: policy_file
 
-# - name: Parse Security Policy
-#   set_fact:
-#     privilege_info: "{{ policy_file['content'] | b64decode | regex_findall('SeTcbPrivilege\\\\n\\s+Accounts:\\\\n\\s+(.*)') }}"
 
-# - name: Display Privilege Info
-#   debug:
-#     var: privilege_info
-
-# - name: "win_baseline_1071_state"
-#   win_security_policy:
-#     section: System Access
-#     key: MinimumPasswordLength
-#     value: 14 #16
-#   tags:
-#   - level_1
-#   - rule_1.1.4
-
-- name: Set the maximum password age
-  win_security_policy:
-    section: System Access
-    key: MaximumPasswordAge
-    value: 15
 
