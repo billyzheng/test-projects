@@ -209,3 +209,31 @@ win_baseline_1199_state_Path: 'HKLM:\System\Currentcontrolset\Services\Lanmanser
 win_baseline_1199_state_Name: "autodisconnect"
 win_baseline_1199_state_Data: "15"
 win_baseline_1199_state_Type: dword
+
+# win_baseline_1200_state | Ensure 'Dynamic Controller: Resuse machine account password changes' is set to 'Disabled'
+win_baseline_1200_state_Manage: True
+win_baseline_1200_state_Path: 'HKLM:\System\Currentcontrolset\Services\Netlogon\Parameters'
+win_baseline_1200_state_Name: "RefusePasswordChange"
+win_baseline_1200_state_Data: "1"
+win_baseline_1200_state_Type: dword
+
+# win_baseline_1264_state | Ensure Dynamic Host Configuration Protocol Client' is set to 'Disabled'
+win_baseline_1264_state_Manage: True
+win_baseline_1264_state_Path: 'HKLM:\System\Currentcontrolset\Services\'
+win_baseline_1264_state_Name: "DHCP"
+win_baseline_1264_state_Data: "4"
+win_baseline_1264_state_Type: dword
+
+# win_baseline_1366_state | Ensure 'Accounts - Limit local account use of blank passwords to console logon only' is set to 'Enabled'
+win_baseline_1366_state_Manage: True
+win_baseline_1366_state_Path: 'HKLM:\System\Currentcontrolset\Control\Lsa'
+win_baseline_1366_state_Name: "LimitBlankPasswordUse"
+win_baseline_1366_state_Data: "1"
+win_baseline_1366_state_Type: dword
+
+# win_baseline_1368_state | Ensure 'Print Spooler' service is set to 'Automatic'
+win_baseline_1368_state_Manage: True
+win_baseline_1368_state_Path: 'HKLM:\System\Currentcontrolset\Services\Spooler'
+win_baseline_1368_state_Name: "Start registry key"
+win_baseline_1368_state_Data: "2"
+win_baseline_1368_state_Type: dword
