@@ -616,7 +616,7 @@ win_baseline_2635_state_Type: dword
 # win_baseline_3376_state | Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'
 win_baseline_3376_state_Manage: True
 win_baseline_3376_state_Section: "System Access"
-win_baseline_3376_state_Key: "MaxPasswordAge"
+win_baseline_3376_state_Key: "MaximumPasswordAge"
 win_baseline_3376_state_Value: "60"
 
 # win_baseline_3657_state | Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'
