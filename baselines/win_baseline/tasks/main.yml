@@ -716,14 +716,14 @@
 #   when:
 #     win_baseline_2518_state_Manage
 
-- name: "win_baseline_2582_state | Ensure 'User Account Control - Detect application installations and prompt for elevation' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_2582_state_Path }}"
-    name: "{{ win_baseline_2582_state_Name }}"
-    data: "{{ win_baseline_2582_state_Data }}"
-    type: "{{ win_baseline_2582_state_Type }}"
-  when:
-    win_baseline_2582_state_Manage
+# - name: "win_baseline_2582_state | Ensure 'User Account Control - Detect application installations and prompt for elevation' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_2582_state_Path }}"
+#     name: "{{ win_baseline_2582_state_Name }}"
+#     data: "{{ win_baseline_2582_state_Data }}"
+#     type: "{{ win_baseline_2582_state_Type }}"
+#   when:
+#     win_baseline_2582_state_Manage
 
 # - name: "win_baseline_2583_state | Ensure 'User Account Control - Run all administrators in Admin Approval Mode' is set to 'Enabled'"
 #   win_regedit:
@@ -744,14 +744,14 @@
 #     win_baseline_2584_state_Manage
 
 # ! The result of this task might block the host, and throw the credential error.
-# - name: "win_baseline_2586_state | Ensure 'User Account Control - Admin Approval Mode for the Built-in Administrator account' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_2586_state_Path }}"
-#     name: "{{ win_baseline_2586_state_Name }}"
-#     data: "{{ win_baseline_2586_state_Data }}"
-#     type: "{{ win_baseline_2586_state_Type }}"
-#   when:
-#     win_baseline_2586_state_Manage
+- name: "win_baseline_2586_state | Ensure 'User Account Control - Admin Approval Mode for the Built-in Administrator account' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_2586_state_Path }}"
+    name: "{{ win_baseline_2586_state_Name }}"
+    data: "{{ win_baseline_2586_state_Data }}"
+    type: "{{ win_baseline_2586_state_Type }}"
+  when:
+    win_baseline_2586_state_Manage
 
 # - name: "win_baseline_2587_state | Ensure 'User Account Control - Behavior of the elevation prompt for administrators in Admin Approval Mode' is set to 'Prompt for consent on the secure desktop'"
 #   win_regedit:
