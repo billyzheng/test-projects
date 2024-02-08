@@ -716,23 +716,23 @@
 #   when:
 #     win_baseline_2518_state_Manage
 
-# - name: "win_baseline_2582_state | Ensure 'User Account Control - Detect application installations and prompt for elevation' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_2582_state_Path }}"
-#     name: "{{ win_baseline_2582_state_Name }}"
-#     data: "{{ win_baseline_2582_state_Data }}"
-#     type: "{{ win_baseline_2582_state_Type }}"
-#   when:
-#     win_baseline_2582_state_Manage
-
-- name: "win_baseline_2583_state | Ensure 'User Account Control - Run all administrators in Admin Approval Mode' is set to 'Enabled'"
+- name: "win_baseline_2582_state | Ensure 'User Account Control - Detect application installations and prompt for elevation' is set to 'Enabled'"
   win_regedit:
-    path: "{{ win_baseline_2583_state_Path }}"
-    name: "{{ win_baseline_2583_state_Name }}"
-    data: "{{ win_baseline_2583_state_Data }}"
-    type: "{{ win_baseline_2583_state_Type }}"
+    path: "{{ win_baseline_2582_state_Path }}"
+    name: "{{ win_baseline_2582_state_Name }}"
+    data: "{{ win_baseline_2582_state_Data }}"
+    type: "{{ win_baseline_2582_state_Type }}"
   when:
-    win_baseline_2583_state_Manage
+    win_baseline_2582_state_Manage
+
+# - name: "win_baseline_2583_state | Ensure 'User Account Control - Run all administrators in Admin Approval Mode' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_2583_state_Path }}"
+#     name: "{{ win_baseline_2583_state_Name }}"
+#     data: "{{ win_baseline_2583_state_Data }}"
+#     type: "{{ win_baseline_2583_state_Type }}"
+#   when:
+#     win_baseline_2583_state_Manage
 
 # - name: "win_baseline_2584_state | Ensure 'User Account Control - Only elevate UIAccess applications that are installed in secure locations' is set to 'Enabled'"
 #   win_regedit:
