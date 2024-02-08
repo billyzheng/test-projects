@@ -623,3 +623,38 @@ win_baseline_3376_state_Value: "60"
 # win_baseline_3657_state_Manage: True
 # win_baseline
 
+# win_baseline_3875_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'
+win_baseline_3875_state_Manage: True
+win_baseline_3875_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services'
+win_baseline_3875_state_Name: "fDisableCdm"
+win_baseline_3875_state_Data: "1"
+win_baseline_3875_state_Type: dword
+
+# win_baseline_3876_state | Ensure 'Do not allow passwords to be saved' is set to 'Enabled'
+win_baseline_3876_state_Manage: True
+win_baseline_3876_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services'
+win_baseline_3876_state_Name: "DisablePasswordSaving"
+win_baseline_3876_state_Data: "1"
+win_baseline_3876_state_Type: dword
+
+# win_baseline_3891_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'
+win_baseline_3891_state_Manage: True
+win_baseline_3891_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services'
+win_baseline_3891_state_Name: "fDisableCdm"
+win_baseline_3891_state_Data: "1"
+win_baseline_3891_state_Type: dword
+
+# win_baseline_3897_state | Ensure 'Enumerate administrator accounts on elevation' is set to 'Disabled'
+win_baseline_3897_state_Manage: True
+win_baseline_3897_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\CredUI'
+win_baseline_3897_state_Name: "EnumerateAdministrators"
+win_baseline_3897_state_Data: "0"
+win_baseline_3897_state_Type: dword
+
+# win_baseline_3899_state | Ensure 'Configure Solicited Remote Assistance' is set to 'Disabled'
+win_baseline_3899_state_Manage: True
+win_baseline_3899_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services'
+win_baseline_3899_state_Name: "fAllowToGetHelp"
+win_baseline_3899_state_Data: "0"
+win_baseline_3899_state_Type: dword
+
