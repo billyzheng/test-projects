@@ -512,3 +512,61 @@ win_baseline_2484_state_Manage: True
 win_baseline_2484_state_Section: "System Access"
 win_baseline_2484_state_Key: "ClearTextPassword"
 win_baseline_2484_state_Value: "0"
+
+# win_baseline_2518_state | Ensure 'Turn off Microsoft Peer-to-Peer Networking Services' is set to 'Enabled'
+win_baseline_2518_state_Manage: True
+win_baseline_2518_state_Path: 'HKLM:\Software\Policies\Microsoft\Peernet'
+win_baseline_2518_state_Name: "Disabled"
+win_baseline_2518_state_Data: "1"
+win_baseline_2518_state_Type: dword
+
+# win_baseline_2582_state | Ensure 'User Account Control - Detect application installations and prompt for elevation' is set to 'Enabled'
+win_baseline_2582_state_Manage: True
+win_baseline_2582_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
+win_baseline_2582_state_Name: "EnableInstallerDetection"
+win_baseline_2582_state_Data: "1"
+win_baseline_2582_state_Type: dword
+
+# win_baseline_2583_state | Ensure 'User Account Control - Run all administrators in Admin Approval Mode' is set to 'Enabled'
+win_baseline_2583_state_Manage: True
+win_baseline_2583_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
+win_baseline_2583_state_Name: "EnableLUA"
+win_baseline_2583_state_Data: "1"
+win_baseline_2583_state_Type: dword
+
+# win_baseline_2584_state | Ensure 'User Account Control - Only elevate UIAccess applications that are installed in secure locations' is set to 'Enabled'
+win_baseline_2584_state_Manage: True
+win_baseline_2584_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
+win_baseline_2584_state_Name: "EnableSecureUIAPaths"
+win_baseline_2584_state_Data: "1"
+win_baseline_2584_state_Type: dword
+
+# win_baseline_2586_state | Ensure 'User Account Control - Admin Approval Mode for the Built-in Administrator account' is set to 'Enabled'
+win_baseline_2586_state_Manage: True
+win_baseline_2586_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
+win_baseline_2586_state_Name: "FilterAdministratorToken"
+win_baseline_2586_state_Data: "1"
+win_baseline_2586_state_Type: dword
+
+# win_baseline_2587_state | Ensure 'User Account Control - Behavior of the elevation prompt for administrators in Admin Approval Mode' is set to 'Prompt for consent on the secure desktop'
+win_baseline_2587_state_Manage: True
+win_baseline_2587_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
+win_baseline_2587_state_Name: "ConsentPromptBehaviorAdmin"
+win_baseline_2587_state_Data: "2"
+win_baseline_2587_state_Type: dword
+
+# win_baseline_2605_state | Ensure 'User Account Control - Behavior of the elevation prompt for standard users' is 'Automatically deny elevation requests'
+win_baseline_2605_state_Manage: True
+win_baseline_2605_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
+win_baseline_2605_state_Name: "ConsentPromptBehaviorUser"
+win_baseline_2605_state_Data: "0"
+win_baseline_2605_state_Type: dword
+
+# win_baseline_2606_state | Ensure 'User Account Control - Switch to the secure desktop when prompting for elevation' is set to 'Enabled"
+win_baseline_2606_state_Manage: True
+win_baseline_2606_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
+win_baseline_2606_state_Name: "PromptOnSecureDesktop"
+win_baseline_2606_state_Data: "1"
+win_baseline_2606_state_Type: dword
+
+
