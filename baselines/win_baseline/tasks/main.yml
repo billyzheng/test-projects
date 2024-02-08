@@ -699,22 +699,22 @@
 #   when:
 #     win_baseline_2343_state_Manage
 
-- name: "win_baseline_2484_state | Ensure 'Store passwords using reversible encryption' is set to 'Disabled'"
-  win_security_policy:
-    section: "{{ win_baseline_2484_state_Section }}"
-    key: "{{ win_baseline_2484_state_Key }}"
-    value: "{{ win_baseline_2484_state_Value }}"
-  when:
-    win_baseline_2484_state_Manage
-
-# - name: "win_baseline_2518_state | Ensure 'Turn off Microsoft Peer-to-Peer Networking Services' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_2518_state_Path }}"
-#     name: "{{ win_baseline_2518_state_Name }}"
-#     data: "{{ win_baseline_2518_state_Data }}"
-#     type: "{{ win_baseline_2518_state_Type }}"
+# - name: "win_baseline_2484_state | Ensure 'Store passwords using reversible encryption' is set to 'Disabled'"
+#   win_security_policy:
+#     section: "{{ win_baseline_2484_state_Section }}"
+#     key: "{{ win_baseline_2484_state_Key }}"
+#     value: "{{ win_baseline_2484_state_Value }}"
 #   when:
-#     win_baseline_2518_state_Manage
+#     win_baseline_2484_state_Manage
+
+- name: "win_baseline_2518_state | Ensure 'Turn off Microsoft Peer-to-Peer Networking Services' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_2518_state_Path }}"
+    name: "{{ win_baseline_2518_state_Name }}"
+    data: "{{ win_baseline_2518_state_Data }}"
+    type: "{{ win_baseline_2518_state_Type }}"
+  when:
+    win_baseline_2518_state_Manage
 
 # - name: "win_baseline_2582_state | Ensure 'User Account Control - Detect application installations and prompt for elevation' is set to 'Enabled'"
 #   win_regedit:
