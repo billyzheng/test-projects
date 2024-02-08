@@ -67,21 +67,21 @@
 # Windows total playbooks
 # -----------------------
 
-- name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)'"
-  win_security_policy:
-    section: "{{ win_baseline_1071_state_Section }}"
-    key: "{{ win_baseline_1071_state_Key }}"
-    value: "{{ win_baseline_1071_state_Value }}"
-  when:
-    win_baseline_1071_state_Manage
+# - name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)'"
+#   win_security_policy:
+#     section: "{{ win_baseline_1071_state_Section }}"
+#     key: "{{ win_baseline_1071_state_Key }}"
+#     value: "{{ win_baseline_1071_state_Value }}"
+#   when:
+#     win_baseline_1071_state_Manage
 
-- name: "win_baseline_1072_state | Ensure 'Minimum password age' is set to '1 or more day(s)' [GSA-0]"
-  win_security_policy:
-    section: "{{win_baseline_1072_state_Section }}"
-    key: "{{ win_baseline_1072_state_Key }}"
-    value: "{{ win_baseline_1072_state_Value }}"
-  when:
-    win_baseline_1072_state_Manage
+# - name: "win_baseline_1072_state | Ensure 'Minimum password age' is set to '1 or more day(s)' [GSA-0]"
+#   win_security_policy:
+#     section: "{{win_baseline_1072_state_Section }}"
+#     key: "{{ win_baseline_1072_state_Key }}"
+#     value: "{{ win_baseline_1072_state_Value }}"
+#   when:
+#     win_baseline_1072_state_Manage
 
 # - name: "win_baseline_1091_state | Ensure 'Interactive logon - Prompt user to change password before expiration' is set to 'between 5 and 14 days'"
 #   win_regedit:
@@ -92,21 +92,40 @@
 #   when:
 #     win_baseline_1091_state_Manage
 
-- name: "win_baseline_1092_state | Ensure 'Password Complexity Requirements' is set to 'Enabled'"
-  win_security_policy:
-    section: "{{ win_baseline_1092_state_Section }}"
-    key: "{{ win_baseline_1092_state_Key }}"
-    value: "{{ win_baseline_1092_state_Value }}"
-  when:
-    win_baseline_1092_state_Manage
+# - name: "win_baseline_1092_state | Ensure 'Password Complexity Requirements' is set to 'Enabled'"
+#   win_security_policy:
+#     section: "{{ win_baseline_1092_state_Section }}"
+#     key: "{{ win_baseline_1092_state_Key }}"
+#     value: "{{ win_baseline_1092_state_Value }}"
+#   when:
+#     win_baseline_1092_state_Manage
 
-- name: "win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Client' is set to 'Disabled'"
-  win_service:
-    name: "{{ win_baseline_1115_state_Name }}"
-    state: "{{ win_baseline_1115_state_State }}"
-    start_mode: "{{ win_baseline_1115_state_Mode }}"
-  when:
-    win_baseline_1115_state_Manage
+
+- block:
+  - name: Get DHCP Client service info
+    win_service_info:
+      name: Dhcp
+    register: dhcp_service_info
+
+  - name: Stop dependent services
+    win_service:
+      name: "{{ item }}"
+      state: stopped
+    loop: "{{ dhcp_service_info.service.DependentServices }}"
+
+  - name: Ensure DHCP Client is set to Disabled
+    win_service:
+      name: Dhcp
+      state: stopped
+      start_mode: disabled
+  
+# - name: "win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Client' is set to 'Disabled'"
+#   win_service:
+#     name: "{{ win_baseline_1115_state_Name }}"
+#     state: "{{ win_baseline_1115_state_State }}"
+#     start_mode: "{{ win_baseline_1115_state_Mode }}"
+#   when:
+#     win_baseline_1115_state_Manage
 
 # - name: "win_baseline_1134_state | Ensure 'Logon banner title' is ser to 'This is an interest computer system of ABB Asea Brown Boveri Ltd'"
 #   win_regedit:
