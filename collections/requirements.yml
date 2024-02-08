@@ -4,3 +4,6 @@ collections:
 
   - name: ansible.windows
     source: https://galaxy.ansible.com
+
+  - name: ansible.posix
+    source: https://galaxy.ansible.com
