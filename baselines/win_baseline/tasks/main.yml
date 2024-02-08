@@ -92,13 +92,13 @@
 #   when:
 #     win_baseline_1091_state_Manage
 
-- name: "win_baseline_1092_state | Ensure 'Password Complexity Requirements' is set to 'Enabled'"
-  win_security_policy:
-    section: "{{ win_baseline_1092_state_Section }}"
-    key: "{{ win_baseline_1092_state_Key }}"
-    value: "{{ win_baseline_1092_state_Value }}"
-  when:
-    win_baseline_1092_state_Manage
+# - name: "win_baseline_1092_state | Ensure 'Password Complexity Requirements' is set to 'Enabled'"
+#   win_security_policy:
+#     section: "{{ win_baseline_1092_state_Section }}"
+#     key: "{{ win_baseline_1092_state_Key }}"
+#     value: "{{ win_baseline_1092_state_Value }}"
+#   when:
+#     win_baseline_1092_state_Manage
 
 # ! The service module cannot be installed
 # - block:
@@ -674,7 +674,13 @@
 #   when:
 #     win_baseline_2183_state_Manage
 
-
+- name: "win_baseline_2341_state | Ensure 'Account lockout duration' is set to '15 or more minute(s)'"
+  win_security_policy:
+    section: "{{ win_baseline_2341_state_Section }}"
+    key: "{{ win_baseline_2341_state_Key }}"
+    value: "{{ win_baseline_2341_state_Value }}"
+  when:
+    win_baseline_2341_state_Manage
 
 
 
