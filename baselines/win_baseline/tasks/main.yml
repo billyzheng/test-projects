@@ -744,108 +744,108 @@
 #     win_baseline_2584_state_Manage
 
 # ! The result of this task might block the host, and throw the credential error.
-- name: "win_baseline_2586_state | Ensure 'User Account Control - Admin Approval Mode for the Built-in Administrator account' is set to 'Enabled'"
+# - name: "win_baseline_2586_state | Ensure 'User Account Control - Admin Approval Mode for the Built-in Administrator account' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_2586_state_Path }}"
+#     name: "{{ win_baseline_2586_state_Name }}"
+#     data: "{{ win_baseline_2586_state_Data }}"
+#     type: "{{ win_baseline_2586_state_Type }}"
+#   when:
+#     win_baseline_2586_state_Manage
+
+- name: "win_baseline_2587_state | Ensure 'User Account Control - Behavior of the elevation prompt for administrators in Admin Approval Mode' is set to 'Prompt for consent on the secure desktop'"
   win_regedit:
-    path: "{{ win_baseline_2586_state_Path }}"
-    name: "{{ win_baseline_2586_state_Name }}"
-    data: "{{ win_baseline_2586_state_Data }}"
-    type: "{{ win_baseline_2586_state_Type }}"
+    path: "{{ win_baseline_2587_state_Path }}"
+    name: "{{ win_baseline_2587_state_Name }}"
+    data: "{{ win_baseline_2587_state_Data }}"
+    type: "{{ win_baseline_2587_state_Type }}"
   when:
-    win_baseline_2586_state_Manage
+    win_baseline_2587_state_Manage
 
-# - name: "win_baseline_2587_state | Ensure 'User Account Control - Behavior of the elevation prompt for administrators in Admin Approval Mode' is set to 'Prompt for consent on the secure desktop'"
-#   win_regedit:
-#     path: "{{ win_baseline_2587_state_Path }}"
-#     name: "{{ win_baseline_2587_state_Name }}"
-#     data: "{{ win_baseline_2587_state_Data }}"
-#     type: "{{ win_baseline_2587_state_Type }}"
-#   when:
-#     win_baseline_2587_state_Manage
+- name: "win_baseline_2605_state | Ensure 'User Account Control - Behavior of the elevation prompt for standard users' is 'Automatically deny elevation requests'"
+  win_regedit:
+    path: "{{ win_baseline_2605_state_Path }}"
+    name: "{{ win_baseline_2605_state_Name }}"
+    data: "{{ win_baseline_2605_state_Data }}"
+    type: "{{ win_baseline_2605_state_Type }}"
+  when:
+    win_baseline_2605_state_Manage
 
-# - name: "win_baseline_2605_state | Ensure 'User Account Control - Behavior of the elevation prompt for standard users' is 'Automatically deny elevation requests'"
-#   win_regedit:
-#     path: "{{ win_baseline_2605_state_Path }}"
-#     name: "{{ win_baseline_2605_state_Name }}"
-#     data: "{{ win_baseline_2605_state_Data }}"
-#     type: "{{ win_baseline_2605_state_Type }}"
-#   when:
-#     win_baseline_2605_state_Manage
+- name: "win_baseline_2606_state | Ensure 'User Account Control - Switch to the secure desktop when prompting for elevation' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_2606_state_Path }}"
+    name: "{{ win_baseline_2606_state_Name }}"
+    data: "{{ win_baseline_2606_state_Data }}"
+    type: "{{ win_baseline_2606_state_Type }}"
+  when:
+    win_baseline_2606_state_Manage
 
-# - name: "win_baseline_2606_state | Ensure 'User Account Control - Switch to the secure desktop when prompting for elevation' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_2606_state_Path }}"
-#     name: "{{ win_baseline_2606_state_Name }}"
-#     data: "{{ win_baseline_2606_state_Data }}"
-#     type: "{{ win_baseline_2606_state_Type }}"
-#   when:
-#     win_baseline_2606_state_Manage
+- name: "win_baseline_2607_state | Ensure 'Prohibit use of Internet Connection Sharing on your DNS domain network' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_2607_state_Path }}"
+    name: "{{ win_baseline_2607_state_Name }}"
+    data: "{{ win_baseline_2607_state_Data }}"
+    type: "{{ win_baseline_2607_state_Type }}"
+  when:
+    win_baseline_2607_state_Manage
 
-# - name: "win_baseline_2607_state | Ensure 'Prohibit use of Internet Connection Sharing on your DNS domain network' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_2607_state_Path }}"
-#     name: "{{ win_baseline_2607_state_Name }}"
-#     data: "{{ win_baseline_2607_state_Data }}"
-#     type: "{{ win_baseline_2607_state_Type }}"
-#   when:
-#     win_baseline_2607_state_Manage
+- name: "win_baseline_2608_state | Ensure 'Audit - Force audit policy subcategory settings to override audit policy category settings' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_2608_state_Path }}"
+    name: "{{ win_baseline_2608_state_Name }}"
+    data: "{{ win_baseline_2608_state_Data }}"
+    type: "{{ win_baseline_2608_state_Type }}"
+  when:
+    win_baseline_2608_state_Manage
 
-# - name: "win_baseline_2608_state | Ensure 'Audit - Force audit policy subcategory settings to override audit policy category settings' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_2608_state_Path }}"
-#     name: "{{ win_baseline_2608_state_Name }}"
-#     data: "{{ win_baseline_2608_state_Data }}"
-#     type: "{{ win_baseline_2608_state_Type }}"
-#   when:
-#     win_baseline_2608_state_Manage
+- name: "win_baseline_2610_state | Ensure 'Prohibit access of the Windows Connect Now wizards' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_2610_state_Path }}"
+    name: "{{ win_baseline_2610_state_Name }}"
+    data: "{{ win_baseline_2610_state_Data }}"
+    type: "{{ win_baseline_2610_state_Type }}"
+  when:
+    win_baseline_2610_state_Manage
 
-# - name: "win_baseline_2610_state | Ensure 'Prohibit access of the Windows Connect Now wizards' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_2610_state_Path }}"
-#     name: "{{ win_baseline_2610_state_Name }}"
-#     data: "{{ win_baseline_2610_state_Data }}"
-#     type: "{{ win_baseline_2610_state_Type }}"
-#   when:
-#     win_baseline_2610_state_Manage
+- name: "win_baseline_2612_state | Ensure 'Turn off downloading of enclosures' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_2612_state_Path }}"
+    name: "{{ win_baseline_2612_state_Name }}"
+    data: "{{ win_baseline_2612_state_Data }}"
+    type: "{{ win_baseline_2612_state_Type }}"
+  when:
+    win_baseline_2612_state_Manage
 
-# - name: "win_baseline_2612_state | Ensure 'Turn off downloading of enclosures' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_2612_state_Path }}"
-#     name: "{{ win_baseline_2612_state_Name }}"
-#     data: "{{ win_baseline_2612_state_Data }}"
-#     type: "{{ win_baseline_2612_state_Type }}"
-#   when:
-#     win_baseline_2612_state_Manage
+# TODO 2612: cannot find the property in the registry
 
-# # TODO 2612: cannot find the property in the registry
+- name: "win_baseline_2616_state | Ensure 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_2616_state_Path }}"
+    name: "{{ win_baseline_2616_state_Name }}"
+    data: "{{ win_baseline_2616_state_Data }}"
+    type: "{{ win_baseline_2616_state_Type }}"
+  when:
+    win_baseline_2616_state_Manage
 
-# - name: "win_baseline_2616_state | Ensure 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_2616_state_Path }}"
-#     name: "{{ win_baseline_2616_state_Name }}"
-#     data: "{{ win_baseline_2616_state_Data }}"
-#     type: "{{ win_baseline_2616_state_Type }}"
-#   when:
-#     win_baseline_2616_state_Manage
+- name: "win_baseline_2635_state | Ensure 'Set client connection encryption level' is set to 'Enabled - High Level'"
+  win_regedit:
+    path: "{{ win_baseline_2635_state_Path }}"
+    name: "{{ win_baseline_2635_state_Name }}"
+    data: "{{ win_baseline_2635_state_Data }}"
+    type: "{{ win_baseline_2635_state_Type }}"
+  when:
+    win_baseline_2635_state_Manage
 
-# - name: "win_baseline_2635_state | Ensure 'Set client connection encryption level' is set to 'Enabled - High Level'"
-#   win_regedit:
-#     path: "{{ win_baseline_2635_state_Path }}"
-#     name: "{{ win_baseline_2635_state_Name }}"
-#     data: "{{ win_baseline_2635_state_Data }}"
-#     type: "{{ win_baseline_2635_state_Type }}"
-#   when:
-#     win_baseline_2635_state_Manage
+- name: "win_baseline_3376_state | Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'"
+  win_security_policy:
+    section: "{{ win_baseline_3376_state_Section }}"
+    key: "{{ win_baseline_3376_state_Key }}"
+    value: "{{ win_baseline_3376_state_Value }}"
+  when:
+    win_baseline_3376_state_Manage
 
-# - name: "win_baseline_3376_state | Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'"
-#   win_security_policy:
-#     section: "{{ win_baseline_3376_state_Section }}"
-#     key: "{{ win_baseline_3376_state_Key }}"
-#     value: "{{ win_baseline_3376_state_Value }}"
-#   when:
-#     win_baseline_3376_state_Manage
-
-# - name: "win_baseline_3657_state | Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'"
-#   win_security_policy:
-#     section: System Access
-#     key: LSAAnonymousNameLookup
-#     value: 0
+- name: "win_baseline_3657_state | Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'"
+  win_security_policy:
+    section: System Access
+    key: LSAAnonymousNameLookup
+    value: 0
