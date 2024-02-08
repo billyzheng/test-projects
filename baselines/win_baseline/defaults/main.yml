@@ -589,3 +589,37 @@ win_baseline_2610_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WCN\UI'
 win_baseline_2610_state_Name: "DisableWcnUi"
 win_baseline_2610_state_Data: "1"
 win_baseline_2610_state_Type: dword
+
+# win_baseline_2612_state | Ensure 'Turn off downloading of enclosures' is set to 'Enabled'
+win_baseline_2612_state_Manage: True
+win_baseline_2612_state_Path: 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Feeds'
+win_baseline_2612_state_Name: "DisableEnclosureDownload"
+win_baseline_2612_state_Data: "1"
+win_baseline_2612_state_Type: dword
+
+# TODO 2612: cannot find the property in the registry
+
+# win_baseline_2616_state | Ensure 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled'
+win_baseline_2616_state_Manage: True
+win_baseline_2616_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Network Connections'
+win_baseline_2616_state_Name: "NC_AllowNetBridge_NLA"
+win_baseline_2616_state_Data: "0"
+win_baseline_2616_state_Type: dword
+
+# win_baseline_2635_state | Ensure 'Set client connection encryption level' is set to 'Enabled - High Level'
+win_baseline_2635_state_Manage: True
+win_baseline_2635_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services'
+win_baseline_2635_state_Name: "MinEncryptionLevel"
+win_baseline_2635_state_Data: "3"
+win_baseline_2635_state_Type: dword
+
+# win_baseline_3376_state | Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'
+win_baseline_3376_state_Manage: True
+win_baseline_3376_state_Section: "System Access"
+win_baseline_3376_state_Key: "MaxPasswordAge"
+win_baseline_3376_state_Value: "60"
+
+# win_baseline_3657_state | Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'
+# win_baseline_3657_state_Manage: True
+# win_baseline
+
