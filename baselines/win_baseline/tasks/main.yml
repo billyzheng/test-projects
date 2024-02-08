@@ -754,14 +754,14 @@
 #     win_baseline_2586_state_Manage
 
 # # ! the specified credentials were rejected by the server
-# - name: "win_baseline_2587_state | Ensure 'User Account Control - Behavior of the elevation prompt for administrators in Admin Approval Mode' is set to 'Prompt for consent on the secure desktop'"
-#   win_regedit:
-#     path: "{{ win_baseline_2587_state_Path }}"
-#     name: "{{ win_baseline_2587_state_Name }}"
-#     data: "{{ win_baseline_2587_state_Data }}"
-#     type: "{{ win_baseline_2587_state_Type }}"
-#   when:
-#     win_baseline_2587_state_Manage
+- name: "win_baseline_2587_state | Ensure 'User Account Control - Behavior of the elevation prompt for administrators in Admin Approval Mode' is set to 'Prompt for consent on the secure desktop'"
+  win_regedit:
+    path: "{{ win_baseline_2587_state_Path }}"
+    name: "{{ win_baseline_2587_state_Name }}"
+    data: "{{ win_baseline_2587_state_Data }}"
+    type: "{{ win_baseline_2587_state_Type }}"
+  when:
+    win_baseline_2587_state_Manage
 
 # - name: "win_baseline_2605_state | Ensure 'User Account Control - Behavior of the elevation prompt for standard users' is 'Automatically deny elevation requests'"
 #   win_regedit:
@@ -772,15 +772,14 @@
 #   when:
 #     win_baseline_2605_state_Manage
 
-# ! might lead the server throw credencial error.
-- name: "win_baseline_2606_state | Ensure 'User Account Control - Switch to the secure desktop when prompting for elevation' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_2606_state_Path }}"
-    name: "{{ win_baseline_2606_state_Name }}"
-    data: "{{ win_baseline_2606_state_Data }}"
-    type: "{{ win_baseline_2606_state_Type }}"
-  when:
-    win_baseline_2606_state_Manage
+# - name: "win_baseline_2606_state | Ensure 'User Account Control - Switch to the secure desktop when prompting for elevation' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_2606_state_Path }}"
+#     name: "{{ win_baseline_2606_state_Name }}"
+#     data: "{{ win_baseline_2606_state_Data }}"
+#     type: "{{ win_baseline_2606_state_Type }}"
+#   when:
+#     win_baseline_2606_state_Manage
 
 # - name: "win_baseline_2607_state | Ensure 'Prohibit use of Internet Connection Sharing on your DNS domain network' is set to 'Enabled'"
 #   win_regedit:
