@@ -100,12 +100,13 @@
   when:
     win_baseline_1092_state_Manage
 
-# ! error
-# - name: "win_baseline_1092_state | Ensure 'Password must meet complexity requirements' is set to 'Enabled'"
-#   win_security_policy:
-#     section: "{{ win_baseline_1092_state_Section }}"
-#     key: "{{ win_baseline_1092_state_Key }}"
-#     value: "{{ win_baseline_1092_state_Value }}"
+- name: "win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Client' is set to 'Disabled'"
+  win_service:
+    name: "{{ win_baseline_1115_state_Name }}"
+    state: "{{ win_baseline_1115_state_State }}"
+    start_mode: "{{ win_baseline_1115_state_Mode }}"
+  when:
+    win_baseline_1115_state_Manage
 
 # - name: "win_baseline_1134_state | Ensure 'Logon banner title' is ser to 'This is an interest computer system of ABB Asea Brown Boveri Ltd'"
 #   win_regedit:
