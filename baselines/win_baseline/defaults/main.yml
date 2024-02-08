@@ -218,10 +218,9 @@ win_baseline_1199_state_Type: dword
 
 # win_baseline_1200_state | Ensure 'Dynamic Controller: Resuse machine account password changes' is set to 'Disabled'
 win_baseline_1200_state_Manage: True
-win_baseline_1200_state_Path: 'HKLM:\System\Currentcontrolset\Services\Netlogon\Parameters'
-win_baseline_1200_state_Name: "RefusePasswordChange"
-win_baseline_1200_state_Data: "1"
-win_baseline_1200_state_Type: dword
+win_baseline_1200_state_Section: "Security Options"
+win_baseline_1200_state_Key: "RefusePasswordChange"
+win_baseline_1200_state_Value: "0"
 
 # win_baseline_1264_state | Ensure Dynamic Host Configuration Protocol Client' is set to 'Disabled'
 win_baseline_1264_state_Manage: True

@@ -100,24 +100,24 @@
 #   when:
 #     win_baseline_1092_state_Manage
 
+# ! The service module cannot be installed
+# - block:
+#   - name: Get DHCP Client service info
+#     win_service_info:
+#       name: Dhcp
+#     register: dhcp_service_info
 
-- block:
-  - name: Get DHCP Client service info
-    win_service_info:
-      name: Dhcp
-    register: dhcp_service_info
+#   - name: Stop dependent services
+#     win_service:
+#       name: "{{ item }}"
+#       state: stopped
+#     loop: "{{ dhcp_service_info.service.DependentServices }}"
 
-  - name: Stop dependent services
-    win_service:
-      name: "{{ item }}"
-      state: stopped
-    loop: "{{ dhcp_service_info.service.DependentServices }}"
-
-  - name: Ensure DHCP Client is set to Disabled
-    ansible.windows.win_service_info:
-      name: Dhcp
-      state: stopped
-      start_mode: disabled
+#   - name: Ensure DHCP Client is set to Disabled
+#     ansible.windows.win_service_info:
+#       name: Dhcp
+#       state: stopped
+#       start_mode: disabled
   
 # - name: "win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Client' is set to 'Disabled'"
 #   win_service:
@@ -309,14 +309,13 @@
 #     win_baseline_1199_state_Manage
 
 # ! not sure
-# - name" "win_baseline_1200_state | Ensure 'Dynamic Controller: Resuse machine account password changes' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1200_state_Path }}"
-#     name: "{{ win_baseline_1200_state_Name }}"
-#     data: "{{ win_baseline_1200_state_Data }}"
-#     type: "{{ win_baseline_1200_state_Type }}"
-#   when:
-#     win_baseline_1200_state_Manage
+- name" "win_baseline_1200_state | Ensure 'Dynamic Controller: Resuse machine account password changes' is set to 'Disabled'"
+  win_secure_policy:
+    section: "{{ win_baseline_1200_state_Section }}"
+    key: "{{ win_baseline_1200_state_Key }}"
+    value: "{{ win_baseline_1200_state_Value }}"
+  when:
+    win_baseline_1200_state_Manage
 
 # - name: "win_baseline_1264_state | Ensure Dynamic Host Configuration Protocol Client' is set to 'Disabled'"
 #   win_regedit:
