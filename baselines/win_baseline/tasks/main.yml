@@ -114,7 +114,7 @@
     loop: "{{ dhcp_service_info.service.DependentServices }}"
 
   - name: Ensure DHCP Client is set to Disabled
-    win_service:
+    ansible.windows.win_service_info:
       name: Dhcp
       state: stopped
       start_mode: disabled

@@ -2,5 +2,5 @@ collections:
   - name: community.windows
     source: https://galaxy.ansible.com
 
-  - name: windows.win_service_info
-    source: https://galaxy.ansible.com
+  # - name: windows.win_service_info
+  #   source: https://galaxy.ansible.com
