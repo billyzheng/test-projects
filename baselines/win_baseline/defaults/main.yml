@@ -1038,3 +1038,10 @@ win_baseline_4521_state_AuditType: "success, failure"
 win_baseline_4522_state_Manage: True
 win_baseline_4522_state_Subcategory: "Kerberos Authentication Service"
 win_baseline_4522_state_AuditType: "success, failure"
+
+# win_baseline_4741_state | Ensure 'MSS: (DisableIPSourceRoutingIPv6) IP source routing protection level (protects against packet spoofing) is set to 'Enabled: Highest protection, source routing is completely disabled'
+win_baseline_4741_state_Manage: True
+win_baseline_4741_state_Path: 'HKLM:\System\Currentcontrolset\Services\Tcpip6\Parameters'
+win_baseline_4741_state_Name: "DisableIPSourceRouting"
+win_baseline_4741_state_Data: "2"
+win_baseline_4741_state_Type: dword
