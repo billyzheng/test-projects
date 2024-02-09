@@ -1308,3 +1308,17 @@
     audit_type: "{{ win_baseline_4502_state_AuditType }}"
   when:
     win_baseline_4502_state_Manage
+
+- name: "win_baseline_4503_state | Ensure 'Audit Authorization Policy Change' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4503_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4503_state_AuditType }}"
+  when:
+    win_baseline_4503_state_Manage
+
+- name: "win_baseline_4504_state | Ensure 'Audit MPSSVC Rule-Level Policy Change' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4504_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4504_state_AuditType }}"
+  when:
+    win_baseline_4504_state_Manage
