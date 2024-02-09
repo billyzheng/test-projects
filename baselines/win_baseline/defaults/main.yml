@@ -735,4 +735,22 @@ win_baseline_3927_state_Name: "NoAUShutdownOption"
 win_baseline_3927_state_Data: "0"
 win_baseline_3927_state_Type: dword
 
+# win_baseline_3939_state | Ensure 'Allow UIAccess applications to prompt for elevation without using the secure desktop' is set to 'Disabled'
+win_baseline_3939_state_Manage: True
+win_baseline_3939_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
+win_baseline_3939_state_Name: "EnableUIADesktopToggle"
+win_baseline_3939_state_Data: "0"
+win_baseline_3939_state_Type: dword
+
+# win_baseline_3940_state | Ensure 'User Account Control - Virtualize file and registry write failures to per-user locations' is set to 'Enabled'
+win_baseline_3940_state_Manage: True
+win_baseline_3940_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
+win_baseline_3940_state_Name: "EnableVirtualization"
+win_baseline_3940_state_Data: "1"
+win_baseline_3940_state_Type: dword
+
+# win_baseline_3941_state | Ensure 'Create symbolic links' is set to 'Administrators'
+# TODO: skip
+
+
 

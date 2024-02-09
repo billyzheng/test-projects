@@ -998,3 +998,31 @@
     type: "{{ win_baseline_3927_state_Type }}"
   when:
     win_baseline_3927_state_Manage
+
+# TODO: skip 3928
+
+- name: "win_baseline_3939_state | Ensure 'Allow UIAccess applications to prompt for elevation without using the secure desktop' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_3939_state_Path }}"
+    name: "{{ win_baseline_3939_state_Name }}"
+    data: "{{ win_baseline_3939_state_Data }}"
+    type: "{{ win_baseline_3939_state_Type }}"
+  when:
+    win_baseline_3939_state_Manage
+
+- name: "win_baseline_3940_state | Ensure 'User Account Control - Virtualize file and registry write failures to per-user locations' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3940_state_Path }}"
+    name: "{{ win_baseline_3940_state_Name }}"
+    data: "{{ win_baseline_3940_state_Data }}"
+    type: "{{ win_baseline_3940_state_Type }}"
+  when:
+    win_baseline_3940_state_Manage
+
+# - name: "win_baseline_3941_state | Ensure 'Create symbolic links' is set to 'Administrators'"
+#   win_user_right:
+#     name: SeCreateSymbolicLinkPrivilege
+#     users:
+#     - Administrators
+#     # - NT VIRTUAL MACHINE\Virtual Machines (Needed only if the Hyper-V Role is installed)
+#     action: set
