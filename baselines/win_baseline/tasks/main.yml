@@ -1208,3 +1208,10 @@
     audit_type: "{{ win_baseline_4487_state_AuditType }}"
   when:
     win_baseline_4487_state_Manage
+
+- name: "win_baseline_4488_state | Ensure 'Audit Application Generated' is set to 'Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4488_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4488_state_AuditType }}"
+  when:
+    win_baseline_4488_state_Manage
