@@ -1245,6 +1245,7 @@
   when:
     win_baseline_4492_state_Manage
 
+# ! error
 # - name: "win_baseline_4493_state | Ensure 'Audit Order Object Access Events' is set to 'Success'"
 #   win_audit_policy_system:
 #     subcategory: "{{ win_baseline_4493_state_Subcategory }}"
@@ -1300,3 +1301,10 @@
     audit_type: "{{ win_baseline_4501_state_AuditType }}"
   when:
     win_baseline_4501_state_Manage
+
+- name: "win_baseline_4502_state | Ensure 'Audit Authentication Policy Change' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4502_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4502_state_AuditType }}"
+  when:
+    win_baseline_4502_state_Manage
