@@ -1159,3 +1159,31 @@
     audit_type: "{{ win_baseline_4480_state_AuditType }}"
   when:
     win_baseline_4480_state_Manage
+
+- name: "win_baseline_4481_state | Ensure 'Audit Special Logon' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4481_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4481_state_AuditType }}"
+  when:
+    win_baseline_4481_state_Manage
+
+- name: "win_baseline_4482_state | Ensure 'Audit Other Logon/Logoff Events' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4482_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4482_state_AuditType }}"
+  when:
+    win_baseline_4482_state_Manage
+
+- name: "win_baseline_4483_state | Ensure 'Audit Registry' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4483_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4483_state_AuditType }}"
+  when:
+    win_baseline_4483_state_Manage
+
+- name: "win_baseline_4484_state | Ensure 'Audit Kernel Object' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4484_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4484_state_AuditType }}"
+  when:
+    win_baseline_4484_state_Manage

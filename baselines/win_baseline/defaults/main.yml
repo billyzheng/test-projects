@@ -849,3 +849,22 @@ win_baseline_4480_state_Manage: True
 win_baseline_4480_state_Subcategory: "IPsec Extended Mode"
 win_baseline_4480_state_AuditType: "success, failure"
 
+# win_baseline_4481_state | Ensure 'Audit Special Logon' is set to 'Success and Failure'
+win_baseline_4481_state_Manage: True
+win_baseline_4481_state_Subcategory: "Special Logon"
+win_baseline_4481_state_AuditType: "success, failure"
+
+# win_baseline_4482_state | Ensure 'Audit Other Logon/Logoff Events' is set to 'Success and Failure'
+win_baseline_4482_state_Manage: True
+win_baseline_4482_state_Subcategory: "Other Logon/Logoff Events"
+win_baseline_4482_state_AuditType: "success, failure"
+
+# win_baseline_4483_state | Ensure 'Audit Registry' is set to 'Success and Failure'
+win_baseline_4483_state_Manage: True
+win_baseline_4483_state_Subcategory: "Registry"
+win_baseline_4483_state_AuditType: "success, failure"
+
+# win_baseline_4484_state | Ensure 'Audit Kernel Object' is set to 'Success and Failure'
+win_baseline_4484_state_Manage: True
+win_baseline_4484_state_Subcategory: "Kernel Object"
+win_baseline_4484_state_AuditType: "success, failure"
