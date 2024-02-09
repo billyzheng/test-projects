@@ -1045,3 +1045,10 @@ win_baseline_4741_state_Path: 'HKLM:\System\Currentcontrolset\Services\Tcpip6\Pa
 win_baseline_4741_state_Name: "DisableIPSourceRouting"
 win_baseline_4741_state_Data: "2"
 win_baseline_4741_state_Type: dword
+
+# win_baseline_5209_state | Ensure 'Network Access: Named Pipes that can be accessed anonymously' is set to 'None'
+win_baseline_5209_state_Manage: True
+win_baseline_5209_state_Path: 'HKLM:\System\Currentcontrolset\Services\LanmanServer\Parameters'
+win_baseline_5209_state_Name: "NullSessionPipes"
+win_baseline_5209_state_Data: ""
+win_baseline_5209_state_Type: multi_string
