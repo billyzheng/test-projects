@@ -897,3 +897,48 @@
     type: "{{ win_baseline_3899_state_Type }}"
   when:
     win_baseline_3899_state_Manage
+
+- name: "win_baseline_3903_state | Ensure 'Do not process the run once list' is set to Enabled"
+  win_regedit:
+    path: "{{ win_baseline_3903_state_Path }}"
+    name: "{{ win_baseline_3903_state_Name }}"
+    data: "{{ win_baseline_3903_state_Data }}"
+    type: "{{ win_baseline_3903_state_Type }}"
+  when:
+    win_baseline_3903_state_Manage
+
+- name: "win_baseline_3905_state | Ensure 'Do not process the legacy run list' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3905_state_Path }}"
+    name: "{{ win_baseline_3905_state_Name }}"
+    data: "{{ win_baseline_3905_state_Data }}"
+    type: "{{ win_baseline_3905_state_Type }}"
+  when:
+    win_baseline_3905_state_Manage
+
+- name: "win_baseline_3907_state | Ensure 'Windows Messenger Customer Experience Improvement Program' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_3907_state_Path }}"
+    name: "{{ win_baseline_3907_state_Name }}"
+    data: "{{ win_baseline_3907_state_Data }}"
+    type: "{{ win_baseline_3907_state_Type }}"
+  when:
+    win_baseline_3907_state_Manage
+
+- name: "win_baseline_3908_state | Ensure 'Turn off Search Companion content file updates' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3908_state_Path }}"
+    name: "{{ win_baseline_3908_state_Name }}"
+    data: "{{ win_baseline_3908_state_Data }}"
+    type: "{{ win_baseline_3908_state_Type }}"
+  when:
+    win_baseline_3908_state_Manage
+
+- name: "win_baseline_3919_state | Ensure 'Turn off printing over HTTP' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3919_state_Path }}"
+    name: "{{ win_baseline_3919_state_Name }}"
+    data: "{{ win_baseline_3919_state_Data }}"
+    type: "{{ win_baseline_3919_state_Type }}"
+  when:
+    win_baseline_3919_state_Manage

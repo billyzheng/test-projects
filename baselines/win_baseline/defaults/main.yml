@@ -658,3 +658,44 @@ win_baseline_3899_state_Name: "fAllowToGetHelp"
 win_baseline_3899_state_Data: "0"
 win_baseline_3899_state_Type: dword
 
+# win_baseline_3903_state | Ensure 'Do not process the run once list' is set to Enabled
+win_baseline_3903_state_Manage: True
+win_baseline_3903_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Policies\Explorer'
+win_baseline_3903_state_Name: "DisableLocalMachineRunOnce"
+win_baseline_3903_state_Data: "1"
+
+# win_baseline_3904_state | Ensure 'Do not process the legacy run list' is set to 'Enabled'
+win_baseline_3904_state_Manage: True
+win_baseline_3904_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Policies\Explorer'
+win_baseline_3904_state_Name: "DisableLocalMachineRun"
+win_baseline_3904_state_Data: "1"
+win_baseline_3904_state_Type: dword
+
+# win_baseline_3907_state | Ensure 'Windows Messenger Customer Experience Improvement Program' is set to 'Disabled'
+win_baseline_3907_state_Manage: True
+win_baseline_3907_state_Path: 'HKLM:\Software\Policies\Microsoft\Messenger\Client'
+win_baseline_3907_state_Name: "CEIP"
+win_baseline_3907_state_Data: "1"
+win_baseline_3907_state_Type: dword
+
+# win_baseline_3908_state | Ensure 'Turn off Search Companion content file updates' is set to 'Enabled'
+win_baseline_3908_state_Manage: True
+win_baseline_3908_state_Path: 'HKLM:\Software\Policies\Microsoft\SearchCompanion'
+win_baseline_3908_state_Name: "DisableContentFileUpdates"
+win_baseline_3908_state_Data: "1"
+win_baseline_3908_state_Type: dword
+
+# win_baseline_3919_state | Ensure 'Turn off printing over HTTP' is set to 'Enabled'
+win_baseline_3919_state_Manage: True
+win_baseline_3919_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows NT\Printers'
+win_baseline_3919_state_Name: "DisableHTTPPrinting"
+win_baseline_3919_state_Data: "1"
+win_baseline_3919_state_Type: dword
+
+#  win_baseline_3920_state | Ensure 'Turn off Internet download for Web publishing and online ordering wizards' is set to 'Enabled'"
+win_baseline_3920_state_Manage: True
+win_baseline_3920_state_Path: 'HKLM:\Software\Microsoft\Windows\Currentversion\Policies\Explorer'
+win_baseline_3920_state_Name: "NoWebServices"
+win_baseline_3920_state_Data: "1"
+win_baseline_3920_state_Type: dword
+
