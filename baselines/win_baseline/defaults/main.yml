@@ -933,3 +933,8 @@ win_baseline_4497_state_AuditType: "success, failure"
 win_baseline_4498_state_Manage: True
 win_baseline_4498_state_Subcategory: "Process Termination"
 win_baseline_4498_state_AuditType: "failure"
+
+# win_baseline_4499_state | Ensure 'Audit DPAPI Activity' is set to 'Success and Failure'
+win_baseline_4499_state_Manage: True
+win_baseline_4499_state_Subcategory: "DPAPI Activity"
+win_baseline_4499_state_AuditType: "success, failure"

@@ -1279,3 +1279,9 @@
   when:
     win_baseline_4498_state_Manage
 
+- name: "win_baseline_4499_state | Ensure 'Audit DPAPI Activity' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4499_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4499_state_AuditType }}"
+  when:
+    win_baseline_4499_state_Manage
