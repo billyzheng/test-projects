@@ -859,12 +859,27 @@ win_baseline_4482_state_Manage: True
 win_baseline_4482_state_Subcategory: "Other Logon/Logoff Events"
 win_baseline_4482_state_AuditType: "success, failure"
 
-# win_baseline_4483_state | Ensure 'Audit Registry' is set to 'Success and Failure'
+# win_baseline_4483_state | Ensure 'Audit File System' is set to 'Failure'
 win_baseline_4483_state_Manage: True
-win_baseline_4483_state_Subcategory: "Registry"
-win_baseline_4483_state_AuditType: "success, failure"
+win_baseline_4483_state_Subcategory: "File System"
+win_baseline_4483_state_AuditType: "failure"
 
-# win_baseline_4484_state | Ensure 'Audit Kernel Object' is set to 'Success and Failure'
+# win_baseline_4484_state | Ensure 'Audit Registry' is set to 'Success and Failure'
 win_baseline_4484_state_Manage: True
-win_baseline_4484_state_Subcategory: "Kernel Object"
+win_baseline_4484_state_Subcategory: "Registry"
 win_baseline_4484_state_AuditType: "success, failure"
+
+# win_baseline_4485_state | Ensure 'Audit Kernel Object' is set to 'Success and Failure'
+win_baseline_4485_state_Manage: True
+win_baseline_4485_state_Subcategory: "Kernel Object"
+win_baseline_4485_state_AuditType: "success, failure"
+
+# win_baseline_4486_state | Ensure 'Audit SAM' is set to 'Success and Failure'
+win_baseline_4486_state_Manage: True
+win_baseline_4486_state_Subcategory: "SAM"
+win_baseline_4486_state_AuditType: "success, failure"
+
+# win_baseline_4487_state | Ensure 'Audit Certification Services' is set to 'Failure'
+win_baseline_4487_state_Manage: True
+win_baseline_4487_state_Subcategory: "Certification Services"
+win_baseline_4487_state_AuditType: "failure"

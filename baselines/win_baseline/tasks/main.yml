@@ -1174,16 +1174,37 @@
   when:
     win_baseline_4482_state_Manage
 
-- name: "win_baseline_4483_state | Ensure 'Audit Registry' is set to 'Success and Failure'"
+- name: "win_baseline_4483_state | Ensure 'Audit File System' is set to 'Failure'"
   win_audit_policy_system:
     subcategory: "{{ win_baseline_4483_state_Subcategory }}"
     audit_type: "{{ win_baseline_4483_state_AuditType }}"
   when:
     win_baseline_4483_state_Manage
 
-- name: "win_baseline_4484_state | Ensure 'Audit Kernel Object' is set to 'Success and Failure'"
+- name: "win_baseline_4484_state | Ensure 'Audit Registry' is set to 'Success and Failure'"
   win_audit_policy_system:
     subcategory: "{{ win_baseline_4484_state_Subcategory }}"
     audit_type: "{{ win_baseline_4484_state_AuditType }}"
   when:
     win_baseline_4484_state_Manage
+
+- name: "win_baseline_4485_state | Ensure 'Audit Kernel Object' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4485_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4485_state_AuditType }}"
+  when:
+    win_baseline_4485_state_Manage
+
+- name: "win_baseline_4486_state | Ensure 'Audit SAM' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4486_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4486_state_AuditType }}"
+  when:
+    win_baseline_4486_state_Manage
+
+- name: "win_baseline_4487_state | Ensure 'Audit Certification Services' is set to 'Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4487_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4487_state_AuditType }}"
+  when:
+    win_baseline_4487_state_Manage
