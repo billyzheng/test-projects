@@ -1323,110 +1323,110 @@
 #   when:
 #     win_baseline_4504_state_Manage
 
-- name: "win_baseline_4505_state | Ensure 'Audit Filtering Platform Policy Change' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4505_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4505_state_AuditType }}"
-  when:
-    win_baseline_4505_state_Manage
+# - name: "win_baseline_4505_state | Ensure 'Audit Filtering Platform Policy Change' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4505_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4505_state_AuditType }}"
+#   when:
+#     win_baseline_4505_state_Manage
 
-- name: "win_baseline_4507_state | Ensure 'Audit User Account Management' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4507_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4507_state_AuditType }}"
-  when:
-    win_baseline_4507_state_Manage
+# - name: "win_baseline_4507_state | Ensure 'Audit User Account Management' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4507_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4507_state_AuditType }}"
+#   when:
+#     win_baseline_4507_state_Manage
 
-- name: "win_baseline_4508_state | Ensure 'Audit Computer Account Management' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4508_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4508_state_AuditType }}"
-  when:
-    win_baseline_4508_state_Manage
+# - name: "win_baseline_4508_state | Ensure 'Audit Computer Account Management' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4508_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4508_state_AuditType }}"
+#   when:
+#     win_baseline_4508_state_Manage
 
-- name: "win_baseline_4509_state | Ensure 'Audit Security Group Management' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4509_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4509_state_AuditType }}"
-  when:
-    win_baseline_4509_state_Manage
+# - name: "win_baseline_4509_state | Ensure 'Audit Security Group Management' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4509_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4509_state_AuditType }}"
+#   when:
+#     win_baseline_4509_state_Manage
 
-- name: "win_baseline_4510_state | Ensure 'Audit Distribution Group Management' is set to 'Success'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4510_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4510_state_AuditType }}"
-  when:
-    win_baseline_4510_state_Manage
+# - name: "win_baseline_4510_state | Ensure 'Audit Distribution Group Management' is set to 'Success'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4510_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4510_state_AuditType }}"
+#   when:
+#     win_baseline_4510_state_Manage
 
-- name: "win_baseline_4511_state | Ensure 'Audit Application Group Management' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4511_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4511_state_AuditType }}"
-  when:
-    win_baseline_4511_state_Manage
+# - name: "win_baseline_4511_state | Ensure 'Audit Application Group Management' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4511_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4511_state_AuditType }}"
+#   when:
+#     win_baseline_4511_state_Manage
 
-- name: "win_baseline_4512_state | Ensure 'Audit Other Account Management Events' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4512_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4512_state_AuditType }}"
-  when:
-    win_baseline_4512_state_Manage
+# - name: "win_baseline_4512_state | Ensure 'Audit Other Account Management Events' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4512_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4512_state_AuditType }}"
+#   when:
+#     win_baseline_4512_state_Manage
 
-- name: "win_baseline_4513_state | Ensure 'Audit Directory Service Access' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4513_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4513_state_AuditType }}"
-  when:
-    win_baseline_4513_state_Manage
+# - name: "win_baseline_4513_state | Ensure 'Audit Directory Service Access' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4513_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4513_state_AuditType }}"
+#   when:
+#     win_baseline_4513_state_Manage
 
-- name: "win_baseline_4514_state | Ensure 'Audit Directory Service Changes' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4514_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4514_state_AuditType }}"
-  when:
-    win_baseline_4514_state_Manage
+# - name: "win_baseline_4514_state | Ensure 'Audit Directory Service Changes' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4514_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4514_state_AuditType }}"
+#   when:
+#     win_baseline_4514_state_Manage
 
-- name: "win_baseline_4517_state | Ensure 'Audit Credential Validation' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4517_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4517_state_AuditType }}"
-  when:
-    win_baseline_4517_state_Manage
+# - name: "win_baseline_4517_state | Ensure 'Audit Credential Validation' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4517_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4517_state_AuditType }}"
+#   when:
+#     win_baseline_4517_state_Manage
 
-- name: "win_baseline_4518_state | Ensure 'Audit Kerberos Service Ticket Operations' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4518_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4518_state_AuditType }}"
-  when:
-    win_baseline_4518_state_Manage
+# - name: "win_baseline_4518_state | Ensure 'Audit Kerberos Service Ticket Operations' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4518_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4518_state_AuditType }}"
+#   when:
+#     win_baseline_4518_state_Manage
 
-- name: "win_baseline_4519_state | Ensure 'Audit Network Policy Server' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4519_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4519_state_AuditType }}"
-  when:
-    win_baseline_4519_state_Manage
+# - name: "win_baseline_4519_state | Ensure 'Audit Network Policy Server' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4519_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4519_state_AuditType }}"
+#   when:
+#     win_baseline_4519_state_Manage
 
-- name: "win_baseline_4520_state | Ensure 'Audit Detailed File Share' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4520_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4520_state_AuditType }}"
-  when:
-    win_baseline_4520_state_Manage
+# - name: "win_baseline_4520_state | Ensure 'Audit Detailed File Share' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4520_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4520_state_AuditType }}"
+#   when:
+#     win_baseline_4520_state_Manage
 
-- name: "win_baseline_4521_state | Ensure 'Audit Account Login Other Account Logon Events' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4521_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4521_state_AuditType }}"
-  when:
-    win_baseline_4521_state_Manage
+# - name: "win_baseline_4521_state | Ensure 'Audit Account Login Other Account Logon Events' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4521_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4521_state_AuditType }}"
+#   when:
+#     win_baseline_4521_state_Manage
 
-- name: "win_baseline_4522_state | Ensure 'Audit Kerberos Authentication Service' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4522_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4522_state_AuditType }}"
-  when:
-    win_baseline_4522_state_Manage
+# - name: "win_baseline_4522_state | Ensure 'Audit Kerberos Authentication Service' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4522_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4522_state_AuditType }}"
+#   when:
+#     win_baseline_4522_state_Manage
 
 - name: "win_baseline_4741_state | Ensure 'MSS: (DisableIPSourceRoutingIPv6) IP source routing protection level (protects against packet spoofing) is set to 'Enabled: Highest protection, source routing is completely disabled'"
   win_regedit:
