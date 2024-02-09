@@ -1421,9 +1421,9 @@
   when:
     win_baseline_4521_state_Manage
 
-- name: "win_baseline_4703_state | Ensure 'Audit Kerberos Authentication Service' is set to 'Success and Failure'"
+- name: "win_baseline_4522_state | Ensure 'Audit Kerberos Authentication Service' is set to 'Success and Failure'"
   win_audit_policy_system:
-    subcategory: "{{ win_baseline_4703_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4703_state_AuditType }}"
+    subcategory: "{{ win_baseline_4522_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4522_state_AuditType }}"
   when:
-    win_baseline_4703_state_Manage
+    win_baseline_4522_state_Manage

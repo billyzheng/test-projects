@@ -1034,3 +1034,7 @@ win_baseline_4521_state_Manage: True
 win_baseline_4521_state_Subcategory: "Other Account Logon Events"
 win_baseline_4521_state_AuditType: "success, failure"
 
+# win_baseline_4522_state | Ensure 'Audit Kerberos Authentication Service' is set to 'Success and Failure'
+win_baseline_4522_state_Manage: True
+win_baseline_4522_state_Subcategory: "Kerberos Authentication Service"
+win_baseline_4522_state_AuditType: "success, failure"
