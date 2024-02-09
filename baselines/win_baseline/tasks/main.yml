@@ -1454,3 +1454,22 @@
     type: "{{ win_baseline_5210_state_Type }}"
   when:
     win_baseline_5210_state_Manage
+  
+- name: "win_baseline_5212_state | Configure 'Network access - Remotely accessible registry paths'"
+  win_regedit:
+    path: "{{ win_baseline_5212_state_Path }}"
+    name: "{{ win_baseline_5212_state_Name }}"
+    data: "{{ win_baseline_5212_state_Data }}"
+    type: "{{ win_baseline_5212_state_Type }}"
+  when:
+    win_baseline_5212_state_Manage
+
+# TODO: should be checked again
+- name: "win_baseline_5213_state | Configure 'Network access - Remotely accessible registry paths and sub-paths'"
+  win_regedit:
+    path: "{{ win_baseline_5213_state_Path }}"
+    name: "{{ win_baseline_5213_state_Name }}"
+    data: "{{ win_baseline_5213_state_Data }}"
+    type: "{{ win_baseline_5213_state_Type }}"
+  when:
+    win_baseline_5213_state_Manage

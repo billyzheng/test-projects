@@ -1060,4 +1060,16 @@ win_baseline_5210_state_Name: "NullSessionShares"
 win_baseline_5210_state_Data: ""
 win_baseline_5210_state_Type: dword
 
+# win_baseline_5212_state | Configure 'Network access - Remotely accessible registry paths'
+win_baseline_5212_state_Manage: True
+win_baseline_5212_state_Path: 'HKLM:\System\Currentcontrolset\Control\SecurePipeServers\Winreg\AllowedExactPaths'
+win_baseline_5212_state_Name: "Machine"
+win_baseline_5212_state_Data: ['System\CurrentControlSet\Control\ProductOptions', 'System\CurrentControlSet\Control\Server Applications', 'Software\Microsoft\Windows NT\CurrentVersion']
+win_baseline_5212_state_Type: multiString
 
+# win_baseline_5213_state | Configure 'Network access - Remotely accessible registry paths and sub-paths'
+win_baseline_5213_state_Manage: True
+win_baseline_5213_state_Path: 'HKLM:\System\Currentcontrolset\Control\SecurePipeServers\Winreg\AllowedPaths'
+win_baseline_5213_state_Name: "Machine"
+win_baseline_5213_state_Data: ['System\CurrentControlSet\Control\Print\Printers', 'System\CurrentControlSet\Services\Eventlog', 'Software\Microsoft\OLAP Server', 'Software\Microsoft\Windows NT\CurrentVersion\Print', 'Software\Microsoft\Windows NT\CurrentVersion\Windows']
+win_baseline_5213_state_Type: multiString
