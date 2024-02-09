@@ -907,12 +907,12 @@
   when:
     win_baseline_3903_state_Manage
 
-- name: "win_baseline_3905_state | Ensure 'Do not process the legacy run list' is set to 'Enabled'"
+- name: "win_baseline_3904_state | Ensure 'Do not process the legacy run list' is set to 'Enabled'"
   win_regedit:
-    path: "{{ win_baseline_3905_state_Path }}"
-    name: "{{ win_baseline_3905_state_Name }}"
-    data: "{{ win_baseline_3905_state_Data }}"
-    type: "{{ win_baseline_3905_state_Type }}"
+    path: "{{ win_baseline_3904_state_Path }}"
+    name: "{{ win_baseline_3904_state_Name }}"
+    data: "{{ win_baseline_3904_state_Data }}"
+    type: "{{ win_baseline_3904_state_Type }}"
   when:
     win_baseline_3905_state_Manage
 
