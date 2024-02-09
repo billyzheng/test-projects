@@ -700,3 +700,39 @@ win_baseline_3920_state_Name: "NoWebServices"
 win_baseline_3920_state_Data: "1"
 win_baseline_3920_state_Type: dword
 
+# win_baseline_3921_state | Ensure 'Turn off the 'Publish to Web' task for files and folders' is set to 'Enabled'
+win_baseline_3921_state_Manage: True
+win_baseline_3921_state_Path: 'HKLM:\Software\Microsoft\Windows\Currentversion\Policies\Explorer'
+win_baseline_3921_state_Name: "NoPublishingWizard"
+win_baseline_3921_state_Data: "1"
+win_baseline_3921_state_Type: dword
+
+# win_baseline_3922_state | Ensure 'Turn off downloading of print drivers over HTTP' is set to 'Enabled'
+win_baseline_3922_state_Manage: True
+win_baseline_3922_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows NT\Printers'
+win_baseline_3922_state_Name: "DisableWebPnPDownload"
+win_baseline_3922_state_Data: "1"
+win_baseline_3922_state_Type: dword
+
+# win_baseline_3923_state | Ensure 'Configure registry policy processing - Do not apply during periodic background processing' is set to 'Enabled - FALSE'
+win_baseline_3923_state_Manage: True
+win_baseline_3923_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\System'
+win_baseline_3923_state_Name: "DisableBkGndGroupPolicy"
+win_baseline_3923_state_Data: "0"
+win_baseline_3923_state_Type: dword
+
+# win_baseline_3926_State | Ensure 'Reschedule Automatic Update scheduled installations' is set to 'Enabled'
+win_baseline_3926_state_Manage: True
+win_baseline_3926_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\AU'
+win_baseline_3926_state_Name: "ResheduleWaitTimeEnabled"
+win_baseline_3926_state_Data: "1"
+win_baseline_3926_state_Type: dword
+
+# win_baseline_3927_state | Ensure 'Install Updates and Shut Down' is set to 'Disabled'
+win_baseline_3927_state_Manage: True
+win_baseline_3927_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\AU'
+win_baseline_3927_state_Name: "NoAUShutdownOption"
+win_baseline_3927_state_Data: "0"
+win_baseline_3927_state_Type: dword
+
+

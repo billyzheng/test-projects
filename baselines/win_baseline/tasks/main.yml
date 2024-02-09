@@ -853,92 +853,148 @@
 
 # TODO: many tasks are skipped.
 
-- name: "win_baseline_3875_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3875_state_Path }}"
-    name: "{{ win_baseline_3875_state_Name }}"
-    data: "{{ win_baseline_3875_state_Data }}"
-    type: "{{ win_baseline_3875_state_Type }}"
-  when:
-    win_baseline_3875_state_Manage
+# - name: "win_baseline_3875_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3875_state_Path }}"
+#     name: "{{ win_baseline_3875_state_Name }}"
+#     data: "{{ win_baseline_3875_state_Data }}"
+#     type: "{{ win_baseline_3875_state_Type }}"
+#   when:
+#     win_baseline_3875_state_Manage
 
-- name: "win_baseline_3876_state | Ensure 'Do not allow passwords to be saved' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3876_state_Path }}"
-    name: "{{ win_baseline_3876_state_Name }}"
-    data: "{{ win_baseline_3876_state_Data }}"
-    type: "{{ win_baseline_3876_state_Type }}"
-  when:
-    win_baseline_3876_state_Manage
+# - name: "win_baseline_3876_state | Ensure 'Do not allow passwords to be saved' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3876_state_Path }}"
+#     name: "{{ win_baseline_3876_state_Name }}"
+#     data: "{{ win_baseline_3876_state_Data }}"
+#     type: "{{ win_baseline_3876_state_Type }}"
+#   when:
+#     win_baseline_3876_state_Manage
 
-- name: "win_baseline_3891_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3891_state_Path }}"
-    name: "{{ win_baseline_3891_state_Name }}"
-    data: "{{ win_baseline_3891_state_Data }}"
-    type: "{{ win_baseline_3891_state_Type }}"
-  when:
-    win_baseline_3891_state_Manage
+# - name: "win_baseline_3891_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3891_state_Path }}"
+#     name: "{{ win_baseline_3891_state_Name }}"
+#     data: "{{ win_baseline_3891_state_Data }}"
+#     type: "{{ win_baseline_3891_state_Type }}"
+#   when:
+#     win_baseline_3891_state_Manage
 
-- name: "win_baseline_3897_state | Ensure 'Enumerate administrator accounts on elevation' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3897_state_Path }}"
-    name: "{{ win_baseline_3897_state_Name }}"
-    data: "{{ win_baseline_3897_state_Data }}"
-    type: "{{ win_baseline_3897_state_Type }}"
-  when:
-    win_baseline_3897_state_Manage
+# - name: "win_baseline_3897_state | Ensure 'Enumerate administrator accounts on elevation' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3897_state_Path }}"
+#     name: "{{ win_baseline_3897_state_Name }}"
+#     data: "{{ win_baseline_3897_state_Data }}"
+#     type: "{{ win_baseline_3897_state_Type }}"
+#   when:
+#     win_baseline_3897_state_Manage
 
-- name: "win_baseline_3899_state | Ensure 'Configure Solicited Remote Assistance' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3899_state_Path }}"
-    name: "{{ win_baseline_3899_state_Name }}"
-    data: "{{ win_baseline_3899_state_Data }}"
-    type: "{{ win_baseline_3899_state_Type }}"
-  when:
-    win_baseline_3899_state_Manage
+# - name: "win_baseline_3899_state | Ensure 'Configure Solicited Remote Assistance' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3899_state_Path }}"
+#     name: "{{ win_baseline_3899_state_Name }}"
+#     data: "{{ win_baseline_3899_state_Data }}"
+#     type: "{{ win_baseline_3899_state_Type }}"
+#   when:
+#     win_baseline_3899_state_Manage
 
-- name: "win_baseline_3903_state | Ensure 'Do not process the run once list' is set to Enabled"
-  win_regedit:
-    path: "{{ win_baseline_3903_state_Path }}"
-    name: "{{ win_baseline_3903_state_Name }}"
-    data: "{{ win_baseline_3903_state_Data }}"
-    type: "{{ win_baseline_3903_state_Type }}"
-  when:
-    win_baseline_3903_state_Manage
+# - name: "win_baseline_3903_state | Ensure 'Do not process the run once list' is set to Enabled"
+#   win_regedit:
+#     path: "{{ win_baseline_3903_state_Path }}"
+#     name: "{{ win_baseline_3903_state_Name }}"
+#     data: "{{ win_baseline_3903_state_Data }}"
+#     type: "{{ win_baseline_3903_state_Type }}"
+#   when:
+#     win_baseline_3903_state_Manage
 
-- name: "win_baseline_3904_state | Ensure 'Do not process the legacy run list' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3904_state_Path }}"
-    name: "{{ win_baseline_3904_state_Name }}"
-    data: "{{ win_baseline_3904_state_Data }}"
-    type: "{{ win_baseline_3904_state_Type }}"
-  when:
-    win_baseline_3904_state_Manage
+# - name: "win_baseline_3904_state | Ensure 'Do not process the legacy run list' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3904_state_Path }}"
+#     name: "{{ win_baseline_3904_state_Name }}"
+#     data: "{{ win_baseline_3904_state_Data }}"
+#     type: "{{ win_baseline_3904_state_Type }}"
+#   when:
+#     win_baseline_3904_state_Manage
 
-- name: "win_baseline_3907_state | Ensure 'Windows Messenger Customer Experience Improvement Program' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3907_state_Path }}"
-    name: "{{ win_baseline_3907_state_Name }}"
-    data: "{{ win_baseline_3907_state_Data }}"
-    type: "{{ win_baseline_3907_state_Type }}"
-  when:
-    win_baseline_3907_state_Manage
+# - name: "win_baseline_3907_state | Ensure 'Windows Messenger Customer Experience Improvement Program' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3907_state_Path }}"
+#     name: "{{ win_baseline_3907_state_Name }}"
+#     data: "{{ win_baseline_3907_state_Data }}"
+#     type: "{{ win_baseline_3907_state_Type }}"
+#   when:
+#     win_baseline_3907_state_Manage
 
-- name: "win_baseline_3908_state | Ensure 'Turn off Search Companion content file updates' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3908_state_Path }}"
-    name: "{{ win_baseline_3908_state_Name }}"
-    data: "{{ win_baseline_3908_state_Data }}"
-    type: "{{ win_baseline_3908_state_Type }}"
-  when:
-    win_baseline_3908_state_Manage
+# - name: "win_baseline_3908_state | Ensure 'Turn off Search Companion content file updates' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3908_state_Path }}"
+#     name: "{{ win_baseline_3908_state_Name }}"
+#     data: "{{ win_baseline_3908_state_Data }}"
+#     type: "{{ win_baseline_3908_state_Type }}"
+#   when:
+#     win_baseline_3908_state_Manage
 
-- name: "win_baseline_3919_state | Ensure 'Turn off printing over HTTP' is set to 'Enabled'"
+# - name: "win_baseline_3919_state | Ensure 'Turn off printing over HTTP' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3919_state_Path }}"
+#     name: "{{ win_baseline_3919_state_Name }}"
+#     data: "{{ win_baseline_3919_state_Data }}"
+#     type: "{{ win_baseline_3919_state_Type }}"
+#   when:
+#     win_baseline_3919_state_Manage
+
+- name: "win_baseline_3920_state | Ensure 'Turn off Internet download for Web publishing and online ordering wizards' is set to 'Enabled'"
   win_regedit:
-    path: "{{ win_baseline_3919_state_Path }}"
-    name: "{{ win_baseline_3919_state_Name }}"
-    data: "{{ win_baseline_3919_state_Data }}"
-    type: "{{ win_baseline_3919_state_Type }}"
+    path: "{{ win_baseline_3920_state_Path }}"
+    name: "{{ win_baseline_3920_state_Name }}"
+    data: "{{ win_baseline_3920_state_Data }}"
+    type: "{{ win_baseline_3920_state_Type }}"
   when:
-    win_baseline_3919_state_Manage
+    win_baseline_3920_state_Manage
+
+- name: "win_baseline_3921_state | Ensure 'Turn off the 'Publish to Web' task for files and folders' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3921_state_Path }}"
+    name: "{{ win_baseline_3921_state_Name }}"
+    data: "{{ win_baseline_3921_state_Data }}"
+    type: "{{ win_baseline_3921_state_Type }}"
+  when:
+    win_baseline_3921_state_Manage
+
+- name: "win_baseline_3922_state | Ensure 'Turn off downloading of print drivers over HTTP' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3922_state_Path }}"
+    name: "{{ win_baseline_3922_state_Name }}"
+    data: "{{ win_baseline_3922_state_Data }}"
+    type: "{{ win_baseline_3922_state_Type }}"
+  when:
+    win_baseline_3922_state_Manage
+
+- name: "win_baseline_3923_state | Ensure 'Configure registry policy processing - Do not apply during periodic background processing' is set to 'Enabled - FALSE'"
+  win_regedit:
+    path: "{{ win_baseline_3923_state_Path }}"
+    name: "{{ win_baseline_3923_state_Name }}"
+    data: "{{ win_baseline_3923_state_Data }}"
+    type: "{{ win_baseline_3923_state_Type }}"
+  when:
+    win_baseline_3923_state_Manage
+
+# TODO: skip 3926
+
+- name: "win_baseline_3926_State | Ensure 'Reschedule Automatic Update scheduled installations' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3926_state_Path }}"
+    name: "{{ win_baseline_3926_state_Name }}"
+    data: "{{ win_baseline_3926_state_Data }}"
+    type: "{{ win_baseline_3926_state_Type }}"
+  when:
+    win_baseline_3926_state_Manage
+
+- name: "win_baseline_3927_state | Ensure 'Install Updates and Shut Down' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_3927_state_Path }}"
+    name: "{{ win_baseline_3927_state_Name }}"
+    data: "{{ win_baseline_3927_state_Data }}"
+    type: "{{ win_baseline_3927_state_Type }}"
+  when:
+    win_baseline_3927_state_Manage
