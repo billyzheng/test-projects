@@ -973,3 +973,8 @@ win_baseline_4505_state_AuditType: "success, failure"
 win_baseline_4507_state_Manage: True
 win_baseline_4507_state_Subcategory: "User Account Management"
 win_baseline_4507_state_AuditType: "success, failure"
+
+# win_baseline_4508_state | Ensure 'Audit Computer Account Management' is set to 'Success and Failure'
+win_baseline_4508_state_Manage: True
+win_baseline_4508_state_Subcategory: "Computer Account Management"
+win_baseline_4508_state_AuditType: "success, failure"

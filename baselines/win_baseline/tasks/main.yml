@@ -1336,3 +1336,10 @@
     audit_type: "{{ win_baseline_4507_state_AuditType }}"
   when:
     win_baseline_4507_state_Manage
+
+- name: "win_baseline_4508_state | Ensure 'Audit Computer Account Management' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4508_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4508_state_AuditType }}"
+  when:
+    win_baseline_4508_state_Manage
