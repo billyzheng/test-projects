@@ -963,3 +963,13 @@ win_baseline_4503_state_AuditType: "success, failure"
 win_baseline_4504_state_Manage: True
 win_baseline_4504_state_Subcategory: "MPSSVC Rule-Level Policy Change"
 win_baseline_4504_state_AuditType: "success, failure"
+
+# win_baseline_4505_state | Ensure 'Audit Filtering Playform Policy Change' is set to 'Success and Failure'
+win_baseline_4505_state_Manage: True
+win_baseline_4505_state_Subcategory: "Filtering Platform Policy Change"
+win_baseline_4505_state_AuditType: "success, failure"
+
+# win_baseline_4507_state | Ensure 'Audit User Account Management' is set to 'Success and Failure'
+win_baseline_4507_state_Manage: True
+win_baseline_4507_state_Subcategory: "User Account Management"
+win_baseline_4507_state_AuditType: "success, failure"

@@ -1132,103 +1132,103 @@
 #   when:
 #     win_baseline_4476_state_Manage
 
-- name: "win_baseline_4477_state | Ensure 'Audit Account Lockout' is set to include 'Success'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4477_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4477_state_AuditType }}"
-  when:
-    win_baseline_4477_state_Manage
+# - name: "win_baseline_4477_state | Ensure 'Audit Account Lockout' is set to include 'Success'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4477_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4477_state_AuditType }}"
+#   when:
+#     win_baseline_4477_state_Manage
 
-- name: "win_baseline_4478_state | Ensure 'Audit Ipsec Main Mode' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4478_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4478_state_AuditType }}"
-  when:
-    win_baseline_4478_state_Manage
+# - name: "win_baseline_4478_state | Ensure 'Audit Ipsec Main Mode' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4478_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4478_state_AuditType }}"
+#   when:
+#     win_baseline_4478_state_Manage
 
-- name: "win_baseline_4479_state | Ensure 'Audit Ipsec Quick Mode' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4479_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4479_state_AuditType }}"
-  when:
-    win_baseline_4479_state_Manage
+# - name: "win_baseline_4479_state | Ensure 'Audit Ipsec Quick Mode' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4479_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4479_state_AuditType }}"
+#   when:
+#     win_baseline_4479_state_Manage
 
-- name: "win_baseline_4480_state | Ensure 'Audit IPsec Extended Mode' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4480_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4480_state_AuditType }}"
-  when:
-    win_baseline_4480_state_Manage
+# - name: "win_baseline_4480_state | Ensure 'Audit IPsec Extended Mode' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4480_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4480_state_AuditType }}"
+#   when:
+#     win_baseline_4480_state_Manage
 
-- name: "win_baseline_4481_state | Ensure 'Audit Special Logon' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4481_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4481_state_AuditType }}"
-  when:
-    win_baseline_4481_state_Manage
+# - name: "win_baseline_4481_state | Ensure 'Audit Special Logon' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4481_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4481_state_AuditType }}"
+#   when:
+#     win_baseline_4481_state_Manage
 
-- name: "win_baseline_4482_state | Ensure 'Audit Other Logon/Logoff Events' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4482_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4482_state_AuditType }}"
-  when:
-    win_baseline_4482_state_Manage
+# - name: "win_baseline_4482_state | Ensure 'Audit Other Logon/Logoff Events' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4482_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4482_state_AuditType }}"
+#   when:
+#     win_baseline_4482_state_Manage
 
-- name: "win_baseline_4483_state | Ensure 'Audit File System' is set to 'Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4483_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4483_state_AuditType }}"
-  when:
-    win_baseline_4483_state_Manage
+# - name: "win_baseline_4483_state | Ensure 'Audit File System' is set to 'Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4483_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4483_state_AuditType }}"
+#   when:
+#     win_baseline_4483_state_Manage
 
-- name: "win_baseline_4484_state | Ensure 'Audit Registry' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4484_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4484_state_AuditType }}"
-  when:
-    win_baseline_4484_state_Manage
+# - name: "win_baseline_4484_state | Ensure 'Audit Registry' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4484_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4484_state_AuditType }}"
+#   when:
+#     win_baseline_4484_state_Manage
 
-- name: "win_baseline_4485_state | Ensure 'Audit Kernel Object' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4485_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4485_state_AuditType }}"
-  when:
-    win_baseline_4485_state_Manage
+# - name: "win_baseline_4485_state | Ensure 'Audit Kernel Object' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4485_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4485_state_AuditType }}"
+#   when:
+#     win_baseline_4485_state_Manage
 
-- name: "win_baseline_4486_state | Ensure 'Audit SAM' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4486_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4486_state_AuditType }}"
-  when:
-    win_baseline_4486_state_Manage
+# - name: "win_baseline_4486_state | Ensure 'Audit SAM' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4486_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4486_state_AuditType }}"
+#   when:
+#     win_baseline_4486_state_Manage
 
-- name: "win_baseline_4487_state | Ensure 'Audit Certification Services' is set to 'Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4487_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4487_state_AuditType }}"
-  when:
-    win_baseline_4487_state_Manage
+# - name: "win_baseline_4487_state | Ensure 'Audit Certification Services' is set to 'Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4487_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4487_state_AuditType }}"
+#   when:
+#     win_baseline_4487_state_Manage
 
-- name: "win_baseline_4488_state | Ensure 'Audit Application Generated' is set to 'Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4488_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4488_state_AuditType }}"
-  when:
-    win_baseline_4488_state_Manage
+# - name: "win_baseline_4488_state | Ensure 'Audit Application Generated' is set to 'Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4488_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4488_state_AuditType }}"
+#   when:
+#     win_baseline_4488_state_Manage
 
-- name: "win_baseline_4489_state | Ensure 'Audit Handle Manipulation' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4489_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4489_state_AuditType }}"
-  when:
-    win_baseline_4489_state_Manage
+# - name: "win_baseline_4489_state | Ensure 'Audit Handle Manipulation' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4489_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4489_state_AuditType }}"
+#   when:
+#     win_baseline_4489_state_Manage
 
-- name: "win_baseline_4490_state | Ensure 'Audit File Share' is set to 'Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4490_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4490_state_AuditType }}"
-  when:
-    win_baseline_4490_state_Manage
+# - name: "win_baseline_4490_state | Ensure 'Audit File Share' is set to 'Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4490_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4490_state_AuditType }}"
+#   when:
+#     win_baseline_4490_state_Manage
 
 # ! error
 # - name: "win_baseline_4491_state | Ensure 'Audit Filtering Packet Drop' is set to 'Failure'"
@@ -1238,12 +1238,12 @@
 #   when:
 #     win_baseline_4491_state_Manage
 
-- name: "win_baseline_4492_state | Ensure 'Audit Filtering Platform Connection' is set to 'Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4492_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4492_state_AuditType }}"
-  when:
-    win_baseline_4492_state_Manage
+# - name: "win_baseline_4492_state | Ensure 'Audit Filtering Platform Connection' is set to 'Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4492_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4492_state_AuditType }}"
+#   when:
+#     win_baseline_4492_state_Manage
 
 # ! error
 # - name: "win_baseline_4493_state | Ensure 'Audit Order Object Access Events' is set to 'Success'"
@@ -1253,72 +1253,86 @@
 #   when:
 #     win_baseline_4493_state_Manage
 
-- name: "win_baseline_4494_state | Ensure 'Audit Sensitive Privilege Use' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4494_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4494_state_AuditType }}"
-  when:
-    win_baseline_4494_state_Manage
+# - name: "win_baseline_4494_state | Ensure 'Audit Sensitive Privilege Use' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4494_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4494_state_AuditType }}"
+#   when:
+#     win_baseline_4494_state_Manage
 
-- name: "win_baseline_4496_state | Ensure 'Audit Other Privilege Use Events' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4496_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4496_state_AuditType }}"
-  when:
-    win_baseline_4496_state_Manage
+# - name: "win_baseline_4496_state | Ensure 'Audit Other Privilege Use Events' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4496_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4496_state_AuditType }}"
+#   when:
+#     win_baseline_4496_state_Manage
 
-- name: "win_baseline_4497_state | Ensure 'Audit Process Creation' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4497_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4497_state_AuditType }}"
-  when:
-    win_baseline_4497_state_Manage
+# - name: "win_baseline_4497_state | Ensure 'Audit Process Creation' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4497_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4497_state_AuditType }}"
+#   when:
+#     win_baseline_4497_state_Manage
 
-- name: "win_baseline_4498_state | Ensure 'Audit Process Termination' is set to 'Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4498_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4498_state_AuditType }}"
-  when:
-    win_baseline_4498_state_Manage
+# - name: "win_baseline_4498_state | Ensure 'Audit Process Termination' is set to 'Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4498_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4498_state_AuditType }}"
+#   when:
+#     win_baseline_4498_state_Manage
 
-- name: "win_baseline_4499_state | Ensure 'Audit DPAPI Activity' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4499_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4499_state_AuditType }}"
-  when:
-    win_baseline_4499_state_Manage
+# - name: "win_baseline_4499_state | Ensure 'Audit DPAPI Activity' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4499_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4499_state_AuditType }}"
+#   when:
+#     win_baseline_4499_state_Manage
 
-- name: "win_baseline_4500_state | Ensure 'Audit RPC Events' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4500_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4500_state_AuditType }}"
-  when:
-    win_baseline_4500_state_Manage
+# - name: "win_baseline_4500_state | Ensure 'Audit RPC Events' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4500_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4500_state_AuditType }}"
+#   when:
+#     win_baseline_4500_state_Manage
 
-- name: "win_baseline_4501_state | Ensure 'Audit Audit Policy Change' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4501_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4501_state_AuditType }}"
-  when:
-    win_baseline_4501_state_Manage
+# - name: "win_baseline_4501_state | Ensure 'Audit Audit Policy Change' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4501_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4501_state_AuditType }}"
+#   when:
+#     win_baseline_4501_state_Manage
 
-- name: "win_baseline_4502_state | Ensure 'Audit Authentication Policy Change' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4502_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4502_state_AuditType }}"
-  when:
-    win_baseline_4502_state_Manage
+# - name: "win_baseline_4502_state | Ensure 'Audit Authentication Policy Change' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4502_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4502_state_AuditType }}"
+#   when:
+#     win_baseline_4502_state_Manage
 
-- name: "win_baseline_4503_state | Ensure 'Audit Authorization Policy Change' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4503_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4503_state_AuditType }}"
-  when:
-    win_baseline_4503_state_Manage
+# - name: "win_baseline_4503_state | Ensure 'Audit Authorization Policy Change' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4503_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4503_state_AuditType }}"
+#   when:
+#     win_baseline_4503_state_Manage
 
-- name: "win_baseline_4504_state | Ensure 'Audit MPSSVC Rule-Level Policy Change' is set to 'Success and Failure'"
+# - name: "win_baseline_4504_state | Ensure 'Audit MPSSVC Rule-Level Policy Change' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4504_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4504_state_AuditType }}"
+#   when:
+#     win_baseline_4504_state_Manage
+
+- name: "win_baseline_4505_state | Ensure 'Audit Filtering Platform Policy Change' is set to 'Success and Failure'"
   win_audit_policy_system:
-    subcategory: "{{ win_baseline_4504_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4504_state_AuditType }}"
+    subcategory: "{{ win_baseline_4505_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4505_state_AuditType }}"
   when:
-    win_baseline_4504_state_Manage
+    win_baseline_4505_state_Manage
+
+- name: "win_baseline_4507_state | Ensure 'Audit User Account Management' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4507_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4507_state_AuditType }}"
+  when:
+    win_baseline_4507_state_Manage
