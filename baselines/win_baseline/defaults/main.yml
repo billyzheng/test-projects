@@ -1073,3 +1073,11 @@ win_baseline_5213_state_Path: 'HKLM:\System\Currentcontrolset\Control\SecurePipe
 win_baseline_5213_state_Name: "Machine"
 win_baseline_5213_state_Data: ['System\CurrentControlSet\Control\Print\Printers', 'System\CurrentControlSet\Services\Eventlog', 'Software\Microsoft\OLAP Server', 'Software\Microsoft\Windows NT\CurrentVersion\Print', 'Software\Microsoft\Windows NT\CurrentVersion\Windows']
 win_baseline_5213_state_Type: multiString
+
+# win_baseline_5264_state | Ensure 'Microsoft network server - Server SPN target name validation level' is set to 'Accept if provided by client' or higher
+win_baseline_5264_state_Manage: True
+win_baseline_5264_state_Path: 'HKLM:\System\Currentcontrolset\Services\LanmanServer\Parameters'
+win_baseline_5264_state_Name: "SMBServerNameHardeningLevel"
+win_baseline_5264_state_Data: "1"
+win_baseline_5264_state_Type: dword
+

@@ -12,7 +12,7 @@ for i in range(100000):
             minute += 1
         else:
             minute = 0
-    print(f'Number of lines containing tasks: {count}, I don\'t make any changes in the last {minute} minutes.)')
+    print(f'Number of lines containing tasks: {count}, I don\'t make any changes in the last {minute} minutes :)')
     last = count
     file.close()
     time.sleep(60)
