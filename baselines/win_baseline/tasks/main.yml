@@ -1048,7 +1048,42 @@
 
 - name: "win_baseline_3944_state | Ensure 'Application - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
   win_regedit:
-    path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\Application
-    name: "Retention"
-    data: "0"
-    type: string
+    path: "{{ win_baseline_3944_state_Path }}"
+    name: "{{ win_baseline_3944_state_Name }}"
+    data: "{{ win_baseline_3944_state_Data }}"
+    type: "{{ win_baseline_3944_state_Type }}"
+  when:
+    win_baseline_3944_state_Manage
+
+- name: "win_baseline_4005_state | Ensure 'DNS Server' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_4005_state_Path }}"
+    name: "{{ win_baseline_4005_state_Name }}"
+    data: "{{ win_baseline_4005_state_Data }}"
+    type: "{{ win_baseline_4005_state_Type }}"
+  when:
+    win_baseline_4005_state_Manage
+
+- name: "win_baseline_4110_state | Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_4110_state_Path }}"
+    name: "{{ win_baseline_4110_state_Name }}"
+    data: "{{ win_baseline_4110_state_Data }}"
+    type: "{{ win_baseline_4110_state_Type }}"
+  when:
+    win_baseline_4110_state_Manage
+
+- name: "win_baseline_4111_state | Ensure 'Require a password when a computer wakes (plugged in)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_4111_state_Path }}"
+    name: "{{ win_baseline_4111_state_Name }}"
+    data: "{{ win_baseline_4111_state_Data }}"
+    type: "{{ win_baseline_4111_state_Type }}"
+  when:
+    win_baseline_4111_state_Manage
+
+- name: "win_state_4470_state | Ensure 'Audit Security State Change' is set to 'Success and failure'"
+  win_audit_policy_system:
+    subcategory: Security State Change
+    audit_type: success and failure
+

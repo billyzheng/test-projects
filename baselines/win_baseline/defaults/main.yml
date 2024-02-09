@@ -773,4 +773,23 @@ win_baseline_3944_state_Name: "Retention"
 win_baseline_3944_state_Data: "0"
 win_baseline_3944_state_Type: string
 
+# win_baseline_4005_state | Ensure 'DNS Server' is set to 'Disabled'
+win_baseline_4005_state_Manage: True
+win_baseline_4005_state_Path: 'HKLM:\System\Currentcontrolset\Services'
+win_baseline_4005_state_Name: "DNS"
+win_baseline_4005_state_Data: "4"
+win_baseline_4005_state_Type: dword
 
+# win_baseline_4110_state | Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'
+win_baseline_4110_state_Manage: True
+win_baseline_4110_state_Path: 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\0E796Bdb-100D-47D6-A2D5-F7D2Daa51F51'
+win_baseline_4110_state_Name: "DCSettingIndex"
+win_baseline_4110_state_Data: "1"
+win_baseline_4110_state_Type: dword
+
+# win_baseline_4111_state | Ensure 'Require a password when a computer wakes (plugged in)' is set to 'Enabled'
+win_baseline_4111_state_Manage: True
+win_baseline_4111_state_Path: 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\0E796Bdb-100D-47D6-A2D5-F7D2Daa51F51'
+win_baseline_4111_state_Name: "ACSettingIndex"
+win_baseline_4111_state_Data: "1"
+win_baseline_4111_state_Type: dword
