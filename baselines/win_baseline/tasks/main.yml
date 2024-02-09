@@ -1084,6 +1084,51 @@
 
 - name: "win_state_4470_state | Ensure 'Audit Security State Change' is set to 'Success and failure'"
   win_audit_policy_system:
-    subcategory: Security State Change
-    audit_type: success and failure
+    subcategory: "{{ win_state_4470_state_Subcategory }}"
+    audit_type: "{{ win_state_4470_state_AuditType}}"
+  when:
+    win_state_4470_state_Manage
 
+- name: "win_baseline_4471_state | Ensure 'Audit Security System Extension' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4471_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4471_state_AuditType }}"
+  when:
+    win_baseline_4471_state_Manage
+
+- name: "win_baseline_4472_state | Ensure 'Audit System Integrity' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4472_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4472_state_AuditType }}"
+  when:
+    win_baseline_4472_state_Manage
+
+- name: "win_baseline_4473_state | Ensure 'Audit IPsec Driver' is set to 'Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4473_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4473_state_AuditType }}"
+  when:
+    win_baseline_4473_state_Manage
+
+- name: "win_baseline_4474 | Ensure 'Audit Other System Events' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4474_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4474_state_AuditType }}"
+  when:
+    win_baseline_4474_state_Manage
+
+- name: "win_baseline_4475_state | Ensure 'Audit Logon' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4475_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4475_state_AuditType }}"
+  when:
+    win_baseline_4475_state_Manage
+
+- name: "win_baseline_4476_state | Ensure 'Audit Logoff' is set to 'Success'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4476_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4476_state_AuditType }}"
+  when:
+    win_baseline_4476_state_Manage
+
+    
