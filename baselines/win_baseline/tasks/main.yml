@@ -1028,59 +1028,59 @@
 #     # - NT VIRTUAL MACHINE\Virtual Machines (Needed only if the Hyper-V Role is installed)
 #     action: set
 
-- name: "win_baseline_3942_state | Ensure 'System - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3942_state_Path }}"
-    name: "{{ win_baseline_3942_state_Name }}"
-    data: "{{ win_baseline_3942_state_Data }}"
-    type: "{{ win_baseline_3942_state_Type }}"
-  when:
-    win_baseline_3942_state_Manage
+# - name: "win_baseline_3942_state | Ensure 'System - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3942_state_Path }}"
+#     name: "{{ win_baseline_3942_state_Name }}"
+#     data: "{{ win_baseline_3942_state_Data }}"
+#     type: "{{ win_baseline_3942_state_Type }}"
+#   when:
+#     win_baseline_3942_state_Manage
 
-- name: "win_baseline_3943_state | Ensure 'Security - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3943_state_Path }}"
-    name: "{{ win_baseline_3943_state_Name }}"
-    data: "{{ win_baseline_3943_state_Data }}"
-    type: "{{ win_baseline_3943_state_Type }}"
-  when:
-    win_baseline_3943_state_Manage
+# - name: "win_baseline_3943_state | Ensure 'Security - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3943_state_Path }}"
+#     name: "{{ win_baseline_3943_state_Name }}"
+#     data: "{{ win_baseline_3943_state_Data }}"
+#     type: "{{ win_baseline_3943_state_Type }}"
+#   when:
+#     win_baseline_3943_state_Manage
 
-- name: "win_baseline_3944_state | Ensure 'Application - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3944_state_Path }}"
-    name: "{{ win_baseline_3944_state_Name }}"
-    data: "{{ win_baseline_3944_state_Data }}"
-    type: "{{ win_baseline_3944_state_Type }}"
-  when:
-    win_baseline_3944_state_Manage
+# - name: "win_baseline_3944_state | Ensure 'Application - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3944_state_Path }}"
+#     name: "{{ win_baseline_3944_state_Name }}"
+#     data: "{{ win_baseline_3944_state_Data }}"
+#     type: "{{ win_baseline_3944_state_Type }}"
+#   when:
+#     win_baseline_3944_state_Manage
 
-- name: "win_baseline_4005_state | Ensure 'DNS Server' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_4005_state_Path }}"
-    name: "{{ win_baseline_4005_state_Name }}"
-    data: "{{ win_baseline_4005_state_Data }}"
-    type: "{{ win_baseline_4005_state_Type }}"
-  when:
-    win_baseline_4005_state_Manage
+# - name: "win_baseline_4005_state | Ensure 'DNS Server' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_4005_state_Path }}"
+#     name: "{{ win_baseline_4005_state_Name }}"
+#     data: "{{ win_baseline_4005_state_Data }}"
+#     type: "{{ win_baseline_4005_state_Type }}"
+#   when:
+#     win_baseline_4005_state_Manage
 
-- name: "win_baseline_4110_state | Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_4110_state_Path }}"
-    name: "{{ win_baseline_4110_state_Name }}"
-    data: "{{ win_baseline_4110_state_Data }}"
-    type: "{{ win_baseline_4110_state_Type }}"
-  when:
-    win_baseline_4110_state_Manage
+# - name: "win_baseline_4110_state | Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_4110_state_Path }}"
+#     name: "{{ win_baseline_4110_state_Name }}"
+#     data: "{{ win_baseline_4110_state_Data }}"
+#     type: "{{ win_baseline_4110_state_Type }}"
+#   when:
+#     win_baseline_4110_state_Manage
 
-- name: "win_baseline_4111_state | Ensure 'Require a password when a computer wakes (plugged in)' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_4111_state_Path }}"
-    name: "{{ win_baseline_4111_state_Name }}"
-    data: "{{ win_baseline_4111_state_Data }}"
-    type: "{{ win_baseline_4111_state_Type }}"
-  when:
-    win_baseline_4111_state_Manage
+# - name: "win_baseline_4111_state | Ensure 'Require a password when a computer wakes (plugged in)' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_4111_state_Path }}"
+#     name: "{{ win_baseline_4111_state_Name }}"
+#     data: "{{ win_baseline_4111_state_Data }}"
+#     type: "{{ win_baseline_4111_state_Type }}"
+#   when:
+#     win_baseline_4111_state_Manage
 
 # ! cannot choose success and failure at the same time.
 # - name: "win_state_4470_state | Ensure 'Audit Security State Change' is set to 'Success and failure'"
@@ -1090,45 +1090,58 @@
 #   when:
 #     win_state_4470_state_Manage
 
-- name: "win_baseline_4471_state | Ensure 'Audit Security System Extension' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4471_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4471_state_AuditType }}"
-  when:
-    win_baseline_4471_state_Manage
+# - name: "win_baseline_4471_state | Ensure 'Audit Security System Extension' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4471_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4471_state_AuditType }}"
+#   when:
+#     win_baseline_4471_state_Manage
 
-- name: "win_baseline_4472_state | Ensure 'Audit System Integrity' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4472_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4472_state_AuditType }}"
-  when:
-    win_baseline_4472_state_Manage
+# - name: "win_baseline_4472_state | Ensure 'Audit System Integrity' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4472_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4472_state_AuditType }}"
+#   when:
+#     win_baseline_4472_state_Manage
 
-- name: "win_baseline_4473_state | Ensure 'Audit IPsec Driver' is set to 'Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4473_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4473_state_AuditType }}"
-  when:
-    win_baseline_4473_state_Manage
+# - name: "win_baseline_4473_state | Ensure 'Audit IPsec Driver' is set to 'Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4473_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4473_state_AuditType }}"
+#   when:
+#     win_baseline_4473_state_Manage
 
-- name: "win_baseline_4474 | Ensure 'Audit Other System Events' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4474_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4474_state_AuditType }}"
-  when:
-    win_baseline_4474_state_Manage
+# - name: "win_baseline_4474 | Ensure 'Audit Other System Events' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4474_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4474_state_AuditType }}"
+#   when:
+#     win_baseline_4474_state_Manage
 
-- name: "win_baseline_4475_state | Ensure 'Audit Logon' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4475_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4475_state_AuditType }}"
-  when:
-    win_baseline_4475_state_Manage
+# - name: "win_baseline_4475_state | Ensure 'Audit Logon' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4475_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4475_state_AuditType }}"
+#   when:
+#     win_baseline_4475_state_Manage
 
-- name: "win_baseline_4476_state | Ensure 'Audit Logoff' is set to 'Success'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4476_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4476_state_AuditType }}"
-  when:
-    win_baseline_4476_state_Manage
+# - name: "win_baseline_4476_state | Ensure 'Audit Logoff' is set to 'Success'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4476_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4476_state_AuditType }}"
+#   when:
+#     win_baseline_4476_state_Manage
 
+- name: "win_baseline_4477_state | Ensure 'Audit Account Lockout' is set to include 'Success'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4477_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4477_state_AuditType }}"
+  when:
+    win_baseline_4477_state_Manage
+
+- name: "win_baseline_4478_state | Ensure 'Audit Ipsec Main Mode' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4478_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4478_state_AuditType }}"
+  when:
+    win_baseline_4478_state_Manage

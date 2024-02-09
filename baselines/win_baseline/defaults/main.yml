@@ -828,3 +828,13 @@ win_baseline_4475_state_AuditType: "success, failure"
 win_baseline_4476_state_Manage: True
 win_baseline_4476_state_Subcategory: "Logoff"
 win_baseline_4476_state_AuditType: "success"
+
+# win_baseline_4477_state | Ensure 'Audit Account Lockout' is set to include 'Success'
+win_baseline_4477_state_Manage: True
+win_baseline_4477_state_Subcategory: "Account Lockout"
+win_baseline_4477_state_AuditType: "success"
+
+# win_baseline_4478_state | Ensure 'Audit Ipsec Main Mode' is set to 'Success and Failure'
+win_baseline_4478_state_Manage: True
+win_baseline_4478_state_Subcategory: "IPsec Main Mode"
+win_baseline_4478_state_AuditType: "success, failure"
