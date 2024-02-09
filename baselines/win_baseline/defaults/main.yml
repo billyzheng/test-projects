@@ -838,3 +838,14 @@ win_baseline_4477_state_AuditType: "success"
 win_baseline_4478_state_Manage: True
 win_baseline_4478_state_Subcategory: "IPsec Main Mode"
 win_baseline_4478_state_AuditType: "success, failure"
+
+# win_baseline_4479_state | Ensure 'Audit Ipsec Quick Mode' is set to 'Success and Failure'
+win_baseline_4479_state_Manage: True
+win_baseline_4479_state_Subcategory: "IPsec Quick Mode"
+win_baseline_4479_state_AuditType: "success, failure"
+
+# win_baseline_4480_state | Ensure 'Audit IPsec Extended Mode' is set to 'Success and Failure'
+win_baseline_4480_state_Manage: True
+win_baseline_4480_state_Subcategory: "IPsec Extended Mode"
+win_baseline_4480_state_AuditType: "success, failure"
+

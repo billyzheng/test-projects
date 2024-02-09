@@ -1145,3 +1145,17 @@
     audit_type: "{{ win_baseline_4478_state_AuditType }}"
   when:
     win_baseline_4478_state_Manage
+
+- name: "win_baseline_4479_state | Ensure 'Audit Ipsec Quick Mode' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4479_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4479_state_AuditType }}"
+  when:
+    win_baseline_4479_state_Manage
+
+- name: "win_baseline_4480_state | Ensure 'Audit IPsec Extended Mode' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4480_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4480_state_AuditType }}"
+  when:
+    win_baseline_4480_state_Manage
