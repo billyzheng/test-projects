@@ -1357,3 +1357,24 @@
     audit_type: "{{ win_baseline_4510_state_AuditType }}"
   when:
     win_baseline_4510_state_Manage
+
+- name: "win_baseline_4511_state | Ensure 'Audit Application Group Management' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4511_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4511_state_AuditType }}"
+  when:
+    win_baseline_4511_state_Manage
+
+- name: "win_baseline_4512_state | Ensure 'Audit Other Account Management Events' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4512_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4512_state_AuditType }}"
+  when:
+    win_baseline_4512_state_Manage
+
+- name: "win_baseline_4513_state | Ensure 'Audit Directory Service Access' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4513_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4513_state_AuditType }}"
+  when:
+    win_baseline_4513_state_Manage
