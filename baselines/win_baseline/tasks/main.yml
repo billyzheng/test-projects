@@ -1258,9 +1258,24 @@
   when:
     win_baseline_4494_state_Manage
 
-- name: "win_baseline_4495_state | Ensure 'Audit Other Privilege Use Events' is set to 'Success and Failure'"
+- name: "win_baseline_4496_state | Ensure 'Audit Other Privilege Use Events' is set to 'Success and Failure'"
   win_audit_policy_system:
-    subcategory: "{{ win_baseline_4495_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4495_state_AuditType }}"
+    subcategory: "{{ win_baseline_4496_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4496_state_AuditType }}"
   when:
-    win_baseline_4495_state_Manage
+    win_baseline_4496_state_Manage
+
+- name: "win_baseline_4497_state | Ensure 'Audit Process Creation' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4497_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4497_state_AuditType }}"
+  when:
+    win_baseline_4497_state_Manage
+
+- name: "win_baseline_4498_state | Ensure 'Audit Process Termination' is set to 'Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4498_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4498_state_AuditType }}"
+  when:
+    win_baseline_4498_state_Manage
+

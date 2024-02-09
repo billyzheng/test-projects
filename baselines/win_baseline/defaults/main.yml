@@ -919,8 +919,17 @@ win_baseline_4494_state_Manage: True
 win_baseline_4494_state_Subcategory: "Sensitive Privilege Use"
 win_baseline_4494_state_AuditType: "success, failure"
 
-# win_baseline_4495_state | Ensure 'Audit Other Privilege Use Events' is set to 'Success and Failure'
-win_baseline_4495_state_Manage: True
-win_baseline_4495_state_Subcategory: "Other Privilege Use Events"
-win_baseline_4495_state_AuditType: "success, failure"
+# win_baseline_4496_state | Ensure 'Audit Other Privilege Use Events' is set to 'Success and Failure'
+win_baseline_4496_state_Manage: True
+win_baseline_4496_state_Subcategory: "Other Privilege Use Events"
+win_baseline_4496_state_AuditType: "success, failure"
 
+# win_baseline_4497_state | Ensure 'Audit Process Creation' is set to 'Success and Failure'
+win_baseline_4497_state_Manage: True
+win_baseline_4497_state_Subcategory: "Process Creation"
+win_baseline_4497_state_AuditType: "success, failure"
+
+# win_baseline_4498_state | Ensure 'Audit Process Termination' is set to 'Failure'
+win_baseline_4498_state_Manage: True
+win_baseline_4498_state_Subcategory: "Process Termination"
+win_baseline_4498_state_AuditType: "failure"
