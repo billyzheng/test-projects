@@ -1003,3 +1003,34 @@ win_baseline_4512_state_AuditType: "success, failure"
 win_baseline_4513_state_Manage: True
 win_baseline_4513_state_Subcategory: "Directory Service Access"
 win_baseline_4513_state_AuditType: "success, failure"
+
+# win_baseline_4514_state | Ensure 'Audit Directory Service Changes' is set to 'Success and Failure'
+win_baseline_4514_state_Manage: True
+win_baseline_4514_state_Subcategory: "Directory Service Changes"
+win_baseline_4514_state_AuditType: "success, failure"
+
+# win_baseline_4517_state | Ensure 'Audit Credential Validation' is set to 'Success and Failure'
+win_baseline_4517_state_Manage: True
+win_baseline_4517_state_Subcategory: "Credential Validation"
+win_baseline_4517_state_AuditType: "success, failure"
+
+# win_baseline_4518_state | Ensure 'Audit Kerberos Service Ticket Operations' is set to 'Success and Failure'
+win_baseline_4518_state_Manage: True
+win_baseline_4518_state_Subcategory: "Kerberos Service Ticket Operations"
+win_baseline_4518_state_AuditType: "success, failure"
+
+# win_baseline_4519_state | Ensure 'Audit Network Policy Server' is set to 'Success and Failure'
+win_baseline_4519_state_Manage: True
+win_baseline_4519_state_Subcategory: "Network Policy Server"
+win_baseline_4519_state_AuditType: "success, failure"
+
+# win_baseline_4520_state | Ensure 'Audit Detailed File Share' is set to 'Success and Failure'
+win_baseline_4520_state_Manage: True
+win_baseline_4520_state_Subcategory: "Detailed File Share"
+win_baseline_4520_state_AuditType: "success, failure"
+
+# win_baseline_4521_state | Ensure 'Audit Account Login Other Account Logon Events' is set to 'Success and Failure'
+win_baseline_4521_state_Manage: True
+win_baseline_4521_state_Subcategory: "Other Account Logon Events"
+win_baseline_4521_state_AuditType: "success, failure"
+

@@ -1378,3 +1378,52 @@
     audit_type: "{{ win_baseline_4513_state_AuditType }}"
   when:
     win_baseline_4513_state_Manage
+
+- name: "win_baseline_4514_state | Ensure 'Audit Directory Service Changes' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4514_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4514_state_AuditType }}"
+  when:
+    win_baseline_4514_state_Manage
+
+- name: "win_baseline_4517_state | Ensure 'Audit Credential Validation' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4517_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4517_state_AuditType }}"
+  when:
+    win_baseline_4517_state_Manage
+
+- name: "win_baseline_4518_state | Ensure 'Audit Kerberos Service Ticket Operations' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4518_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4518_state_AuditType }}"
+  when:
+    win_baseline_4518_state_Manage
+
+- name: "win_baseline_4519_state | Ensure 'Audit Network Policy Server' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4519_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4519_state_AuditType }}"
+  when:
+    win_baseline_4519_state_Manage
+
+- name: "win_baseline_4520_state | Ensure 'Audit Detailed File Share' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4520_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4520_state_AuditType }}"
+  when:
+    win_baseline_4520_state_Manage
+
+- name: "win_baseline_4521_state | Ensure 'Audit Account Login Other Account Logon Events' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4521_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4521_state_AuditType }}"
+  when:
+    win_baseline_4521_state_Manage
+
+- name: "win_baseline_4703_state | Ensure 'Audit Kerberos Authentication Service' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4703_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4703_state_AuditType }}"
+  when:
+    win_baseline_4703_state_Manage
