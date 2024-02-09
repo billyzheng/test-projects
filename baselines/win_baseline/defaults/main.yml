@@ -752,5 +752,25 @@ win_baseline_3940_state_Type: dword
 # win_baseline_3941_state | Ensure 'Create symbolic links' is set to 'Administrators'
 # TODO: skip
 
+# win_baseline_3942_state | Ensure 'System - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'
+win_baseline_3942_state_Manage: True
+win_baseline_3942_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Eventlog\System'
+win_baseline_3942_state_Name: "Retention"
+win_baseline_3942_state_Data: "0"
+win_baseline_3942_state_Type: string
+
+# win_baseline_3943_state | Ensure 'Security - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'
+win_baseline_3943_state_Manage: True
+win_baseline_3943_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Eventlog\Security'
+win_baseline_3943_state_Name: "Retention"
+win_baseline_3943_state_Data: "0"
+win_baseline_3943_state_Type: string
+
+# win_baseline_3944_state | Ensure 'Application - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'
+win_baseline_3944_state_Manage: True
+win_baseline_3944_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Eventlog\Application'
+win_baseline_3944_state_Name: "Retention"
+win_baseline_3944_state_Data: "0"
+win_baseline_3944_state_Type: string
 
 

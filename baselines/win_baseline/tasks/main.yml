@@ -943,82 +943,83 @@
 #   when:
 #     win_baseline_3919_state_Manage
 
-- name: "win_baseline_3920_state | Ensure 'Turn off Internet download for Web publishing and online ordering wizards' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3920_state_Path }}"
-    name: "{{ win_baseline_3920_state_Name }}"
-    data: "{{ win_baseline_3920_state_Data }}"
-    type: "{{ win_baseline_3920_state_Type }}"
-  when:
-    win_baseline_3920_state_Manage
+# - name: "win_baseline_3920_state | Ensure 'Turn off Internet download for Web publishing and online ordering wizards' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3920_state_Path }}"
+#     name: "{{ win_baseline_3920_state_Name }}"
+#     data: "{{ win_baseline_3920_state_Data }}"
+#     type: "{{ win_baseline_3920_state_Type }}"
+#   when:
+#     win_baseline_3920_state_Manage
 
-- name: "win_baseline_3921_state | Ensure 'Turn off the 'Publish to Web' task for files and folders' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3921_state_Path }}"
-    name: "{{ win_baseline_3921_state_Name }}"
-    data: "{{ win_baseline_3921_state_Data }}"
-    type: "{{ win_baseline_3921_state_Type }}"
-  when:
-    win_baseline_3921_state_Manage
+# - name: "win_baseline_3921_state | Ensure 'Turn off the 'Publish to Web' task for files and folders' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3921_state_Path }}"
+#     name: "{{ win_baseline_3921_state_Name }}"
+#     data: "{{ win_baseline_3921_state_Data }}"
+#     type: "{{ win_baseline_3921_state_Type }}"
+#   when:
+#     win_baseline_3921_state_Manage
 
-- name: "win_baseline_3922_state | Ensure 'Turn off downloading of print drivers over HTTP' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3922_state_Path }}"
-    name: "{{ win_baseline_3922_state_Name }}"
-    data: "{{ win_baseline_3922_state_Data }}"
-    type: "{{ win_baseline_3922_state_Type }}"
-  when:
-    win_baseline_3922_state_Manage
+# - name: "win_baseline_3922_state | Ensure 'Turn off downloading of print drivers over HTTP' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3922_state_Path }}"
+#     name: "{{ win_baseline_3922_state_Name }}"
+#     data: "{{ win_baseline_3922_state_Data }}"
+#     type: "{{ win_baseline_3922_state_Type }}"
+#   when:
+#     win_baseline_3922_state_Manage
 
-- name: "win_baseline_3923_state | Ensure 'Configure registry policy processing - Do not apply during periodic background processing' is set to 'Enabled - FALSE'"
-  win_regedit:
-    path: "{{ win_baseline_3923_state_Path }}"
-    name: "{{ win_baseline_3923_state_Name }}"
-    data: "{{ win_baseline_3923_state_Data }}"
-    type: "{{ win_baseline_3923_state_Type }}"
-  when:
-    win_baseline_3923_state_Manage
+# - name: "win_baseline_3923_state | Ensure 'Configure registry policy processing - Do not apply during periodic background processing' is set to 'Enabled - FALSE'"
+#   win_regedit:
+#     path: "{{ win_baseline_3923_state_Path }}"
+#     name: "{{ win_baseline_3923_state_Name }}"
+#     data: "{{ win_baseline_3923_state_Data }}"
+#     type: "{{ win_baseline_3923_state_Type }}"
+#   when:
+#     win_baseline_3923_state_Manage
 
-# TODO: skip 3926
+# # TODO: skip 3926
 
-- name: "win_baseline_3926_State | Ensure 'Reschedule Automatic Update scheduled installations' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3926_state_Path }}"
-    name: "{{ win_baseline_3926_state_Name }}"
-    data: "{{ win_baseline_3926_state_Data }}"
-    type: "{{ win_baseline_3926_state_Type }}"
-  when:
-    win_baseline_3926_state_Manage
+# - name: "win_baseline_3926_State | Ensure 'Reschedule Automatic Update scheduled installations' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3926_state_Path }}"
+#     name: "{{ win_baseline_3926_state_Name }}"
+#     data: "{{ win_baseline_3926_state_Data }}"
+#     type: "{{ win_baseline_3926_state_Type }}"
+#   when:
+#     win_baseline_3926_state_Manage
 
-- name: "win_baseline_3927_state | Ensure 'Install Updates and Shut Down' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3927_state_Path }}"
-    name: "{{ win_baseline_3927_state_Name }}"
-    data: "{{ win_baseline_3927_state_Data }}"
-    type: "{{ win_baseline_3927_state_Type }}"
-  when:
-    win_baseline_3927_state_Manage
+# - name: "win_baseline_3927_state | Ensure 'Install Updates and Shut Down' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3927_state_Path }}"
+#     name: "{{ win_baseline_3927_state_Name }}"
+#     data: "{{ win_baseline_3927_state_Data }}"
+#     type: "{{ win_baseline_3927_state_Type }}"
+#   when:
+#     win_baseline_3927_state_Manage
 
-# TODO: skip 3928
+# # TODO: skip 3928
 
-- name: "win_baseline_3939_state | Ensure 'Allow UIAccess applications to prompt for elevation without using the secure desktop' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3939_state_Path }}"
-    name: "{{ win_baseline_3939_state_Name }}"
-    data: "{{ win_baseline_3939_state_Data }}"
-    type: "{{ win_baseline_3939_state_Type }}"
-  when:
-    win_baseline_3939_state_Manage
+# - name: "win_baseline_3939_state | Ensure 'Allow UIAccess applications to prompt for elevation without using the secure desktop' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3939_state_Path }}"
+#     name: "{{ win_baseline_3939_state_Name }}"
+#     data: "{{ win_baseline_3939_state_Data }}"
+#     type: "{{ win_baseline_3939_state_Type }}"
+#   when:
+#     win_baseline_3939_state_Manage
 
-- name: "win_baseline_3940_state | Ensure 'User Account Control - Virtualize file and registry write failures to per-user locations' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3940_state_Path }}"
-    name: "{{ win_baseline_3940_state_Name }}"
-    data: "{{ win_baseline_3940_state_Data }}"
-    type: "{{ win_baseline_3940_state_Type }}"
-  when:
-    win_baseline_3940_state_Manage
+# - name: "win_baseline_3940_state | Ensure 'User Account Control - Virtualize file and registry write failures to per-user locations' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3940_state_Path }}"
+#     name: "{{ win_baseline_3940_state_Name }}"
+#     data: "{{ win_baseline_3940_state_Data }}"
+#     type: "{{ win_baseline_3940_state_Type }}"
+#   when:
+#     win_baseline_3940_state_Manage
 
+# TODO: skip 3941
 # - name: "win_baseline_3941_state | Ensure 'Create symbolic links' is set to 'Administrators'"
 #   win_user_right:
 #     name: SeCreateSymbolicLinkPrivilege
@@ -1026,3 +1027,28 @@
 #     - Administrators
 #     # - NT VIRTUAL MACHINE\Virtual Machines (Needed only if the Hyper-V Role is installed)
 #     action: set
+
+- name: "win_baseline_3942_state | Ensure 'System - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_3942_state_Path }}"
+    name: "{{ win_baseline_3942_state_Name }}"
+    data: "{{ win_baseline_3942_state_Data }}"
+    type: "{{ win_baseline_3942_state_Type }}"
+  when:
+    win_baseline_3942_state_Manage
+
+- name: "win_baseline_3943_state | Ensure 'Security - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_3943_state_Path }}"
+    name: "{{ win_baseline_3943_state_Name }}"
+    data: "{{ win_baseline_3943_state_Data }}"
+    type: "{{ win_baseline_3943_state_Type }}"
+  when:
+    win_baseline_3943_state_Manage
+
+- name: "win_baseline_3944_state | Ensure 'Application - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+  win_regedit:
+    path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\Application
+    name: "Retention"
+    data: "0"
+    type: string
