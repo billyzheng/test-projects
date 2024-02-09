@@ -663,6 +663,7 @@ win_baseline_3903_state_Manage: True
 win_baseline_3903_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Policies\Explorer'
 win_baseline_3903_state_Name: "DisableLocalMachineRunOnce"
 win_baseline_3903_state_Data: "1"
+win_baseline_3903_state_Type: dword
 
 # win_baseline_3904_state | Ensure 'Do not process the legacy run list' is set to 'Enabled'
 win_baseline_3904_state_Manage: True
