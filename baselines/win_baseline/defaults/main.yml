@@ -1052,3 +1052,12 @@ win_baseline_5209_state_Path: 'HKLM:\System\Currentcontrolset\Services\LanmanSer
 win_baseline_5209_state_Name: "NullSessionPipes"
 win_baseline_5209_state_Data: ""
 win_baseline_5209_state_Type: dword
+
+# win_baseline_5210_state | Ensure 'Network access - Shares that can be accessed anonymously' is set to 'None'
+win_baseline_5210_state_Manage: True
+win_baseline_5210_state_Path: 'HKLM:\System\Currentcontrolset\Services\LanmanServer\Parameters'
+win_baseline_5210_state_Name: "NullSessionShares"
+win_baseline_5210_state_Data: ""
+win_baseline_5210_state_Type: dword
+
+

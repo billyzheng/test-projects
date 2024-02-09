@@ -1445,3 +1445,12 @@
     type: "{{ win_baseline_5209_state_Type }}"
   when:
     win_baseline_5209_state_Manage
+
+- name: "win_baseline_5210_state | Ensure 'Network access - Shares that can be accessed anonymously' is set to 'None'"
+  win_regedit:
+    path: "{{ win_baseline_5210_state_Path }}"
+    name: "{{ win_baseline_5210_state_Name }}"
+    data: "{{ win_baseline_5210_state_Data }}"
+    type: "{{ win_baseline_5210_state_Type }}"
+  when:
+    win_baseline_5210_state_Manage
