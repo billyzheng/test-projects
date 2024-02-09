@@ -914,7 +914,7 @@
     data: "{{ win_baseline_3904_state_Data }}"
     type: "{{ win_baseline_3904_state_Type }}"
   when:
-    win_baseline_3905_state_Manage
+    win_baseline_3904_state_Manage
 
 - name: "win_baseline_3907_state | Ensure 'Windows Messenger Customer Experience Improvement Program' is set to 'Disabled'"
   win_regedit:
