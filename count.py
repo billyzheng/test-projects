@@ -9,9 +9,10 @@ for i in range(100000):
     for line in lines:
         if 'True' in line:
             count += 1
-            minute = 0
         if count == last:
             minute += 1
+        else:
+            minute = 0
     print(f'Number of lines containing tasks: {count}, I don\'t make any changes in the last {minute} minutes.)')
     last = count
     file.close()
