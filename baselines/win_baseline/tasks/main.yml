@@ -1481,4 +1481,4 @@
     data: "{{ win_baseline_5264_state_Data }}"
     type: "{{ win_baseline_5264_state_Type }}"
   when:
-    win_baseline_5264_state_Manage
+    win_baseline_5264_state_Manage 
