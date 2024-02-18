@@ -1157,3 +1157,10 @@ win_baseline_8176_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\System'
 win_baseline_8176_state_Name: "DontEnumerateConnectedUsers"
 win_baseline_8176_state_Data: "1"
 win_baseline_8176_state_Type: dword
+
+# win_baseline_8177_state | Ensure 'Enumerate local users on domain-joined computers' is set to 'Disabled'
+win_baseline_8177_state_Manage: True
+win_baseline_8177_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\System'
+win_baseline_8177_state_Name: "EnumerateLocalUsers"
+win_baseline_8177_state_Data: "0"
+win_baseline_8177_state_Type: dword
