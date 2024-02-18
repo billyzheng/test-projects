@@ -1618,3 +1618,30 @@
     type: "{{ win_baseline_8231_state_Type }}"
   when:
     win_baseline_8231_state_Manage
+
+- name: "win_baseline_8249_state | Ensure 'Allow Basic authentication (client)' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_8249_state_Path }}"
+    name: "{{ win_baseline_8249_state_Name }}"
+    data: "{{ win_baseline_8249_state_Data }}"
+    type: "{{ win_baseline_8249_state_Type }}"
+  when:
+    win_baseline_8249_state_Manage
+
+- name: "win_baseline_8250_state | Ensure 'Allow Basic authentication (service)' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_8250_state_Path }}"
+    name: "{{ win_baseline_8250_state_Name }}"
+    data: "{{ win_baseline_8250_state_Data }}"
+    type: "{{ win_baseline_8250_state_Type }}"
+  when:
+    win_baseline_8250_state_Manage
+
+- name: "win_baseline_8251_state | Ensure 'Disallow WinRM from storing RunAs credentials' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_8251_state_Path }}"
+    name: "{{ win_baseline_8251_state_Name }}"
+    data: "{{ win_baseline_8251_state_Data }}"
+    type: "{{ win_baseline_8251_state_Type }}"
+  when:
+    win_baseline_8251_state_Manage

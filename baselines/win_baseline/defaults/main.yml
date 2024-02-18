@@ -1186,3 +1186,24 @@ win_baseline_8231_state_Name: "SupportedEncryptionTypes"
 win_baseline_8231_state_Data: "2147483640"
 win_baseline_8231_state_Type: dword
 
+# win_baseline_8249_state | Ensure 'Allow Basic authentication' is set to 'Disabled'
+win_baseline_8249_state_Manage: True
+win_baseline_8249_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WinRM\Client'
+win_baseline_8249_state_Name: "AllowBasic"
+win_baseline_8249_state_Data: "0"
+win_baseline_8249_state_Type: dword
+
+# win_baseline_8250_state | Ensure 'Allow Basic authentication (service)' is set to 'Disabled'
+win_baseline_8250_state_Manage: True
+win_baseline_8250_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WinRM\Service'
+win_baseline_8250_state_Name: "AllowBasic"
+win_baseline_8250_state_Data: "0"
+win_baseline_8250_state_Type: dword
+
+# win_baseline_8251_state | Ensure 'Disallow WinRM from storing RunAs credentials' is set to 'Enabled'
+win_baseline_8251_state_Manage: True
+win_baseline_8251_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WinRM\Service'
+win_baseline_8251_state_Name: "DisableRunAs"
+win_baseline_8251_state_Data: "1"
+win_baseline_8251_state_Type: dword
+
