@@ -1715,3 +1715,11 @@
     type: "{{ win_baseline_8397_state_Type }}"
   when:
     win_baseline_8397_state_Manage
+
+- name: "win_baseline_8399_state | Ensure 'Turn off app notifications on the lock screen' is set to 'Enabled'"
+  win_regedit:
+    path: HKLM:\Software\Policies\Microsoft\Windows\System
+    name: "DisableLockScreenAppNotifications"
+    data: "1"
+    type: dword
+

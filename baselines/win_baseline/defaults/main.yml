@@ -1259,3 +1259,10 @@ win_baseline_8397_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Explore
 win_baseline_8397_state_Name: "NoUseStoreOpenWith"
 win_baseline_8397_state_Data: "1"
 win_baseline_8397_state_Type: dword
+
+# win_baseline_8399_state | Ensure 'Turn off app notifications on the lock screen' is set to 'Enabled'
+win_baseline_8399_state_Manage: True
+win_baseline_8399_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\System'
+win_baseline_8399_state_Name: "DisableLockScreenAppNotifications"
+win_baseline_8399_state_Data: "1"
+win_baseline_8399_state_Type: dword
