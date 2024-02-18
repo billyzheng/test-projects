@@ -1480,3 +1480,9 @@ win_baseline_10085_state_Name: "BlockUserInputMethodsForSignIn"
 win_baseline_10085_state_Data: "1"
 win_baseline_10085_state_Type: dword
 
+# win_baseline_10086_state | Ensure 'Enable/Disable PerfTrack' is set to 'Disabled'
+win_baseline_10086_state_Manage: True
+win_baseline_10086_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Wdi\'
+win_baseline_10086_state_Name: "ScenarioExecutionEnabled"
+win_baseline_10086_state_Data: "0"
+win_baseline_10086_state_Type: dword

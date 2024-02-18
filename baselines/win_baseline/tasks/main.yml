@@ -1998,3 +1998,11 @@
   when:
     win_baseline_10085_state_Manage
 
+- name: "win_baseline_10086_state | Ensure 'Enable/Disable PerfTrack' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_10086_state_Path }}"
+    name: "{{ win_baseline_10086_state_Name }}"
+    data: "{{ win_baseline_10086_state_Data }}"
+    type: "{{ win_baseline_10086_state_Type }}"
+  when:
+    win_baseline_10086_state_Manage
