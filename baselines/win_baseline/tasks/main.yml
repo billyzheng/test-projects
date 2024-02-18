@@ -1961,3 +1961,13 @@
     type: "{{ win_baseline_10081_state_Type }}"
   when:
     win_baseline_10081_state_Manage
+
+- name: "win_baseline_10082_state | Ensure 'Turn off handwriting personalization data sharing' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_10082_state_Path }}"
+    name: "{{ win_baseline_10082_state_Name }}"
+    data: "{{ win_baseline_10082_state_Data }}"
+    type: "{{ win_baseline_10082_state_Type }}"
+  when:
+    win_baseline_10082_state_Manage
+

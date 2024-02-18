@@ -1452,3 +1452,9 @@ win_baseline_10081_state_Name: "NC_StdDomainUserSetLocation"
 win_baseline_10081_state_Data: "1"
 win_baseline_10081_state_Type: dword
 
+# win_baseline_10082_state | Ensure 'Turn off handwriting personalization data sharing' is set to 'Enabled'
+win_baseline_10082_state_Manage: True
+win_baseline_10082_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\TabletPC'
+win_baseline_10082_state_Name: "PreventHandwritingDataSharing"
+win_baseline_10082_state_Data: "1"
+win_baseline_10082_state_Type: dword
