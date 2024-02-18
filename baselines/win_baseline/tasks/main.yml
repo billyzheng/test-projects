@@ -1700,6 +1700,8 @@
 
 - name: "win_baseline_8279_state | Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'"
   win_security_policy:
-    section: System Access
-    key: LSAAnonymousNameLookup
-    value: 0
+    section: "{{ win_baseline_8279_state_Section }}"
+    key: "{{ win_baseline_8279_state_Key }}"
+    value: "{{ win_baseline_8279_state_Value }}"
+  when:
+    win_baseline_8279_state_Manage

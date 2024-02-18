@@ -1246,3 +1246,9 @@ win_baseline_8274_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\System'
 win_baseline_8274_state_Name: "EnableSmartScreen"
 win_baseline_8274_state_Data: "1"
 win_baseline_8274_state_Type: dword
+
+# win_baseline_8279_state | Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'
+win_baseline_8279_state_Manage: True
+win_baseline_8279_state_Section: "System access"
+win_baseline_8279_state_Key: "LsaAnonymousNameLookup"
+win_baseline_8279_state_Value: "0"
