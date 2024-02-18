@@ -1280,3 +1280,10 @@ win_baseline_8419_state_Path: 'HKLM:\Software\Policies\Microsoft\WindowsStore'
 win_baseline_8419_state_Name: "AutoDownload"
 win_baseline_8419_state_Data: "4"
 win_baseline_8419_state_Type: dword
+
+# win_baseline_8420_state | Ensure 'Turn off location' is set to 'Enabled'
+win_baseline_8420_state_Manage: True
+win_baseline_8420_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\LocationAndSensors'
+win_baseline_8420_state_Name: "DisableLocation"
+win_baseline_8420_state_Data: "1"
+win_baseline_8420_state_Type: dword
