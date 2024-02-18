@@ -1546,3 +1546,10 @@
     type: "{{ win_baseline_7504_state_Type }}"
   when:
     win_baseline_7504_state_Manage
+
+- name: "win_baseline_8141_state | Ensure 'Accounts - Block Microsoft accounts' is set to 'Users can't add or log on with Microsoft accounts'"
+  win_regedit:
+    path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
+    name: "NoConnectedUser"
+    data: "3"
+    type: dword
