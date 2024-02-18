@@ -1430,3 +1430,10 @@ win_baseline_10016_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows NT\Cur
 win_baseline_10016_state_Name: "NoGenTicket"
 win_baseline_10016_state_Data: "0"
 win_baseline_10016_state_Type: dword
+
+# win_baseline_10027_state | Ensure 'Turn on PowerShell Script Block Logging' is set to 'Enabled'
+win_baseline_10027_state_Manage: True
+win_baseline_10027_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging'
+win_baseline_10027_state_Name: "EnableScriptBlockLogging"
+win_baseline_10027_state_Data: "1"
+win_baseline_10027_state_Type: dword
