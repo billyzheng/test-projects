@@ -1,4 +1,6 @@
 import time
+from datetime import datetime
+
 minute = 0
 last = 0
 for i in range(100000):
@@ -12,7 +14,10 @@ for i in range(100000):
         minute += 1
     else:
         minute = 0
-    print(f'Number of lines containing tasks: {count}, I don\'t make any changes in the last {minute} minutes :)')
+
+    now = datetime.now()
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+    print(f'|{dt_string}| Number of lines containing tasks: {count}, I don\'t make any changes in the last {minute} minutes :)')
     last = count
     file.close()
     time.sleep(60)

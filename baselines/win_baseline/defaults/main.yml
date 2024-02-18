@@ -1473,3 +1473,10 @@ win_baseline_10084_state_Name: "CEIPEnable"
 win_baseline_10084_state_Data: "0"
 win_baseline_10084_state_Type: dword
 
+# win_baseline_10085_state | Ensure 'Disallow copying of user input methods to the system account for sign-in' is set to 'Enabled'
+win_baseline_10085_state_Manage: True
+win_baseline_10085_state_Path: 'HKLM:\Software\Policies\Microsoft\Control Panel\International'
+win_baseline_10085_state_Name: "BlockUserInputMethodsForSignIn"
+win_baseline_10085_state_Data: "1"
+win_baseline_10085_state_Type: dword
+
