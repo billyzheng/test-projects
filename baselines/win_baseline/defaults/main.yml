@@ -1407,4 +1407,10 @@ win_baseline_10010_state_Name: "PasswordLength"
 win_baseline_10010_state_Data: "20"
 win_baseline_10010_state_Type: dword
 
+# win_baseline_10011_state | Ensure 'Password Age Local Administrator Password Solution' is set to '60 or more days'
+win_baseline_10011_state_Manage: True
+win_baseline_10011_state_Path: 'HKLM:\Software\Policies\Microsoft Services\AdmPwd'
+win_baseline_10011_state_Name: "PasswordAgeDays"
+win_baseline_10011_state_Data: "60"
+win_baseline_10011_state_Type: dword
 
