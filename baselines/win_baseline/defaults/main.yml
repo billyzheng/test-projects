@@ -1287,3 +1287,31 @@ win_baseline_8420_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Locatio
 win_baseline_8420_state_Name: "DisableLocation"
 win_baseline_8420_state_Data: "1"
 win_baseline_8420_state_Type: dword
+
+# win_baseline_8425_state | Ensure 'Do not display the password reveal button' is set to 'Enabled'
+win_baseline_8425_state_Manage: True
+win_baseline_8425_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\CredUI'
+win_baseline_8425_state_Name: "DisablePasswordReveal"
+win_baseline_8425_state_Data: "1"
+win_baseline_8425_state_Type: dword
+
+# win_baseline_9004_state | Ensure 'Prevent enabling lock screen slide show' is set to 'Enabled'
+win_baseline_9004_state_Manage: True
+win_baseline_9004_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Personalization'
+win_baseline_9004_state_Name: "NoLockScreenSlideshow"
+win_baseline_9004_state_Data: "1"
+win_baseline_9004_state_Type: dword
+
+# win_baseline_9008_state | Ensure 'Do not display network selection UI' is set to 'Enabled'
+win_baseline_9008_state_Manage: True
+win_baseline_9008_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\System'
+win_baseline_9008_state_Name: "DontDisplayNetworkSelectionUI"
+win_baseline_9008_state_Data: "1"
+win_baseline_9008_state_Type: dword
+
+# win_baseline_9009_state | Ensure 'Allow Microsoft accounts to be optional' is set to 'Disabled'
+win_baseline_9009_state_Manage: True
+win_baseline_9009_state_Path: 'HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System'
+win_baseline_9009_state_Name: "MSAOptional"
+win_baseline_9009_state_Data: "0"
+win_baseline_9009_state_Type: dword

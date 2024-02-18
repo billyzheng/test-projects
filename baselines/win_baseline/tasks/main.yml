@@ -1751,3 +1751,39 @@
     type: "{{ win_baseline_8420_state_Type }}"
   when:
     win_baseline_8420_state_Manage
+
+- name: "win_baseline_8425_state | Ensure 'Do not display the password reveal button' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_8425_state_Path }}"
+    name: "{{ win_baseline_8425_state_Name }}"
+    data: "{{ win_baseline_8425_state_Data }}"
+    type: "{{ win_baseline_8425_state_Type }}"
+  when:
+    win_baseline_8425_state_Manage
+
+- name: "win_baseline_9004_state | Ensure 'Prevent enabling lock screen slide show' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_9004_state_Path }}"
+    name: "{{ win_baseline_9004_state_Name }}"
+    data: "{{ win_baseline_9004_state_Data }}"
+    type: "{{ win_baseline_9004_state_Type }}"
+  when:
+    win_baseline_9004_state_Manage
+
+- name: "win_baseline_9008_state | Ensure 'Do not display network selection UI' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_9008_state_Path }}"
+    name: "{{ win_baseline_9008_state_Name }}"
+    data: "{{ win_baseline_9008_state_Data }}"
+    type: "{{ win_baseline_9008_state_Type }}"
+  when:
+    win_baseline_9008_state_Manage
+
+- name: "win_baseline_9009_state | Ensure 'Allow Microsoft accounts to be optional' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_9009_state_Path }}"
+    name: "{{ win_baseline_9009_state_Name }}"
+    data: "{{ win_baseline_9009_state_Data }}"
+    type: "{{ win_baseline_9009_state_Type }}"
+  when:
+    win_baseline_9009_state_Manage
