@@ -1179,3 +1179,10 @@ win_baseline_8198_state_Name: "AlwaysInstallElevated"
 win_baseline_8198_state_Data: "0"
 win_baseline_8198_state_Type: dword
 
+# win_baseline_8231_state | Ensure 'Network security - Configure encryption types allowed for Kerberos' is set to 'AES128_HMAC_SHA1, AES256_HMAC_SHA1, Future encryption types'
+win_baseline_8231_state_Manage: True
+win_baseline_8231_state_Path: 'HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System\Kerberos\Parameters'
+win_baseline_8231_state_Name: "SupportedEncryptionTypes"
+win_baseline_8231_state_Data: "2147483640"
+win_baseline_8231_state_Type: dword
+
