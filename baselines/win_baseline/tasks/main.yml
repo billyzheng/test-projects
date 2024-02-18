@@ -1528,3 +1528,13 @@
     type: "{{ win_baseline_7502_state_Type }}"
   when:
     win_baseline_7502_state_Manage
+
+- name: "win_baseline_7503_state | Ensure 'Security - Specify the maximum log file size (KB)' is set to 'Enabled - 1000000 or greater'"
+  win_regedit:
+    path: "{{ win_baseline_7503_state_Path }}"
+    name: "{{ win_baseline_7503_state_Name }}"
+    data: "{{ win_baseline_7503_state_Data }}"
+    type: "{{ win_baseline_7503_state_Type }}"
+  when:
+    win_baseline_7503_state_Manage
+
