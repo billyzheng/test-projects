@@ -1565,12 +1565,12 @@
   when:
     win_baseline_8145_state_Manage
 
-- name: "win_baseline_8126_state | Ensure 'Windows Firewall - Log successful connections (private)' is set to 'Yes'"
+- name: "win_baseline_8162_state | Ensure 'Windows Firewall - Log successful connections (private)' is set to 'Yes'"
   win_regedit:
-    path: "{{ win_baseline_8126_state_Path }}"
-    name: "{{ win_baseline_8126_state_Name }}"
-    data: "{{ win_baseline_8126_state_Data }}"
-    type: "{{ win_baseline_8126_state_Type }}"
+    path: "{{ win_baseline_8162_state_Path }}"
+    name: "{{ win_baseline_8162_state_Name }}"
+    data: "{{ win_baseline_8162_state_Data }}"
+    type: "{{ win_baseline_8162_state_Type }}"
   when:
     win_baseline_8126_state_Manage
 
