@@ -1971,7 +1971,16 @@
   when:
     win_baseline_10082_state_Manage
 
-- name: "win_baseline_10084_state | Ensure 'Turn off handwriting recognition error reporting' is set to 'Enabled'"
+- name: "win_baseline_10083_state | Ensure 'Turn off handwriting recognition error reporting' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_10083_state_Path }}"
+    name: "{{ win_baseline_10083_state_Name }}"
+    data: "{{ win_baseline_10083_state_Data }}"
+    type: "{{ win_baseline_10083_state_Type }}"
+  when:
+    win_baseline_10083_state_Manage
+
+- name: "win_baseline_10084_state | Ensure 'Turn off Windows Customer Experience Improvement Program' is set to 'Enabled'"
   win_regedit:
     path: "{{ win_baseline_10084_state_Path }}"
     name: "{{ win_baseline_10084_state_Name }}"
@@ -1979,5 +1988,3 @@
     type: "{{ win_baseline_10084_state_Type }}"
   when:
     win_baseline_10084_state_Manage
-
-    
