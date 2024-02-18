@@ -1483,87 +1483,87 @@
 #   when:
 #     win_baseline_5264_state_Manage 
 
-- name: "win_baseline_5265_state | Ensure 'Nerowrk security - Allow LocalSystem NULL session fallback' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_5265_state_Path }}"
-    name: "{{ win_baseline_5265_state_Name }}"
-    data: "{{ win_baseline_5265_state_Data }}"
-    type: "{{ win_baseline_5265_state_Type }}"
-  when:
-    win_baseline_5265_state_Manage
+# - name: "win_baseline_5265_state | Ensure 'Nerowrk security - Allow LocalSystem NULL session fallback' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_5265_state_Path }}"
+#     name: "{{ win_baseline_5265_state_Name }}"
+#     data: "{{ win_baseline_5265_state_Data }}"
+#     type: "{{ win_baseline_5265_state_Type }}"
+#   when:
+#     win_baseline_5265_state_Manage
 
-- name: "win_baseline_5267_state | Ensure 'Network Security - Allow PKU2U authentication requests to this computer to use online identities' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_5267_state_Path }}"
-    name: "{{ win_baseline_5267_state_Name }}"
-    data: "{{ win_baseline_5267_state_Data }}"
-    type: "{{ win_baseline_5267_state_Type }}"
-  when:
-    win_baseline_5267_state_Manage
+# - name: "win_baseline_5267_state | Ensure 'Network Security - Allow PKU2U authentication requests to this computer to use online identities' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_5267_state_Path }}"
+#     name: "{{ win_baseline_5267_state_Name }}"
+#     data: "{{ win_baseline_5267_state_Data }}"
+#     type: "{{ win_baseline_5267_state_Type }}"
+#   when:
+#     win_baseline_5267_state_Manage
 
-# TODO: should be checked on the target server.
-- name: "win_baseline_5996_state | Ensure 'Windows SNMP community strings' is set to 'Not defined'"
-  win_regedit:
-    path: "{{ win_baseline_5996_state_Path }}"
-    name: "{{ win_baseline_5996_state_Name }}"
-    data: "{{ win_baseline_5996_state_Data }}"
-    type: "{{ win_baseline_5996_state_Type }}"
-  when:
-    win_baseline_5996_state_Manage
+# # TODO: should be checked on the target server.
+# - name: "win_baseline_5996_state | Ensure 'Windows SNMP community strings' is set to 'Not defined'"
+#   win_regedit:
+#     path: "{{ win_baseline_5996_state_Path }}"
+#     name: "{{ win_baseline_5996_state_Name }}"
+#     data: "{{ win_baseline_5996_state_Data }}"
+#     type: "{{ win_baseline_5996_state_Type }}"
+#   when:
+#     win_baseline_5996_state_Manage
 
-- name: "win_baseline_7501_state | Ensure 'Configure registry policy processing - Process even if the Group Policy objects have not changed' is set to 'Enabled - TRUE'"
-  win_regedit:
-    path: "{{ win_baseline_7501_state_Path }}"
-    name: "{{ win_baseline_7501_state_Name }}"
-    data: "{{ win_baseline_7501_state_Data }}"
-    type: "{{ win_baseline_7501_state_Type }}"
-  when:
-    win_baseline_7501_state_Manage
+# - name: "win_baseline_7501_state | Ensure 'Configure registry policy processing - Process even if the Group Policy objects have not changed' is set to 'Enabled - TRUE'"
+#   win_regedit:
+#     path: "{{ win_baseline_7501_state_Path }}"
+#     name: "{{ win_baseline_7501_state_Name }}"
+#     data: "{{ win_baseline_7501_state_Data }}"
+#     type: "{{ win_baseline_7501_state_Type }}"
+#   when:
+#     win_baseline_7501_state_Manage
 
-- name: "win_baseline_7502_state | Ensure 'Application - Specify the maximum log file size (KB)' is set to 'Enabled - 1000000 or greater'"
-  win_regedit:
-    path: "{{ win_baseline_7502_state_Path }}"
-    name: "{{ win_baseline_7502_state_Name }}"
-    data: "{{ win_baseline_7502_state_Data }}"
-    type: "{{ win_baseline_7502_state_Type }}"
-  when:
-    win_baseline_7502_state_Manage
+# - name: "win_baseline_7502_state | Ensure 'Application - Specify the maximum log file size (KB)' is set to 'Enabled - 1000000 or greater'"
+#   win_regedit:
+#     path: "{{ win_baseline_7502_state_Path }}"
+#     name: "{{ win_baseline_7502_state_Name }}"
+#     data: "{{ win_baseline_7502_state_Data }}"
+#     type: "{{ win_baseline_7502_state_Type }}"
+#   when:
+#     win_baseline_7502_state_Manage
 
-- name: "win_baseline_7503_state | Ensure 'Security - Specify the maximum log file size (KB)' is set to 'Enabled - 1000000 or greater'"
-  win_regedit:
-    path: "{{ win_baseline_7503_state_Path }}"
-    name: "{{ win_baseline_7503_state_Name }}"
-    data: "{{ win_baseline_7503_state_Data }}"
-    type: "{{ win_baseline_7503_state_Type }}"
-  when:
-    win_baseline_7503_state_Manage
+# - name: "win_baseline_7503_state | Ensure 'Security - Specify the maximum log file size (KB)' is set to 'Enabled - 1000000 or greater'"
+#   win_regedit:
+#     path: "{{ win_baseline_7503_state_Path }}"
+#     name: "{{ win_baseline_7503_state_Name }}"
+#     data: "{{ win_baseline_7503_state_Data }}"
+#     type: "{{ win_baseline_7503_state_Type }}"
+#   when:
+#     win_baseline_7503_state_Manage
 
-- name: "win_baseline_7504_state | Ensure 'System - Specify the maximum log file size (KB)' is set to 'Enabled - 1000000 or greater'"
-  win_regedit:
-    path: "{{ win_baseline_7504_state_Path }}"
-    name: "{{ win_baseline_7504_state_Name }}"
-    data: "{{ win_baseline_7504_state_Data }}"
-    type: "{{ win_baseline_7504_state_Type }}"
-  when:
-    win_baseline_7504_state_Manage
+# - name: "win_baseline_7504_state | Ensure 'System - Specify the maximum log file size (KB)' is set to 'Enabled - 1000000 or greater'"
+#   win_regedit:
+#     path: "{{ win_baseline_7504_state_Path }}"
+#     name: "{{ win_baseline_7504_state_Name }}"
+#     data: "{{ win_baseline_7504_state_Data }}"
+#     type: "{{ win_baseline_7504_state_Type }}"
+#   when:
+#     win_baseline_7504_state_Manage
 
-- name: "win_baseline_8141_state | Ensure 'Accounts - Block Microsoft accounts' is set to 'Users can't add or log on with Microsoft accounts'"
-  win_regedit:
-    path: "{{ win_baseline_8141_state_Path }}"
-    name: "{{ win_baseline_8141_state_Name }}"
-    data: "{{ win_baseline_8141_state_Data }}"
-    type: "{{ win_baseline_8141_state_Type }}"
-  when:
-    win_baseline_8141_state_Manage
+# - name: "win_baseline_8141_state | Ensure 'Accounts - Block Microsoft accounts' is set to 'Users can't add or log on with Microsoft accounts'"
+#   win_regedit:
+#     path: "{{ win_baseline_8141_state_Path }}"
+#     name: "{{ win_baseline_8141_state_Name }}"
+#     data: "{{ win_baseline_8141_state_Data }}"
+#     type: "{{ win_baseline_8141_state_Type }}"
+#   when:
+#     win_baseline_8141_state_Manage
 
-- name: "win_baseline_8145_state | Ensure 'Interactive logon - Machine inactivity limit' is set to '900 or fewer second(s), but not 0'"
-  win_regedit:
-    path: "{{ win_baseline_8145_state_Path }}"
-    name: "{{ win_baseline_8145_state_Name }}"
-    data: "{{ win_baseline_8145_state_Data }}"
-    type: "{{ win_baseline_8145_state_Type }}"
-  when:
-    win_baseline_8145_state_Manage
+# - name: "win_baseline_8145_state | Ensure 'Interactive logon - Machine inactivity limit' is set to '900 or fewer second(s), but not 0'"
+#   win_regedit:
+#     path: "{{ win_baseline_8145_state_Path }}"
+#     name: "{{ win_baseline_8145_state_Name }}"
+#     data: "{{ win_baseline_8145_state_Data }}"
+#     type: "{{ win_baseline_8145_state_Type }}"
+#   when:
+#     win_baseline_8145_state_Manage
 
 - name: "win_baseline_8162_state | Ensure 'Windows Firewall - Log successful connections (private)' is set to 'Yes'"
   win_regedit:
@@ -1572,7 +1572,7 @@
     data: "{{ win_baseline_8162_state_Data }}"
     type: "{{ win_baseline_8162_state_Type }}"
   when:
-    win_baseline_8126_state_Manage
+    win_baseline_8162_state_Manage
 
 - name: "win_baseline_8176_state | Ensure 'Do not enumerate connected users on domain-joined computers' is set to 'Enabled'"
   win_regedit:
