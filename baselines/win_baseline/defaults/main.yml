@@ -1102,3 +1102,9 @@ win_baseline_5996_state_Name: "ValidCommunities"
 win_baseline_5996_state_Data: ""
 win_baseline_5996_state_Type: string
 
+# win_baseline_7501_state | Ensure 'Configure registry policy processing - Process even if the Group Policy objects have not changed' is set to 'Enabled - TRUE'
+win_baseline_7501_state_Manage: True
+win_baseline_7501_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Group Policy\{35378Eac-683F-11D2-A89A-00C04Fbbcfa2}'
+win_baseline_7501_state_Name: "NoGPOListChanges"
+win_baseline_7501_state_Data: "0"
+win_baseline_7501_state_Type: dword
