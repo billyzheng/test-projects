@@ -1734,3 +1734,11 @@
   when:
     win_baseline_8416_state_Manage
 
+- name: "win_baseline_8419_state | Ensure 'Ture off the Automatic Download of updates' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_8419_state_Path }}"
+    name: "{{ win_baseline_8419_state_Name }}"
+    data: "{{ win_baseline_8419_state_Data }}"
+    type: "{{ win_baseline_8419_state_Type }}"
+  when:
+    win_baseline_8419_state_Manage
