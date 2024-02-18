@@ -1896,3 +1896,12 @@
     type: "{{ win_baseline_10009_state_Type }}"
   when:
     win_baseline_10009_state_Manage
+
+- name: "win_baseline_10010_state | Ensure 'Password Length Local Administrator Password Solution' is set to '20 or more characters'"
+  win_regedit:
+    path: "{{ win_baseline_10010_state_Path }}"
+    name: "{{ win_baseline_10010_state_Name }}"
+    data: "{{ win_baseline_10010_state_Data }}"
+    type: "{{ win_baseline_10010_state_Type }}"
+  when:
+    win_baseline_10010_state_Manage

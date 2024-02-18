@@ -1400,4 +1400,11 @@ win_baseline_10009_state_Name: "PasswordComplexity"
 win_baseline_10009_state_Data: "4"
 win_baseline_10009_state_Type: dword
 
+# win_baseline_10010_state | Ensure 'Password Length Local Administrator Password Solution' is set to '20 or more characters'
+win_baseline_10010_state_Manage: True
+win_baseline_10010_state_Path: 'HKLM:\Software\Policies\Microsoft Services\AdmPwd'
+win_baseline_10010_state_Name: "PasswordLength"
+win_baseline_10010_state_Data: "20"
+win_baseline_10010_state_Type: dword
+
 
