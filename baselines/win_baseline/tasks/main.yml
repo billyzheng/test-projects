@@ -1428,60 +1428,60 @@
 #   when:
 #     win_baseline_4522_state_Manage
 
-- name: "win_baseline_4741_state | Ensure 'MSS: (DisableIPSourceRoutingIPv6) IP source routing protection level (protects against packet spoofing) is set to 'Enabled: Highest protection, source routing is completely disabled'"
-  win_regedit:
-    path: "{{ win_baseline_4741_state_Path }}"
-    name: "{{ win_baseline_4741_state_Name }}"
-    data: "{{ win_baseline_4741_state_Data }}"
-    type: "{{ win_baseline_4741_state_Type }}"
-  when:
-    win_baseline_4741_state_Manage
+# - name: "win_baseline_4741_state | Ensure 'MSS: (DisableIPSourceRoutingIPv6) IP source routing protection level (protects against packet spoofing) is set to 'Enabled: Highest protection, source routing is completely disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_4741_state_Path }}"
+#     name: "{{ win_baseline_4741_state_Name }}"
+#     data: "{{ win_baseline_4741_state_Data }}"
+#     type: "{{ win_baseline_4741_state_Type }}"
+#   when:
+#     win_baseline_4741_state_Manage
 
-- name: "win_baseline_5209_state | Ensure 'Network Access: Named Pipes that can be accessed anonymously' is set to 'None'"
-  win_regedit:
-    path: "{{ win_baseline_5209_state_Path }}"
-    name: "{{ win_baseline_5209_state_Name }}"
-    data: "{{ win_baseline_5209_state_Data }}"
-    type: "{{ win_baseline_5209_state_Type }}"
-  when:
-    win_baseline_5209_state_Manage
+# - name: "win_baseline_5209_state | Ensure 'Network Access: Named Pipes that can be accessed anonymously' is set to 'None'"
+#   win_regedit:
+#     path: "{{ win_baseline_5209_state_Path }}"
+#     name: "{{ win_baseline_5209_state_Name }}"
+#     data: "{{ win_baseline_5209_state_Data }}"
+#     type: "{{ win_baseline_5209_state_Type }}"
+#   when:
+#     win_baseline_5209_state_Manage
 
-- name: "win_baseline_5210_state | Ensure 'Network access - Shares that can be accessed anonymously' is set to 'None'"
-  win_regedit:
-    path: "{{ win_baseline_5210_state_Path }}"
-    name: "{{ win_baseline_5210_state_Name }}"
-    data: "{{ win_baseline_5210_state_Data }}"
-    type: "{{ win_baseline_5210_state_Type }}"
-  when:
-    win_baseline_5210_state_Manage
+# - name: "win_baseline_5210_state | Ensure 'Network access - Shares that can be accessed anonymously' is set to 'None'"
+#   win_regedit:
+#     path: "{{ win_baseline_5210_state_Path }}"
+#     name: "{{ win_baseline_5210_state_Name }}"
+#     data: "{{ win_baseline_5210_state_Data }}"
+#     type: "{{ win_baseline_5210_state_Type }}"
+#   when:
+#     win_baseline_5210_state_Manage
   
-- name: "win_baseline_5212_state | Configure 'Network access - Remotely accessible registry paths'"
-  win_regedit:
-    path: "{{ win_baseline_5212_state_Path }}"
-    name: "{{ win_baseline_5212_state_Name }}"
-    data: "{{ win_baseline_5212_state_Data }}"
-    type: "{{ win_baseline_5212_state_Type }}"
-  when:
-    win_baseline_5212_state_Manage
+# - name: "win_baseline_5212_state | Configure 'Network access - Remotely accessible registry paths'"
+#   win_regedit:
+#     path: "{{ win_baseline_5212_state_Path }}"
+#     name: "{{ win_baseline_5212_state_Name }}"
+#     data: "{{ win_baseline_5212_state_Data }}"
+#     type: "{{ win_baseline_5212_state_Type }}"
+#   when:
+#     win_baseline_5212_state_Manage
 
-# TODO: should be checked again
-- name: "win_baseline_5213_state | Configure 'Network access - Remotely accessible registry paths and sub-paths'"
-  win_regedit:
-    path: "{{ win_baseline_5213_state_Path }}"
-    name: "{{ win_baseline_5213_state_Name }}"
-    data: "{{ win_baseline_5213_state_Data }}"
-    type: "{{ win_baseline_5213_state_Type }}"
-  when:
-    win_baseline_5213_state_Manage
+# # TODO: should be checked again
+# - name: "win_baseline_5213_state | Configure 'Network access - Remotely accessible registry paths and sub-paths'"
+#   win_regedit:
+#     path: "{{ win_baseline_5213_state_Path }}"
+#     name: "{{ win_baseline_5213_state_Name }}"
+#     data: "{{ win_baseline_5213_state_Data }}"
+#     type: "{{ win_baseline_5213_state_Type }}"
+#   when:
+#     win_baseline_5213_state_Manage
 
-- name: "win_baseline_5264_state | Ensure 'Microsoft network server - Server SPN target name validation level' is set to 'Accept if provided by client' or higher"
-  win_regedit:
-    path: "{{ win_baseline_5264_state_Path }}"
-    name: "{{ win_baseline_5264_state_Name }}"
-    data: "{{ win_baseline_5264_state_Data }}"
-    type: "{{ win_baseline_5264_state_Type }}"
-  when:
-    win_baseline_5264_state_Manage 
+# - name: "win_baseline_5264_state | Ensure 'Microsoft network server - Server SPN target name validation level' is set to 'Accept if provided by client' or higher"
+#   win_regedit:
+#     path: "{{ win_baseline_5264_state_Path }}"
+#     name: "{{ win_baseline_5264_state_Name }}"
+#     data: "{{ win_baseline_5264_state_Data }}"
+#     type: "{{ win_baseline_5264_state_Type }}"
+#   when:
+#     win_baseline_5264_state_Manage 
 
 - name: "win_baseline_5265_state | Ensure 'Nerowrk security - Allow LocalSystem NULL session fallback' is set to 'Disabled'"
   win_regedit:
@@ -1491,3 +1491,12 @@
     type: "{{ win_baseline_5265_state_Type }}"
   when:
     win_baseline_5265_state_Manage
+
+- name: "win_baseline_5267_state | Ensure 'Network Security - Allow PKU2U authentication requests to this computer to use online identities' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_5267_state_Path }}"
+    name: "{{ win_baseline_5267_state_Name }}"
+    data: "{{ win_baseline_5267_state_Data }}"
+    type: "{{ win_baseline_5267_state_Type }}"
+  when:
+    win_baseline_5267_state_Manage
