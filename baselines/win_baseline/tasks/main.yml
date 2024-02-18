@@ -1519,3 +1519,12 @@
     type: "{{ win_baseline_7501_state_Type }}"
   when:
     win_baseline_7501_state_Manage
+
+- name: "win_baseline_7502_state | Ensure 'Application - Specify the maximum log file size (KB)' is set to 'Enabled - 1000000 or greater'"
+  win_regedit:
+    path: "{{ win_baseline_7502_state_Path }}"
+    name: "{{ win_baseline_7502_state_Name }}"
+    data: "{{ win_baseline_7502_state_Data }}"
+    type: "{{ win_baseline_7502_state_Type }}"
+  when:
+    win_baseline_7502_state_Manage

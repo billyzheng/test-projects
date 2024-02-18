@@ -1108,3 +1108,10 @@ win_baseline_7501_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Group P
 win_baseline_7501_state_Name: "NoGPOListChanges"
 win_baseline_7501_state_Data: "0"
 win_baseline_7501_state_Type: dword
+
+# win_baseline_7502_state | Ensure 'Application - Specify the maximum log file size (KB)' is set to 'Enabled - 1000000 or greater'
+win_baseline_7502_state_Manage: True
+win_baseline_7502_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\EventLog\Application'
+win_baseline_7502_state_Name: "MaxSize"
+win_baseline_7502_state_Data: "1000000"
+win_baseline_7502_state_Type: dword
