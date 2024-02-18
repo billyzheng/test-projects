@@ -1171,3 +1171,11 @@ win_baseline_8188_state_Path: 'HKLM:\System\CurrentControlSet\Policies\EarlyLaun
 win_baseline_8188_state_Name: "DriverLoadPolicy"
 win_baseline_8188_state_Data: "8"
 win_baseline_8188_state_Type: dword
+
+# win_baseline_8198_state | Ensure 'Always install with elevated privileges' is set to 'Disabled'
+win_baseline_8198_state_Manage: True
+win_baseline_8198_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Installer'
+win_baseline_8198_state_Name: "AlwaysInstallElevated"
+win_baseline_8198_state_Data: "0"
+win_baseline_8198_state_Type: dword
+

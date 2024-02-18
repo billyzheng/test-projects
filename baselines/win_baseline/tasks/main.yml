@@ -1600,3 +1600,13 @@
     type: "{{ win_baseline_8188_state_Type }}"
   when:
     win_baseline_8188_state_Manage
+
+- name: "win_baseline_8198_state | Ensure 'Always install with elevated privileges' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_8198_state_Path }}"
+    name: "{{ win_baseline_8198_state_Name }}"
+    data: "{{ win_baseline_8198_state_Data }}"
+    type: "{{ win_baseline_8198_state_Type }}"
+  when:
+    win_baseline_8198_state_Manage
+
