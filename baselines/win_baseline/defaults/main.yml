@@ -1437,3 +1437,12 @@ win_baseline_10027_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\PowerS
 win_baseline_10027_state_Name: "EnableScriptBlockLogging"
 win_baseline_10027_state_Data: "1"
 win_baseline_10027_state_Type: dword
+
+# win_baseline_10028_state | Ensure 'Turn on PowerShell Transcription' is set to 'Disabled'
+win_baseline_10028_state_Manage: True
+win_baseline_10028_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\PowerShell\Transcription'
+win_baseline_10028_state_Name: "EnableTranscripting"
+win_baseline_10028_state_Data: "0"
+win_baseline_10028_state_Type: dword
+
+

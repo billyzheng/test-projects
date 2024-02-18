@@ -1937,7 +1937,18 @@
 
 - name: "win_baseline_10027_state | Ensure 'Turn on PowerShell Script Block Logging' is set to 'Enabled'"
   win_regedit:
-    path: HKLM:\Software\Policies\Microsoft\Windows\Powershell\Scriptblocklogging
-    name: "EnableScriptBlockLogging"
-    data: "1"
-    type: dword
+    path: "{{ win_baseline_10027_state_Path }}"
+    name: "{{ win_baseline_10027_state_Name }}"
+    data: "{{ win_baseline_10027_state_Data }}"
+    type: "{{ win_baseline_10027_state_Type }}"
+  when:
+    win_baseline_10027_state_Manage
+
+- name: "win_baseline_10028_state | Ensure 'Turn on PowerShell Transcription' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_10028_state_Path }}"
+    name: "{{ win_baseline_10028_state_Name }}"
+    data: "{{ win_baseline_10028_state_Data }}"
+    type: "{{ win_baseline_10028_state_Type }}"
+  when:
+    win_baseline_10028_state_Manage
