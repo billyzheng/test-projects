@@ -1164,3 +1164,10 @@ win_baseline_8177_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\System'
 win_baseline_8177_state_Name: "EnumerateLocalUsers"
 win_baseline_8177_state_Data: "0"
 win_baseline_8177_state_Type: dword
+
+# win_baseline_8188_state | Ensure 'Boot-Start Driver Initialization Policy' is set to 'Good only'
+win_baseline_8188_state_Manage: True
+win_baseline_8188_state_Path: 'HKLM:\System\CurrentControlSet\Policies\EarlyLaunch'
+win_baseline_8188_state_Name: "DriverLoadPolicy"
+win_baseline_8188_state_Data: "8"
+win_baseline_8188_state_Type: dword

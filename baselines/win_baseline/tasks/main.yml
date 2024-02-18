@@ -1591,3 +1591,12 @@
     type: "{{ win_baseline_8177_state_Type }}"
   when:
     win_baseline_8177_state_Manage
+
+- name: "win_baseline_8188_state | Ensure 'Boot-Start Driver Initialization Policy' is set to 'Good only'"
+  win_regedit:
+    path: "{{ win_baseline_8188_state_Path }}"
+    name: "{{ win_baseline_8188_state_Name }}"
+    data: "{{ win_baseline_8188_state_Data }}"
+    type: "{{ win_baseline_8188_state_Type }}"
+  when:
+    win_baseline_8188_state_Manage
