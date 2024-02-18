@@ -1428,5 +1428,5 @@ win_baseline_10015_state_Type: dword
 win_baseline_10016_state_Manage: True
 win_baseline_10016_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows NT\CurrentVersion\Software Protection Platform'
 win_baseline_10016_state_Name: "NoGenTicket"
-win_baseline_10016_state_Data: "`"
+win_baseline_10016_state_Data: "0"
 win_baseline_10016_state_Type: dword
