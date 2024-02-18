@@ -1952,3 +1952,12 @@
     type: "{{ win_baseline_10028_state_Type }}"
   when:
     win_baseline_10028_state_Manage
+
+- name: "win_baseline_10081 | Ensure 'Require domain users to elevate when setting a network's location' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_10081_state_Path }}"
+    name: "{{ win_baseline_10081_state_Name }}"
+    data: "{{ win_baseline_10081_state_Data }}"
+    type: "{{ win_baseline_10081_state_Type }}"
+  when:
+    win_baseline_10081_state_Manage

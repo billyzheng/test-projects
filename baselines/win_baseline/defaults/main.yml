@@ -1445,4 +1445,10 @@ win_baseline_10028_state_Name: "EnableTranscripting"
 win_baseline_10028_state_Data: "0"
 win_baseline_10028_state_Type: dword
 
+# win_baseline_10081 | Ensure 'Require domain users to elevate when setting a network's location' is set to 'Enabled'
+win_baseline_10081_state_Manage: True
+win_baseline_10081_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Network Connections'
+win_baseline_10081_state_Name: "NC_StdDomainUserSetLocation"
+win_baseline_10081_state_Data: "1"
+win_baseline_10081_state_Type: dword
 
