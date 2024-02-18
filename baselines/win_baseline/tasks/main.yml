@@ -1670,3 +1670,12 @@
     audit_type: "{{ win_baseline_8255_state_AuditType }}"
   when:
     win_baseline_8255_state_Manage
+
+- name: "win_baseline_8271_state | Ensure 'Do not adjust default option to 'Install Updates and Shut Down' in Shut Down Windows dialog box' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_8271_state_Path }}"
+    name: "{{ win_baseline_8271_state_Name }}"
+    data: "{{ win_baseline_8271_state_Data }}"
+    type: "{{ win_baseline_8271_state_Type }}"
+  when:
+    win_baseline_8271_state_Manage

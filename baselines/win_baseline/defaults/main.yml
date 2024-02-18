@@ -1226,3 +1226,9 @@ win_baseline_8255_state_Manage: True
 win_baseline_8255_state_Subcategory: "Removable Storage"
 win_baseline_8255_state_AuditType: "success, failure"
 
+# win_baseline_8271_state | Ensure 'Do not adjust default option to 'Install Updates and Shut Down' in Shut Down Windows dialog box' is set to 'Disabled'
+win_baseline_8271_state_Manage: True
+win_baseline_8271_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\AU'
+win_baseline_8271_state_Name: "NoAUAsDefaultShutdownOption"
+win_baseline_8271_state_Data: "0"
+win_baseline_8271_state_Type: dword
