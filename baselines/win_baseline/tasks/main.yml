@@ -1926,83 +1926,101 @@
 #   when:
 #     win_baseline_10015_state_Manage
 
-- name: "win_baseline_10016_state | Ensure 'Turn off KMS Client Online AVS Validation' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_10016_state_Path }}"
-    name: "{{ win_baseline_10016_state_Name }}"
-    data: "{{ win_baseline_10016_state_Data }}"
-    type: "{{ win_baseline_10016_state_Type }}"
-  when:
-    win_baseline_10016_state_Manage
+# - name: "win_baseline_10016_state | Ensure 'Turn off KMS Client Online AVS Validation' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10016_state_Path }}"
+#     name: "{{ win_baseline_10016_state_Name }}"
+#     data: "{{ win_baseline_10016_state_Data }}"
+#     type: "{{ win_baseline_10016_state_Type }}"
+#   when:
+#     win_baseline_10016_state_Manage
 
-- name: "win_baseline_10027_state | Ensure 'Turn on PowerShell Script Block Logging' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_10027_state_Path }}"
-    name: "{{ win_baseline_10027_state_Name }}"
-    data: "{{ win_baseline_10027_state_Data }}"
-    type: "{{ win_baseline_10027_state_Type }}"
-  when:
-    win_baseline_10027_state_Manage
+# - name: "win_baseline_10027_state | Ensure 'Turn on PowerShell Script Block Logging' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10027_state_Path }}"
+#     name: "{{ win_baseline_10027_state_Name }}"
+#     data: "{{ win_baseline_10027_state_Data }}"
+#     type: "{{ win_baseline_10027_state_Type }}"
+#   when:
+#     win_baseline_10027_state_Manage
 
-- name: "win_baseline_10028_state | Ensure 'Turn on PowerShell Transcription' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_10028_state_Path }}"
-    name: "{{ win_baseline_10028_state_Name }}"
-    data: "{{ win_baseline_10028_state_Data }}"
-    type: "{{ win_baseline_10028_state_Type }}"
-  when:
-    win_baseline_10028_state_Manage
+# - name: "win_baseline_10028_state | Ensure 'Turn on PowerShell Transcription' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10028_state_Path }}"
+#     name: "{{ win_baseline_10028_state_Name }}"
+#     data: "{{ win_baseline_10028_state_Data }}"
+#     type: "{{ win_baseline_10028_state_Type }}"
+#   when:
+#     win_baseline_10028_state_Manage
 
-- name: "win_baseline_10081 | Ensure 'Require domain users to elevate when setting a network's location' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_10081_state_Path }}"
-    name: "{{ win_baseline_10081_state_Name }}"
-    data: "{{ win_baseline_10081_state_Data }}"
-    type: "{{ win_baseline_10081_state_Type }}"
-  when:
-    win_baseline_10081_state_Manage
+# - name: "win_baseline_10081 | Ensure 'Require domain users to elevate when setting a network's location' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10081_state_Path }}"
+#     name: "{{ win_baseline_10081_state_Name }}"
+#     data: "{{ win_baseline_10081_state_Data }}"
+#     type: "{{ win_baseline_10081_state_Type }}"
+#   when:
+#     win_baseline_10081_state_Manage
 
-- name: "win_baseline_10082_state | Ensure 'Turn off handwriting personalization data sharing' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_10082_state_Path }}"
-    name: "{{ win_baseline_10082_state_Name }}"
-    data: "{{ win_baseline_10082_state_Data }}"
-    type: "{{ win_baseline_10082_state_Type }}"
-  when:
-    win_baseline_10082_state_Manage
+# - name: "win_baseline_10082_state | Ensure 'Turn off handwriting personalization data sharing' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10082_state_Path }}"
+#     name: "{{ win_baseline_10082_state_Name }}"
+#     data: "{{ win_baseline_10082_state_Data }}"
+#     type: "{{ win_baseline_10082_state_Type }}"
+#   when:
+#     win_baseline_10082_state_Manage
 
-- name: "win_baseline_10083_state | Ensure 'Turn off handwriting recognition error reporting' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_10083_state_Path }}"
-    name: "{{ win_baseline_10083_state_Name }}"
-    data: "{{ win_baseline_10083_state_Data }}"
-    type: "{{ win_baseline_10083_state_Type }}"
-  when:
-    win_baseline_10083_state_Manage
+# - name: "win_baseline_10083_state | Ensure 'Turn off handwriting recognition error reporting' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10083_state_Path }}"
+#     name: "{{ win_baseline_10083_state_Name }}"
+#     data: "{{ win_baseline_10083_state_Data }}"
+#     type: "{{ win_baseline_10083_state_Type }}"
+#   when:
+#     win_baseline_10083_state_Manage
 
-- name: "win_baseline_10084_state | Ensure 'Turn off Windows Customer Experience Improvement Program' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_10084_state_Path }}"
-    name: "{{ win_baseline_10084_state_Name }}"
-    data: "{{ win_baseline_10084_state_Data }}"
-    type: "{{ win_baseline_10084_state_Type }}"
-  when:
-    win_baseline_10084_state_Manage
+# - name: "win_baseline_10084_state | Ensure 'Turn off Windows Customer Experience Improvement Program' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10084_state_Path }}"
+#     name: "{{ win_baseline_10084_state_Name }}"
+#     data: "{{ win_baseline_10084_state_Data }}"
+#     type: "{{ win_baseline_10084_state_Type }}"
+#   when:
+#     win_baseline_10084_state_Manage
 
-- name: "win_baseline_10085_state | Ensure 'Disallow copying of user input methods to the system account for sign-in' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_10085_state_Path }}"
-    name: "{{ win_baseline_10085_state_Name }}"
-    data: "{{ win_baseline_10085_state_Data }}"
-    type: "{{ win_baseline_10085_state_Type }}"
-  when:
-    win_baseline_10085_state_Manage
+# - name: "win_baseline_10085_state | Ensure 'Disallow copying of user input methods to the system account for sign-in' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10085_state_Path }}"
+#     name: "{{ win_baseline_10085_state_Name }}"
+#     data: "{{ win_baseline_10085_state_Data }}"
+#     type: "{{ win_baseline_10085_state_Type }}"
+#   when:
+#     win_baseline_10085_state_Manage
 
-- name: "win_baseline_10086_state | Ensure 'Enable/Disable PerfTrack' is set to 'Disabled'"
+# - name: "win_baseline_10086_state | Ensure 'Enable/Disable PerfTrack' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10086_state_Path }}"
+#     name: "{{ win_baseline_10086_state_Name }}"
+#     data: "{{ win_baseline_10086_state_Data }}"
+#     type: "{{ win_baseline_10086_state_Type }}"
+#   when:
+#     win_baseline_10086_state_Manage
+
+- name: "win_baseline_10087_state | Ensure 'Enable Windows NTP Client' is set to 'Enabled'"
   win_regedit:
-    path: "{{ win_baseline_10086_state_Path }}"
-    name: "{{ win_baseline_10086_state_Name }}"
-    data: "{{ win_baseline_10086_state_Data }}"
-    type: "{{ win_baseline_10086_state_Type }}"
+    path: "{{ win_baseline_10087_state_Path }}"
+    name: "{{ win_baseline_10087_state_Name }}"
+    data: "{{ win_baseline_10087_state_Data }}"
+    type: "{{ win_baseline_10087_state_Type }}"
   when:
-    win_baseline_10086_state_Manage
+    win_baseline_10087_state_Manage
+
+- name: "win_baselien_10088_state | Ensure 'Enable Windows NTP Server' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_10088_state_Path }}"
+    name: "{{ win_baseline_10088_state_Name }}"
+    data: "{{ win_baseline_10088_state_Data }}"
+    type: "{{ win_baseline_10088_state_Type }}"
+  when:
+    win_baseline_10088_state_Manage

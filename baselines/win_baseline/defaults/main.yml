@@ -1486,3 +1486,18 @@ win_baseline_10086_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Wdi\'
 win_baseline_10086_state_Name: "ScenarioExecutionEnabled"
 win_baseline_10086_state_Data: "0"
 win_baseline_10086_state_Type: dword
+
+# win_baseline_10087_state | Ensure 'Enable Windows NTP Client' is set to 'Enabled'
+win_baseline_10087_state_Manage: True
+win_baseline_10087_state_Path: 'HKLM:\Software\Policies\Microsoft\W32Time\TimeProviders\'
+win_baseline_10087_state_Name: "NtpClient"
+win_baseline_10087_state_Data: "1"
+win_baseline_10087_state_Type: dword
+
+# win_baselien_10088_state | Ensure 'Enable Windows NTP Server' is set to 'Disabled'
+win_baseline_10088_state_Manage: True
+win_baseline_10088_state_Path: 'HKLM:\Software\Policies\Microsoft\W32Time\TimeProviders\'
+win_baseline_10088_state_Name: "NtpServer"
+win_baseline_10088_state_Data: "0"
+win_baseline_10088_state_Type: dword
+
