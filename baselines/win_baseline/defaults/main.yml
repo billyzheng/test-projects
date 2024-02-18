@@ -1393,5 +1393,11 @@ win_baseline_10008_state_Name: "AdmPwdEnabled"
 win_baseline_10008_state_Data: "1"
 win_baseline_10008_state_Type: dword
 
+# win_baseline_10009_state | Ensure 'Password Complexity Local Administrator Password Solution' is set to 'Large letters + small letters + numbers + special characters'
+win_baseline_10009_state_Manage: True
+win_baseline_10009_state_Path: 'HKLM:\Software\Policies\Microsoft Services\AdmPwd'
+win_baseline_10009_state_Name: "PasswordComplexity"
+win_baseline_10009_state_Data: "4"
+win_baseline_10009_state_Type: dword
 
 

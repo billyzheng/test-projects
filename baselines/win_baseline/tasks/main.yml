@@ -1887,3 +1887,12 @@
     type: "{{ win_baseline_10008_state_Type }}"
   when:
     win_baseline_10008_state_Manage
+
+- name: "win_baseline_10009_state | Ensure 'Password Complexity Local Administrator Password Solution' is set to 'Large letters + small letters + numbers + special characters'"
+  win_regedit:
+    path: "{{ win_baseline_10009_state_Path }}"
+    name: "{{ win_baseline_10009_state_Name }}"
+    data: "{{ win_baseline_10009_state_Data }}"
+    type: "{{ win_baseline_10009_state_Type }}"
+  when:
+    win_baseline_10009_state_Manage
