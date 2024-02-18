@@ -1323,3 +1323,9 @@ win_baseline_9013_state_Name: "Retention"
 win_baseline_9013_state_Data: "0"
 win_baseline_9013_state_Type: string
 
+# win_baseline_9014_state | Ensure 'Setup - Maximum Log Size (KB)' is set to 'Enabled: 32768 or greater'
+win_baseline_9014_state_Manage: True
+win_baseline_9014_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Eventlog\Setup'
+win_baseline_9014_state_Name: "MaxSize"
+win_baseline_9014_state_Data: "32768"
+win_baseline_9014_state_Type: dword

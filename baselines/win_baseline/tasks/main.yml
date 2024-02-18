@@ -1795,3 +1795,12 @@
     name: "Retention"
     data: "0"
     type: string
+
+- name: "win_baseline_9014_state | Ensure 'Setup - Maximum Log Size (KB)' is set to 'Enabled: 32768 or greater'"
+  win_regedit:
+    path: "{{ win_baseline_9014_state_Path }}"
+    name: "{{ win_baseline_9014_state_Name }}"
+    data: "{{ win_baseline_9014_state_Data }}"
+    type: "{{ win_baseline_9014_state_Type }}"
+  when:
+    win_baseline_9014_state_Manage
