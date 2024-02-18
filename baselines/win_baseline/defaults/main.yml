@@ -1351,5 +1351,11 @@ win_baseline_9025_state_Name: "UseLogonCredential"
 win_baseline_9025_state_Data: "0"
 win_baseline_9025_state_Type: dword
 
+# win_baseline_9301_state | Ensure 'Force specific screen saver - Screen saver executable name' is set to 'Enabled - scrnsave.scr'
+win_baseline_9301_state_Manage: True
+win_baseline_9301_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Control Panel\Desktop'
+win_baseline_9301_state_Name: "SCRNSAVE.EXE"
+win_baseline_9301_state_Data: "scrnsave.scr"
+win_baseline_9301_state_Type: string
 
 
