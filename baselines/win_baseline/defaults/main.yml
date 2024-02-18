@@ -1358,4 +1358,40 @@ win_baseline_9301_state_Name: "SCRNSAVE.EXE"
 win_baseline_9301_state_Data: "scrnsave.scr"
 win_baseline_9301_state_Type: string
 
+# win_baseline_9402_state | Ensure 'Turn off the advertising ID' is set to 'Enabled'
+win_baseline_9402_state_Manage: True
+win_baseline_9402_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AdvertisingInfo'
+win_baseline_9402_state_Name: "DisabledByGroupPolicy"
+win_baseline_9402_state_Data: "1"
+win_baseline_9402_state_Type: dword
+
+# win_baseline_9469_state | Ensure 'Configure Watson events' is set to 'Disabled'
+win_baseline_9469_state_Manage: True
+win_baseline_9469_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender\Reporting'
+win_baseline_9469_state_Name: "DisableGenericRePorts"
+win_baseline_9469_state_Data: "1"
+win_baseline_9469_state_Type: dword
+
+# win_baseline_10006 | Ensure 'Disallow Autoplay for non-volume devices' is set to 'Enabled'
+win_baseline_10006_state_Manage: True
+win_baseline_10006_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Explorer'
+win_baseline_10006_state_Name: "NoAutoplayfornonVolume"
+win_baseline_10006_state_Data: "1"
+win_baseline_10006_state_Type: dword
+
+# win_baseline_10007_state | Ensure 'Set the default behavior for AutoRun' is set to 'Enabled - Do not execute any autorun commands'"
+win_baseline_10007_state_Manage: True
+win_baseline_10007_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Explorer'
+win_baseline_10007_state_Name: "NoAutorun"
+win_baseline_10007_state_Data: "1"
+win_baseline_10007_state_Type: dword
+
+# win_baseline_10008_state | Ensure 'Local Admin Password Management' is set to 'Enabled'
+win_baseline_10008_state_Manage: True
+win_baseline_10008_state_Path: 'HKLM:\Software\Policies\Microsoft Services\AdmPwd'
+win_baseline_10008_state_Name: "AdmPwdEnabled"
+win_baseline_10008_state_Data: "1"
+win_baseline_10008_state_Type: dword
+
+
 

@@ -1833,6 +1833,7 @@
   when:
     win_baseline_9025_state_Manage
 
+# todo: ensure the how to set the value, two different settings.
 - name: "win_baseline_9301_state | Ensure 'Force specific screen saver - Screen saver executable name' is set to 'Enabled - scrnsave.scr'"
   win_regedit:
     path: "{{ win_baseline_9301_state_Path }}"
@@ -1841,3 +1842,48 @@
     type: "{{ win_baseline_9301_state_Type }}"
   when:
     win_baseline_9301_state_Manage
+
+- name: "win_baseline_9402_state | Ensure 'Turn off the advertising ID' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_9402_state_Path }}"
+    name: "{{ win_baseline_9402_state_Name }}"
+    data: "{{ win_baseline_9402_state_Data }}"
+    type: "{{ win_baseline_9402_state_Type }}"
+  when:
+    win_baseline_9402_state_Manage
+
+- name: "win_baseline_9469_state | Ensure 'Configure Watson events' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_9469_state_Path }}"
+    name: "{{ win_baseline_9469_state_Name }}"
+    data: "{{ win_baseline_9469_state_Data }}"
+    type: "{{ win_baseline_9469_state_Type }}"
+  when:
+    win_baseline_9469_state_Manage
+
+- name: "win_baseline_10006 | Ensure 'Disallow Autoplay for non-volume devices' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_10006_state_Path }}"
+    name: "{{ win_baseline_10006_state_Name }}"
+    data: "{{ win_baseline_10006_state_Data }}"
+    type: "{{ win_baseline_10006_state_Type }}"
+  when:
+    win_baseline_10006_state_Manage
+
+- name: "win_baseline_10007_state | Ensure 'Set the default behavior for AutoRun' is set to 'Enabled - Do not execute any autorun commands'"
+  win_regedit:
+    path: "{{ win_baseline_10007_state_Path }}"
+    name: "{{ win_baseline_10007_state_Name }}"
+    data: "{{ win_baseline_10007_state_Data }}"
+    type: "{{ win_baseline_10007_state_Type }}"
+  when:
+    win_baseline_10007_state_Manage
+  
+- name: "win_baseline_10008_state | Ensure 'Local Admin Password Management' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_10008_state_Path }}"
+    name: "{{ win_baseline_10008_state_Name }}"
+    data: "{{ win_baseline_10008_state_Data }}"
+    type: "{{ win_baseline_10008_state_Type }}"
+  when:
+    win_baseline_10008_state_Manage
