@@ -1137,3 +1137,11 @@ win_baseline_8141_state_Name: "NoConnectedUser"
 win_baseline_8141_state_Data: "3"
 win_baseline_8141_state_Type: dword
 
+# win_baseline_8145_state | Ensure 'Interactive logon - Machine inactivity limit' is set to '900 or fewer second(s), but not 0'
+win_baseline_8145_state_Manage: True
+win_baseline_8145_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
+win_baseline_8145_state_Name: "InactivityTimeoutSecs"
+win_baseline_8145_state_Data: "900"
+win_baseline_8145_state_Type: dword
+
+
