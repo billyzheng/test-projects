@@ -1150,3 +1150,10 @@ win_baseline_8126_state_Path: 'KLM:\Software\Policies\Microsoft\Windowsfirewall\
 win_baseline_8126_state_Name: "LogSuccessfulConnections"
 win_baseline_8126_state_Data: "1"
 win_baseline_8126_state_Type: dword
+
+# win_baseline_8176_state | Ensure 'Do not enumerate connected users on domain-joined computers' is set to 'Enabled'
+win_baseline_8176_state_Manage: True
+win_baseline_8176_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\System'
+win_baseline_8176_state_Name: "DontEnumerateConnectedUsers"
+win_baseline_8176_state_Data: "1"
+win_baseline_8176_state_Type: dword
