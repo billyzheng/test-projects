@@ -1144,4 +1144,9 @@ win_baseline_8145_state_Name: "InactivityTimeoutSecs"
 win_baseline_8145_state_Data: "900"
 win_baseline_8145_state_Type: dword
 
-
+# win_baseline_8126_state | Ensure 'Windows Firewall - Log successful connections (private)' is set to 'Yes'
+win_baseline_8126_state_Manage: True
+win_baseline_8126_state_Path: 'KLM:\Software\Policies\Microsoft\Windowsfirewall\Privateprofile\Logging'
+win_baseline_8126_state_Name: "LogSuccessfulConnections"
+win_baseline_8126_state_Data: "1"
+win_baseline_8126_state_Type: dword
