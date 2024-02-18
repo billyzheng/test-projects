@@ -1123,3 +1123,10 @@ win_baseline_7503_state_Name: "MaxSize"
 win_baseline_7503_state_Data: "1000000"
 win_baseline_7503_state_Type: dword
 
+#  win_baseline_7504_state | Ensure 'System - Specify the maximum log file size (KB)' is set to 'Enabled - 1000000 or greater'
+win_baseline_7504_state_Manage: True
+win_baseline_7504_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\EventLog\System'
+win_baseline_7504_state_Name: "MaxSize"
+win_baseline_7504_state_Data: "1000000"
+win_baseline_7504_state_Type: dword
+
