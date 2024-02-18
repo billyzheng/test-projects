@@ -1500,3 +1500,12 @@
     type: "{{ win_baseline_5267_state_Type }}"
   when:
     win_baseline_5267_state_Manage
+
+- name: "win_baseline_5996_state | Ensure 'Windows SNMP community strings' is set to 'Not defined'"
+  win_regedit:
+    path: "{{ win_baseline_5996_state_Path }}"
+    name: "{{ win_baseline_5996_state_Name }}"
+    data: "{{ win_baseline_5996_state_Data }}"
+    type: "{{ win_baseline_5996_state_Type }}"
+  when:
+    win_baseline_5996_state_Manage
