@@ -1081,3 +1081,9 @@ win_baseline_5264_state_Name: "SMBServerNameHardeningLevel"
 win_baseline_5264_state_Data: "1"
 win_baseline_5264_state_Type: dword
 
+# win_baseline_5265_state | Ensure 'Nerowrk security - Allow LocalSystem NULL session fallback' is set to 'Disabled'
+win_baseline_5265_state_Manage: True
+win_baseline_5265_state_Path: 'HKLM:\System\Currentcontrolset\Cotnrol\Lsa\MSV1_0'
+win_baseline_5265_state_Name: "allowNullSessionFallback"
+win_baseline_5265_state_Data: "0"
+win_baseline_5265_state_Type: dword

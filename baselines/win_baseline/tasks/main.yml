@@ -1482,3 +1482,12 @@
     type: "{{ win_baseline_5264_state_Type }}"
   when:
     win_baseline_5264_state_Manage 
+
+- name: "win_baseline_5265_state | Ensure 'Nerowrk security - Allow LocalSystem NULL session fallback' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_5265_state_Path }}"
+    name: "{{ win_baseline_5265_state_Name }}"
+    data: "{{ win_baseline_5265_state_Data }}"
+    type: "{{ win_baseline_5265_state_Type }}"
+  when:
+    win_baseline_5265_state_Manage
