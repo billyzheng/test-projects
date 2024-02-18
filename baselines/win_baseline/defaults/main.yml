@@ -1232,3 +1232,10 @@ win_baseline_8271_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Windows
 win_baseline_8271_state_Name: "NoAUAsDefaultShutdownOption"
 win_baseline_8271_state_Data: "0"
 win_baseline_8271_state_Type: dword
+
+# win_baseline_8273_state | Ensure 'Turn off Data Execution Prevention for Explorer' is set to 'Disabled'
+win_baseline_8273_state_Manage: True
+win_baseline_8273_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Explorer'
+win_baseline_8273_state_Name: "NoDataExecutionPrevention"
+win_baseline_8273_state_Data: "0"
+win_baseline_8273_state_Type: dword

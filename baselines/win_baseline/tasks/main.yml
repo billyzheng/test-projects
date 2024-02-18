@@ -1679,3 +1679,12 @@
     type: "{{ win_baseline_8271_state_Type }}"
   when:
     win_baseline_8271_state_Manage
+
+- name: "win_baseline_8273_state | Ensure 'Turn off Data Execution Prevention for Explorer' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_8273_state_Path }}"
+    name: "{{ win_baseline_8273_state_Name }}"
+    data: "{{ win_baseline_8273_state_Data }}"
+    type: "{{ win_baseline_8273_state_Type }}"
+  when:
+    win_baseline_8273_state_Manage
