@@ -1815,11 +1815,18 @@
     win_baseline_9015_state_Manage
 
 # TODO: ensure the value
-- name: "win_baseline_9025_state | Ensure 'Apply UAC restrictions to local accounts on network logons' is set to 'Enabled'"
+- name: "win_baseline_9024_state | Ensure 'Apply UAC restrictions to local accounts on network logons' is set to 'Enabled'"
   win_regedit:
-    path: "{{ win_baseline_9025_state_Path }}"
-    name: "{{ win_baseline_9025_state_Name }}"
-    data: "{{ win_baseline_9025_state_Data }}"
-    type: "{{ win_baseline_9025_state_Type }}"
+    path: "{{ win_baseline_9024_state_Path }}"
+    name: "{{ win_baseline_9024_state_Name }}"
+    data: "{{ win_baseline_9024_state_Data }}"
+    type: "{{ win_baseline_9024_state_Type }}"
   when:
-    win_baseline_9025_state_Manage
+    win_baseline_9024_state_Manage
+
+- name: "win_baseline_9025_state | Ensure 'WDigest Authentication' is set to 'Disabled'"
+  win_regedit:
+    path: HKLM:\System\Currentcontrolset\Control\Securityproviders\Wdigest
+    name: "UseLogonCredential"
+    data: "0"
+    type: dword
