@@ -1664,93 +1664,93 @@
 #   when:
 #     win_baseline_8253_state_Manage
 
-- name: "win_baseline_8255_state | Ensure 'Audit Removable Storage' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_8255_state_Subcategory }}"
-    audit_type: "{{ win_baseline_8255_state_AuditType }}"
-  when:
-    win_baseline_8255_state_Manage
+# - name: "win_baseline_8255_state | Ensure 'Audit Removable Storage' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_8255_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_8255_state_AuditType }}"
+#   when:
+#     win_baseline_8255_state_Manage
 
-- name: "win_baseline_8271_state | Ensure 'Do not adjust default option to 'Install Updates and Shut Down' in Shut Down Windows dialog box' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_8271_state_Path }}"
-    name: "{{ win_baseline_8271_state_Name }}"
-    data: "{{ win_baseline_8271_state_Data }}"
-    type: "{{ win_baseline_8271_state_Type }}"
-  when:
-    win_baseline_8271_state_Manage
+# - name: "win_baseline_8271_state | Ensure 'Do not adjust default option to 'Install Updates and Shut Down' in Shut Down Windows dialog box' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_8271_state_Path }}"
+#     name: "{{ win_baseline_8271_state_Name }}"
+#     data: "{{ win_baseline_8271_state_Data }}"
+#     type: "{{ win_baseline_8271_state_Type }}"
+#   when:
+#     win_baseline_8271_state_Manage
 
-- name: "win_baseline_8273_state | Ensure 'Turn off Data Execution Prevention for Explorer' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_8273_state_Path }}"
-    name: "{{ win_baseline_8273_state_Name }}"
-    data: "{{ win_baseline_8273_state_Data }}"
-    type: "{{ win_baseline_8273_state_Type }}"
-  when:
-    win_baseline_8273_state_Manage
+# - name: "win_baseline_8273_state | Ensure 'Turn off Data Execution Prevention for Explorer' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_8273_state_Path }}"
+#     name: "{{ win_baseline_8273_state_Name }}"
+#     data: "{{ win_baseline_8273_state_Data }}"
+#     type: "{{ win_baseline_8273_state_Type }}"
+#   when:
+#     win_baseline_8273_state_Manage
 
-- name: "win_baseline_8274_state | Ensure 'Configure Windows Defender SmartScreen' is set to 'Enabled - Warn and prevent bypass' - EnableSmartScreen"
-  win_regedit:
-    path: "{{ win_baseline_8274_state_Path }}"
-    name: "{{ win_baseline_8274_state_Name }}"
-    data: "{{ win_baseline_8274_state_Data }}"
-    type: "{{ win_baseline_8274_state_Type }}"
-  when:
-    win_baseline_8274_state_Manage
+# - name: "win_baseline_8274_state | Ensure 'Configure Windows Defender SmartScreen' is set to 'Enabled - Warn and prevent bypass' - EnableSmartScreen"
+#   win_regedit:
+#     path: "{{ win_baseline_8274_state_Path }}"
+#     name: "{{ win_baseline_8274_state_Name }}"
+#     data: "{{ win_baseline_8274_state_Data }}"
+#     type: "{{ win_baseline_8274_state_Type }}"
+#   when:
+#     win_baseline_8274_state_Manage
 
-- name: "win_baseline_8279_state | Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'"
-  win_security_policy:
-    section: "{{ win_baseline_8279_state_Section }}"
-    key: "{{ win_baseline_8279_state_Key }}"
-    value: "{{ win_baseline_8279_state_Value }}"
-  when:
-    win_baseline_8279_state_Manage
+# - name: "win_baseline_8279_state | Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'"
+#   win_security_policy:
+#     section: "{{ win_baseline_8279_state_Section }}"
+#     key: "{{ win_baseline_8279_state_Key }}"
+#     value: "{{ win_baseline_8279_state_Value }}"
+#   when:
+#     win_baseline_8279_state_Manage
 
-# TODO: skip some of the states
-- name: "win_baseline_8397_state | Ensure 'Turn off access to the store' is set to Enabled"
-  win_regedit:
-    path: "{{ win_baseline_8397_state_Path }}"
-    name: "{{ win_baseline_8397_state_Name }}"
-    data: "{{ win_baseline_8397_state_Data }}"
-    type: "{{ win_baseline_8397_state_Type }}"
-  when:
-    win_baseline_8397_state_Manage
+# # TODO: skip some of the states
+# - name: "win_baseline_8397_state | Ensure 'Turn off access to the store' is set to Enabled"
+#   win_regedit:
+#     path: "{{ win_baseline_8397_state_Path }}"
+#     name: "{{ win_baseline_8397_state_Name }}"
+#     data: "{{ win_baseline_8397_state_Data }}"
+#     type: "{{ win_baseline_8397_state_Type }}"
+#   when:
+#     win_baseline_8397_state_Manage
 
-- name: "win_baseline_8399_state | Ensure 'Turn off app notifications on the lock screen' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_8399_state_Path }}"
-    name: "{{ win_baseline_8399_state_Name }}"
-    data: "{{ win_baseline_8399_state_Data }}"
-    type: "{{ win_baseline_8399_state_Type }}"
-  when:
-    win_baseline_8399_state_Manage
+# - name: "win_baseline_8399_state | Ensure 'Turn off app notifications on the lock screen' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_8399_state_Path }}"
+#     name: "{{ win_baseline_8399_state_Name }}"
+#     data: "{{ win_baseline_8399_state_Data }}"
+#     type: "{{ win_baseline_8399_state_Type }}"
+#   when:
+#     win_baseline_8399_state_Manage
 
-- name: "win_baseline_8416_state | Ensure 'Turn off the Store application' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_8416_state_Path }}"
-    name: "{{ win_baseline_8416_state_Name }}"
-    data: "{{ win_baseline_8416_state_Data }}"
-    type: "{{ win_baseline_8416_state_Type }}"
-  when:
-    win_baseline_8416_state_Manage
+# - name: "win_baseline_8416_state | Ensure 'Turn off the Store application' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_8416_state_Path }}"
+#     name: "{{ win_baseline_8416_state_Name }}"
+#     data: "{{ win_baseline_8416_state_Data }}"
+#     type: "{{ win_baseline_8416_state_Type }}"
+#   when:
+#     win_baseline_8416_state_Manage
 
-- name: "win_baseline_8419_state | Ensure 'Ture off the Automatic Download of updates' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_8419_state_Path }}"
-    name: "{{ win_baseline_8419_state_Name }}"
-    data: "{{ win_baseline_8419_state_Data }}"
-    type: "{{ win_baseline_8419_state_Type }}"
-  when:
-    win_baseline_8419_state_Manage
+# - name: "win_baseline_8419_state | Ensure 'Ture off the Automatic Download of updates' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_8419_state_Path }}"
+#     name: "{{ win_baseline_8419_state_Name }}"
+#     data: "{{ win_baseline_8419_state_Data }}"
+#     type: "{{ win_baseline_8419_state_Type }}"
+#   when:
+#     win_baseline_8419_state_Manage
 
-- name: "win_baseline_8420_state | Ensure 'Turn off location' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_8420_state_Path }}"
-    name: "{{ win_baseline_8420_state_Name }}"
-    data: "{{ win_baseline_8420_state_Data }}"
-    type: "{{ win_baseline_8420_state_Type }}"
-  when:
-    win_baseline_8420_state_Manage
+# - name: "win_baseline_8420_state | Ensure 'Turn off location' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_8420_state_Path }}"
+#     name: "{{ win_baseline_8420_state_Name }}"
+#     data: "{{ win_baseline_8420_state_Data }}"
+#     type: "{{ win_baseline_8420_state_Type }}"
+#   when:
+#     win_baseline_8420_state_Manage
 
 - name: "win_baseline_8425_state | Ensure 'Do not display the password reveal button' is set to 'Enabled'"
   win_regedit:
@@ -1787,3 +1787,11 @@
     type: "{{ win_baseline_9009_state_Type }}"
   when:
     win_baseline_9009_state_Manage
+
+# TODO: the path is not mentioned in the table.
+- name: "win_baseline_9013_state | Ensure 'Setup - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+  win_regedit:
+    path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\Setup
+    name: "Retention"
+    data: "0"
+    type: string
