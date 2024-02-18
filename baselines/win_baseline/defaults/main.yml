@@ -1207,3 +1207,16 @@ win_baseline_8251_state_Name: "DisableRunAs"
 win_baseline_8251_state_Data: "1"
 win_baseline_8251_state_Type: dword
 
+# win_baseline_8252_state | Ensure 'Allow unencrypted traffic (WinRM service)' is set to 'Disabled'
+win_baseline_8252_state_Manage: True
+win_baseline_8252_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WinRM\Service'
+win_baseline_8252_state_Name: "AllowUnencryptedTraffic"
+win_baseline_8252_state_Data: "0"
+win_baseline_8252_state_Type: dword
+
+# win_baseline_8253_state | Ensure 'Allow unencrypted traffic (WinRM client)' is set to 'Disabled'
+win_baseline_8253_state_Manage: True
+win_baseline_8253_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WinRM\Client'
+win_baseline_8253_state_Name: "AllowUnencryptedTraffic"
+win_baseline_8253_state_Data: "0"
+win_baseline_8253_state_Type: dword

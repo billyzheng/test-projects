@@ -1645,3 +1645,21 @@
     type: "{{ win_baseline_8251_state_Type }}"
   when:
     win_baseline_8251_state_Manage
+
+- name: "win_baseline_8252_state | Ensure 'Allow unencrypted traffic (WinRM service)' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_8252_state_Path }}"
+    name: "{{ win_baseline_8252_state_Name }}"
+    data: "{{ win_baseline_8252_state_Data }}"
+    type: "{{ win_baseline_8252_state_Type }}"
+  when:
+    win_baseline_8252_state_Manage
+
+- name: "win_baseline_8253_state | Ensure 'Allow unencrypted traffic (WinRM client)' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_8253_state_Path }}"
+    name: "{{ win_baseline_8253_state_Name }}"
+    data: "{{ win_baseline_8253_state_Data }}"
+    type: "{{ win_baseline_8253_state_Type }}"
+  when:
+    win_baseline_8253_state_Manage
