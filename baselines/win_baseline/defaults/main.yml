@@ -1266,3 +1266,11 @@ win_baseline_8399_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\System'
 win_baseline_8399_state_Name: "DisableLockScreenAppNotifications"
 win_baseline_8399_state_Data: "1"
 win_baseline_8399_state_Type: dword
+
+# win_baseline_8416_state | Ensure 'Turn off the Store application" is set to 'Enabled'
+win_baseline_8416_state_Manage: True
+win_baseline_8416_state_Path: 'HKLM:\Software\Policies\Microsoft\WindowsStore'
+win_baseline_8416_state_Name: "RemoveWindowsStore"
+win_baseline_8416_state_Data: "1"
+win_baseline_8416_state_Type: dword
+
