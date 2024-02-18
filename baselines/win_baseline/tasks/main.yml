@@ -1705,3 +1705,13 @@
     value: "{{ win_baseline_8279_state_Value }}"
   when:
     win_baseline_8279_state_Manage
+
+# TODO: skip some of the states
+- name: "win_baseline_8397_state | Ensure 'Turn off access to the store' is set to Enabled"
+  win_regedit:
+    path: "{{ win_baseline_8397_state_Path }}"
+    name: "{{ win_baseline_8397_state_Name }}"
+    data: "{{ win_baseline_8397_state_Data }}"
+    type: "{{ win_baseline_8397_state_Type }}"
+  when:
+    win_baseline_8397_state_Manage
