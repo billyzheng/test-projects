@@ -1097,7 +1097,7 @@ win_baseline_5267_state_Type: dword
 
 # win_baseline_5996_state | Ensure 'Windows SNMP community strings' is set to 'Not defined'
 win_baseline_5996_state_Manage: True
-win_baseline_5996_state_Path: 'HKLM:\Software\Policies\Microsoft\SNMP\Parameters'
+win_baseline_5996_state_Path: 'HKLM:\System\CurrentControlSet\Services\SNMP\Parameters'
 win_baseline_5996_state_Name: "ValidCommunities"
 win_baseline_5996_state_Data: ""
 win_baseline_5996_state_Type: string

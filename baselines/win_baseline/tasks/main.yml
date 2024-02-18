@@ -1509,3 +1509,4 @@
     type: "{{ win_baseline_5996_state_Type }}"
   when:
     win_baseline_5996_state_Manage
+
