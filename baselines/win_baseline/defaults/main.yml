@@ -1239,3 +1239,10 @@ win_baseline_8273_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Explore
 win_baseline_8273_state_Name: "NoDataExecutionPrevention"
 win_baseline_8273_state_Data: "0"
 win_baseline_8273_state_Type: dword
+
+# win_baseline_8274_state | Ensure 'Configure Windows Defender SmartScreen' is set to 'Enabled - Warn and prevent bypass' - EnableSmartScreen
+win_baseline_8274_state_Manage: True
+win_baseline_8274_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\System'
+win_baseline_8274_state_Name: "EnableSmartScreen"
+win_baseline_8274_state_Data: "1"
+win_baseline_8274_state_Type: dword
