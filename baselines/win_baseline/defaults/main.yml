@@ -1414,3 +1414,19 @@ win_baseline_10011_state_Name: "PasswordAgeDays"
 win_baseline_10011_state_Data: "60"
 win_baseline_10011_state_Type: dword
 
+# win_baseline_10012_state | Ensure 'LAPS AdmPwd GPO Extension / CSE is installed'"
+# todo
+
+# win_baseline_10015_state | Ensure 'Do not allow password expiration time longer than required by policy' is set to 'Enabled'
+win_baseline_10015_state_Manage: True
+win_baseline_10015_state_Path: 'HKLM:\Software\Policies\Microsoft Services\AdmPwd'
+win_baseline_10015_state_Name: "PasswordExpirationProtection"
+win_baseline_10015_state_Data: "1"
+win_baseline_10015_state_Type: dword
+
+# win_baseline_10016_state | Ensure 'Turn off KMS Client Online AVS Validation' is set to 'Disabled'
+win_baseline_10016_state_Manage: True
+win_baseline_10016_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows NT\CurrentVersion\Software Protection Platform'
+win_baseline_10016_state_Name: "NoGenTicket"
+win_baseline_10016_state_Data: "`"
+win_baseline_10016_state_Type: dword
