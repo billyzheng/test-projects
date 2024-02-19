@@ -1514,3 +1514,10 @@ win_baseline_10098_state_Path: 'HKLM:\Software\PoliciesManager\current\device\pr
 win_baseline_10098_state_Name: "AllowInputPersonalization"
 win_baseline_10098_state_Data: "0"
 win_baseline_10098_state_Type: dword
+
+# win_baseline_10099_state | Ensure 'Support device authentication using certificate' is set to 'Enabled'- Enabled
+win_baseline_10099_state_Manage: True
+win_baseline_10099_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System\kerberos\parameters'
+win_baseline_10099_state_Name: "DevicePKInitEnabled"
+win_baseline_10099_state_Data: "1"
+win_baseline_10099_state_Type: dword

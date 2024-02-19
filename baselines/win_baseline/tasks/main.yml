@@ -2042,3 +2042,12 @@
     type: "{{ win_baseline_10098_state_Type }}"
   when:
     win_baseline_10098_state_Manage
+
+- name: "win_baseline_10099_state | Ensure 'Support device authentication using certificate' is set to 'Enabled'- Enabled"
+  win_regedit:
+    path: "{{ win_baseline_10099_state_Path }}"
+    name: "{{ win_baseline_10099_state_Name }}"
+    data: "{{ win_baseline_10099_state_Data }}"
+    type: "{{ win_baseline_10099_state_Type }}"
+  when:
+    win_baseline_10099_state_Manage
