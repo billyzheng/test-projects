@@ -2342,4 +2342,11 @@
   when:
     win_baseline_10472_state_Manage
 
-    
+- name: "win_baseline_10473_state | Ensure 'Turn on Virtualization Based Security (Credential Guard Configuration)' is set to 'Enabled with UEFI lock'"
+  win_regedit:
+    path: "{{ win_baseline_10473_state_Path }}"
+    name: "{{ win_baseline_10473_state_Name }}"
+    data: "{{ win_baseline_10473_state_Data }}"
+    type: "{{ win_baseline_10473_state_Type }}"
+  when:
+    win_baseline_10473_state_Manage

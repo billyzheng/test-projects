@@ -1736,3 +1736,17 @@ win_baseline_10385_state_Name: "EnabledV9"
 win_baseline_10385_state_Data: "1"
 win_baseline_10385_state_Type: dword
 
+# ! two options are mentioned in the table. Choose the 'Enabled' one.
+# win_baseline_10472_state | Ensure 'Turn on Virtulization Based Security' is set to 'Enabled'
+win_baseline_10472_state_Manage: True
+win_baseline_10472_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\DeviceGuard'
+win_baseline_10472_state_Name: "EnableVirtualizationBasedSecurity"
+win_baseline_10472_state_Data: "1"
+win_baseline_10472_state_Type: dword
+
+# win_baseline_10473_state | Ensure 'Turn on Virtualization Based Security (Credential Guard Configuration)' is set to 'Enabled with UEFI lock'
+win_baseline_10473_state_Manage: True
+win_baseline_10473_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\DeviceGuard'
+win_baseline_10473_state_Name: "LsaCfgFlags"
+win_baseline_10473_state_Data: "1"
+win_baseline_10473_state_Type: dword
