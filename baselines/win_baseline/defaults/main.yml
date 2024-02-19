@@ -1815,4 +1815,17 @@ win_baseline_10970_state_Name: "EnableScriptBlockLogging"
 win_baseline_10970_state_Data: "1"
 win_baseline_10970_state_Type: dword
 
+# win_baseline_11029_state | Ensure 'Configuration of wireless settings using Windows Connect Now (DisableInBand802DOT11Registrar)' is set to 'Disabled'
+win_baseline_11029_state_Manage: True
+win_baseline_11029_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WCN\Registrars'
+win_baseline_11029_state_Name: "DisableInBand802DOT11Registrar"
+win_baseline_11029_state_Data: "0"
+win_baseline_11029_state_Type: dword
+
+# win_baseline_11030_state | Ensure 'Configuration of wireless settings using Windows Connect Now (DisableUPnPRegistrar)' is set to 'Disabled'
+win_baseline_11030_state_Manage: True
+win_baseline_11030_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WCN\Registrars'
+win_baseline_11030_state_Name: "DisableUPnPRegistrar"
+win_baseline_11030_state_Data: "0"
+win_baseline_11030_state_Type: dword
 
