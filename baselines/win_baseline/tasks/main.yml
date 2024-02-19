@@ -2112,3 +2112,12 @@
     type: "{{ win_baseline_10107_state_Type }}"
   when:
     win_baseline_10107_state_Manage
+
+- name: "win_baseline_10108_state | Ensure 'Allow search and Cortana to use location' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_10108_state_Path }}"
+    name: "{{ win_baseline_10108_state_Name }}"
+    data: "{{ win_baseline_10108_state_Data }}"
+    type: "{{ win_baseline_10108_state_Type }}"
+  when:
+    win_baseline_10108_state_Manage
