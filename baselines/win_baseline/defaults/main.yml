@@ -1652,3 +1652,9 @@ win_baseline_10370_state_Name: "AllowInsecureGuestAuth"
 win_baseline_10370_state_Data: "0"
 win_baseline_10370_state_Type: dword
   
+# win_baseline_10371_state | Ensure 'Let Windows apps access contacts' is set to 'Force Deny'
+win_baseline_10371_state_Manage: True
+win_baseline_10371_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPrivacy'
+win_baseline_10371_state_Name: "LetAppsAccessContacts"
+win_baseline_10371_state_Data: "2"
+win_baseline_10371_state_Type: dword

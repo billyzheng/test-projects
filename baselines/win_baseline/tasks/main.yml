@@ -2224,3 +2224,12 @@
     name: "AllowInsecureGuestAuth"
     data: "0"
     type: dword
+
+- name: "win_baseline_10371_state | Ensure 'Let Windows apps access contacts' is set to 'Force Deny'"
+  win_regedit:
+    path: "{{ win_baseline_10371_state_Path }}"
+    name: "{{ win_baseline_10371_state_Name }}"
+    data: "{{ win_baseline_10371_state_Data }}"
+    type: "{{ win_baseline_10371_state_Type }}"
+  when:
+    win_baseline_10371_state_Manage
