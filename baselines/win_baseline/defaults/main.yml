@@ -1644,3 +1644,11 @@ win_baseline_10369_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPri
 win_baseline_10369_state_Name: "LetAppsAccessCamera"
 win_baseline_10369_state_Data: "2"
 win_baseline_10369_state_Type: dword
+
+# win_baseline_10370_state | Ensure 'Enable insecure guest logons' is set to 'Disabled'
+win_baseline_10370_state_Manage: True
+win_baseline_10370_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\LanmanWorkstation'
+win_baseline_10370_state_Name: "AllowInsecureGuestAuth"
+win_baseline_10370_state_Data: "0"
+win_baseline_10370_state_Type: dword
+  
