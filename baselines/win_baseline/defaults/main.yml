@@ -1534,4 +1534,4 @@ win_baseline_10101_state_Manage: True
 win_baseline_10101_state_Path: 'HKLM:\Software\Policies\Microsoft\WindowsNT\MitigationOptions'
 win_baseline_10101_state_Name: "MitigationOptions_FontBocking"
 win_baseline_10101_state_Data: "1000000000000"
-win_baseline_10101_state_Type: dword
+win_baseline_10101_state_Type: string
