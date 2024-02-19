@@ -2144,3 +2144,22 @@
     audit_type: "{{ win_baseline_10152_state_AuditType }}"
   when:
     win_baseline_10152_state_Manage
+
+- name: "win_baseline_10354_state | Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_10354_state_Path }}"
+    name: "{{ win_baseline_10354_state_Name }}"
+    data: "{{ win_baseline_10354_state_Data }}"
+    type: "{{ win_baseline_10354_state_Type }}"
+  when:
+    win_baseline_10354_state_Manage
+
+- name: "win_baseline_10362_state | Ensure 'Microsoft Support Diagnostic Tool - Turn on MSDT interactive communication with support provider' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_10362_state_Path }}"
+    name: "{{ win_baseline_10362_state_Name }}"
+    data: "{{ win_baseline_10362_state_Data }}"
+    type: "{{ win_baseline_10362_state_Type }}"
+  when:
+    win_baseline_10362_state_Manage
+

@@ -1596,4 +1596,16 @@ win_baseline_10152_state_Manage: True
 win_baseline_10152_state_Subcategory: "Group Membership"
 win_baseline_10152_state_AuditType: "success"
 
+# win_baseline_10354_state | Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'
+win_baseline_10354_state_Manage: True
+win_baseline_10354_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\CloudContent'
+win_baseline_10354_state_Name: "DisableWindowsConsumerFeatures"
+win_baseline_10354_state_Data: "1"
+win_baseline_10354_state_Type: dword
 
+win_baseline_10362_state | Ensure 'Microsoft Support Diagnostic Tool - Turn on MSDT interactive communication with support provider' is set to 'Disabled'
+win_baseline_10362_state_Manage: True
+win_baseline_10362_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\ScriptedDiagnosticsProvider\Policy'
+win_baseline_10362_state_Name: "DisableQueryRemoteServer"
+win_baseline_10362_state_Data: "0"
+win_baseline_10362_state_Type: dword
