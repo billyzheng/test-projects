@@ -1899,3 +1899,10 @@ win_baseline_11202_state_Name: "DeferFeatureUpdates"
 win_baseline_11202_state_Data: "1"
 win_baseline_11202_state_Type: dword
 
+# win_baseline_11204_state | Ensure 'Enable Font Providers' is set to 'Disabled'
+win_baseline_11204_state_Manage: True
+win_baseline_11204_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\System'
+win_baseline_11204_state_Name: "EnableFontProviders"
+win_baseline_11204_state_Data: "0"
+win_baseline_11204_state_Type: dword
+

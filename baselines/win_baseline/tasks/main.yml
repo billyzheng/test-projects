@@ -2538,3 +2538,13 @@
   when:
     win_baseline_11202_state_Manage
 
+- name: "win_baseline_11204_state | Ensure 'Enable Font Providers' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_11204_state_Path }}"
+    name: "{{ win_baseline_11204_state_Name }}"
+    data: "{{ win_baseline_11204_state_Data }}"
+    type: "{{ win_baseline_11204_state_Type }}"
+  when:
+    win_baseline_11204_state_Manage
+
+
