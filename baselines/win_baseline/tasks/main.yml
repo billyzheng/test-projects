@@ -2085,3 +2085,13 @@
     type: "{{ win_baseline_10103_state_Type }}"
   when:
     win_baseline_10103_state_Manage
+
+- name: "win_baseline_10104_state | Ensure 'Allow Telemetry' is set to 'Off - 0 - Security [Enterprise Only]'"
+  win_regedit:
+    path: "{{ win_baseline_10104_state_Path }}"
+    name: "{{ win_baseline_10104_state_Name }}"
+    data: "{{ win_baseline_10104_state_Data }}"
+    type: "{{ win_baseline_10104_state_Type }}"
+  when:
+    win_baseline_10104_state_Manage
+

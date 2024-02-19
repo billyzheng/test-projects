@@ -1551,3 +1551,9 @@ win_baseline_10103_state_Name: "BlockHostedAppAccessWinRT"
 win_baseline_10103_state_Data: "1"
 win_baseline_10103_state_Type: dword
 
+# win_baseline_10104_state | Ensure 'Allow Telemetry' is set to 'Off - 0 - Security [Enterprise Only]'
+win_baseline_10104_state_Manage: True
+win_baseline_10104_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\DataCollection'
+win_baseline_10104_state_Name: "AllowTelemetry"
+win_baseline_10104_state_Data: "0"
+win_baseline_10104_state_Type: dword
