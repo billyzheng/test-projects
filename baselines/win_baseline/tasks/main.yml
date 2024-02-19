@@ -2510,3 +2510,31 @@
     type: "{{ win_baseline_11196_state_Type }}"
   when:
     win_baseline_11196_state_Manage
+
+- name: "win_baseline_11197_state | Ensure 'Allow Cortana above lock screen' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_11197_state_Path }}"
+    name: "{{ win_baseline_11197_state_Name }}"
+    data: "{{ win_baseline_11197_state_Data }}"
+    type: "{{ win_baseline_11197_state_Type }}"
+  when:
+    win_baseline_11197_state_Manage 
+
+- name: "win_baseline_11199_state | Ensure 'Select when Quality Updates are received' is set to 'Enabled - 0 days' - DeferQualityUpdates"
+  win_regedit:
+    path: "{{ win_baseline_11199_state_Path }}"
+    name: "{{ win_baseline_11199_state_Name }}"
+    data: "{{ win_baseline_11199_state_Data }}"
+    type: "{{ win_baseline_11199_state_Type }}"
+  when:
+    win_baseline_11199_state_Manage
+
+- name: "win_baseline_11202_state | Ensure 'Select when Feature Updates are received - DeferFeatureUpdates' is set to 'Enabled"
+  win_regedit:
+    path: "{{ win_baseline_11202_state_Path }}"
+    name: "{{ win_baseline_11202_state_Name }}"
+    data: "{{ win_baseline_11202_state_Data }}"
+    type: "{{ win_baseline_11202_state_Type }}"
+  when:
+    win_baseline_11202_state_Manage
+
