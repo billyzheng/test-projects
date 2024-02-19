@@ -1708,10 +1708,17 @@ win_baseline_10379_state_Name: "PreventOverride"
 win_baseline_10379_state_Data: "1"
 win_baseline_10379_state_Type: dword
 
-# win_baseline_20390_state | Ensure 'Donly allow SmartScreen Filter warning overrides for unverified files' is set to 'Enabled'
-win_baseline_20390_state_Manage: True
-win_baseline_20390_state_Path: 'HKLM:\Software\Policies\Microsoft\MicrosoftEdge\PhishingFilter'
-win_baseline_20390_state_Name: "PreventOverrideAppRepUnknown"
-win_baseline_20390_state_Data: "1"
-win_baseline_20390_state_Type: dword
+# win_baseline_20380_state | Ensure 'Donly allow SmartScreen Filter warning overrides for unverified files' is set to 'Enabled'
+win_baseline_20380_state_Manage: True
+win_baseline_20380_state_Path: 'HKLM:\Software\Policies\Microsoft\MicrosoftEdge\PhishingFilter'
+win_baseline_20380_state_Name: "PreventOverrideAppRepUnknown"
+win_baseline_20380_state_Data: "1"
+win_baseline_20380_state_Type: dword
+
+# win_baseline_10382_state | Ensure 'Turn off inPrivate browsing' is set to 'Enabled'
+win_baseline_10382_state_Manage: True
+win_baseline_10382_state_Path: 'HKLM:\Software\Policies\Microsoft\MicrosoftEdge\Main'
+win_baseline_10382_state_Name: "AllowInPrivate"
+win_baseline_10382_state_Data: "1"
+win_baseline_10382_state_Type: dword
 

@@ -2138,30 +2138,30 @@
 #   when:
 #     win_baseline_10151_state_Manage
 
-- name: "win_baseline_10152_state | Ensure 'Audit Group Membership' is set to 'Success'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_10152_state_Subcategory }}"
-    audit_type: "{{ win_baseline_10152_state_AuditType }}"
-  when:
-    win_baseline_10152_state_Manage
+# - name: "win_baseline_10152_state | Ensure 'Audit Group Membership' is set to 'Success'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_10152_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_10152_state_AuditType }}"
+#   when:
+#     win_baseline_10152_state_Manage
 
-- name: "win_baseline_10354_state | Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_10354_state_Path }}"
-    name: "{{ win_baseline_10354_state_Name }}"
-    data: "{{ win_baseline_10354_state_Data }}"
-    type: "{{ win_baseline_10354_state_Type }}"
-  when:
-    win_baseline_10354_state_Manage
+# - name: "win_baseline_10354_state | Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10354_state_Path }}"
+#     name: "{{ win_baseline_10354_state_Name }}"
+#     data: "{{ win_baseline_10354_state_Data }}"
+#     type: "{{ win_baseline_10354_state_Type }}"
+#   when:
+#     win_baseline_10354_state_Manage
 
-- name: "win_baseline_10362_state | Ensure 'Microsoft Support Diagnostic Tool - Turn on MSDT interactive communication with support provider' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_10362_state_Path }}"
-    name: "{{ win_baseline_10362_state_Name }}"
-    data: "{{ win_baseline_10362_state_Data }}"
-    type: "{{ win_baseline_10362_state_Type }}"
-  when:
-    win_baseline_10362_state_Manage
+# - name: "win_baseline_10362_state | Ensure 'Microsoft Support Diagnostic Tool - Turn on MSDT interactive communication with support provider' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10362_state_Path }}"
+#     name: "{{ win_baseline_10362_state_Name }}"
+#     data: "{{ win_baseline_10362_state_Data }}"
+#     type: "{{ win_baseline_10362_state_Type }}"
+#   when:
+#     win_baseline_10362_state_Manage
 
 # todo: the value is not defined in the table.
 # - name: "win_baseline_10364_state | Ensure 'Let Windows apps access email' is set to 'Disabled'"
@@ -2173,135 +2173,145 @@
 #   when:
 #     win_baseline_10364_state_Manage
 
-- name: "win_baseline_10365_state | Ensure 'Let Windows apps access messaging' is set to 'Force Deny'"
-  win_regedit:
-    path: "{{ win_baseline_10365_state_Path }}"
-    name: "{{ win_baseline_10365_state_Name }}"
-    data: "{{ win_baseline_10365_state_Data }}"
-    type: "{{ win_baseline_10365_state_Type }}"
-  when:
-    win_baseline_10365_state_Manage
+# - name: "win_baseline_10365_state | Ensure 'Let Windows apps access messaging' is set to 'Force Deny'"
+#   win_regedit:
+#     path: "{{ win_baseline_10365_state_Path }}"
+#     name: "{{ win_baseline_10365_state_Name }}"
+#     data: "{{ win_baseline_10365_state_Data }}"
+#     type: "{{ win_baseline_10365_state_Type }}"
+#   when:
+#     win_baseline_10365_state_Manage
 
-- name: "win_baseline_10366_state | Ensure 'Let Windows apps access information' is set to 'Force Deny'"
-  win_regedit:
-    path: "{{ win_baseline_10366_state_Path }}"
-    name: "{{ win_baseline_10366_state_Name }}"
-    data: "{{ win_baseline_10366_state_Data }}"
-    type: "{{ win_baseline_10366_state_Type }}"
-  when:
-    win_baseline_10366_state_Manage
+# - name: "win_baseline_10366_state | Ensure 'Let Windows apps access information' is set to 'Force Deny'"
+#   win_regedit:
+#     path: "{{ win_baseline_10366_state_Path }}"
+#     name: "{{ win_baseline_10366_state_Name }}"
+#     data: "{{ win_baseline_10366_state_Data }}"
+#     type: "{{ win_baseline_10366_state_Type }}"
+#   when:
+#     win_baseline_10366_state_Manage
 
-- name: "win_baseline_10367_state | Ensure 'Let Windows apps access the radio' is set to 'Force Deny'"
-  win_regedit:
-    path: "{{ win_baseline_10367_state_Path }}"
-    name: "{{ win_baseline_10367_state_Name }}"
-    data: "{{ win_baseline_10367_state_Data }}"
-    type: "{{ win_baseline_10367_state_Type }}"
-  when:
-    win_baseline_10367_state_Manage
+# - name: "win_baseline_10367_state | Ensure 'Let Windows apps access the radio' is set to 'Force Deny'"
+#   win_regedit:
+#     path: "{{ win_baseline_10367_state_Path }}"
+#     name: "{{ win_baseline_10367_state_Name }}"
+#     data: "{{ win_baseline_10367_state_Data }}"
+#     type: "{{ win_baseline_10367_state_Type }}"
+#   when:
+#     win_baseline_10367_state_Manage
 
-- name: "win_baseline_10368_state | Ensure 'Let Windows apps access the calendar' is set to 'Force Deny'"
-  win_regedit:
-    path: "{{ win_baseline_10368_state_Path }}"
-    name: "{{ win_baseline_10368_state_Name }}"
-    data: "{{ win_baseline_10368_state_Data }}"
-    type: "{{ win_baseline_10368_state_Type }}"
-  when:
-    win_baseline_10368_state_Manage
+# - name: "win_baseline_10368_state | Ensure 'Let Windows apps access the calendar' is set to 'Force Deny'"
+#   win_regedit:
+#     path: "{{ win_baseline_10368_state_Path }}"
+#     name: "{{ win_baseline_10368_state_Name }}"
+#     data: "{{ win_baseline_10368_state_Data }}"
+#     type: "{{ win_baseline_10368_state_Type }}"
+#   when:
+#     win_baseline_10368_state_Manage
 
-- name: "win_baseline_10369_state | Ensure 'Let Windows apps access the camera' is set to 'Force Deny'"
-  win_regedit:
-    path: "{{ win_baseline_10369_state_Path }}"
-    name: "{{ win_baseline_10369_state_Name }}"
-    data: "{{ win_baseline_10369_state_Data }}"
-    type: "{{ win_baseline_10369_state_Type }}"
-  when:
-    win_baseline_10369_state_Manage
+# - name: "win_baseline_10369_state | Ensure 'Let Windows apps access the camera' is set to 'Force Deny'"
+#   win_regedit:
+#     path: "{{ win_baseline_10369_state_Path }}"
+#     name: "{{ win_baseline_10369_state_Name }}"
+#     data: "{{ win_baseline_10369_state_Data }}"
+#     type: "{{ win_baseline_10369_state_Type }}"
+#   when:
+#     win_baseline_10369_state_Manage
 
-- name: "win_baseline_10370_state | Ensure 'Enable insecure guest logons' is set to 'Disabled'"
-  win_regedit:
-    path: HKLM:\Software\Policies\Microsoft\Windows\Lanmanworkstation
-    name: "AllowInsecureGuestAuth"
-    data: "0"
-    type: dword
+# - name: "win_baseline_10370_state | Ensure 'Enable insecure guest logons' is set to 'Disabled'"
+#   win_regedit:
+#     path: HKLM:\Software\Policies\Microsoft\Windows\Lanmanworkstation
+#     name: "AllowInsecureGuestAuth"
+#     data: "0"
+#     type: dword
 
-- name: "win_baseline_10371_state | Ensure 'Let Windows apps access contacts' is set to 'Force Deny'"
-  win_regedit:
-    path: "{{ win_baseline_10371_state_Path }}"
-    name: "{{ win_baseline_10371_state_Name }}"
-    data: "{{ win_baseline_10371_state_Data }}"
-    type: "{{ win_baseline_10371_state_Type }}"
-  when:
-    win_baseline_10371_state_Manage
+# - name: "win_baseline_10371_state | Ensure 'Let Windows apps access contacts' is set to 'Force Deny'"
+#   win_regedit:
+#     path: "{{ win_baseline_10371_state_Path }}"
+#     name: "{{ win_baseline_10371_state_Name }}"
+#     data: "{{ win_baseline_10371_state_Data }}"
+#     type: "{{ win_baseline_10371_state_Type }}"
+#   when:
+#     win_baseline_10371_state_Manage
 
-- name: "win_baseline_10372_state | Ensure 'Let Windows apps access call history' is set to 'Force Deny'"
-  win_regedit:
-    path: "{{ win_baseline_10372_state_Path }}"
-    name: "{{ win_baseline_10372_state_Name }}"
-    data: "{{ win_baseline_10372_state_Data }}"
-    type: "{{ win_baseline_10372_state_Type }}"
-  when:
-    win_baseline_10372_state_Manage
+# - name: "win_baseline_10372_state | Ensure 'Let Windows apps access call history' is set to 'Force Deny'"
+#   win_regedit:
+#     path: "{{ win_baseline_10372_state_Path }}"
+#     name: "{{ win_baseline_10372_state_Name }}"
+#     data: "{{ win_baseline_10372_state_Data }}"
+#     type: "{{ win_baseline_10372_state_Type }}"
+#   when:
+#     win_baseline_10372_state_Manage
 
-- name: "win_baseline_10374_state | Ensure 'Let Windows apps access trusted devices' is set to 'Force Deny'"
-  win_regedit:
-    path: "{{ win_baseline_10374_state_Path }}"
-    name: "{{ win_baseline_10374_state_Name }}"
-    data: "{{ win_baseline_10374_state_Data }}"
-    type: "{{ win_baseline_10374_state_Type }}"
-  when:
-    win_baseline_10374_state_Manage
+# - name: "win_baseline_10374_state | Ensure 'Let Windows apps access trusted devices' is set to 'Force Deny'"
+#   win_regedit:
+#     path: "{{ win_baseline_10374_state_Path }}"
+#     name: "{{ win_baseline_10374_state_Name }}"
+#     data: "{{ win_baseline_10374_state_Data }}"
+#     type: "{{ win_baseline_10374_state_Type }}"
+#   when:
+#     win_baseline_10374_state_Manage
 
-- name: "win_baseline_10374_state | Ensure 'Let Windows apps access the location' is set to 'Force Deny'"
-  win_regedit:
-    path: "{{ win_baseline_10374_state_Path }}"
-    name: "{{ win_baseline_10374_state_Name }}"
-    data: "{{ win_baseline_10374_state_Data }}"
-    type: "{{ win_baseline_10374_state_Type }}"
-  when:
-    win_baseline_10374_state_Manage
+# - name: "win_baseline_10374_state | Ensure 'Let Windows apps access the location' is set to 'Force Deny'"
+#   win_regedit:
+#     path: "{{ win_baseline_10374_state_Path }}"
+#     name: "{{ win_baseline_10374_state_Name }}"
+#     data: "{{ win_baseline_10374_state_Data }}"
+#     type: "{{ win_baseline_10374_state_Type }}"
+#   when:
+#     win_baseline_10374_state_Manage
 
-- name: "win_baseline_10376_state | Ensure 'Let Windows apps access microphone' is set to 'Force Deny'"
-  win_regedit:
-    path: "{{ win_baseline_10376_state_Path }}"
-    name: "{{ win_baseline_10376_state_Name }}"
-    data: "{{ win_baseline_10376_state_Data }}"
-    type: "{{ win_baseline_10376_state_Type }}"
-  when:
-    win_baseline_10376_state_Manage
+# - name: "win_baseline_10376_state | Ensure 'Let Windows apps access microphone' is set to 'Force Deny'"
+#   win_regedit:
+#     path: "{{ win_baseline_10376_state_Path }}"
+#     name: "{{ win_baseline_10376_state_Name }}"
+#     data: "{{ win_baseline_10376_state_Data }}"
+#     type: "{{ win_baseline_10376_state_Type }}"
+#   when:
+#     win_baseline_10376_state_Manage
 
-- name: "win_baseline_10377_state | Ensure 'Use enhanced anti-spoofing when available' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_10377_state_Path }}"
-    name: "{{ win_baseline_10377_state_Name }}"
-    data: "{{ win_baseline_10377_state_Data }}"
-    type: "{{ win_baseline_10377_state_Type }}"
-  when:
-    win_baseline_10377_state_Manage
+# - name: "win_baseline_10377_state | Ensure 'Use enhanced anti-spoofing when available' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10377_state_Path }}"
+#     name: "{{ win_baseline_10377_state_Name }}"
+#     data: "{{ win_baseline_10377_state_Data }}"
+#     type: "{{ win_baseline_10377_state_Type }}"
+#   when:
+#     win_baseline_10377_state_Manage
 
-- name: "win_baseline_10378_state | Ensure 'Configure Cookies' is ser to 'Block only 3rd-party cookies'"
-  win_regedit:
-    path: "{{ win_baseline_10378_state_Path }}"
-    name: "{{ win_baseline_10378_state_Name }}"
-    data: "{{ win_baseline_10378_state_Data }}"
-    type: "{{ win_baseline_10378_state_Type }}"
-  when:
-    win_baseline_10378_state_Manage
+# - name: "win_baseline_10378_state | Ensure 'Configure Cookies' is ser to 'Block only 3rd-party cookies'"
+#   win_regedit:
+#     path: "{{ win_baseline_10378_state_Path }}"
+#     name: "{{ win_baseline_10378_state_Name }}"
+#     data: "{{ win_baseline_10378_state_Data }}"
+#     type: "{{ win_baseline_10378_state_Type }}"
+#   when:
+#     win_baseline_10378_state_Manage
 
-- name: "win_baseline_10379_state | Ensure 'Don't allow SmartScreen Filter warning overrides' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_10379_state_Path }}"
-    name: "{{ win_baseline_10379_state_Name }}"
-    data: "{{ win_baseline_10379_state_Data }}"
-    type: "{{ win_baseline_10379_state_Type }}"
-  when:
-    win_baseline_10379_state_Manage
+# - name: "win_baseline_10379_state | Ensure 'Don't allow SmartScreen Filter warning overrides' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10379_state_Path }}"
+#     name: "{{ win_baseline_10379_state_Name }}"
+#     data: "{{ win_baseline_10379_state_Data }}"
+#     type: "{{ win_baseline_10379_state_Type }}"
+#   when:
+#     win_baseline_10379_state_Manage
 
-- name: "win_baseline_20390_state | Ensure 'Donly allow SmartScreen Filter warning overrides for unverified files' is set to 'Enabled'"
+# - name: "win_baseline_20380_state | Ensure 'Donly allow SmartScreen Filter warning overrides for unverified files' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_20380_state_Path }}"
+#     name: "{{ win_baseline_20380_state_Name }}"
+#     data: "{{ win_baseline_20380_state_Data }}"
+#     type: "{{ win_baseline_20380_state_Type }}"
+#   when:
+#     win_baseline_20380_state_Manage
+
+- name: "win_baseline_10382_state | Ensure 'Turn off inPrivate browsing' is set to 'Enabled'"
   win_regedit:
-    path: "{{ win_baseline_20390_state_Path }}"
-    name: "{{ win_baseline_20390_state_Name }}"
-    data: "{{ win_baseline_20390_state_Data }}"
-    type: "{{ win_baseline_20390_state_Type }}"
+    path: "{{ win_baseline_10382_state_Path }}"
+    name: "{{ win_baseline_10382_state_Name }}"
+    data: "{{ win_baseline_10382_state_Data }}"
+    type: "{{ win_baseline_10382_state_Type }}"
   when:
-    win_baseline_20390_state_Manage
+    win_baseline_10382_state_Manage
+
