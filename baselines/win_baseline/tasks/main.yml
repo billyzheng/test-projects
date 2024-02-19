@@ -2467,4 +2467,19 @@
     type: "{{ win_baseline_11052_state_Type }}"
   when:
     win_baseline_11052_state_Manage
+    
+- name: "win_baseline_11192_state | Ensure 'Turn off multicast name resolution' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_11192_state_Path }}"
+    name: "{{ win_baseline_11192_state_Name }}"
+    data: "{{ win_baseline_11192_state_Data }}"
+    type: "{{ win_baseline_11192_state_Type }}"
+  when:
+    win_baseline_11192_state_Manage
 
+- name: "win_baseline_11193_state | Ensure 'Continue experiences on this device' is set to 'Disabled'"
+  win_regedit:
+    path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\System
+    name: "EnableCdp"
+    data: "0"
+    type: dword
