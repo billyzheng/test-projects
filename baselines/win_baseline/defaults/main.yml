@@ -1835,3 +1835,11 @@ win_baseline_11031_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WCN\Re
 win_baseline_11031_state_Name: "DisableWPDRegistrar"
 win_baseline_11031_state_Data: "0"
 win_baseline_11031_state_Type: dword
+
+# win_baseline_11052_state | Ensure 'Enable Structured Exception Handling Overwrite Protection (SEHOP)' is set to 'Enabled'
+win_baseline_11052_state_Manage: True
+win_baseline_11052_state_Path: 'HKLM:\System\CurrentControlSet\Control\Session Manager\kernel'
+win_baseline_11052_state_Name: "DisableExceptionChainValidation"
+win_baseline_11052_state_Data: "0"
+win_baseline_11052_state_Type: dword
+

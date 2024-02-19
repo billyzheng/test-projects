@@ -2459,4 +2459,12 @@
   when:
     win_baseline_11031_state_Manage
 
+- name: "win_baseline_11052_state | Ensure 'Enable Structured Exception Handling Overwrite Protection (SEHOP)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_11052_state_Path }}"
+    name: "{{ win_baseline_11052_state_Name }}"
+    data: "{{ win_baseline_11052_state_Data }}"
+    type: "{{ win_baseline_11052_state_Type }}"
+  when:
+    win_baseline_11052_state_Manage
 
