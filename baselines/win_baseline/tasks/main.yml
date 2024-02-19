@@ -2208,3 +2208,12 @@
     type: "{{ win_baseline_10368_state_Type }}"
   when:
     win_baseline_10368_state_Manage
+
+- name: "win_baseline_10369_state | Ensure 'Let Windows apps access the camera' is set to 'Force Deny'"
+  win_regedit:
+    path: "{{ win_baseline_10369_state_Path }}"
+    name: "{{ win_baseline_10369_state_Name }}"
+    data: "{{ win_baseline_10369_state_Data }}"
+    type: "{{ win_baseline_10369_state_Type }}"
+  when:
+    win_baseline_10369_state_Manage

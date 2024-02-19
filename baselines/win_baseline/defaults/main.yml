@@ -1637,3 +1637,10 @@ win_baseline_10368_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPri
 win_baseline_10368_state_Name: "LetAppsAccessCalendar"
 win_baseline_10368_state_Data: "2"
 win_baseline_10368_state_Type: dword
+
+# win_baseline_10369_state | Ensure 'Let Windows apps access the camera' is set to 'Force Deny'
+win_baseline_10369_state_Manage: True
+win_baseline_10369_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPrivacy'
+win_baseline_10369_state_Name: "LetAppsAccessCamera"
+win_baseline_10369_state_Data: "2"
+win_baseline_10369_state_Type: dword
