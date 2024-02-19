@@ -1543,3 +1543,11 @@ win_baseline_10102_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Curren
 win_baseline_10102_state_Name: "AllowSharedLocalAppData"
 win_baseline_10102_state_Data: "0"
 win_baseline_10102_state_Type: dword
+
+# win_baseline_10103_state | Ensure 'Block lauching Windows Store apps with Windows Runtime API access from hosted content' is set to 'Enabled'
+win_baseline_10103_state_Manage: True
+win_baseline_10103_state_Path: 'HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System'
+win_baseline_10103_state_Name: "BlockHostedAppAccessWinRT"
+win_baseline_10103_state_Data: "1"
+win_baseline_10103_state_Type: dword
+

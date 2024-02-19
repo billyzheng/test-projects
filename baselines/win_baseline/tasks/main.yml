@@ -2077,3 +2077,11 @@
   when:
     win_baseline_10102_state_Manage
 
+- name: "win_baseline_10103_state | Ensure 'Block lauching Windows Store apps with Windows Runtime API access from hosted content' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_10103_state_Path }}"
+    name: "{{ win_baseline_10103_state_Name }}"
+    data: "{{ win_baseline_10103_state_Data }}"
+    type: "{{ win_baseline_10103_state_Type }}"
+  when:
+    win_baseline_10103_state_Manage
