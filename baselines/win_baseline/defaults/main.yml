@@ -1658,3 +1658,24 @@ win_baseline_10371_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPri
 win_baseline_10371_state_Name: "LetAppsAccessContacts"
 win_baseline_10371_state_Data: "2"
 win_baseline_10371_state_Type: dword
+
+# win_baseline_10372_state | Ensure 'Let Windows apps access call history' is set to 'Force Deny'
+win_baseline_10372_state_Manage: True
+win_baseline_10372_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPrivacy'
+win_baseline_10372_state_Name: "LetAppsAccessCallHistory"
+win_baseline_10372_state_Data: "2" 
+win_baseline_10372_state_Type: dword
+
+# win_baseline_10373_state | Ensure 'Let Windows apps access trusted devices' is set to 'Force Deny'
+win_baseline_10373_state_Manage: True
+win_baseline_10373_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPrivacy'
+win_baseline_10373_state_Name: "LetAppsAccessTrustedDevices"
+win_baseline_10373_state_Data: "2"
+win_baseline_10373_state_Type: dword
+
+# win_baseline_10374_state | Ensure 'Let Windows apps access the location' is set to 'Force Deny'
+win_baseline_10374_state_Manage: True
+win_baseline_10374_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPrivacy'
+win_baseline_10374_state_Name: "LetAppsAccessLocation"
+win_baseline_10374_state_Data: "2"
+win_baseline_10374_state_Type: dword
