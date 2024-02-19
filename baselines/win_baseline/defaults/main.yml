@@ -1729,3 +1729,10 @@ win_baseline_10383_state_Name: "FormSuggest Passwords"
 win_baseline_10383_state_Data: "no"
 win_baseline_10383_state_Type: string
 
+# win_baseline_10385_state | Ensure 'Turn off the SmartScreen Filter' is set to 'Enabled'
+win_baseline_10385_state_Manage: True
+win_baseline_10385_state_Path: 'HKLM:\Software\Policies\Microsoft\MicrosoftEdge\PhishingFilter'
+win_baseline_10385_state_Name: "EnabledV9"
+win_baseline_10385_state_Data: "1"
+win_baseline_10385_state_Type: dword
+

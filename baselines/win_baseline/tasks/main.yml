@@ -2323,3 +2323,23 @@
     type: "{{ win_baseline_10383_state_Type }}"
   when:
     win_baseline_10383_state_Manage
+
+- name: "win_baseline_10385_state | Ensure 'Turn off the SmartScreen Filter' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_10385_state_Path }}"
+    name: "{{ win_baseline_10385_state_Name }}"
+    data: "{{ win_baseline_10385_state_Data }}"
+    type: "{{ win_baseline_10385_state_Type }}"
+  when:
+    win_baseline_10385_state_Manage
+
+- name: "win_baseline_10472_state | Ensure 'Turn on Virtulization Based Security' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_10472_state_Path }}"
+    name: "{{ win_baseline_10472_state_Name }}"
+    data: "{{ win_baseline_10472_state_Data }}"
+    type: "{{ win_baseline_10472_state_Type }}"
+  when:
+    win_baseline_10472_state_Manage
+
+    
