@@ -1693,3 +1693,10 @@ win_baseline_10377_state_Path: 'HKLM:\Software\Policies\Microsoft\Biometrics\Fac
 win_baseline_10377_state_Name: "EnhancedAntiSpoofing"
 win_baseline_10377_state_Data: "1"
 win_baseline_10377_state_Type: dword
+
+# win_baseline_10378_state | Ensure 'Configure Cookies' is ser to 'Block only 3rd-party cookies'
+win_baseline_10378_state_Manage: True
+win_baseline_10378_state_Path: 'HKLM:\Software\Microsoft\Policy Manager\current\device\browser
+win_baseline_10378_state_Name: "AllowCookies"
+win_baseline_10378_state_Data: "1"
+win_baseline_10378_state_Type: dword
