@@ -1807,3 +1807,12 @@ win_baseline_10969_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defend
 win_baseline_10969_state_Name: "DisableAntiSpyware"
 win_baseline_10969_state_Data: "0"
 win_baseline_10969_state_Type: dword
+
+# win_baseline_10970_state | Ensure 'Turn on PowerShell Script Block Logging' is set to 'Enabled'
+win_baseline_10970_state_Manage: True
+win_baseline_10970_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Powershell\Scriptblocklogging'
+win_baseline_10970_state_Name: "EnableScriptBlockLogging"
+win_baseline_10970_state_Data: "1"
+win_baseline_10970_state_Type: dword
+
+

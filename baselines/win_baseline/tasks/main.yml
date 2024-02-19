@@ -2422,3 +2422,10 @@
     type: "{{ win_baseline_10969_state_Type }}"
   when:
     win_baseline_10969_state_Manage
+
+- name: "win_baseline_10970_state | Ensure 'Turn on PowerShell Script Block Logging' is set to 'Enabled'"
+  win_regedit:
+    path: HKLM:\Software\Policies\Microsoft\Windows\Powershell\Scriptblocklogging
+    name: "EnableScriptBlockLogging"
+    data: "1"
+    type: dword
