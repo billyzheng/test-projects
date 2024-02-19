@@ -1700,3 +1700,11 @@ win_baseline_10378_state_Path: 'HKLM:\Software\Policies\Microsoft\MicrosoftEdge\
 win_baseline_10378_state_Name: "Cookies"
 win_baseline_10378_state_Data: "1"
 win_baseline_10378_state_Type: dword
+
+# win_baseline_10379_state | Ensure 'Don't allow SmartScreen Filter warning overrides' is set to 'Enabled'
+win_baseline_10379_state_Manage: True
+win_baseline_10379_state_Path: 'HKLM:\Software\Policies\Microsoft\MicrosoftEdge\PhishingFilter'
+win_baseline_10379_state_Name: "PreventOverride"
+win_baseline_10379_state_Data: "1"
+win_baseline_10379_state_Type: dword
+

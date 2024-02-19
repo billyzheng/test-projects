@@ -2287,3 +2287,12 @@
     type: "{{ win_baseline_10378_state_Type }}"
   when:
     win_baseline_10378_state_Manage
+
+- name: "win_baseline_10379_state | Ensure 'Don't allow SmartScreen Filter warning overrides' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_10379_state_Path }}"
+    name: "{{ win_baseline_10379_state_Name }}"
+    data: "{{ win_baseline_10379_state_Data }}"
+    type: "{{ win_baseline_10379_state_Type }}"
+  when:
+    win_baseline_10379_state_Manage
