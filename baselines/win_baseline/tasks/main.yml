@@ -2007,20 +2007,29 @@
 #   when:
 #     win_baseline_10086_state_Manage
 
-- name: "win_baseline_10087_state | Ensure 'Enable Windows NTP Client' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_10087_state_Path }}"
-    name: "{{ win_baseline_10087_state_Name }}"
-    data: "{{ win_baseline_10087_state_Data }}"
-    type: "{{ win_baseline_10087_state_Type }}"
-  when:
-    win_baseline_10087_state_Manage
+# - name: "win_baseline_10087_state | Ensure 'Enable Windows NTP Client' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10087_state_Path }}"
+#     name: "{{ win_baseline_10087_state_Name }}"
+#     data: "{{ win_baseline_10087_state_Data }}"
+#     type: "{{ win_baseline_10087_state_Type }}"
+#   when:
+#     win_baseline_10087_state_Manage
 
-- name: "win_baselien_10088_state | Ensure 'Enable Windows NTP Server' is set to 'Disabled'"
+# - name: "win_baselien_10088_state | Ensure 'Enable Windows NTP Server' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10088_state_Path }}"
+#     name: "{{ win_baseline_10088_state_Name }}"
+#     data: "{{ win_baseline_10088_state_Data }}"
+#     type: "{{ win_baseline_10088_state_Type }}"
+#   when:
+#     win_baseline_10088_state_Manage
+
+- name: "win_baseline_10089_state | Ensure 'Always install with elevated privileges' is set to 'Disabled'"
   win_regedit:
-    path: "{{ win_baseline_10088_state_Path }}"
-    name: "{{ win_baseline_10088_state_Name }}"
-    data: "{{ win_baseline_10088_state_Data }}"
-    type: "{{ win_baseline_10088_state_Type }}"
+    path: "{{ win_baseline_10089_state_Path }}"
+    name: "{{ win_baseline_10089_state_Name }}"
+    data: "{{ win_baseline_10089_state_Data }}"
+    type: "{{ win_baseline_10089_state_Type }}"
   when:
-    win_baseline_10088_state_Manage
+    win_baseline_10089_state_Manage

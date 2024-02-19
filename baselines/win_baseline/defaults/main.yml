@@ -1501,3 +1501,9 @@ win_baseline_10088_state_Name: "NtpServer"
 win_baseline_10088_state_Data: "0"
 win_baseline_10088_state_Type: dword
 
+# win_baseline_10089_state | Ensure 'Always install with elevated privileges' is set to 'Disabled'
+win_baseline_10089_state_Manage: True
+win_baseline_10089_state_Path: 'HKCU:\Software\Policies\Microsoft\Windows\Installer'
+win_baseline_10089_state_Name: "AlwaysInstallElevated"
+win_baseline_10089_state_Data: "0"
+win_baseline_10089_state_Type: dword
