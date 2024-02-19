@@ -2181,3 +2181,12 @@
     type: "{{ win_baseline_10365_state_Type }}"
   when:
     win_baseline_10365_state_Manage
+
+- name: "win_baseline_10366_state | Ensure 'Let Windows apps access information' is set to 'Force Deny'"
+  win_regedit:
+    path: "{{ win_baseline_10366_state_Path }}"
+    name: "{{ win_baseline_10366_state_Name }}"
+    data: "{{ win_baseline_10366_state_Data }}"
+    type: "{{ win_baseline_10366_state_Type }}"
+  when:
+    win_baseline_10366_state_Manage

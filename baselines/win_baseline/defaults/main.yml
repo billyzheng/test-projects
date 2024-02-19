@@ -1616,3 +1616,10 @@ win_baseline_10365_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPri
 win_baseline_10365_state_Name: "LetAppsAccessMessaging"
 win_baseline_10365_state_Data: "2"
 win_baseline_10365_state_Type: dword
+
+# win_baseline_10366_state | Ensure 'Let Windows apps access information' is set to 'Force Deny'
+win_baseline_10366_state_Manage: True
+win_baseline_10366_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPrivacy'
+win_baseline_10366_state_Name: "LetAppsAccessInfo"
+win_baseline_10366_state_Data: "2"
+win_baseline_10366_state_Type: dword
