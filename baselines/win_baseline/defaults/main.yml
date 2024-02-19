@@ -1521,3 +1521,10 @@ win_baseline_10099_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\
 win_baseline_10099_state_Name: "DevicePKInitEnabled"
 win_baseline_10099_state_Data: "1"
 win_baseline_10099_state_Type: dword
+
+# win_baseline_10100_state | Ensure 'Support device authentication using certificate' is set to 'Automatic' - Behavior
+win_baseline_10100_state_Manage: True
+win_baseline_10100_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System\kerberos\parameters'
+win_baseline_10100_state_Name: "DevicePKInitBehavior"
+win_baseline_10100_state_Data: "0"
+win_baseline_10100_state_Type: dword

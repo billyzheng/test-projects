@@ -2051,3 +2051,10 @@
     type: "{{ win_baseline_10099_state_Type }}"
   when:
     win_baseline_10099_state_Manage
+
+- name: "win_baseline_10100_state | Ensure 'Support device authentication using certificate' is set to 'Automatic' - Behavior"
+  win_regedit:
+    path: HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System\kerberos\parameters
+    name: "DevicePKInitBehavior"
+    data: "0"
+    type: dword
