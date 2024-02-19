@@ -2296,3 +2296,12 @@
     type: "{{ win_baseline_10379_state_Type }}"
   when:
     win_baseline_10379_state_Manage
+
+- name: "win_baseline_20390_state | Ensure 'Donly allow SmartScreen Filter warning overrides for unverified files' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_20390_state_Path }}"
+    name: "{{ win_baseline_20390_state_Name }}"
+    data: "{{ win_baseline_20390_state_Data }}"
+    type: "{{ win_baseline_20390_state_Type }}"
+  when:
+    win_baseline_20390_state_Manage
