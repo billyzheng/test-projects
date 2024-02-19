@@ -2315,3 +2315,11 @@
   when:
     win_baseline_10382_state_Manage
 
+- name: "win_baseline_10383_state | Ensure 'Configure password manager' is set to 'No'"
+  win_regedit:
+    path: "{{ win_baseline_10383_state_Path }}"
+    name: "{{ win_baseline_10383_state_Name }}"
+    data: "{{ win_baseline_10383_state_Data }}"
+    type: "{{ win_baseline_10383_state_Type }}"
+  when:
+    win_baseline_10383_state_Manage
