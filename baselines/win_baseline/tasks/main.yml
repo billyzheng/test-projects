@@ -2130,3 +2130,8 @@
     type: "{{ win_baseline_10125_state_Type }}"
   when:
     win_baseline_10125_state_Manage
+
+- name: "win_baseline_10151_state | Ensure 'Audit PNP Activity' is set to 'Success'"
+  win_audit_policy_system:
+    subcategory: Plug and Play Events
+    audit_type: success

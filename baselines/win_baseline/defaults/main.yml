@@ -1586,3 +1586,8 @@ win_baseline_10125_state_Name: "AutoConnectAllowedOEM"
 win_baseline_10125_state_Data: "0"
 win_baseline_10125_state_Type: dword
 
+# win_baseline_10151_state | Ensure 'Audit PNP Activity' is set to 'Success'
+win_baseline_10151_state_Manage: True
+win_baseline_10151_state_Subcategory: "Plug and Play Events"
+win_baseline_10151_state_AuditType: "success"
+
