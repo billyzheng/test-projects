@@ -2033,3 +2033,12 @@
     type: "{{ win_baseline_10089_state_Type }}"
   when:
     win_baseline_10089_state_Manage
+
+- name: "win_baseline_10098_state | Ensure 'Allow input personalization' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_10098_state_Path }}"
+    name: "{{ win_baseline_10098_state_Name }}"
+    data: "{{ win_baseline_10098_state_Data }}"
+    type: "{{ win_baseline_10098_state_Type }}"
+  when:
+    win_baseline_10098_state_Manage

@@ -1507,3 +1507,10 @@ win_baseline_10089_state_Path: 'HKCU:\Software\Policies\Microsoft\Windows\Instal
 win_baseline_10089_state_Name: "AlwaysInstallElevated"
 win_baseline_10089_state_Data: "0"
 win_baseline_10089_state_Type: dword
+
+# win_baseline_10098_state | Ensure 'Allow input personalization' is set to 'Disabled'
+win_baseline_10098_state_Manage: True
+win_baseline_10098_state_Path: 'HKLM:\Software\PoliciesManager\current\device\privacy'
+win_baseline_10098_state_Name: "AllowInputPersonalization"
+win_baseline_10098_state_Data: "0"
+win_baseline_10098_state_Type: dword
