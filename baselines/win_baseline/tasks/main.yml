@@ -2243,14 +2243,14 @@
   when:
     win_baseline_10372_state_Manage
 
-- name: "win_baseline_10373_state | Ensure 'Let Windows apps access trusted devices' is set to 'Force Deny'"
+- name: "win_baseline_10374_state | Ensure 'Let Windows apps access trusted devices' is set to 'Force Deny'"
   win_regedit:
-    path: "{{ win_baseline_10373_state_Path }}"
-    name: "{{ win_baseline_10373_state_Name }}"
-    data: "{{ win_baseline_10373_state_Data }}"
-    type: "{{ win_baseline_10373_state_Type }}"
+    path: "{{ win_baseline_10374_state_Path }}"
+    name: "{{ win_baseline_10374_state_Name }}"
+    data: "{{ win_baseline_10374_state_Data }}"
+    type: "{{ win_baseline_10374_state_Type }}"
   when:
-    win_baseline_10373_state_Manage
+    win_baseline_10374_state_Manage
 
 - name: "win_baseline_10374_state | Ensure 'Let Windows apps access the location' is set to 'Force Deny'"
   win_regedit:
@@ -2260,3 +2260,21 @@
     type: "{{ win_baseline_10374_state_Type }}"
   when:
     win_baseline_10374_state_Manage
+
+- name: "win_baseline_10376_state | Ensure 'Let Windows apps access microphone' is set to 'Force Deny'"
+  win_regedit:
+    path: "{{ win_baseline_10376_state_Path }}"
+    name: "{{ win_baseline_10376_state_Name }}"
+    data: "{{ win_baseline_10376_state_Data }}"
+    type: "{{ win_baseline_10376_state_Type }}"
+  when:
+    win_baseline_10376_state_Manage
+
+- name: "win_baseline_10377_state | Ensure 'Use enhanced anti-spoofing when available' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_10377_state_Path }}"
+    name: "{{ win_baseline_10377_state_Name }}"
+    data: "{{ win_baseline_10377_state_Data }}"
+    type: "{{ win_baseline_10377_state_Type }}"
+  when:
+    win_baseline_10377_state_Manage

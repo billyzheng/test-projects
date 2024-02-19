@@ -1666,16 +1666,30 @@ win_baseline_10372_state_Name: "LetAppsAccessCallHistory"
 win_baseline_10372_state_Data: "2" 
 win_baseline_10372_state_Type: dword
 
-# win_baseline_10373_state | Ensure 'Let Windows apps access trusted devices' is set to 'Force Deny'
-win_baseline_10373_state_Manage: True
-win_baseline_10373_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPrivacy'
-win_baseline_10373_state_Name: "LetAppsAccessTrustedDevices"
-win_baseline_10373_state_Data: "2"
-win_baseline_10373_state_Type: dword
-
-# win_baseline_10374_state | Ensure 'Let Windows apps access the location' is set to 'Force Deny'
+# win_baseline_10374_state | Ensure 'Let Windows apps access trusted devices' is set to 'Force Deny'
 win_baseline_10374_state_Manage: True
 win_baseline_10374_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPrivacy'
-win_baseline_10374_state_Name: "LetAppsAccessLocation"
+win_baseline_10374_state_Name: "LetAppsAccessTrustedDevices"
 win_baseline_10374_state_Data: "2"
 win_baseline_10374_state_Type: dword
+
+# win_baseline_10375_state | Ensure 'Let Windows apps access the location' is set to 'Force Deny'
+win_baseline_10375_state_Manage: True
+win_baseline_10375_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPrivacy'
+win_baseline_10375_state_Name: "LetAppsAccessLocation"
+win_baseline_10375_state_Data: "2"
+win_baseline_10375_state_Type: dword
+
+# win_baseline_10376_state | Ensure 'Let Windows apps access microphone' is set to 'Force Deny'
+win_baseline_10376_state_Manage: True
+win_baseline_10376_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPrivacy'
+win_baseline_10376_state_Name: "LetAppsAccessMicrophone"
+win_baseline_10376_state_Data: "2"
+win_baseline_10376_state_Type: dword
+
+# win_baseline_10377_state | Ensure 'Use enhanced anti-spoofing when available' is set to 'Enabled'
+win_baseline_10377_state_Manage: True
+win_baseline_10377_state_Path: 'HKLM:\Software\Policies\Microsoft\Biometrics\FacialFeatures'
+win_baseline_10377_state_Name: "EnhancedAntiSpoofing"
+win_baseline_10377_state_Data: "1"
+win_baseline_10377_state_Type: dword
