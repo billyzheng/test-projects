@@ -1750,3 +1750,10 @@ win_baseline_10473_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Device
 win_baseline_10473_state_Name: "LsaCfgFlags"
 win_baseline_10473_state_Data: "1"
 win_baseline_10473_state_Type: dword
+
+# win_baseline_10474_state | Ensure 'Turn on Virtualization Based Security (Enable Virtulization Based Protection of Code Integrety)' is set to 'Enabled'
+win_baseline_10474_state_Manage: True
+win_baseline_10474_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\DeviceGuard'
+win_baseline_10474_state_Name: "HypervisorEnforcedCodeIntegrity"
+win_baseline_10474_state_Data: "1"
+win_baseline_10474_state_Type: dword
