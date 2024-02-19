@@ -2359,3 +2359,30 @@
     type: "{{ win_baseline_10474_state_Type }}"
   when:
     win_baseline_10474_state_Manage
+
+- name: "win_baseline_10475_state | Ensure 'Turn on Virtualization Based Security (Select Platform Security Level)' is set to 'Secure Boot and DMA Protection'"
+  win_regedit:
+    path: "{{ win_baseline_10475_state_Path }}"
+    name: "{{ win_baseline_10475_state_Name }}"
+    data: "{{ win_baseline_10475_state_Data }}"
+    type: "{{ win_baseline_10475_state_Type }}"
+  when:
+    win_baseline_10474_state_Manage 
+
+- name: "win_baseline_10592_state | Hardened UNC Paths is set to 'Enabled, with 'Require Mutual Authentication' and 'Require Integrity' set for NETLOGON shares'"
+  win_regedit:
+    path: "{{ win_baseline_10592_state_Path }}"
+    name: "{{ win_baseline_10592_state_Name }}"
+    data: "{{ win_baseline_10592_state_Data }}"
+    type: "{{ win_baseline_10592_state_Type }}"
+  when:
+    win_baseline_10592_state_Manage
+
+- name: "win_baseline_10593_state | Hardened UNC Paths is set to 'Enabled, with 'Require Mutual Authentication' and 'Require Integrity' set for SYSVOL shares'"
+  win_regedit:
+    path: "{{ win_baseline_10593_state_Path }}"
+    name: "{{ win_baseline_10593_state_Name }}"
+    data: "{{ win_baseline_10593_state_Data }}"
+    type: "{{ win_baseline_10593_state_Type }}"
+  when:
+    win_baseline_10593_state_Manage
