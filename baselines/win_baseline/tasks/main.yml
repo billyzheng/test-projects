@@ -2306,83 +2306,92 @@
 #   when:
 #     win_baseline_20380_state_Manage
 
-- name: "win_baseline_10382_state | Ensure 'Turn off inPrivate browsing' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_10382_state_Path }}"
-    name: "{{ win_baseline_10382_state_Name }}"
-    data: "{{ win_baseline_10382_state_Data }}"
-    type: "{{ win_baseline_10382_state_Type }}"
-  when:
-    win_baseline_10382_state_Manage
+# - name: "win_baseline_10382_state | Ensure 'Turn off inPrivate browsing' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10382_state_Path }}"
+#     name: "{{ win_baseline_10382_state_Name }}"
+#     data: "{{ win_baseline_10382_state_Data }}"
+#     type: "{{ win_baseline_10382_state_Type }}"
+#   when:
+#     win_baseline_10382_state_Manage
 
-- name: "win_baseline_10383_state | Ensure 'Configure password manager' is set to 'No'"
-  win_regedit:
-    path: "{{ win_baseline_10383_state_Path }}"
-    name: "{{ win_baseline_10383_state_Name }}"
-    data: "{{ win_baseline_10383_state_Data }}"
-    type: "{{ win_baseline_10383_state_Type }}"
-  when:
-    win_baseline_10383_state_Manage
+# - name: "win_baseline_10383_state | Ensure 'Configure password manager' is set to 'No'"
+#   win_regedit:
+#     path: "{{ win_baseline_10383_state_Path }}"
+#     name: "{{ win_baseline_10383_state_Name }}"
+#     data: "{{ win_baseline_10383_state_Data }}"
+#     type: "{{ win_baseline_10383_state_Type }}"
+#   when:
+#     win_baseline_10383_state_Manage
 
-- name: "win_baseline_10385_state | Ensure 'Turn off the SmartScreen Filter' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_10385_state_Path }}"
-    name: "{{ win_baseline_10385_state_Name }}"
-    data: "{{ win_baseline_10385_state_Data }}"
-    type: "{{ win_baseline_10385_state_Type }}"
-  when:
-    win_baseline_10385_state_Manage
+# - name: "win_baseline_10385_state | Ensure 'Turn off the SmartScreen Filter' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10385_state_Path }}"
+#     name: "{{ win_baseline_10385_state_Name }}"
+#     data: "{{ win_baseline_10385_state_Data }}"
+#     type: "{{ win_baseline_10385_state_Type }}"
+#   when:
+#     win_baseline_10385_state_Manage
 
-- name: "win_baseline_10472_state | Ensure 'Turn on Virtulization Based Security' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_10472_state_Path }}"
-    name: "{{ win_baseline_10472_state_Name }}"
-    data: "{{ win_baseline_10472_state_Data }}"
-    type: "{{ win_baseline_10472_state_Type }}"
-  when:
-    win_baseline_10472_state_Manage
+# - name: "win_baseline_10472_state | Ensure 'Turn on Virtulization Based Security' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10472_state_Path }}"
+#     name: "{{ win_baseline_10472_state_Name }}"
+#     data: "{{ win_baseline_10472_state_Data }}"
+#     type: "{{ win_baseline_10472_state_Type }}"
+#   when:
+#     win_baseline_10472_state_Manage
 
-- name: "win_baseline_10473_state | Ensure 'Turn on Virtualization Based Security (Credential Guard Configuration)' is set to 'Enabled with UEFI lock'"
-  win_regedit:
-    path: "{{ win_baseline_10473_state_Path }}"
-    name: "{{ win_baseline_10473_state_Name }}"
-    data: "{{ win_baseline_10473_state_Data }}"
-    type: "{{ win_baseline_10473_state_Type }}"
-  when:
-    win_baseline_10473_state_Manage
+# - name: "win_baseline_10473_state | Ensure 'Turn on Virtualization Based Security (Credential Guard Configuration)' is set to 'Enabled with UEFI lock'"
+#   win_regedit:
+#     path: "{{ win_baseline_10473_state_Path }}"
+#     name: "{{ win_baseline_10473_state_Name }}"
+#     data: "{{ win_baseline_10473_state_Data }}"
+#     type: "{{ win_baseline_10473_state_Type }}"
+#   when:
+#     win_baseline_10473_state_Manage
 
-- name: "win_baseline_10474_state | Ensure 'Turn on Virtualization Based Security (Enable Virtulization Based Protection of Code Integrety)' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_10474_state_Path }}"
-    name: "{{ win_baseline_10474_state_Name }}"
-    data: "{{ win_baseline_10474_state_Data }}"
-    type: "{{ win_baseline_10474_state_Type }}"
-  when:
-    win_baseline_10474_state_Manage
+# - name: "win_baseline_10474_state | Ensure 'Turn on Virtualization Based Security (Enable Virtulization Based Protection of Code Integrety)' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10474_state_Path }}"
+#     name: "{{ win_baseline_10474_state_Name }}"
+#     data: "{{ win_baseline_10474_state_Data }}"
+#     type: "{{ win_baseline_10474_state_Type }}"
+#   when:
+#     win_baseline_10474_state_Manage
 
-- name: "win_baseline_10475_state | Ensure 'Turn on Virtualization Based Security (Select Platform Security Level)' is set to 'Secure Boot and DMA Protection'"
-  win_regedit:
-    path: "{{ win_baseline_10475_state_Path }}"
-    name: "{{ win_baseline_10475_state_Name }}"
-    data: "{{ win_baseline_10475_state_Data }}"
-    type: "{{ win_baseline_10475_state_Type }}"
-  when:
-    win_baseline_10474_state_Manage 
+# - name: "win_baseline_10475_state | Ensure 'Turn on Virtualization Based Security (Select Platform Security Level)' is set to 'Secure Boot and DMA Protection'"
+#   win_regedit:
+#     path: "{{ win_baseline_10475_state_Path }}"
+#     name: "{{ win_baseline_10475_state_Name }}"
+#     data: "{{ win_baseline_10475_state_Data }}"
+#     type: "{{ win_baseline_10475_state_Type }}"
+#   when:
+#     win_baseline_10474_state_Manage 
 
-- name: "win_baseline_10592_state | Hardened UNC Paths is set to 'Enabled, with 'Require Mutual Authentication' and 'Require Integrity' set for NETLOGON shares'"
-  win_regedit:
-    path: "{{ win_baseline_10592_state_Path }}"
-    name: "{{ win_baseline_10592_state_Name }}"
-    data: "{{ win_baseline_10592_state_Data }}"
-    type: "{{ win_baseline_10592_state_Type }}"
-  when:
-    win_baseline_10592_state_Manage
+# - name: "win_baseline_10592_state | Hardened UNC Paths is set to 'Enabled, with 'Require Mutual Authentication' and 'Require Integrity' set for NETLOGON shares'"
+#   win_regedit:
+#     path: "{{ win_baseline_10592_state_Path }}"
+#     name: "{{ win_baseline_10592_state_Name }}"
+#     data: "{{ win_baseline_10592_state_Data }}"
+#     type: "{{ win_baseline_10592_state_Type }}"
+#   when:
+#     win_baseline_10592_state_Manage
 
-- name: "win_baseline_10593_state | Hardened UNC Paths is set to 'Enabled, with 'Require Mutual Authentication' and 'Require Integrity' set for SYSVOL shares'"
+# - name: "win_baseline_10593_state | Hardened UNC Paths is set to 'Enabled, with 'Require Mutual Authentication' and 'Require Integrity' set for SYSVOL shares'"
+#   win_regedit:
+#     path: "{{ win_baseline_10593_state_Path }}"
+#     name: "{{ win_baseline_10593_state_Name }}"
+#     data: "{{ win_baseline_10593_state_Data }}"
+#     type: "{{ win_baseline_10593_state_Type }}"
+#   when:
+#     win_baseline_10593_state_Manage
+
+- name: "win_baseline_10919_state | Ensure 'TLS 1.0 protocol on the client 'DisabledByDefault' is set to '0'"
   win_regedit:
-    path: "{{ win_baseline_10593_state_Path }}"
-    name: "{{ win_baseline_10593_state_Name }}"
-    data: "{{ win_baseline_10593_state_Data }}"
-    type: "{{ win_baseline_10593_state_Type }}"
+    path: "{{ win_baseline_10919_state_Path }}"
+    name: "{{ win_baseline_10919_state_Name }}"
+    data: "{{ win_baseline_10919_state_Data }}"
+    type: "{{ win_baseline_10919_state_Type }}"
   when:
-    win_baseline_10593_state_Manage
+    win_baseline_10919_state_Manage

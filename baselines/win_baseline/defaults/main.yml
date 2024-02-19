@@ -1779,3 +1779,10 @@ win_baseline_10593_state_Name: "\\\\*\\SYSVOL"
 win_baseline_10593_state_Data: "RequireMutualAuthentication=1, RequireIntegrity=1"
 win_baseline_10593_state_Type: string
 
+# win_baseline_10919_state | Ensure 'TLS 1.0 protocol on the client 'DisabledByDefault' is set to '0'
+win_baseline_10919_state_Manage: True
+win_baseline_10919_state_Path: 'HKLM:\System\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client'
+win_baseline_10919_state_Name: "Functions"
+win_baseline_10919_state_Data: "0"
+win_baseline_10919_state_Type: dword
+
