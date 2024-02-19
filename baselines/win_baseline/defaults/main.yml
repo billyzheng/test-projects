@@ -1591,3 +1591,8 @@ win_baseline_10151_state_Manage: True
 win_baseline_10151_state_Subcategory: "Plug and Play Events"
 win_baseline_10151_state_AuditType: "success"
 
+# win_baseline_state_10152 | Ensure 'Audit Group Membership' is set to 'Success'
+win_baseline_10152_state_Manage: True
+win_baseline_10152_state_Subcategory: "Group Membership"
+win_baseline_10152_state_AuditType: "success"
+

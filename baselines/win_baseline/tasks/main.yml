@@ -2025,113 +2025,122 @@
 #   when:
 #     win_baseline_10088_state_Manage
 
-- name: "win_baseline_10089_state | Ensure 'Always install with elevated privileges' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_10089_state_Path }}"
-    name: "{{ win_baseline_10089_state_Name }}"
-    data: "{{ win_baseline_10089_state_Data }}"
-    type: "{{ win_baseline_10089_state_Type }}"
-  when:
-    win_baseline_10089_state_Manage
+# - name: "win_baseline_10089_state | Ensure 'Always install with elevated privileges' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10089_state_Path }}"
+#     name: "{{ win_baseline_10089_state_Name }}"
+#     data: "{{ win_baseline_10089_state_Data }}"
+#     type: "{{ win_baseline_10089_state_Type }}"
+#   when:
+#     win_baseline_10089_state_Manage
 
-- name: "win_baseline_10098_state | Ensure 'Allow input personalization' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_10098_state_Path }}"
-    name: "{{ win_baseline_10098_state_Name }}"
-    data: "{{ win_baseline_10098_state_Data }}"
-    type: "{{ win_baseline_10098_state_Type }}"
-  when:
-    win_baseline_10098_state_Manage
+# - name: "win_baseline_10098_state | Ensure 'Allow input personalization' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10098_state_Path }}"
+#     name: "{{ win_baseline_10098_state_Name }}"
+#     data: "{{ win_baseline_10098_state_Data }}"
+#     type: "{{ win_baseline_10098_state_Type }}"
+#   when:
+#     win_baseline_10098_state_Manage
 
-- name: "win_baseline_10099_state | Ensure 'Support device authentication using certificate' is set to 'Enabled'- Enabled"
-  win_regedit:
-    path: "{{ win_baseline_10099_state_Path }}"
-    name: "{{ win_baseline_10099_state_Name }}"
-    data: "{{ win_baseline_10099_state_Data }}"
-    type: "{{ win_baseline_10099_state_Type }}"
-  when:
-    win_baseline_10099_state_Manage
+# - name: "win_baseline_10099_state | Ensure 'Support device authentication using certificate' is set to 'Enabled'- Enabled"
+#   win_regedit:
+#     path: "{{ win_baseline_10099_state_Path }}"
+#     name: "{{ win_baseline_10099_state_Name }}"
+#     data: "{{ win_baseline_10099_state_Data }}"
+#     type: "{{ win_baseline_10099_state_Type }}"
+#   when:
+#     win_baseline_10099_state_Manage
 
-- name: "win_baseline_10100_state | Ensure 'Support device authentication using certificate' is set to 'Automatic' - Behavior"
-  win_regedit:
-    path: HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System\kerberos\parameters
-    name: "DevicePKInitBehavior"
-    data: "0"
-    type: dword
+# - name: "win_baseline_10100_state | Ensure 'Support device authentication using certificate' is set to 'Automatic' - Behavior"
+#   win_regedit:
+#     path: HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System\kerberos\parameters
+#     name: "DevicePKInitBehavior"
+#     data: "0"
+#     type: dword
 
-- name: "win_baseline_10101_state | Ensure 'Untrusted font blocking' is set to 'Block untrusted fonts and log events'"
-  win_regedit:
-    path: "{{ win_baseline_10101_state_Path }}"
-    name: "{{ win_baseline_10101_state_Name }}"
-    data: "{{ win_baseline_10101_state_Data }}"
-    type: "{{ win_baseline_10101_state_Type }}"
-  when:
-    win_baseline_10101_state_Manage
+# - name: "win_baseline_10101_state | Ensure 'Untrusted font blocking' is set to 'Block untrusted fonts and log events'"
+#   win_regedit:
+#     path: "{{ win_baseline_10101_state_Path }}"
+#     name: "{{ win_baseline_10101_state_Name }}"
+#     data: "{{ win_baseline_10101_state_Data }}"
+#     type: "{{ win_baseline_10101_state_Type }}"
+#   when:
+#     win_baseline_10101_state_Manage
 
-- name: "win_baseline_10102_state | Ensure 'Allow a Windows app to share application data between users' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_10102_state_Path }}"
-    name: "{{ win_baseline_10102_state_Name }}"
-    data: "{{ win_baseline_10102_state_Data }}"
-    type: "{{ win_baseline_10102_state_Type }}"
-  when:
-    win_baseline_10102_state_Manage
+# - name: "win_baseline_10102_state | Ensure 'Allow a Windows app to share application data between users' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10102_state_Path }}"
+#     name: "{{ win_baseline_10102_state_Name }}"
+#     data: "{{ win_baseline_10102_state_Data }}"
+#     type: "{{ win_baseline_10102_state_Type }}"
+#   when:
+#     win_baseline_10102_state_Manage
 
-- name: "win_baseline_10103_state | Ensure 'Block lauching Windows Store apps with Windows Runtime API access from hosted content' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_10103_state_Path }}"
-    name: "{{ win_baseline_10103_state_Name }}"
-    data: "{{ win_baseline_10103_state_Data }}"
-    type: "{{ win_baseline_10103_state_Type }}"
-  when:
-    win_baseline_10103_state_Manage
+# - name: "win_baseline_10103_state | Ensure 'Block lauching Windows Store apps with Windows Runtime API access from hosted content' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10103_state_Path }}"
+#     name: "{{ win_baseline_10103_state_Name }}"
+#     data: "{{ win_baseline_10103_state_Data }}"
+#     type: "{{ win_baseline_10103_state_Type }}"
+#   when:
+#     win_baseline_10103_state_Manage
 
-- name: "win_baseline_10104_state | Ensure 'Allow Telemetry' is set to 'Off - 0 - Security [Enterprise Only]'"
-  win_regedit:
-    path: "{{ win_baseline_10104_state_Path }}"
-    name: "{{ win_baseline_10104_state_Name }}"
-    data: "{{ win_baseline_10104_state_Data }}"
-    type: "{{ win_baseline_10104_state_Type }}"
-  when:
-    win_baseline_10104_state_Manage
+# - name: "win_baseline_10104_state | Ensure 'Allow Telemetry' is set to 'Off - 0 - Security [Enterprise Only]'"
+#   win_regedit:
+#     path: "{{ win_baseline_10104_state_Path }}"
+#     name: "{{ win_baseline_10104_state_Name }}"
+#     data: "{{ win_baseline_10104_state_Data }}"
+#     type: "{{ win_baseline_10104_state_Type }}"
+#   when:
+#     win_baseline_10104_state_Manage
 
-- name: "win_baseline_10105_state | Ensure 'Disable pre-release features or settings' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_10105_state_Path }}"
-    name: "{{ win_baseline_10105_state_Name }}"
-    data: "{{ win_baseline_10105_state_Data }}"
-    type: "{{ win_baseline_10105_state_Type }}"
-  when:
-    win_baseline_10105_state_Manage
+# - name: "win_baseline_10105_state | Ensure 'Disable pre-release features or settings' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10105_state_Path }}"
+#     name: "{{ win_baseline_10105_state_Name }}"
+#     data: "{{ win_baseline_10105_state_Data }}"
+#     type: "{{ win_baseline_10105_state_Type }}"
+#   when:
+#     win_baseline_10105_state_Manage
 
-- name: "win_baseline_10107_state | Ensure 'Allow Cortana' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_10107_state_Path }}"
-    name: "{{ win_baseline_10107_state_Name }}"
-    data: "{{ win_baseline_10107_state_Data }}"
-    type: "{{ win_baseline_10107_state_Type }}"
-  when:
-    win_baseline_10107_state_Manage
+# - name: "win_baseline_10107_state | Ensure 'Allow Cortana' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10107_state_Path }}"
+#     name: "{{ win_baseline_10107_state_Name }}"
+#     data: "{{ win_baseline_10107_state_Data }}"
+#     type: "{{ win_baseline_10107_state_Type }}"
+#   when:
+#     win_baseline_10107_state_Manage
 
-- name: "win_baseline_10108_state | Ensure 'Allow search and Cortana to use location' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_10108_state_Path }}"
-    name: "{{ win_baseline_10108_state_Name }}"
-    data: "{{ win_baseline_10108_state_Data }}"
-    type: "{{ win_baseline_10108_state_Type }}"
-  when:
-    win_baseline_10108_state_Manage
+# - name: "win_baseline_10108_state | Ensure 'Allow search and Cortana to use location' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10108_state_Path }}"
+#     name: "{{ win_baseline_10108_state_Name }}"
+#     data: "{{ win_baseline_10108_state_Data }}"
+#     type: "{{ win_baseline_10108_state_Type }}"
+#   when:
+#     win_baseline_10108_state_Manage
 
-- name: "win_baseline_10125_state | Ensure 'Allow Windows to automatically connect to suggested open hotspots is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_10125_state_Path }}"
-    name: "{{ win_baseline_10125_state_Name }}"
-    data: "{{ win_baseline_10125_state_Data }}"
-    type: "{{ win_baseline_10125_state_Type }}"
-  when:
-    win_baseline_10125_state_Manage
+# - name: "win_baseline_10125_state | Ensure 'Allow Windows to automatically connect to suggested open hotspots is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10125_state_Path }}"
+#     name: "{{ win_baseline_10125_state_Name }}"
+#     data: "{{ win_baseline_10125_state_Data }}"
+#     type: "{{ win_baseline_10125_state_Type }}"
+#   when:
+#     win_baseline_10125_state_Manage
 
-- name: "win_baseline_10151_state | Ensure 'Audit PNP Activity' is set to 'Success'"
+# - name: "win_baseline_10151_state | Ensure 'Audit PNP Activity' is set to 'Success'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_10151_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_10151_state_AuditType }}"
+#   when:
+#     win_baseline_10151_state_Manage
+
+- name: "win_baseline_state_10152 | Ensure 'Audit Group Membership' is set to 'Success'"
   win_audit_policy_system:
-    subcategory: Plug and Play Events
-    audit_type: success
+    subcategory: "{{ win_baseline_state_10152_Subcategory }}"
+    audit_type: "{{ win_baseline_state_10152_AuditType }}"
+  when:
+    win_baseline_state_10152_Manage
