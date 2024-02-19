@@ -2492,3 +2492,12 @@
     type: "{{ win_baseline_11194_state_Type }}"
   when:
     win_baseline_11194_state_Manage
+
+- name: "win_baseline_11195_state | Ensure NetBIOS no type' is set to 'p-node'"
+  win_regedit:
+    path: "{{ win_baseline_11195_state_Path }}"
+    name: "{{ win_baseline_11195_state_Name }}"
+    data: "{{ win_baseline_11195_state_Data }}"
+    type: "{{ win_baseline_11195_state_Type }}"
+  when:
+    win_baseline_11195_state_Manage
