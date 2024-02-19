@@ -1623,3 +1623,17 @@ win_baseline_10366_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPri
 win_baseline_10366_state_Name: "LetAppsAccessInfo"
 win_baseline_10366_state_Data: "2"
 win_baseline_10366_state_Type: dword
+
+# win_baseline_10367_state | Ensure 'Let Windows apps access the radio' is set to 'Force Deny'
+win_baseline_10367_state_Manage: True
+win_baseline_10367_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPrivacy'
+win_baseline_10367_state_Name: "LetAppsAccessRadios"
+win_baseline_10367_state_Data: "2"
+win_baseline_10367_state_Type: dword
+
+# win_baseline_10368_state | Ensure 'Let Windows apps access the calendar' is set to 'Force Deny'
+win_baseline_10368_state_Manage: True
+win_baseline_10368_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPrivacy'
+win_baseline_10368_state_Name: "LetAppsAccessCalendar"
+win_baseline_10368_state_Data: "2"
+win_baseline_10368_state_Type: dword
