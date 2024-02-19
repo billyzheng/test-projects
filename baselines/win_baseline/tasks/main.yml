@@ -2121,3 +2121,12 @@
     type: "{{ win_baseline_10108_state_Type }}"
   when:
     win_baseline_10108_state_Manage
+
+- name: "win_baseline_10125_state | Ensure 'Allow Windows to automatically connect to suggested open hotspots is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_10125_state_Path }}"
+    name: "{{ win_baseline_10125_state_Name }}"
+    data: "{{ win_baseline_10125_state_Data }}"
+    type: "{{ win_baseline_10125_state_Type }}"
+  when:
+    win_baseline_10125_state_Manage

@@ -1579,3 +1579,10 @@ win_baseline_10108_state_Name: "AllowSearchToUseLocation"
 win_baseline_10108_state_Data: "0"
 win_baseline_10108_state_Type: dword
 
+# win_baseline_10125_state | Ensure 'Allow Windows to automatically connect to suggested open hotspots is set to 'Disabled'
+win_baseline_10125_state_Manage: True
+win_baseline_10125_state_Path: 'HKLM:\Software\Microsoft\WcmSvc\wifinetworkmanager\config'
+win_baseline_10125_state_Name: "AutoConnectAllowedOEM"
+win_baseline_10125_state_Data: "0"
+win_baseline_10125_state_Type: dword
+
