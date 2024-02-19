@@ -1779,10 +1779,31 @@ win_baseline_10593_state_Name: "\\\\*\\SYSVOL"
 win_baseline_10593_state_Data: "RequireMutualAuthentication=1, RequireIntegrity=1"
 win_baseline_10593_state_Type: string
 
+# todo the name should be checked
 # win_baseline_10919_state | Ensure 'TLS 1.0 protocol on the client 'DisabledByDefault' is set to '0'
 win_baseline_10919_state_Manage: True
-win_baseline_10919_state_Path: 'HKLM:\System\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client'
-win_baseline_10919_state_Name: "Functions"
+win_baseline_10919_state_Path: 'HKLM:\System\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0'
+win_baseline_10919_state_Name: "Client"
 win_baseline_10919_state_Data: "0"
 win_baseline_10919_state_Type: dword
 
+# win_baseline_10921_state | Ensure 'TLS 1.1 protocol on the client 'DisabledByDefault' is set to '0'
+win_baseline_10921_state_Manage: True
+win_baseline_10921_state_Path: 'HKLM:\System\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1'
+win_baseline_10921_state_Name: "Client"
+win_baseline_10921_state_Data: "0"
+win_baseline_10921_state_Type: dword
+
+# win_baseline_10922_state | Ensure 'TLS 1.2 protocol on the client 'DisabledByDefault' is set to '0'
+win_baseline_10922_state_Manage: True
+win_baseline_10922_state_Path: 'HKLM:\System\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2'
+win_baseline_10922_state_Name: "Client"
+win_baseline_10922_state_Data: "0"
+win_baseline_10922_state_Type: dword
+
+# win_baseline_10969_state | Ensure 'Turn off Windows Defender' is set to 'Disabled'
+win_baseline_10969_state_Manage: True
+win_baseline_10969_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender'
+win_baseline_10969_state_Name: "DisableAntiSpyware"
+win_baseline_10969_state_Data: "0"
+win_baseline_10969_state_Type: dword

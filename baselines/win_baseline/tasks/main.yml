@@ -2395,3 +2395,30 @@
     type: "{{ win_baseline_10919_state_Type }}"
   when:
     win_baseline_10919_state_Manage
+
+- name: "win_baseline_10921_state | Ensure 'TLS 1.1 protocol on the client 'DisabledByDefault' is set to '0'"
+  win_regedit:
+    path: "{{ win_baseline_10921_state_Path }}"
+    name: "{{ win_baseline_10921_state_Name }}"
+    data: "{{ win_baseline_10921_state_Data }}"
+    type: "{{ win_baseline_10921_state_Type }}"
+  when:
+    win_baseline_10921_state_Manage
+
+- name: "win_baseline_10922_state | Ensure 'TLS 1.2 protocol on the client 'DisabledByDefault' is set to '0'"
+  win_regedit:
+    path: "{{ win_baseline_10921_state_Path }}"
+    name: "{{ win_baseline_10921_state_Name }}"
+    data: "{{ win_baseline_10921_state_Data }}"
+    type: "{{ win_baseline_10921_state_Type }}"
+  when:
+    win_baseline_10921_state_Manage
+
+- name: "win_baseline_10969_state | Ensure 'Turn off Windows Defender' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_10969_state_Path }}"
+    name: "{{ win_baseline_10969_state_Name }}"
+    data: "{{ win_baseline_10969_state_Data }}"
+    type: "{{ win_baseline_10969_state_Type }}"
+  when:
+    win_baseline_10969_state_Manage
