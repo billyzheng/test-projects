@@ -2058,3 +2058,12 @@
     name: "DevicePKInitBehavior"
     data: "0"
     type: dword
+
+- name: "win_baseline_10101_state | Ensure 'Untrusted font blocking' is set to 'Block untrusted fonts and log events'"
+  win_regedit:
+    path: "{{ win_baseline_10101_state_Path }}"
+    name: "{{ win_baseline_10101_state_Name }}"
+    data: "{{ win_baseline_10101_state_Data }}"
+    type: "{{ win_baseline_10101_state_Type }}"
+  when:
+    win_baseline_10101_state_Manage
