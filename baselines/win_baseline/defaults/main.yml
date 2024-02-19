@@ -1727,5 +1727,5 @@ win_baseline_10383_state_Manage: True
 win_baseline_10383_state_Path: 'HKLM:\Software\Policies\Microsoft\MicrosoftEdge\Main'
 win_baseline_10383_state_Name: "FormSuggest Passwords"
 win_baseline_10383_state_Data: "no"
-win_baseline_10383_state_Type: dword
+win_baseline_10383_state_Type: string
 
