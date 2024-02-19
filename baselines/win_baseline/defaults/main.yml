@@ -1829,3 +1829,9 @@ win_baseline_11030_state_Name: "DisableUPnPRegistrar"
 win_baseline_11030_state_Data: "0"
 win_baseline_11030_state_Type: dword
 
+# win_baseline_11031_state | Ensure 'Configuration of wireless settings using Windows Connect Now (DisableWPDRegistrar)' is set to 'Disabled'
+win_baseline_11031_state_Manage: True
+win_baseline_11031_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WCN\Registrars'
+win_baseline_11031_state_Name: "DisableWPDRegistrar"
+win_baseline_11031_state_Data: "0"
+win_baseline_11031_state_Type: dword
