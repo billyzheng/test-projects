@@ -2138,9 +2138,9 @@
 #   when:
 #     win_baseline_10151_state_Manage
 
-- name: "win_baseline_state_10152 | Ensure 'Audit Group Membership' is set to 'Success'"
+- name: "win_baseline_10152_state | Ensure 'Audit Group Membership' is set to 'Success'"
   win_audit_policy_system:
-    subcategory: "{{ win_baseline_state_10152_Subcategory }}"
-    audit_type: "{{ win_baseline_state_10152_AuditType }}"
+    subcategory: "{{ win_baseline_10152_state_Subcategory }}"
+    audit_type: "{{ win_baseline_10152_state_AuditType }}"
   when:
-    win_baseline_state_10152_Manage
+    win_baseline_10152_state_Manage
