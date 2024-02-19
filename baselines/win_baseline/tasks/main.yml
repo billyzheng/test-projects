@@ -2483,3 +2483,12 @@
     name: "EnableCdp"
     data: "0"
     type: dword
+
+- name: "win_baseline_11194_state | Ensure 'Block user from showing account details on sign-in' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_11194_state_Path }}"
+    name: "{{ win_baseline_11194_state_Name }}"
+    data: "{{ win_baseline_11194_state_Data }}"
+    type: "{{ win_baseline_11194_state_Type }}"
+  when:
+    win_baseline_11194_state_Manage

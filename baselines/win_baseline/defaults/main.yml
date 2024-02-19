@@ -1857,3 +1857,9 @@ win_baseline_11193_state_Name: "EnableCdp"
 win_baseline_11193_state_Data: "0"
 win_baseline_11193_state_Type: dword
 
+# win_baseline_11194_state | Ensure 'Block user from showing account details on sign-in' is set to 'Enabled'
+win_baseline_11194_state_Manage: True
+win_baseline_11194_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\System'
+win_baseline_11194_state_Name: "BlockUserFromShowingAccountDetailsOnSignin"
+win_baseline_11194_state_Data: "1"
+win_baseline_11194_state_Type: dword
