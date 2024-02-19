@@ -1906,3 +1906,10 @@ win_baseline_11204_state_Name: "EnableFontProviders"
 win_baseline_11204_state_Data: "0"
 win_baseline_11204_state_Type: dword
 
+# win_baseline_11205_state | Ensure 'Allow network connecticity during connected-standby (on battery)' is set to 'Disabled'
+win_baseline_11205_state_Manage: True
+win_baseline_11205_state_Path: 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\f15576e8-98b7-4186-b944-eafa664402d9'
+win_baseline_11205_state_Name: "DCSettingIndex"
+win_baseline_11205_state_Data: "0"
+win_baseline_11205_state_Type: dword
+

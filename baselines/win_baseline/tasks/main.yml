@@ -2547,4 +2547,11 @@
   when:
     win_baseline_11204_state_Manage
 
-
+- name: "win_baseline_11205_state | Ensure 'Allow network connecticity during connected-standby (on battery)' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_11205_state_Path }}"
+    name: "{{ win_baseline_11205_state_Name }}"
+    data: "{{ win_baseline_11205_state_Data }}"
+    type: "{{ win_baseline_11205_state_Type }}"
+  when:
+    win_baseline_11205_state_Manage
