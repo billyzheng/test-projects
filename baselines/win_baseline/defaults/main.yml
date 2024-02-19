@@ -1557,3 +1557,10 @@ win_baseline_10104_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\DataCo
 win_baseline_10104_state_Name: "AllowTelemetry"
 win_baseline_10104_state_Data: "0"
 win_baseline_10104_state_Type: dword
+
+# win_baseline_10105_state | Ensure 'Disable pre-release features or settings' is set to 'Disabled'
+win_baseline_10105_state_Manage: True
+win_baseline_10105_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\PreviewBuilds'
+win_baseline_10105_state_Name: "EnableConfigFlighting"
+win_baseline_10105_state_Data: "0"
+win_baseline_10105_state_Type: dword
