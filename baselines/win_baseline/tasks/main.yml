@@ -2067,3 +2067,13 @@
     type: "{{ win_baseline_10101_state_Type }}"
   when:
     win_baseline_10101_state_Manage
+
+- name: "win_baseline_10102_state | Ensure 'Allow a Windows app to share application data between users' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_10102_state_Path }}"
+    name: "{{ win_baseline_10102_state_Name }}"
+    data: "{{ win_baseline_10102_state_Data }}"
+    type: "{{ win_baseline_10102_state_Type }}"
+  when:
+    win_baseline_10102_state_Manage
+

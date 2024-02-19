@@ -1529,9 +1529,17 @@ win_baseline_10100_state_Name: "DevicePKInitBehavior"
 win_baseline_10100_state_Data: "0"
 win_baseline_10100_state_Type: dword
 
+# todo: should confirm the type of the state
 # win_baseline_10101_state | Ensure 'Untrusted font blocking' is set to 'Block untrusted fonts and log events'
 win_baseline_10101_state_Manage: True
 win_baseline_10101_state_Path: 'HKLM:\Software\Policies\Microsoft\WindowsNT\MitigationOptions'
 win_baseline_10101_state_Name: "MitigationOptions_FontBocking"
 win_baseline_10101_state_Data: "1000000000000"
 win_baseline_10101_state_Type: string
+
+# win_baseline_10102_state | Ensure 'Allow a Windows app to share application data between users' is set to 'Disabled'
+win_baseline_10102_state_Manage: True
+win_baseline_10102_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Currentversion\Appmodel\Statemanager'
+win_baseline_10102_state_Name: "AllowSharedLocalAppData"
+win_baseline_10102_state_Data: "0"
+win_baseline_10102_state_Type: dword
