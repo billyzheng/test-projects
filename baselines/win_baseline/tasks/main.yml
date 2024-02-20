@@ -83,7 +83,7 @@
   when:
     win_baseline_1071_state_Manage
 
-- name: "win_baseline_1072_state | Ensure 'Minimum password age' is set to '1 or more day(s)' [GSA-0]"
+- name: "win_baseline_1072_state | Ensure 'Minimum password age' is set to '1 or more day(s)'"
   win_security_policy:
     section: "{{win_baseline_1072_state_Section }}"
     key: "{{ win_baseline_1072_state_Key }}"
@@ -107,6 +107,31 @@
     value: "{{ win_baseline_1092_state_Value }}"
   when:
     win_baseline_1092_state_Manage
+
+# ! The service module cannot be installed
+# - block:
+#   - name: Get DHCP Client service info
+#     win_service_info:
+#       name: Dhcp
+#     register: dhcp_service_info
+
+#   - name: Stop dependent services
+#     win_service:
+#       name: "{{ item }}"
+#       state: stopped
+#     loop: "{{ dhcp_service_info.service.DependentServices }}"
+
+#   - name: Ensure DHCP Client is set to Disabled
+#     ansible.windows.win_service_info:
+#       name: Dhcp
+#       state: stopped
+#       start_mode: disabled
+  
+- name: "win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Client' is set to 'Disabled'"
+  win_service:
+    name: "{{ win_baseline_1115_state_Name }}"
+    state: "{{ win_baseline_1115_state_State }}"
+    start_mode: "{{ win_baseline_1115_state_Mode }}"
 
 # ! The service module cannot be installed
 # - block:
