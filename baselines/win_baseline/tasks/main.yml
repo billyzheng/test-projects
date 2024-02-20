@@ -172,23 +172,23 @@
 #   when:
 #     win_baseline_1169_state_Manage
 
-- name: "win_baseline_1172_state | Ensure 'MSS - (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)' is set"
-  win_regedit:
-    path: "{{ win_baseline_1172_state_Path }}"
-    name: "{{ win_baseline_1172_state_Name }}"
-    data: "{{ win_baseline_1172_state_Data }}"
-    type: "{{ win_baseline_1172_state_Type }}"
-  when:
-    win_baseline_1172_state_Manage
-
-# - name: "win_baseline_1176_state | Devices: Restrict CD-ROM access to locally logged-on user only"
+# - name: "win_baseline_1172_state | Ensure 'MSS - (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)' is set"
 #   win_regedit:
-#     path: "{{ win_baseline_1176_state_Path }}"
-#     name: "{{ win_baseline_1176_state_Name }}"
-#     data: "{{ win_baseline_1176_state_Data }}"
-#     type: "{{ win_baseline_1176_state_Type }}"
+#     path: "{{ win_baseline_1172_state_Path }}"
+#     name: "{{ win_baseline_1172_state_Name }}"
+#     data: "{{ win_baseline_1172_state_Data }}"
+#     type: "{{ win_baseline_1172_state_Type }}"
 #   when:
-#     win_baseline_1176_state_Manage
+#     win_baseline_1172_state_Manage
+
+- name: "win_baseline_1176_state | Devices: Restrict CD-ROM access to locally logged-on user only"
+  win_regedit:
+    path: "{{ win_baseline_1176_state_Path }}"
+    name: "{{ win_baseline_1176_state_Name }}"
+    data: "{{ win_baseline_1176_state_Data }}"
+    type: "{{ win_baseline_1176_state_Type }}"
+  when:
+    win_baseline_1176_state_Manage
 
 # - name: "win_baseline_1177_state | Enure 'Enable IPSec protect Kerberos RSVP traffic' is set to 'Enabled'"
 #   win_regedit:
