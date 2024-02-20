@@ -1963,3 +1963,10 @@ win_baseline_11236_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Settin
 win_baseline_11236_state_Name: "DisableSettingSync"
 win_baseline_11236_state_Data: "2"
 win_baseline_11236_state_Type: dword
+
+# win_baseline_11273_State | Ensure 'Allow Extensions' is set to 'Disabled'
+win_baseline_11273_state_Manage: True
+win_baseline_11273_state_Path: 'HKLM:\Software\Policies\Microsoft\MicrosoftEdge\Extensions'
+win_baseline_11273_state_Name: "ExtensionsEnabled"
+win_baseline_11273_state_Data: "0"
+win_baseline_11273_state_Type: dword
