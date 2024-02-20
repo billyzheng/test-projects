@@ -1948,3 +1948,9 @@ win_baseline_11212_state_Name: "DeferFeatureUpdatesPeriodInDays"
 win_baseline_11212_state_Data: "180"
 win_baseline_11212_state_Type: dword
 
+# win_basleine_11213_state | Ensure 'Select when feature updates are received - BranchReadinnessLevel' is set to '32'
+win_baseline_11213_state_Manage: True
+win_baseline_11213_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate'
+win_baseline_11213_state_Name: "BranchReadinessLevel"
+win_baseline_11213_state_Data: "32"
+win_baseline_11213_state_Type: dword
