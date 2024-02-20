@@ -1984,3 +1984,10 @@ win_baseline_11282_state_Path: 'HKLM:\SYSTEM\CurrentControlSet\Services\LanmanSe
 win_baseline_11282_state_Name: "SMB2"
 win_baseline_11282_state_Data: "0"
 win_baseline_11282_state_Type: dword
+
+# win_baseline_11377_state | Enusre 'Configure keep-alive connection interval' is greater than or equal to '1'
+win_baseline_11377_state_Manage: True
+win_baseline_11377_state_Path: 'HKLM:\Software\\Policies\Microsoft\Windows NT\Terminal Services'
+win_baseline_11377_state_Name: "KeepAliveInterval"
+win_baseline_11377_state_Data: "1"
+win_baseline_11377_state_Type: dword
