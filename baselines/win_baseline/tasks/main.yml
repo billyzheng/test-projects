@@ -107,68 +107,25 @@
     value: "{{ win_baseline_1092_state_Value }}"
   when:
     win_baseline_1092_state_Manage
-
-# ! The service module cannot be installed
-- block:
-  - name: Get DHCP Client service info
-    win_service_info:
-      name: Dhcp
-    register: dhcp_service_info
-
-  - name: Stop dependent services
-    win_service:
-      name: "{{ item }}"
-      state: stopped
-    loop: "{{ dhcp_service_info.service.DependentServices }}"
-
-  - name: Ensure DHCP Client is set to Disabled
-    ansible.windows.win_service_info:
-      name: Dhcp
-      state: stopped
-      start_mode: disabled
   
+# ! error, cannot run the task
 # - name: "win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Client' is set to 'Disabled'"
 #   win_service:
 #     name: "{{ win_baseline_1115_state_Name }}"
 #     state: "{{ win_baseline_1115_state_State }}"
 #     start_mode: "{{ win_baseline_1115_state_Mode }}"
 #     force_dependent_services: yes
-
-# ! The service module cannot be installed
-# - block:
-#   - name: Get DHCP Client service info
-#     win_service_info:
-#       name: Dhcp
-#     register: dhcp_service_info
-
-#   - name: Stop dependent services
-#     win_service:
-#       name: "{{ item }}"
-#       state: stopped
-#     loop: "{{ dhcp_service_info.service.DependentServices }}"
-
-#   - name: Ensure DHCP Client is set to Disabled
-#     ansible.windows.win_service_info:
-#       name: Dhcp
-#       state: stopped
-#       start_mode: disabled
-  
-# - name: "win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Client' is set to 'Disabled'"
-#   win_service:
-#     name: "{{ win_baseline_1115_state_Name }}"
-#     state: "{{ win_baseline_1115_state_State }}"
-#     start_mode: "{{ win_baseline_1115_state_Mode }}"
 #   when:
 #     win_baseline_1115_state_Manage
 
-# - name: "win_baseline_1134_state | Ensure 'Logon banner title' is ser to 'This is an interest computer system of ABB Asea Brown Boveri Ltd'"
-#   win_regedit:
-#     path: "{{ win_baseline_1134_state_Path }}"
-#     name: "{{ win_baseline_1134_state_Name }}"
-#     data: "{{ win_baseline_1134_state_Data }}"
-#     type: "{{ win_baseline_1134_state_Type }}"
-#   when:
-#     win_baseline_1134_state_Manage
+- name: "win_baseline_1134_state | Ensure 'Logon banner title' is ser to 'This is an interest computer system of ABB Asea Brown Boveri Ltd'"
+  win_regedit:
+    path: "{{ win_baseline_1134_state_Path }}"
+    name: "{{ win_baseline_1134_state_Name }}"
+    data: "{{ win_baseline_1134_state_Data }}"
+    type: "{{ win_baseline_1134_state_Type }}"
+  when:
+    win_baseline_1134_state_Manage
 
 # - name: "win_baseline_1156_state | Ensure 'Audit - Shut down system immediately if unable to log security audits' is set to 'Disabled'"
 #   win_regedit:
