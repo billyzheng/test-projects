@@ -127,14 +127,14 @@
   when:
     win_baseline_1134_state_Manage
 
-# - name: "win_baseline_1156_state | Ensure 'Audit - Shut down system immediately if unable to log security audits' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1156_state_Path }}"
-#     name: "{{ win_baseline_1156_state_Name }}"
-#     data: "{{ win_baseline_1156_state_Data }}"
-#     type: "{{ win_baseline_1156_state_Type }}"
-#   when:
-#     win_baseline_1156_state_Manage
+- name: "win_baseline_1156_state | Ensure 'Audit - Shut down system immediately if unable to log security audits' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1156_state_Path }}"
+    name: "{{ win_baseline_1156_state_Name }}"
+    data: "{{ win_baseline_1156_state_Data }}"
+    type: "{{ win_baseline_1156_state_Type }}"
+  when:
+    win_baseline_1156_state_Manage
 
 # - name: "win_baseline_1162_state | Ensure 'Devices: Restrict floppy access to locally logged-on user only' is set to 'Enabled'"
 #   win_regedit:

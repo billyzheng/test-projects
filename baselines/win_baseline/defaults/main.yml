@@ -85,7 +85,7 @@ win_baseline_1115_state_Mode: disabled
 win_baseline_1134_state_Manage: True
 win_baseline_1134_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
 win_baseline_1134_state_Name: "LegalNoticeCaption"
-win_baseline_1134_state_Data: "This is an interest computer system of ABB Asea Brown Boveri Ltd"
+win_baseline_1134_state_Data: "This is an interest computer system of ABB Asea Brown Boveri Ltd and/or its affiliates."
 win_baseline_1134_state_Type: string
 
 # win baseline 1156 state | Ensure 'Audit - Shut down system immediately if unable to log security audits' is set to 'Disabled'
