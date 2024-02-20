@@ -132,6 +132,7 @@
     name: "{{ win_baseline_1115_state_Name }}"
     state: "{{ win_baseline_1115_state_State }}"
     start_mode: "{{ win_baseline_1115_state_Mode }}"
+    force: yes
 
 # ! The service module cannot be installed
 # - block:
