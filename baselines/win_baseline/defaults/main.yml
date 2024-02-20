@@ -43,6 +43,14 @@ win_baseline_8248_state_Name: "AllowDigest"
 win_baseline_8248_state_Data: "0"
 win_baseline_8248_state_Type: dword
 
+# win_baseline_1048_state | Ensure 'Shutdown - Clear virtual memory pagefile' is set to 'Enabled'
+win_baseline_1048_state_Manage: True
+win_baseline_1048_state_Path: 'HKLM:\System\CurrentControlSet\Control\Session Manager\Memory Management'
+win_baseline_1048_state_Name: "ClearPageFileAtShutdown"
+win_baseline_1048_state_Data: "1"
+win_baseline_1048_state_Type: dword
+
+
 # win baseline 1071 state | Ensure "Minimum password length" is set to "14 or more characters"
 win_baseline_1071_state_Manage: True
 win_baseline_1071_state_Section: "System Access"
