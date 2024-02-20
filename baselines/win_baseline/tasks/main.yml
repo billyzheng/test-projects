@@ -154,23 +154,23 @@
 #   when:
 #     win_baseline_1163_state_Manage
 
-- name: "win_baseline_1164_state | Ensure 'Network security - Do not store LAN Manager hash value on next password change' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1164_state_Path }}"
-    name: "{{ win_baseline_1164_state_Name }}"
-    data: "{{ win_baseline_1164_state_Data }}"
-    type: "{{ win_baseline_1164_state_Type }}"
-  when:
-    win_baseline_1164_state_Manage
-
-# - name: "win_baseline_1169_state | Ensure 'MSS - (AutoAdminLogon) Enable Automatic Logon (not recommended)' is set to 'Disabled'"
+# - name: "win_baseline_1164_state | Ensure 'Network security - Do not store LAN Manager hash value on next password change' is set to 'Enabled'"
 #   win_regedit:
-#     path: "{{ win_baseline_1169_state_Path }}"
-#     name: "{{ win_baseline_1169_state_Name }}"
-#     data: "{{ win_baseline_1169_state_Data }}"
-#     type:  "{{ win_baseline_1169_state_Type }}"
+#     path: "{{ win_baseline_1164_state_Path }}"
+#     name: "{{ win_baseline_1164_state_Name }}"
+#     data: "{{ win_baseline_1164_state_Data }}"
+#     type: "{{ win_baseline_1164_state_Type }}"
 #   when:
-#     win_baseline_1169_state_Manage
+#     win_baseline_1164_state_Manage
+
+- name: "win_baseline_1169_state | Ensure 'MSS - (AutoAdminLogon) Enable Automatic Logon (not recommended)' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1169_state_Path }}"
+    name: "{{ win_baseline_1169_state_Name }}"
+    data: "{{ win_baseline_1169_state_Data }}"
+    type:  "{{ win_baseline_1169_state_Type }}"
+  when:
+    win_baseline_1169_state_Manage
 
 # 2.7
 # - name: "win_baseline_1172_state | Ensure 'MSS - (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)' is set"
