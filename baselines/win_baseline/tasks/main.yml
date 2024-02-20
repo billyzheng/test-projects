@@ -2609,3 +2609,12 @@
     type: "{{ win_baseline_11213_state_Type }}"
   when:
     win_baseline_11213_state_Manage
+
+- name: "win_baseline_11236_state | Ensure 'Do not sync' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_11236_state_Path }}"
+    name: "{{ win_baseline_11236_state_Name }}"
+    data: "{{ win_baseline_11236_state_Data }}"
+    type: "{{ win_baseline_11236_state_Type }}"
+  when:
+    win_baseline_11236_state_Manage
