@@ -212,7 +212,6 @@
   win_service:
     name: snmptrap
     state: stopped
-    enabled: no
   when:
     win_baseline_1181_state_Manage
 
