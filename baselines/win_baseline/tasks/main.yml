@@ -2744,3 +2744,12 @@
     type: "{{ win_baseline_18935_state_Type }}"
   when:
     win_baseline_18935_state_Manage
+
+- name: "win_baseline_19336_state | Ensure 'Turn on Module Logging (EnableModuleLogging)' is equal to '1'"
+  win_regedit:
+    path: "{{ win_baseline_19336_state_Path }}"
+    name: "{{ win_baseline_19336_state_Name }}"
+    data: "{{ win_baseline_19336_state_Data }}"
+    type: "{{ win_baseline_19336_state_Type }}"
+  when:
+    win_baseline_19336_state_Manage

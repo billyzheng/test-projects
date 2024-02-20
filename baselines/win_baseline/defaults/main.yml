@@ -2061,3 +2061,10 @@ win_baseline_18935_state_Path: 'HKLM:\System\CurrentControlSet\Services\DNS'
 win_baseline_18935_state_Name: "Parameters"
 win_baseline_18935_state_Data: "0"
 win_baseline_18935_state_Type: dword
+
+# win_baseline_19336_state | Ensure ''Turn on Module Logging' is equal to '1'
+win_baseline_19336_state_Manage: True
+win_baseline_19336_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ModuleLogging'
+win_baseline_19336_state_Name: "EnableModuleLogging"
+win_baseline_19336_state_Data: "1"
+win_baseline_19336_state_Type: dword
