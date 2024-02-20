@@ -146,10 +146,10 @@ win_baseline_1177_state_Type: dword
 
 # not sure
 # win_baseline_1181_state | Ensure 'Simple Netowrk Management Protocol trap' service is diabled
-# win_baseline_1181_state_Manage: True
-# win_baseline_1181_state_Path: 'HKLM:\System\CurrentControlSet\Services\SNMP\Parameters\TrapConfiguration'
-# win_baseline_1181_state_Name: "EnableAuthenticationTraps"
-# win_baseline_1181_state_Data: "0"
+win_baseline_1181_state_Manage: True
+win_baseline_1181_state_Path: 'HKLM:\System\CurrentControlSet\Services\SNMP\Parameters\TrapConfiguration'
+win_baseline_1181_state_Name: "EnableAuthenticationTraps"
+win_baseline_1181_state_Data: "0"
 
 # win_baseline_1183_state | Ensure 'Autorun for all drivers' is set to 'Disabled'
 win_baseline_1183_state_Manage: True
