@@ -2654,3 +2654,22 @@
     type: "{{ win_baseline_11377_state_Type }}"
   when:
     win_baseline_11377_state_Manage
+
+- name: "win_baseline_11378_state | Ensure 'Limit number of connections' group policy setting is greater than or equal to '1'"
+  win_regedit:
+    path: "{{ win_baseline_11378_state_Path }}"
+    name: "{{ win_baseline_11378_state_Name }}"
+    data: "{{ win_baseline_11378_state_Data }}"
+    type: "{{ win_baseline_11378_state_Type }}"
+  when:
+    win_baseline_11378_state_Manage 
+
+- name: "win_baseline_11385_state | Ensure 'Allow remote start of unlisted programs' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_11385_state_Path }}"
+    name: "{{ win_baseline_11385_state_Name }}"
+    data: "{{ win_baseline_11385_state_Data }}"
+    type: "{{ win_baseline_11385_state_Type }}"
+  when:
+    win_baseline_11385_state_Manage
+
