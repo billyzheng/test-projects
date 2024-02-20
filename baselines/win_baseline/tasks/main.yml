@@ -83,13 +83,13 @@
   when:
     win_baseline_1071_state_Manage
 
-# - name: "win_baseline_1072_state | Ensure 'Minimum password age' is set to '1 or more day(s)' [GSA-0]"
-#   win_security_policy:
-#     section: "{{win_baseline_1072_state_Section }}"
-#     key: "{{ win_baseline_1072_state_Key }}"
-#     value: "{{ win_baseline_1072_state_Value }}"
-#   when:
-#     win_baseline_1072_state_Manage
+- name: "win_baseline_1072_state | Ensure 'Minimum password age' is set to '1 or more day(s)' [GSA-0]"
+  win_security_policy:
+    section: "{{win_baseline_1072_state_Section }}"
+    key: "{{ win_baseline_1072_state_Key }}"
+    value: "{{ win_baseline_1072_state_Value }}"
+  when:
+    win_baseline_1072_state_Manage
 
 # - name: "win_baseline_1091_state | Ensure 'Interactive logon - Prompt user to change password before expiration' is set to 'between 5 and 14 days'"
 #   win_regedit:
