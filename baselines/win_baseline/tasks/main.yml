@@ -2717,3 +2717,21 @@
     type: "{{ win_baseline_16104_state_Type }}"
   when:
     win_baseline_16104_state_Manage
+
+- name: "win_baseline_17707_state | Ensure 'Turn off notifications network usage' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_17707_state_Path }}"
+    name: "{{ win_baseline_17707_state_Name }}"
+    data: "{{ win_baseline_17707_state_Data }}"
+    type: "{{ win_baseline_17707_state_Type }}"
+  when:
+    win_baseline_17707_state_Manage
+
+- name: "win_baseline_17746_state | Ensure 'Turn on Module Logging' is set to 'empty'"
+  win_regedit:
+    path: "{{ win_baseline_17746_state_Path }}"
+    name: "{{ win_baseline_17746_state_Name }}"
+    data: "{{ win_baseline_17746_state_Data }}"
+    type: "{{ win_baseline_17746_state_Type }}"
+  when:
+    win_baseline_17746_state_Manage

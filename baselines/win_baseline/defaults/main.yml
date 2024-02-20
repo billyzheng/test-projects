@@ -2040,3 +2040,18 @@ win_baseline_16104_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Device
 win_baseline_16104_state_Name: "ConfigureSystemGuardLaunch"
 win_baseline_16104_state_Data: "1"
 win_baseline_16104_state_Type: dword
+
+# win_baseline_17707_state | Ensure 'Turn off notifications network usage' is set to 'Enabled'
+win_baseline_17707_state_Manage: True
+win_baseline_17707_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\PushNotifications'
+win_baseline_17707_state_Name: "NoCloudApplicationNotification"
+win_baseline_17707_state_Data: "1"
+win_baseline_17707_state_Type: dword
+
+# win_baseline_17746_state | Ensure 'Turn on Module Logging' is set to 'empty'
+win_baseline_17746_state_Manage: True
+win_baseline_17746_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ModuleLogging'
+win_baseline_17746_state_Name: "ModuleNames"
+win_baseline_17746_state_Data: ""
+win_baseline_17746_state_Type: dword
+
