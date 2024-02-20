@@ -1,11 +1,6 @@
 ---
 # defaults file for win
-# win_baseline_1052_state | Ensure 'Devices - Allowed to format and eject removable media' is set to 'Administrators'.
-win_baseline_1052_state_Manage: True
-win_baseline_1052_state_Path: 'HKLM:\Software\Microsoft\Windows NT\Currentversion\Winlogon'
-win_baseline_1052_state_Name: "AllocateDASD"
-win_baseline_1052_state_Data: "0"
-win_baseline_1052_state_Type: string
+
 # "win_baseline_1149_state | Ensure 'Microsoft network client - Digitally sign communications (always)' is set to 'Enabled'.
 win_baseline_1149_state_Manage: True
 win_baseline_1149_state_Path: 'HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters'
@@ -49,6 +44,13 @@ win_baseline_1048_state_Path: 'HKLM:\System\CurrentControlSet\Control\Session Ma
 win_baseline_1048_state_Name: "ClearPageFileAtShutdown"
 win_baseline_1048_state_Data: "1"
 win_baseline_1048_state_Type: dword
+
+# win_baseline_1052_state | Ensure 'Devices - Allowed to format and eject removable media' is set to 'Administrators'.
+win_baseline_1052_state_Manage: True
+win_baseline_1052_state_Path: 'HKLM:\Software\Microsoft\Windows NT\Currentversion\Winlogon'
+win_baseline_1052_state_Name: "AllocateDASD"
+win_baseline_1052_state_Data: "0"
+win_baseline_1052_state_Type: string
 
 # win baseline 1071 state | Ensure "Minimum password length" is set to "14 or more characters"
 win_baseline_1071_state_Manage: True
