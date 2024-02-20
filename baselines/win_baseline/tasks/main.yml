@@ -225,23 +225,23 @@
 #   when:
 #     win_baseline_1184_state_Manage
 
-- name: "win_baseline_1188_state | Ensure 'System objects - Require case insensitivity for non-Windows subsystems' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1188_state_Path }}"
-    name: "{{ win_baseline_1188_state_Name }}"
-    data: "{{ win_baseline_1188_state_Data }}"
-    type: "{{ win_baseline_1188_state_Type }}"
-  when:
-    win_baseline_1188_state_Manage
-
-# - name: "win_baseline_1189_state | Ensure 'Microsoft network server - Digitally sign communications (always)' is set to 'Enabled'"
+# - name: "win_baseline_1188_state | Ensure 'System objects - Require case insensitivity for non-Windows subsystems' is set to 'Enabled'"
 #   win_regedit:
-#     path: "{{ win_baseline_1189_state_Path }}"
-#     name: "{{ win_baseline_1189_state_Name }}"
-#     data: "{{ win_baseline_1189_state_Data }}"
-#     type: "{{ win_baseline_1189_state_Type }}"
+#     path: "{{ win_baseline_1188_state_Path }}"
+#     name: "{{ win_baseline_1188_state_Name }}"
+#     data: "{{ win_baseline_1188_state_Data }}"
+#     type: "{{ win_baseline_1188_state_Type }}"
 #   when:
-#     win_baseline_1189_state_Manage
+#     win_baseline_1188_state_Manage
+
+- name: "win_baseline_1189_state | Ensure 'Microsoft network server - Digitally sign communications (always)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1189_state_Path }}"
+    name: "{{ win_baseline_1189_state_Name }}"
+    data: "{{ win_baseline_1189_state_Data }}"
+    type: "{{ win_baseline_1189_state_Type }}"
+  when:
+    win_baseline_1189_state_Manage
 
 # - name: "win_baseline_1190_state | Ensure 'Interactive logon - Do not display last user name' is set to 'Enabled'"
 #   win_regedit:
