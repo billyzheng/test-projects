@@ -65,103 +65,103 @@
 
 # -----------------------
 # Windows total playbooks
-# -----------------------
-- name: "win_baseline_1048_state | Ensure 'Shutdown - Clear virtual memory pagefile' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1048_state_Path }}"
-    name: "{{ win_baseline_1048_state_Name }}"
-    data: "{{ win_baseline_1048_state_Data }}"
-    type: "{{ win_baseline_1048_state_Type }}"
-  when:
-    win_baseline_1048_state_Manage
-
-- name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)'"
-  win_security_policy:
-    section: "{{ win_baseline_1071_state_Section }}"
-    key: "{{ win_baseline_1071_state_Key }}"
-    value: "{{ win_baseline_1071_state_Value }}"
-  when:
-    win_baseline_1071_state_Manage
-
-- name: "win_baseline_1072_state | Ensure 'Minimum password age' is set to '1 or more day(s)'"
-  win_security_policy:
-    section: "{{win_baseline_1072_state_Section }}"
-    key: "{{ win_baseline_1072_state_Key }}"
-    value: "{{ win_baseline_1072_state_Value }}"
-  when:
-    win_baseline_1072_state_Manage
-
-- name: "win_baseline_1091_state | Ensure 'Interactive logon - Prompt user to change password before expiration' is set to 'between 5 and 14 days'"
-  win_regedit:
-    path: "{{ win_baseline_1091_state_Path }}"
-    name: "{{ win_baseline_1091_state_Name }}"
-    data: "{{ win_baseline_1091_state_Data }}"
-    type: "{{ win_baseline_1091_state_Type }}"
-  when:
-    win_baseline_1091_state_Manage
-
-- name: "win_baseline_1092_state | Ensure 'Password Complexity Requirements' is set to 'Enabled'"
-  win_security_policy:
-    section: "{{ win_baseline_1092_state_Section }}"
-    key: "{{ win_baseline_1092_state_Key }}"
-    value: "{{ win_baseline_1092_state_Value }}"
-  when:
-    win_baseline_1092_state_Manage
-  
-# ! error, cannot run the task
-# - name: "win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Client' is set to 'Disabled'"
-#   win_service:
-#     name: "{{ win_baseline_1115_state_Name }}"
-#     state: "{{ win_baseline_1115_state_State }}"
-#     start_mode: "{{ win_baseline_1115_state_Mode }}"
-#     force_dependent_services: yes
-#   when:
-#     win_baseline_1115_state_Manage
-
-- name: "win_baseline_1134_state | Ensure 'Logon banner title' is ser to 'This is an interest computer system of ABB Asea Brown Boveri Ltd'"
-  win_regedit:
-    path: "{{ win_baseline_1134_state_Path }}"
-    name: "{{ win_baseline_1134_state_Name }}"
-    data: "{{ win_baseline_1134_state_Data }}"
-    type: "{{ win_baseline_1134_state_Type }}"
-  when:
-    win_baseline_1134_state_Manage
-
-- name: "win_baseline_1156_state | Ensure 'Audit - Shut down system immediately if unable to log security audits' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1156_state_Path }}"
-    name: "{{ win_baseline_1156_state_Name }}"
-    data: "{{ win_baseline_1156_state_Data }}"
-    type: "{{ win_baseline_1156_state_Type }}"
-  when:
-    win_baseline_1156_state_Manage
-
-- name: "win_baseline_1162_state | Ensure 'Devices: Restrict floppy access to locally logged-on user only' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1162_state_Path }}"
-    name: "{{ win_baseline_1162_state_Name }}"
-    data: "{{ win_baseline_1162_state_Data }}"
-    type: "{{ win_baseline_1162_state_Type }}"
-  when:
-    win_baseline_1162_state_Manage
-
-- name: "win_baseline_1163_state | Ensure 'Devices - Prevent users from installing printer drivers' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1163_state_Path }}"
-    name: "{{ win_baseline_1163_state_Name }}"
-    data: "{{ win_baseline_1163_state_Data }}"
-    type: "{{ win_baseline_1163_state_Type }}"
-  when:
-    win_baseline_1163_state_Manage
-
-# - name: "win_baseline_1164_state | Ensure 'Network security - Do not store LAN Manager hash value on next password change' is set to 'Enabled'"
+# # -----------------------
+# - name: "win_baseline_1048_state | Ensure 'Shutdown - Clear virtual memory pagefile' is set to 'Enabled'"
 #   win_regedit:
-#     path: "{{ win_baseline_1164_state_Path }}"
-#     name: "{{ win_baseline_1164_state_Name }}"
-#     data: "{{ win_baseline_1164_state_Data }}"
-#     type: "{{ win_baseline_1164_state_Type }}"
+#     path: "{{ win_baseline_1048_state_Path }}"
+#     name: "{{ win_baseline_1048_state_Name }}"
+#     data: "{{ win_baseline_1048_state_Data }}"
+#     type: "{{ win_baseline_1048_state_Type }}"
 #   when:
-#     win_baseline_1164_state_Manage
+#     win_baseline_1048_state_Manage
+
+# - name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)'"
+#   win_security_policy:
+#     section: "{{ win_baseline_1071_state_Section }}"
+#     key: "{{ win_baseline_1071_state_Key }}"
+#     value: "{{ win_baseline_1071_state_Value }}"
+#   when:
+#     win_baseline_1071_state_Manage
+
+# - name: "win_baseline_1072_state | Ensure 'Minimum password age' is set to '1 or more day(s)'"
+#   win_security_policy:
+#     section: "{{win_baseline_1072_state_Section }}"
+#     key: "{{ win_baseline_1072_state_Key }}"
+#     value: "{{ win_baseline_1072_state_Value }}"
+#   when:
+#     win_baseline_1072_state_Manage
+
+# - name: "win_baseline_1091_state | Ensure 'Interactive logon - Prompt user to change password before expiration' is set to 'between 5 and 14 days'"
+#   win_regedit:
+#     path: "{{ win_baseline_1091_state_Path }}"
+#     name: "{{ win_baseline_1091_state_Name }}"
+#     data: "{{ win_baseline_1091_state_Data }}"
+#     type: "{{ win_baseline_1091_state_Type }}"
+#   when:
+#     win_baseline_1091_state_Manage
+
+# - name: "win_baseline_1092_state | Ensure 'Password Complexity Requirements' is set to 'Enabled'"
+#   win_security_policy:
+#     section: "{{ win_baseline_1092_state_Section }}"
+#     key: "{{ win_baseline_1092_state_Key }}"
+#     value: "{{ win_baseline_1092_state_Value }}"
+#   when:
+#     win_baseline_1092_state_Manage
+  
+# # ! error, cannot run the task
+# # - name: "win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Client' is set to 'Disabled'"
+# #   win_service:
+# #     name: "{{ win_baseline_1115_state_Name }}"
+# #     state: "{{ win_baseline_1115_state_State }}"
+# #     start_mode: "{{ win_baseline_1115_state_Mode }}"
+# #     force_dependent_services: yes
+# #   when:
+# #     win_baseline_1115_state_Manage
+
+# - name: "win_baseline_1134_state | Ensure 'Logon banner title' is ser to 'This is an interest computer system of ABB Asea Brown Boveri Ltd'"
+#   win_regedit:
+#     path: "{{ win_baseline_1134_state_Path }}"
+#     name: "{{ win_baseline_1134_state_Name }}"
+#     data: "{{ win_baseline_1134_state_Data }}"
+#     type: "{{ win_baseline_1134_state_Type }}"
+#   when:
+#     win_baseline_1134_state_Manage
+
+# - name: "win_baseline_1156_state | Ensure 'Audit - Shut down system immediately if unable to log security audits' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1156_state_Path }}"
+#     name: "{{ win_baseline_1156_state_Name }}"
+#     data: "{{ win_baseline_1156_state_Data }}"
+#     type: "{{ win_baseline_1156_state_Type }}"
+#   when:
+#     win_baseline_1156_state_Manage
+
+# - name: "win_baseline_1162_state | Ensure 'Devices: Restrict floppy access to locally logged-on user only' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1162_state_Path }}"
+#     name: "{{ win_baseline_1162_state_Name }}"
+#     data: "{{ win_baseline_1162_state_Data }}"
+#     type: "{{ win_baseline_1162_state_Type }}"
+#   when:
+#     win_baseline_1162_state_Manage
+
+# - name: "win_baseline_1163_state | Ensure 'Devices - Prevent users from installing printer drivers' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1163_state_Path }}"
+#     name: "{{ win_baseline_1163_state_Name }}"
+#     data: "{{ win_baseline_1163_state_Data }}"
+#     type: "{{ win_baseline_1163_state_Type }}"
+#   when:
+#     win_baseline_1163_state_Manage
+
+- name: "win_baseline_1164_state | Ensure 'Network security - Do not store LAN Manager hash value on next password change' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1164_state_Path }}"
+    name: "{{ win_baseline_1164_state_Name }}"
+    data: "{{ win_baseline_1164_state_Data }}"
+    type: "{{ win_baseline_1164_state_Type }}"
+  when:
+    win_baseline_1164_state_Manage
 
 # - name: "win_baseline_1169_state | Ensure 'MSS - (AutoAdminLogon) Enable Automatic Logon (not recommended)' is set to 'Disabled'"
 #   win_regedit:
