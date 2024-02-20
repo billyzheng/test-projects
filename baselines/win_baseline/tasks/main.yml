@@ -181,23 +181,23 @@
 #   when:
 #     win_baseline_1172_state_Manage
 
-- name: "win_baseline_1176_state | Devices: Restrict CD-ROM access to locally logged-on user only"
-  win_regedit:
-    path: "{{ win_baseline_1176_state_Path }}"
-    name: "{{ win_baseline_1176_state_Name }}"
-    data: "{{ win_baseline_1176_state_Data }}"
-    type: "{{ win_baseline_1176_state_Type }}"
-  when:
-    win_baseline_1176_state_Manage
-
-# - name: "win_baseline_1177_state | Enure 'Enable IPSec protect Kerberos RSVP traffic' is set to 'Enabled'"
+# - name: "win_baseline_1176_state | Devices: Restrict CD-ROM access to locally logged-on user only"
 #   win_regedit:
-#     path: "{{ win_baseline_1177_state_Path }}"
-#     name: "{{ win_baseline_1177_state_Name }}"
-#     data: "{{ win_baseline_1177_state_Data }}"
-#     type: "{{ win_baseline_1177_state_Type }}"
+#     path: "{{ win_baseline_1176_state_Path }}"
+#     name: "{{ win_baseline_1176_state_Name }}"
+#     data: "{{ win_baseline_1176_state_Data }}"
+#     type: "{{ win_baseline_1176_state_Type }}"
 #   when:
-#     win_baseline_1177_state_Manage
+#     win_baseline_1176_state_Manage
+
+- name: "win_baseline_1177_state | Enure 'Enable IPSec protect Kerberos RSVP traffic' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1177_state_Path }}"
+    name: "{{ win_baseline_1177_state_Name }}"
+    data: "{{ win_baseline_1177_state_Data }}"
+    type: "{{ win_baseline_1177_state_Type }}"
+  when:
+    win_baseline_1177_state_Manage
 
 # ! not sure
 # - name: "win_baseline_1181_state | Ensure 'Simple Netowrk Management Protocol trap' service is diabled"
