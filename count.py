@@ -5,7 +5,7 @@ minute = 0
 last = 0
 for i in range(100000):
     # file = open('/Users/ronechen/Ansible/test-projects/baselines/win_baseline/defaults/main.yml', 'r')
-    file = open('C:\\Users\\Rone\\Desktop\\Ansible_baseline_development\\test-projects\\baselines\\win_baseline\\defaults\\main.yml')
+    file = open('C:\\Users\\CNROCHE33\\Desktop\\Rone\\test-projects\\baselines\\win_baseline\\defaults\\main.yml')
     count = 0
     lines = file.readlines()
     for line in lines:

@@ -2013,3 +2013,10 @@ win_baseline_12015_state_Name: "MicrosoftAccount"
 win_baseline_12015_state_Data: "1"
 win_baseline_12015_state_Type: dword
 
+# win_baseline_12026_state | Ensure 'Configure Authenticated Proxy usage for the Connected User Experience and Telemetry service' is set to 'Enabled - Disable Authenticated Proxy usage'
+win_baseline_12026_state_Manage: True
+win_baseline_12026_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\DataCollection'
+win_baseline_12026_state_Name: "DisableEnterpriseAuthProxy"
+win_baseline_12026_state_Data: "1"
+win_baseline_12026_state_Type: dword
+
