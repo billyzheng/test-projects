@@ -145,14 +145,14 @@
   when:
     win_baseline_1162_state_Manage
 
-# - name: "win_baseline_1163_state | Ensure 'Devices - Prevent users from installing printer drivers' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1163_state_Path }}"
-#     name: "{{ win_baseline_1163_state_Name }}"
-#     data: "{{ win_baseline_1163_state_Data }}"
-#     type: "{{ win_baseline_1163_state_Type }}"
-#   when:
-#     win_baseline_1163_state_Manage
+- name: "win_baseline_1163_state | Ensure 'Devices - Prevent users from installing printer drivers' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1163_state_Path }}"
+    name: "{{ win_baseline_1163_state_Name }}"
+    data: "{{ win_baseline_1163_state_Data }}"
+    type: "{{ win_baseline_1163_state_Type }}"
+  when:
+    win_baseline_1163_state_Manage
 
 # - name: "win_baseline_1164_state | Ensure 'Network security - Do not store LAN Manager hash value on next password change' is set to 'Enabled'"
 #   win_regedit:
