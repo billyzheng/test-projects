@@ -281,23 +281,23 @@
 #   when:
 #     win_baseline_1195_state_Manage
 
-- name: "win_baseline_1196_state | Ensure 'MSS - (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled - 5 or fewer seconds'"
-  win_regedit:
-    path: "{{ win_baseline_1196_state_Path }}"
-    name: "{{ win_baseline_1196_state_Name }}"
-    data: "{{ win_baseline_1196_state_Data }}"
-    type: "{{ win_baseline_1196_state_Type }}"
-  when:
-    win_baseline_1196_state_Manage
-
-# - name: "win_baseline_1197_state | Ensure 'Network access - Do not allow anonymous enumeration of SAM accounts' is set to 'Enabled'"
+# - name: "win_baseline_1196_state | Ensure 'MSS - (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled - 5 or fewer seconds'"
 #   win_regedit:
-#     path: "{{ win_baseline_1197_state_Path }}"
-#     name: "{{ win_baseline_1197_state_Name }}"
-#     data: "{{ win_baseline_1197_state_Data }}"
-#     type: "{{ win_baseline_1197_state_Type }}"
+#     path: "{{ win_baseline_1196_state_Path }}"
+#     name: "{{ win_baseline_1196_state_Name }}"
+#     data: "{{ win_baseline_1196_state_Data }}"
+#     type: "{{ win_baseline_1196_state_Type }}"
 #   when:
-#     win_baseline_1197_state_Manage
+#     win_baseline_1196_state_Manage
+
+- name: "win_baseline_1197_state | Ensure 'Network access - Do not allow anonymous enumeration of SAM accounts' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1197_state_Path }}"
+    name: "{{ win_baseline_1197_state_Name }}"
+    data: "{{ win_baseline_1197_state_Data }}"
+    type: "{{ win_baseline_1197_state_Type }}"
+  when:
+    win_baseline_1197_state_Manage
 
 # - name: "win_baseline_1199_state| Ensure 'Microsoft network server - Amount of idle time required before suspending session' is set to '15 or fewer, but not 0'"
 #   win_regedit:
