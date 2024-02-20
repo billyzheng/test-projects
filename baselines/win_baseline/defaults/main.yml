@@ -1933,3 +1933,18 @@ win_baseline_11208_state_Path: 'HKLM:\SOFTWARE\Policies\Microsoft\MicrosoftEdge\
 win_baseline_11208_state_Name: "PreventAccessToAboutFlagsInMicrosoftEdge"
 win_baseline_11208_state_Data: "1"
 win_baseline_11208_state_Type: dword
+
+# win_baseline_11209_state | Ensure 'Allow suggested apps in Windows Ink Workspace' is set to 'Disabled'
+win_baseline_11209_state_Manage: True
+win_baseline_11209_state_Path: 'HKLM:\Software\Policies\Microsoft\WindowsInkWorkspace'
+win_baseline_11209_state_Name: "AllowSuggestedAppsInWindowsInkWorkspace"
+win_baseline_11209_state_Data: "0"
+win_baseline_11209_state_Type: dword
+
+# win_basleine_11212_state | Ensure 'Select when feature updates are received - DeferFeatureUpdatesPeriodInDays' is set to '180'
+win_baseline_11212_state_Manage: True
+win_baseline_11212_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate'
+win_baseline_11212_state_Name: "DeferFeatureUpdatesPeriodInDays"
+win_baseline_11212_state_Data: "180"
+win_baseline_11212_state_Type: dword
+

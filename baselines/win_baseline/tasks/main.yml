@@ -2582,3 +2582,21 @@
     type: "{{ win_baseline_11208_state_Type }}"
   when:
     win_baseline_11208_state_Manage
+
+- name: "win_baseline_11209_state | Ensure 'Allow suggested apps in Windows Ink Workspace' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_11209_state_Path }}"
+    name: "{{ win_baseline_11209_state_Name }}"
+    data: "{{ win_baseline_11209_state_Data }}"
+    type: "{{ win_baseline_11209_state_Type }}"
+  when:
+    win_baseline_11209_state_Manage
+
+- name: "win_basleine_11212_state | Ensure 'Select when feature updates are received - DeferFeatureUpdatesPeriodInDays' is set to '180'"
+  win_regedit:
+    path: "{{ win_baseline_11212_state_Path }}"
+    name: "{{ win_baseline_11212_state_Name }}"
+    data: "{{ win_baseline_11212_state_Data }}"
+    type: "{{ win_baseline_11212_state_Type }}"
+  when:
+    win_baseline_11212_state_Manage
