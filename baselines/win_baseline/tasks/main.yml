@@ -2673,7 +2673,7 @@
   when:
     win_baseline_11385_state_Manage
 
-- name: "win_ | Ensure 'Block all consumer Microsoft account user authentication' is set to 'Enabled'"
+- name: "win_baseline_12015_state | Ensure 'Block all consumer Microsoft account user authentication' is set to 'Enabled'"
   win_regedit:
     path: HKLM:\Software\Policies\Microsoft\MicrosoftAccount
     name: "DisableUserAuth"
