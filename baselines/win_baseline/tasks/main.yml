@@ -262,16 +262,17 @@
 #   when: 
 #     win_baseline_1190_state_Manage
 
-- name: "win_baseline_1193_state | Ensure 'MSS - (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1193_state_Path }}"
-    name: "{{ win_baseline_1193_state_Name }}"
-    data:  "{{ win_baseline_1193_state_Data }}"
-    type: "{{ win_baseline_1193_state_Type }}"
-  when:
-    win_baseline_1193_state_Manage
+# - name: "win_baseline_1193_state | Ensure 'MSS - (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1193_state_Path }}"
+#     name: "{{ win_baseline_1193_state_Name }}"
+#     data:  "{{ win_baseline_1193_state_Data }}"
+#     type: "{{ win_baseline_1193_state_Type }}"
+#   when:
+#     win_baseline_1193_state_Manage
 
-# - name: "win_baseline_1195_state | Ensure 'MSS - (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers' is set"
+# todo : ensure the value
+# - name: "win_baseline_1195_state | Ensure 'MSS - (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers' is set to what?"
 #   win_regedit:
 #     path: "{{ win_baseline_1195_state_Path }}"
 #     name: "{{ win_baseline_1195_state_Name }}"
@@ -280,14 +281,14 @@
 #   when:
 #     win_baseline_1195_state_Manage
 
-# - name: "win_baseline_1196_state | Ensure 'MSS - (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled - 5 or fewer seconds'"
-#   win_regedit:
-#     path: "{{ win_baseline_1196_state_Path }}"
-#     name: "{{ win_baseline_1196_state_Name }}"
-#     data: "{{ win_baseline_1196_state_Data }}"
-#     type: "{{ win_baseline_1196_state_Type }}"
-#   when:
-#     win_baseline_1196_state_Manage
+- name: "win_baseline_1196_state | Ensure 'MSS - (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled - 5 or fewer seconds'"
+  win_regedit:
+    path: "{{ win_baseline_1196_state_Path }}"
+    name: "{{ win_baseline_1196_state_Name }}"
+    data: "{{ win_baseline_1196_state_Data }}"
+    type: "{{ win_baseline_1196_state_Type }}"
+  when:
+    win_baseline_1196_state_Manage
 
 # - name: "win_baseline_1197_state | Ensure 'Network access - Do not allow anonymous enumeration of SAM accounts' is set to 'Enabled'"
 #   win_regedit:
