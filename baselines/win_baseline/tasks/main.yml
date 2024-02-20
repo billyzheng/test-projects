@@ -211,7 +211,7 @@
 - name: "win_baseline_1181_state | Ensure 'Simple Netowrk Management Protocol trap' service is set t0 'Disabled'"
   win_service:
     name: snmptrap
-    state: started
+    state: stopped
   when:
     win_baseline_1181_state_Manage
 
