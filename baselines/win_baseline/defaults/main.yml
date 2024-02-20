@@ -2026,3 +2026,11 @@ win_baseline_13344_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defend
 win_baseline_13344_state_Name: "DisallowExploitProtectionOverride"
 win_baseline_13344_state_Data: "1"
 win_baseline_13344_state_Type: dword
+
+# win_baseline_13968_state | Ensure Manage preview builds: Set the behavior of receiving preview builds' is set to 'Disable preview builds'
+win_baseline_13968_state_Manage: True
+win_baseline_13968_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate'
+win_baseline_13968_state_Name: "ManagePreviewBuildsPolicyValue"
+win_baseline_13968_state_Data: "0"
+win_baseline_13968_state_Type: dword
+

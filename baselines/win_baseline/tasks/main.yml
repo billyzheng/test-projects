@@ -2700,3 +2700,11 @@
   when:
     win_baseline_13344_state_Manage
 
+- name: "win_baseline_13968_state | Ensure Manage preview builds: Set the behavior of receiving preview builds' is set to 'Disable preview builds'"
+  win_regedit:
+    path: "{{ win_baseline_13968_state_Path }}"
+    name: "{{ win_baseline_13968_state_Name }}"
+    data: "{{ win_baseline_13968_state_Data }}"
+    type: "{{ win_baseline_13968_state_Type }}"
+  when:
+    win_baseline_13968_state_Manage
