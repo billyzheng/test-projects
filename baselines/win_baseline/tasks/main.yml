@@ -2619,7 +2619,7 @@
   when:
     win_baseline_11236_state_Manage
 
-- name: "win_baseline_11273_State | Ensure 'Allow Extensions' is set to 'Disabled'"
+- name: "win_baseline_11273_state | Ensure 'Allow Extensions' is set to 'Disabled'"
   win_regedit:
     path: "{{ win_baseline_11273_state_Path }}"
     name: "{{ win_baseline_11273_state_Name }}"
@@ -2627,3 +2627,13 @@
     type: "{{ win_baseline_11273_state_Type }}"
   when:
     win_baseline_11273_state_Manage
+
+- name: "win_baseline_11281_state | Ensure ''SMB v1' protocol for LanManServer services on Windows' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_11281_state_Path }}"
+    name: "{{ win_baseline_11281_state_Name }}"
+    data: "{{ win_baseline_11281_state_Data }}"
+    type: "{{ win_baseline_11281_state_Type }}"
+  when:
+    win_baseline_11281_state_Manage
+

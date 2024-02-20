@@ -1964,9 +1964,16 @@ win_baseline_11236_state_Name: "DisableSettingSync"
 win_baseline_11236_state_Data: "2"
 win_baseline_11236_state_Type: dword
 
-# win_baseline_11273_State | Ensure 'Allow Extensions' is set to 'Disabled'
+# win_baseline_11273_state | Ensure 'Allow Extensions' is set to 'Disabled'
 win_baseline_11273_state_Manage: True
 win_baseline_11273_state_Path: 'HKLM:\Software\Policies\Microsoft\MicrosoftEdge\Extensions'
 win_baseline_11273_state_Name: "ExtensionsEnabled"
 win_baseline_11273_state_Data: "0"
 win_baseline_11273_state_Type: dword
+
+# win_baseline_11281_state | Ensure ''SMB v1' protocol for LanManServer services on Windows' is set to 'Disabled'
+win_baseline_11281_state_Manage: True
+win_baseline_11281_state_Path: 'HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters'
+win_baseline_11281_state_Name: "SMB1"
+win_baseline_11281_state_Data: "0"
+win_baseline_11281_state_Type: dword
