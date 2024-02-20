@@ -2055,3 +2055,9 @@ win_baseline_17746_state_Name: "ModuleNames"
 win_baseline_17746_state_Data: ""
 win_baseline_17746_state_Type: dword
 
+# win_baseline_18935_state | Ensure ''TcpReceivePacketSize' is greater than or equal to '0'
+win_baseline_18935_state_Manage: True
+win_baseline_18935_state_Path: 'HKLM:\System\CurrentControlSet\Services\DNS'
+win_baseline_18935_state_Name: "Parameters"
+win_baseline_18935_state_Data: "0"
+win_baseline_18935_state_Type: dword

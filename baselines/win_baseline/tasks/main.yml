@@ -2735,3 +2735,12 @@
     type: "{{ win_baseline_17746_state_Type }}"
   when:
     win_baseline_17746_state_Manage
+
+- name: "win_baseline_18935_state | Ensure ''TcpReceivePacketSize' is greater than or equal to '0'"
+  win_regedit:
+    path: "{{ win_baseline_18935_state_Path }}"
+    name: "{{ win_baseline_18935_state_Name }}"
+    data: "{{ win_baseline_18935_state_Data }}"
+    type: "{{ win_baseline_18935_state_Type }}"
+  when:
+    win_baseline_18935_state_Manage
