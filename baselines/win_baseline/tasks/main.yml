@@ -136,14 +136,14 @@
   when:
     win_baseline_1156_state_Manage
 
-# - name: "win_baseline_1162_state | Ensure 'Devices: Restrict floppy access to locally logged-on user only' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1162_state_Path }}"
-#     name: "{{ win_baseline_1162_state_Name }}"
-#     data: "{{ win_baseline_1162_state_Data }}"
-#     type: "{{ win_baseline_1162_state_Type }}"
-#   when:
-#     win_baseline_1162_state_Manage
+- name: "win_baseline_1162_state | Ensure 'Devices: Restrict floppy access to locally logged-on user only' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1162_state_Path }}"
+    name: "{{ win_baseline_1162_state_Name }}"
+    data: "{{ win_baseline_1162_state_Data }}"
+    type: "{{ win_baseline_1162_state_Type }}"
+  when:
+    win_baseline_1162_state_Manage
 
 # - name: "win_baseline_1163_state | Ensure 'Devices - Prevent users from installing printer drivers' is set to 'Enabled'"
 #   win_regedit:
