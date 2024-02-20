@@ -81,7 +81,6 @@ win_baseline_1115_state_Name: "Dhcp"
 win_baseline_1115_state_State: stopped
 win_baseline_1115_state_Mode: disabled
 
-
 # win baseline 1134 state | Ensure 'Logon banner title' is ser to 'This is an interest computer system of ABB Asea Brown Boveri Ltd'
 win_baseline_1134_state_Manage: True
 win_baseline_1134_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
