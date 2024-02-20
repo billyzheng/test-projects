@@ -2034,3 +2034,9 @@ win_baseline_13968_state_Name: "ManagePreviewBuildsPolicyValue"
 win_baseline_13968_state_Data: "0"
 win_baseline_13968_state_Type: dword
 
+# win_baseline_16104_state | Ensure 'Turn On Virtualization Based Security (Secure Launch Configuration)' is set to 'Enabled'
+win_baseline_16104_state_Manage: True
+win_baseline_16104_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\DeviceGuard'
+win_baseline_16104_state_Name: "ConfigureSystemGuardLaunch"
+win_baseline_16104_state_Data: "1"
+win_baseline_16104_state_Type: dword

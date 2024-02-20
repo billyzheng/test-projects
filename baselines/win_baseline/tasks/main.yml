@@ -2708,3 +2708,12 @@
     type: "{{ win_baseline_13968_state_Type }}"
   when:
     win_baseline_13968_state_Manage
+
+- name: "win_baseline_16104_state | Ensure 'Turn On Virtualization Based Security (Secure Launch Configuration)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_16104_state_Path }}"
+    name: "{{ win_baseline_16104_state_Name }}"
+    data: "{{ win_baseline_16104_state_Data }}"
+    type: "{{ win_baseline_16104_state_Type }}"
+  when:
+    win_baseline_16104_state_Manage
