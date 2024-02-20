@@ -1977,3 +1977,10 @@ win_baseline_11281_state_Path: 'HKLM:\SYSTEM\CurrentControlSet\Services\LanmanSe
 win_baseline_11281_state_Name: "SMB1"
 win_baseline_11281_state_Data: "0"
 win_baseline_11281_state_Type: dword
+
+# win_baseline_11282_state | Ensure ''SMB v2' protocol for LanManServer services on Windows' is set to 'Disabled'
+win_baseline_11282_state_Manage: True
+win_baseline_11282_state_Path: 'HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters'
+win_baseline_11282_state_Name: "SMB2"
+win_baseline_11282_state_Data: "0"
+win_baseline_11282_state_Type: dword
