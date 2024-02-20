@@ -2008,7 +2008,8 @@ win_baseline_11385_state_Type: dword
 
 # win_baseline_12015_state | Ensure 'Block all consumer Microsoft account user authentication' is set to 'Enabled'
 win_baseline_12015_state_Manage: True
-win_baseline_12015_state_Path: 'HKLM:\Software\Policies\Microsoft\'
+win_baseline_12015_state_Path: 'HKLM:\Software\Policies\Microsoft'
 win_baseline_12015_state_Name: "MicrosoftAccount"
 win_baseline_12015_state_Data: "1"
 win_baseline_12015_state_Type: dword
+
