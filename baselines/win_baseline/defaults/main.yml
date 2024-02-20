@@ -50,7 +50,6 @@ win_baseline_1048_state_Name: "ClearPageFileAtShutdown"
 win_baseline_1048_state_Data: "1"
 win_baseline_1048_state_Type: dword
 
-
 # win baseline 1071 state | Ensure "Minimum password length" is set to "14 or more characters"
 win_baseline_1071_state_Manage: True
 win_baseline_1071_state_Section: "System Access"
@@ -1874,7 +1873,7 @@ win_baseline_11194_state_Type: dword
 
 # win_baseline_11195_state | Ensure NetBIOS no type' is set to 'p-node'
 win_baseline_11195_state_Manage: True
-win_baseline_11195_state_Path: 'HKLM:\System\CurentControlSet\Services\NetBT\Parameters'
+win_baseline_11195_state_Path: 'HKLM:\System\CurrentControlSet\Services\NetBT\Parameters'
 win_baseline_11195_state_Name: "Node Type"
 win_baseline_11195_state_Data: "2"
 win_baseline_11195_state_Type: dword
