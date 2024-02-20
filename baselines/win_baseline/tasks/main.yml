@@ -2564,3 +2564,21 @@
 #     type: "{{ win_baseline_11206_state_Type }}"
 #   when:
 #     win_baseline_11206_state_Manage
+
+- name: "win_baseline_11207_state | Ensure 'Allow user of Camera' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_11207_state_Path }}"
+    name: "{{ win_baseline_11207_state_Name }}"
+    data: "{{ win_baseline_11207_state_Data }}"
+    type: "{{ win_baseline_11207_state_Type }}"
+  when:
+    win_baseline_11207_state_Manage
+
+- name: "win_baseline_11208_state | Ensure 'Prevent access to the about:flag page in Microsoft Edge' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_11208_state_Path }}"
+    name: "{{ win_baseline_11208_state_Name }}"
+    data: "{{ win_baseline_11208_state_Data }}"
+    type: "{{ win_baseline_11208_state_Type }}"
+  when:
+    win_baseline_11208_state_Manage

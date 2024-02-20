@@ -1919,3 +1919,17 @@ win_baseline_11206_state_Path: 'HKLM:\Software\Policies\Microsoft\Power\PowerSet
 win_baseline_11206_state_Name: "ACSettingIndex"
 win_baseline_11206_state_Data: "0"
 win_baseline_11206_state_Type: dword
+
+# win_baseline_11207_state | Ensure 'Allow user of Camera' is set to 'Disabled'
+win_baseline_11207_state_Manage: True
+win_baseline_11207_state_Path: 'HKLM:\Software\Policies\Microsoft\Camera'
+win_baseline_11207_state_Name: "AllowCamera"
+win_baseline_11207_state_Data: "0"
+win_baseline_11207_state_Type: dword
+
+# "win_baseline_11208_state | Ensure 'Prevent access to the about:flag page in Microsoft Edge' is set to 'Enabled'
+win_baseline_11208_state_Manage: True
+win_baseline_11208_state_Path: 'HKLM:\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main'
+win_baseline_11208_state_Name: "PreventAccessToAboutFlagsInMicrosoftEdge"
+win_baseline_11208_state_Data: "1"
+win_baseline_11208_state_Type: dword
