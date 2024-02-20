@@ -2020,3 +2020,9 @@ win_baseline_12026_state_Name: "DisableEnterpriseAuthProxy"
 win_baseline_12026_state_Data: "1"
 win_baseline_12026_state_Type: dword
 
+# win_baseline_13344_state | Ensure 'Prevent users from modifying settings' is set to 'Enabled'
+win_baseline_13344_state_Manage: True
+win_baseline_13344_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender Security Center\App and Browser protection'
+win_baseline_13344_state_Name: "DisallowExploitProtectionOverride"
+win_baseline_13344_state_Data: "1"
+win_baseline_13344_state_Type: dword
