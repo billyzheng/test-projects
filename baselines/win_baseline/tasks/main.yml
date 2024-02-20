@@ -66,14 +66,14 @@
 # -----------------------
 # Windows total playbooks
 # -----------------------
-# - name: "win_baseline_1048_state | Ensure 'Shutdown - Clear virtual memory pagefile' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1048_state_Path }}"
-#     name: "{{ win_baseline_1048_state_Name }}"
-#     data: "{{ win_baseline_1048_state_Data }}"
-#     type: "{{ win_baseline_1048_state_Type }}"
-#   when:
-#     win_baseline_1048_state_Manage
+- name: "win_baseline_1048_state | Ensure 'Shutdown - Clear virtual memory pagefile' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1048_state_Path }}"
+    name: "{{ win_baseline_1048_state_Name }}"
+    data: "{{ win_baseline_1048_state_Data }}"
+    type: "{{ win_baseline_1048_state_Type }}"
+  when:
+    win_baseline_1048_state_Manage
 
 # - name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)'"
 #   win_security_policy:
