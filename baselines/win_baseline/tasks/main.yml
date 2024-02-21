@@ -632,23 +632,23 @@
 
 # - name: "win_baseline_1507_state | Ensure 'Automatic Updates/Windows Update' is set to 'Disabled'"
 
-- name: "win_baseline_1509_state | Ensure 'Netlogon' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_1509_state_Path }}"
-    name: "{{ win_baseline_1509_state_Name }}"
-    data: "{{ win_baseline_1509_state_Data }}"
-    type: "{{ win_baseline_1509_state_Type }}"
-  when:
-    win_baseline_1509_state_Manage
-
-# - name: "win_baseline_1510_state | Ensure 'Routing and Remote Access' is set to 'Disabled'"
+# - name: "win_baseline_1509_state | Ensure 'Netlogon' is set to 'Automatic'"
 #   win_regedit:
-#     path: "{{ win_baseline_1510_state_Path }}"
-#     name: "{{ win_baseline_1510_state_Name }}"
-#     data: "{{ win_baseline_1510_state_Data }}"
-#     type: "{{ win_baseline_1510_state_Type }}"
+#     path: "{{ win_baseline_1509_state_Path }}"
+#     name: "{{ win_baseline_1509_state_Name }}"
+#     data: "{{ win_baseline_1509_state_Data }}"
+#     type: "{{ win_baseline_1509_state_Type }}"
 #   when:
-#     win_baseline_1510_state_Manage
+#     win_baseline_1509_state_Manage
+
+- name: "win_baseline_1510_state | Ensure 'Routing and Remote Access' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1510_state_Path }}"
+    name: "{{ win_baseline_1510_state_Name }}"
+    data: "{{ win_baseline_1510_state_Data }}"
+    type: "{{ win_baseline_1510_state_Type }}"
+  when:
+    win_baseline_1510_state_Manage
 
 # - name: "win_baseline_1514_state | Ensure 'Restrictions for Unauthenticated RPC clients' is set to 'Authenticated without exceptions'"
 #   win_regedit:
