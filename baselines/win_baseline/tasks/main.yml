@@ -450,23 +450,23 @@
 #   when:
 #     win_baseline_1379_state_Manage
 
-- name: "win_baseline_1380_state | Ensure 'Microsoft network client - Send unencrypted password to third-party SMB servers' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1380_state_Path }}"
-    name: "{{ win_baseline_1380_state_Name }}"
-    data: "{{ win_baseline_1380_state_Data }}"
-    type: "{{ win_baseline_1380_state_Type }}"
-  when:
-    win_baseline_1380_state_Manage
-
-# - name: "win_baseline_1381_state | Ensure 'Microsoft network server - Digitally sign communications (if client agrees)' is set to 'Enabled'"
+# - name: "win_baseline_1380_state | Ensure 'Microsoft network client - Send unencrypted password to third-party SMB servers' is set to 'Disabled'"
 #   win_regedit:
-#     path: "{{ win_baseline_1381_state_Path }}"
-#     name: "{{ win_baseline_1381_state_Name }}"
-#     data: "{{ win_baseline_1381_state_Data }}"
-#     type:  "{{ win_baseline_1381_state_Type }}"
+#     path: "{{ win_baseline_1380_state_Path }}"
+#     name: "{{ win_baseline_1380_state_Name }}"
+#     data: "{{ win_baseline_1380_state_Data }}"
+#     type: "{{ win_baseline_1380_state_Type }}"
 #   when:
-#     win_baseline_1381_state_Manage
+#     win_baseline_1380_state_Manage
+
+- name: "win_baseline_1381_state | Ensure 'Microsoft network server - Digitally sign communications (if client agrees)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1381_state_Path }}"
+    name: "{{ win_baseline_1381_state_Name }}"
+    data: "{{ win_baseline_1381_state_Data }}"
+    type:  "{{ win_baseline_1381_state_Type }}"
+  when:
+    win_baseline_1381_state_Manage
 
 # - name: "win_baseline_1382_state | Ensure 'Microsoft network server - Disconnect clients when logon hours expire' is set to 'Enabled'"
 #   win_regedit:
