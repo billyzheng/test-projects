@@ -435,7 +435,7 @@ win_baseline_1434_state_Type: dword
 
 # win_baseline_1436_state | Ensure 'System crytography: Force strong key protection for user keys stored on the computer' is set to 'User must enter a password each time they use a key'
 win_baseline_1436_state_Manage: True
-win_baseline_1436_state_Path: 'HKLM:\Software\Policies\Microsoft\Cryptogtapghy'
+win_baseline_1436_state_Path: 'HKLM:\Software\Policies\Microsoft\Cryptography'
 win_baseline_1436_state_Name: "ForceKeyProtection"
 win_baseline_1436_state_Data: "2"
 win_baseline_1436_state_Type: dword
