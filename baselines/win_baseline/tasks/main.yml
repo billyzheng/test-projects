@@ -576,23 +576,23 @@
 #   when:
 #     win_baseline_1432_state_Manage
 
-- name: "win_baseline_1434_state | Ensure 'Network access: Rediect anonymous access to Named Pipes and Shares' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1434_state_Path }}"
-    name: "{{ win_baseline_1434_state_Name }}"
-    data: "{{ win_baseline_1434_state_Data }}"
-    type: "{{ win_baseline_1434_state_Type }}"
-  when:
-    win_baseline_1434_state_Manage
-
-# - name: "win_baseline_1436_state | Ensure 'System crytography: Force strong key protection for user keys stored on the computer' is set to 'User must enter a password each time they use a key'"
+# - name: "win_baseline_1434_state | Ensure 'Network access: Rediect anonymous access to Named Pipes and Shares' is set to 'Enabled'"
 #   win_regedit:
-#     path: "{{ win_baseline_1436_state_Path }}"
-#     name: "{{ win_baseline_1436_state_Name }}"
-#     data: "{{ win_baseline_1436_state_Data }}"
-#     type: "{{ win_baseline_1436_state_Type }}"
+#     path: "{{ win_baseline_1434_state_Path }}"
+#     name: "{{ win_baseline_1434_state_Name }}"
+#     data: "{{ win_baseline_1434_state_Data }}"
+#     type: "{{ win_baseline_1434_state_Type }}"
 #   when:
-#     win_baseline_1436_state_Manage
+#     win_baseline_1434_state_Manage
+
+- name: "win_baseline_1436_state | Ensure 'System crytography: Force strong key protection for user keys stored on the computer' is set to 'User must enter a password each time they use a key'"
+  win_regedit:
+    path: "{{ win_baseline_1436_state_Path }}"
+    name: "{{ win_baseline_1436_state_Name }}"
+    data: "{{ win_baseline_1436_state_Data }}"
+    type: "{{ win_baseline_1436_state_Type }}"
+  when:
+    win_baseline_1436_state_Manage
 
 # - name: "win_baseline_1458_state | Ensure 'MSS - (SafeDllSearchMode) Enable Safe DLL search mode (recommended)' is set to 'Enabled'"
 #   win_regedit:
