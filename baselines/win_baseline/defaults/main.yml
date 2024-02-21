@@ -316,10 +316,10 @@ win_baseline_1377_state_Type: dword
 # ! problem
 # win_baseline_1178_state | Ensure 'Interactive logon - Smart card removal behavior' is set to 'Lock Workstation'
 win_baseline_1378_state_Manage: True
-win_baseline_1378_state_Path: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon'
-win_baseline_1378_state_Name: " scremoveoption"
+win_baseline_1378_state_Path: 'HKLM:\Software\Microsoft\Windows NT\Currentversion\Winlogon'
+win_baseline_1378_state_Name: " ScRemoveOption"
 win_baseline_1378_state_Data: "1"
-win_baseline_1378_state_Type: dword
+win_baseline_1378_state_Type: string
 
 # win_baseline_1379_state | Ensure 'Microsoft network client - Digitally sign communications (if server agrees)' is set to 'Enabled'
 win_baseline_1379_state_Manage: True
