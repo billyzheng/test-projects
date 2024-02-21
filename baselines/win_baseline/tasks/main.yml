@@ -686,8 +686,6 @@
   when:
     win_baseline_2181_state_Manage
 
-- debug: u
-
 # ! not sure
 # - name: "win_baseline_2182_state | Ensure 'Act as part of the operating system' is set to 'No One'"
 #   win_user_right:
