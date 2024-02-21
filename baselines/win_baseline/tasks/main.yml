@@ -668,6 +668,15 @@
   when:
     win_baseline_1514_state_Manage
 
+- name: "win_baseline_1964_state | Ensure 'Event Log' is set to 'Automatic'"
+  win_regedit:
+    path: "{{ win_baseline_1964_state_Path }}"
+    name: "{{ win_baseline_1964_state_Name }}"
+    data: "{{ win_baseline_1964_state_Data }}"
+    type: "{{ win_baseline_1964_state_Type }}"
+  when:
+    win_baseline_1964_state_Manage
+
 # - name: "win_baseline_2181_state | Ensure 'Access this computer from the network' is set to 'Administrators, Authenticated Users'"
 #   win_user_right:
 #     name: "{{ win_baseline_2181_state_Name }}"
