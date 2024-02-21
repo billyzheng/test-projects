@@ -322,7 +322,7 @@
   win_regedit:
     path: "{{ win_baseline_1264_state_Path }}"
     name: "{{ win_baseline_1264_state_Name }}"
-    data: "{{ win_baseline_1264_state_State }}"
+    state: "{{ win_baseline_1264_state_State }}"
   when:
     win_baseline_1264_state_Manage
 
