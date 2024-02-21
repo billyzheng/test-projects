@@ -422,33 +422,33 @@
 #   when:
 #     win_baseline_1376_state_Manage
 
-- name: "win_baseline_1377_state | Ensure 'Interactive logon - Require Domain Controller Authentication to unlock workstation' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1377_state_Path }}"
-    name: "{{ win_baseline_1377_state_Name }}"
-    data: "{{ win_baseline_1377_state_Data }}"
-    type: "{{ win_baseline_1377_state_Type }}"
-  when:
-    win_baseline_1377_state_Manage
+# - name: "win_baseline_1377_state | Ensure 'Interactive logon - Require Domain Controller Authentication to unlock workstation' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1377_state_Path }}"
+#     name: "{{ win_baseline_1377_state_Name }}"
+#     data: "{{ win_baseline_1377_state_Data }}"
+#     type: "{{ win_baseline_1377_state_Type }}"
+#   when:
+#     win_baseline_1377_state_Manage
 
 # # ! problem, not change successfully
-- name: "win_baseline_1378_state | Ensure 'Interactive logon - Smart card removal behavior' is set to 'Lock Workstation'"
-  win_regedit:
-    path: "{{ win_baseline_1378_state_Path }}"
-    name: "{{ win_baseline_1378_state_Name }}"
-    data: "{{ win_baseline_1378_state_Data }}"
-    type: "{{ win_baseline_1378_state_Type }}"
-  when:
-    win_baseline_1378_state_Manage
-
-# - name: "win_baseline_1379_state | Ensure 'Microsoft network client - Digitally sign communications (if server agrees)' is set to 'Enabled'"
+# - name: "win_baseline_1378_state | Ensure 'Interactive logon - Smart card removal behavior' is set to 'Lock Workstation'"
 #   win_regedit:
-#     path: "{{ win_baseline_1379_state_Path }}"
-#     name: "{{ win_baseline_1379_state_Name }}"
-#     data: "{{ win_baseline_1379_state_Data }}"
-#     type: "{{ win_baseline_1379_state_Type }}"
+#     path: "{{ win_baseline_1378_state_Path }}"
+#     name: "{{ win_baseline_1378_state_Name }}"
+#     data: "{{ win_baseline_1378_state_Data }}"
+#     type: "{{ win_baseline_1378_state_Type }}"
 #   when:
-#     win_baseline_1379_state_Manage
+#     win_baseline_1378_state_Manage
+
+- name: "win_baseline_1379_state | Ensure 'Microsoft network client - Digitally sign communications (if server agrees)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1379_state_Path }}"
+    name: "{{ win_baseline_1379_state_Name }}"
+    data: "{{ win_baseline_1379_state_Data }}"
+    type: "{{ win_baseline_1379_state_Type }}"
+  when:
+    win_baseline_1379_state_Manage
 
 # - name: "win_baseline_1380_state | Ensure 'Microsoft network client - Send unencrypted password to third-party SMB servers' is set to 'Disabled'"
 #   win_regedit:
