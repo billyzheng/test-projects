@@ -612,23 +612,23 @@
 #   when:
 #     win_baseline_1463_state_Manage
 
-- name: "win_baseline_1472_state | Ensure 'Network connections' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_1472_state_Path }}"
-    name: "{{ win_baseline_1472_state_Name }}"
-    data: "{{ win_baseline_1472_state_Data }}"
-    type: "{{ win_baseline_1472_state_Type }}"
-  when:
-    win_baseline_1472_state_Manage
-
-# - name: "win_baseline_1476_state | Ensure 'Romote Access Connection Manager (RasMan)' is set to 'Disabled'"
+# - name: "win_baseline_1472_state | Ensure 'Network connections' is set to 'Automatic'"
 #   win_regedit:
-#     path: "{{ win_baseline_1476_state_Path }}"
-#     name: "{{ win_baseline_1476_state_Name }}"
-#     data: "{{ win_baseline_1476_state_Data }}"
-#     type: "{{ win_baseline_1476_state_Type }}"
+#     path: "{{ win_baseline_1472_state_Path }}"
+#     name: "{{ win_baseline_1472_state_Name }}"
+#     data: "{{ win_baseline_1472_state_Data }}"
+#     type: "{{ win_baseline_1472_state_Type }}"
 #   when:
-#     win_baseline_1476_state_Manage
+#     win_baseline_1472_state_Manage
+
+- name: "win_baseline_1476_state | Ensure 'Romote Access Connection Manager (RasMan)' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1476_state_Path }}"
+    name: "{{ win_baseline_1476_state_Name }}"
+    data: "{{ win_baseline_1476_state_Data }}"
+    type: "{{ win_baseline_1476_state_Type }}"
+  when:
+    win_baseline_1476_state_Manage
 
 # - name: "win_baseline_1509_state | Ensure 'Netlogon' is set to 'Automatic'"
 #   win_regedit:
