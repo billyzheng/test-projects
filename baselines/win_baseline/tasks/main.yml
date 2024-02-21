@@ -558,23 +558,23 @@
 #   when:
 #     win_baseline_1426_state_Manage
 
-- name: "win_baseline_1430_state | Ensure 'Terminal Services' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_1430_state_Path }}"
-    name: "{{ win_baseline_1430_state_Name }}"
-    data: "{{ win_baseline_1430_state_Data }}"
-    type: "{{ win_baseline_1430_state_Type }}"
-  when:
-    win_baseline_1430_state_Manage
-
-# - name: "win_baseline_1432_state | Ensure 'Domain Controller: LDAP server signing requirements' is set to 'Require signing'"
+# - name: "win_baseline_1430_state | Ensure 'Terminal Services' is set to 'Automatic'"
 #   win_regedit:
-#     path: "{{ win_baseline_1432_state_Path }}"
-#     name: "{{ win_baseline_1432_state_Name }}"
-#     data: "{{ win_baseline_1432_state_Data }}"
-#     type: "{{ win_baseline_1432_state_Type }}"
+#     path: "{{ win_baseline_1430_state_Path }}"
+#     name: "{{ win_baseline_1430_state_Name }}"
+#     data: "{{ win_baseline_1430_state_Data }}"
+#     type: "{{ win_baseline_1430_state_Type }}"
 #   when:
-#     win_baseline_1432_state_Manage
+#     win_baseline_1430_state_Manage
+
+- name: "win_baseline_1432_state | Ensure 'Domain Controller: LDAP server signing requirements' is set to 'Require signing'"
+  win_regedit:
+    path: "{{ win_baseline_1432_state_Path }}"
+    name: "{{ win_baseline_1432_state_Name }}"
+    data: "{{ win_baseline_1432_state_Data }}"
+    type: "{{ win_baseline_1432_state_Type }}"
+  when:
+    win_baseline_1432_state_Manage
 
 # - name: "win_baseline_1434_state | Ensure 'Network access: Rediect anonymous access to Named Pipes and Shares' is set to 'Enabled'"
 #   win_regedit:
