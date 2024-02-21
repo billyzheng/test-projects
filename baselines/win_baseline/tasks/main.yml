@@ -299,14 +299,14 @@
 #   when:
 #     win_baseline_1197_state_Manage
 
-- name: "win_baseline_1199_state| Ensure 'Microsoft network server - Amount of idle time required before suspending session' is set to '15 or fewer, but not 0'"
-  win_regedit:
-    path: "{{ win_baseline_1199_state_Path }}"
-    name: "{{ win_baseline_1199_state_Name }}"
-    data: "{{ win_baseline_1199_state_Data }}"
-    type: "{{ win_baseline_1199_state_Type }}"
-  when:
-    win_baseline_1199_state_Manage
+# - name: "win_baseline_1199_state| Ensure 'Microsoft network server - Amount of idle time required before suspending session' is set to '15 or fewer, but not 0'"
+#   win_regedit:
+#     path: "{{ win_baseline_1199_state_Path }}"
+#     name: "{{ win_baseline_1199_state_Name }}"
+#     data: "{{ win_baseline_1199_state_Data }}"
+#     type: "{{ win_baseline_1199_state_Type }}"
+#   when:
+#     win_baseline_1199_state_Manage
 
 # ! not sure and does not work, do not know hot to modify the feature
 # - name: "win_baseline_1200_state | Ensure 'Dynamic Controller: Resuse machine account password changes' is set to 'Disabled'"
