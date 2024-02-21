@@ -504,23 +504,23 @@
 #   when:
 #     win_baseline_1387_state_Manage
 
-- name: "win_baseline_1388_state | Ensure 'Network security - LDAP client signing requirements' is set to 'Negotiate signing' or higher"
-  win_regedit:
-    path: "{{ win_baseline_1388_state_Path }}"
-    name: "{{ win_baseline_1388_state_Name }}"
-    data: "{{ win_baseline_1388_state_Data }}"
-    type: "{{ win_baseline_1388_state_Type }}"
-  when:
-    win_baseline_1388_state_Manage
-
-# - name: "win_baseline_1389_state | Ensure 'Network security - Minimum session security for NTLM SSP based (including secure RPC) clients' is set to 'Require NTLMv2 session security, Require 128-bit encryption'"
+# - name: "win_baseline_1388_state | Ensure 'Network security - LDAP client signing requirements' is set to 'Negotiate signing' or higher"
 #   win_regedit:
-#     path: "{{ win_baseline_1389_state_Path }}"
-#     name: "{{ win_baseline_1389_state_Name }}"
-#     data: "{{ win_baseline_1389_state_Data }}"
-#     type: "{{ win_baseline_1389_state_Type }}"
+#     path: "{{ win_baseline_1388_state_Path }}"
+#     name: "{{ win_baseline_1388_state_Name }}"
+#     data: "{{ win_baseline_1388_state_Data }}"
+#     type: "{{ win_baseline_1388_state_Type }}"
 #   when:
-#     win_baseline_1389_state_Manage
+#     win_baseline_1388_state_Manage
+
+- name: "win_baseline_1389_state | Ensure 'Network security - Minimum session security for NTLM SSP based (including secure RPC) clients' is set to 'Require NTLMv2 session security, Require 128-bit encryption'"
+  win_regedit:
+    path: "{{ win_baseline_1389_state_Path }}"
+    name: "{{ win_baseline_1389_state_Name }}"
+    data: "{{ win_baseline_1389_state_Data }}"
+    type: "{{ win_baseline_1389_state_Type }}"
+  when:
+    win_baseline_1389_state_Manage
 
 # - name: "win_baseline_1390_state | Ensure 'Network security - Minimum session security for NTLM SSP based (including secure RPC) servers' is set to 'Require NTLMv2 session security, Require 128-bit encryption'"
 #   win_regedit:
