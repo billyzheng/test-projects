@@ -308,24 +308,23 @@
 #   when:
 #     win_baseline_1199_state_Manage
 
-# ! not sure and does not work, do not know hot to modify the feature
-- name: "win_baseline_1200_state | Ensure 'Dynamic Controller: Resuse machine account password changes' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1200_state_Path }}"
-    name: "{{ win_baseline_1200_state_Name }}"
-    data: "{{ win_baseline_1200_state_Data }}"
-    type: "{{ win_baseline_1200_state_Type }}"
-  when:
-    win_baseline_1200_state_Manage
-
-# - name: "win_baseline_1264_state | Ensure Dynamic Host Configuration Protocol Client' is set to 'Disabled'"
+# TODO: confirm the path
+# - name: "win_baseline_1200_state | Ensure 'Dynamic Controller: Resuse machine account password changes' is set to 'Disabled'"
 #   win_regedit:
-#     path: "{{ win_baseline_1264_state_Path }}"
-#     name: "{{ win_baseline_1264_state_Name }}"
-#     data: "{{ win_baseline_1264_state_Data }}"
-#     type: "{{ win_baseline_1264_state_Type }}"
+#     path: "{{ win_baseline_1200_state_Path }}"
+#     name: "{{ win_baseline_1200_state_Name }}"
+#     data: "{{ win_baseline_1200_state_Data }}"
+#     type: "{{ win_baseline_1200_state_Type }}"
 #   when:
-#     win_baseline_1264_state_Manage
+#     win_baseline_1200_state_Manage
+
+- name: "win_baseline_1264_state | Ensure Dynamic Host Configuration Protocol Client' is set to 'Key not found'"
+  win_regedit:
+    path: "{{ win_baseline_1264_state_Path }}"
+    name: "{{ win_baseline_1264_state_Name }}"
+    data: "{{ win_baseline_1264_state_State }}"
+  when:
+    win_baseline_1264_state_Manage
 
 # ! not sure
 # - name: "win_baseline_1318_state | Ensure 'Enforce password history' is set to '24 or more password(s)'"

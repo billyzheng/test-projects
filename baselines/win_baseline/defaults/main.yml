@@ -230,12 +230,11 @@ win_baseline_1200_state_Name: "RefusePasswordChange"
 win_baseline_1200_state_Data: "0"
 win_baseline_1200_state_Type: dword
 
-# win_baseline_1264_state | Ensure Dynamic Host Configuration Protocol Client' is set to 'Disabled'
+# win_baseline_1264_state | Ensure Dynamic Host Configuration Protocol Client' is set to 'Key not found'
 win_baseline_1264_state_Manage: True
 win_baseline_1264_state_Path: 'HKLM:\System\Currentcontrolset\Services\'
 win_baseline_1264_state_Name: "DHCP"
-win_baseline_1264_state_Data: "4"
-win_baseline_1264_state_Type: dword
+win_baseline_1264_state_State: "present"
 
 # win_baseline_1366_state | Ensure 'Accounts - Limit local account use of blank passwords to console logon only' is set to 'Enabled'
 win_baseline_1366_state_Manage: True
