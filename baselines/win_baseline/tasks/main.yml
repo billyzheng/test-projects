@@ -682,7 +682,6 @@
     name: "{{ win_baseline_2181_state_Name }}"
     users: "{{ win_baseline_2181_state_Users }}"
     action: "{{ win_baseline_2181_state_Action }}"
-    register: u
   when:
     win_baseline_2181_state_Manage
 
