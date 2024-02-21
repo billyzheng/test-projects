@@ -414,8 +414,8 @@ win_baseline_1426_state_Type: dword
 
 # win_baseline_1430_state | Ensure 'Terminal Services' is set to 'Automatic'
 win_baseline_1430_state_Manage: True
-win_baseline_1430_state_Path: 'HKLM:\System\Currentcontrolset\Services\TermService'
-win_baseline_1430_state_Name: "Start"
+win_baseline_1430_state_Path: 'HKLM:\System\Currentcontrolset\Services'
+win_baseline_1430_state_Name: "TermService"
 win_baseline_1430_state_Data: "2"
 win_baseline_1430_state_Type: dword
 
