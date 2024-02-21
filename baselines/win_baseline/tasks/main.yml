@@ -468,23 +468,23 @@
 #   when:
 #     win_baseline_1381_state_Manage
 
-- name: "win_baseline_1382_state | Ensure 'Microsoft network server - Disconnect clients when logon hours expire' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1382_state_Path }}"
-    name: "{{ win_baseline_1382_state_Name }}"
-    data: "{{ win_baseline_1382_state_Data }}"
-    type: "{{ win_baseline_1382_state_Type }}"
-  when:
-    win_baseline_1382_state_Manage
-
-# - name: "win_baseline_1383_state | Ensure 'Network access - Let Everyone permissions apply to anonymous users' is set to 'Disabled'"
+# - name: "win_baseline_1382_state | Ensure 'Microsoft network server - Disconnect clients when logon hours expire' is set to 'Enabled'"
 #   win_regedit:
-#     path: "{{ win_baseline_1383_state_Path }}"
-#     name: "{{ win_baseline_1383_state_Name }}"
-#     data: "{{ win_baseline_1383_state_Data }}"
-#     type: "{{ win_baseline_1383_state_Type }}"
+#     path: "{{ win_baseline_1382_state_Path }}"
+#     name: "{{ win_baseline_1382_state_Name }}"
+#     data: "{{ win_baseline_1382_state_Data }}"
+#     type: "{{ win_baseline_1382_state_Type }}"
 #   when:
-#     win_baseline_1383_state_Manage
+#     win_baseline_1382_state_Manage
+
+- name: "win_baseline_1383_state | Ensure 'Network access - Let Everyone permissions apply to anonymous users' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1383_state_Path }}"
+    name: "{{ win_baseline_1383_state_Name }}"
+    data: "{{ win_baseline_1383_state_Data }}"
+    type: "{{ win_baseline_1383_state_Type }}"
+  when:
+    win_baseline_1383_state_Manage
 
 # - name: "win_baseline_1386_state | Ensure 'Network access - Sharing and security model for local accounts' is 'Classic - local users authenticate as themselves'"
 #   win_regedit:
