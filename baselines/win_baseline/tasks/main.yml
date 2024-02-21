@@ -310,7 +310,7 @@
 
 # ! not sure and does not work, do not know hot to modify the feature
 - name: "win_baseline_1200_state | Ensure 'Dynamic Controller: Resuse machine account password changes' is set to 'Disabled'"
-  win_security_policy:
+  win_regedit:
     path: "{{ win_baseline_1200_state_Path }}"
     name: "{{ win_baseline_1200_state_Name }}"
     data: "{{ win_baseline_1200_state_Data }}"
