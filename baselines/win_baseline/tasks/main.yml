@@ -326,20 +326,20 @@
 #   when:
 #     win_baseline_1264_state_Manage
 
-- name: "win_baseline_1318_state | Ensure 'Enforce password history' is set to '24 or more password(s)'"
-  win_security_policy:
-    section: System Access
-    key: PasswordHistorySize
-    value: 24
+# - name: "win_baseline_1318_state | Ensure 'Enforce password history' is set to '24 or more password(s)'"
+#   win_security_policy:
+#     section: System Access
+#     key: PasswordHistorySize
+#     value: 24
 
-# - name: "win_baseline_1366_state | Ensure 'Accounts - Limit local account use of blank passwords to console logon only' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1366_state_Path }}"
-#     name: "{{ win_baseline_1366_state_Name }}"
-#     data: "{{ win_baseline_1366_state_Data }}"
-#     type: "{{ win_baseline_1366_state_Type }}"
-#   when:
-#     win_baseline_1366_state_Manage
+- name: "win_baseline_1366_state | Ensure 'Accounts - Limit local account use of blank passwords to console logon only' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1366_state_Path }}"
+    name: "{{ win_baseline_1366_state_Name }}"
+    data: "{{ win_baseline_1366_state_Data }}"
+    type: "{{ win_baseline_1366_state_Type }}"
+  when:
+    win_baseline_1366_state_Manage
 
 # - name: "win_baseline_1368_state | Ensure 'Print Spooler' service is set to 'Automatic'"
 #   win_regedit:
