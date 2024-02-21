@@ -454,6 +454,13 @@ win_baseline_1463_state_Name: "WarningLevel"
 win_baseline_1463_state_Data: "75"
 win_baseline_1463_state_Type: dword
 
+# win_baseline_1472_state | Ensure 'Network connections' is set to 'Automatic'
+win_baseline_1472_state_Manage: True
+win_baseline_1472_state_Path: 'HKLM:\System\Currentcontrolset\Services'
+win_baseline_1472_state_Name: "Netman"
+win_baseline_1472_state_Data: "2"
+win_baseline_1472_state_Type: dword
+
 # win_baseline_1476_state | Ensure 'Romote Access Connection Manager (RasMan)' is set to 'Disabled'
 win_baseline_1476_state_Manage: True
 win_baseline_1476_state_Path: 'HKLM:\System\Currentcontrolset\Services'
