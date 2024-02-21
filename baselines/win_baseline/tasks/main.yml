@@ -332,23 +332,23 @@
 #     key: PasswordHistorySize
 #     value: 24
 
-- name: "win_baseline_1366_state | Ensure 'Accounts - Limit local account use of blank passwords to console logon only' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1366_state_Path }}"
-    name: "{{ win_baseline_1366_state_Name }}"
-    data: "{{ win_baseline_1366_state_Data }}"
-    type: "{{ win_baseline_1366_state_Type }}"
-  when:
-    win_baseline_1366_state_Manage
-
-# - name: "win_baseline_1368_state | Ensure 'Print Spooler' service is set to 'Automatic'"
+# - name: "win_baseline_1366_state | Ensure 'Accounts - Limit local account use of blank passwords to console logon only' is set to 'Enabled'"
 #   win_regedit:
-#     path: "{{ win_baseline_1368_state_Path }}"
-#     name: "{{ win_baseline_1368_state_Name }}"
-#     data: "{{ win_baseline_1368_state_Data }}"
-#     type: "{{ win_baseline_1368_state_Type }}"
+#     path: "{{ win_baseline_1366_state_Path }}"
+#     name: "{{ win_baseline_1366_state_Name }}"
+#     data: "{{ win_baseline_1366_state_Data }}"
+#     type: "{{ win_baseline_1366_state_Type }}"
 #   when:
-#     win_baseline_1368_state_Manage
+#     win_baseline_1366_state_Manage
+
+- name: "win_baseline_1368_state | Ensure 'Print Spooler' service is set to 'Automatic'"
+  win_regedit:
+    path: "{{ win_baseline_1368_state_Path }}"
+    name: "{{ win_baseline_1368_state_Name }}"
+    data: "{{ win_baseline_1368_state_Data }}"
+    type: "{{ win_baseline_1368_state_Type }}"
+  when:
+    win_baseline_1368_state_Manage
 
 # - name: "win_baseline_1369_state | Ensure 'Shutdown - Allow system to be shut down without having to log on' is set to 'Disabled'"
 #   win_regedit:
