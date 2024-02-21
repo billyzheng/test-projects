@@ -489,7 +489,7 @@ win_baseline_1512_state_Name: "upnphost"
 win_baseline_1512_state_Data: "4"
 win_baseline_1512_state_Type: dword
 
-# win_baseline_1514_state | Ensure 'Restrictions for Unauthenticated RPC clients' is set to 'Authenticated without exceptions'
+# win_baseline_1514_state | Ensure 'Restrictions for Unauthenticated RPC clients' is set to 'Authenticated'
 win_baseline_1514_state_Manage: True
 win_baseline_1514_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows NT\Rpc'
 win_baseline_1514_state_Name: "RestrictRemoteClients"
