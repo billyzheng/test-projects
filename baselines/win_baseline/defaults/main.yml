@@ -580,6 +580,12 @@ win_baseline_2197_state_Name: "SeDenyBatchLogonRight"
 win_baseline_2197_state_Users: "Guests, Guest"
 win_baseline_2197_state_Action: set
 
+# win_baseline_2198_state | Ensure 'Deny logon as a service' is set to 'Guests, Guest'
+win_baseline_2198_state_Manage: True
+win_baseline_2198_state_Name: "SeDenyServiceLogonRight"
+win_baseline_2198_state_Users: "Guests, Guest"
+win_baseline_2198_state_Action: set
+
 # win_baseline_2341_state | Ensure 'Account lockout duration' is set to '15 or more minute(s)'
 win_baseline_2341_state_Manage: True
 win_baseline_2341_state_Section: "System Access"

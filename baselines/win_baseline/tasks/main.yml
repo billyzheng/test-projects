@@ -773,13 +773,21 @@
 #   when:
 #     win_baseline_2196_state_Manage
 
-- name: "win_baseline_2197_state | Ensure 'Dely logon as a batch job' is set to 'Guests, Guest'"
+# - name: "win_baseline_2197_state | Ensure 'Deny logon as a batch job' is set to 'Guests, Guest'"
+#   win_user_right:
+#     name: "{{ win_baseline_2197_state_Name }}"
+#     users: "{{ win_baseline_2197_state_Users }}"
+#     action: "{{ win_baseline_2197_state_Action }}"
+#   when:
+#     win_baseline_2197_state_Manage
+
+- name: "win_baseline_2198_state | Ensure 'Deny log on as a service' is set to 'Guests, Guest'"
   win_user_right:
-    name: "{{ win_baseline_2197_state_Name }}"
-    users: "{{ win_baseline_2197_state_Users }}"
-    action: "{{ win_baseline_2197_state_Action }}"
+    name: "{{ win_baseline_2198_state_Name }}"
+    users: "{{ win_baseline_2198_state_Users }}"
+    action: "{{ win_baseline_2198_state_Action }}"
   when:
-    win_baseline_2197_state_Manage
+    win_baseline_2198_state_Manage
 
 # The following tasks should be test one by one, to find the credential problem.
 # - name: "win_baseline_2341_state | Ensure 'Account lockout duration' is set to '30 or more minute(s)'"
