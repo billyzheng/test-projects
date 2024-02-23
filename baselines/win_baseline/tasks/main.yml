@@ -744,6 +744,7 @@
 - name: "win_baseline_2193_state | Ensrue 'Create a Token Object' is set to 'No One'"
   win_user_right:
     name: "{{ win_baseline_2193_state_Name }}"
+    users: "{{ win_baseline_2193_state_Users }}"
     action: "{{ win_baseline_2193_state_Action }}"
   when:
     win_baseline_2193_state_Manage
