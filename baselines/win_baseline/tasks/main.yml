@@ -741,21 +741,29 @@
 #   when:
 #     win_baseline_2192_state_Manage
   
-- name: "win_baseline_2193_state | Ensrue 'Create a Token Object' is set to 'No One'"
-  win_user_right:
-    name: "{{ win_baseline_2193_state_Name }}"
-    users: "{{ win_baseline_2193_state_Users }}"
-    action: "{{ win_baseline_2193_state_Action }}"
-  when:
-    win_baseline_2193_state_Manage
+# - name: "win_baseline_2193_state | Ensrue 'Create a Token Object' is set to 'No One'"
+#   win_user_right:
+#     name: "{{ win_baseline_2193_state_Name }}"
+#     users: "{{ win_baseline_2193_state_Users }}"
+#     action: "{{ win_baseline_2193_state_Action }}"
+#   when:
+#     win_baseline_2193_state_Manage
 
-- name: "win_baseline_2194_state | Ensure 'Create permanent shared objects' is set to 'No One'"
+# - name: "win_baseline_2194_state | Ensure 'Create permanent shared objects' is set to 'No One'"
+#   win_user_right:
+#     name: "{{ win_baseline_2194_state_Name }}"
+#     users: "{{ win_baseline_2194_state_Users }}"
+#     action: "{{ win_baseline_2194_state_Action }}"
+#   when:
+#     win_baseline_2194_state_Manage
+
+- name: "win_baseline_2195_state | Ensure 'Debug programs' is set to 'No One'"
   win_user_right:
-    name: "{{ win_baseline_2194_state_Name }}"
-    users: "{{ win_baseline_2194_state_Users }}"
-    action: "{{ win_baseline_2194_state_Action }}"
+    name: "{{ win_baseline_2195_state_Name }}"
+    users: "{{ win_baseline_2195_state_Users }}"
+    action: "{{ win_baseline_2195_state_Action }}"
   when:
-    win_baseline_2194_state_Manage
+    win_baseline_2195_state_Manage
 
 # The following tasks should be test one by one, to find the credential problem.
 # - name: "win_baseline_2341_state | Ensure 'Account lockout duration' is set to '30 or more minute(s)'"
