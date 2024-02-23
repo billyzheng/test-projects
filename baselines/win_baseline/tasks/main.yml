@@ -693,13 +693,36 @@
 #   when:
 #     win_baseline_2182_state_Manage
 
-- name: "win_baseline_2183_state | Ensure 'Add workstations to domain' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2183_state_Name }}"
-    users: "{{ win_baseline_2183_state_Users }}"
-    action: "{{ win_baseline_2183_state_Action }}"
-  when:
-    win_baseline_2183_state_Manage
+# - name: "win_baseline_2183_state | Ensure 'Add workstations to domain' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2183_state_Name }}"
+#     users: "{{ win_baseline_2183_state_Users }}"
+#     action: "{{ win_baseline_2183_state_Action }}"
+#   when:
+#     win_baseline_2183_state_Manage
+
+- name: 获取本地安全策略
+  win_command: secedit /export /cfg c:\secpol.cfg
+
+- name: 读取安全策略文件
+  slurp:
+    src: c:\secpol.cfg
+  register: policy_file
+
+- name: 解析安全策略
+  block:
+    - name: 提取用户和组列表
+      set_fact:
+        user_groups: "{{ policy_file['content'] | b64decode | regex_findall('SeMachineAccountPrivilege\\\\n\\s+Accounts:\\\\n\\s+(.*)') }}"
+  rescue:
+    - name: 处理解析错误
+      debug:
+        msg: "无法解析安全策略文件。"
+
+- name: 显示用户和组列表
+  debug:
+    var: user_groups
+
 
 # The following tasks should be test one by one, to find the credential problem.
 # - name: "win_baseline_2341_state | Ensure 'Account lockout duration' is set to '30 or more minute(s)'"
