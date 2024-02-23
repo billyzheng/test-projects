@@ -732,6 +732,14 @@
     action: "{{ win_baseline_2191_state_Action }}"
   when:
     win_baseline_2191_state_Manage
+
+- name: "win_baseline_2192_state | Ensure 'Crate a pagefile' is set to 'Administrators'"
+  win_user_right:
+    name: "{{ win_baseline_2192_state_Name }}"
+    users: "{{ win_baseline_2192_state_Users }}"
+    action: "{{ win_baseline_2192_state_Action }}"
+  when:
+    win_baseline_2192_state_Manage
   
 
 # The following tasks should be test one by one, to find the credential problem.

@@ -544,6 +544,13 @@ win_baseline_2191_state_Name: "SeSystemtimePrivilege"
 win_baseline_2191_state_Users: "Administrators, Local Service"
 win_baseline_2191_state_Action: set
 
+# win_baseline_2192_state | Ensure 'Crate a pagefile' is set to 'Administrators'
+win_baseline_2192_state_Manage: True
+win_baseline_2192_state_Name: "SeCreatePagefilePrivilege"
+win_baseline_2192_state_Users: "Administrators"
+win_baseline_2192_state_Action: set
+
+
 # win_baseline_2341_state | Ensure 'Account lockout duration' is set to '15 or more minute(s)'
 win_baseline_2341_state_Manage: True
 win_baseline_2341_state_Section: "System Access"
