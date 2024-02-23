@@ -713,7 +713,7 @@
   block:
     - name: 提取用户和组列表
       set_fact:
-        user_groups: "{{ policy_file['content'] | b64decode | regex_findall('SeMachineAccountPrivilege\\\\n\\s+Accounts:\\\\n\\s+(.*)') }}"
+        user_groups: "{{ policy_file['content'] | b64decode | regex_findall('SeMachineAccountPrivilege\\\\n\\s+Group:\\\\n\\s+(.*)') }}"
   rescue:
     - name: 处理解析错误
       debug:
