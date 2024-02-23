@@ -574,6 +574,11 @@ win_baseline_2196_state_Name: "SeDenyNetworkLogonRight"
 win_baseline_2196_state_Users: "Guests, Guest"
 win_baseline_2196_state_Action: set
 
+# win_baseline_2197_state | Ensure 'Deny logon as a batch job' is set to 'Guests, Guest
+win_baseline_2197_state_Manage: True
+win_baseline_2197_state_Name: "SeDenyBatchLogonRight"
+win_baseline_2197_state_Users: "Guests, Guest"
+win_baseline_2197_state_Action: set
 
 # win_baseline_2341_state | Ensure 'Account lockout duration' is set to '15 or more minute(s)'
 win_baseline_2341_state_Manage: True
