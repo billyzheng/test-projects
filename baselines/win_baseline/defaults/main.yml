@@ -509,6 +509,12 @@ win_baseline_2181_state_Name: "SeNetworkLogonRight"
 win_baseline_2181_state_Users: "Administrators, Authenticated Users"
 win_baseline_2181_state_Action: set
 
+# win_baseline_2182_state | Ensure 'Act as part of the operating system' right is set to 'Backup Operators, GL-arsservice'
+win_baseline_2182_state_Manage: True
+win_baseline_2182_state_Name: "SeTcbPrivilege"
+win_baseline_2182_state_Users: "Backup Operators, GL-arsservice"
+win_baseline_2182_state_Action: set
+
 # win_baseline_2341_state | Ensure 'Account lockout duration' is set to '15 or more minute(s)'
 win_baseline_2341_state_Manage: True
 win_baseline_2341_state_Section: "System Access"
