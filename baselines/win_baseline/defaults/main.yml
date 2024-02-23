@@ -554,7 +554,7 @@ win_baseline_2192_state_Action: set
 win_baseline_2193_state_Manage: True
 win_baseline_2193_state_Name: "SeCreateTokenPrivilege"
 win_baseline_2193_state_Users: ""
-win_baseline_2193_state_Action: set
+win_baseline_2193_state_Action: remove
 
 
 # win_baseline_2341_state | Ensure 'Account lockout duration' is set to '15 or more minute(s)'
