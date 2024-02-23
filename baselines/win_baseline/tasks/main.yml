@@ -701,21 +701,30 @@
 #   when:
 #     win_baseline_2183_state_Manage
 
-- name: "win_baseline_2185_state | Ensure 'Allow logon through terminal services' is set to 'Administrators, Remote Desktop Users"
-  win_user_right:
-    name: "{{ win_baseline_2185_state_Name }}"
-    users: "{{ win_baseline_2185_state_Users }}"
-    action: "{{ win_baseline_2185_state_Action }}"
-  when: 
-    win_baseline_2185_state_Manage
+# - name: "win_baseline_2185_state | Ensure 'Allow logon through terminal services' is set to 'Administrators, Remote Desktop Users"
+#   win_user_right:
+#     name: "{{ win_baseline_2185_state_Name }}"
+#     users: "{{ win_baseline_2185_state_Users }}"
+#     action: "{{ win_baseline_2185_state_Action }}"
+#   when: 
+#     win_baseline_2185_state_Manage
 
-- name: "win_baseline_2186_state | Ensure 'Back up files and directories' is set to 'Administrators, Backup Operators'"
+# - name: "win_baseline_2186_state | Ensure 'Back up files and directories' is set to 'Administrators, Backup Operators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2186_state_Name }}"
+#     users: "{{ win_baseline_2186_state_Users }}"
+#     action: "{{ win_baseline_2186_state_Action }}"
+#   when: 
+#     win_baseline_2186_state_Manage
+
+- name: "win_baseline_2187_state | Ensure 'Bypass traverse checking' is set to 'Administrators, Authenticated Users, Backup Operators, Local Service, Network Service'"
   win_user_right:
-    name: "{{ win_baseline_2186_state_Name }}"
-    users: "{{ win_baseline_2186_state_Users }}"
-    action: "{{ win_baseline_2186_state_Action }}"
-  when: 
-    win_baseline_2186_state_Manage
+    name: "{{ win_baseline_2187_state_Name }}"
+    users: "{{ win_baseline_2187_state_Users }}"
+    action: "{{ win_baseline_2187_state_Action }}"
+  when:
+    win_baseline_2187_state_Manage
+  
 
 # The following tasks should be test one by one, to find the credential problem.
 # - name: "win_baseline_2341_state | Ensure 'Account lockout duration' is set to '30 or more minute(s)'"

@@ -532,6 +532,14 @@ win_baseline_2186_state_Name: "SeBackupPrivilege"
 win_baseline_2186_state_Users: "Administrators, Backup Operators"
 win_baseline_2186_state_Action: set
 
+# win_baseline_2187_state | Ensure 'Bypass traverse checking' is set to 'Administrators, Authenticated Users, Backup Operators, Local Service, Network Service'
+win_baseline_2187_state_Manage: True
+win_baseline_2187_state_Name: "SeChangeNotifyPrivilege"
+win_baseline_2187_state_Users: "Administrators, Authenticated Users, Backup Operators, Local Service, Network Service"
+win_baseline_2187_state_Action: set
+
+
+
 # win_baseline_2341_state | Ensure 'Account lockout duration' is set to '15 or more minute(s)'
 win_baseline_2341_state_Manage: True
 win_baseline_2341_state_Section: "System Access"
