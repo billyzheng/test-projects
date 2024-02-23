@@ -565,7 +565,7 @@ win_baseline_2194_state_Action: set
 # win_baseline_2195_state | Ensure 'Debug programs' is set to 'No One'
 win_baseline_2195_state_Manage: True
 win_baseline_2195_state_Name: "SeDebugPrivilege"
-win_baseline_2195_state_Users: "[]]"
+win_baseline_2195_state_Users: "[]"
 win_baseline_2195_state_Action: set
 
 # win_baseline_2341_state | Ensure 'Account lockout duration' is set to '15 or more minute(s)'
