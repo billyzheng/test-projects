@@ -538,7 +538,11 @@ win_baseline_2187_state_Name: "SeChangeNotifyPrivilege"
 win_baseline_2187_state_Users: "Administrators, Authenticated Users, Backup Operators, Local Service, Network Service"
 win_baseline_2187_state_Action: set
 
-
+# win_baseline_2191_state | Ensure 'Change the system time' is set to 'Administrators, Local Service'
+win_baseline_2191_state_Manage: True
+win_baseline_2191_state_Name: "SeSystemtimePrivilege"
+win_baseline_2191_state_Users: "Administrators, Local Service"
+win_baseline_2191_state_Action: set
 
 # win_baseline_2341_state | Ensure 'Account lockout duration' is set to '15 or more minute(s)'
 win_baseline_2341_state_Manage: True
