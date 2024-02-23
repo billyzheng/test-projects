@@ -527,6 +527,11 @@ win_baseline_8250_state_Name: "SeRemoteInteractiveLogonRight"
 win_baseline_2185_state_Users: "Administrators, Remote Desktop Users"
 win_baseline_2185_state_Action: set
 
+win_baseline_2186_state_Manage: True
+win_baseline_2186_state_Name: "SeBackupPrivilege"
+win_baseline_2186_state_Users: "Administrators, Backup Operators"
+win_baseline_2186_state_Action: set
+
 # win_baseline_2341_state | Ensure 'Account lockout duration' is set to '15 or more minute(s)'
 win_baseline_2341_state_Manage: True
 win_baseline_2341_state_Section: "System Access"
