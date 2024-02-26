@@ -2368,7 +2368,7 @@ win_baseline_11385_state_Type: dword
 # win_baseline_11507_state | Ensure 'Obtain an impersonation token for another user in the same session' is set to 'Administrators, Local Service, Network Service
 win_baseline_11507_state_Manage: True
 win_baseline_11507_state_Name: "SeImpersonatePrivilege"
-win_baseline_11507_state_Data: "Administrators, Local Service, Network Service"
+win_baseline_11507_state_Users: "Administrators, Local Service, Network Service"
 win_baseline_11507_state_Action: set
 
 
