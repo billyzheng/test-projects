@@ -1527,6 +1527,7 @@ win_baseline_8231_state_Type: dword
 
 # win_baseline_8232_state | Ensure 'Modify an object label' is set to 'No One'
 win_baseline_8232_state_Manage: True
+win_baseline_8232_state_Name: "SeRelabelPrivilege"
 win_baseline_8232_state_Users: "[]"
 win_baseline_8232_state_Action: "set"
 
