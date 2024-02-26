@@ -635,7 +635,7 @@ win_baseline_2388_state_Users: "[]"
 win_baseline_2388_state_Action: set
 
 # win_baseline_2389_stae | Ensure 'Log on as a batch job' is set to 'Administrators
-win_basleine_2389_state_Manage: True
+win_baseline_2389_state_Manage: True
 win_baseline_2389_state_Name: "SeBatchLogonRight"
 win_baseline_2389_state_Users: "Administrators, Backup operators, Performance log users, IIS_IUSRS"
 win_baseline_2389_state_Action: set
