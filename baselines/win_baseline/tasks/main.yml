@@ -937,37 +937,37 @@
 #   when:
 #     win_baseline_2398_state_Manage
 
-- name: "win_baseline_2399_state | Ensure 'Restore files and directories' is set to 'Administrators, Backup Operators'"
-  win_user_right:
-    name: "{{ win_baseline_2399_state_Name }}"
-    users: "{{ win_baseline_2399_state_Users }}"
-    action: "{{ win_baseline_2399_state_Action }}"
-  when:
-    win_baseline_2399_state_Manage
+# - name: "win_baseline_2399_state | Ensure 'Restore files and directories' is set to 'Administrators, Backup Operators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2399_state_Name }}"
+#     users: "{{ win_baseline_2399_state_Users }}"
+#     action: "{{ win_baseline_2399_state_Action }}"
+#   when:
+#     win_baseline_2399_state_Manage
 
-- name: "win_baseline_2400_state | Ensure 'Shut down the system' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2400_state_Name }}"
-    users: "{{ win_baseline_2400_state_Users }}"
-    action: "{{ win_baseline_2400_state_Action }}"
-  when:
-    win_baseline_2400_state_Manage
+# - name: "win_baseline_2400_state | Ensure 'Shut down the system' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2400_state_Name }}"
+#     users: "{{ win_baseline_2400_state_Users }}"
+#     action: "{{ win_baseline_2400_state_Action }}"
+#   when:
+#     win_baseline_2400_state_Manage
 
-- name: "win_baseline_2401_state | Ensure 'Synchronize directory service data' is set to 'No one'"
-  win_user_right:
-    name: "{{ win_baseline_2401_state_Name }}"
-    users: "{{ win_baseline_2401_state_Users }}"
-    action: "{{ win_baseline_2401_state_Action }}"
-  when:
-    win_baseline_2401_state_Manage
+# - name: "win_baseline_2401_state | Ensure 'Synchronize directory service data' is set to 'No one'"
+#   win_user_right:
+#     name: "{{ win_baseline_2401_state_Name }}"
+#     users: "{{ win_baseline_2401_state_Users }}"
+#     action: "{{ win_baseline_2401_state_Action }}"
+#   when:
+#     win_baseline_2401_state_Manage
 
-- name: "win_baseline_2402_state | Ensure 'Take ownership of files or other objects' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2402_state_Name }}"
-    users: "{{ win_baseline_2402_state_Users }}"
-    action: "{{ win_baseline_2402_state_Action }}"
-  when:
-    win_baseline_2402_state_Manage
+# - name: "win_baseline_2402_state | Ensure 'Take ownership of files or other objects' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2402_state_Name }}"
+#     users: "{{ win_baseline_2402_state_Users }}"
+#     action: "{{ win_baseline_2402_state_Action }}"
+#   when:
+#     win_baseline_2402_state_Manage
 
 # The following tasks should be test one by one, to find the credential problem.
 # - name: "win_baseline_2341_state | Ensure 'Account lockout duration' is set to '30 or more minute(s)'"
@@ -1174,68 +1174,68 @@
 #   when:
 #     win_baseline_3377_state_Manage
 
-- name: "win_baseline_3657_state | Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'"
-  win_security_policy:
-    section: "{{ win_baseline_3657_state_Section }}"
-    key: "{{ win_baseline_3657_state_Key }}"
-    value: "{{ win_baseline_3657_state_Value }}"
-  when:
-    win_baseline_3657_state_Manage
-
-# TODO: many tasks are skipped.
-- name: "win_baseline_3719_state | Ensure 'Internet connection sharing' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3719_state_Path }}"
-    name: "{{ win_baseline_3719_state_Name }}"
-    data: "{{ win_baseline_3719_state_Data }}"
-    type: "{{ win_baseline_3719_state_Type }}"
-  when:
-    win_baseline_3719_state_Manage
-
-- name: "win_baseline_3729_state | Ensure 'Server' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_3729_state_Path }}"
-    name: "{{ win_baseline_3729_state_Name }}"
-    data: "{{ win_baseline_3729_state_Data }}"
-    type: "{{ win_baseline_3729_state_Type }}"
-  when:
-    win_baseline_3729_state_Manage
-
-- name: "win_baseline_3734_state | Ensure 'Windows installer' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_3734_state_Path }}"
-    name: "{{ win_baseline_3734_state_Name }}"
-    data: "{{ win_baseline_3734_state_Data }}"
-    type: "{{ win_baseline_3734_state_Type }}"
-  when:
-    win_baseline_3734_state_Manage
-
-- name: "win_baseline_3737_state | Ensure 'Windows time' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_3737_state_Path }}"
-    name: "{{ win_baseline_3737_state_Name }}"
-    data: "{{ win_baseline_3737_state_Data }}"
-    type: "{{ win_baseline_3737_state_Type }}"
-  when:
-    win_baseline_3737_state_Manage
-
-# - name: "win_baseline_3875_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3875_state_Path }}"
-#     name: "{{ win_baseline_3875_state_Name }}"
-#     data: "{{ win_baseline_3875_state_Data }}"
-#     type: "{{ win_baseline_3875_state_Type }}"
+# - name: "win_baseline_3657_state | Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'"
+#   win_security_policy:
+#     section: "{{ win_baseline_3657_state_Section }}"
+#     key: "{{ win_baseline_3657_state_Key }}"
+#     value: "{{ win_baseline_3657_state_Value }}"
 #   when:
-#     win_baseline_3875_state_Manage
+#     win_baseline_3657_state_Manage
 
-- name: "win_baseline_3778_state | Ensure 'Login banner' is set to 'This is an interest computer system of ABB...'"
-  win_regedit:
-    path: "{{ win_baseline_3778_state_Path }}"
-    name: "{{ win_baseline_3778_state_Name }}"
-    data: "{{ win_baseline_3778_state_Data }}"
-    type: "{{ win_baseline_3778_state_Type }}"
-  when:
-    win_baseline_3778_state_Manage
+# # TODO: many tasks are skipped.
+# - name: "win_baseline_3719_state | Ensure 'Internet connection sharing' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3719_state_Path }}"
+#     name: "{{ win_baseline_3719_state_Name }}"
+#     data: "{{ win_baseline_3719_state_Data }}"
+#     type: "{{ win_baseline_3719_state_Type }}"
+#   when:
+#     win_baseline_3719_state_Manage
+
+# - name: "win_baseline_3729_state | Ensure 'Server' is set to 'Automatic'"
+#   win_regedit:
+#     path: "{{ win_baseline_3729_state_Path }}"
+#     name: "{{ win_baseline_3729_state_Name }}"
+#     data: "{{ win_baseline_3729_state_Data }}"
+#     type: "{{ win_baseline_3729_state_Type }}"
+#   when:
+#     win_baseline_3729_state_Manage
+
+# - name: "win_baseline_3734_state | Ensure 'Windows installer' is set to 'Automatic'"
+#   win_regedit:
+#     path: "{{ win_baseline_3734_state_Path }}"
+#     name: "{{ win_baseline_3734_state_Name }}"
+#     data: "{{ win_baseline_3734_state_Data }}"
+#     type: "{{ win_baseline_3734_state_Type }}"
+#   when:
+#     win_baseline_3734_state_Manage
+
+# - name: "win_baseline_3737_state | Ensure 'Windows time' is set to 'Automatic'"
+#   win_regedit:
+#     path: "{{ win_baseline_3737_state_Path }}"
+#     name: "{{ win_baseline_3737_state_Name }}"
+#     data: "{{ win_baseline_3737_state_Data }}"
+#     type: "{{ win_baseline_3737_state_Type }}"
+#   when:
+#     win_baseline_3737_state_Manage
+
+# # - name: "win_baseline_3875_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
+# #   win_regedit:
+# #     path: "{{ win_baseline_3875_state_Path }}"
+# #     name: "{{ win_baseline_3875_state_Name }}"
+# #     data: "{{ win_baseline_3875_state_Data }}"
+# #     type: "{{ win_baseline_3875_state_Type }}"
+# #   when:
+# #     win_baseline_3875_state_Manage
+
+# - name: "win_baseline_3778_state | Ensure 'Login banner' is set to 'This is an interest computer system of ABB...'"
+#   win_regedit:
+#     path: "{{ win_baseline_3778_state_Path }}"
+#     name: "{{ win_baseline_3778_state_Name }}"
+#     data: "{{ win_baseline_3778_state_Data }}"
+#     type: "{{ win_baseline_3778_state_Type }}"
+#   when:
+#     win_baseline_3778_state_Manage
 
 # - name: "win_baseline_3876_state | Ensure 'Do not allow passwords to be saved' is set to 'Enabled'"
 #   win_regedit:
@@ -2046,6 +2046,7 @@
   win_user_right:
     name: "{{ win_baseline_8232_state_Name }}"
     users: "{{ win_baseline_8232_state_Users }}"
+    action: "{{ win_baseline_8232_state_Action }}"
   when:
     win_baseline_8232_state_Manage
 
