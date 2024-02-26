@@ -622,7 +622,11 @@ win_baseline_2386_state_Name: "SeIncreaseBasePriorityPrivilege"
 win_baseline_2386_state_Users: "Administrators"
 win_baseline_2386_state_Action: set
 
-
+# win_baseline_2387_state | Ensure 'Load and unload device drivers' is set to 'Administrators'
+win_baseline_2387_state_Manage: True
+win_baseline_2387_state_Name: "SeLoadDriverPrivilege"
+win_baseline_2387_state_Users: "Administrators"
+win_baseline_2387_state_Action: set
 
 # win_baseline_2341_state | Ensure 'Account lockout duration' is set to '15 or more minute(s)'
 win_baseline_2341_state_Manage: True

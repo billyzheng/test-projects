@@ -837,6 +837,14 @@
   when:
     win_baseline_2386_state_Manage
 
+- name: "win_baseline_2387_state | Ensure 'Load and unload device drivers' is set to 'Administrators'"
+  win_user_right:
+    name: "{{ win_baseline_2387_state_Name }}"
+    users: "{{ win_baseline_2387_state_Users }}"
+    action: "{{ win_baseline_2387_state_Action }}"
+  when:
+    win_baseline_2387_state_Manage  
+
 # The following tasks should be test one by one, to find the credential problem.
 # - name: "win_baseline_2341_state | Ensure 'Account lockout duration' is set to '30 or more minute(s)'"
 #   win_security_policy:
