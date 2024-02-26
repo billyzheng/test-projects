@@ -1140,6 +1140,23 @@
   when:
     win_baseline_2642_state_Manage
 
+- name: "win_baseline_2681_sate | Ensure 'Turn of windows update device driver searching setting' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_2681_state_Path }}"
+    name: "{{ win_baseline_2681_state_Name }}"
+    data: "{{ win_baseline_2681_state_Data }}"
+    type: "{{ win_baseline_2681_state_Type }}"
+  when:
+    win_baseline_2681_state_Manage
+
+- name: "win_baseline_3242_state | Ensure 'Create Global Objects' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE"
+  win_user_right:
+    name: "{{ win_baseline_3242_state_Name }}"
+    users: "{{ win_baseline_3242_state_Users }}"
+    action: "{{ win_baseline_3242_state_Action }}"
+  when:
+    win_baseline_3242_state_Manage
+
 # - name: "win_baseline_3376_state | Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'"
 #   win_security_policy:
 #     section: "{{ win_baseline_3376_state_Section }}"
@@ -1148,13 +1165,31 @@
 #   when:
 #     win_baseline_3376_state_Manage
 
-# - name: "win_baseline_3657_state | Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'"
-#   win_security_policy:
-#     section: System Access
-#     key: LSAAnonymousNameLookup
-#     value: 0
+- name: "win_baseline_3377_state | Ensure 'Password never expires' is set to 'No One'"
+  win_user_right:
+    name: "{{ win_baseline_3377_state_Name }}"
+    users: "{{ win_baseline_3377_state_Users }}"
+    action: "{{ win_baseline_3377_state_Action }}"
+  when:
+    win_baseline_3377_state_Manage
+
+- name: "win_baseline_3657_state | Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'"
+  win_security_policy:
+    section: "{{ win_baseline_3657_state_Section }}"
+    key: "{{ win_baseline_3657_state_Key }}"
+    value: "{{ win_baseline_3657_state_Value }}"
+  when:
+    win_baseline_3657_state_Manage
 
 # TODO: many tasks are skipped.
+- name: "win_baseline_3719_state | Ensure 'Internet connection sharing' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_3719_state_Path }}"
+    name: "{{ win_baseline_3719_state_Name }}"
+    data: "{{ win_baseline_3719_state_Data }}"
+    type: "{{ win_baseline_3719_state_Type }}"
+  when:
+    win_baseline_3719_state_Manage
 
 # - name: "win_baseline_3875_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
 #   win_regedit:
