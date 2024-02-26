@@ -1228,6 +1228,15 @@
 #   when:
 #     win_baseline_3875_state_Manage
 
+- name: "win_baseline_3778_state | Ensure 'Login banner' is set to 'This is an interest computer system of ABB...'"
+  win_regedit:
+    path: "{{ win_baseline_3778_state_Path }}"
+    name: "{{ win_baseline_3778_state_Name }}"
+    data: "{{ win_baseline_3778_state_Data }}"
+    type: "{{ win_baseline_3778_state_Type }}"
+  when:
+    win_baseline_3778_state_Manage
+
 # - name: "win_baseline_3876_state | Ensure 'Do not allow passwords to be saved' is set to 'Enabled'"
 #   win_regedit:
 #     path: "{{ win_baseline_3876_state_Path }}"

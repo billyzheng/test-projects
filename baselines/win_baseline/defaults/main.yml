@@ -910,7 +910,6 @@ win_baseline_3737_state_Data: "2"
 win_baseline_3737_state_Type: dword
 
 
-
 # win_baseline_3875_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'
 win_baseline_3875_state_Manage: True
 win_baseline_3875_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services'
@@ -924,6 +923,14 @@ win_baseline_3876_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows NT\Term
 win_baseline_3876_state_Name: "DisablePasswordSaving"
 win_baseline_3876_state_Data: "1"
 win_baseline_3876_state_Type: dword
+
+# win_baseline_3778_state | Ensure 'Login banner' is set to 'This is an interest computer system of ABB...'
+win_baseline_3778_state_Manage: True
+win_baseline_3778_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
+win_baseline_3778_state_Name: "LegalNoticeText"
+win_baseline_3778_state_Data: "This is an interest computer system of ABB..."
+win_baseline_3778_state_Type: string
+
 
 # win_baseline_3891_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'
 win_baseline_3891_state_Manage: True
