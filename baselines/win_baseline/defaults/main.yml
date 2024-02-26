@@ -604,6 +604,11 @@ win_baseline_2383_state_Name: "SeEnableDelegationPrivilege"
 win_baseline_2383_state_Users: "[]"
 win_baseline_2383_state_Action: set
 
+# win_baseline_2384_state | Ensure 'Force shutdown from a remote system' is set to 'Administrators
+win_baseline_2384_state_Manage: True
+win_baseline_2384_state_Name: "SeRemoteShutdownPrivilege"
+win_baseline_2384_state_Users: "Administrators"
+win_baseline_2384_state_Action: set
 
 
 # win_baseline_2341_state | Ensure 'Account lockout duration' is set to '15 or more minute(s)'

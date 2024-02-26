@@ -813,6 +813,14 @@
   when:
     win_baseline_2383_state_Manage
 
+- name: "win_baseline_2384_state | Ensure 'Force shutdown from a remote system' is set to 'Administrators"
+  win_user_right:
+    name: "{{ win_baseline_2384_state_Name }}"
+    users: "{{ win_baseline_2384_state_Users }}"
+    action: "{{ win_baseline_2384_state_Action }}"
+  when:
+    win_baseline_2384_state_Manage
+
 # The following tasks should be test one by one, to find the credential problem.
 # - name: "win_baseline_2341_state | Ensure 'Account lockout duration' is set to '30 or more minute(s)'"
 #   win_security_policy:
