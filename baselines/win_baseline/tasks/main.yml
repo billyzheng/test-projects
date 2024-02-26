@@ -1255,14 +1255,15 @@
 #   when:
 #     win_baseline_3891_state_Manage
 
-- name: "win_baseline_3896_state | Ensure 'Require trusted path for credential entry'"
-  win_regedit:
-    path: "{{ win_baseline_3896_state_Path }}"
-    name: "{{ win_baseline_3896_state_Name }}"
-    data: "{{ win_baseline_3896_state_Data }}"
-    type: "{{ win_baseline_3896_state_Type }}"
-  when:
-    win_baseline_3896_state_Manage
+# !!!!!!
+# - name: "win_baseline_3896_state | Ensure 'Require trusted path for credential entry'"
+#   win_regedit:
+#     path: "{{ win_baseline_3896_state_Path }}"
+#     name: "{{ win_baseline_3896_state_Name }}"
+#     data: "{{ win_baseline_3896_state_Data }}"
+#     type: "{{ win_baseline_3896_state_Type }}"
+#   when:
+#     win_baseline_3896_state_Manage
 
 # - name: "win_baseline_3897_state | Ensure 'Enumerate administrator accounts on elevation' is set to 'Disabled'"
 #   win_regedit:
