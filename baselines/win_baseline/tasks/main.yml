@@ -1255,6 +1255,15 @@
 #   when:
 #     win_baseline_3891_state_Manage
 
+- name: "win_baseline_3896_state | Ensure 'Require trusted path for credential entry'"
+  win_regedit:
+    path: "{{ win_baseline_3896_state_Path }}"
+    name: "{{ win_baseline_3896_state_Name }}"
+    data: "{{ win_baseline_3896_state_Data }}"
+    type: "{{ win_baseline_3896_state_Type }}"
+  when:
+    win_baseline_3896_state_Manage
+
 # - name: "win_baseline_3897_state | Ensure 'Enumerate administrator accounts on elevation' is set to 'Disabled'"
 #   win_regedit:
 #     path: "{{ win_baseline_3897_state_Path }}"
@@ -1354,7 +1363,22 @@
 #   when:
 #     win_baseline_3923_state_Manage
 
-# # TODO: skip 3926
+- name: "win_baseline_3924_state | Ensure 'Access credential manager as a trusted caller' is set to 'No One'"
+  win_user_right:
+    name: "{{ win_baseline_3924_state_Name }}"
+    users: "{{ win_baseline_3924_state_Users }}"
+    action: "{{ win_baseline_3924_state_Action }}"
+  when:
+    win_baseline_3924_state_Manage
+
+- name: "win_baseline_3925_state | Esure 'Change the time zone privilege' is set to 'Administrators, LOCAL SERVICE'"
+  win_user_right:
+    name: "{{ win_baseline_3925_state_Name }}"
+    users: "{{ win_baseline_3925_state_Users }}"
+    action: "{{ win_baseline_3925_state_Action }}"
+  when:
+    win_baseline_3925_state_Manage
+
 
 # - name: "win_baseline_3926_State | Ensure 'Reschedule Automatic Update scheduled installations' is set to 'Enabled'"
 #   win_regedit:
@@ -1374,7 +1398,13 @@
 #   when:
 #     win_baseline_3927_state_Manage
 
-# # TODO: skip 3928
+- name: "win_baseline_3928_state | Ensure 'Increase a process working set' is set to 'Windows Manager Group'"
+  win_user_right:
+    name: "{{ win_baseline_3928_state_Name }}"
+    users: "{{ win_baseline_3928_state_Users }}"
+    action: "{{ win_baseline_3928_state_Action }}"
+  when:
+    win_baseline_3928_state_Manage
 
 # - name: "win_baseline_3939_state | Ensure 'Allow UIAccess applications to prompt for elevation without using the secure desktop' is set to 'Disabled'"
 #   win_regedit:

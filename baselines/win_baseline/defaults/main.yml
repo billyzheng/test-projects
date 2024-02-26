@@ -939,6 +939,14 @@ win_baseline_3891_state_Name: "fDisableCdm"
 win_baseline_3891_state_Data: "1"
 win_baseline_3891_state_Type: dword
 
+# win_baseline_3896_state | Ensure 'Require trusted path for credential entry'
+win_baseline_3896_state_Manage: True
+win_baseline_3896_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\CredUI'
+win_baseline_3896_state_Name: "EnableSecureCredentialPrompting"
+win_baseline_3896_state_Data: "1"
+win_baseline_3896_state_Type: dword
+
+
 # win_baseline_3897_state | Ensure 'Enumerate administrator accounts on elevation' is set to 'Disabled'
 win_baseline_3897_state_Manage: True
 win_baseline_3897_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\CredUI'
@@ -1016,6 +1024,18 @@ win_baseline_3923_state_Name: "DisableBkGndGroupPolicy"
 win_baseline_3923_state_Data: "0"
 win_baseline_3923_state_Type: dword
 
+# win_baseline_3924_state | Ensure 'Access credential manager as a trusted caller' is set to 'No One'
+win_baseline_3924_state_Manage: True
+win_baseline_3924_state_Name: "SeTrustedCredManAccessPrivilege"
+win_baseline_3924_state_Users: "[]"
+win_baseline_3924_state_Action: set
+
+# win_baseline_3925_state | Esure 'Change the time zone privilege' is set to 'Administrators, LOCAL SERVICE'
+win_baseline_3925_state_Manage: True
+win_baseline_3925_state_Name: "SeTimeZonePrivilege"
+win_baseline_3925_state_Users: "Administrators, LOCAL SERVICE"
+win_baseline_3925_state_Action: set
+
 # win_baseline_3926_State | Ensure 'Reschedule Automatic Update scheduled installations' is set to 'Enabled'
 win_baseline_3926_state_Manage: True
 win_baseline_3926_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\AU'
@@ -1029,6 +1049,14 @@ win_baseline_3927_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Windows
 win_baseline_3927_state_Name: "NoAUShutdownOption"
 win_baseline_3927_state_Data: "0"
 win_baseline_3927_state_Type: dword
+
+# win_baseline_3928_state | Ensure 'Increase a process working set' is set to 'Windows Manager Group'
+win_baseline_3928_state_Manage: True
+win_baseline_3928_state_Name: "SeIncreaseWorkingSetPrivilege"
+win_baseline_3928_state_Users: "Windows Manager Group"
+win_baseline_3928_state_Action: set
+
+
 
 # win_baseline_3939_state | Ensure 'Allow UIAccess applications to prompt for elevation without using the secure desktop' is set to 'Disabled'
 win_baseline_3939_state_Manage: True
