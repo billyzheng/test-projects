@@ -1472,14 +1472,15 @@
 #   when:
 #     win_baseline_4005_state_Manage
 
-- name: "win_baseline_4006_state | Ensure 'Windows event collector' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_4006_state_Path }}"
-    name: "{{ win_baseline_4006_state_Name }}"
-    data: "{{ win_baseline_4006_state_Data }}"
-    type: "{{ win_baseline_4006_state_Type }}"
-  when:
-    win_baseline_4006_state_Manage
+# !!!!!!!
+# - name: "win_baseline_4006_state | Ensure 'Windows event collector' is set to 'Automatic'"
+#   win_regedit:
+#     path: "{{ win_baseline_4006_state_Path }}"
+#     name: "{{ win_baseline_4006_state_Name }}"
+#     data: "{{ win_baseline_4006_state_Data }}"
+#     type: "{{ win_baseline_4006_state_Type }}"
+#   when:
+#     win_baseline_4006_state_Manage
 
 
 # - name: "win_baseline_4110_state | Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'"
@@ -1500,13 +1501,14 @@
 #   when:
 #     win_baseline_4111_state_Manage
 
-- name: "win_baseline_4232_state | Ensure 'Modify an object label' is set to 'No One'"
-  win_user_right:
-    name: "{{ win_baseline_4232_state_Name }}"
-    users: "{{ win_baseline_4232_state_Users }}"
-    action: "{{ win_baseline_4232_state_Action }}"
-  when:
-    win_baseline_4232_state_Manage
+# !!!!!
+# - name: "win_baseline_4232_state | Ensure 'Modify an object label' is set to 'No One'"
+#   win_user_right:
+#     name: "{{ win_baseline_4232_state_Name }}"
+#     users: "{{ win_baseline_4232_state_Users }}"
+#     action: "{{ win_baseline_4232_state_Action }}"
+#   when:
+#     win_baseline_4232_state_Manage
 
 # ! cannot choose success and failure at the same time.
 # - name: "win_state_4470_state | Ensure 'Audit Security State Change' is set to 'Success and failure'"
@@ -3073,7 +3075,7 @@
   when:
     win_baseline_11239_state_Manage
 
-- name: "win_baseline_11243_state | Ensure 'Prevent deleting download history' is set to 'Enabled'"
+# - name: "win_baseline_11243_state | Ensure 'Prevent deleting download history' is set to 'Enabled'"
   
 
 # - name: "win_baseline_11273_state | Ensure 'Allow Extensions' is set to 'Disabled'"
@@ -3174,7 +3176,7 @@
   when:
     win_baseline_11507_state_Manage
 
-- name: "win_baseline_13333_satate | Ensure 'Passwordreq' is set to "
+# - name: "win_baseline_13333_satate | Ensure 'Passwordreq' is set to "
 
 # - name: "win_baseline_16104_state | Ensure 'Turn On Virtualization Based Security (Secure Launch Configuration)' is set to 'Enabled'"
 #   win_regedit:
