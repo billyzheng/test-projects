@@ -2365,6 +2365,13 @@ win_baseline_11385_state_Name: "fAllowUnlistedRemotePrograms"
 win_baseline_11385_state_Data: "0"
 win_baseline_11385_state_Type: dword
 
+# win_baseline_11507_state | Ensure 'Obtain an impersonation token for another user in the same session' is set to 'Administrators, Local Service, Network Service
+win_baseline_11507_state_Manage: True
+win_baseline_11507_state_Name: "SeImpersonatePrivilege"
+win_baseline_11507_state_Data: "Administrators, Local Service, Network Service"
+win_baseline_11507_state_Action: set
+
+
 # win_baseline_12015_state | Ensure 'Block all consumer Microsoft account user authentication' is set to 'Enabled'
 win_baseline_12015_state_Manage: True
 win_baseline_12015_state_Path: 'HKLM:\Software\Policies\Microsoft'
@@ -2399,6 +2406,12 @@ win_baseline_16104_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Device
 win_baseline_16104_state_Name: "ConfigureSystemGuardLaunch"
 win_baseline_16104_state_Data: "1"
 win_baseline_16104_state_Type: dword
+
+# win_baseline_17381_state | Ensure 'Audit token right adjusted' is set to 'Success and Failure'
+win_baseline_17381_state_Manage: True
+win_baseline_17381_state_Subcategory: "Other Object Access Events"
+win_baseline_17381_state_AuditType: "success, failure"
+
 
 # win_baseline_17707_state | Ensure 'Turn off notifications network usage' is set to 'Enabled'
 win_baseline_17707_state_Manage: True
