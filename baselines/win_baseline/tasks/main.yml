@@ -1192,6 +1192,33 @@
   when:
     win_baseline_3719_state_Manage
 
+- name: "win_baseline_3729_state | Ensure 'Server' is set to 'Automatic'"
+  win_regedit:
+    path: "{{ win_baseline_3729_state_Path }}"
+    name: "{{ win_baseline_3729_state_Name }}"
+    data: "{{ win_baseline_3729_state_Data }}"
+    type: "{{ win_baseline_3729_state_Type }}"
+  when:
+    win_baseline_3729_state_Manage
+
+- name: "win_baseline_3734_state | Ensure 'Windows installer' is set to 'Automatic'"
+  win_regedit:
+    path: "{{ win_baseline_3734_state_Path }}"
+    name: "{{ win_baseline_3734_state_Name }}"
+    data: "{{ win_baseline_3734_state_Data }}"
+    type: "{{ win_baseline_3734_state_Type }}"
+  when:
+    win_baseline_3734_state_Manage
+
+- name: "win_baseline_3737_state | Ensure 'Windows time' is set to 'Automatic'"
+  win_regedit:
+    path: "{{ win_baseline_3737_state_Path }}"
+    name: "{{ win_baseline_3737_state_Name }}"
+    data: "{{ win_baseline_3737_state_Data }}"
+    type: "{{ win_baseline_3737_state_Type }}"
+  when:
+    win_baseline_3737_state_Manage
+
 # - name: "win_baseline_3875_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
 #   win_regedit:
 #     path: "{{ win_baseline_3875_state_Path }}"

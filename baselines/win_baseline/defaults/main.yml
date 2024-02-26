@@ -888,6 +888,28 @@ win_baseline_3719_state_Name: "SharedAccess"
 win_baseline_3719_state_Data: "4"
 win_baseline_3719_state_Type: dword
 
+# win_baseline_3729_state | Ensure 'Server' is set to 'Automatic'
+win_baseline_3729_state_Manage: True
+win_baseline_3729_state_Path: 'HKLM:\System\Currentcontrolset\Services'
+win_baseline_3729_state_Name: "LanmanServer"
+win_baseline_3729_state_Data: "2"
+win_baseline_3729_state_Type: dword
+
+# win_baseline_3734_state | Ensure 'Windows installer' is set to 'Automatic'
+win_baseline_3734_state_Manage: True
+win_baseline_3734_state_Path: 'HKLM:\System\Currentcontrolset\Services'
+win_baseline_3734_state_Name: "msiserver"
+win_baseline_3734_state_Data: "2"
+win_baseline_3734_state_Type: dword
+
+# win_baseline_3737_state | Ensure 'Windows time' is set to 'Automatic'
+win_baseline_3737_state_Manage: True
+win_baseline_3737_state_Path: 'HKLM:\System\Currentcontrolset\Services'
+win_baseline_3737_state_Name: "w32time"
+win_baseline_3737_state_Data: "2"
+win_baseline_3737_state_Type: dword
+
+
 
 # win_baseline_3875_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'
 win_baseline_3875_state_Manage: True
