@@ -616,7 +616,12 @@ win_baseline_2385_state_Name: "SeAuditPrivilege"
 win_baseline_2385_state_Users: "Administrators, IIS Apppool\\.* Service, Network Service"
 win_baseline_2385_state_Action: set
 
-win_baseline_2387_state_Manage: True
+# win_baseline_2386_state | Ensure 'Increase scheduling priority' is set to 'Administrators'
+win_baseline_2386_state_Manage: True
+win_baseline_2386_state_Name: "SeIncreaseBasePriorityPrivilege"
+win_baseline_2386_state_Users: "Administrators"
+win_baseline_2386_state_Action: set
+
 
 
 # win_baseline_2341_state | Ensure 'Account lockout duration' is set to '15 or more minute(s)'
