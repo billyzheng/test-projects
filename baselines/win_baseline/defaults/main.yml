@@ -592,6 +592,18 @@ win_baseline_2199_state_Name: "SeDenyInteractiveLogonRight"
 win_baseline_2199_state_Users: "Guests, Guest"
 win_baseline_2199_state_Action: set
 
+# win_baseline_2200_state | Ensure 'Deny logon through remote desktop' is set to 'Guest
+win_baseline_2200_state_Manage: True
+win_baseline_2200_state_Name: "SeDenyRemoteInteractiveLogonRight"
+win_baseline_2200_state_Users: "Guest"
+win_baseline_2200_state_Action: set
+
+# win_baseline_2383_state | Ensure 'Enable computer and user accounts to be trusted for delegation' is set to 'No One'
+win_baseline_2383_state_Manage: True
+win_baseline_2383_state_Name: "SeEnableDelegationPrivilege"
+win_baseline_2383_state_Users: "[]"
+win_baseline_2383_state_Action: set
+
 
 
 # win_baseline_2341_state | Ensure 'Account lockout duration' is set to '15 or more minute(s)'
