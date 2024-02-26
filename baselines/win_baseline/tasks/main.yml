@@ -1427,13 +1427,14 @@
 #   when:
 #     win_baseline_3940_state_Manage
 
-- name: "win_baseline_3941_state | Ensure 'Create symbolic links' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_3941_state_Name }}"
-    users: "{{ win_baseline_3941_state_Users }}"
-    action: "{{ win_baseline_3941_state_Action }}"
-  when:
-    win_baseline_3941_state_Manage
+# !!!!!!
+# - name: "win_baseline_3941_state | Ensure 'Create symbolic links' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_3941_state_Name }}"
+#     users: "{{ win_baseline_3941_state_Users }}"
+#     action: "{{ win_baseline_3941_state_Action }}"
+#   when:
+#     win_baseline_3941_state_Manage
 
 # - name: "win_baseline_3942_state | Ensure 'System - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
 #   win_regedit:
