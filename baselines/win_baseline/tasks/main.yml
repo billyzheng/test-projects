@@ -3033,14 +3033,14 @@
 #   when:
 #     win_baseline_11213_state_Manage
 
-- name: "win_baseline_11224_state | Ensure 'SMB 1.x miniredirector' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_11224_state_Path }}"
-    name: "{{ win_baseline_11224_state_Name }}"
-    data: "{{ win_baseline_11224_state_Data }}"
-    type: "{{ win_baseline_11224_state_Type }}"
-  when:
-    win_baseline_11224_state_Manage
+# - name: "win_baseline_11224_state | Ensure 'SMB 1.x miniredirector' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_11224_state_Path }}"
+#     name: "{{ win_baseline_11224_state_Name }}"
+#     data: "{{ win_baseline_11224_state_Data }}"
+#     type: "{{ win_baseline_11224_state_Type }}"
+#   when:
+#     win_baseline_11224_state_Manage
 
 # - name: "win_baseline_11236_state | Ensure 'Do not sync' is set to 'Enabled'"
 #   win_regedit:
