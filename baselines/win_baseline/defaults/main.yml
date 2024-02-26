@@ -2309,6 +2309,14 @@ win_baseline_11236_state_Name: "DisableSettingSync"
 win_baseline_11236_state_Data: "2"
 win_baseline_11236_state_Type: dword
 
+# win_baseline_11238_state | Ensure 'Let windows app make phone calls' is set to '2'
+win_baseline_11238_state_Manage: True
+win_baseline_11238_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPrivacy'
+win_baseline_11238_state_Name: "LetAppsAccessPhone"
+win_baseline_11238_state_Data: "2"
+win_baseline_11238_state_Type: dword
+
+
 # win_baseline_11273_state | Ensure 'Allow Extensions' is set to 'Disabled'
 win_baseline_11273_state_Manage: True
 win_baseline_11273_state_Path: 'HKLM:\Software\Policies\Microsoft\MicrosoftEdge\Extensions'
