@@ -1132,6 +1132,14 @@
 #   when:
 #     win_baseline_2635_state_Manage
 
+- name: "win_baseline_2642_state | Ensure 'Impersonate a client after authentication' is set to 'Administrators, Service, Local Service, Network Service'" # TODO: add IIS_IUSRS
+  win_user_right:
+    name: "{{ win_baseline_2642_state_Name }}"
+    users: "{{ win_baseline_2642_state_Users }}"
+    action: "{{ win_baseline_2642_state_Action }}"
+  when:
+    win_baseline_2642_state_Manage
+
 # - name: "win_baseline_3376_state | Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'"
 #   win_security_policy:
 #     section: "{{ win_baseline_3376_state_Section }}"

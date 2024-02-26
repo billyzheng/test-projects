@@ -843,6 +843,13 @@ win_baseline_2635_state_Name: "MinEncryptionLevel"
 win_baseline_2635_state_Data: "3"
 win_baseline_2635_state_Type: dword
 
+# win_baseline_2642_state | Ensure 'Impersonate a client after authentication' is set to 'Administrators, Service, Local Service, Network Service'" # TODO: add IIS_IUSRS
+win_baseline_2642_state_Manage: True
+win_baseline_2642_state_Name: "SeImpersonatePrivilege"
+win_baseline_2642_state_Users: "Administrators, Service, Local Service, Network Service"
+win_baseline_2642_state_Action: set
+
+
 # win_baseline_3376_state | Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'
 win_baseline_3376_state_Manage: True
 win_baseline_3376_state_Section: "System Access"
