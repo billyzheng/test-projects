@@ -875,7 +875,6 @@ win_baseline_3377_state_Name: "SeDontExpirePassword"
 win_baseline_3377_state_Users: "[]"
 win_baseline_3377_state_Action: set
 
-
 # win_baseline_3657_state | Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'
 win_baseline_3657_state_Manage: True
 win_baseline_3657_Section: "System Access"
