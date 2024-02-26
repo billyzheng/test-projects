@@ -3181,12 +3181,12 @@
 #   when:
 #     win_baseline_16104_state_Manage
 
-- name: "win_baseline_17381_state | Ensure 'Audit token right adjusted' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4471_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4471_state_AuditType }}"
-  when:
-    win_baseline_4471_state_Manage
+# ! - name: "win_baseline_17381_state | Ensure 'Audit token right adjusted' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4471_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4471_state_AuditType }}"
+#   when:
+#     win_baseline_4471_state_Manage
 
 # - name: "win_baseline_17707_state | Ensure 'Turn off notifications network usage' is set to 'Enabled'"
 #   win_regedit:
