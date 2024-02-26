@@ -797,29 +797,29 @@
 #   when:
 #     win_baseline_2199_state_Manage
 
-- name: "win_baseline_2200_state | Ensure 'Deny logon through remote desktop' is set to 'Guest"
-  win_user_right:
-    name: "{{ win_baseline_2200_state_Name }}"
-    users: "{{ win_baseline_2200_state_Users }}"
-    action: "{{ win_baseline_2200_state_Action }}"
-  when:
-    win_baseline_2200_state_Manage
+# - name: "win_baseline_2200_state | Ensure 'Deny logon through remote desktop' is set to 'Guest"
+#   win_user_right:
+#     name: "{{ win_baseline_2200_state_Name }}"
+#     users: "{{ win_baseline_2200_state_Users }}"
+#     action: "{{ win_baseline_2200_state_Action }}"
+#   when:
+#     win_baseline_2200_state_Manage
 
-- name: "win_baseline_2383_state | Ensure 'Enable computer and user accounts to be trusted for delegation' is set to 'No One'"
-  win_user_right:
-    name: "{{ win_baseline_2383_state_Name }}"
-    users: "{{ win_baseline_2383_state_Users }}"
-    action: "{{ win_baseline_2383_state_Action }}"
-  when:
-    win_baseline_2383_state_Manage
+# - name: "win_baseline_2383_state | Ensure 'Enable computer and user accounts to be trusted for delegation' is set to 'No One'"
+#   win_user_right:
+#     name: "{{ win_baseline_2383_state_Name }}"
+#     users: "{{ win_baseline_2383_state_Users }}"
+#     action: "{{ win_baseline_2383_state_Action }}"
+#   when:
+#     win_baseline_2383_state_Manage
 
-- name: "win_baseline_2384_state | Ensure 'Force shutdown from a remote system' is set to 'Administrators"
-  win_user_right:
-    name: "{{ win_baseline_2384_state_Name }}"
-    users: "{{ win_baseline_2384_state_Users }}"
-    action: "{{ win_baseline_2384_state_Action }}"
-  when:
-    win_baseline_2384_state_Manage
+# - name: "win_baseline_2384_state | Ensure 'Force shutdown from a remote system' is set to 'Administrators"
+#   win_user_right:
+#     name: "{{ win_baseline_2384_state_Name }}"
+#     users: "{{ win_baseline_2384_state_Users }}"
+#     action: "{{ win_baseline_2384_state_Action }}"
+#   when:
+#     win_baseline_2384_state_Manage
 
 # ! error
 # - name: "win_baseline_2385_state | Ensure 'Generate security audits' is set to 'Administrators, IIS Apppool\\.* Service, Network Service"
@@ -830,86 +830,86 @@
 #   when:
 #     win_baseline_2385_state_Manage
 
-- name: "win_baseline_2386_state | Ensure 'Increase scheduling priority' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2386_state_Name }}"
-    users: "{{ win_baseline_2386_state_Users }}"
-    action: "{{ win_baseline_2386_state_Action }}"
-  when:
-    win_baseline_2386_state_Manage
+# - name: "win_baseline_2386_state | Ensure 'Increase scheduling priority' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2386_state_Name }}"
+#     users: "{{ win_baseline_2386_state_Users }}"
+#     action: "{{ win_baseline_2386_state_Action }}"
+#   when:
+#     win_baseline_2386_state_Manage
 
-- name: "win_baseline_2387_state | Ensure 'Load and unload device drivers' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2387_state_Name }}"
-    users: "{{ win_baseline_2387_state_Users }}"
-    action: "{{ win_baseline_2387_state_Action }}"
-  when:
-    win_baseline_2387_state_Manage 
+# - name: "win_baseline_2387_state | Ensure 'Load and unload device drivers' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2387_state_Name }}"
+#     users: "{{ win_baseline_2387_state_Users }}"
+#     action: "{{ win_baseline_2387_state_Action }}"
+#   when:
+#     win_baseline_2387_state_Manage 
 
-# ! do not know how to set to NT ABB...
-- name: "win_baseline_2388_state | Ensure 'Lock pages in memory' is set to 'No body'" 
-  win_user_right:
-    name: "{{ win_baseline_2388_state_Name }}"
-    users: "{{ win_baseline_2388_state_Users }}"
-    action: "{{ win_baseline_2388_state_Action }}"
-  when:
-    win_baseline_2388_state_Manage
+# # ! do not know how to set to NT ABB...
+# - name: "win_baseline_2388_state | Ensure 'Lock pages in memory' is set to 'No body'" 
+#   win_user_right:
+#     name: "{{ win_baseline_2388_state_Name }}"
+#     users: "{{ win_baseline_2388_state_Users }}"
+#     action: "{{ win_baseline_2388_state_Action }}"
+#   when:
+#     win_baseline_2388_state_Manage
 
-- name: "win_baseline_2389_stae | Ensure 'Log on as a batch job' is set to 'Administrators, Backup operators, Performance log users, IIS_IUSRS"
-  win_user_right:
-    name: "{{ win_baseline_2389_state_Name }}"
-    users: "{{ win_baseline_2389_state_Users }}"
-    action: "{{ win_baseline_2389_state_Action }}"
-  when:
-    win_baseline_2389_state_Manage
+# - name: "win_baseline_2389_stae | Ensure 'Log on as a batch job' is set to 'Administrators, Backup operators, Performance log users, IIS_IUSRS"
+#   win_user_right:
+#     name: "{{ win_baseline_2389_state_Name }}"
+#     users: "{{ win_baseline_2389_state_Users }}"
+#     action: "{{ win_baseline_2389_state_Action }}"
+#   when:
+#     win_baseline_2389_state_Manage
 
-- name: "win_baseline_2390_state | Ensure 'Log on as a service' is set to 'Guests"
-  win_user_right:
-    name: "{{ win_baseline_2390_state_Name }}"
-    users: "{{ win_baseline_2390_state_Users }}"
-    action: "{{ win_baseline_2390_state_Action }}"
-  when:
-    win_baseline_2390_state_Manage
+# - name: "win_baseline_2390_state | Ensure 'Log on as a service' is set to 'Guests"
+#   win_user_right:
+#     name: "{{ win_baseline_2390_state_Name }}"
+#     users: "{{ win_baseline_2390_state_Users }}"
+#     action: "{{ win_baseline_2390_state_Action }}"
+#   when:
+#     win_baseline_2390_state_Manage
 
-- name: "win_baseline_2391_state | Ensure 'Allow log on locally' is set to 'Administrators, Backup Operators'" # IUSR_{syste} and IWAM_{system} user are not added
-  win_user_right:
-    name: "{{ win_baseline_2391_state_Name }}"
-    users: "{{ win_baseline_2391_state_Users }}"
-    action: "{{ win_baseline_2391_state_Action }}"
-  when:
-    win_baseline_2391_state_Manage
+# - name: "win_baseline_2391_state | Ensure 'Allow log on locally' is set to 'Administrators, Backup Operators'" # IUSR_{syste} and IWAM_{system} user are not added
+#   win_user_right:
+#     name: "{{ win_baseline_2391_state_Name }}"
+#     users: "{{ win_baseline_2391_state_Users }}"
+#     action: "{{ win_baseline_2391_state_Action }}"
+#   when:
+#     win_baseline_2391_state_Manage
 
-- name: "win_baseline_2392_state | Ensure 'Manage auditing and security log' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2392_state_Name }}"
-    users: "{{ win_baseline_2392_state_Users }}"
-    action: "{{ win_baseline_2392_state_Action }}"
-  when:
-    win_baseline_2392_state_Manage
+# - name: "win_baseline_2392_state | Ensure 'Manage auditing and security log' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2392_state_Name }}"
+#     users: "{{ win_baseline_2392_state_Users }}"
+#     action: "{{ win_baseline_2392_state_Action }}"
+#   when:
+#     win_baseline_2392_state_Manage
 
-- name: "win_baseline_2393_state | Ensure 'Modify firware environment values' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2393_state_Name }}"
-    users: "{{ win_baseline_2393_state_Users }}"
-    action: "{{ win_baseline_2393_state_Action }}"
-  when:
-    win_baseline_2393_state_Manage
+# - name: "win_baseline_2393_state | Ensure 'Modify firware environment values' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2393_state_Name }}"
+#     users: "{{ win_baseline_2393_state_Users }}"
+#     action: "{{ win_baseline_2393_state_Action }}"
+#   when:
+#     win_baseline_2393_state_Manage
 
-- name: "win_baseline_2394_state | Ensure 'Perform volume maintenance tasks' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2394_state_Name }}"
-    users: "{{ win_baseline_2394_state_Users }}"
-    action: "{{ win_baseline_2394_state_Action }}"
-  when:
-    win_baseline_2394_state_Manage
+# - name: "win_baseline_2394_state | Ensure 'Perform volume maintenance tasks' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2394_state_Name }}"
+#     users: "{{ win_baseline_2394_state_Users }}"
+#     action: "{{ win_baseline_2394_state_Action }}"
+#   when:
+#     win_baseline_2394_state_Manage
 
-- name: "win_baseline_2395_state | Ensure 'Profile single process' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2395_state_Name }}"
-    users: "{{ win_baseline_2395_state_Users }}"
-    action: "{{ win_baseline_2395_state_Action }}"
-  when:
-    win_baseline_2395_state_Manage
+# - name: "win_baseline_2395_state | Ensure 'Profile single process' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2395_state_Name }}"
+#     users: "{{ win_baseline_2395_state_Users }}"
+#     action: "{{ win_baseline_2395_state_Action }}"
+#   when:
+#     win_baseline_2395_state_Manage
 
 # ! error WidServiceHost
 # - name: "win_baseline_2396_state | Ensure 'Profile system performance' is set to 'Administrators, WidServiceHost'"
@@ -1132,30 +1132,30 @@
 #   when:
 #     win_baseline_2635_state_Manage
 
-- name: "win_baseline_2642_state | Ensure 'Impersonate a client after authentication' is set to 'Administrators, Service, Local Service, Network Service'" # TODO: add IIS_IUSRS
-  win_user_right:
-    name: "{{ win_baseline_2642_state_Name }}"
-    users: "{{ win_baseline_2642_state_Users }}"
-    action: "{{ win_baseline_2642_state_Action }}"
-  when:
-    win_baseline_2642_state_Manage
+# - name: "win_baseline_2642_state | Ensure 'Impersonate a client after authentication' is set to 'Administrators, Service, Local Service, Network Service'" # TODO: add IIS_IUSRS
+#   win_user_right:
+#     name: "{{ win_baseline_2642_state_Name }}"
+#     users: "{{ win_baseline_2642_state_Users }}"
+#     action: "{{ win_baseline_2642_state_Action }}"
+#   when:
+#     win_baseline_2642_state_Manage
 
-- name: "win_baseline_2681_sate | Ensure 'Turn of windows update device driver searching setting' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_2681_state_Path }}"
-    name: "{{ win_baseline_2681_state_Name }}"
-    data: "{{ win_baseline_2681_state_Data }}"
-    type: "{{ win_baseline_2681_state_Type }}"
-  when:
-    win_baseline_2681_state_Manage
+# - name: "win_baseline_2681_sate | Ensure 'Turn of windows update device driver searching setting' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_2681_state_Path }}"
+#     name: "{{ win_baseline_2681_state_Name }}"
+#     data: "{{ win_baseline_2681_state_Data }}"
+#     type: "{{ win_baseline_2681_state_Type }}"
+#   when:
+#     win_baseline_2681_state_Manage
 
-- name: "win_baseline_3242_state | Ensure 'Create Global Objects' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE"
-  win_user_right:
-    name: "{{ win_baseline_3242_state_Name }}"
-    users: "{{ win_baseline_3242_state_Users }}"
-    action: "{{ win_baseline_3242_state_Action }}"
-  when:
-    win_baseline_3242_state_Manage
+# - name: "win_baseline_3242_state | Ensure 'Create Global Objects' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE"
+#   win_user_right:
+#     name: "{{ win_baseline_3242_state_Name }}"
+#     users: "{{ win_baseline_3242_state_Users }}"
+#     action: "{{ win_baseline_3242_state_Action }}"
+#   when:
+#     win_baseline_3242_state_Manage
 
 # - name: "win_baseline_3376_state | Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'"
 #   win_security_policy:
