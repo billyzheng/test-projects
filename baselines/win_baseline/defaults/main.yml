@@ -646,6 +646,30 @@ win_baseline_2390_state_Name: "SeServiceLogonRight"
 win_baseline_2390_state_Users: "Guests"
 win_baseline_2390_state_Action: set
 
+# win_baseline_2391_state | Ensure 'Allow log on locally' is set to 'Administrators, Backup Operators' # IUSR_{syste} and IWAM_{system} user are not added
+win_baseline_2391_state_Manage: True
+win_baseline_2391_state_Name: "SeInteractiveLogonRight"
+win_baseline_2391_state_Users: "Administrators, Backup Operators"
+win_baseline_2391_state_Action: set
+
+# win_baseline_2392_state | Ensure 'Manage auditing and security log' is set to 'Administrators'
+win_baseline_2392_state_Manage: True
+win_baseline_2392_state_Name: "SeSecurityPrivilege"
+win_baseline_2392_state_Users: "Administrators"
+win_baseline_2392_state_Action: set
+
+# win_baseline_2393_state | Ensure 'Modify firware environment values' is set to 'Administrators'
+win_baseline_2393_state_Manage: True
+win_baseline_2393_state_Name: "SeSystemEnvironmentPrivilege"
+win_baseline_2393_state_Users: "Administrators"
+win_baseline_2393_state_Action: set
+
+# win_baseline_2394_state | Ensure 'Perform volume maintenance tasks' is set to 'Administrators'
+win_baseline_2394_state_Manage: True
+win_baseline_2394_state_Name: "SeManageVolumePrivilege"
+win_baseline_2394_state_Users: "Administrators"
+win_baseline_2394_state_Action: set
+
 
 # win_baseline_2341_state | Ensure 'Account lockout duration' is set to '15 or more minute(s)'
 win_baseline_2341_state_Manage: True

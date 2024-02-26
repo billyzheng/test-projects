@@ -871,6 +871,38 @@
   when:
     win_baseline_2390_state_Manage
 
+- name: "win_baseline_2391_state | Ensure 'Allow log on locally' is set to 'Administrators, Backup Operators'" # IUSR_{syste} and IWAM_{system} user are not added
+  win_user_right:
+    name: "{{ win_baseline_2391_state_Name }}"
+    users: "{{ win_baseline_2391_state_Users }}"
+    action: "{{ win_baseline_2391_state_Action }}"
+  when:
+    win_baseline_2391_state_Manage
+
+- name: "win_baseline_2392_state | Ensure 'Manage auditing and security log' is set to 'Administrators'"
+  win_user_right:
+    name: "{{ win_baseline_2392_state_Name }}"
+    users: "{{ win_baseline_2392_state_Users }}"
+    action: "{{ win_baseline_2392_state_Action }}"
+  when:
+    win_baseline_2392_state_Manage
+
+- name: "win_baseline_2393_state | Ensure 'Modify firware environment values' is set to 'Administrators'"
+  win_user_right:
+    name: "{{ win_baseline_2393_state_Name }}"
+    users: "{{ win_baseline_2393_state_Users }}"
+    action: "{{ win_baseline_2393_state_Action }}"
+  when:
+    win_baseline_2393_state_Manage
+
+- name: "win_baseline_2394_state | Ensure 'Perform volume maintenance tasks' is set to 'Administrators'"
+  win_user_right:
+    name: "{{ win_baseline_2394_state_Name }}"
+    users: "{{ win_baseline_2394_state_Users }}"
+    action: "{{ win_baseline_2394_state_Action }}"
+  when:
+    win_baseline_2394_state_Manage
+
 # The following tasks should be test one by one, to find the credential problem.
 # - name: "win_baseline_2341_state | Ensure 'Account lockout duration' is set to '30 or more minute(s)'"
 #   win_security_policy:
