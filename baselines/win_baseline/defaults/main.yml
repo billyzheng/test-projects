@@ -706,6 +706,17 @@ win_baseline_2400_state_Name: "SeShutdownPrivilege"
 win_baseline_2400_state_Users: "Administrators"
 win_baseline_2400_state_Action: set
 
+# win_baseline_2401_state | Ensure 'Synchronize directory service data' is set to 'No one'
+win_baseline_2401_state_Manage: True
+win_baseline_2401_state_Name: "SeSyncAgentPrivilege"
+win_baseline_2401_state_Users: "[]"
+win_baseline_2401_state_Action: set
+
+# win_baseline_2402_state | Ensure 'Take ownership of files or other objects' is set to 'Administrators'
+win_baseline_2402_state_Manage: True
+win_baseline_2402_state_Name: "SeTakeOwnershipPrivilege"
+win_baseline_2402_state_Users: "Administrators"
+win_baseline_2402_state_Action: set
 
 
 # win_baseline_2341_state | Ensure 'Account lockout duration' is set to '15 or more minute(s)'

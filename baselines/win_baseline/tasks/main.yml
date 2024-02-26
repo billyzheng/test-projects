@@ -928,13 +928,14 @@
   when:
     win_baseline_2397_state_Manage
 
-- name: "win_baseline_2398_state | Ensure 'Replace a process level token' is set to 'No One'"
-  win_user_right:
-    name: "{{ win_baseline_2398_state_Name }}"
-    users: "{{ win_baseline_2398_state_Users }}"
-    action: "{{ win_baseline_2398_state_Action }}"
-  when:
-    win_baseline_2398_state_Manage
+# ! error
+# - name: "win_baseline_2398_state | Ensure 'Replace a process level token' is set to 'No One'"
+#   win_user_right:
+#     name: "{{ win_baseline_2398_state_Name }}"
+#     users: "{{ win_baseline_2398_state_Users }}"
+#     action: "{{ win_baseline_2398_state_Action }}"
+#   when:
+#     win_baseline_2398_state_Manage
 
 - name: "win_baseline_2399_state | Ensure 'Restore files and directories' is set to 'Administrators, Backup Operators'"
   win_user_right:
@@ -952,7 +953,21 @@
   when:
     win_baseline_2400_state_Manage
 
+- name: "win_baseline_2401_state | Ensure 'Synchronize directory service data' is set to 'No one'"
+  win_user_right:
+    name: "{{ win_baseline_2401_state_Name }}"
+    users: "{{ win_baseline_2401_state_Users }}"
+    action: "{{ win_baseline_2401_state_Action }}"
+  when:
+    win_baseline_2401_state_Manage
 
+- name: "win_baseline_2402_state | Ensure 'Take ownership of files or other objects' is set to 'Administrators'"
+  win_user_right:
+    name: "{{ win_baseline_2402_state_Name }}"
+    users: "{{ win_baseline_2402_state_Users }}"
+    action: "{{ win_baseline_2402_state_Action }}"
+  when:
+    win_baseline_2402_state_Manage
 
 # The following tasks should be test one by one, to find the credential problem.
 # - name: "win_baseline_2341_state | Ensure 'Account lockout duration' is set to '30 or more minute(s)'"
