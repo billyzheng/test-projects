@@ -640,6 +640,11 @@ win_baseline_2389_state_Name: "SeBatchLogonRight"
 win_baseline_2389_state_Users: "Administrators, Backup operators, Performance log users, IIS_IUSRS"
 win_baseline_2389_state_Action: set
 
+# win_baseline_2390_state | Ensure 'Log on as a service' is set to 'Guests
+win_baseline_2390_state_Manage: True
+win_baseline_2390_state_Name: "SeServiceLogonRight"
+win_baseline_2390_state_Users: "Guests"
+win_baseline_2390_state_Action: set
 
 
 # win_baseline_2341_state | Ensure 'Account lockout duration' is set to '15 or more minute(s)'
