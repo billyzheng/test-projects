@@ -1424,14 +1424,13 @@
 #   when:
 #     win_baseline_3940_state_Manage
 
-# TODO: skip 3941
-# - name: "win_baseline_3941_state | Ensure 'Create symbolic links' is set to 'Administrators'"
-#   win_user_right:
-#     name: SeCreateSymbolicLinkPrivilege
-#     users:
-#     - Administrators
-#     # - NT VIRTUAL MACHINE\Virtual Machines (Needed only if the Hyper-V Role is installed)
-#     action: set
+- name: "win_baseline_3941_state | Ensure 'Create symbolic links' is set to 'Administrators'"
+  win_user_right:
+    name: "{{ win_baseline_3941_state_Name }}"
+    users: "{{ win_baseline_3941_state_Users }}"
+    action: "{{ win_baseline_3941_state_Action }}"
+  when:
+    win_baseline_3941_state_Manage
 
 # - name: "win_baseline_3942_state | Ensure 'System - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
 #   win_regedit:
@@ -1469,6 +1468,16 @@
 #   when:
 #     win_baseline_4005_state_Manage
 
+- name: "win_baseline_4006_state | Ensure 'Windows event collector' is set to 'Automatic'"
+  win_regedit:
+    path: "{{ win_baseline_4006_state_Path }}"
+    name: "{{ win_baseline_4006_state_Name }}"
+    data: "{{ win_baseline_4006_state_Data }}"
+    type: "{{ win_baseline_4006_state_Type }}"
+  when:
+    win_baseline_4006_state_Manage
+
+
 # - name: "win_baseline_4110_state | Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'"
 #   win_regedit:
 #     path: "{{ win_baseline_4110_state_Path }}"
@@ -1486,6 +1495,14 @@
 #     type: "{{ win_baseline_4111_state_Type }}"
 #   when:
 #     win_baseline_4111_state_Manage
+
+- name: "win_baseline_4232_state | Ensure 'Modify an object label' is set to 'No One'"
+  win_user_right:
+    name: "{{ win_baseline_4232_state_Name }}"
+    users: "{{ win_baseline_4232_state_Users }}"
+    action: "{{ win_baseline_4232_state_Action }}"
+  when:
+    win_baseline_4232_state_Manage
 
 # ! cannot choose success and failure at the same time.
 # - name: "win_state_4470_state | Ensure 'Audit Security State Change' is set to 'Success and failure'"
@@ -2023,6 +2040,13 @@
 #     type: "{{ win_baseline_8231_state_Type }}"
 #   when:
 #     win_baseline_8231_state_Manage
+
+- name: "win_baseline_8232_state | Ensure 'Modify an object label' is set to 'No One'"
+  win_user_right:
+    name: "{{ win_baseline_8232_state_Name }}"
+    users: "{{ win_baseline_8232_state_Users }}"
+  when:
+    win_baseline_8232_state_Manage
 
 # - name: "win_baseline_8249_state | Ensure 'Allow Basic authentication (client)' is set to 'Disabled'"
 #   win_regedit:

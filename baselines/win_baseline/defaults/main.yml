@@ -1056,8 +1056,6 @@ win_baseline_3928_state_Name: "SeIncreaseWorkingSetPrivilege"
 win_baseline_3928_state_Users: "Windows Manager Group"
 win_baseline_3928_state_Action: set
 
-
-
 # win_baseline_3939_state | Ensure 'Allow UIAccess applications to prompt for elevation without using the secure desktop' is set to 'Disabled'
 win_baseline_3939_state_Manage: True
 win_baseline_3939_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
@@ -1073,7 +1071,11 @@ win_baseline_3940_state_Data: "1"
 win_baseline_3940_state_Type: dword
 
 # win_baseline_3941_state | Ensure 'Create symbolic links' is set to 'Administrators'
-# TODO: skip
+win_baseline_3941_state_Manage: True
+win_baseline_3941_state_Name: "SeCreateSymbolicLinkPrivilege"
+win_baseline_3941_state_Users: "Administrators"
+win_baseline_3941_state_Action: set
+
 
 # win_baseline_3942_state | Ensure 'System - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'
 win_baseline_3942_state_Manage: True
@@ -1103,6 +1105,13 @@ win_baseline_4005_state_Name: "DNS"
 win_baseline_4005_state_Data: "4"
 win_baseline_4005_state_Type: dword
 
+# win_baseline_4006_state | Ensure 'Windows event collector' is set to 'Automatic'
+win_baseline_4006_state_Manage: True
+win_baseline_4006_state_Path: 'HKLM:\System\Currentcontrolset\Services'
+win_baseline_4006_state_Name: "Wecsvc"
+win_baseline_4006_state_Data: "2"
+win_baseline_4006_state_Type: dword
+
 # win_baseline_4110_state | Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'
 win_baseline_4110_state_Manage: True
 win_baseline_4110_state_Path: 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\0E796Bdb-100D-47D6-A2D5-F7D2Daa51F51'
@@ -1116,6 +1125,13 @@ win_baseline_4111_state_Path: 'HKLM:\Software\Policies\Microsoft\Power\PowerSett
 win_baseline_4111_state_Name: "ACSettingIndex"
 win_baseline_4111_state_Data: "1"
 win_baseline_4111_state_Type: dword
+
+# win_baseline_4232_state | Ensure 'Modify an object label' is set to 'No One'
+win_baseline_4232_state_Manage: True
+win_baseline_4232_state_Name: "SeRelabelPrivilege"
+win_baseline_4232_state_Users: "[]"
+win_baseline_4232_state_Action: set
+
 
 # win_state_4470_state | Ensure 'Audit Security State Change' is set to 'Success and failure'
 win_baseline_4470_state_Manage: True
@@ -1508,6 +1524,11 @@ win_baseline_8231_state_Path: 'HKLM:\Software\Microsoft\Windows\Currentversion\P
 win_baseline_8231_state_Name: "SupportedEncryptionTypes"
 win_baseline_8231_state_Data: "2147483640"
 win_baseline_8231_state_Type: dword
+
+# win_baseline_8232_state | Ensure 'Modify an object label' is set to 'No One'
+win_baseline_8232_state_Manage: True
+win_baseline_8232_state_Users: "[]"
+win_baseline_8232_state_Action: "set"
 
 # win_baseline_8249_state | Ensure 'Allow Basic authentication' is set to 'Disabled'
 win_baseline_8249_state_Manage: True
