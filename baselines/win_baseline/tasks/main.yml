@@ -2042,14 +2042,6 @@
 #   when:
 #     win_baseline_8231_state_Manage
 
-- name: "win_baseline_8232_state | Ensure 'Modify an object label' is set to 'No One'"
-  win_user_right:
-    name: "{{ win_baseline_8232_state_Name }}"
-    users: "{{ win_baseline_8232_state_Users }}"
-    action: "{{ win_baseline_8232_state_Action }}"
-  when:
-    win_baseline_8232_state_Manage
-
 # - name: "win_baseline_8249_state | Ensure 'Allow Basic authentication (client)' is set to 'Disabled'"
 #   win_regedit:
 #     path: "{{ win_baseline_8249_state_Path }}"
@@ -3041,6 +3033,15 @@
 #   when:
 #     win_baseline_11213_state_Manage
 
+- name: "win_baseline_11224_state | Ensure 'SMB 1.x miniredirector' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_11224_state_Path }}"
+    name: "{{ win_baseline_11224_state_Name }}"
+    data: "{{ win_baseline_11224_state_Data }}"
+    type: "{{ win_baseline_11224_state_Type }}"
+  when:
+    win_baseline_11224_state_Manage
+
 # - name: "win_baseline_11236_state | Ensure 'Do not sync' is set to 'Enabled'"
 #   win_regedit:
 #     path: "{{ win_baseline_11236_state_Path }}"
@@ -3049,6 +3050,27 @@
 #     type: "{{ win_baseline_11236_state_Type }}"
 #   when:
 #     win_baseline_11236_state_Manage
+
+- name: "win_baseline_11238_state | Ensure 'Let windows app make phone calls' is set to '2'"
+  win_regedit:
+    path: "{{ win_baseline_11238_state_Path }}"
+    name: "{{ win_baseline_11238_state_Name }}"
+    data: "{{ win_baseline_11238_state_Data }}"
+    type: "{{ win_baseline_11238_state_Type }}"
+  when:
+    win_baseline_11238_state_Manage
+
+- name: "win_baseline_11239_state | Ensure 'Let Windows apps access notifications' is set to '2'"
+  win_regedit:
+    path: "{{ win_baseline_11239_state_Path }}"
+    name: "{{ win_baseline_11239_state_Name }}"
+    data: "{{ win_baseline_11239_state_Data }}"
+    type: "{{ win_baseline_11239_state_Type }}"
+  when:
+    win_baseline_11239_state_Manage
+
+- name: "win_baseline_11243_state | Ensure 'Prevent deleting download history' is set to 'Enabled'"
+  
 
 # - name: "win_baseline_11273_state | Ensure 'Allow Extensions' is set to 'Disabled'"
 #   win_regedit:
@@ -3140,6 +3162,16 @@
 #   when:
 #     win_baseline_13968_state_Manage
 
+- name: "win_baseline_11507_state | Ensure 'Obtain an impersonation token for another user in the same session' is set to 'Administrators, Local Service, Network Service"
+  win_user_right:
+    name: "{{ win_baseline_11507_state_Name }}"
+    users: "{{ win_baseline_11507_state_Users }}"
+    action: "{{ win_baseline_11507_state_Action }}"
+  when:
+    win_baseline_11507_state_Manage
+
+- name: "win_baseline_13333_satate | Ensure 'Passwordreq' is set to "
+
 # - name: "win_baseline_16104_state | Ensure 'Turn On Virtualization Based Security (Secure Launch Configuration)' is set to 'Enabled'"
 #   win_regedit:
 #     path: "{{ win_baseline_16104_state_Path }}"
@@ -3148,6 +3180,13 @@
 #     type: "{{ win_baseline_16104_state_Type }}"
 #   when:
 #     win_baseline_16104_state_Manage
+
+- name: "win_baseline_17381_state | Ensure 'Audit token right adjusted' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4471_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4471_state_AuditType }}"
+  when:
+    win_baseline_4471_state_Manage
 
 # - name: "win_baseline_17707_state | Ensure 'Turn off notifications network usage' is set to 'Enabled'"
 #   win_regedit:
