@@ -613,7 +613,7 @@ win_baseline_2384_state_Action: set
 # win_baseline_2385_state | Ensure 'Generate security audits' is set to 'Administrators, IIS Apppool\\.* Service, Network Service
 win_baseline_2385_state_Manage: True
 win_baseline_2385_state_Name: "SeAuditPrivilege"    
-win_baseline_2385_state_Users: "Administrators, IIS Apppool\\.* Service, Network Service"
+win_baseline_2385_state_Users: "Administrators,  Network Service" # IIS Apppool\\.* Service,
 win_baseline_2385_state_Action: set
 
 # win_baseline_2386_state | Ensure 'Increase scheduling priority' is set to 'Administrators'
