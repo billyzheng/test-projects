@@ -75,14 +75,14 @@
 #   when:
 #     win_baseline_1048_state_Manage
 
-- name: "win_baseline_1052_state | Ensure 'Device - Allowed to format and eject removable media' is set to 'Administrators'"
-  win_regedit:
-    path: "{{ win_baseline_1052_state_Path }}"
-    name: "{{ win_baseline_1052_state_Name }}"
-    data: "{{ win_baseline_1052_state_Data }}"
-    type: "{{ win_baseline_1052_state_Type }}"
-  when:
-    win_baseline_1052_state_Manage
+# - name: "win_baseline_1052_state | Ensure 'Device - Allowed to format and eject removable media' is set to 'Administrators'"
+#   win_regedit:
+#     path: "{{ win_baseline_1052_state_Path }}"
+#     name: "{{ win_baseline_1052_state_Name }}"
+#     data: "{{ win_baseline_1052_state_Data }}"
+#     type: "{{ win_baseline_1052_state_Type }}"
+#   when:
+    # win_baseline_1052_state_Manage
 
 # - name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)'"
 #   win_security_policy:
@@ -118,14 +118,14 @@
 #     win_baseline_1092_state_Manage
   
 # # ! error, cannot run the task
-# # - name: "win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Client' is set to 'Disabled'"
-# #   win_service:
-# #     name: "{{ win_baseline_1115_state_Name }}"
-# #     state: "{{ win_baseline_1115_state_State }}"
-# #     start_mode: "{{ win_baseline_1115_state_Mode }}"
-# #     force_dependent_services: yes
-# #   when:
-# #     win_baseline_1115_state_Manage
+- name: "win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Client' is set to 'Disabled'"
+  win_service:
+    name: "{{ win_baseline_1115_state_Name }}"
+    state: "{{ win_baseline_1115_state_State }}"
+    start_mode: "{{ win_baseline_1115_state_Mode }}"
+    force_dependent_services: yes
+  when:
+    win_baseline_1115_state_Manage
 
 # - name: "win_baseline_1134_state | Ensure 'Logon banner title' is ser to 'This is an interest computer system of ABB Asea Brown Boveri Ltd'"
 #   win_regedit:
@@ -920,13 +920,13 @@
 #   when:
 #     win_baseline_2396_state_Manage
 
-- name: "win_baseline_2397_state | Ensure 'Remove computer from docking station' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2397_state_Name }}"
-    users: "{{ win_baseline_2397_state_Users }}"
-    action: "{{ win_baseline_2397_state_Action }}"
-  when:
-    win_baseline_2397_state_Manage
+# - name: "win_baseline_2397_state | Ensure 'Remove computer from docking station' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2397_state_Name }}"
+#     users: "{{ win_baseline_2397_state_Users }}"
+#     action: "{{ win_baseline_2397_state_Action }}"
+#   when:
+#     win_baseline_2397_state_Manage
 
 # ! error
 # - name: "win_baseline_2398_state | Ensure 'Replace a process level token' is set to 'No One'"
@@ -1255,14 +1255,14 @@
 #   when:
 #     win_baseline_3891_state_Manage
 
-- name: "win_baseline_3896_state | Ensure 'Require trusted path for credential entry'"
-  win_regedit:
-    path: "{{ win_baseline_3896_state_Path }}"
-    name: "{{ win_baseline_3896_state_Name }}"
-    data: "{{ win_baseline_3896_state_Data }}"
-    type: "{{ win_baseline_3896_state_Type }}"
-  when:
-    win_baseline_3896_state_Manage
+# - name: "win_baseline_3896_state | Ensure 'Require trusted path for credential entry'"
+#   win_regedit:
+#     path: "{{ win_baseline_3896_state_Path }}"
+#     name: "{{ win_baseline_3896_state_Name }}"
+#     data: "{{ win_baseline_3896_state_Data }}"
+#     type: "{{ win_baseline_3896_state_Type }}"
+#   when:
+#     win_baseline_3896_state_Manage
 
 # - name: "win_baseline_3897_state | Ensure 'Enumerate administrator accounts on elevation' is set to 'Disabled'"
 #   win_regedit:
@@ -1363,21 +1363,21 @@
 #   when:
 #     win_baseline_3923_state_Manage
 
-- name: "win_baseline_3924_state | Ensure 'Access credential manager as a trusted caller' is set to 'No One'"
-  win_user_right:
-    name: "{{ win_baseline_3924_state_Name }}"
-    users: "{{ win_baseline_3924_state_Users }}"
-    action: "{{ win_baseline_3924_state_Action }}"
-  when:
-    win_baseline_3924_state_Manage
+# - name: "win_baseline_3924_state | Ensure 'Access credential manager as a trusted caller' is set to 'No One'"
+#   win_user_right:
+#     name: "{{ win_baseline_3924_state_Name }}"
+#     users: "{{ win_baseline_3924_state_Users }}"
+#     action: "{{ win_baseline_3924_state_Action }}"
+#   when:
+#     win_baseline_3924_state_Manage
 
-- name: "win_baseline_3925_state | Esure 'Change the time zone privilege' is set to 'Administrators, LOCAL SERVICE'"
-  win_user_right:
-    name: "{{ win_baseline_3925_state_Name }}"
-    users: "{{ win_baseline_3925_state_Users }}"
-    action: "{{ win_baseline_3925_state_Action }}"
-  when:
-    win_baseline_3925_state_Manage
+# - name: "win_baseline_3925_state | Esure 'Change the time zone privilege' is set to 'Administrators, LOCAL SERVICE'"
+#   win_user_right:
+#     name: "{{ win_baseline_3925_state_Name }}"
+#     users: "{{ win_baseline_3925_state_Users }}"
+#     action: "{{ win_baseline_3925_state_Action }}"
+#   when:
+#     win_baseline_3925_state_Manage
 
 
 # - name: "win_baseline_3926_State | Ensure 'Reschedule Automatic Update scheduled installations' is set to 'Enabled'"
@@ -1425,13 +1425,13 @@
 #   when:
 #     win_baseline_3940_state_Manage
 
-- name: "win_baseline_3941_state | Ensure 'Create symbolic links' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_3941_state_Name }}"
-    users: "{{ win_baseline_3941_state_Users }}"
-    action: "{{ win_baseline_3941_state_Action }}"
-  when:
-    win_baseline_3941_state_Manage
+# - name: "win_baseline_3941_state | Ensure 'Create symbolic links' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_3941_state_Name }}"
+#     users: "{{ win_baseline_3941_state_Users }}"
+#     action: "{{ win_baseline_3941_state_Action }}"
+#   when:
+#     win_baseline_3941_state_Manage
 
 # - name: "win_baseline_3942_state | Ensure 'System - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
 #   win_regedit:
@@ -1469,14 +1469,14 @@
 #   when:
 #     win_baseline_4005_state_Manage
 
-- name: "win_baseline_4006_state | Ensure 'Windows event collector' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_4006_state_Path }}"
-    name: "{{ win_baseline_4006_state_Name }}"
-    data: "{{ win_baseline_4006_state_Data }}"
-    type: "{{ win_baseline_4006_state_Type }}"
-  when:
-    win_baseline_4006_state_Manage
+# - name: "win_baseline_4006_state | Ensure 'Windows event collector' is set to 'Automatic'"
+#   win_regedit:
+#     path: "{{ win_baseline_4006_state_Path }}"
+#     name: "{{ win_baseline_4006_state_Name }}"
+#     data: "{{ win_baseline_4006_state_Data }}"
+#     type: "{{ win_baseline_4006_state_Type }}"
+#   when:
+#     win_baseline_4006_state_Manage
 
 
 # - name: "win_baseline_4110_state | Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'"
@@ -1497,13 +1497,13 @@
 #   when:
 #     win_baseline_4111_state_Manage
 
-- name: "win_baseline_4232_state | Ensure 'Modify an object label' is set to 'No One'"
-  win_user_right:
-    name: "{{ win_baseline_4232_state_Name }}"
-    users: "{{ win_baseline_4232_state_Users }}"
-    action: "{{ win_baseline_4232_state_Action }}"
-  when:
-    win_baseline_4232_state_Manage
+# - name: "win_baseline_4232_state | Ensure 'Modify an object label' is set to 'No One'"
+#   win_user_right:
+#     name: "{{ win_baseline_4232_state_Name }}"
+#     users: "{{ win_baseline_4232_state_Users }}"
+#     action: "{{ win_baseline_4232_state_Action }}"
+#   when:
+#     win_baseline_4232_state_Manage
 
 # ! cannot choose success and failure at the same time.
 # - name: "win_state_4470_state | Ensure 'Audit Security State Change' is set to 'Success and failure'"
@@ -3051,23 +3051,23 @@
 #   when:
 #     win_baseline_11236_state_Manage
 
-- name: "win_baseline_11238_state | Ensure 'Let windows app make phone calls' is set to '2'"
-  win_regedit:
-    path: "{{ win_baseline_11238_state_Path }}"
-    name: "{{ win_baseline_11238_state_Name }}"
-    data: "{{ win_baseline_11238_state_Data }}"
-    type: "{{ win_baseline_11238_state_Type }}"
-  when:
-    win_baseline_11238_state_Manage
+# - name: "win_baseline_11238_state | Ensure 'Let windows app make phone calls' is set to '2'"
+#   win_regedit:
+#     path: "{{ win_baseline_11238_state_Path }}"
+#     name: "{{ win_baseline_11238_state_Name }}"
+#     data: "{{ win_baseline_11238_state_Data }}"
+#     type: "{{ win_baseline_11238_state_Type }}"
+#   when:
+#     win_baseline_11238_state_Manage
 
-- name: "win_baseline_11239_state | Ensure 'Let Windows apps access notifications' is set to '2'"
-  win_regedit:
-    path: "{{ win_baseline_11239_state_Path }}"
-    name: "{{ win_baseline_11239_state_Name }}"
-    data: "{{ win_baseline_11239_state_Data }}"
-    type: "{{ win_baseline_11239_state_Type }}"
-  when:
-    win_baseline_11239_state_Manage
+# - name: "win_baseline_11239_state | Ensure 'Let Windows apps access notifications' is set to '2'"
+#   win_regedit:
+#     path: "{{ win_baseline_11239_state_Path }}"
+#     name: "{{ win_baseline_11239_state_Name }}"
+#     data: "{{ win_baseline_11239_state_Data }}"
+#     type: "{{ win_baseline_11239_state_Type }}"
+#   when:
+#     win_baseline_11239_state_Manage
 
 # - name: "win_baseline_11243_state | Ensure 'Prevent deleting download history' is set to 'Enabled'"
   
@@ -3126,13 +3126,13 @@
 #   when:
 #     win_baseline_11385_state_Manage
 
-- name: "win_baseline_11507_state | Ensure 'Obtain an impersonation token for another user in the same session' is set to 'Administrators, Local Service, Network Service"
-  win_user_right:
-    name: "{{ win_baseline_11507_state_Name }}"
-    users: "{{ win_baseline_11507_state_Users }}"
-    action: "{{ win_baseline_11507_state_Action }}"
-  when:
-    win_baseline_11507_state_Manage
+# - name: "win_baseline_11507_state | Ensure 'Obtain an impersonation token for another user in the same session' is set to 'Administrators, Local Service, Network Service"
+#   win_user_right:
+#     name: "{{ win_baseline_11507_state_Name }}"
+#     users: "{{ win_baseline_11507_state_Users }}"
+#     action: "{{ win_baseline_11507_state_Action }}"
+#   when:
+#     win_baseline_11507_state_Manage
 
 # - name: "win_baseline_12015_state | Ensure 'Block all consumer Microsoft account user authentication' is set to 'Enabled'"
 #   win_regedit:
@@ -3179,12 +3179,12 @@
 #   when:
 #     win_baseline_16104_state_Manage
 
-- name: "win_baseline_17381_state | Ensure 'Audit token right adjusted' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4471_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4471_state_AuditType }}"
-  when:
-    win_baseline_4471_state_Manage
+# - name: "win_baseline_17381_state | Ensure 'Audit token right adjusted' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4471_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4471_state_AuditType }}"
+#   when:
+#     win_baseline_4471_state_Manage
 
 # - name: "win_baseline_17707_state | Ensure 'Turn off notifications network usage' is set to 'Enabled'"
 #   win_regedit:
