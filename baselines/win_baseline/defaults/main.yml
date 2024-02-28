@@ -1127,7 +1127,7 @@ win_baseline_4097_state_Manage: True
 win_baseline_4097_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Registration Wizard Control'
 win_baseline_4097_state_Name: "NoRegistration"
 win_baseline_4097_state_Data: "1"
-
+win_baseline_4097_state_Type: dword
 
 # win_baseline_4110_state | Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'
 win_baseline_4110_state_Manage: True
