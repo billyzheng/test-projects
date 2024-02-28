@@ -617,14 +617,14 @@
 #   when:
 #     win_baseline_1463_state_Manage
 
-# - name: "win_baseline_1472_state | Ensure 'Network connections' is set to 'Automatic'"
-#   win_regedit:
-#     path: "{{ win_baseline_1472_state_Path }}"
-#     name: "{{ win_baseline_1472_state_Name }}"
-#     data: "{{ win_baseline_1472_state_Data }}"
-#     type: "{{ win_baseline_1472_state_Type }}"
-#   when:
-#     win_baseline_1472_state_Manage
+- name: "win_baseline_1472_state | Ensure 'Network connections' is set to 'Automatic'"
+  win_regedit:
+    path: "{{ win_baseline_1472_state_Path }}"
+    name: "{{ win_baseline_1472_state_Name }}"
+    data: "{{ win_baseline_1472_state_Data }}"
+    type: "{{ win_baseline_1472_state_Type }}"
+  when:
+    win_baseline_1472_state_Manage
 
 # - name: "win_baseline_1476_state | Ensure 'Romote Access Connection Manager (RasMan)' is set to 'Disabled'"
 #   win_regedit:
@@ -1509,6 +1509,15 @@
 #     type: "{{ win_baseline_4111_state_Type }}"
 #   when:
 #     win_baseline_4111_state_Manage
+
+# ! error, details are in the table
+# - name: "win_baseline_4194_state | Esure 'Configuration of wireless settings using windows connect now' is set to 'Disabled'"
+#   win_security_policy:
+#     section: "{{ win_baseline_4194_state_Section }}"
+#     key: "{{ win_baseline_4194_state_Key }}"
+#     value: "{{ win_baseline_4194_state_Value }}"
+#   when:
+#     win_baseline_4194_state_Manage
 
 # - name: "win_baseline_4232_state | Ensure 'Modify an object label' is set to 'No One'"
 #   win_user_right:

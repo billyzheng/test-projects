@@ -1143,6 +1143,11 @@ win_baseline_4111_state_Name: "ACSettingIndex"
 win_baseline_4111_state_Data: "1"
 win_baseline_4111_state_Type: dword
 
+# win_baseline_4194_state | Esure 'Configuration of wireless settings using windows connect now' is set to 'Disabled'
+win_baseline_4194_state_Manage: True
+win_baseline_4194_state_Section: System Access
+win_baseline_4194_state_Key: "WCN"
+
 # win_baseline_4232_state | Ensure 'Modify an object label' is set to 'No One'
 win_baseline_4232_state_Manage: True
 win_baseline_4232_state_Name: "SeRelabelPrivilege"
