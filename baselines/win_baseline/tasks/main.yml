@@ -919,14 +919,14 @@
 #   when:
 #     win_baseline_2395_state_Manage
 
-# ! error, details are in the table
-- name: "win_baseline_2396_state | Ensure 'Profile system performance' is set to 'Administrators, WidServiceHost'"
-  win_user_right:
-    name: "{{ win_baseline_2396_state_Name }}"
-    users: "{{ win_baseline_2396_state_Users }}"
-    action: "{{ win_baseline_2396_state_Action }}"
-  when:
-    win_baseline_2396_state_Manage
+# ! partly error, details are in the table
+# - name: "win_baseline_2396_state | Ensure 'Profile system performance' is set to 'Administrators, WidServiceHost'"
+#   win_user_right:
+#     name: "{{ win_baseline_2396_state_Name }}"
+#     users: "{{ win_baseline_2396_state_Users }}"
+#     action: "{{ win_baseline_2396_state_Action }}"
+#   when:
+#     win_baseline_2396_state_Manage
 
 # - name: "win_baseline_2397_state | Ensure 'Remove computer from docking station' is set to 'Administrators'"
 #   win_user_right:
@@ -937,13 +937,13 @@
 #     win_baseline_2397_state_Manage
 
 # ! error
-# - name: "win_baseline_2398_state | Ensure 'Replace a process level token' is set to 'No One'"
-#   win_user_right:
-#     name: "{{ win_baseline_2398_state_Name }}"
-#     users: "{{ win_baseline_2398_state_Users }}"
-#     action: "{{ win_baseline_2398_state_Action }}"
-#   when:
-#     win_baseline_2398_state_Manage
+- name: "win_baseline_2398_state | Ensure 'Replace a process level token' is set to 'No One'"
+  win_user_right:
+    name: "{{ win_baseline_2398_state_Name }}"
+    users: "{{ win_baseline_2398_state_Users }}"
+    action: "{{ win_baseline_2398_state_Action }}"
+  when:
+    win_baseline_2398_state_Manage
 
 # - name: "win_baseline_2399_state | Ensure 'Restore files and directories' is set to 'Administrators, Backup Operators'"
 #   win_user_right:
