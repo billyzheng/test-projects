@@ -722,6 +722,12 @@ win_baseline_2402_state_Name: "SeTakeOwnershipPrivilege"
 win_baseline_2402_state_Users: "Administrators"
 win_baseline_2402_state_Action: set
 
+# win_baseline_2422_state | Ensure 'Built-in Guest' acount match '^(?!Guest$)'
+win_baseline_2422_state_Manage: True
+win_baseline_2422_state_Name: "Guest"
+win_baseline_2422_state_State: present
+win_baseline_2422_state_Group: "Guests"
+
 
 # win_baseline_2341_state | Ensure 'Account lockout duration' is set to '15 or more minute(s)'
 win_baseline_2341_state_Manage: True

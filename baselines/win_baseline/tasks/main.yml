@@ -974,6 +974,15 @@
 #   when:
 #     win_baseline_2402_state_Manage
 
+- name: "win_baseline_2422_state | Ensure 'Built-in Guest' acount match '^(?!Guest$)'"
+  win_user:
+    name: "{{ win_baseline_2422_state_Name }}"
+    foundmatch: url is regex("^?!Guest$")
+    state: "{{ win_baseline_2422_state_State }}"
+    groups: "{{ win_baseline_2422_state_Groups }}"
+  when:
+    win_baseline_2422_state_Manage
+
 # The following tasks should be test one by one, to find the credential problem.
 # - name: "win_baseline_2341_state | Ensure 'Account lockout duration' is set to '30 or more minute(s)'"
 #   win_security_policy:
