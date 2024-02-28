@@ -278,15 +278,14 @@
 #   when:
 #     win_baseline_1193_state_Manage
 
-# todo : ensure the value
-- name: "win_baseline_1195_state | Ensure 'MSS - (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers' is set to what?"
-  win_regedit:
-    path: "{{ win_baseline_1195_state_Path }}"
-    name: "{{ win_baseline_1195_state_Name }}"
-    data: "{{ win_baseline_1195_state_Data }}"
-    type: "{{ win_baseline_1195_state_Type }}"
-  when:
-    win_baseline_1195_state_Manage
+# - name: "win_baseline_1195_state | Ensure 'MSS - (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers' is set to what?"
+#   win_regedit:
+#     path: "{{ win_baseline_1195_state_Path }}"
+#     name: "{{ win_baseline_1195_state_Name }}"
+#     data: "{{ win_baseline_1195_state_Data }}"
+#     type: "{{ win_baseline_1195_state_Type }}"
+#   when:
+#     win_baseline_1195_state_Manage
 
 # - name: "win_baseline_1196_state | Ensure 'MSS - (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled - 5 or fewer seconds'"
 #   win_regedit:
@@ -316,14 +315,14 @@
 #     win_baseline_1199_state_Manage
 
 # TODO: confirm the path
-# - name: "win_baseline_1200_state | Ensure 'Dynamic Controller: Resuse machine account password changes' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1200_state_Path }}"
-#     name: "{{ win_baseline_1200_state_Name }}"
-#     data: "{{ win_baseline_1200_state_Data }}"
-#     type: "{{ win_baseline_1200_state_Type }}"
-#   when:
-#     win_baseline_1200_state_Manage
+- name: "win_baseline_1200_state | Ensure 'Dynamic Controller: Resuse machine account password changes' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1200_state_Path }}"
+    name: "{{ win_baseline_1200_state_Name }}"
+    data: "{{ win_baseline_1200_state_Data }}"
+    type: "{{ win_baseline_1200_state_Type }}"
+  when:
+    win_baseline_1200_state_Manage
 
 # - name: "win_baseline_1264_state | Ensure Dynamic Host Configuration Protocol Client' is set to 'Key not found'"
 #   win_regedit:
