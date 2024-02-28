@@ -261,14 +261,14 @@
 #     win_baseline_1189_state_Manage
 
 # todo: ensure the value
-# - name: "win_baseline_1190_state | Ensure 'Interactive logon - Do not display last user name' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1190_state_Path }}"
-#     name: "{{ win_baseline_1190_state_Name }}"
-#     data: "{{ win_baseline_1190_state_Data }}"
-#     type: "{{ win_baseline_1190_state_Type }}"
-#   when: 
-#     win_baseline_1190_state_Manage
+- name: "win_baseline_1190_state | Ensure 'Interactive logon - Do not display last user name' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1190_state_Path }}"
+    name: "{{ win_baseline_1190_state_Name }}"
+    data: "{{ win_baseline_1190_state_Data }}"
+    type: "{{ win_baseline_1190_state_Type }}"
+  when: 
+    win_baseline_1190_state_Manage
 
 # - name: "win_baseline_1193_state | Ensure 'MSS - (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes' is set to 'Disabled'"
 #   win_regedit:
@@ -1676,13 +1676,13 @@
 #   when:
 #     win_baseline_4492_state_Manage
 
-# ! error
-- name: "win_baseline_4493_state | Ensure 'Audit Order Object Access Events' is set to 'Success'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4493_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4493_state_AuditType }}"
-  when:
-    win_baseline_4493_state_Manage
+# ! error, details are in the table
+# - name: "win_baseline_4493_state | Ensure 'Audit Order Object Access Events' is set to 'Success'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4493_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4493_state_AuditType }}"
+#   when:
+#     win_baseline_4493_state_Manage
 
 # - name: "win_baseline_4494_state | Ensure 'Audit Sensitive Privilege Use' is set to 'Success and Failure'"
 #   win_audit_policy_system:
