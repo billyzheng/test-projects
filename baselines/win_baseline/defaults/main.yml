@@ -146,7 +146,11 @@ win_baseline_1177_state_Name: "NoDefaultExempt"
 win_baseline_1177_state_Data: "3"
 win_baseline_1177_state_Type: dword
 
-# not sure
+# win_baseline_1181_state | Ensure 'Simple network management protocol (SNMP)' is set to 'Disabled'
+win_baseline_1181_state_Manage: True
+win_baseline_1181_state_Name: "SNMP"
+win_baseline_1181_state_State: stopped
+
 # win_baseline_1182_state | Ensure 'Simple Netowrk Management Protocol trap' service is diabled
 win_baseline_1182_state_Manage: True
 win_baseline_1182_state_Name: "snmptrap"

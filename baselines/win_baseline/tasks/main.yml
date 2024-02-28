@@ -118,14 +118,14 @@
 #     win_baseline_1092_state_Manage
   
 # # ! error, cannot run the task
-- name: "win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Client' is set to 'Disabled'"
-  win_service:
-    name: "{{ win_baseline_1115_state_Name }}"
-    state: "{{ win_baseline_1115_state_State }}"
-    start_mode: "{{ win_baseline_1115_state_Mode }}"
-    force_dependent_services: yes
-  when:
-    win_baseline_1115_state_Manage
+# - name: "win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Client' is set to 'Disabled'"
+#   win_service:
+#     name: "{{ win_baseline_1115_state_Name }}"
+#     state: "{{ win_baseline_1115_state_State }}"
+#     start_mode: "{{ win_baseline_1115_state_Mode }}"
+#     force_dependent_services: yes
+#   when:
+#     win_baseline_1115_state_Manage
 
 # - name: "win_baseline_1134_state | Ensure 'Logon banner title' is ser to 'This is an interest computer system of ABB Asea Brown Boveri Ltd'"
 #   win_regedit:
@@ -207,6 +207,13 @@
 #     type: "{{ win_baseline_1177_state_Type }}"
 #   when:
 #     win_baseline_1177_state_Manage
+
+- name: "win_baseline_1181_state | Ensure 'Simple network management protocol (SNMP)' is set to 'Disabled'"
+  win_service:
+    name: snmp
+    state: stopped
+  when:
+    win_baseline_1181_state_Manage
 
 # - name: "win_baseline_1182_state | Ensure 'Simple Netowrk Management Protocol trap' service is set t0 'Disabled'"
 #   win_service:
