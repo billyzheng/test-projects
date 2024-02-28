@@ -683,7 +683,7 @@ win_baseline_2395_state_Action: set
 # win_baseline_2396_state | Ensure 'Profile system performance' is set to 'Administrators, WidServiceHost'
 win_baseline_2396_state_Manage: True
 win_baseline_2396_state_Name: "SeSystemProfilePrivilege"
-win_baseline_2396_state_Users: "Administrators, WidServiceHost"
+win_baseline_2396_state_Users: "Administrators" # , WidServiceHost"
 win_baseline_2396_state_Action: set
 
 # win_baseline_2397_state | Ensure 'Remove computer from docking station' is set to 'Administrators'

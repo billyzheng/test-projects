@@ -117,7 +117,7 @@
 #   when:
 #     win_baseline_1092_state_Manage
   
-# # ! error, cannot run the task
+# # ! error, details in the table
 # - name: "win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Client' is set to 'Disabled'"
 #   win_service:
 #     name: "{{ win_baseline_1115_state_Name }}"
@@ -208,12 +208,13 @@
 #   when:
 #     win_baseline_1177_state_Manage
 
-- name: "win_baseline_1181_state | Ensure 'Simple network management protocol (SNMP)' is set to 'Disabled'"
-  win_service:
-    name: snmp
-    state: stopped
-  when:
-    win_baseline_1181_state_Manage
+# ! error, details in the table
+# - name: "win_baseline_1181_state | Ensure 'Simple network management protocol (SNMP)' is set to 'Disabled'"
+#   win_service:
+#     name: snmp
+#     state: stopped
+#   when:
+#     win_baseline_1181_state_Manage
 
 # - name: "win_baseline_1182_state | Ensure 'Simple Netowrk Management Protocol trap' service is set t0 'Disabled'"
 #   win_service:
@@ -438,7 +439,7 @@
 #   when:
 #     win_baseline_1377_state_Manage
 
-# # ! problem, not change successfully
+# # ! problem, details in the table
 # - name: "win_baseline_1378_state | Ensure 'Interactive logon - Smart card removal behavior' is set to 'Lock Workstation'"
 #   win_regedit:
 #     path: "{{ win_baseline_1378_state_Path }}"
@@ -828,7 +829,7 @@
 #   when:
 #     win_baseline_2384_state_Manage
 
-# ! error
+# ! error, details in the table
 # - name: "win_baseline_2385_state | Ensure 'Generate security audits' is set to 'Administrators, IIS Apppool\\.* Service, Network Service"
 #   win_user_right:
 #     name: "{{ win_baseline_2385_state_Name }}"
@@ -853,7 +854,7 @@
 #   when:
 #     win_baseline_2387_state_Manage 
 
-# # ! do not know how to set to NT ABB...
+# # ! error, details are in the table
 # - name: "win_baseline_2388_state | Ensure 'Lock pages in memory' is set to 'No body'" 
 #   win_user_right:
 #     name: "{{ win_baseline_2388_state_Name }}"
@@ -918,14 +919,14 @@
 #   when:
 #     win_baseline_2395_state_Manage
 
-# ! error WidServiceHost
-# - name: "win_baseline_2396_state | Ensure 'Profile system performance' is set to 'Administrators, WidServiceHost'"
-#   win_user_right:
-#     name: "{{ win_baseline_2396_state_Name }}"
-#     users: "{{ win_baseline_2396_state_Users }}"
-#     action: "{{ win_baseline_2396_state_Action }}"
-#   when:
-#     win_baseline_2396_state_Manage
+# ! error, details are in the table
+- name: "win_baseline_2396_state | Ensure 'Profile system performance' is set to 'Administrators, WidServiceHost'"
+  win_user_right:
+    name: "{{ win_baseline_2396_state_Name }}"
+    users: "{{ win_baseline_2396_state_Users }}"
+    action: "{{ win_baseline_2396_state_Action }}"
+  when:
+    win_baseline_2396_state_Manage
 
 # - name: "win_baseline_2397_state | Ensure 'Remove computer from docking station' is set to 'Administrators'"
 #   win_user_right:
