@@ -314,15 +314,14 @@
 #   when:
 #     win_baseline_1199_state_Manage
 
-# TODO: confirm the path
-- name: "win_baseline_1200_state | Ensure 'Dynamic Controller: Resuse machine account password changes' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1200_state_Path }}"
-    name: "{{ win_baseline_1200_state_Name }}"
-    data: "{{ win_baseline_1200_state_Data }}"
-    type: "{{ win_baseline_1200_state_Type }}"
-  when:
-    win_baseline_1200_state_Manage
+# - name: "win_baseline_1200_state | Ensure 'Dynamic Controller: Resuse machine account password changes' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1200_state_Path }}"
+#     name: "{{ win_baseline_1200_state_Name }}"
+#     data: "{{ win_baseline_1200_state_Data }}"
+#     type: "{{ win_baseline_1200_state_Type }}"
+#   when:
+#     win_baseline_1200_state_Manage
 
 # - name: "win_baseline_1264_state | Ensure Dynamic Host Configuration Protocol Client' is set to 'Key not found'"
 #   win_regedit:
@@ -1118,7 +1117,7 @@
 #   when:
 #     win_baseline_2612_state_Manage
 
-# # TODO 2612: cannot find the property in the registry
+# ! 2612 error, details are in the table
 
 # - name: "win_baseline_2616_state | Ensure 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled'"
 #   win_regedit:
@@ -1188,7 +1187,6 @@
 #   when:
 #     win_baseline_3657_state_Manage
 
-# # TODO: many tasks are skipped.
 # - name: "win_baseline_3719_state | Ensure 'Internet connection sharing' is set to 'Disabled'"
 #   win_regedit:
 #     path: "{{ win_baseline_3719_state_Path }}"
@@ -1893,7 +1891,6 @@
 #   when:
 #     win_baseline_5212_state_Manage
 
-# # TODO: should be checked again
 # - name: "win_baseline_5213_state | Configure 'Network access - Remotely accessible registry paths and sub-paths'"
 #   win_regedit:
 #     path: "{{ win_baseline_5213_state_Path }}"
@@ -1930,15 +1927,15 @@
 #   when:
 #     win_baseline_5267_state_Manage
 
-# # TODO: should be checked on the target server.
-# - name: "win_baseline_5996_state | Ensure 'Windows SNMP community strings' is set to 'Not defined'"
-#   win_regedit:
-#     path: "{{ win_baseline_5996_state_Path }}"
-#     name: "{{ win_baseline_5996_state_Name }}"
-#     data: "{{ win_baseline_5996_state_Data }}"
-#     type: "{{ win_baseline_5996_state_Type }}"
-#   when:
-#     win_baseline_5996_state_Manage
+# TODO: should be checked on the target server.
+- name: "win_baseline_5996_state | Ensure 'Windows SNMP community strings' is set to 'Not defined'"
+  win_regedit:
+    path: "{{ win_baseline_5996_state_Path }}"
+    name: "{{ win_baseline_5996_state_Name }}"
+    data: "{{ win_baseline_5996_state_Data }}"
+    type: "{{ win_baseline_5996_state_Type }}"
+  when:
+    win_baseline_5996_state_Manage
 
 # - name: "win_baseline_7501_state | Ensure 'Configure registry policy processing - Process even if the Group Policy objects have not changed' is set to 'Enabled - TRUE'"
 #   win_regedit:
