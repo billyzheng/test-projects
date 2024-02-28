@@ -2586,14 +2586,14 @@
 #     win_baseline_10362_state_Manage
 
 # todo: the value is not defined in the table.
-# - name: "win_baseline_10364_state | Ensure 'Let Windows apps access email' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_10364_state_Path }}"
-#     name: "{{ win_baseline_10364_state_Name }}"
-#     data: "{{ win_baseline_10364_state_Data }}"
-#     type: "{{ win_baseline_10364_state_Type }}"
-#   when:
-#     win_baseline_10364_state_Manage
+- name: "win_baseline_10364_state | Ensure 'Let Windows apps access email' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_10364_state_Path }}"
+    name: "{{ win_baseline_10364_state_Name }}"
+    data: "{{ win_baseline_10364_state_Data }}"
+    type: "{{ win_baseline_10364_state_Type }}"
+  when:
+    win_baseline_10364_state_Manage
 
 # - name: "win_baseline_10365_state | Ensure 'Let Windows apps access messaging' is set to 'Force Deny'"
 #   win_regedit:

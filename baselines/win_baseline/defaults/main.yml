@@ -1959,10 +1959,17 @@ win_baseline_10362_state_Name: "DisableQueryRemoteServer"
 win_baseline_10362_state_Data: "0"
 win_baseline_10362_state_Type: dword
 
+# win_baseline_10364_state | Ensure 'Let Windows apps access email' is set to 'Disabled'
+win_baseline_10364_state_Manage: True
+win_baseline_10364_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPrivacy'
+win_baseline_10364_state_Name: "LetAppsAccessEmail"
+win_baseline_10364_state_Data: "2" 
+win_baseline_10364_state_Type: dword
+
 # win_baseline_10365_state | Ensure 'Let Windows apps access messaging' is set to 'Force Deny'
 win_baseline_10365_state_Manage: True
 win_baseline_10365_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPrivacy'
-win_baseline_10365_state_Name: "LetAppsAccessMessaging"
+win_baseline_10365_state_Name: "LetAppsAccessEmail"
 win_baseline_10365_state_Data: "2"
 win_baseline_10365_state_Type: dword
 
