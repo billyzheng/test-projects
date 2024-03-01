@@ -45,11 +45,9 @@ print(len(registry_names))
 print(len(registry_data))
 
 file.close()
-for a, b, c in zip(registry_paths, registry_names, registry_data):
-    print(a, b, c)
 
 output_file = open('registry_key_value_export.csv', 'w')
 for a, b, c in zip(registry_paths, registry_names, registry_data):
     output_file.write(a + ',' + b + ',' + c + '\n')
 output_file.close
-# print(test_ids)
+print(test_ids)

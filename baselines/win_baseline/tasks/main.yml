@@ -314,14 +314,14 @@
 #   when:
 #     win_baseline_1200_state_Manage
 
-- name: "win_baseline_1264_state | Ensure Dynamic Host Configuration Protocol Client' is set to 'Key not found'"
-  win_regedit:
-    path: "{{ win_baseline_1264_state_Path }}"
-    name: "{{ win_baseline_1264_state_Name }}"
-    data: "{{ win_baseline_1264_state_Data }}"
-    type: "{{ win_baseline_1264_state_Type }}"
-  when:
-    win_baseline_1264_state_Manage
+# - name: "win_baseline_1264_state | Ensure Dynamic Host Configuration Protocol Client' is set to 'Key not found'"
+#   win_regedit:
+#     path: "{{ win_baseline_1264_state_Path }}"
+#     name: "{{ win_baseline_1264_state_Name }}"
+#     data: "{{ win_baseline_1264_state_Data }}"
+#     type: "{{ win_baseline_1264_state_Type }}"
+#   when:
+#     win_baseline_1264_state_Manage
 
 # - name: "win_baseline_1318_state | Ensure 'Enforce password history' is set to '24 or more password(s)'"
 #   win_security_policy:
@@ -1474,14 +1474,14 @@
 #   when:
 #     win_baseline_4006_state_Manage
 
-- name: "win_baseline_4097_state | Ensure 'Windows registration wizard' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_4097_state_Path }}"
-    name: "{{ win_baseline_4097_state_Name }}"
-    data: "{{ win_baseline_4097_state_Data }}"
-    type: "{{ win_baseline_4097_state_Type }}"
-  when:
-    win_baseline_4097_state_Manage
+# - name: "win_baseline_4097_state | Ensure 'Windows registration wizard' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_4097_state_Path }}"
+#     name: "{{ win_baseline_4097_state_Name }}"
+#     data: "{{ win_baseline_4097_state_Data }}"
+#     type: "{{ win_baseline_4097_state_Type }}"
+#   when:
+#     win_baseline_4097_state_Manage
 
 
 # - name: "win_baseline_4110_state | Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'"
@@ -1503,13 +1503,22 @@
 #     win_baseline_4111_state_Manage
 
 # ! error, details are in the table
-# - name: "win_baseline_4194_state | Esure 'Configuration of wireless settings using windows connect now' is set to 'Disabled'"
+# - name: "win_baseline_4193_state | Esure 'Configuration of wireless settings using windows connect now' is set to 'Disabled'"
 #   win_security_policy:
-#     section: "{{ win_baseline_4194_state_Section }}"
-#     key: "{{ win_baseline_4194_state_Key }}"
-#     value: "{{ win_baseline_4194_state_Value }}"
+#     section: "{{ win_baseline_4193_state_Section }}"
+#     key: "{{ win_baseline_4193_state_Key }}"
+#     value: "{{ win_baseline_4193_state_Value }}"
 #   when:
-#     win_baseline_4194_state_Manage
+#     win_baseline_4193_state_Manage
+
+- name: "win_baseline_4194_state | Ensure 'Turn off background regresh of group policy' is set to 'Disabled'" 
+  win_regedit:
+    path: "{{ win_baseline_4194_state_Path }}"
+    name: "{{ win_baseline_4194_state_Name }}"
+    data: "{{ win_baseline_4194_state_Data }}"
+    type: "{{ win_baseline_4194_state_Type }}"
+  when:
+    win_baseline_4194_state_Manage
 
 # - name: "win_baseline_4232_state | Ensure 'Modify an object label' is set to 'No One'"
 #   win_user_right:
@@ -2222,14 +2231,14 @@
 #   when:
 #     win_baseline_9009_state_Manage
 
-- name: "win_baseline_9013_state | Ensure 'Setup - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_9013_state_Path }}"
-    name: "{{ win_baseline_9013_state_Name }}"
-    data: "{{ win_baseline_9013_state_Data }}"
-    type: "{{ win_baseline_9013_state_Type }}"
-  when:
-    win_baseline_9013_state_Manage
+# - name: "win_baseline_9013_state | Ensure 'Setup - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_9013_state_Path }}"
+#     name: "{{ win_baseline_9013_state_Name }}"
+#     data: "{{ win_baseline_9013_state_Data }}"
+#     type: "{{ win_baseline_9013_state_Type }}"
+#   when:
+#     win_baseline_9013_state_Manage
 
 # - name: "win_baseline_9014_state | Ensure 'Setup - Maximum Log Size (KB)' is set to 'Enabled: 32768 or greater'"
 #   win_regedit:
@@ -2598,14 +2607,14 @@
 #   when:
 #     win_baseline_10362_state_Manage
 
-- name: "win_baseline_10364_state | Ensure 'Let Windows apps access email' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_10364_state_Path }}"
-    name: "{{ win_baseline_10364_state_Name }}"
-    data: "{{ win_baseline_10364_state_Data }}"
-    type: "{{ win_baseline_10364_state_Type }}"
-  when:
-    win_baseline_10364_state_Manage
+# - name: "win_baseline_10364_state | Ensure 'Let Windows apps access email' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10364_state_Path }}"
+#     name: "{{ win_baseline_10364_state_Name }}"
+#     data: "{{ win_baseline_10364_state_Data }}"
+#     type: "{{ win_baseline_10364_state_Type }}"
+#   when:
+#     win_baseline_10364_state_Manage
 
 # - name: "win_baseline_10365_state | Ensure 'Let Windows apps access messaging' is set to 'Force Deny'"
 #   win_regedit:
@@ -2652,14 +2661,14 @@
 #   when:
 #     win_baseline_10369_state_Manage
 
-- name: "win_baseline_10370_state | Ensure 'Enable insecure guest logons' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_10370_state_Path }}"
-    name: "{{ win_baseline_10370_state_Name }}"
-    data: "{{ win_baseline_10370_state_Data }}"
-    type: "{{ win_baseline_10370_state_Type }}"
-  when:
-    win_baseline_10370_state_Manage
+# - name: "win_baseline_10370_state | Ensure 'Enable insecure guest logons' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_10370_state_Path }}"
+#     name: "{{ win_baseline_10370_state_Name }}"
+#     data: "{{ win_baseline_10370_state_Data }}"
+#     type: "{{ win_baseline_10370_state_Type }}"
+#   when:
+#     win_baseline_10370_state_Manage
 
 # - name: "win_baseline_10371_state | Ensure 'Let Windows apps access contacts' is set to 'Force Deny'"
 #   win_regedit:
