@@ -1522,40 +1522,50 @@
 
 # ! error, details are in the table
 # - name: “win_baseline_4193_state | Esure 'Configuration of wireless settings using windows connect now' is set to 'Disabled'”
-- name: "18.4.20.1,CCE-37481-9 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - EnableRegistrars"
+- name: "win_baseline_4193_state_1 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - EnableRegistrars"
   win_regedit:
-    path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
-    name: "EnableRegistrars"
-    data: "0"
-    type: dword
+    path: "{{ win_baseline_4193_1_state_Path }}"
+    name: "{{ win_baseline_4193_1_state_Name }}"
+    data: "{{ win_baseline_4193_1_state_Data }}"
+    type: "{{ win_baseline_4193_1_state_Type }}"
+  when:
+    win_baseline_4193_1_state_Manage
 
-- name: "18.4.20.1,CCE-37481-9 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableUPnPRegistrar"
+- name: "win_baseline_4193_state_2 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableUPnPRegistrar"
   win_regedit:
-    path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
-    name: "DisableUPnPRegistrar"
-    data: "0"
-    type: dword
+    path: "{{ win_baseline_4193_2_state_Path }}"
+    name: "{{ win_baseline_4193_2_state_Name }}"
+    data: "{{ win_baseline_4193_2_state_Data }}"
+    type: "{{ win_baseline_4193_2_state_Type }}"
+  when:
+    win_baseline_4193_2_state_Manage
 
-- name: "18.4.20.1,CCE-37481-9 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableInBand802DOT11Registrar"
+- name: "win_baseline_4193_stat_3 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableInBand802DOT11Registrar"
   win_regedit:
-    path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
-    name: "DisableInBand802DOT11Registrar"
-    data: "0"
-    type: dword
+    path: "{{ win_baseline_4193_3_state_Path }}"
+    name: "{{ win_baseline_4193_3_state_Name }}"
+    data: "{{ win_baseline_4193_3_state_Data }}"
+    type: "{{ win_baseline_4193_3_state_Type }}"
+  when:
+    win_baseline_4193_3_state_Manage
 
-- name: "18.4.20.1,CCE-37481-9 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableFlashConfigRegistrar"
+- name: "win_baseline_4193_stat_4 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableFlashConfigRegistrar"
   win_regedit:
-    path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
-    name: "DisableFlashConfigRegistrar"
-    data: "0"
-    type: dword
+    path: "{{ win_baseline_4193_4_state_Path }}"
+    name: "{{ win_baseline_4193_4_state_Name }}"
+    data: "{{ win_baseline_4193_4_state_Data }}"
+    type: "{{ win_baseline_4193_4_state_Type }}"
+  when:
+    win_baseline_4193_4_state_Manage
 
-- name: "18.4.20.1,CCE-37481-9 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableWPDRegistrar"
+- name: "win_baseline_4193_state_5 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableWPDRegistrar"
   win_regedit:
-    path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
-    name: "DisableWPDRegistrar"
-    data: "0"
-    type: dword
+    path: "{{ win_baseline_4193_5_state_Path }}"
+    name: "{{ win_baseline_4193_5_state_Name }}"
+    data: "{{ win_baseline_4193_5_state_Data }}"
+    type: "{{ win_baseline_4193_5_state_Type }}"
+  when:
+    win_baseline_4193_5_state_Manage
 
 
 # - name: "win_baseline_4194_state | Ensure 'Turn off background regresh of group policy' is set to 'Disabled'" 

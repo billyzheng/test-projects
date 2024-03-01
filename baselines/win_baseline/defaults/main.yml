@@ -1148,7 +1148,41 @@ win_baseline_4111_state_Manage: True
 win_baseline_4111_state_Path: 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\0E796Bdb-100D-47D6-A2D5-F7D2Daa51F51'
 win_baseline_4111_state_Name: "ACSettingIndex"
 win_baseline_4111_state_Data: "1"
-win_baseline_4111_state_Type: dword
+
+# win_baseline_4193_state_1 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - EnableRegistrars
+win_baseline_41931_1_state_Manage: True
+win_baseline_41931_1_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WCN\Registrars'
+win_baseline_41931_1_state_Name: "EnableRegistrars"
+win_baseline_41931_1_state_Data: "0"
+win_baseline_41931_1_state_Type: dword
+
+# win_baseline_4193_state_2 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableUPnPRegistrar
+win_baseline_4193_2_state_Manage: True
+win_baseline_4193_2_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WCN\Registrars'
+win_baseline_4193_2_state_Name: "DisableUPnPRegistrar"
+win_baseline_4193_2_state_Data: "0"
+win_baseline_4111_2_state_Type: dword
+
+# win_baseline_4193_state_3 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableInBand802DOT11Registrar
+win_baseline_4193_3_state_Manage: True
+win_baseline_4193_3_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WCN\Registrars'
+win_baseline_4193_3_state_Name: "DisableInBand802DOT11Registrar"
+win_baseline_4193_3_state_Data: "0"
+win_baseline_4193_3_state_Type: dword
+
+# win_baseline_4193_state_4 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableFlashConfigRegistrar
+win_baseline_4193_4_state_Manage: True
+win_baseline_4193_4_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WCN\Registrars'
+win_baseline_4193_4_state_Name: "DisableFlashConfigRegistrar"
+win_baseline_4193_4_state_Data: "0"
+win_baseline_4193_4_state_Type: dword
+
+# win_baseline_4193_state_5 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableWPDRegistrar
+win_baseline_4193_5_state_Manage: True
+win_baseline_4193_5_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WCN\Registrars'
+win_baseline_4193_5_state_Name: "DisableWPDRegistrar"
+win_baseline_4193_5_state_Data: "0"
+win_baseline_4193_5_state_Type: dword
 
 # win_baseline_4193_state | Esure 'Configuration of wireless settings using windows connect now' is set to 'Disabled'
 win_baseline_4193_state_Manage: True
