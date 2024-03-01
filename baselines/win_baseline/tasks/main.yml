@@ -323,13 +323,14 @@
 #   when:
 #     win_baseline_1200_state_Manage
 
-# - name: "win_baseline_1264_state | Ensure Dynamic Host Configuration Protocol Client' is set to 'Key not found'"
-#   win_regedit:
-#     path: "{{ win_baseline_1264_state_Path }}"
-#     name: "{{ win_baseline_1264_state_Name }}"
-#     state: "{{ win_baseline_1264_state_State }}"
-#   when:
-#     win_baseline_1264_state_Manage
+- name: "win_baseline_1264_state | Ensure Dynamic Host Configuration Protocol Client' is set to 'Key not found'"
+  win_regedit:
+    path: "{{ win_baseline_1264_state_Path }}"
+    name: "{{ win_baseline_1264_state_Name }}"
+    data: "{{ win_baseline_1264_state_Data }}"
+    type: "{{ win_baseline_1264_state_Type
+  when:
+    win_baseline_1264_state_Manage
 
 # - name: "win_baseline_1318_state | Ensure 'Enforce password history' is set to '24 or more password(s)'"
 #   win_security_policy:

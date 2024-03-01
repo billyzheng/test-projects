@@ -12,9 +12,39 @@ for line in lines:
         continue
     if flag:
         control_id = line.split('_')[2]
-        # print(control_id)
         control_ids.append(control_id)
         flag = False
 
-# print(control_ids)
 print(len(control_ids))
+
+file.close()
+
+# open the var.yml file
+file = open('/Users/ronechen/Ansible/test-projects/baselines/win_baseline/defaults/main.yml')
+lines = file.readlines()
+
+print(len(lines))
+test_ids = control_ids
+registry_paths = []
+registry_names = []
+registry_data = []
+
+# find all lines that contain id in control_ids
+for line in lines:
+    for control_id in control_ids:
+        path = 'win_baseline_' + str(control_id) + '_state_Path'
+        if path in line:
+            registry_paths.append(line.split(': ')[-1].strip().removesuffix('\n'))
+        if 'win_baseline_' + str(control_id) + '_state_Name' in line:
+            registry_names.append(line.split(': ')[-1].strip().removesuffix('\n'))
+        if 'win_baseline_' + str(control_id) + '_state_Data' in line:
+            registry_data.append(line.split(': ')[-1].strip().removesuffix('\n'))
+            test_ids.remove(control_id)
+
+print(len(registry_paths))
+print(len(registry_names))
+print(len(registry_data))
+
+# for a, b, c in zip(registry_paths, registry_names, registry_data):
+#     print(a, b, c)
+print(test_ids)
