@@ -1685,7 +1685,7 @@ win_baseline_9009_state_Type: dword
 
 # win_baseline_9013_state | Ensure 'Setup - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'
 win_baseline_9013_state_Manage: True
-win_baseline_9013_state_Path: '	Software\Policies\Microsoft\Windows\EventLog\Setup'
+win_baseline_9013_state_Path: '	HKLM:\Software\Policies\Microsoft\Windows\EventLog\Setup'
 win_baseline_9013_state_Name: "Retention"
 win_baseline_9013_state_Data: "0"
 win_baseline_9013_state_Type: string
