@@ -823,299 +823,232 @@
 #   when:
 #     win_baseline_2384_state_Manage
 
-# ! error, details in the table
-# - name: "win_baseline_2385_state | Ensure 'Generate security audits' is set to 'Administrators, IIS Apppool\\.* Service, Network Service"
+# - name: "win_baseline_2386_state | Ensure 'Increase scheduling priority' is set to 'Administrators'"
 #   win_user_right:
-#     name: "{{ win_baseline_2385_state_Name }}"
-#     users: "{{ win_baseline_2385_state_Users }}"
-#     action: "{{ win_baseline_2385_state_Action }}"
+#     name: "{{ win_baseline_2386_state_Name }}"
+#     users: "{{ win_baseline_2386_state_Users }}"
+#     action: "{{ win_baseline_2386_state_Action }}"
 #   when:
-#     win_baseline_2385_state_Manage
+#     win_baseline_2386_state_Manage
 
-- name: "win_baseline_2386_state | Ensure 'Increase scheduling priority' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2386_state_Name }}"
-    users: "{{ win_baseline_2386_state_Users }}"
-    action: "{{ win_baseline_2386_state_Action }}"
-  when:
-    win_baseline_2386_state_Manage
-
-- name: "win_baseline_2387_state | Ensure 'Load and unload device drivers' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2387_state_Name }}"
-    users: "{{ win_baseline_2387_state_Users }}"
-    action: "{{ win_baseline_2387_state_Action }}"
-  when:
-    win_baseline_2387_state_Manage 
-
-# ! error, details are in the table
-- name: "win_baseline_2388_state | Ensure 'Lock pages in memory' is set to 'No body'" 
-  win_user_right:
-    name: "{{ win_baseline_2388_state_Name }}"
-    users: "{{ win_baseline_2388_state_Users }}"
-    action: "{{ win_baseline_2388_state_Action }}"
-  when:
-    win_baseline_2388_state_Manage
-
-- name: "win_baseline_2389_stae | Ensure 'Log on as a batch job' is set to 'Administrators, Backup operators, Performance log users, IIS_IUSRS"
-  win_user_right:
-    name: "{{ win_baseline_2389_state_Name }}"
-    users: "{{ win_baseline_2389_state_Users }}"
-    action: "{{ win_baseline_2389_state_Action }}"
-  when:
-    win_baseline_2389_state_Manage
-
-- name: "win_baseline_2390_state | Ensure 'Log on as a service' is set to 'Guests"
-  win_user_right:
-    name: "{{ win_baseline_2390_state_Name }}"
-    users: "{{ win_baseline_2390_state_Users }}"
-    action: "{{ win_baseline_2390_state_Action }}"
-  when:
-    win_baseline_2390_state_Manage
-
-- name: "win_baseline_2391_state | Ensure 'Allow log on locally' is set to 'Administrators, Backup Operators'" # IUSR_{syste} and IWAM_{system} user are not added
-  win_user_right:
-    name: "{{ win_baseline_2391_state_Name }}"
-    users: "{{ win_baseline_2391_state_Users }}"
-    action: "{{ win_baseline_2391_state_Action }}"
-  when:
-    win_baseline_2391_state_Manage
-
-- name: "win_baseline_2392_state | Ensure 'Manage auditing and security log' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2392_state_Name }}"
-    users: "{{ win_baseline_2392_state_Users }}"
-    action: "{{ win_baseline_2392_state_Action }}"
-  when:
-    win_baseline_2392_state_Manage
-
-- name: "win_baseline_2393_state | Ensure 'Modify firware environment values' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2393_state_Name }}"
-    users: "{{ win_baseline_2393_state_Users }}"
-    action: "{{ win_baseline_2393_state_Action }}"
-  when:
-    win_baseline_2393_state_Manage
-
-- name: "win_baseline_2394_state | Ensure 'Perform volume maintenance tasks' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2394_state_Name }}"
-    users: "{{ win_baseline_2394_state_Users }}"
-    action: "{{ win_baseline_2394_state_Action }}"
-  when:
-    win_baseline_2394_state_Manage
-
-- name: "win_baseline_2395_state | Ensure 'Profile single process' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2395_state_Name }}"
-    users: "{{ win_baseline_2395_state_Users }}"
-    action: "{{ win_baseline_2395_state_Action }}"
-  when:
-    win_baseline_2395_state_Manage
-
-# ! partly error, details are in the table
-# - name: "win_baseline_2396_state | Ensure 'Profile system performance' is set to 'Administrators, WidServiceHost'"
+# - name: "win_baseline_2387_state | Ensure 'Load and unload device drivers' is set to 'Administrators'"
 #   win_user_right:
-#     name: "{{ win_baseline_2396_state_Name }}"
-#     users: "{{ win_baseline_2396_state_Users }}"
-#     action: "{{ win_baseline_2396_state_Action }}"
+#     name: "{{ win_baseline_2387_state_Name }}"
+#     users: "{{ win_baseline_2387_state_Users }}"
+#     action: "{{ win_baseline_2387_state_Action }}"
 #   when:
-#     win_baseline_2396_state_Manage
+#     win_baseline_2387_state_Manage 
 
-- name: "win_baseline_2397_state | Ensure 'Remove computer from docking station' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2397_state_Name }}"
-    users: "{{ win_baseline_2397_state_Users }}"
-    action: "{{ win_baseline_2397_state_Action }}"
-  when:
-    win_baseline_2397_state_Manage
-
-# ! error, details are in the table
-# - name: "win_baseline_2398_state | Ensure 'Replace a process level token' is set to 'No One'"
+# - name: "win_baseline_2389_stae | Ensure 'Log on as a batch job' is set to 'Administrators, Backup operators, Performance log users, IIS_IUSRS"
 #   win_user_right:
-#     name: "{{ win_baseline_2398_state_Name }}"
-#     users: "{{ win_baseline_2398_state_Users }}"
-#     action: "{{ win_baseline_2398_state_Action }}"
+#     name: "{{ win_baseline_2389_state_Name }}"
+#     users: "{{ win_baseline_2389_state_Users }}"
+#     action: "{{ win_baseline_2389_state_Action }}"
 #   when:
-#     win_baseline_2398_state_Manage
+#     win_baseline_2389_state_Manage
 
-- name: "win_baseline_2399_state | Ensure 'Restore files and directories' is set to 'Administrators, Backup Operators'"
-  win_user_right:
-    name: "{{ win_baseline_2399_state_Name }}"
-    users: "{{ win_baseline_2399_state_Users }}"
-    action: "{{ win_baseline_2399_state_Action }}"
-  when:
-    win_baseline_2399_state_Manage
+# - name: "win_baseline_2390_state | Ensure 'Log on as a service' is set to 'Guests"
+#   win_user_right:
+#     name: "{{ win_baseline_2390_state_Name }}"
+#     users: "{{ win_baseline_2390_state_Users }}"
+#     action: "{{ win_baseline_2390_state_Action }}"
+#   when:
+#     win_baseline_2390_state_Manage
 
-- name: "win_baseline_2400_state | Ensure 'Shut down the system' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2400_state_Name }}"
-    users: "{{ win_baseline_2400_state_Users }}"
-    action: "{{ win_baseline_2400_state_Action }}"
-  when:
-    win_baseline_2400_state_Manage
+# - name: "win_baseline_2391_state | Ensure 'Allow log on locally' is set to 'Administrators, Backup Operators'" # IUSR_{syste} and IWAM_{system} user are not added
+#   win_user_right:
+#     name: "{{ win_baseline_2391_state_Name }}"
+#     users: "{{ win_baseline_2391_state_Users }}"
+#     action: "{{ win_baseline_2391_state_Action }}"
+#   when:
+#     win_baseline_2391_state_Manage
 
-- name: "win_baseline_2401_state | Ensure 'Synchronize directory service data' is set to 'No one'"
-  win_user_right:
-    name: "{{ win_baseline_2401_state_Name }}"
-    users: "{{ win_baseline_2401_state_Users }}"
-    action: "{{ win_baseline_2401_state_Action }}"
-  when:
-    win_baseline_2401_state_Manage
+# - name: "win_baseline_2392_state | Ensure 'Manage auditing and security log' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2392_state_Name }}"
+#     users: "{{ win_baseline_2392_state_Users }}"
+#     action: "{{ win_baseline_2392_state_Action }}"
+#   when:
+#     win_baseline_2392_state_Manage
 
-- name: "win_baseline_2402_state | Ensure 'Take ownership of files or other objects' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2402_state_Name }}"
-    users: "{{ win_baseline_2402_state_Users }}"
-    action: "{{ win_baseline_2402_state_Action }}"
-  when:
-    win_baseline_2402_state_Manage
+# - name: "win_baseline_2393_state | Ensure 'Modify firware environment values' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2393_state_Name }}"
+#     users: "{{ win_baseline_2393_state_Users }}"
+#     action: "{{ win_baseline_2393_state_Action }}"
+#   when:
+#     win_baseline_2393_state_Manage
 
-# The following tasks should be test one by one, to find the credential problem.
-# - name: "win_baseline_2341_state | Ensure 'Account lockout duration' is set to '30 or more minute(s)'"
+# - name: "win_baseline_2394_state | Ensure 'Perform volume maintenance tasks' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2394_state_Name }}"
+#     users: "{{ win_baseline_2394_state_Users }}"
+#     action: "{{ win_baseline_2394_state_Action }}"
+#   when:
+#     win_baseline_2394_state_Manage
+
+# - name: "win_baseline_2395_state | Ensure 'Profile single process' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2395_state_Name }}"
+#     users: "{{ win_baseline_2395_state_Users }}"
+#     action: "{{ win_baseline_2395_state_Action }}"
+#   when:
+#     win_baseline_2395_state_Manage
+
+# - name: "win_baseline_2397_state | Ensure 'Remove computer from docking station' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2397_state_Name }}"
+#     users: "{{ win_baseline_2397_state_Users }}"
+#     action: "{{ win_baseline_2397_state_Action }}"
+#   when:
+#     win_baseline_2397_state_Manage
+
+# - name: "win_baseline_2399_state | Ensure 'Restore files and directories' is set to 'Administrators, Backup Operators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2399_state_Name }}"
+#     users: "{{ win_baseline_2399_state_Users }}"
+#     action: "{{ win_baseline_2399_state_Action }}"
+#   when:
+#     win_baseline_2399_state_Manage
+
+# - name: "win_baseline_2400_state | Ensure 'Shut down the system' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2400_state_Name }}"
+#     users: "{{ win_baseline_2400_state_Users }}"
+#     action: "{{ win_baseline_2400_state_Action }}"
+#   when:
+#     win_baseline_2400_state_Manage
+
+# - name: "win_baseline_2401_state | Ensure 'Synchronize directory service data' is set to 'No one'"
+#   win_user_right:
+#     name: "{{ win_baseline_2401_state_Name }}"
+#     users: "{{ win_baseline_2401_state_Users }}"
+#     action: "{{ win_baseline_2401_state_Action }}"
+#   when:
+#     win_baseline_2401_state_Manage
+
+# - name: "win_baseline_2402_state | Ensure 'Take ownership of files or other objects' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2402_state_Name }}"
+#     users: "{{ win_baseline_2402_state_Users }}"
+#     action: "{{ win_baseline_2402_state_Action }}"
+#   when:
+#     win_baseline_2402_state_Manage
+
+# - name: "win_baseline_2342_state | Ensure 'Account lockout threshold' is set to '10 or fewer invalid logon attempt(s), but not 0'"
 #   win_security_policy:
-#     section: "{{ win_baseline_2341_state_Section }}"
-#     key: "{{ win_baseline_2341_state_Key }}"
-#     value: "{{ win_baseline_2341_state_Value }}"
+#     section: "{{ win_baseline_2342_state_Section }}"
+#     key: "{{ win_baseline_2342_state_Key }}"
+#     value: "{{ win_baseline_2342_state_Value }}"
 #   when:
-#     win_baseline_2341_state_Manage
+#     win_baseline_2342_state_Manage
 
-- name: "win_baseline_2342_state | Ensure 'Account lockout threshold' is set to '10 or fewer invalid logon attempt(s), but not 0'"
-  win_security_policy:
-    section: "{{ win_baseline_2342_state_Section }}"
-    key: "{{ win_baseline_2342_state_Key }}"
-    value: "{{ win_baseline_2342_state_Value }}"
-  when:
-    win_baseline_2342_state_Manage
-
-# ! error
-# - name: "win_baseline_2343_state | Ensure 'Reset account lockout counter after' is set to '30 or less minute(s)'"
+# - name: "win_baseline_2484_state | Ensure 'Store passwords using reversible encryption' is set to 'Disabled'"
 #   win_security_policy:
-#     section: "{{ win_baseline_2343_state_Section }}"
-#     key: "{{ win_baseline_2343_state_Key }}"
-#     value: "{{ win_baseline_2343_state_Value }}"
+#     section: "{{ win_baseline_2484_state_Section }}"
+#     key: "{{ win_baseline_2484_state_Key }}"
+#     value: "{{ win_baseline_2484_state_Value }}"
 #   when:
-#     win_baseline_2343_state_Manage
+#     win_baseline_2484_state_Manage
 
-- name: "win_baseline_2484_state | Ensure 'Store passwords using reversible encryption' is set to 'Disabled'"
-  win_security_policy:
-    section: "{{ win_baseline_2484_state_Section }}"
-    key: "{{ win_baseline_2484_state_Key }}"
-    value: "{{ win_baseline_2484_state_Value }}"
-  when:
-    win_baseline_2484_state_Manage
-
-- name: "win_baseline_2518_state | Ensure 'Turn off Microsoft Peer-to-Peer Networking Services' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_2518_state_Path }}"
-    name: "{{ win_baseline_2518_state_Name }}"
-    data: "{{ win_baseline_2518_state_Data }}"
-    type: "{{ win_baseline_2518_state_Type }}"
-  when:
-    win_baseline_2518_state_Manage
-
-- name: "win_baseline_2582_state | Ensure 'User Account Control - Detect application installations and prompt for elevation' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_2582_state_Path }}"
-    name: "{{ win_baseline_2582_state_Name }}"
-    data: "{{ win_baseline_2582_state_Data }}"
-    type: "{{ win_baseline_2582_state_Type }}"
-  when:
-    win_baseline_2582_state_Manage
-
-- name: "win_baseline_2583_state | Ensure 'User Account Control - Run all administrators in Admin Approval Mode' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_2583_state_Path }}"
-    name: "{{ win_baseline_2583_state_Name }}"
-    data: "{{ win_baseline_2583_state_Data }}"
-    type: "{{ win_baseline_2583_state_Type }}"
-  when:
-    win_baseline_2583_state_Manage
-
-- name: "win_baseline_2584_state | Ensure 'User Account Control - Only elevate UIAccess applications that are installed in secure locations' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_2584_state_Path }}"
-    name: "{{ win_baseline_2584_state_Name }}"
-    data: "{{ win_baseline_2584_state_Data }}"
-    type: "{{ win_baseline_2584_state_Type }}"
-  when:
-    win_baseline_2584_state_Manage
-
-# ! The result of this task might block the host, and throw the credential error.
-# ! This error might because a ask of hardening.
-# - name: "win_baseline_2586_state | Ensure 'User Account Control - Admin Approval Mode for the Built-in Administrator account' is set to 'Enabled'"
+# - name: "win_baseline_2518_state | Ensure 'Turn off Microsoft Peer-to-Peer Networking Services' is set to 'Enabled'"
 #   win_regedit:
-#     path: "{{ win_baseline_2586_state_Path }}"
-#     name: "{{ win_baseline_2586_state_Name }}"
-#     data: "{{ win_baseline_2586_state_Data }}"
-#     type: "{{ win_baseline_2586_state_Type }}"
+#     path: "{{ win_baseline_2518_state_Path }}"
+#     name: "{{ win_baseline_2518_state_Name }}"
+#     data: "{{ win_baseline_2518_state_Data }}"
+#     type: "{{ win_baseline_2518_state_Type }}"
 #   when:
-#     win_baseline_2586_state_Manage
+#     win_baseline_2518_state_Manage
 
-- name: "win_baseline_2587_state | Ensure 'User Account Control - Behavior of the elevation prompt for administrators in Admin Approval Mode' is set to 'Prompt for consent on the secure desktop'"
-  win_regedit:
-    path: "{{ win_baseline_2587_state_Path }}"
-    name: "{{ win_baseline_2587_state_Name }}"
-    data: "{{ win_baseline_2587_state_Data }}"
-    type: "{{ win_baseline_2587_state_Type }}"
-  when:
-    win_baseline_2587_state_Manage
+# - name: "win_baseline_2582_state | Ensure 'User Account Control - Detect application installations and prompt for elevation' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_2582_state_Path }}"
+#     name: "{{ win_baseline_2582_state_Name }}"
+#     data: "{{ win_baseline_2582_state_Data }}"
+#     type: "{{ win_baseline_2582_state_Type }}"
+#   when:
+#     win_baseline_2582_state_Manage
 
-- name: "win_baseline_2605_state | Ensure 'User Account Control - Behavior of the elevation prompt for standard users' is 'Automatically deny elevation requests'"
-  win_regedit:
-    path: "{{ win_baseline_2605_state_Path }}"
-    name: "{{ win_baseline_2605_state_Name }}"
-    data: "{{ win_baseline_2605_state_Data }}"
-    type: "{{ win_baseline_2605_state_Type }}"
-  when:
-    win_baseline_2605_state_Manage
+# - name: "win_baseline_2583_state | Ensure 'User Account Control - Run all administrators in Admin Approval Mode' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_2583_state_Path }}"
+#     name: "{{ win_baseline_2583_state_Name }}"
+#     data: "{{ win_baseline_2583_state_Data }}"
+#     type: "{{ win_baseline_2583_state_Type }}"
+#   when:
+#     win_baseline_2583_state_Manage
 
-- name: "win_baseline_2606_state | Ensure 'User Account Control - Switch to the secure desktop when prompting for elevation' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_2606_state_Path }}"
-    name: "{{ win_baseline_2606_state_Name }}"
-    data: "{{ win_baseline_2606_state_Data }}"
-    type: "{{ win_baseline_2606_state_Type }}"
-  when:
-    win_baseline_2606_state_Manage
+# - name: "win_baseline_2584_state | Ensure 'User Account Control - Only elevate UIAccess applications that are installed in secure locations' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_2584_state_Path }}"
+#     name: "{{ win_baseline_2584_state_Name }}"
+#     data: "{{ win_baseline_2584_state_Data }}"
+#     type: "{{ win_baseline_2584_state_Type }}"
+#   when:
+#     win_baseline_2584_state_Manage
 
-- name: "win_baseline_2607_state | Ensure 'Prohibit use of Internet Connection Sharing on your DNS domain network' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_2607_state_Path }}"
-    name: "{{ win_baseline_2607_state_Name }}"
-    data: "{{ win_baseline_2607_state_Data }}"
-    type: "{{ win_baseline_2607_state_Type }}"
-  when:
-    win_baseline_2607_state_Manage
+# - name: "win_baseline_2587_state | Ensure 'User Account Control - Behavior of the elevation prompt for administrators in Admin Approval Mode' is set to 'Prompt for consent on the secure desktop'"
+#   win_regedit:
+#     path: "{{ win_baseline_2587_state_Path }}"
+#     name: "{{ win_baseline_2587_state_Name }}"
+#     data: "{{ win_baseline_2587_state_Data }}"
+#     type: "{{ win_baseline_2587_state_Type }}"
+#   when:
+#     win_baseline_2587_state_Manage
 
-- name: "win_baseline_2608_state | Ensure 'Audit - Force audit policy subcategory settings to override audit policy category settings' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_2608_state_Path }}"
-    name: "{{ win_baseline_2608_state_Name }}"
-    data: "{{ win_baseline_2608_state_Data }}"
-    type: "{{ win_baseline_2608_state_Type }}"
-  when:
-    win_baseline_2608_state_Manage
+# - name: "win_baseline_2605_state | Ensure 'User Account Control - Behavior of the elevation prompt for standard users' is 'Automatically deny elevation requests'"
+#   win_regedit:
+#     path: "{{ win_baseline_2605_state_Path }}"
+#     name: "{{ win_baseline_2605_state_Name }}"
+#     data: "{{ win_baseline_2605_state_Data }}"
+#     type: "{{ win_baseline_2605_state_Type }}"
+#   when:
+#     win_baseline_2605_state_Manage
 
-- name: "win_baseline_2610_state | Ensure 'Prohibit access of the Windows Connect Now wizards' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_2610_state_Path }}"
-    name: "{{ win_baseline_2610_state_Name }}"
-    data: "{{ win_baseline_2610_state_Data }}"
-    type: "{{ win_baseline_2610_state_Type }}"
-  when:
-    win_baseline_2610_state_Manage
+# - name: "win_baseline_2606_state | Ensure 'User Account Control - Switch to the secure desktop when prompting for elevation' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_2606_state_Path }}"
+#     name: "{{ win_baseline_2606_state_Name }}"
+#     data: "{{ win_baseline_2606_state_Data }}"
+#     type: "{{ win_baseline_2606_state_Type }}"
+#   when:
+#     win_baseline_2606_state_Manage
 
-- name: "win_baseline_2612_state | Ensure 'Turn off downloading of enclosures' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_2612_state_Path }}"
-    name: "{{ win_baseline_2612_state_Name }}"
-    data: "{{ win_baseline_2612_state_Data }}"
-    type: "{{ win_baseline_2612_state_Type }}"
-  when:
-    win_baseline_2612_state_Manage
+# - name: "win_baseline_2607_state | Ensure 'Prohibit use of Internet Connection Sharing on your DNS domain network' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_2607_state_Path }}"
+#     name: "{{ win_baseline_2607_state_Name }}"
+#     data: "{{ win_baseline_2607_state_Data }}"
+#     type: "{{ win_baseline_2607_state_Type }}"
+#   when:
+#     win_baseline_2607_state_Manage
 
-# ! 2612 error, details are in the table
+# - name: "win_baseline_2608_state | Ensure 'Audit - Force audit policy subcategory settings to override audit policy category settings' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_2608_state_Path }}"
+#     name: "{{ win_baseline_2608_state_Name }}"
+#     data: "{{ win_baseline_2608_state_Data }}"
+#     type: "{{ win_baseline_2608_state_Type }}"
+#   when:
+#     win_baseline_2608_state_Manage
+
+# - name: "win_baseline_2610_state | Ensure 'Prohibit access of the Windows Connect Now wizards' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_2610_state_Path }}"
+#     name: "{{ win_baseline_2610_state_Name }}"
+#     data: "{{ win_baseline_2610_state_Data }}"
+#     type: "{{ win_baseline_2610_state_Type }}"
+#   when:
+#     win_baseline_2610_state_Manage
+
+# - name: "win_baseline_2612_state | Ensure 'Turn off downloading of enclosures' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_2612_state_Path }}"
+#     name: "{{ win_baseline_2612_state_Name }}"
+#     data: "{{ win_baseline_2612_state_Data }}"
+#     type: "{{ win_baseline_2612_state_Type }}"
+#   when:
+#     win_baseline_2612_state_Manage
 
 # - name: "win_baseline_2616_state | Ensure 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled'"
 #   win_regedit:
@@ -1126,199 +1059,190 @@
 #   when:
 #     win_baseline_2616_state_Manage
 
-- name: "win_baseline_2635_state | Ensure 'Set client connection encryption level' is set to 'Enabled - High Level'"
-  win_regedit:
-    path: "{{ win_baseline_2635_state_Path }}"
-    name: "{{ win_baseline_2635_state_Name }}"
-    data: "{{ win_baseline_2635_state_Data }}"
-    type: "{{ win_baseline_2635_state_Type }}"
-  when:
-    win_baseline_2635_state_Manage
-
-- name: "win_baseline_2642_state | Ensure 'Impersonate a client after authentication' is set to 'Administrators, Service, Local Service, Network Service'" # TODO: add IIS_IUSRS
-  win_user_right:
-    name: "{{ win_baseline_2642_state_Name }}"
-    users: "{{ win_baseline_2642_state_Users }}"
-    action: "{{ win_baseline_2642_state_Action }}"
-  when:
-    win_baseline_2642_state_Manage
-
-- name: "win_baseline_2681_sate | Ensure 'Turn of windows update device driver searching setting' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_2681_state_Path }}"
-    name: "{{ win_baseline_2681_state_Name }}"
-    data: "{{ win_baseline_2681_state_Data }}"
-    type: "{{ win_baseline_2681_state_Type }}"
-  when:
-    win_baseline_2681_state_Manage
-
-- name: "win_baseline_3242_state | Ensure 'Create Global Objects' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE"
-  win_user_right:
-    name: "{{ win_baseline_3242_state_Name }}"
-    users: "{{ win_baseline_3242_state_Users }}"
-    action: "{{ win_baseline_3242_state_Action }}"
-  when:
-    win_baseline_3242_state_Manage
-
-- name: "win_baseline_3376_state | Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'"
-  win_security_policy:
-    section: "{{ win_baseline_3376_state_Section }}"
-    key: "{{ win_baseline_3376_state_Key }}"
-    value: "{{ win_baseline_3376_state_Value }}"
-  when:
-    win_baseline_3376_state_Manage
-
-# ! error, details are in the table
-# - name: "win_baseline_3377_state | Ensure 'Password never expires' is set to 'No One'"
-#   win_user_right:
-#     name: "{{ win_baseline_3377_state_Name }}"
-#     users: "{{ win_baseline_3377_state_Users }}"
-#     action: "{{ win_baseline_3377_state_Action }}"
+# - name: "win_baseline_2635_state | Ensure 'Set client connection encryption level' is set to 'Enabled - High Level'"
+#   win_regedit:
+#     path: "{{ win_baseline_2635_state_Path }}"
+#     name: "{{ win_baseline_2635_state_Name }}"
+#     data: "{{ win_baseline_2635_state_Data }}"
+#     type: "{{ win_baseline_2635_state_Type }}"
 #   when:
-#     win_baseline_3377_state_Manage
+#     win_baseline_2635_state_Manage
 
-- name: "win_baseline_3657_state | Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'"
-  win_security_policy:
-    section: "{{ win_baseline_3657_state_Section }}"
-    key: "{{ win_baseline_3657_state_Key }}"
-    value: "{{ win_baseline_3657_state_Value }}"
-  when:
-    win_baseline_3657_state_Manage
+# - name: "win_baseline_2642_state | Ensure 'Impersonate a client after authentication' is set to 'Administrators, Service, Local Service, Network Service'" # TODO: add IIS_IUSRS
+#   win_user_right:
+#     name: "{{ win_baseline_2642_state_Name }}"
+#     users: "{{ win_baseline_2642_state_Users }}"
+#     action: "{{ win_baseline_2642_state_Action }}"
+#   when:
+#     win_baseline_2642_state_Manage
 
-- name: "win_baseline_3719_state | Ensure 'Internet connection sharing' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3719_state_Path }}"
-    name: "{{ win_baseline_3719_state_Name }}"
-    data: "{{ win_baseline_3719_state_Data }}"
-    type: "{{ win_baseline_3719_state_Type }}"
-  when:
-    win_baseline_3719_state_Manage
+# - name: "win_baseline_2681_sate | Ensure 'Turn of windows update device driver searching setting' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_2681_state_Path }}"
+#     name: "{{ win_baseline_2681_state_Name }}"
+#     data: "{{ win_baseline_2681_state_Data }}"
+#     type: "{{ win_baseline_2681_state_Type }}"
+#   when:
+#     win_baseline_2681_state_Manage
 
-- name: "win_baseline_3729_state | Ensure 'Server' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_3729_state_Path }}"
-    name: "{{ win_baseline_3729_state_Name }}"
-    data: "{{ win_baseline_3729_state_Data }}"
-    type: "{{ win_baseline_3729_state_Type }}"
-  when:
-    win_baseline_3729_state_Manage
+# - name: "win_baseline_3242_state | Ensure 'Create Global Objects' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE"
+#   win_user_right:
+#     name: "{{ win_baseline_3242_state_Name }}"
+#     users: "{{ win_baseline_3242_state_Users }}"
+#     action: "{{ win_baseline_3242_state_Action }}"
+#   when:
+#     win_baseline_3242_state_Manage
 
-- name: "win_baseline_3734_state | Ensure 'Windows installer' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_3734_state_Path }}"
-    name: "{{ win_baseline_3734_state_Name }}"
-    data: "{{ win_baseline_3734_state_Data }}"
-    type: "{{ win_baseline_3734_state_Type }}"
-  when:
-    win_baseline_3734_state_Manage
+# - name: "win_baseline_3376_state | Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'"
+#   win_security_policy:
+#     section: "{{ win_baseline_3376_state_Section }}"
+#     key: "{{ win_baseline_3376_state_Key }}"
+#     value: "{{ win_baseline_3376_state_Value }}"
+#   when:
+#     win_baseline_3376_state_Manage
 
-- name: "win_baseline_3737_state | Ensure 'Windows time' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_3737_state_Path }}"
-    name: "{{ win_baseline_3737_state_Name }}"
-    data: "{{ win_baseline_3737_state_Data }}"
-    type: "{{ win_baseline_3737_state_Type }}"
-  when:
-    win_baseline_3737_state_Manage
+# - name: "win_baseline_3657_state | Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'"
+#   win_security_policy:
+#     section: "{{ win_baseline_3657_state_Section }}"
+#     key: "{{ win_baseline_3657_state_Key }}"
+#     value: "{{ win_baseline_3657_state_Value }}"
+#   when:
+#     win_baseline_3657_state_Manage
 
-- name: "win_baseline_3875_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3875_state_Path }}"
-    name: "{{ win_baseline_3875_state_Name }}"
-    data: "{{ win_baseline_3875_state_Data }}"
-    type: "{{ win_baseline_3875_state_Type }}"
-  when:
-    win_baseline_3875_state_Manage
+# - name: "win_baseline_3719_state | Ensure 'Internet connection sharing' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3719_state_Path }}"
+#     name: "{{ win_baseline_3719_state_Name }}"
+#     data: "{{ win_baseline_3719_state_Data }}"
+#     type: "{{ win_baseline_3719_state_Type }}"
+#   when:
+#     win_baseline_3719_state_Manage
 
-- name: "win_baseline_3778_state | Ensure 'Login banner' is set to 'This is an interest computer system of ABB...'"
-  win_regedit:
-    path: "{{ win_baseline_3778_state_Path }}"
-    name: "{{ win_baseline_3778_state_Name }}"
-    data: "{{ win_baseline_3778_state_Data }}"
-    type: "{{ win_baseline_3778_state_Type }}"
-  when:
-    win_baseline_3778_state_Manage
+# - name: "win_baseline_3729_state | Ensure 'Server' is set to 'Automatic'"
+#   win_regedit:
+#     path: "{{ win_baseline_3729_state_Path }}"
+#     name: "{{ win_baseline_3729_state_Name }}"
+#     data: "{{ win_baseline_3729_state_Data }}"
+#     type: "{{ win_baseline_3729_state_Type }}"
+#   when:
+#     win_baseline_3729_state_Manage
 
-- name: "win_baseline_3876_state | Ensure 'Do not allow passwords to be saved' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3876_state_Path }}"
-    name: "{{ win_baseline_3876_state_Name }}"
-    data: "{{ win_baseline_3876_state_Data }}"
-    type: "{{ win_baseline_3876_state_Type }}"
-  when:
-    win_baseline_3876_state_Manage
+# - name: "win_baseline_3734_state | Ensure 'Windows installer' is set to 'Automatic'"
+#   win_regedit:
+#     path: "{{ win_baseline_3734_state_Path }}"
+#     name: "{{ win_baseline_3734_state_Name }}"
+#     data: "{{ win_baseline_3734_state_Data }}"
+#     type: "{{ win_baseline_3734_state_Type }}"
+#   when:
+#     win_baseline_3734_state_Manage
 
-- name: "win_baseline_3891_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3891_state_Path }}"
-    name: "{{ win_baseline_3891_state_Name }}"
-    data: "{{ win_baseline_3891_state_Data }}"
-    type: "{{ win_baseline_3891_state_Type }}"
-  when:
-    win_baseline_3891_state_Manage
+# - name: "win_baseline_3737_state | Ensure 'Windows time' is set to 'Automatic'"
+#   win_regedit:
+#     path: "{{ win_baseline_3737_state_Path }}"
+#     name: "{{ win_baseline_3737_state_Name }}"
+#     data: "{{ win_baseline_3737_state_Data }}"
+#     type: "{{ win_baseline_3737_state_Type }}"
+#   when:
+#     win_baseline_3737_state_Manage
 
-- name: "win_baseline_3896_state | Ensure 'Require trusted path for credential entry'"
-  win_regedit:
-    path: "{{ win_baseline_3896_state_Path }}"
-    name: "{{ win_baseline_3896_state_Name }}"
-    data: "{{ win_baseline_3896_state_Data }}"
-    type: "{{ win_baseline_3896_state_Type }}"
-  when:
-    win_baseline_3896_state_Manage
+# - name: "win_baseline_3875_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3875_state_Path }}"
+#     name: "{{ win_baseline_3875_state_Name }}"
+#     data: "{{ win_baseline_3875_state_Data }}"
+#     type: "{{ win_baseline_3875_state_Type }}"
+#   when:
+#     win_baseline_3875_state_Manage
 
-- name: "win_baseline_3897_state | Ensure 'Enumerate administrator accounts on elevation' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3897_state_Path }}"
-    name: "{{ win_baseline_3897_state_Name }}"
-    data: "{{ win_baseline_3897_state_Data }}"
-    type: "{{ win_baseline_3897_state_Type }}"
-  when:
-    win_baseline_3897_state_Manage
+# - name: "win_baseline_3778_state | Ensure 'Login banner' is set to 'This is an interest computer system of ABB...'"
+#   win_regedit:
+#     path: "{{ win_baseline_3778_state_Path }}"
+#     name: "{{ win_baseline_3778_state_Name }}"
+#     data: "{{ win_baseline_3778_state_Data }}"
+#     type: "{{ win_baseline_3778_state_Type }}"
+#   when:
+#     win_baseline_3778_state_Manage
 
-- name: "win_baseline_3899_state | Ensure 'Configure Solicited Remote Assistance' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3899_state_Path }}"
-    name: "{{ win_baseline_3899_state_Name }}"
-    data: "{{ win_baseline_3899_state_Data }}"
-    type: "{{ win_baseline_3899_state_Type }}"
-  when:
-    win_baseline_3899_state_Manage
+# - name: "win_baseline_3876_state | Ensure 'Do not allow passwords to be saved' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3876_state_Path }}"
+#     name: "{{ win_baseline_3876_state_Name }}"
+#     data: "{{ win_baseline_3876_state_Data }}"
+#     type: "{{ win_baseline_3876_state_Type }}"
+#   when:
+#     win_baseline_3876_state_Manage
 
-- name: "win_baseline_3903_state | Ensure 'Do not process the run once list' is set to Enabled"
-  win_regedit:
-    path: "{{ win_baseline_3903_state_Path }}"
-    name: "{{ win_baseline_3903_state_Name }}"
-    data: "{{ win_baseline_3903_state_Data }}"
-    type: "{{ win_baseline_3903_state_Type }}"
-  when:
-    win_baseline_3903_state_Manage
+# - name: "win_baseline_3891_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3891_state_Path }}"
+#     name: "{{ win_baseline_3891_state_Name }}"
+#     data: "{{ win_baseline_3891_state_Data }}"
+#     type: "{{ win_baseline_3891_state_Type }}"
+#   when:
+#     win_baseline_3891_state_Manage
 
-- name: "win_baseline_3904_state | Ensure 'Do not process the legacy run list' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3904_state_Path }}"
-    name: "{{ win_baseline_3904_state_Name }}"
-    data: "{{ win_baseline_3904_state_Data }}"
-    type: "{{ win_baseline_3904_state_Type }}"
-  when:
-    win_baseline_3904_state_Manage
+# - name: "win_baseline_3896_state | Ensure 'Require trusted path for credential entry'"
+#   win_regedit:
+#     path: "{{ win_baseline_3896_state_Path }}"
+#     name: "{{ win_baseline_3896_state_Name }}"
+#     data: "{{ win_baseline_3896_state_Data }}"
+#     type: "{{ win_baseline_3896_state_Type }}"
+#   when:
+#     win_baseline_3896_state_Manage
 
-- name: "win_baseline_3907_state | Ensure 'Windows Messenger Customer Experience Improvement Program' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3907_state_Path }}"
-    name: "{{ win_baseline_3907_state_Name }}"
-    data: "{{ win_baseline_3907_state_Data }}"
-    type: "{{ win_baseline_3907_state_Type }}"
-  when:
-    win_baseline_3907_state_Manage
+# - name: "win_baseline_3897_state | Ensure 'Enumerate administrator accounts on elevation' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3897_state_Path }}"
+#     name: "{{ win_baseline_3897_state_Name }}"
+#     data: "{{ win_baseline_3897_state_Data }}"
+#     type: "{{ win_baseline_3897_state_Type }}"
+#   when:
+#     win_baseline_3897_state_Manage
 
-- name: "win_baseline_3908_state | Ensure 'Turn off Search Companion content file updates' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3908_state_Path }}"
-    name: "{{ win_baseline_3908_state_Name }}"
-    data: "{{ win_baseline_3908_state_Data }}"
-    type: "{{ win_baseline_3908_state_Type }}"
-  when:
-    win_baseline_3908_state_Manage
+# - name: "win_baseline_3899_state | Ensure 'Configure Solicited Remote Assistance' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3899_state_Path }}"
+#     name: "{{ win_baseline_3899_state_Name }}"
+#     data: "{{ win_baseline_3899_state_Data }}"
+#     type: "{{ win_baseline_3899_state_Type }}"
+#   when:
+#     win_baseline_3899_state_Manage
+
+# - name: "win_baseline_3903_state | Ensure 'Do not process the run once list' is set to Enabled"
+#   win_regedit:
+#     path: "{{ win_baseline_3903_state_Path }}"
+#     name: "{{ win_baseline_3903_state_Name }}"
+#     data: "{{ win_baseline_3903_state_Data }}"
+#     type: "{{ win_baseline_3903_state_Type }}"
+#   when:
+#     win_baseline_3903_state_Manage
+
+# - name: "win_baseline_3904_state | Ensure 'Do not process the legacy run list' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3904_state_Path }}"
+#     name: "{{ win_baseline_3904_state_Name }}"
+#     data: "{{ win_baseline_3904_state_Data }}"
+#     type: "{{ win_baseline_3904_state_Type }}"
+#   when:
+#     win_baseline_3904_state_Manage
+
+# - name: "win_baseline_3907_state | Ensure 'Windows Messenger Customer Experience Improvement Program' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3907_state_Path }}"
+#     name: "{{ win_baseline_3907_state_Name }}"
+#     data: "{{ win_baseline_3907_state_Data }}"
+#     type: "{{ win_baseline_3907_state_Type }}"
+#   when:
+#     win_baseline_3907_state_Manage
+
+# - name: "win_baseline_3908_state | Ensure 'Turn off Search Companion content file updates' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3908_state_Path }}"
+#     name: "{{ win_baseline_3908_state_Name }}"
+#     data: "{{ win_baseline_3908_state_Data }}"
+#     type: "{{ win_baseline_3908_state_Type }}"
+#   when:
+#     win_baseline_3908_state_Manage
 
 - name: "win_baseline_3919_state | Ensure 'Turn off printing over HTTP' is set to 'Enabled'"
   win_regedit:
@@ -1400,14 +1324,7 @@
   when:
     win_baseline_3927_state_Manage
 
-# ! error, details are in the table
-# - name: "win_baseline_3928_state | Ensure 'Increase a process working set' is set to 'Windows Manager Group'"
-#   win_user_right:
-#     name: "{{ win_baseline_3928_state_Name }}"
-#     users: "{{ win_baseline_3928_state_Users }}"
-#     action: "{{ win_baseline_3928_state_Action }}"
-#   when:
-#     win_baseline_3928_state_Manage
+
 
 - name: "win_baseline_3939_state | Ensure 'Allow UIAccess applications to prompt for elevation without using the secure desktop' is set to 'Disabled'"
   win_regedit:
@@ -1570,13 +1487,7 @@
   when:
     win_baseline_4232_state_Manage
 
-# ! cannot choose success and failure at the same time.
-# - name: "win_state_4470_state | Ensure 'Audit Security State Change' is set to 'Success and failure'"
-#   win_audit_policy_system:
-#     subcategory: "{{ win_state_4470_state_Subcategory }}"
-#     audit_type: "{{ win_state_4470_state_AuditType}}"
-#   when:
-#     win_state_4470_state_Manage
+
 
 - name: "win_baseline_4471_state | Ensure 'Audit Security System Extension' is set to 'Success and Failure'"
   win_audit_policy_system:
@@ -1718,13 +1629,7 @@
   when:
     win_baseline_4490_state_Manage
 
-# ! error, details are in the table
-# - name: "win_baseline_4491_state | Ensure 'Audit Filtering Packet Drop' is set to 'Failure'"
-#   win_audit_policy_system:
-#     subcategory: "{{ win_baseline_4491_state_Subcategory }}"
-#     audit_type: "{{ win_baseline_4491_state_AuditType }}"
-#   when:
-#     win_baseline_4491_state_Manage
+
 
 - name: "win_baseline_4492_state | Ensure 'Audit Filtering Platform Connection' is set to 'Failure'"
   win_audit_policy_system:
@@ -1733,13 +1638,6 @@
   when:
     win_baseline_4492_state_Manage
 
-# ! error, details are in the table
-# - name: "win_baseline_4493_state | Ensure 'Audit Order Object Access Events' is set to 'Success'"
-#   win_audit_policy_system:
-#     subcategory: "{{ win_baseline_4493_state_Subcategory }}"
-#     audit_type: "{{ win_baseline_4493_state_AuditType }}"
-#   when:
-#     win_baseline_4493_state_Manage
 
 - name: "win_baseline_4494_state | Ensure 'Audit Sensitive Privilege Use' is set to 'Success and Failure'"
   win_audit_policy_system:

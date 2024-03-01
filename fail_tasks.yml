@@ -1,0 +1,108 @@
+# ! error, details in the table
+# - name: "win_baseline_2385_state | Ensure 'Generate security audits' is set to 'Administrators, IIS Apppool\\.* Service, Network Service"
+#   win_user_right:
+#     name: "{{ win_baseline_2385_state_Name }}"
+#     users: "{{ win_baseline_2385_state_Users }}"
+#     action: "{{ win_baseline_2385_state_Action }}"
+#   when:
+#     win_baseline_2385_state_Manage
+
+
+# ! error, details are in the table
+# - name: "win_baseline_2388_state | Ensure 'Lock pages in memory' is set to 'No body'" 
+#   win_user_right:
+#     name: "{{ win_baseline_2388_state_Name }}"
+#     users: "{{ win_baseline_2388_state_Users }}"
+#     action: "{{ win_baseline_2388_state_Action }}"
+#   when:
+#     win_baseline_2388_state_Manage
+
+# ! partly error, details are in the table
+# - name: "win_baseline_2396_state | Ensure 'Profile system performance' is set to 'Administrators, WidServiceHost'"
+#   win_user_right:
+#     name: "{{ win_baseline_2396_state_Name }}"
+#     users: "{{ win_baseline_2396_state_Users }}"
+#     action: "{{ win_baseline_2396_state_Action }}"
+#   when:
+#     win_baseline_2396_state_Manage
+
+# ! error, details are in the table
+# - name: "win_baseline_2398_state | Ensure 'Replace a process level token' is set to 'No One'"
+#   win_user_right:
+#     name: "{{ win_baseline_2398_state_Name }}"
+#     users: "{{ win_baseline_2398_state_Users }}"
+#     action: "{{ win_baseline_2398_state_Action }}"
+#   when:
+#     win_baseline_2398_state_Manage
+
+ #!The following tasks should be test one by one, to find the credential problem.
+# - name: "win_baseline_2341_state | Ensure 'Account lockout duration' is set to '30 or more minute(s)'"
+#   win_security_policy:
+#     section: "{{ win_baseline_2341_state_Section }}"
+#     key: "{{ win_baseline_2341_state_Key }}"
+#     value: "{{ win_baseline_2341_state_Value }}"
+#   when:
+#     win_baseline_2341_state_Manage
+
+# ! error
+# - name: "win_baseline_2343_state | Ensure 'Reset account lockout counter after' is set to '30 or less minute(s)'"
+#   win_security_policy:
+#     section: "{{ win_baseline_2343_state_Section }}"
+#     key: "{{ win_baseline_2343_state_Key }}"
+#     value: "{{ win_baseline_2343_state_Value }}"
+#   when:
+#     win_baseline_2343_state_Manage
+
+# ! The result of this task might block the host, and throw the credential error.
+# ! This error might because a ask of hardening.
+# - name: "win_baseline_2586_state | Ensure 'User Account Control - Admin Approval Mode for the Built-in Administrator account' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_2586_state_Path }}"
+#     name: "{{ win_baseline_2586_state_Name }}"
+#     data: "{{ win_baseline_2586_state_Data }}"
+#     type: "{{ win_baseline_2586_state_Type }}"
+#   when:
+#     win_baseline_2586_state_Manage
+
+# ! error, details are in the table
+# - name: "win_baseline_3377_state | Ensure 'Password never expires' is set to 'No One'"
+#   win_user_right:
+#     name: "{{ win_baseline_3377_state_Name }}"
+#     users: "{{ win_baseline_3377_state_Users }}"
+#     action: "{{ win_baseline_3377_state_Action }}"
+#   when:
+#     win_baseline_3377_state_Manage
+
+# ! error, details are in the table
+# - name: "win_baseline_3928_state | Ensure 'Increase a process working set' is set to 'Windows Manager Group'"
+#   win_user_right:
+#     name: "{{ win_baseline_3928_state_Name }}"
+#     users: "{{ win_baseline_3928_state_Users }}"
+#     action: "{{ win_baseline_3928_state_Action }}"
+#   when:
+#     win_baseline_3928_state_Manage
+
+# ! cannot choose success and failure at the same time.
+# - name: "win_state_4470_state | Ensure 'Audit Security State Change' is set to 'Success and failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_state_4470_state_Subcategory }}"
+#     audit_type: "{{ win_state_4470_state_AuditType}}"
+#   when:
+#     win_state_4470_state_Manage
+
+
+# ! error, details are in the table
+# - name: "win_baseline_4493_state | Ensure 'Audit Order Object Access Events' is set to 'Success'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4493_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4493_state_AuditType }}"
+#   when:
+#     win_baseline_4493_state_Manage
+
+# ! error, details are in the table
+# - name: "win_baseline_4491_state | Ensure 'Audit Filtering Packet Drop' is set to 'Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4491_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4491_state_AuditType }}"
+#   when:
+#     win_baseline_4491_state_Manage
