@@ -1521,13 +1521,22 @@
 #     win_baseline_4111_state_Manage
 
 # ! error, details are in the table
-# - name: "win_baseline_4193_state | Esure 'Configuration of wireless settings using windows connect now' is set to 'Disabled'"
-#   win_security_policy:
-#     section: "{{ win_baseline_4193_state_Section }}"
-#     key: "{{ win_baseline_4193_state_Key }}"
-#     value: "{{ win_baseline_4193_state_Value }}"
-#   when:
-#     win_baseline_4193_state_Manage
+- name: “win_baseline_4193_state | Esure 'Configuration of wireless settings using windows connect now' is set to 'Disabled'”
+  win_regedit:
+    path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
+    data: "0"
+    type: dword
+    update_handlers:
+      - name: EnableRegistrars
+        value_name: "EnableRegistrars"
+      - name: DisableUPnPRegistrar
+        value_name: "DisableUPnPRegistrar"
+      - name: DisableInBand802DOT11Registrar
+        value_name: "DisableInBand802DOT11Registrar"
+      - name: DisableFlashConfigRegistrar
+        value_name: "DisableFlashConfigRegistrar"
+      - name: DisableWPDRegistrar
+        value_name: "DisableWPDRegistrar"
 
 # - name: "win_baseline_4194_state | Ensure 'Turn off background regresh of group policy' is set to 'Disabled'" 
 #   win_regedit:
