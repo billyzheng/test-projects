@@ -934,13 +934,13 @@
 #     win_baseline_2397_state_Manage
 
 # ! error, details are in the table
-- name: "win_baseline_2398_state | Ensure 'Replace a process level token' is set to 'No One'"
-  win_user_right:
-    name: "{{ win_baseline_2398_state_Name }}"
-    users: "{{ win_baseline_2398_state_Users }}"
-    action: "{{ win_baseline_2398_state_Action }}"
-  when:
-    win_baseline_2398_state_Manage
+# - name: "win_baseline_2398_state | Ensure 'Replace a process level token' is set to 'No One'"
+#   win_user_right:
+#     name: "{{ win_baseline_2398_state_Name }}"
+#     users: "{{ win_baseline_2398_state_Users }}"
+#     action: "{{ win_baseline_2398_state_Action }}"
+#   when:
+#     win_baseline_2398_state_Manage
 
 # - name: "win_baseline_2399_state | Ensure 'Restore files and directories' is set to 'Administrators, Backup Operators'"
 #   win_user_right:
@@ -1222,6 +1222,16 @@
 #     type: "{{ win_baseline_3737_state_Type }}"
 #   when:
 #     win_baseline_3737_state_Manage
+
+- name: "win_baseline_3776_state | Ensure 'Windows security event log' is set to 'Administrator'"
+  ansible.windows.win_acl:
+    path: C:\Windows\system32\config
+    user: Administrator
+    rights: FullControl
+    type: allow
+    state: present
+    inherit: ContainerInherit, ObjectInherit
+    propagation: 'None'
 
 # # - name: "win_baseline_3875_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
 # #   win_regedit:
