@@ -328,7 +328,7 @@
     path: "{{ win_baseline_1264_state_Path }}"
     name: "{{ win_baseline_1264_state_Name }}"
     data: "{{ win_baseline_1264_state_Data }}"
-    type: "{{ win_baseline_1264_state_Type
+    type: "{{ win_baseline_1264_state_Type }}"
   when:
     win_baseline_1264_state_Manage
 
