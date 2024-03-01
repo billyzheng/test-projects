@@ -269,559 +269,559 @@
 #   when:
 #     win_baseline_1193_state_Manage
 
-- name: "win_baseline_1195_state | Ensure 'MSS - (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers' is set to what?"
-  win_regedit:
-    path: "{{ win_baseline_1195_state_Path }}"
-    name: "{{ win_baseline_1195_state_Name }}"
-    data: "{{ win_baseline_1195_state_Data }}"
-    type: "{{ win_baseline_1195_state_Type }}"
-  when:
-    win_baseline_1195_state_Manage
+# - name: "win_baseline_1195_state | Ensure 'MSS - (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers' is set to what?"
+#   win_regedit:
+#     path: "{{ win_baseline_1195_state_Path }}"
+#     name: "{{ win_baseline_1195_state_Name }}"
+#     data: "{{ win_baseline_1195_state_Data }}"
+#     type: "{{ win_baseline_1195_state_Type }}"
+#   when:
+#     win_baseline_1195_state_Manage
 
-- name: "win_baseline_1196_state | Ensure 'MSS - (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled - 5 or fewer seconds'"
-  win_regedit:
-    path: "{{ win_baseline_1196_state_Path }}"
-    name: "{{ win_baseline_1196_state_Name }}"
-    data: "{{ win_baseline_1196_state_Data }}"
-    type: "{{ win_baseline_1196_state_Type }}"
-  when:
-    win_baseline_1196_state_Manage
+# - name: "win_baseline_1196_state | Ensure 'MSS - (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled - 5 or fewer seconds'"
+#   win_regedit:
+#     path: "{{ win_baseline_1196_state_Path }}"
+#     name: "{{ win_baseline_1196_state_Name }}"
+#     data: "{{ win_baseline_1196_state_Data }}"
+#     type: "{{ win_baseline_1196_state_Type }}"
+#   when:
+#     win_baseline_1196_state_Manage
 
-- name: "win_baseline_1197_state | Ensure 'Network access - Do not allow anonymous enumeration of SAM accounts' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1197_state_Path }}"
-    name: "{{ win_baseline_1197_state_Name }}"
-    data: "{{ win_baseline_1197_state_Data }}"
-    type: "{{ win_baseline_1197_state_Type }}"
-  when:
-    win_baseline_1197_state_Manage
+# - name: "win_baseline_1197_state | Ensure 'Network access - Do not allow anonymous enumeration of SAM accounts' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1197_state_Path }}"
+#     name: "{{ win_baseline_1197_state_Name }}"
+#     data: "{{ win_baseline_1197_state_Data }}"
+#     type: "{{ win_baseline_1197_state_Type }}"
+#   when:
+#     win_baseline_1197_state_Manage
 
-- name: "win_baseline_1199_state| Ensure 'Microsoft network server - Amount of idle time required before suspending session' is set to '15 or fewer, but not 0'"
-  win_regedit:
-    path: "{{ win_baseline_1199_state_Path }}"
-    name: "{{ win_baseline_1199_state_Name }}"
-    data: "{{ win_baseline_1199_state_Data }}"
-    type: "{{ win_baseline_1199_state_Type }}"
-  when:
-    win_baseline_1199_state_Manage
+# - name: "win_baseline_1199_state| Ensure 'Microsoft network server - Amount of idle time required before suspending session' is set to '15 or fewer, but not 0'"
+#   win_regedit:
+#     path: "{{ win_baseline_1199_state_Path }}"
+#     name: "{{ win_baseline_1199_state_Name }}"
+#     data: "{{ win_baseline_1199_state_Data }}"
+#     type: "{{ win_baseline_1199_state_Type }}"
+#   when:
+#     win_baseline_1199_state_Manage
 
-- name: "win_baseline_1200_state | Ensure 'Dynamic Controller: Resuse machine account password changes' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1200_state_Path }}"
-    name: "{{ win_baseline_1200_state_Name }}"
-    data: "{{ win_baseline_1200_state_Data }}"
-    type: "{{ win_baseline_1200_state_Type }}"
-  when:
-    win_baseline_1200_state_Manage
+# - name: "win_baseline_1200_state | Ensure 'Dynamic Controller: Resuse machine account password changes' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1200_state_Path }}"
+#     name: "{{ win_baseline_1200_state_Name }}"
+#     data: "{{ win_baseline_1200_state_Data }}"
+#     type: "{{ win_baseline_1200_state_Type }}"
+#   when:
+#     win_baseline_1200_state_Manage
 
-- name: "win_baseline_1264_state | Ensure Dynamic Host Configuration Protocol Client' is set to 'Key not found'"
-  win_regedit:
-    path: "{{ win_baseline_1264_state_Path }}"
-    name: "{{ win_baseline_1264_state_Name }}"
-    data: "{{ win_baseline_1264_state_Data }}"
-    type: "{{ win_baseline_1264_state_Type }}"
-  when:
-    win_baseline_1264_state_Manage
+# - name: "win_baseline_1264_state | Ensure Dynamic Host Configuration Protocol Client' is set to 'Key not found'"
+#   win_regedit:
+#     path: "{{ win_baseline_1264_state_Path }}"
+#     name: "{{ win_baseline_1264_state_Name }}"
+#     data: "{{ win_baseline_1264_state_Data }}"
+#     type: "{{ win_baseline_1264_state_Type }}"
+#   when:
+#     win_baseline_1264_state_Manage
 
-- name: "win_baseline_1318_state | Ensure 'Enforce password history' is set to '24 or more password(s)'"
-  win_security_policy:
-    section: System Access
-    key: PasswordHistorySize
-    value: 24
+# - name: "win_baseline_1318_state | Ensure 'Enforce password history' is set to '24 or more password(s)'"
+#   win_security_policy:
+#     section: System Access
+#     key: PasswordHistorySize
+#     value: 24
 
-- name: "win_baseline_1366_state | Ensure 'Accounts - Limit local account use of blank passwords to console logon only' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1366_state_Path }}"
-    name: "{{ win_baseline_1366_state_Name }}"
-    data: "{{ win_baseline_1366_state_Data }}"
-    type: "{{ win_baseline_1366_state_Type }}"
-  when:
-    win_baseline_1366_state_Manage
+# - name: "win_baseline_1366_state | Ensure 'Accounts - Limit local account use of blank passwords to console logon only' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1366_state_Path }}"
+#     name: "{{ win_baseline_1366_state_Name }}"
+#     data: "{{ win_baseline_1366_state_Data }}"
+#     type: "{{ win_baseline_1366_state_Type }}"
+#   when:
+#     win_baseline_1366_state_Manage
 
-- name: "win_baseline_1368_state | Ensure 'Print Spooler' service is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_1368_state_Path }}"
-    name: "{{ win_baseline_1368_state_Name }}"
-    data: "{{ win_baseline_1368_state_Data }}"
-    type: "{{ win_baseline_1368_state_Type }}"
-  when:
-    win_baseline_1368_state_Manage
+# - name: "win_baseline_1368_state | Ensure 'Print Spooler' service is set to 'Automatic'"
+#   win_regedit:
+#     path: "{{ win_baseline_1368_state_Path }}"
+#     name: "{{ win_baseline_1368_state_Name }}"
+#     data: "{{ win_baseline_1368_state_Data }}"
+#     type: "{{ win_baseline_1368_state_Type }}"
+#   when:
+#     win_baseline_1368_state_Manage
 
-- name: "win_baseline_1369_state | Ensure 'Shutdown - Allow system to be shut down without having to log on' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1369_state_Path }}"
-    name: "{{ win_baseline_1369_state_Name }}"
-    data: "{{ win_baseline_1369_state_Data }}"
-    type: "{{ win_baseline_1369_state_Type }}"
-  when:
-    win_baseline_1369_state_Manage
+# - name: "win_baseline_1369_state | Ensure 'Shutdown - Allow system to be shut down without having to log on' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1369_state_Path }}"
+#     name: "{{ win_baseline_1369_state_Name }}"
+#     data: "{{ win_baseline_1369_state_Data }}"
+#     type: "{{ win_baseline_1369_state_Type }}"
+#   when:
+#     win_baseline_1369_state_Manage
 
-- name: "win_baseline_1370_state | Ensure 'Domain member - Digitally encrypt or sign secure channel data (always)' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1370_state_Path }}"
-    name: "{{ win_baseline_1370_state_Name }}"
-    data: "{{ win_baseline_1370_state_Data }}"
-    type: "{{ win_baseline_1370_state_Type }}"
-  when:
-    win_baseline_1370_state_Manage
+# - name: "win_baseline_1370_state | Ensure 'Domain member - Digitally encrypt or sign secure channel data (always)' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1370_state_Path }}"
+#     name: "{{ win_baseline_1370_state_Name }}"
+#     data: "{{ win_baseline_1370_state_Data }}"
+#     type: "{{ win_baseline_1370_state_Type }}"
+#   when:
+#     win_baseline_1370_state_Manage
 
-- name: "win_baseline_1371_state | Ensure 'Domain member - Digitally encrypt secure channel data (when possible)' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1371_state_Path }}"
-    name: "{{ win_baseline_1371_state_Name }}"
-    data: "{{ win_baseline_1371_state_Data }}"
-    type: "{{ win_baseline_1371_state_Type }}"
-  when:
-    win_baseline_1371_state_Manage
+# - name: "win_baseline_1371_state | Ensure 'Domain member - Digitally encrypt secure channel data (when possible)' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1371_state_Path }}"
+#     name: "{{ win_baseline_1371_state_Name }}"
+#     data: "{{ win_baseline_1371_state_Data }}"
+#     type: "{{ win_baseline_1371_state_Type }}"
+#   when:
+#     win_baseline_1371_state_Manage
 
-- name: "win_baseline_1372_state | Ensure 'Domain member - Digitally sign secure channel data (when possible)' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1372_state_Path }}"
-    name: "{{ win_baseline_1372_state_Name }}"
-    data: "{{ win_baseline_1372_state_Data }}"
-    type: "{{ win_baseline_1372_state_Type }}"
-  when:
-    win_baseline_1372_state_Manage
+# - name: "win_baseline_1372_state | Ensure 'Domain member - Digitally sign secure channel data (when possible)' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1372_state_Path }}"
+#     name: "{{ win_baseline_1372_state_Name }}"
+#     data: "{{ win_baseline_1372_state_Data }}"
+#     type: "{{ win_baseline_1372_state_Type }}"
+#   when:
+#     win_baseline_1372_state_Manage
 
-- name: "win_baseline_1173_state | Ensure 'Domain member - Disable machine account password changes' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1173_state_Path }}"
-    name: "{{ win_baseline_1173_state_Name }}"
-    data: "{{ win_baseline_1173_state_Data }}"
-    type: "{{ win_baseline_1173_state_Type }}"
-  when:
-    win_baseline_1173_state_Manage
+# - name: "win_baseline_1173_state | Ensure 'Domain member - Disable machine account password changes' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1173_state_Path }}"
+#     name: "{{ win_baseline_1173_state_Name }}"
+#     data: "{{ win_baseline_1173_state_Data }}"
+#     type: "{{ win_baseline_1173_state_Type }}"
+#   when:
+#     win_baseline_1173_state_Manage
 
-- name: "win_baseline_1374_state | Ensure 'Domain member - Maximum machine account password age' is set to '30 or fewer days, but not 0'"
-  win_regedit:
-    path: "{{ win_baseline_1374_state_Path }}"
-    name: "{{ win_baseline_1374_state_Name }}"
-    data: "{{ win_baseline_1374_state_Data }}"
-    type: "{{ win_baseline_1374_state_Type }}"
-  when:
-    win_baseline_1374_state_Manage
+# - name: "win_baseline_1374_state | Ensure 'Domain member - Maximum machine account password age' is set to '30 or fewer days, but not 0'"
+#   win_regedit:
+#     path: "{{ win_baseline_1374_state_Path }}"
+#     name: "{{ win_baseline_1374_state_Name }}"
+#     data: "{{ win_baseline_1374_state_Data }}"
+#     type: "{{ win_baseline_1374_state_Type }}"
+#   when:
+#     win_baseline_1374_state_Manage
 
-- name: "win_baseline_1375_state | Ensure 'Domain member - Require strong (Windows 2000 or later) session key' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1375_state_Path }}"
-    name: "{{ win_baseline_1375_state_Name }}"
-    data: "{{ win_baseline_1375_state_Data }}"
-    type: "{{ win_baseline_1375_state_Type }}"
-  when:
-    win_baseline_1375_state_Manage
+# - name: "win_baseline_1375_state | Ensure 'Domain member - Require strong (Windows 2000 or later) session key' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1375_state_Path }}"
+#     name: "{{ win_baseline_1375_state_Name }}"
+#     data: "{{ win_baseline_1375_state_Data }}"
+#     type: "{{ win_baseline_1375_state_Type }}"
+#   when:
+#     win_baseline_1375_state_Manage
 
-- name: "win_baseline_1376_state | Ensure 'Interactive logon - Do not require CTRL+ALT+DEL' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1376_state_Path }}"
-    name: "{{ win_baseline_1376_state_Name }}"
-    data: "{{ win_baseline_1376_state_Data }}"
-    type: "{{ win_baseline_1376_state_Type }}"
-  when:
-    win_baseline_1376_state_Manage
+# - name: "win_baseline_1376_state | Ensure 'Interactive logon - Do not require CTRL+ALT+DEL' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1376_state_Path }}"
+#     name: "{{ win_baseline_1376_state_Name }}"
+#     data: "{{ win_baseline_1376_state_Data }}"
+#     type: "{{ win_baseline_1376_state_Type }}"
+#   when:
+#     win_baseline_1376_state_Manage
 
-- name: "win_baseline_1377_state | Ensure 'Interactive logon - Require Domain Controller Authentication to unlock workstation' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1377_state_Path }}"
-    name: "{{ win_baseline_1377_state_Name }}"
-    data: "{{ win_baseline_1377_state_Data }}"
-    type: "{{ win_baseline_1377_state_Type }}"
-  when:
-    win_baseline_1377_state_Manage
+# - name: "win_baseline_1377_state | Ensure 'Interactive logon - Require Domain Controller Authentication to unlock workstation' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1377_state_Path }}"
+#     name: "{{ win_baseline_1377_state_Name }}"
+#     data: "{{ win_baseline_1377_state_Data }}"
+#     type: "{{ win_baseline_1377_state_Type }}"
+#   when:
+#     win_baseline_1377_state_Manage
 
-- name: "win_baseline_1378_state | Ensure 'Interactive logon - Smart card removal behavior' is set to 'Lock Workstation'"
-  win_regedit:
-    path: "{{ win_baseline_1378_state_Path }}"
-    name: "{{ win_baseline_1378_state_Name }}"
-    data: "{{ win_baseline_1378_state_Data }}"
-    type: "{{ win_baseline_1378_state_Type }}"
-  when:
-    win_baseline_1378_state_Manage
+# - name: "win_baseline_1378_state | Ensure 'Interactive logon - Smart card removal behavior' is set to 'Lock Workstation'"
+#   win_regedit:
+#     path: "{{ win_baseline_1378_state_Path }}"
+#     name: "{{ win_baseline_1378_state_Name }}"
+#     data: "{{ win_baseline_1378_state_Data }}"
+#     type: "{{ win_baseline_1378_state_Type }}"
+#   when:
+#     win_baseline_1378_state_Manage
 
-- name: "win_baseline_1379_state | Ensure 'Microsoft network client - Digitally sign communications (if server agrees)' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1379_state_Path }}"
-    name: "{{ win_baseline_1379_state_Name }}"
-    data: "{{ win_baseline_1379_state_Data }}"
-    type: "{{ win_baseline_1379_state_Type }}"
-  when:
-    win_baseline_1379_state_Manage
+# - name: "win_baseline_1379_state | Ensure 'Microsoft network client - Digitally sign communications (if server agrees)' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1379_state_Path }}"
+#     name: "{{ win_baseline_1379_state_Name }}"
+#     data: "{{ win_baseline_1379_state_Data }}"
+#     type: "{{ win_baseline_1379_state_Type }}"
+#   when:
+#     win_baseline_1379_state_Manage
 
-- name: "win_baseline_1380_state | Ensure 'Microsoft network client - Send unencrypted password to third-party SMB servers' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1380_state_Path }}"
-    name: "{{ win_baseline_1380_state_Name }}"
-    data: "{{ win_baseline_1380_state_Data }}"
-    type: "{{ win_baseline_1380_state_Type }}"
-  when:
-    win_baseline_1380_state_Manage
+# - name: "win_baseline_1380_state | Ensure 'Microsoft network client - Send unencrypted password to third-party SMB servers' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1380_state_Path }}"
+#     name: "{{ win_baseline_1380_state_Name }}"
+#     data: "{{ win_baseline_1380_state_Data }}"
+#     type: "{{ win_baseline_1380_state_Type }}"
+#   when:
+#     win_baseline_1380_state_Manage
 
-- name: "win_baseline_1381_state | Ensure 'Microsoft network server - Digitally sign communications (if client agrees)' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1381_state_Path }}"
-    name: "{{ win_baseline_1381_state_Name }}"
-    data: "{{ win_baseline_1381_state_Data }}"
-    type:  "{{ win_baseline_1381_state_Type }}"
-  when:
-    win_baseline_1381_state_Manage
+# - name: "win_baseline_1381_state | Ensure 'Microsoft network server - Digitally sign communications (if client agrees)' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1381_state_Path }}"
+#     name: "{{ win_baseline_1381_state_Name }}"
+#     data: "{{ win_baseline_1381_state_Data }}"
+#     type:  "{{ win_baseline_1381_state_Type }}"
+#   when:
+#     win_baseline_1381_state_Manage
 
-- name: "win_baseline_1382_state | Ensure 'Microsoft network server - Disconnect clients when logon hours expire' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1382_state_Path }}"
-    name: "{{ win_baseline_1382_state_Name }}"
-    data: "{{ win_baseline_1382_state_Data }}"
-    type: "{{ win_baseline_1382_state_Type }}"
-  when:
-    win_baseline_1382_state_Manage
+# - name: "win_baseline_1382_state | Ensure 'Microsoft network server - Disconnect clients when logon hours expire' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1382_state_Path }}"
+#     name: "{{ win_baseline_1382_state_Name }}"
+#     data: "{{ win_baseline_1382_state_Data }}"
+#     type: "{{ win_baseline_1382_state_Type }}"
+#   when:
+#     win_baseline_1382_state_Manage
 
-- name: "win_baseline_1383_state | Ensure 'Network access - Let Everyone permissions apply to anonymous users' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1383_state_Path }}"
-    name: "{{ win_baseline_1383_state_Name }}"
-    data: "{{ win_baseline_1383_state_Data }}"
-    type: "{{ win_baseline_1383_state_Type }}"
-  when:
-    win_baseline_1383_state_Manage
+# - name: "win_baseline_1383_state | Ensure 'Network access - Let Everyone permissions apply to anonymous users' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1383_state_Path }}"
+#     name: "{{ win_baseline_1383_state_Name }}"
+#     data: "{{ win_baseline_1383_state_Data }}"
+#     type: "{{ win_baseline_1383_state_Type }}"
+#   when:
+#     win_baseline_1383_state_Manage
 
-- name: "win_baseline_1386_state | Ensure 'Network access - Sharing and security model for local accounts' is 'Classic - local users authenticate as themselves'"
-  win_regedit:
-    path: "{{ win_baseline_1386_state_Path }}"
-    name: "{{ win_baseline_1386_state_Name }}"
-    data: "{{ win_baseline_1386_state_Data }}"
-    type: "{{ win_baseline_1386_state_Type }}"
-  when:
-    win_baseline_1386_state_Manage
+# - name: "win_baseline_1386_state | Ensure 'Network access - Sharing and security model for local accounts' is 'Classic - local users authenticate as themselves'"
+#   win_regedit:
+#     path: "{{ win_baseline_1386_state_Path }}"
+#     name: "{{ win_baseline_1386_state_Name }}"
+#     data: "{{ win_baseline_1386_state_Data }}"
+#     type: "{{ win_baseline_1386_state_Type }}"
+#   when:
+#     win_baseline_1386_state_Manage
 
-- name: "win_baseline_1387_state | Ensure 'Network security - LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM&NTLM'"
-  win_regedit:
-    path: "{{ win_baseline_1387_state_Path }}"
-    name: "{{ win_baseline_1387_state_Name }}"
-    data: "{{ win_baseline_1387_state_Data }}"
-    type: "{{ win_baseline_1387_state_Type }}"
-  when:
-    win_baseline_1387_state_Manage
+# - name: "win_baseline_1387_state | Ensure 'Network security - LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM&NTLM'"
+#   win_regedit:
+#     path: "{{ win_baseline_1387_state_Path }}"
+#     name: "{{ win_baseline_1387_state_Name }}"
+#     data: "{{ win_baseline_1387_state_Data }}"
+#     type: "{{ win_baseline_1387_state_Type }}"
+#   when:
+#     win_baseline_1387_state_Manage
 
-- name: "win_baseline_1388_state | Ensure 'Network security - LDAP client signing requirements' is set to 'Negotiate signing' or higher"
-  win_regedit:
-    path: "{{ win_baseline_1388_state_Path }}"
-    name: "{{ win_baseline_1388_state_Name }}"
-    data: "{{ win_baseline_1388_state_Data }}"
-    type: "{{ win_baseline_1388_state_Type }}"
-  when:
-    win_baseline_1388_state_Manage
+# - name: "win_baseline_1388_state | Ensure 'Network security - LDAP client signing requirements' is set to 'Negotiate signing' or higher"
+#   win_regedit:
+#     path: "{{ win_baseline_1388_state_Path }}"
+#     name: "{{ win_baseline_1388_state_Name }}"
+#     data: "{{ win_baseline_1388_state_Data }}"
+#     type: "{{ win_baseline_1388_state_Type }}"
+#   when:
+#     win_baseline_1388_state_Manage
 
-- name: "win_baseline_1389_state | Ensure 'Network security - Minimum session security for NTLM SSP based (including secure RPC) clients' is set to 'Require NTLMv2 session security, Require 128-bit encryption'"
-  win_regedit:
-    path: "{{ win_baseline_1389_state_Path }}"
-    name: "{{ win_baseline_1389_state_Name }}"
-    data: "{{ win_baseline_1389_state_Data }}"
-    type: "{{ win_baseline_1389_state_Type }}"
-  when:
-    win_baseline_1389_state_Manage
+# - name: "win_baseline_1389_state | Ensure 'Network security - Minimum session security for NTLM SSP based (including secure RPC) clients' is set to 'Require NTLMv2 session security, Require 128-bit encryption'"
+#   win_regedit:
+#     path: "{{ win_baseline_1389_state_Path }}"
+#     name: "{{ win_baseline_1389_state_Name }}"
+#     data: "{{ win_baseline_1389_state_Data }}"
+#     type: "{{ win_baseline_1389_state_Type }}"
+#   when:
+#     win_baseline_1389_state_Manage
 
-- name: "win_baseline_1390_state | Ensure 'Network security - Minimum session security for NTLM SSP based (including secure RPC) servers' is set to 'Require NTLMv2 session security, Require 128-bit encryption'"
-  win_regedit:
-    path: "{{ win_baseline_1390_state_Path }}"
-    name: "{{ win_baseline_1390_state_Name }}"
-    data: "{{ win_baseline_1390_state_Data }}"
-    type: "{{ win_baseline_1390_state_Type }}"
-  when:
-    win_baseline_1390_state_Manage
+# - name: "win_baseline_1390_state | Ensure 'Network security - Minimum session security for NTLM SSP based (including secure RPC) servers' is set to 'Require NTLMv2 session security, Require 128-bit encryption'"
+#   win_regedit:
+#     path: "{{ win_baseline_1390_state_Path }}"
+#     name: "{{ win_baseline_1390_state_Name }}"
+#     data: "{{ win_baseline_1390_state_Data }}"
+#     type: "{{ win_baseline_1390_state_Type }}"
+#   when:
+#     win_baseline_1390_state_Manage
 
-- name: "win_baseline_1391_state | Ensure 'Recovery Console: Allow automatic administrative logon' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1391_state_Path }}"
-    name: "{{ win_baseline_1391_state_Name }}"
-    data: "{{ win_baseline_1391_state_Data }}"
-    type: "{{ win_baseline_1391_state_Type }}"
-  when:
-    win_baseline_1391_state_Manage
+# - name: "win_baseline_1391_state | Ensure 'Recovery Console: Allow automatic administrative logon' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1391_state_Path }}"
+#     name: "{{ win_baseline_1391_state_Name }}"
+#     data: "{{ win_baseline_1391_state_Data }}"
+#     type: "{{ win_baseline_1391_state_Type }}"
+#   when:
+#     win_baseline_1391_state_Manage
 
-- name: "win_baseline_1392_state | Ensure 'Recovery Console: Allow floppy copy and access to all drives and all folders' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1392_state_Path }}"
-    name: "{{ win_baseline_1392_state_Name }}"
-    data: "{{ win_baseline_1392_state_Data }}"
-    type: "{{ win_baseline_1392_state_Type }}"
-  when:
-    win_baseline_1392_state_Manage
+# - name: "win_baseline_1392_state | Ensure 'Recovery Console: Allow floppy copy and access to all drives and all folders' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1392_state_Path }}"
+#     name: "{{ win_baseline_1392_state_Name }}"
+#     data: "{{ win_baseline_1392_state_Data }}"
+#     type: "{{ win_baseline_1392_state_Type }}"
+#   when:
+#     win_baseline_1392_state_Manage
 
-- name: "win_baseline_1426_state | Ensure 'System objects - Strengthen default permissions of internal system objects (e.g. Symbolic Links)' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1426_state_Path }}"
-    name: "{{ win_baseline_1426_state_Name }}"
-    data: "{{ win_baseline_1426_state_Data }}"
-    type: "{{ win_baseline_1426_state_Type }}"
-  when:
-    win_baseline_1426_state_Manage
+# - name: "win_baseline_1426_state | Ensure 'System objects - Strengthen default permissions of internal system objects (e.g. Symbolic Links)' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1426_state_Path }}"
+#     name: "{{ win_baseline_1426_state_Name }}"
+#     data: "{{ win_baseline_1426_state_Data }}"
+#     type: "{{ win_baseline_1426_state_Type }}"
+#   when:
+#     win_baseline_1426_state_Manage
 
-- name: "win_baseline_1430_state | Ensure 'Terminal Services' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_1430_state_Path }}"
-    name: "{{ win_baseline_1430_state_Name }}"
-    data: "{{ win_baseline_1430_state_Data }}"
-    type: "{{ win_baseline_1430_state_Type }}"
-  when:
-    win_baseline_1430_state_Manage
+# - name: "win_baseline_1430_state | Ensure 'Terminal Services' is set to 'Automatic'"
+#   win_regedit:
+#     path: "{{ win_baseline_1430_state_Path }}"
+#     name: "{{ win_baseline_1430_state_Name }}"
+#     data: "{{ win_baseline_1430_state_Data }}"
+#     type: "{{ win_baseline_1430_state_Type }}"
+#   when:
+#     win_baseline_1430_state_Manage
 
-- name: "win_baseline_1432_state | Ensure 'Domain Controller: LDAP server signing requirements' is set to 'Require signing'"
-  win_regedit:
-    path: "{{ win_baseline_1432_state_Path }}"
-    name: "{{ win_baseline_1432_state_Name }}"
-    data: "{{ win_baseline_1432_state_Data }}"
-    type: "{{ win_baseline_1432_state_Type }}"
-  when:
-    win_baseline_1432_state_Manage
+# - name: "win_baseline_1432_state | Ensure 'Domain Controller: LDAP server signing requirements' is set to 'Require signing'"
+#   win_regedit:
+#     path: "{{ win_baseline_1432_state_Path }}"
+#     name: "{{ win_baseline_1432_state_Name }}"
+#     data: "{{ win_baseline_1432_state_Data }}"
+#     type: "{{ win_baseline_1432_state_Type }}"
+#   when:
+#     win_baseline_1432_state_Manage
 
-- name: "win_baseline_1434_state | Ensure 'Network access: Rediect anonymous access to Named Pipes and Shares' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1434_state_Path }}"
-    name: "{{ win_baseline_1434_state_Name }}"
-    data: "{{ win_baseline_1434_state_Data }}"
-    type: "{{ win_baseline_1434_state_Type }}"
-  when:
-    win_baseline_1434_state_Manage
+# - name: "win_baseline_1434_state | Ensure 'Network access: Rediect anonymous access to Named Pipes and Shares' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1434_state_Path }}"
+#     name: "{{ win_baseline_1434_state_Name }}"
+#     data: "{{ win_baseline_1434_state_Data }}"
+#     type: "{{ win_baseline_1434_state_Type }}"
+#   when:
+#     win_baseline_1434_state_Manage
 
-- name: "win_baseline_1436_state | Ensure 'System crytography: Force strong key protection for user keys stored on the computer' is set to 'User must enter a password each time they use a key'"
-  win_regedit:
-    path: "{{ win_baseline_1436_state_Path }}"
-    name: "{{ win_baseline_1436_state_Name }}"
-    data: "{{ win_baseline_1436_state_Data }}"
-    type: "{{ win_baseline_1436_state_Type }}"
-  when:
-    win_baseline_1436_state_Manage
+# - name: "win_baseline_1436_state | Ensure 'System crytography: Force strong key protection for user keys stored on the computer' is set to 'User must enter a password each time they use a key'"
+#   win_regedit:
+#     path: "{{ win_baseline_1436_state_Path }}"
+#     name: "{{ win_baseline_1436_state_Name }}"
+#     data: "{{ win_baseline_1436_state_Data }}"
+#     type: "{{ win_baseline_1436_state_Type }}"
+#   when:
+#     win_baseline_1436_state_Manage
 
-- name: "win_baseline_1458_state | Ensure 'MSS - (SafeDllSearchMode) Enable Safe DLL search mode (recommended)' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1458_state_Path }}"
-    name: "{{ win_baseline_1458_state_Name }}"
-    data: "{{ win_baseline_1458_state_Data }}"
-    type: "{{ win_baseline_1458_state_Type }}"
-  when:
-    win_baseline_1458_state_Manage
+# - name: "win_baseline_1458_state | Ensure 'MSS - (SafeDllSearchMode) Enable Safe DLL search mode (recommended)' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1458_state_Path }}"
+#     name: "{{ win_baseline_1458_state_Name }}"
+#     data: "{{ win_baseline_1458_state_Data }}"
+#     type: "{{ win_baseline_1458_state_Type }}"
+#   when:
+#     win_baseline_1458_state_Manage
 
-- name: "win_baseline_1463_state | Ensure 'MSS - (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set"
-  win_regedit:
-    path: "{{ win_baseline_1463_state_Path }}"
-    name: "{{ win_baseline_1463_state_Name }}"
-    data: "{{ win_baseline_1463_state_Data }}"
-    type: "{{ win_baseline_1463_state_Type }}"
-  when:
-    win_baseline_1463_state_Manage
+# - name: "win_baseline_1463_state | Ensure 'MSS - (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set"
+#   win_regedit:
+#     path: "{{ win_baseline_1463_state_Path }}"
+#     name: "{{ win_baseline_1463_state_Name }}"
+#     data: "{{ win_baseline_1463_state_Data }}"
+#     type: "{{ win_baseline_1463_state_Type }}"
+#   when:
+#     win_baseline_1463_state_Manage
 
-- name: "win_baseline_1472_state | Ensure 'Network connections' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_1472_state_Path }}"
-    name: "{{ win_baseline_1472_state_Name }}"
-    data: "{{ win_baseline_1472_state_Data }}"
-    type: "{{ win_baseline_1472_state_Type }}"
-  when:
-    win_baseline_1472_state_Manage
+# - name: "win_baseline_1472_state | Ensure 'Network connections' is set to 'Automatic'"
+#   win_regedit:
+#     path: "{{ win_baseline_1472_state_Path }}"
+#     name: "{{ win_baseline_1472_state_Name }}"
+#     data: "{{ win_baseline_1472_state_Data }}"
+#     type: "{{ win_baseline_1472_state_Type }}"
+#   when:
+#     win_baseline_1472_state_Manage
 
-- name: "win_baseline_1476_state | Ensure 'Romote Access Connection Manager (RasMan)' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1476_state_Path }}"
-    name: "{{ win_baseline_1476_state_Name }}"
-    data: "{{ win_baseline_1476_state_Data }}"
-    type: "{{ win_baseline_1476_state_Type }}"
-  when:
-    win_baseline_1476_state_Manage
+# - name: "win_baseline_1476_state | Ensure 'Romote Access Connection Manager (RasMan)' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1476_state_Path }}"
+#     name: "{{ win_baseline_1476_state_Name }}"
+#     data: "{{ win_baseline_1476_state_Data }}"
+#     type: "{{ win_baseline_1476_state_Type }}"
+#   when:
+#     win_baseline_1476_state_Manage
 
-- name: "win_baseline_1509_state | Ensure 'Netlogon' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_1509_state_Path }}"
-    name: "{{ win_baseline_1509_state_Name }}"
-    data: "{{ win_baseline_1509_state_Data }}"
-    type: "{{ win_baseline_1509_state_Type }}"
-  when:
-    win_baseline_1509_state_Manage
+# - name: "win_baseline_1509_state | Ensure 'Netlogon' is set to 'Automatic'"
+#   win_regedit:
+#     path: "{{ win_baseline_1509_state_Path }}"
+#     name: "{{ win_baseline_1509_state_Name }}"
+#     data: "{{ win_baseline_1509_state_Data }}"
+#     type: "{{ win_baseline_1509_state_Type }}"
+#   when:
+#     win_baseline_1509_state_Manage
 
-- name: "win_baseline_1510_state | Ensure 'Routing and Remote Access' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1510_state_Path }}"
-    name: "{{ win_baseline_1510_state_Name }}"
-    data: "{{ win_baseline_1510_state_Data }}"
-    type: "{{ win_baseline_1510_state_Type }}"
-  when:
-    win_baseline_1510_state_Manage
+# - name: "win_baseline_1510_state | Ensure 'Routing and Remote Access' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1510_state_Path }}"
+#     name: "{{ win_baseline_1510_state_Name }}"
+#     data: "{{ win_baseline_1510_state_Data }}"
+#     type: "{{ win_baseline_1510_state_Type }}"
+#   when:
+#     win_baseline_1510_state_Manage
 
-- name: "win_baseline_1512_state | Ensure 'Universal Plug and Play Devie Host' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1512_state_Path }}"
-    name: "{{ win_baseline_1512_state_Name }}"
-    data: "{{ win_baseline_1512_state_Data }}"
-    type: "{{ win_baseline_1512_state_Type }}"
-  when:
-    win_baseline_1512_state_Manage
+# - name: "win_baseline_1512_state | Ensure 'Universal Plug and Play Devie Host' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1512_state_Path }}"
+#     name: "{{ win_baseline_1512_state_Name }}"
+#     data: "{{ win_baseline_1512_state_Data }}"
+#     type: "{{ win_baseline_1512_state_Type }}"
+#   when:
+#     win_baseline_1512_state_Manage
 
-- name: "win_baseline_1514_state | Ensure 'Restrictions for Unauthenticated RPC clients' is set to 'Authenticated'"
-  win_regedit:
-    path: "{{ win_baseline_1514_state_Path }}"
-    name: "{{ win_baseline_1514_state_Name }}"
-    data: "{{ win_baseline_1514_state_Data }}"
-    type: "{{ win_baseline_1514_state_Type }}"
-  when:
-    win_baseline_1514_state_Manage
+# - name: "win_baseline_1514_state | Ensure 'Restrictions for Unauthenticated RPC clients' is set to 'Authenticated'"
+#   win_regedit:
+#     path: "{{ win_baseline_1514_state_Path }}"
+#     name: "{{ win_baseline_1514_state_Name }}"
+#     data: "{{ win_baseline_1514_state_Data }}"
+#     type: "{{ win_baseline_1514_state_Type }}"
+#   when:
+#     win_baseline_1514_state_Manage
 
-- name: "win_baseline_1964_state | Ensure 'Event Log' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_1964_state_Path }}"
-    name: "{{ win_baseline_1964_state_Name }}"
-    data: "{{ win_baseline_1964_state_Data }}"
-    type: "{{ win_baseline_1964_state_Type }}"
-  when:
-    win_baseline_1964_state_Manage
+# - name: "win_baseline_1964_state | Ensure 'Event Log' is set to 'Automatic'"
+#   win_regedit:
+#     path: "{{ win_baseline_1964_state_Path }}"
+#     name: "{{ win_baseline_1964_state_Name }}"
+#     data: "{{ win_baseline_1964_state_Data }}"
+#     type: "{{ win_baseline_1964_state_Type }}"
+#   when:
+#     win_baseline_1964_state_Manage
 
-- name: "win_baseline_2181_state | Ensure 'Access this computer from the network' is set to 'Administrators, Authenticated Users'"
-  win_user_right:
-    name: "{{ win_baseline_2181_state_Name }}"
-    users: "{{ win_baseline_2181_state_Users }}"
-    action: "{{ win_baseline_2181_state_Action }}"
-  when:
-    win_baseline_2181_state_Manage
+# - name: "win_baseline_2181_state | Ensure 'Access this computer from the network' is set to 'Administrators, Authenticated Users'"
+#   win_user_right:
+#     name: "{{ win_baseline_2181_state_Name }}"
+#     users: "{{ win_baseline_2181_state_Users }}"
+#     action: "{{ win_baseline_2181_state_Action }}"
+#   when:
+#     win_baseline_2181_state_Manage
 
-- name: "win_baseline_2182_state | Ensure 'Act as part of the operating system' is set to 'No One'"
-  win_user_right:
-    name: "{{ win_baseline_2182_state_Name}}"
-    users: "{{ win_baseline_2182_state_Users}}"
-    action: "{{ win_baseline_2182_state_Action}}"
-  when:
-    win_baseline_2182_state_Manage
+# - name: "win_baseline_2182_state | Ensure 'Act as part of the operating system' is set to 'No One'"
+#   win_user_right:
+#     name: "{{ win_baseline_2182_state_Name}}"
+#     users: "{{ win_baseline_2182_state_Users}}"
+#     action: "{{ win_baseline_2182_state_Action}}"
+#   when:
+#     win_baseline_2182_state_Manage
 
-- name: "win_baseline_2183_state | Ensure 'Add workstations to domain' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2183_state_Name }}"
-    users: "{{ win_baseline_2183_state_Users }}"
-    action: "{{ win_baseline_2183_state_Action }}"
-  when:
-    win_baseline_2183_state_Manage
+# - name: "win_baseline_2183_state | Ensure 'Add workstations to domain' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2183_state_Name }}"
+#     users: "{{ win_baseline_2183_state_Users }}"
+#     action: "{{ win_baseline_2183_state_Action }}"
+#   when:
+#     win_baseline_2183_state_Manage
 
-- name: "win_baseline_2184_state | Ensure 'Adjust memory quotas for a process' is set to 'Guests, Users, Replicators, Backup Operators, Event log Readers, Performance log Users, Print Operators'"
-  win_user_right:
-    name: "{{ win_baseline_2184_state_Name }}"
-    users: "{{ win_baseline_2184_state_Users }}"
-    action: "{{ win_baseline_2184_state_Action }}"
-  when:
-    win_baseline_2184_state_Manage
+# - name: "win_baseline_2184_state | Ensure 'Adjust memory quotas for a process' is set to 'Guests, Users, Replicators, Backup Operators, Event log Readers, Performance log Users, Print Operators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2184_state_Name }}"
+#     users: "{{ win_baseline_2184_state_Users }}"
+#     action: "{{ win_baseline_2184_state_Action }}"
+#   when:
+#     win_baseline_2184_state_Manage
 
-- name: "win_baseline_2185_state | Ensure 'Allow logon through terminal services' is set to 'Administrators, Remote Desktop Users"
-  win_user_right:
-    name: "{{ win_baseline_2185_state_Name }}"
-    users: "{{ win_baseline_2185_state_Users }}"
-    action: "{{ win_baseline_2185_state_Action }}"
-  when: 
-    win_baseline_2185_state_Manage
+# - name: "win_baseline_2185_state | Ensure 'Allow logon through terminal services' is set to 'Administrators, Remote Desktop Users"
+#   win_user_right:
+#     name: "{{ win_baseline_2185_state_Name }}"
+#     users: "{{ win_baseline_2185_state_Users }}"
+#     action: "{{ win_baseline_2185_state_Action }}"
+#   when: 
+#     win_baseline_2185_state_Manage
 
-- name: "win_baseline_2186_state | Ensure 'Back up files and directories' is set to 'Administrators, Backup Operators'"
-  win_user_right:
-    name: "{{ win_baseline_2186_state_Name }}"
-    users: "{{ win_baseline_2186_state_Users }}"
-    action: "{{ win_baseline_2186_state_Action }}"
-  when: 
-    win_baseline_2186_state_Manage
+# - name: "win_baseline_2186_state | Ensure 'Back up files and directories' is set to 'Administrators, Backup Operators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2186_state_Name }}"
+#     users: "{{ win_baseline_2186_state_Users }}"
+#     action: "{{ win_baseline_2186_state_Action }}"
+#   when: 
+#     win_baseline_2186_state_Manage
 
-- name: "win_baseline_2187_state | Ensure 'Bypass traverse checking' is set to 'Administrators, Authenticated Users, Backup Operators, Local Service, Network Service'"
-  win_user_right:
-    name: "{{ win_baseline_2187_state_Name }}"
-    users: "{{ win_baseline_2187_state_Users }}"
-    action: "{{ win_baseline_2187_state_Action }}"
-  when:
-    win_baseline_2187_state_Manage
+# - name: "win_baseline_2187_state | Ensure 'Bypass traverse checking' is set to 'Administrators, Authenticated Users, Backup Operators, Local Service, Network Service'"
+#   win_user_right:
+#     name: "{{ win_baseline_2187_state_Name }}"
+#     users: "{{ win_baseline_2187_state_Users }}"
+#     action: "{{ win_baseline_2187_state_Action }}"
+#   when:
+#     win_baseline_2187_state_Manage
 
-- name: "win_baseline_2191_state | Ensure 'Change the system time' is set to 'Administrators, Local Service'"
-  win_user_right:
-    name: "{{ win_baseline_2191_state_Name }}"
-    users: "{{ win_baseline_2191_state_Users }}"
-    action: "{{ win_baseline_2191_state_Action }}"
-  when:
-    win_baseline_2191_state_Manage
+# - name: "win_baseline_2191_state | Ensure 'Change the system time' is set to 'Administrators, Local Service'"
+#   win_user_right:
+#     name: "{{ win_baseline_2191_state_Name }}"
+#     users: "{{ win_baseline_2191_state_Users }}"
+#     action: "{{ win_baseline_2191_state_Action }}"
+#   when:
+#     win_baseline_2191_state_Manage
 
-- name: "win_baseline_2192_state | Ensure 'Crate a pagefile' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_2192_state_Name }}"
-    users: "{{ win_baseline_2192_state_Users }}"
-    action: "{{ win_baseline_2192_state_Action }}"
-  when:
-    win_baseline_2192_state_Manage
+# - name: "win_baseline_2192_state | Ensure 'Crate a pagefile' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2192_state_Name }}"
+#     users: "{{ win_baseline_2192_state_Users }}"
+#     action: "{{ win_baseline_2192_state_Action }}"
+#   when:
+#     win_baseline_2192_state_Manage
   
-- name: "win_baseline_2193_state | Ensrue 'Create a Token Object' is set to 'No One'"
-  win_user_right:
-    name: "{{ win_baseline_2193_state_Name }}"
-    users: "{{ win_baseline_2193_state_Users }}"
-    action: "{{ win_baseline_2193_state_Action }}"
-  when:
-    win_baseline_2193_state_Manage
+# - name: "win_baseline_2193_state | Ensrue 'Create a Token Object' is set to 'No One'"
+#   win_user_right:
+#     name: "{{ win_baseline_2193_state_Name }}"
+#     users: "{{ win_baseline_2193_state_Users }}"
+#     action: "{{ win_baseline_2193_state_Action }}"
+#   when:
+#     win_baseline_2193_state_Manage
 
-- name: "win_baseline_2194_state | Ensure 'Create permanent shared objects' is set to 'No One'"
-  win_user_right:
-    name: "{{ win_baseline_2194_state_Name }}"
-    users: "{{ win_baseline_2194_state_Users }}"
-    action: "{{ win_baseline_2194_state_Action }}"
-  when:
-    win_baseline_2194_state_Manage
+# - name: "win_baseline_2194_state | Ensure 'Create permanent shared objects' is set to 'No One'"
+#   win_user_right:
+#     name: "{{ win_baseline_2194_state_Name }}"
+#     users: "{{ win_baseline_2194_state_Users }}"
+#     action: "{{ win_baseline_2194_state_Action }}"
+#   when:
+#     win_baseline_2194_state_Manage
 
-- name: "win_baseline_2195_state | Ensure 'Debug programs' is set to 'No One'"
-  win_user_right:
-    name: "{{ win_baseline_2195_state_Name }}"
-    users: "{{ win_baseline_2195_state_Users }}"
-    action: "{{ win_baseline_2195_state_Action }}"
-  when:
-    win_baseline_2195_state_Manage
+# - name: "win_baseline_2195_state | Ensure 'Debug programs' is set to 'No One'"
+#   win_user_right:
+#     name: "{{ win_baseline_2195_state_Name }}"
+#     users: "{{ win_baseline_2195_state_Users }}"
+#     action: "{{ win_baseline_2195_state_Action }}"
+#   when:
+#     win_baseline_2195_state_Manage
 
-- name: "win_baseline_2196_state | Ensure 'Deny access to this computer from the network' is set to 'Guests, Guest'"
-  win_user_right:
-    name: "{{ win_baseline_2196_state_Name }}"
-    users: "{{ win_baseline_2196_state_Users }}"
-    action: "{{ win_baseline_2196_state_Action }}"
-  when:
-    win_baseline_2196_state_Manage
+# - name: "win_baseline_2196_state | Ensure 'Deny access to this computer from the network' is set to 'Guests, Guest'"
+#   win_user_right:
+#     name: "{{ win_baseline_2196_state_Name }}"
+#     users: "{{ win_baseline_2196_state_Users }}"
+#     action: "{{ win_baseline_2196_state_Action }}"
+#   when:
+#     win_baseline_2196_state_Manage
 
-- name: "win_baseline_2197_state | Ensure 'Deny logon as a batch job' is set to 'Guests, Guest'"
-  win_user_right:
-    name: "{{ win_baseline_2197_state_Name }}"
-    users: "{{ win_baseline_2197_state_Users }}"
-    action: "{{ win_baseline_2197_state_Action }}"
-  when:
-    win_baseline_2197_state_Manage
+# - name: "win_baseline_2197_state | Ensure 'Deny logon as a batch job' is set to 'Guests, Guest'"
+#   win_user_right:
+#     name: "{{ win_baseline_2197_state_Name }}"
+#     users: "{{ win_baseline_2197_state_Users }}"
+#     action: "{{ win_baseline_2197_state_Action }}"
+#   when:
+#     win_baseline_2197_state_Manage
 
-- name: "win_baseline_2198_state | Ensure 'Deny log on as a service' is set to 'Guests, Guest'"
-  win_user_right:
-    name: "{{ win_baseline_2198_state_Name }}"
-    users: "{{ win_baseline_2198_state_Users }}"
-    action: "{{ win_baseline_2198_state_Action }}"
-  when:
-    win_baseline_2198_state_Manage
+# - name: "win_baseline_2198_state | Ensure 'Deny log on as a service' is set to 'Guests, Guest'"
+#   win_user_right:
+#     name: "{{ win_baseline_2198_state_Name }}"
+#     users: "{{ win_baseline_2198_state_Users }}"
+#     action: "{{ win_baseline_2198_state_Action }}"
+#   when:
+#     win_baseline_2198_state_Manage
 
-- name: "win_baseline_2199_state | Ensure 'Deny log on locally' is set to 'Guests, Guest'"
-  win_user_right:
-    name: "{{ win_baseline_2199_state_Name }}"
-    users: "{{ win_baseline_2199_state_Users }}"
-    action: "{{ win_baseline_2199_state_Action }}"
-  when:
-    win_baseline_2199_state_Manage
+# - name: "win_baseline_2199_state | Ensure 'Deny log on locally' is set to 'Guests, Guest'"
+#   win_user_right:
+#     name: "{{ win_baseline_2199_state_Name }}"
+#     users: "{{ win_baseline_2199_state_Users }}"
+#     action: "{{ win_baseline_2199_state_Action }}"
+#   when:
+#     win_baseline_2199_state_Manage
 
-- name: "win_baseline_2200_state | Ensure 'Deny logon through remote desktop' is set to 'Guest"
-  win_user_right:
-    name: "{{ win_baseline_2200_state_Name }}"
-    users: "{{ win_baseline_2200_state_Users }}"
-    action: "{{ win_baseline_2200_state_Action }}"
-  when:
-    win_baseline_2200_state_Manage
+# - name: "win_baseline_2200_state | Ensure 'Deny logon through remote desktop' is set to 'Guest"
+#   win_user_right:
+#     name: "{{ win_baseline_2200_state_Name }}"
+#     users: "{{ win_baseline_2200_state_Users }}"
+#     action: "{{ win_baseline_2200_state_Action }}"
+#   when:
+#     win_baseline_2200_state_Manage
 
-- name: "win_baseline_2383_state | Ensure 'Enable computer and user accounts to be trusted for delegation' is set to 'No One'"
-  win_user_right:
-    name: "{{ win_baseline_2383_state_Name }}"
-    users: "{{ win_baseline_2383_state_Users }}"
-    action: "{{ win_baseline_2383_state_Action }}"
-  when:
-    win_baseline_2383_state_Manage
+# - name: "win_baseline_2383_state | Ensure 'Enable computer and user accounts to be trusted for delegation' is set to 'No One'"
+#   win_user_right:
+#     name: "{{ win_baseline_2383_state_Name }}"
+#     users: "{{ win_baseline_2383_state_Users }}"
+#     action: "{{ win_baseline_2383_state_Action }}"
+#   when:
+#     win_baseline_2383_state_Manage
 
-- name: "win_baseline_2384_state | Ensure 'Force shutdown from a remote system' is set to 'Administrators"
-  win_user_right:
-    name: "{{ win_baseline_2384_state_Name }}"
-    users: "{{ win_baseline_2384_state_Users }}"
-    action: "{{ win_baseline_2384_state_Action }}"
-  when:
-    win_baseline_2384_state_Manage
+# - name: "win_baseline_2384_state | Ensure 'Force shutdown from a remote system' is set to 'Administrators"
+#   win_user_right:
+#     name: "{{ win_baseline_2384_state_Name }}"
+#     users: "{{ win_baseline_2384_state_Users }}"
+#     action: "{{ win_baseline_2384_state_Action }}"
+#   when:
+#     win_baseline_2384_state_Manage
 
 # ! error, details in the table
 # - name: "win_baseline_2385_state | Ensure 'Generate security audits' is set to 'Administrators, IIS Apppool\\.* Service, Network Service"
