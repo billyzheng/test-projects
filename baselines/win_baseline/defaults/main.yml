@@ -1151,7 +1151,7 @@ win_baseline_4193_state_Key: "WCN"
 
 # win_baseline_4194_state | Ensure 'Turn off background regresh of group policy' is set to 'Disabled'"
 win_baseline_4194_state_Manage: True
-win_baseline_4194_state_Path: 'Software\Microsoft\Windows\CurrentVersion\Policies\System'
+win_baseline_4194_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
 win_baseline_4194_state_Name: "DisableBkGndGroupPolicy"
 win_baseline_4194_state_Data: "0"
 win_baseline_4194_state_Type: dword
