@@ -698,13 +698,13 @@
 #   when:
 #     win_baseline_2183_state_Manage
 
-- name: "win_baseline_2184_state | Ensure 'Adjust memory quotas for a process' is set to 'Guests, Users, Replicators, Backup Operators, Event log Readers, Performance log Users, Print Operators'"
-  win_user_right:
-    name: "{{ win_baseline_2184_state_Name }}"
-    users: "{{ win_baseline_2184_state_Users }}"
-    action: "{{ win_baseline_2184_state_Action }}"
-  when:
-    win_baseline_2184_state_Manage
+# - name: "win_baseline_2184_state | Ensure 'Adjust memory quotas for a process' is set to 'Guests, Users, Replicators, Backup Operators, Event log Readers, Performance log Users, Print Operators'"
+#   win_user_right:
+#     name: "{{ win_baseline_2184_state_Name }}"
+#     users: "{{ win_baseline_2184_state_Users }}"
+#     action: "{{ win_baseline_2184_state_Action }}"
+#   when:
+#     win_baseline_2184_state_Manage
 
 # - name: "win_baseline_2185_state | Ensure 'Allow logon through terminal services' is set to 'Administrators, Remote Desktop Users"
 #   win_user_right:
@@ -3137,6 +3137,15 @@
 #     type: "{{ win_baseline_11282_state_Type }}"
 #   when:
 #     win_baseline_11282_state_Manage
+
+- name: "win_baseline_11284_state | Ensure 'SMB 2.0 miniredirector' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_11284_state_Path }}"
+    name: "{{ win_baseline_11284_state_Name }}"
+    data: "{{ win_baseline_11284_state_Data }}"
+    type: "{{ win_baseline_11284_state_Type }}"
+  when:
+    win_baseline_11284_state_Manage
 
 # - name: "win_baseline_11377_state | Enusre 'Configure keep-alive connection interval' is greater than or equal to '1'"
 #   win_regedit:

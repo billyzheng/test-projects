@@ -2402,6 +2402,14 @@ win_baseline_11282_state_Name: "SMB2"
 win_baseline_11282_state_Data: "0"
 win_baseline_11282_state_Type: dword
 
+# win_baseline_11284_state | Ensure 'SMB 2.0 miniredirector' is set to 'Disabled'
+win_baseline_11284_state_Manage: True
+win_baseline_11284_state_Path: 'HKLM:\SYSTEM\CurrentControlSet\Services'
+win_baseline_11284_state_Name: "mrxsmb20"
+win_baseline_11284_state_Data: "4"
+win_baseline_11284_state_Type: dword
+
+
 # win_baseline_11377_state | Enusre 'Configure keep-alive connection interval' is greater than or equal to '1'
 win_baseline_11377_state_Manage: True
 win_baseline_11377_state_Path: 'HKLM:\Software\\Policies\Microsoft\Windows NT\Terminal Services'
