@@ -617,14 +617,14 @@
 #   when:
 #     win_baseline_1463_state_Manage
 
-- name: "win_baseline_1472_state | Ensure 'Network connections' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_1472_state_Path }}"
-    name: "{{ win_baseline_1472_state_Name }}"
-    data: "{{ win_baseline_1472_state_Data }}"
-    type: "{{ win_baseline_1472_state_Type }}"
-  when:
-    win_baseline_1472_state_Manage
+# - name: "win_baseline_1472_state | Ensure 'Network connections' is set to 'Automatic'"
+#   win_regedit:
+#     path: "{{ win_baseline_1472_state_Path }}"
+#     name: "{{ win_baseline_1472_state_Name }}"
+#     data: "{{ win_baseline_1472_state_Data }}"
+#     type: "{{ win_baseline_1472_state_Type }}"
+#   when:
+#     win_baseline_1472_state_Manage
 
 # - name: "win_baseline_1476_state | Ensure 'Romote Access Connection Manager (RasMan)' is set to 'Disabled'"
 #   win_regedit:
@@ -2230,12 +2230,14 @@
 #   when:
 #     win_baseline_9009_state_Manage
 
-# - name: "win_baseline_9013_state | Ensure 'Setup - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
-#   win_regedit:
-#     path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\Setup
-#     name: "Retention"
-#     data: "0"
-#     type: string
+- name: "win_baseline_9013_state | Ensure 'Setup - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_9013_state_Path }}"
+    name: "{{ win_baseline_9013_state_Name }}"
+    data: "{{ win_baseline_9013_state_Data }}"
+    type: "{{ win_baseline_9013_state_Type }}"
+  when:
+    win_baseline_9013_state_Manage
 
 # - name: "win_baseline_9014_state | Ensure 'Setup - Maximum Log Size (KB)' is set to 'Enabled: 32768 or greater'"
 #   win_regedit:
