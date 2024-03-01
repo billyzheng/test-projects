@@ -2339,6 +2339,12 @@ win_baseline_11213_state_Data: "32"
 win_baseline_11213_state_Type: dword
 
 # "win_baseline_11224_state | Ensure 'SMB 1.x MiniRedirector (mrxsmb10)' Windows service (LanmanWorkstation depend on service 'mrxsmb10')' is set to 'Disabled'
+win_baseline_11224_state_Manage: True
+win_baseline_11224_state_Path: 'HKLM:\SYSTEM\CurrentControlSet\Services'
+win_baseline_11224_state_Name: "mrxsmb10"
+win_baseline_11224_state_Data: "4"
+win_baseline_11224_state_Type: dword
+
 
 # win_baseline_11236_state | Ensure 'Do not sync' is set to 'Enabled'
 win_baseline_11236_state_Manage: True
