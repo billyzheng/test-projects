@@ -1540,7 +1540,7 @@
   when:
     win_baseline_4193_2_state_Manage
 
-- name: "win_baseline_4193_stat_3 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableInBand802DOT11Registrar"
+- name: "win_baseline_4193_state_3 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableInBand802DOT11Registrar"
   win_regedit:
     path: "{{ win_baseline_4193_3_state_Path }}"
     name: "{{ win_baseline_4193_3_state_Name }}"
@@ -1549,7 +1549,7 @@
   when:
     win_baseline_4193_3_state_Manage
 
-- name: "win_baseline_4193_stat_4 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableFlashConfigRegistrar"
+- name: "win_baseline_4193_state_4 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableFlashConfigRegistrar"
   win_regedit:
     path: "{{ win_baseline_4193_4_state_Path }}"
     name: "{{ win_baseline_4193_4_state_Name }}"

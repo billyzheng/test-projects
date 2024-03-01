@@ -1161,7 +1161,7 @@ win_baseline_4193_2_state_Manage: True
 win_baseline_4193_2_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WCN\Registrars'
 win_baseline_4193_2_state_Name: "DisableUPnPRegistrar"
 win_baseline_4193_2_state_Data: "0"
-win_baseline_4111_2_state_Type: dword
+win_baseline_4193_2_state_Type: dword
 
 # win_baseline_4193_state_3 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableInBand802DOT11Registrar
 win_baseline_4193_3_state_Manage: True
