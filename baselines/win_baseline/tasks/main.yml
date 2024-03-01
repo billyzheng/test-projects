@@ -626,8 +626,6 @@
   when:
     win_baseline_1476_state_Manage
 
-- name: "win_baseline_1507_state | Ensure 'Automatic Updates/Windows Update' is set to 'Disabled'"
-
 - name: "win_baseline_1509_state | Ensure 'Netlogon' is set to 'Automatic'"
   win_regedit:
     path: "{{ win_baseline_1509_state_Path }}"
@@ -2400,9 +2398,6 @@
     type: "{{ win_baseline_10011_state_Type }}"
   when:
     win_baseline_10011_state_Manage
-
-# ! error
-# - name: "win_baseline_10012_state | Ensure 'LAPS AdmPwd GPO Extension / CSE is installed'"
 
 - name: "win_baseline_10015_state | Ensure 'Do not allow password expiration time longer than required by policy' is set to 'Enabled'"
   win_regedit:
