@@ -990,13 +990,14 @@
   when:
     win_baseline_2342_state_Manage
 
-- name: "win_baseline_2343_state | Ensure 'Reset account lockout counter after' is set to '30 or less minute(s)'"
-  win_security_policy:
-    section: "{{ win_baseline_2343_state_Section }}"
-    key: "{{ win_baseline_2343_state_Key }}"
-    value: "{{ win_baseline_2343_state_Value }}"
-  when:
-    win_baseline_2343_state_Manage
+# ! error
+# - name: "win_baseline_2343_state | Ensure 'Reset account lockout counter after' is set to '30 or less minute(s)'"
+#   win_security_policy:
+#     section: "{{ win_baseline_2343_state_Section }}"
+#     key: "{{ win_baseline_2343_state_Key }}"
+#     value: "{{ win_baseline_2343_state_Value }}"
+#   when:
+#     win_baseline_2343_state_Manage
 
 - name: "win_baseline_2484_state | Ensure 'Store passwords using reversible encryption' is set to 'Disabled'"
   win_security_policy:
