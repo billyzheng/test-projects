@@ -12,8 +12,9 @@ for line in lines:
         continue
     if flag:
         control_id = line.split('_')[2]
-        print(control_id)
+        # print(control_id)
         control_ids.append(control_id)
         flag = False
 
-print(control_ids)
+# print(control_ids)
+print(len(control_ids))
