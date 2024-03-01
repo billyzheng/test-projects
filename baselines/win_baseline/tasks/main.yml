@@ -1521,22 +1521,42 @@
 #     win_baseline_4111_state_Manage
 
 # ! error, details are in the table
-- name: “win_baseline_4193_state | Esure 'Configuration of wireless settings using windows connect now' is set to 'Disabled'”
+# - name: “win_baseline_4193_state | Esure 'Configuration of wireless settings using windows connect now' is set to 'Disabled'”
+- name: "18.4.20.1,CCE-37481-9 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - EnableRegistrars"
   win_regedit:
     path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
+    name: "EnableRegistrars"
     data: "0"
     type: dword
-    update_handlers:
-      - name: EnableRegistrars
-        value_name: "EnableRegistrars"
-      - name: DisableUPnPRegistrar
-        value_name: "DisableUPnPRegistrar"
-      - name: DisableInBand802DOT11Registrar
-        value_name: "DisableInBand802DOT11Registrar"
-      - name: DisableFlashConfigRegistrar
-        value_name: "DisableFlashConfigRegistrar"
-      - name: DisableWPDRegistrar
-        value_name: "DisableWPDRegistrar"
+
+- name: "18.4.20.1,CCE-37481-9 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableUPnPRegistrar"
+  win_regedit:
+    path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
+    name: "DisableUPnPRegistrar"
+    data: "0"
+    type: dword
+
+- name: "18.4.20.1,CCE-37481-9 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableInBand802DOT11Registrar"
+  win_regedit:
+    path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
+    name: "DisableInBand802DOT11Registrar"
+    data: "0"
+    type: dword
+
+- name: "18.4.20.1,CCE-37481-9 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableFlashConfigRegistrar"
+  win_regedit:
+    path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
+    name: "DisableFlashConfigRegistrar"
+    data: "0"
+    type: dword
+
+- name: "18.4.20.1,CCE-37481-9 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableWPDRegistrar"
+  win_regedit:
+    path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
+    name: "DisableWPDRegistrar"
+    data: "0"
+    type: dword
+
 
 # - name: "win_baseline_4194_state | Ensure 'Turn off background regresh of group policy' is set to 'Disabled'" 
 #   win_regedit:
