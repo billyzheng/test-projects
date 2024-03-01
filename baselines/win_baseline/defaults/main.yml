@@ -2367,6 +2367,14 @@ win_baseline_11239_state_Name: "LetAppsAccessNotifications"
 win_baseline_11239_state_Data: "2"
 win_baseline_11239_state_Type: dword
 
+# win_baseline_11243_state | Ensure 'Prevent deleting download history' is set to 'Enabled'
+win_baseline_11243_state_Manage: True
+win_baseline_11243_state_Path: 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Privacy'
+win_baseline_11243_state_Name: "CleanDownloadHistory"
+win_baseline_11243_state_Data: "0"
+win_baseline_11243_state_Type: dword
+
+
 # win_baseline_11273_state | Ensure 'Allow Extensions' is set to 'Disabled'
 win_baseline_11273_state_Manage: True
 win_baseline_11273_state_Path: 'HKLM:\Software\Policies\Microsoft\MicrosoftEdge\Extensions'
