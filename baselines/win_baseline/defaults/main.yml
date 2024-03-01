@@ -1150,11 +1150,11 @@ win_baseline_4111_state_Name: "ACSettingIndex"
 win_baseline_4111_state_Data: "1"
 
 # win_baseline_4193_state_1 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - EnableRegistrars
-win_baseline_41931_1_state_Manage: True
-win_baseline_41931_1_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WCN\Registrars'
-win_baseline_41931_1_state_Name: "EnableRegistrars"
-win_baseline_41931_1_state_Data: "0"
-win_baseline_41931_1_state_Type: dword
+win_baseline_4193_1_state_Manage: True
+win_baseline_4193_1_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\WCN\Registrars'
+win_baseline_4193_1_state_Name: "EnableRegistrars"
+win_baseline_4193_1_state_Data: "0"
+win_baseline_4193_1_state_Type: dword
 
 # win_baseline_4193_state_2 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableUPnPRegistrar
 win_baseline_4193_2_state_Manage: True
