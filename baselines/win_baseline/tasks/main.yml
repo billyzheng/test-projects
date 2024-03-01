@@ -428,15 +428,14 @@
 #   when:
 #     win_baseline_1377_state_Manage
 
-# ! problem, details in the table
-- name: "win_baseline_1378_state | Ensure 'Interactive logon - Smart card removal behavior' is set to 'Lock Workstation'"
-  win_regedit:
-    path: "{{ win_baseline_1378_state_Path }}"
-    name: "{{ win_baseline_1378_state_Name }}"
-    data: "{{ win_baseline_1378_state_Data }}"
-    type: "{{ win_baseline_1378_state_Type }}"
-  when:
-    win_baseline_1378_state_Manage
+# - name: "win_baseline_1378_state | Ensure 'Interactive logon - Smart card removal behavior' is set to 'Lock Workstation'"
+#   win_regedit:
+#     path: "{{ win_baseline_1378_state_Path }}"
+#     name: "{{ win_baseline_1378_state_Name }}"
+#     data: "{{ win_baseline_1378_state_Data }}"
+#     type: "{{ win_baseline_1378_state_Type }}"
+#   when:
+#     win_baseline_1378_state_Manage
 
 # - name: "win_baseline_1379_state | Ensure 'Microsoft network client - Digitally sign communications (if server agrees)' is set to 'Enabled'"
 #   win_regedit:
