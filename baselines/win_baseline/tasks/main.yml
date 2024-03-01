@@ -1223,24 +1223,14 @@
   when:
     win_baseline_3737_state_Manage
 
-- name: "win_baseline_3776_state | Ensure 'Windows security event log' is set to 'Administrator'"
-  ansible.windows.win_acl:
-    path: C:\Windows\system32\config
-    user: Administrator
-    rights: FullControl
-    type: allow
-    state: present
-    inherit: ContainerInherit, ObjectInherit
-    propagation: 'None'
-
-# - name: "win_baseline_3875_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3875_state_Path }}"
-#     name: "{{ win_baseline_3875_state_Name }}"
-#     data: "{{ win_baseline_3875_state_Data }}"
-#     type: "{{ win_baseline_3875_state_Type }}"
-#   when:
-#     win_baseline_3875_state_Manage
+- name: "win_baseline_3875_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3875_state_Path }}"
+    name: "{{ win_baseline_3875_state_Name }}"
+    data: "{{ win_baseline_3875_state_Data }}"
+    type: "{{ win_baseline_3875_state_Type }}"
+  when:
+    win_baseline_3875_state_Manage
 
 - name: "win_baseline_3778_state | Ensure 'Login banner' is set to 'This is an interest computer system of ABB...'"
   win_regedit:
