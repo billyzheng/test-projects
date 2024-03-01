@@ -207,67 +207,67 @@
 #   when:
 #     win_baseline_1181_state_Manage
 
-- name: "win_baseline_1182_state | Ensure 'Simple Netowrk Management Protocol trap' service is set t0 'Disabled'"
-  win_service:
-    name: snmptrap
-    state: stopped
-  when:
-    win_baseline_1182_state_Manage
+# - name: "win_baseline_1182_state | Ensure 'Simple Netowrk Management Protocol trap' service is set t0 'Disabled'"
+#   win_service:
+#     name: snmptrap
+#     state: stopped
+#   when:
+#     win_baseline_1182_state_Manage
 
 
-- name: "win_baseline_1183_state | Ensure 'Auto run for all drivers' is set to 'All drives'"
-  win_regedit:
-    path: "{{ win_baseline_1183_state_Path }}"
-    name: "{{ win_baseline_1183_state_Name }}"
-    data: "{{ win_baseline_1183_state_Data }}"
-    type: "{{ win_baseline_1183_state_Type }}"
-  when:
-    win_baseline_1183_state_Manage
+# - name: "win_baseline_1183_state | Ensure 'Auto run for all drivers' is set to 'All drives'"
+#   win_regedit:
+#     path: "{{ win_baseline_1183_state_Path }}"
+#     name: "{{ win_baseline_1183_state_Name }}"
+#     data: "{{ win_baseline_1183_state_Data }}"
+#     type: "{{ win_baseline_1183_state_Type }}"
+#   when:
+#     win_baseline_1183_state_Manage
 
-- name: "win_baseline_1184_state | Ensure 'MSS - (PerformRouterDiscovery) Allow IRDP to detect and configure Default Gateway addresses (could lead to DoS)' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1184_state_Path }}"
-    name: "{{ win_baseline_1184_state_Name }}"
-    data: "{{ win_baseline_1184_state_Data }}"
-    type: "{{ win_baseline_1184_state_Type }}"
-  when:
-    win_baseline_1184_state_Manage
+# - name: "win_baseline_1184_state | Ensure 'MSS - (PerformRouterDiscovery) Allow IRDP to detect and configure Default Gateway addresses (could lead to DoS)' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1184_state_Path }}"
+#     name: "{{ win_baseline_1184_state_Name }}"
+#     data: "{{ win_baseline_1184_state_Data }}"
+#     type: "{{ win_baseline_1184_state_Type }}"
+#   when:
+#     win_baseline_1184_state_Manage
 
-- name: "win_baseline_1188_state | Ensure 'System objects - Require case insensitivity for non-Windows subsystems' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1188_state_Path }}"
-    name: "{{ win_baseline_1188_state_Name }}"
-    data: "{{ win_baseline_1188_state_Data }}"
-    type: "{{ win_baseline_1188_state_Type }}"
-  when:
-    win_baseline_1188_state_Manage
+# - name: "win_baseline_1188_state | Ensure 'System objects - Require case insensitivity for non-Windows subsystems' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1188_state_Path }}"
+#     name: "{{ win_baseline_1188_state_Name }}"
+#     data: "{{ win_baseline_1188_state_Data }}"
+#     type: "{{ win_baseline_1188_state_Type }}"
+#   when:
+#     win_baseline_1188_state_Manage
 
-- name: "win_baseline_1189_state | Ensure 'Microsoft network server - Digitally sign communications (always)' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1189_state_Path }}"
-    name: "{{ win_baseline_1189_state_Name }}"
-    data: "{{ win_baseline_1189_state_Data }}"
-    type: "{{ win_baseline_1189_state_Type }}"
-  when:
-    win_baseline_1189_state_Manage
+# - name: "win_baseline_1189_state | Ensure 'Microsoft network server - Digitally sign communications (always)' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1189_state_Path }}"
+#     name: "{{ win_baseline_1189_state_Name }}"
+#     data: "{{ win_baseline_1189_state_Data }}"
+#     type: "{{ win_baseline_1189_state_Type }}"
+#   when:
+#     win_baseline_1189_state_Manage
 
-- name: "win_baseline_1190_state | Ensure 'Interactive logon - Do not display last user name' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_1190_state_Path }}"
-    name: "{{ win_baseline_1190_state_Name }}"
-    data: "{{ win_baseline_1190_state_Data }}"
-    type: "{{ win_baseline_1190_state_Type }}"
-  when: 
-    win_baseline_1190_state_Manage
+# - name: "win_baseline_1190_state | Ensure 'Interactive logon - Do not display last user name' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1190_state_Path }}"
+#     name: "{{ win_baseline_1190_state_Name }}"
+#     data: "{{ win_baseline_1190_state_Data }}"
+#     type: "{{ win_baseline_1190_state_Type }}"
+#   when: 
+#     win_baseline_1190_state_Manage
 
-- name: "win_baseline_1193_state | Ensure 'MSS - (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_1193_state_Path }}"
-    name: "{{ win_baseline_1193_state_Name }}"
-    data:  "{{ win_baseline_1193_state_Data }}"
-    type: "{{ win_baseline_1193_state_Type }}"
-  when:
-    win_baseline_1193_state_Manage
+# - name: "win_baseline_1193_state | Ensure 'MSS - (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_1193_state_Path }}"
+#     name: "{{ win_baseline_1193_state_Name }}"
+#     data:  "{{ win_baseline_1193_state_Data }}"
+#     type: "{{ win_baseline_1193_state_Type }}"
+#   when:
+#     win_baseline_1193_state_Manage
 
 - name: "win_baseline_1195_state | Ensure 'MSS - (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers' is set to what?"
   win_regedit:
