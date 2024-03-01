@@ -1244,392 +1244,390 @@
 #   when:
 #     win_baseline_3908_state_Manage
 
-- name: "win_baseline_3919_state | Ensure 'Turn off printing over HTTP' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3919_state_Path }}"
-    name: "{{ win_baseline_3919_state_Name }}"
-    data: "{{ win_baseline_3919_state_Data }}"
-    type: "{{ win_baseline_3919_state_Type }}"
-  when:
-    win_baseline_3919_state_Manage
+# - name: "win_baseline_3919_state | Ensure 'Turn off printing over HTTP' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3919_state_Path }}"
+#     name: "{{ win_baseline_3919_state_Name }}"
+#     data: "{{ win_baseline_3919_state_Data }}"
+#     type: "{{ win_baseline_3919_state_Type }}"
+#   when:
+#     win_baseline_3919_state_Manage
 
-- name: "win_baseline_3920_state | Ensure 'Turn off Internet download for Web publishing and online ordering wizards' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3920_state_Path }}"
-    name: "{{ win_baseline_3920_state_Name }}"
-    data: "{{ win_baseline_3920_state_Data }}"
-    type: "{{ win_baseline_3920_state_Type }}"
-  when:
-    win_baseline_3920_state_Manage
+# - name: "win_baseline_3920_state | Ensure 'Turn off Internet download for Web publishing and online ordering wizards' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3920_state_Path }}"
+#     name: "{{ win_baseline_3920_state_Name }}"
+#     data: "{{ win_baseline_3920_state_Data }}"
+#     type: "{{ win_baseline_3920_state_Type }}"
+#   when:
+#     win_baseline_3920_state_Manage
 
-- name: "win_baseline_3921_state | Ensure 'Turn off the 'Publish to Web' task for files and folders' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3921_state_Path }}"
-    name: "{{ win_baseline_3921_state_Name }}"
-    data: "{{ win_baseline_3921_state_Data }}"
-    type: "{{ win_baseline_3921_state_Type }}"
-  when:
-    win_baseline_3921_state_Manage
+# - name: "win_baseline_3921_state | Ensure 'Turn off the 'Publish to Web' task for files and folders' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3921_state_Path }}"
+#     name: "{{ win_baseline_3921_state_Name }}"
+#     data: "{{ win_baseline_3921_state_Data }}"
+#     type: "{{ win_baseline_3921_state_Type }}"
+#   when:
+#     win_baseline_3921_state_Manage
 
-- name: "win_baseline_3922_state | Ensure 'Turn off downloading of print drivers over HTTP' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3922_state_Path }}"
-    name: "{{ win_baseline_3922_state_Name }}"
-    data: "{{ win_baseline_3922_state_Data }}"
-    type: "{{ win_baseline_3922_state_Type }}"
-  when:
-    win_baseline_3922_state_Manage
+# - name: "win_baseline_3922_state | Ensure 'Turn off downloading of print drivers over HTTP' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3922_state_Path }}"
+#     name: "{{ win_baseline_3922_state_Name }}"
+#     data: "{{ win_baseline_3922_state_Data }}"
+#     type: "{{ win_baseline_3922_state_Type }}"
+#   when:
+#     win_baseline_3922_state_Manage
 
-- name: "win_baseline_3923_state | Ensure 'Configure registry policy processing - Do not apply during periodic background processing' is set to 'Enabled - FALSE'"
-  win_regedit:
-    path: "{{ win_baseline_3923_state_Path }}"
-    name: "{{ win_baseline_3923_state_Name }}"
-    data: "{{ win_baseline_3923_state_Data }}"
-    type: "{{ win_baseline_3923_state_Type }}"
-  when:
-    win_baseline_3923_state_Manage
+# - name: "win_baseline_3923_state | Ensure 'Configure registry policy processing - Do not apply during periodic background processing' is set to 'Enabled - FALSE'"
+#   win_regedit:
+#     path: "{{ win_baseline_3923_state_Path }}"
+#     name: "{{ win_baseline_3923_state_Name }}"
+#     data: "{{ win_baseline_3923_state_Data }}"
+#     type: "{{ win_baseline_3923_state_Type }}"
+#   when:
+#     win_baseline_3923_state_Manage
 
-- name: "win_baseline_3924_state | Ensure 'Access credential manager as a trusted caller' is set to 'No One'"
-  win_user_right:
-    name: "{{ win_baseline_3924_state_Name }}"
-    users: "{{ win_baseline_3924_state_Users }}"
-    action: "{{ win_baseline_3924_state_Action }}"
-  when:
-    win_baseline_3924_state_Manage
+# - name: "win_baseline_3924_state | Ensure 'Access credential manager as a trusted caller' is set to 'No One'"
+#   win_user_right:
+#     name: "{{ win_baseline_3924_state_Name }}"
+#     users: "{{ win_baseline_3924_state_Users }}"
+#     action: "{{ win_baseline_3924_state_Action }}"
+#   when:
+#     win_baseline_3924_state_Manage
 
-- name: "win_baseline_3925_state | Esure 'Change the time zone privilege' is set to 'Administrators, LOCAL SERVICE'"
-  win_user_right:
-    name: "{{ win_baseline_3925_state_Name }}"
-    users: "{{ win_baseline_3925_state_Users }}"
-    action: "{{ win_baseline_3925_state_Action }}"
-  when:
-    win_baseline_3925_state_Manage
-
-
-- name: "win_baseline_3926_State | Ensure 'Reschedule Automatic Update scheduled installations' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3926_state_Path }}"
-    name: "{{ win_baseline_3926_state_Name }}"
-    data: "{{ win_baseline_3926_state_Data }}"
-    type: "{{ win_baseline_3926_state_Type }}"
-  when:
-    win_baseline_3926_state_Manage
-
-- name: "win_baseline_3927_state | Ensure 'Install Updates and Shut Down' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3927_state_Path }}"
-    name: "{{ win_baseline_3927_state_Name }}"
-    data: "{{ win_baseline_3927_state_Data }}"
-    type: "{{ win_baseline_3927_state_Type }}"
-  when:
-    win_baseline_3927_state_Manage
+# - name: "win_baseline_3925_state | Esure 'Change the time zone privilege' is set to 'Administrators, LOCAL SERVICE'"
+#   win_user_right:
+#     name: "{{ win_baseline_3925_state_Name }}"
+#     users: "{{ win_baseline_3925_state_Users }}"
+#     action: "{{ win_baseline_3925_state_Action }}"
+#   when:
+#     win_baseline_3925_state_Manage
 
 
+# - name: "win_baseline_3926_State | Ensure 'Reschedule Automatic Update scheduled installations' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3926_state_Path }}"
+#     name: "{{ win_baseline_3926_state_Name }}"
+#     data: "{{ win_baseline_3926_state_Data }}"
+#     type: "{{ win_baseline_3926_state_Type }}"
+#   when:
+#     win_baseline_3926_state_Manage
 
-- name: "win_baseline_3939_state | Ensure 'Allow UIAccess applications to prompt for elevation without using the secure desktop' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3939_state_Path }}"
-    name: "{{ win_baseline_3939_state_Name }}"
-    data: "{{ win_baseline_3939_state_Data }}"
-    type: "{{ win_baseline_3939_state_Type }}"
-  when:
-    win_baseline_3939_state_Manage
-
-- name: "win_baseline_3940_state | Ensure 'User Account Control - Virtualize file and registry write failures to per-user locations' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_3940_state_Path }}"
-    name: "{{ win_baseline_3940_state_Name }}"
-    data: "{{ win_baseline_3940_state_Data }}"
-    type: "{{ win_baseline_3940_state_Type }}"
-  when:
-    win_baseline_3940_state_Manage
-
-- name: "win_baseline_3941_state | Ensure 'Create symbolic links' is set to 'Administrators'"
-  win_user_right:
-    name: "{{ win_baseline_3941_state_Name }}"
-    users: "{{ win_baseline_3941_state_Users }}"
-    action: "{{ win_baseline_3941_state_Action }}"
-  when:
-    win_baseline_3941_state_Manage
-
-- name: "win_baseline_3942_state | Ensure 'System - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3942_state_Path }}"
-    name: "{{ win_baseline_3942_state_Name }}"
-    data: "{{ win_baseline_3942_state_Data }}"
-    type: "{{ win_baseline_3942_state_Type }}"
-  when:
-    win_baseline_3942_state_Manage
-
-- name: "win_baseline_3943_state | Ensure 'Security - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3943_state_Path }}"
-    name: "{{ win_baseline_3943_state_Name }}"
-    data: "{{ win_baseline_3943_state_Data }}"
-    type: "{{ win_baseline_3943_state_Type }}"
-  when:
-    win_baseline_3943_state_Manage
-
-- name: "win_baseline_3944_state | Ensure 'Application - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3944_state_Path }}"
-    name: "{{ win_baseline_3944_state_Name }}"
-    data: "{{ win_baseline_3944_state_Data }}"
-    type: "{{ win_baseline_3944_state_Type }}"
-  when:
-    win_baseline_3944_state_Manage
-
-- name: "win_baseline_4005_state | Ensure 'DNS Server' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_4005_state_Path }}"
-    name: "{{ win_baseline_4005_state_Name }}"
-    data: "{{ win_baseline_4005_state_Data }}"
-    type: "{{ win_baseline_4005_state_Type }}"
-  when:
-    win_baseline_4005_state_Manage
-
-- name: "win_baseline_4006_state | Ensure 'Windows event collector' is set to 'Automatic'"
-  win_regedit:
-    path: "{{ win_baseline_4006_state_Path }}"
-    name: "{{ win_baseline_4006_state_Name }}"
-    data: "{{ win_baseline_4006_state_Data }}"
-    type: "{{ win_baseline_4006_state_Type }}"
-  when:
-    win_baseline_4006_state_Manage
-
-- name: "win_baseline_4097_state | Ensure 'Windows registration wizard' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_4097_state_Path }}"
-    name: "{{ win_baseline_4097_state_Name }}"
-    data: "{{ win_baseline_4097_state_Data }}"
-    type: "{{ win_baseline_4097_state_Type }}"
-  when:
-    win_baseline_4097_state_Manage
-
-
-- name: "win_baseline_4110_state | Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_4110_state_Path }}"
-    name: "{{ win_baseline_4110_state_Name }}"
-    data: "{{ win_baseline_4110_state_Data }}"
-    type: "{{ win_baseline_4110_state_Type }}"
-  when:
-    win_baseline_4110_state_Manage
-
-- name: "win_baseline_4111_state | Ensure 'Require a password when a computer wakes (plugged in)' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_4111_state_Path }}"
-    name: "{{ win_baseline_4111_state_Name }}"
-    data: "{{ win_baseline_4111_state_Data }}"
-    type: "{{ win_baseline_4111_state_Type }}"
-  when:
-    win_baseline_4111_state_Manage
-
-- name: "win_baseline_4193_state_1 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - EnableRegistrars"
-  win_regedit:
-    path: "{{ win_baseline_4193_1_state_Path }}"
-    name: "{{ win_baseline_4193_1_state_Name }}"
-    data: "{{ win_baseline_4193_1_state_Data }}"
-    type: "{{ win_baseline_4193_1_state_Type }}"
-  when:
-    win_baseline_4193_1_state_Manage
-
-- name: "win_baseline_4193_state_2 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableUPnPRegistrar"
-  win_regedit:
-    path: "{{ win_baseline_4193_2_state_Path }}"
-    name: "{{ win_baseline_4193_2_state_Name }}"
-    data: "{{ win_baseline_4193_2_state_Data }}"
-    type: "{{ win_baseline_4193_2_state_Type }}"
-  when:
-    win_baseline_4193_2_state_Manage
-
-- name: "win_baseline_4193_state_3 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableInBand802DOT11Registrar"
-  win_regedit:
-    path: "{{ win_baseline_4193_3_state_Path }}"
-    name: "{{ win_baseline_4193_3_state_Name }}"
-    data: "{{ win_baseline_4193_3_state_Data }}"
-    type: "{{ win_baseline_4193_3_state_Type }}"
-  when:
-    win_baseline_4193_3_state_Manage
-
-- name: "win_baseline_4193_state_4 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableFlashConfigRegistrar"
-  win_regedit:
-    path: "{{ win_baseline_4193_4_state_Path }}"
-    name: "{{ win_baseline_4193_4_state_Name }}"
-    data: "{{ win_baseline_4193_4_state_Data }}"
-    type: "{{ win_baseline_4193_4_state_Type }}"
-  when:
-    win_baseline_4193_4_state_Manage
-
-- name: "win_baseline_4193_state_5 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableWPDRegistrar"
-  win_regedit:
-    path: "{{ win_baseline_4193_5_state_Path }}"
-    name: "{{ win_baseline_4193_5_state_Name }}"
-    data: "{{ win_baseline_4193_5_state_Data }}"
-    type: "{{ win_baseline_4193_5_state_Type }}"
-  when:
-    win_baseline_4193_5_state_Manage
-
-- name: "win_baseline_4194_state | Ensure 'Turn off background regresh of group policy' is set to 'Disabled'" 
-  win_regedit:
-    path: "{{ win_baseline_4194_state_Path }}"
-    name: "{{ win_baseline_4194_state_Name }}"
-    data: "{{ win_baseline_4194_state_Data }}"
-    type: "{{ win_baseline_4194_state_Type }}"
-  when:
-    win_baseline_4194_state_Manage
-
-- name: "win_baseline_4232_state | Ensure 'Modify an object label' is set to 'No One'"
-  win_user_right:
-    name: "{{ win_baseline_4232_state_Name }}"
-    users: "{{ win_baseline_4232_state_Users }}"
-    action: "{{ win_baseline_4232_state_Action }}"
-  when:
-    win_baseline_4232_state_Manage
+# - name: "win_baseline_3927_state | Ensure 'Install Updates and Shut Down' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3927_state_Path }}"
+#     name: "{{ win_baseline_3927_state_Name }}"
+#     data: "{{ win_baseline_3927_state_Data }}"
+#     type: "{{ win_baseline_3927_state_Type }}"
+#   when:
+#     win_baseline_3927_state_Manage
 
 
 
-- name: "win_baseline_4471_state | Ensure 'Audit Security System Extension' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4471_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4471_state_AuditType }}"
-  when:
-    win_baseline_4471_state_Manage
+# - name: "win_baseline_3939_state | Ensure 'Allow UIAccess applications to prompt for elevation without using the secure desktop' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3939_state_Path }}"
+#     name: "{{ win_baseline_3939_state_Name }}"
+#     data: "{{ win_baseline_3939_state_Data }}"
+#     type: "{{ win_baseline_3939_state_Type }}"
+#   when:
+#     win_baseline_3939_state_Manage
 
-- name: "win_baseline_4472_state | Ensure 'Audit System Integrity' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4472_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4472_state_AuditType }}"
-  when:
-    win_baseline_4472_state_Manage
+# - name: "win_baseline_3940_state | Ensure 'User Account Control - Virtualize file and registry write failures to per-user locations' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3940_state_Path }}"
+#     name: "{{ win_baseline_3940_state_Name }}"
+#     data: "{{ win_baseline_3940_state_Data }}"
+#     type: "{{ win_baseline_3940_state_Type }}"
+#   when:
+#     win_baseline_3940_state_Manage
 
-- name: "win_baseline_4473_state | Ensure 'Audit IPsec Driver' is set to 'Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4473_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4473_state_AuditType }}"
-  when:
-    win_baseline_4473_state_Manage
+# - name: "win_baseline_3941_state | Ensure 'Create symbolic links' is set to 'Administrators'"
+#   win_user_right:
+#     name: "{{ win_baseline_3941_state_Name }}"
+#     users: "{{ win_baseline_3941_state_Users }}"
+#     action: "{{ win_baseline_3941_state_Action }}"
+#   when:
+#     win_baseline_3941_state_Manage
 
-- name: "win_baseline_4474 | Ensure 'Audit Other System Events' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4474_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4474_state_AuditType }}"
-  when:
-    win_baseline_4474_state_Manage
+# - name: "win_baseline_3942_state | Ensure 'System - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3942_state_Path }}"
+#     name: "{{ win_baseline_3942_state_Name }}"
+#     data: "{{ win_baseline_3942_state_Data }}"
+#     type: "{{ win_baseline_3942_state_Type }}"
+#   when:
+#     win_baseline_3942_state_Manage
 
-- name: "win_baseline_4475_state | Ensure 'Audit Logon' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4475_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4475_state_AuditType }}"
-  when:
-    win_baseline_4475_state_Manage
+# - name: "win_baseline_3943_state | Ensure 'Security - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3943_state_Path }}"
+#     name: "{{ win_baseline_3943_state_Name }}"
+#     data: "{{ win_baseline_3943_state_Data }}"
+#     type: "{{ win_baseline_3943_state_Type }}"
+#   when:
+#     win_baseline_3943_state_Manage
 
-- name: "win_baseline_4476_state | Ensure 'Audit Logoff' is set to 'Success'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4476_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4476_state_AuditType }}"
-  when:
-    win_baseline_4476_state_Manage
+# - name: "win_baseline_3944_state | Ensure 'Application - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3944_state_Path }}"
+#     name: "{{ win_baseline_3944_state_Name }}"
+#     data: "{{ win_baseline_3944_state_Data }}"
+#     type: "{{ win_baseline_3944_state_Type }}"
+#   when:
+#     win_baseline_3944_state_Manage
 
-- name: "win_baseline_4477_state | Ensure 'Audit Account Lockout' is set to include 'Success'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4477_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4477_state_AuditType }}"
-  when:
-    win_baseline_4477_state_Manage
+# - name: "win_baseline_4005_state | Ensure 'DNS Server' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_4005_state_Path }}"
+#     name: "{{ win_baseline_4005_state_Name }}"
+#     data: "{{ win_baseline_4005_state_Data }}"
+#     type: "{{ win_baseline_4005_state_Type }}"
+#   when:
+#     win_baseline_4005_state_Manage
 
-- name: "win_baseline_4478_state | Ensure 'Audit Ipsec Main Mode' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4478_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4478_state_AuditType }}"
-  when:
-    win_baseline_4478_state_Manage
+# - name: "win_baseline_4006_state | Ensure 'Windows event collector' is set to 'Automatic'"
+#   win_regedit:
+#     path: "{{ win_baseline_4006_state_Path }}"
+#     name: "{{ win_baseline_4006_state_Name }}"
+#     data: "{{ win_baseline_4006_state_Data }}"
+#     type: "{{ win_baseline_4006_state_Type }}"
+#   when:
+#     win_baseline_4006_state_Manage
 
-- name: "win_baseline_4479_state | Ensure 'Audit Ipsec Quick Mode' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4479_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4479_state_AuditType }}"
-  when:
-    win_baseline_4479_state_Manage
-
-- name: "win_baseline_4480_state | Ensure 'Audit IPsec Extended Mode' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4480_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4480_state_AuditType }}"
-  when:
-    win_baseline_4480_state_Manage
-
-- name: "win_baseline_4481_state | Ensure 'Audit Special Logon' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4481_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4481_state_AuditType }}"
-  when:
-    win_baseline_4481_state_Manage
-
-- name: "win_baseline_4482_state | Ensure 'Audit Other Logon/Logoff Events' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4482_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4482_state_AuditType }}"
-  when:
-    win_baseline_4482_state_Manage
-
-- name: "win_baseline_4483_state | Ensure 'Audit File System' is set to 'Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4483_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4483_state_AuditType }}"
-  when:
-    win_baseline_4483_state_Manage
-
-- name: "win_baseline_4484_state | Ensure 'Audit Registry' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4484_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4484_state_AuditType }}"
-  when:
-    win_baseline_4484_state_Manage
-
-- name: "win_baseline_4485_state | Ensure 'Audit Kernel Object' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4485_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4485_state_AuditType }}"
-  when:
-    win_baseline_4485_state_Manage
-
-- name: "win_baseline_4486_state | Ensure 'Audit SAM' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4486_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4486_state_AuditType }}"
-  when:
-    win_baseline_4486_state_Manage
-
-- name: "win_baseline_4487_state | Ensure 'Audit Certification Services' is set to 'Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4487_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4487_state_AuditType }}"
-  when:
-    win_baseline_4487_state_Manage
-
-- name: "win_baseline_4488_state | Ensure 'Audit Application Generated' is set to 'Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4488_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4488_state_AuditType }}"
-  when:
-    win_baseline_4488_state_Manage
-
-- name: "win_baseline_4489_state | Ensure 'Audit Handle Manipulation' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4489_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4489_state_AuditType }}"
-  when:
-    win_baseline_4489_state_Manage
-
-- name: "win_baseline_4490_state | Ensure 'Audit File Share' is set to 'Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4490_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4490_state_AuditType }}"
-  when:
-    win_baseline_4490_state_Manage
+# - name: "win_baseline_4097_state | Ensure 'Windows registration wizard' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_4097_state_Path }}"
+#     name: "{{ win_baseline_4097_state_Name }}"
+#     data: "{{ win_baseline_4097_state_Data }}"
+#     type: "{{ win_baseline_4097_state_Type }}"
+#   when:
+#     win_baseline_4097_state_Manage
 
 
+# - name: "win_baseline_4110_state | Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_4110_state_Path }}"
+#     name: "{{ win_baseline_4110_state_Name }}"
+#     data: "{{ win_baseline_4110_state_Data }}"
+#     type: "{{ win_baseline_4110_state_Type }}"
+#   when:
+#     win_baseline_4110_state_Manage
+
+# - name: "win_baseline_4111_state | Ensure 'Require a password when a computer wakes (plugged in)' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_4111_state_Path }}"
+#     name: "{{ win_baseline_4111_state_Name }}"
+#     data: "{{ win_baseline_4111_state_Data }}"
+#     type: "{{ win_baseline_4111_state_Type }}"
+#   when:
+#     win_baseline_4111_state_Manage
+
+# - name: "win_baseline_4193_state_1 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - EnableRegistrars"
+#   win_regedit:
+#     path: "{{ win_baseline_4193_1_state_Path }}"
+#     name: "{{ win_baseline_4193_1_state_Name }}"
+#     data: "{{ win_baseline_4193_1_state_Data }}"
+#     type: "{{ win_baseline_4193_1_state_Type }}"
+#   when:
+#     win_baseline_4193_1_state_Manage
+
+# - name: "win_baseline_4193_state_2 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableUPnPRegistrar"
+#   win_regedit:
+#     path: "{{ win_baseline_4193_2_state_Path }}"
+#     name: "{{ win_baseline_4193_2_state_Name }}"
+#     data: "{{ win_baseline_4193_2_state_Data }}"
+#     type: "{{ win_baseline_4193_2_state_Type }}"
+#   when:
+#     win_baseline_4193_2_state_Manage
+
+# - name: "win_baseline_4193_state_3 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableInBand802DOT11Registrar"
+#   win_regedit:
+#     path: "{{ win_baseline_4193_3_state_Path }}"
+#     name: "{{ win_baseline_4193_3_state_Name }}"
+#     data: "{{ win_baseline_4193_3_state_Data }}"
+#     type: "{{ win_baseline_4193_3_state_Type }}"
+#   when:
+#     win_baseline_4193_3_state_Manage
+
+# - name: "win_baseline_4193_state_4 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableFlashConfigRegistrar"
+#   win_regedit:
+#     path: "{{ win_baseline_4193_4_state_Path }}"
+#     name: "{{ win_baseline_4193_4_state_Name }}"
+#     data: "{{ win_baseline_4193_4_state_Data }}"
+#     type: "{{ win_baseline_4193_4_state_Type }}"
+#   when:
+#     win_baseline_4193_4_state_Manage
+
+# - name: "win_baseline_4193_state_5 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableWPDRegistrar"
+#   win_regedit:
+#     path: "{{ win_baseline_4193_5_state_Path }}"
+#     name: "{{ win_baseline_4193_5_state_Name }}"
+#     data: "{{ win_baseline_4193_5_state_Data }}"
+#     type: "{{ win_baseline_4193_5_state_Type }}"
+#   when:
+#     win_baseline_4193_5_state_Manage
+
+# - name: "win_baseline_4194_state | Ensure 'Turn off background regresh of group policy' is set to 'Disabled'" 
+#   win_regedit:
+#     path: "{{ win_baseline_4194_state_Path }}"
+#     name: "{{ win_baseline_4194_state_Name }}"
+#     data: "{{ win_baseline_4194_state_Data }}"
+#     type: "{{ win_baseline_4194_state_Type }}"
+#   when:
+#     win_baseline_4194_state_Manage
+
+# - name: "win_baseline_4232_state | Ensure 'Modify an object label' is set to 'No One'"
+#   win_user_right:
+#     name: "{{ win_baseline_4232_state_Name }}"
+#     users: "{{ win_baseline_4232_state_Users }}"
+#     action: "{{ win_baseline_4232_state_Action }}"
+#   when:
+#     win_baseline_4232_state_Manage
+
+
+
+# - name: "win_baseline_4471_state | Ensure 'Audit Security System Extension' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4471_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4471_state_AuditType }}"
+#   when:
+#     win_baseline_4471_state_Manage
+
+# - name: "win_baseline_4472_state | Ensure 'Audit System Integrity' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4472_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4472_state_AuditType }}"
+#   when:
+#     win_baseline_4472_state_Manage
+
+# - name: "win_baseline_4473_state | Ensure 'Audit IPsec Driver' is set to 'Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4473_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4473_state_AuditType }}"
+#   when:
+#     win_baseline_4473_state_Manage
+
+# - name: "win_baseline_4474 | Ensure 'Audit Other System Events' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4474_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4474_state_AuditType }}"
+#   when:
+#     win_baseline_4474_state_Manage
+
+# - name: "win_baseline_4475_state | Ensure 'Audit Logon' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4475_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4475_state_AuditType }}"
+#   when:
+#     win_baseline_4475_state_Manage
+
+# - name: "win_baseline_4476_state | Ensure 'Audit Logoff' is set to 'Success'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4476_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4476_state_AuditType }}"
+#   when:
+#     win_baseline_4476_state_Manage
+
+# - name: "win_baseline_4477_state | Ensure 'Audit Account Lockout' is set to include 'Success'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4477_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4477_state_AuditType }}"
+#   when:
+#     win_baseline_4477_state_Manage
+
+# - name: "win_baseline_4478_state | Ensure 'Audit Ipsec Main Mode' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4478_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4478_state_AuditType }}"
+#   when:
+#     win_baseline_4478_state_Manage
+
+# - name: "win_baseline_4479_state | Ensure 'Audit Ipsec Quick Mode' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4479_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4479_state_AuditType }}"
+#   when:
+#     win_baseline_4479_state_Manage
+
+# - name: "win_baseline_4480_state | Ensure 'Audit IPsec Extended Mode' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4480_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4480_state_AuditType }}"
+#   when:
+#     win_baseline_4480_state_Manage
+
+# - name: "win_baseline_4481_state | Ensure 'Audit Special Logon' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4481_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4481_state_AuditType }}"
+#   when:
+#     win_baseline_4481_state_Manage
+
+# - name: "win_baseline_4482_state | Ensure 'Audit Other Logon/Logoff Events' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4482_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4482_state_AuditType }}"
+#   when:
+#     win_baseline_4482_state_Manage
+
+# - name: "win_baseline_4483_state | Ensure 'Audit File System' is set to 'Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4483_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4483_state_AuditType }}"
+#   when:
+#     win_baseline_4483_state_Manage
+
+# - name: "win_baseline_4484_state | Ensure 'Audit Registry' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4484_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4484_state_AuditType }}"
+#   when:
+#     win_baseline_4484_state_Manage
+
+# - name: "win_baseline_4485_state | Ensure 'Audit Kernel Object' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4485_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4485_state_AuditType }}"
+#   when:
+#     win_baseline_4485_state_Manage
+
+# - name: "win_baseline_4486_state | Ensure 'Audit SAM' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4486_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4486_state_AuditType }}"
+#   when:
+#     win_baseline_4486_state_Manage
+
+# - name: "win_baseline_4487_state | Ensure 'Audit Certification Services' is set to 'Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4487_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4487_state_AuditType }}"
+#   when:
+#     win_baseline_4487_state_Manage
+
+# - name: "win_baseline_4488_state | Ensure 'Audit Application Generated' is set to 'Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4488_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4488_state_AuditType }}"
+#   when:
+#     win_baseline_4488_state_Manage
+
+# - name: "win_baseline_4489_state | Ensure 'Audit Handle Manipulation' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4489_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4489_state_AuditType }}"
+#   when:
+#     win_baseline_4489_state_Manage
+
+# - name: "win_baseline_4490_state | Ensure 'Audit File Share' is set to 'Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4490_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4490_state_AuditType }}"
+#   when:
+#     win_baseline_4490_state_Manage
 
 - name: "win_baseline_4492_state | Ensure 'Audit Filtering Platform Connection' is set to 'Failure'"
   win_audit_policy_system:
