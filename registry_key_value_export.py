@@ -32,8 +32,7 @@ registry_data = []
 # find all lines that contain id in control_ids
 for line in lines:
     for control_id in control_ids:
-        path = 'win_baseline_' + str(control_id) + '_state_Path'
-        if path in line:
+        if 'win_baseline_' + str(control_id) + '_state_Path' in line:
             registry_paths.append(line.split(': ')[-1].strip().removesuffix('\n'))
         if 'win_baseline_' + str(control_id) + '_state_Name' in line:
             registry_names.append(line.split(': ')[-1].strip().removesuffix('\n'))
@@ -45,6 +44,12 @@ print(len(registry_paths))
 print(len(registry_names))
 print(len(registry_data))
 
-# for a, b, c in zip(registry_paths, registry_names, registry_data):
-#     print(a, b, c)
-print(test_ids)
+file.close()
+for a, b, c in zip(registry_paths, registry_names, registry_data):
+    print(a, b, c)
+
+output_file = open('registry_key_value_export.csv', 'w')
+for a, b, c in zip(registry_paths, registry_names, registry_data):
+    output_file.write(a + ',' + b + ',' + c + '\n')
+output_file.close
+# print(test_ids)

@@ -75,15 +75,6 @@
 #   when:
 #     win_baseline_1048_state_Manage
 
-# - name: "win_baseline_1052_state | Ensure 'Device - Allowed to format and eject removable media' is set to 'Administrators'"
-#   win_regedit:
-#     path: "{{ win_baseline_1052_state_Path }}"
-#     name: "{{ win_baseline_1052_state_Name }}"
-#     data: "{{ win_baseline_1052_state_Data }}"
-#     type: "{{ win_baseline_1052_state_Type }}"
-#   when:
-    # win_baseline_1052_state_Manage
-
 # - name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)'"
 #   win_security_policy:
 #     section: "{{ win_baseline_1071_state_Section }}"
@@ -2697,14 +2688,14 @@
 #   when:
 #     win_baseline_10374_state_Manage
 
-# - name: "win_baseline_10374_state | Ensure 'Let Windows apps access the location' is set to 'Force Deny'"
+# - name: "win_baseline_10375_state | Ensure 'Let Windows apps access the location' is set to 'Force Deny'"
 #   win_regedit:
-#     path: "{{ win_baseline_10374_state_Path }}"
-#     name: "{{ win_baseline_10374_state_Name }}"
-#     data: "{{ win_baseline_10374_state_Data }}"
-#     type: "{{ win_baseline_10374_state_Type }}"
+#     path: "{{ win_baseline_10375_state_Path }}"
+#     name: "{{ win_baseline_10375_state_Name }}"
+#     data: "{{ win_baseline_10375_state_Data }}"
+#     type: "{{ win_baseline_10375_state_Type }}"
 #   when:
-#     win_baseline_10374_state_Manage
+#     win_baseline_10375_state_Manage
 
 # - name: "win_baseline_10376_state | Ensure 'Let Windows apps access microphone' is set to 'Force Deny'"
 #   win_regedit:
@@ -2852,12 +2843,12 @@
 
 # - name: "win_baseline_10922_state | Ensure 'TLS 1.2 protocol on the client 'DisabledByDefault' is set to '0'"
 #   win_regedit:
-#     path: "{{ win_baseline_10921_state_Path }}"
-#     name: "{{ win_baseline_10921_state_Name }}"
-#     data: "{{ win_baseline_10921_state_Data }}"
-#     type: "{{ win_baseline_10921_state_Type }}"
+#     path: "{{ win_baseline_10922_state_Path }}"
+#     name: "{{ win_baseline_10922_state_Name }}"
+#     data: "{{ win_baseline_10922_state_Data }}"
+#     type: "{{ win_baseline_10922_state_Type }}"
 #   when:
-#     win_baseline_10921_state_Manage
+#     win_baseline_10922_state_Manage
 
 # - name: "win_baseline_10969_state | Ensure 'Turn off Windows Defender' is set to 'Disabled'"
 #   win_regedit:
