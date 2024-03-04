@@ -2735,194 +2735,194 @@
 #     type: "{{ win_baseline_11209_state_Type }}"
 #   when: win_baseline_11209_state_Manage
 
-- name: "win_basleine_11212_state | Ensure 'Select when feature updates are received - DeferFeatureUpdatesPeriodInDays' is set to '180'"
-  win_regedit:
-    path: "{{ win_baseline_11212_state_Path }}"
-    name: "{{ win_baseline_11212_state_Name }}"
-    data: "{{ win_baseline_11212_state_Data }}"
-    type: "{{ win_baseline_11212_state_Type }}"
-  when: win_baseline_11212_state_Manage
-
-- name: "win_basleine_11213_state | Ensure 'Select when feature updates are received - BranchReadinnessLevel' is set to '32'"
-  win_regedit:
-    path: "{{ win_baseline_11213_state_Path }}"
-    name: "{{ win_baseline_11213_state_Name }}"
-    data: "{{ win_baseline_11213_state_Data }}"
-    type: "{{ win_baseline_11213_state_Type }}"
-  when: win_baseline_11213_state_Manage
-
-- name: "win_baseline_11224_state | Ensure 'SMB 1.x miniredirector' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_11224_state_Path }}"
-    name: "{{ win_baseline_11224_state_Name }}"
-    data: "{{ win_baseline_11224_state_Data }}"
-    type: "{{ win_baseline_11224_state_Type }}"
-  when: win_baseline_11224_state_Manage
-
-- name: "win_baseline_11236_state | Ensure 'Do not sync' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_11236_state_Path }}"
-    name: "{{ win_baseline_11236_state_Name }}"
-    data: "{{ win_baseline_11236_state_Data }}"
-    type: "{{ win_baseline_11236_state_Type }}"
-  when: win_baseline_11236_state_Manage
-
-- name: "win_baseline_11238_state | Ensure 'Let windows app make phone calls' is set to '2'"
-  win_regedit:
-    path: "{{ win_baseline_11238_state_Path }}"
-    name: "{{ win_baseline_11238_state_Name }}"
-    data: "{{ win_baseline_11238_state_Data }}"
-    type: "{{ win_baseline_11238_state_Type }}"
-  when: win_baseline_11238_state_Manage
-
-- name: "win_baseline_11239_state | Ensure 'Let Windows apps access notifications' is set to '2'"
-  win_regedit:
-    path: "{{ win_baseline_11239_state_Path }}"
-    name: "{{ win_baseline_11239_state_Name }}"
-    data: "{{ win_baseline_11239_state_Data }}"
-    type: "{{ win_baseline_11239_state_Type }}"
-  when: win_baseline_11239_state_Manage
-
-- name: "win_baseline_11243_state | Ensure 'Prevent deleting download history' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_11243_state_Path }}"
-    name: "{{ win_baseline_11243_state_Name }}"
-    data: "{{ win_baseline_11243_state_Data }}"
-    type: "{{ win_baseline_11243_state_Type }}"
-  when: win_baseline_11243_state_Manage
-
-- name: "win_baseline_11273_state | Ensure 'Allow Extensions' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_11273_state_Path }}"
-    name: "{{ win_baseline_11273_state_Name }}"
-    data: "{{ win_baseline_11273_state_Data }}"
-    type: "{{ win_baseline_11273_state_Type }}"
-  when: win_baseline_11273_state_Manage
-
-- name: "win_baseline_11281_state | Ensure ''SMB v1' protocol for LanManServer services on Windows' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_11281_state_Path }}"
-    name: "{{ win_baseline_11281_state_Name }}"
-    data: "{{ win_baseline_11281_state_Data }}"
-    type: "{{ win_baseline_11281_state_Type }}"
-  when: win_baseline_11281_state_Manage
-
-- name: "win_baseline_11282_state | Ensure ''SMB v2' protocol for LanManServer services on Windows' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_11282_state_Path }}"
-    name: "{{ win_baseline_11282_state_Name }}"
-    data: "{{ win_baseline_11282_state_Data }}"
-    type: "{{ win_baseline_11282_state_Type }}"
-  when: win_baseline_11282_state_Manage
-
-- name: "win_baseline_11284_state | Ensure 'SMB 2.0 miniredirector' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_11284_state_Path }}"
-    name: "{{ win_baseline_11284_state_Name }}"
-    data: "{{ win_baseline_11284_state_Data }}"
-    type: "{{ win_baseline_11284_state_Type }}"
-  when: win_baseline_11284_state_Manage
-
-- name: "win_baseline_11377_state | Enusre 'Configure keep-alive connection interval' is greater than or equal to '1'"
-  win_regedit:
-    path: "{{ win_baseline_11377_state_Path }}"
-    name: "{{ win_baseline_11377_state_Name }}"
-    data: "{{ win_baseline_11377_state_Data }}"
-    type: "{{ win_baseline_11377_state_Type }}"
-  when: win_baseline_11377_state_Manage
-
-- name: "win_baseline_11378_state | Ensure 'Limit number of connections' group policy setting is greater than or equal to '1'"
-  win_regedit:
-    path: "{{ win_baseline_11378_state_Path }}"
-    name: "{{ win_baseline_11378_state_Name }}"
-    data: "{{ win_baseline_11378_state_Data }}"
-    type: "{{ win_baseline_11378_state_Type }}"
-  when: win_baseline_11378_state_Manage
-
-- name: "win_baseline_11385_state | Ensure 'Allow remote start of unlisted programs' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_11385_state_Path }}"
-    name: "{{ win_baseline_11385_state_Name }}"
-    data: "{{ win_baseline_11385_state_Data }}"
-    type: "{{ win_baseline_11385_state_Type }}"
-  when: win_baseline_11385_state_Manage
-
-- name: "win_baseline_11507_state | Ensure 'Obtain an impersonation token for another user in the same session' is set to 'Administrators, Local Service, Network Service"
-  win_user_right:
-    name: "{{ win_baseline_11507_state_Name }}"
-    users: "{{ win_baseline_11507_state_Users }}"
-    action: "{{ win_baseline_11507_state_Action }}"
-  when: win_baseline_11507_state_Manage
-
-- name: "win_baseline_12015_state | Ensure 'Block all consumer Microsoft account user authentication' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_12015_state_Path }}"
-    name: "{{ win_baseline_12015_state_Name }}"
-    data: "{{ win_baseline_12015_state_Data }}"
-    type: "{{ win_baseline_12015_state_Type }}"
-  when: win_baseline_12015_state_Manage
-
-- name: "win_baseline_12026_state | Ensure 'Configure Authenticated Proxy usage for the Connected User Experience and Telemetry service' is set to 'Enabled - Disable Authenticated Proxy usage'"
-  win_regedit:
-    path: "{{ win_baseline_12026_state_Path }}"
-    name: "{{ win_baseline_12026_state_Name }}"
-    data: "{{ win_baseline_12026_state_Data }}"
-    type: "{{ win_baseline_12026_state_Type }}"
-  when: win_baseline_12026_state_Manage
-
-- name: "win_baseline_13344_state | Ensure 'Prevent users from modifying settings' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_13344_state_Path }}"
-    name: "{{ win_baseline_13344_state_Name }}"
-    data: "{{ win_baseline_13344_state_Data }}"
-    type: "{{ win_baseline_13344_state_Type }}"
-  when: win_baseline_13344_state_Manage
-
-- name: "win_baseline_13968_state | Ensure Manage preview builds: Set the behavior of receiving preview builds' is set to 'Disable preview builds'"
-  win_regedit:
-    path: "{{ win_baseline_13968_state_Path }}"
-    name: "{{ win_baseline_13968_state_Name }}"
-    data: "{{ win_baseline_13968_state_Data }}"
-    type: "{{ win_baseline_13968_state_Type }}"
-  when: win_baseline_13968_state_Manage
-
-- name: "win_baseline_16104_state | Ensure 'Turn On Virtualization Based Security (Secure Launch Configuration)' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_16104_state_Path }}"
-    name: "{{ win_baseline_16104_state_Name }}"
-    data: "{{ win_baseline_16104_state_Data }}"
-    type: "{{ win_baseline_16104_state_Type }}"
-  when: win_baseline_16104_state_Manage
-
-# - name: "win_baseline_17381_state | Ensure 'Audit token right adjusted' is set to 'Success and Failure'"
-#   win_audit_policy_system:
-#     subcategory: "{{ win_baseline_4471_state_Subcategory }}"
-#     audit_type: "{{ win_baseline_4471_state_AuditType }}"
-#   when: win_baseline_4471_state_Manage
-
-# - name: "win_baseline_17707_state | Ensure 'Turn off notifications network usage' is set to 'Enabled'"
+# - name: "win_basleine_11212_state | Ensure 'Select when feature updates are received - DeferFeatureUpdatesPeriodInDays' is set to '180'"
 #   win_regedit:
-#     path: "{{ win_baseline_17707_state_Path }}"
-#     name: "{{ win_baseline_17707_state_Name }}"
-#     data: "{{ win_baseline_17707_state_Data }}"
-#     type: "{{ win_baseline_17707_state_Type }}"
-#   when: win_baseline_17707_state_Manage
+#     path: "{{ win_baseline_11212_state_Path }}"
+#     name: "{{ win_baseline_11212_state_Name }}"
+#     data: "{{ win_baseline_11212_state_Data }}"
+#     type: "{{ win_baseline_11212_state_Type }}"
+#   when: win_baseline_11212_state_Manage
 
-# - name: "win_baseline_17746_state | Ensure 'Turn on Module Logging' is set to 'empty'"
+# - name: "win_basleine_11213_state | Ensure 'Select when feature updates are received - BranchReadinnessLevel' is set to '32'"
 #   win_regedit:
-#     path: "{{ win_baseline_17746_state_Path }}"
-#     name: "{{ win_baseline_17746_state_Name }}"
-#     data: "{{ win_baseline_17746_state_Data }}"
-#     type: "{{ win_baseline_17746_state_Type }}"
-#   when: win_baseline_17746_state_Manage
+#     path: "{{ win_baseline_11213_state_Path }}"
+#     name: "{{ win_baseline_11213_state_Name }}"
+#     data: "{{ win_baseline_11213_state_Data }}"
+#     type: "{{ win_baseline_11213_state_Type }}"
+#   when: win_baseline_11213_state_Manage
 
-# - name: "win_baseline_18935_state | Ensure ''TcpReceivePacketSize' is greater than or equal to '0'"
+# - name: "win_baseline_11224_state | Ensure 'SMB 1.x miniredirector' is set to 'Disabled'"
 #   win_regedit:
-#     path: "{{ win_baseline_18935_state_Path }}"
-#     name: "{{ win_baseline_18935_state_Name }}"
-#     data: "{{ win_baseline_18935_state_Data }}"
-#     type: "{{ win_baseline_18935_state_Type }}"
-#   when: win_baseline_18935_state_Manage
+#     path: "{{ win_baseline_11224_state_Path }}"
+#     name: "{{ win_baseline_11224_state_Name }}"
+#     data: "{{ win_baseline_11224_state_Data }}"
+#     type: "{{ win_baseline_11224_state_Type }}"
+#   when: win_baseline_11224_state_Manage
+
+# - name: "win_baseline_11236_state | Ensure 'Do not sync' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_11236_state_Path }}"
+#     name: "{{ win_baseline_11236_state_Name }}"
+#     data: "{{ win_baseline_11236_state_Data }}"
+#     type: "{{ win_baseline_11236_state_Type }}"
+#   when: win_baseline_11236_state_Manage
+
+# - name: "win_baseline_11238_state | Ensure 'Let windows app make phone calls' is set to '2'"
+#   win_regedit:
+#     path: "{{ win_baseline_11238_state_Path }}"
+#     name: "{{ win_baseline_11238_state_Name }}"
+#     data: "{{ win_baseline_11238_state_Data }}"
+#     type: "{{ win_baseline_11238_state_Type }}"
+#   when: win_baseline_11238_state_Manage
+
+# - name: "win_baseline_11239_state | Ensure 'Let Windows apps access notifications' is set to '2'"
+#   win_regedit:
+#     path: "{{ win_baseline_11239_state_Path }}"
+#     name: "{{ win_baseline_11239_state_Name }}"
+#     data: "{{ win_baseline_11239_state_Data }}"
+#     type: "{{ win_baseline_11239_state_Type }}"
+#   when: win_baseline_11239_state_Manage
+
+# - name: "win_baseline_11243_state | Ensure 'Prevent deleting download history' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_11243_state_Path }}"
+#     name: "{{ win_baseline_11243_state_Name }}"
+#     data: "{{ win_baseline_11243_state_Data }}"
+#     type: "{{ win_baseline_11243_state_Type }}"
+#   when: win_baseline_11243_state_Manage
+
+# - name: "win_baseline_11273_state | Ensure 'Allow Extensions' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_11273_state_Path }}"
+#     name: "{{ win_baseline_11273_state_Name }}"
+#     data: "{{ win_baseline_11273_state_Data }}"
+#     type: "{{ win_baseline_11273_state_Type }}"
+#   when: win_baseline_11273_state_Manage
+
+# - name: "win_baseline_11281_state | Ensure ''SMB v1' protocol for LanManServer services on Windows' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_11281_state_Path }}"
+#     name: "{{ win_baseline_11281_state_Name }}"
+#     data: "{{ win_baseline_11281_state_Data }}"
+#     type: "{{ win_baseline_11281_state_Type }}"
+#   when: win_baseline_11281_state_Manage
+
+# - name: "win_baseline_11282_state | Ensure ''SMB v2' protocol for LanManServer services on Windows' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_11282_state_Path }}"
+#     name: "{{ win_baseline_11282_state_Name }}"
+#     data: "{{ win_baseline_11282_state_Data }}"
+#     type: "{{ win_baseline_11282_state_Type }}"
+#   when: win_baseline_11282_state_Manage
+
+# - name: "win_baseline_11284_state | Ensure 'SMB 2.0 miniredirector' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_11284_state_Path }}"
+#     name: "{{ win_baseline_11284_state_Name }}"
+#     data: "{{ win_baseline_11284_state_Data }}"
+#     type: "{{ win_baseline_11284_state_Type }}"
+#   when: win_baseline_11284_state_Manage
+
+# - name: "win_baseline_11377_state | Enusre 'Configure keep-alive connection interval' is greater than or equal to '1'"
+#   win_regedit:
+#     path: "{{ win_baseline_11377_state_Path }}"
+#     name: "{{ win_baseline_11377_state_Name }}"
+#     data: "{{ win_baseline_11377_state_Data }}"
+#     type: "{{ win_baseline_11377_state_Type }}"
+#   when: win_baseline_11377_state_Manage
+
+# - name: "win_baseline_11378_state | Ensure 'Limit number of connections' group policy setting is greater than or equal to '1'"
+#   win_regedit:
+#     path: "{{ win_baseline_11378_state_Path }}"
+#     name: "{{ win_baseline_11378_state_Name }}"
+#     data: "{{ win_baseline_11378_state_Data }}"
+#     type: "{{ win_baseline_11378_state_Type }}"
+#   when: win_baseline_11378_state_Manage
+
+# - name: "win_baseline_11385_state | Ensure 'Allow remote start of unlisted programs' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_11385_state_Path }}"
+#     name: "{{ win_baseline_11385_state_Name }}"
+#     data: "{{ win_baseline_11385_state_Data }}"
+#     type: "{{ win_baseline_11385_state_Type }}"
+#   when: win_baseline_11385_state_Manage
+
+# - name: "win_baseline_11507_state | Ensure 'Obtain an impersonation token for another user in the same session' is set to 'Administrators, Local Service, Network Service"
+#   win_user_right:
+#     name: "{{ win_baseline_11507_state_Name }}"
+#     users: "{{ win_baseline_11507_state_Users }}"
+#     action: "{{ win_baseline_11507_state_Action }}"
+#   when: win_baseline_11507_state_Manage
+
+# - name: "win_baseline_12015_state | Ensure 'Block all consumer Microsoft account user authentication' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_12015_state_Path }}"
+#     name: "{{ win_baseline_12015_state_Name }}"
+#     data: "{{ win_baseline_12015_state_Data }}"
+#     type: "{{ win_baseline_12015_state_Type }}"
+#   when: win_baseline_12015_state_Manage
+
+# - name: "win_baseline_12026_state | Ensure 'Configure Authenticated Proxy usage for the Connected User Experience and Telemetry service' is set to 'Enabled - Disable Authenticated Proxy usage'"
+#   win_regedit:
+#     path: "{{ win_baseline_12026_state_Path }}"
+#     name: "{{ win_baseline_12026_state_Name }}"
+#     data: "{{ win_baseline_12026_state_Data }}"
+#     type: "{{ win_baseline_12026_state_Type }}"
+#   when: win_baseline_12026_state_Manage
+
+# - name: "win_baseline_13344_state | Ensure 'Prevent users from modifying settings' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_13344_state_Path }}"
+#     name: "{{ win_baseline_13344_state_Name }}"
+#     data: "{{ win_baseline_13344_state_Data }}"
+#     type: "{{ win_baseline_13344_state_Type }}"
+#   when: win_baseline_13344_state_Manage
+
+# - name: "win_baseline_13968_state | Ensure Manage preview builds: Set the behavior of receiving preview builds' is set to 'Disable preview builds'"
+#   win_regedit:
+#     path: "{{ win_baseline_13968_state_Path }}"
+#     name: "{{ win_baseline_13968_state_Name }}"
+#     data: "{{ win_baseline_13968_state_Data }}"
+#     type: "{{ win_baseline_13968_state_Type }}"
+#   when: win_baseline_13968_state_Manage
+
+# - name: "win_baseline_16104_state | Ensure 'Turn On Virtualization Based Security (Secure Launch Configuration)' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_16104_state_Path }}"
+#     name: "{{ win_baseline_16104_state_Name }}"
+#     data: "{{ win_baseline_16104_state_Data }}"
+#     type: "{{ win_baseline_16104_state_Type }}"
+#   when: win_baseline_16104_state_Manage
+
+- name: "win_baseline_17381_state | Ensure 'Audit token right adjusted' is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4471_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4471_state_AuditType }}"
+  when: win_baseline_4471_state_Manage
+
+- name: "win_baseline_17707_state | Ensure 'Turn off notifications network usage' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_17707_state_Path }}"
+    name: "{{ win_baseline_17707_state_Name }}"
+    data: "{{ win_baseline_17707_state_Data }}"
+    type: "{{ win_baseline_17707_state_Type }}"
+  when: win_baseline_17707_state_Manage
+
+- name: "win_baseline_17746_state | Ensure 'Turn on Module Logging' is set to 'empty'"
+  win_regedit:
+    path: "{{ win_baseline_17746_state_Path }}"
+    name: "{{ win_baseline_17746_state_Name }}"
+    data: "{{ win_baseline_17746_state_Data }}"
+    type: "{{ win_baseline_17746_state_Type }}"
+  when: win_baseline_17746_state_Manage
+
+- name: "win_baseline_18935_state | Ensure ''TcpReceivePacketSize' is greater than or equal to '0'"
+  win_regedit:
+    path: "{{ win_baseline_18935_state_Path }}"
+    name: "{{ win_baseline_18935_state_Name }}"
+    data: "{{ win_baseline_18935_state_Data }}"
+    type: "{{ win_baseline_18935_state_Type }}"
+  when: win_baseline_18935_state_Manage
 
 # - name: "win_baseline_19336_state | Ensure 'Turn on Module Logging (EnableModuleLogging)' is equal to '1'"
 #   win_regedit:
