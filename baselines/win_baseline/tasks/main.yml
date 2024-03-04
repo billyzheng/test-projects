@@ -596,99 +596,99 @@
   when:
     win_baseline_1472_state_Manage
 
-# - name: "win_baseline_1476_state | Ensure 'Romote Access Connection Manager (RasMan)' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1476_state_Path }}"
-#     name: "{{ win_baseline_1476_state_Name }}"
-#     data: "{{ win_baseline_1476_state_Data }}"
-#     type: "{{ win_baseline_1476_state_Type }}"
-#   when:
-#     win_baseline_1476_state_Manage
+- name: "win_baseline_1476_state | Ensure 'Romote Access Connection Manager (RasMan)' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1476_state_Path }}"
+    name: "{{ win_baseline_1476_state_Name }}"
+    data: "{{ win_baseline_1476_state_Data }}"
+    type: "{{ win_baseline_1476_state_Type }}"
+  when:
+    win_baseline_1476_state_Manage
 
-# - name: "win_baseline_1509_state | Ensure 'Netlogon' is set to 'Automatic'"
-#   win_regedit:
-#     path: "{{ win_baseline_1509_state_Path }}"
-#     name: "{{ win_baseline_1509_state_Name }}"
-#     data: "{{ win_baseline_1509_state_Data }}"
-#     type: "{{ win_baseline_1509_state_Type }}"
-#   when:
-#     win_baseline_1509_state_Manage
+- name: "win_baseline_1509_state | Ensure 'Netlogon' is set to 'Automatic'"
+  win_regedit:
+    path: "{{ win_baseline_1509_state_Path }}"
+    name: "{{ win_baseline_1509_state_Name }}"
+    data: "{{ win_baseline_1509_state_Data }}"
+    type: "{{ win_baseline_1509_state_Type }}"
+  when:
+    win_baseline_1509_state_Manage
 
-# - name: "win_baseline_1510_state | Ensure 'Routing and Remote Access' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1510_state_Path }}"
-#     name: "{{ win_baseline_1510_state_Name }}"
-#     data: "{{ win_baseline_1510_state_Data }}"
-#     type: "{{ win_baseline_1510_state_Type }}"
-#   when:
-#     win_baseline_1510_state_Manage
+- name: "win_baseline_1510_state | Ensure 'Routing and Remote Access' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1510_state_Path }}"
+    name: "{{ win_baseline_1510_state_Name }}"
+    data: "{{ win_baseline_1510_state_Data }}"
+    type: "{{ win_baseline_1510_state_Type }}"
+  when:
+    win_baseline_1510_state_Manage
 
-# - name: "win_baseline_1512_state | Ensure 'Universal Plug and Play Devie Host' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1512_state_Path }}"
-#     name: "{{ win_baseline_1512_state_Name }}"
-#     data: "{{ win_baseline_1512_state_Data }}"
-#     type: "{{ win_baseline_1512_state_Type }}"
-#   when:
-#     win_baseline_1512_state_Manage
+- name: "win_baseline_1512_state | Ensure 'Universal Plug and Play Devie Host' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1512_state_Path }}"
+    name: "{{ win_baseline_1512_state_Name }}"
+    data: "{{ win_baseline_1512_state_Data }}"
+    type: "{{ win_baseline_1512_state_Type }}"
+  when:
+    win_baseline_1512_state_Manage
 
-# - name: "win_baseline_1514_state | Ensure 'Restrictions for Unauthenticated RPC clients' is set to 'Authenticated'"
-#   win_regedit:
-#     path: "{{ win_baseline_1514_state_Path }}"
-#     name: "{{ win_baseline_1514_state_Name }}"
-#     data: "{{ win_baseline_1514_state_Data }}"
-#     type: "{{ win_baseline_1514_state_Type }}"
-#   when:
-#     win_baseline_1514_state_Manage
+- name: "win_baseline_1514_state | Ensure 'Restrictions for Unauthenticated RPC clients' is set to 'Authenticated'"
+  win_regedit:
+    path: "{{ win_baseline_1514_state_Path }}"
+    name: "{{ win_baseline_1514_state_Name }}"
+    data: "{{ win_baseline_1514_state_Data }}"
+    type: "{{ win_baseline_1514_state_Type }}"
+  when:
+    win_baseline_1514_state_Manage
 
-# - name: "win_baseline_1964_state | Ensure 'Event Log' is set to 'Automatic'"
-#   win_regedit:
-#     path: "{{ win_baseline_1964_state_Path }}"
-#     name: "{{ win_baseline_1964_state_Name }}"
-#     data: "{{ win_baseline_1964_state_Data }}"
-#     type: "{{ win_baseline_1964_state_Type }}"
-#   when:
-#     win_baseline_1964_state_Manage
+- name: "win_baseline_1964_state | Ensure 'Event Log' is set to 'Automatic'"
+  win_regedit:
+    path: "{{ win_baseline_1964_state_Path }}"
+    name: "{{ win_baseline_1964_state_Name }}"
+    data: "{{ win_baseline_1964_state_Data }}"
+    type: "{{ win_baseline_1964_state_Type }}"
+  when:
+    win_baseline_1964_state_Manage
 
-# - name: "win_baseline_2181_state | Ensure 'Access this computer from the network' is set to 'Administrators, Authenticated Users'"
-#   win_user_right:
-#     name: "{{ win_baseline_2181_state_Name }}"
-#     users: "{{ win_baseline_2181_state_Users }}"
-#     action: "{{ win_baseline_2181_state_Action }}"
-#   when:
-#     win_baseline_2181_state_Manage
+- name: "win_baseline_2181_state | Ensure 'Access this computer from the network' is set to 'Administrators, Authenticated Users'"
+  win_user_right:
+    name: "{{ win_baseline_2181_state_Name }}"
+    users: "{{ win_baseline_2181_state_Users }}"
+    action: "{{ win_baseline_2181_state_Action }}"
+  when:
+    win_baseline_2181_state_Manage
 
-# - name: "win_baseline_2182_state | Ensure 'Act as part of the operating system' is set to 'No One'"
-#   win_user_right:
-#     name: "{{ win_baseline_2182_state_Name}}"
-#     users: "{{ win_baseline_2182_state_Users}}"
-#     action: "{{ win_baseline_2182_state_Action}}"
-#   when:
-#     win_baseline_2182_state_Manage
+- name: "win_baseline_2182_state | Ensure 'Act as part of the operating system' is set to 'No One'"
+  win_user_right:
+    name: "{{ win_baseline_2182_state_Name}}"
+    users: "{{ win_baseline_2182_state_Users}}"
+    action: "{{ win_baseline_2182_state_Action}}"
+  when:
+    win_baseline_2182_state_Manage
 
-# - name: "win_baseline_2183_state | Ensure 'Add workstations to domain' is set to 'Administrators'"
-#   win_user_right:
-#     name: "{{ win_baseline_2183_state_Name }}"
-#     users: "{{ win_baseline_2183_state_Users }}"
-#     action: "{{ win_baseline_2183_state_Action }}"
-#   when:
-#     win_baseline_2183_state_Manage
+- name: "win_baseline_2183_state | Ensure 'Add workstations to domain' is set to 'Administrators'"
+  win_user_right:
+    name: "{{ win_baseline_2183_state_Name }}"
+    users: "{{ win_baseline_2183_state_Users }}"
+    action: "{{ win_baseline_2183_state_Action }}"
+  when:
+    win_baseline_2183_state_Manage
 
-# - name: "win_baseline_2184_state | Ensure 'Adjust memory quotas for a process' is set to 'Guests, Users, Replicators, Backup Operators, Event log Readers, Performance log Users, Print Operators'"
-#   win_user_right:
-#     name: "{{ win_baseline_2184_state_Name }}"
-#     users: "{{ win_baseline_2184_state_Users }}"
-#     action: "{{ win_baseline_2184_state_Action }}"
-#   when:
-#     win_baseline_2184_state_Manage
+- name: "win_baseline_2184_state | Ensure 'Adjust memory quotas for a process' is set to 'Guests, Users, Replicators, Backup Operators, Event log Readers, Performance log Users, Print Operators'"
+  win_user_right:
+    name: "{{ win_baseline_2184_state_Name }}"
+    users: "{{ win_baseline_2184_state_Users }}"
+    action: "{{ win_baseline_2184_state_Action }}"
+  when:
+    win_baseline_2184_state_Manage
 
-# - name: "win_baseline_2185_state | Ensure 'Allow logon through terminal services' is set to 'Administrators, Remote Desktop Users"
-#   win_user_right:
-#     name: "{{ win_baseline_2185_state_Name }}"
-#     users: "{{ win_baseline_2185_state_Users }}"
-#     action: "{{ win_baseline_2185_state_Action }}"
-#   when:
-#     win_baseline_2185_state_Manage
+- name: "win_baseline_2185_state | Ensure 'Allow logon through terminal services' is set to 'Administrators, Remote Desktop Users"
+  win_user_right:
+    name: "{{ win_baseline_2185_state_Name }}"
+    users: "{{ win_baseline_2185_state_Users }}"
+    action: "{{ win_baseline_2185_state_Action }}"
+  when:
+    win_baseline_2185_state_Manage
 
 # - name: "win_baseline_2186_state | Ensure 'Back up files and directories' is set to 'Administrators, Backup Operators'"
 #   win_user_right:
