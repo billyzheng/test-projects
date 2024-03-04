@@ -396,104 +396,104 @@
   when:
     win_baseline_1376_state_Manage
 
-# - name: "win_baseline_1377_state | Ensure 'Interactive logon - Require Domain Controller Authentication to unlock workstation' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1377_state_Path }}"
-#     name: "{{ win_baseline_1377_state_Name }}"
-#     data: "{{ win_baseline_1377_state_Data }}"
-#     type: "{{ win_baseline_1377_state_Type }}"
-#   when:
-#     win_baseline_1377_state_Manage
+- name: "win_baseline_1377_state | Ensure 'Interactive logon - Require Domain Controller Authentication to unlock workstation' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1377_state_Path }}"
+    name: "{{ win_baseline_1377_state_Name }}"
+    data: "{{ win_baseline_1377_state_Data }}"
+    type: "{{ win_baseline_1377_state_Type }}"
+  when:
+    win_baseline_1377_state_Manage
 
-# - name: "win_baseline_1378_state | Ensure 'Interactive logon - Smart card removal behavior' is set to 'Lock Workstation'"
-#   win_regedit:
-#     path: "{{ win_baseline_1378_state_Path }}"
-#     name: "{{ win_baseline_1378_state_Name }}"
-#     data: "{{ win_baseline_1378_state_Data }}"
-#     type: "{{ win_baseline_1378_state_Type }}"
-#   when:
-#     win_baseline_1378_state_Manage
+- name: "win_baseline_1378_state | Ensure 'Interactive logon - Smart card removal behavior' is set to 'Lock Workstation'"
+  win_regedit:
+    path: "{{ win_baseline_1378_state_Path }}"
+    name: "{{ win_baseline_1378_state_Name }}"
+    data: "{{ win_baseline_1378_state_Data }}"
+    type: "{{ win_baseline_1378_state_Type }}"
+  when:
+    win_baseline_1378_state_Manage
 
-# - name: "win_baseline_1379_state | Ensure 'Microsoft network client - Digitally sign communications (if server agrees)' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1379_state_Path }}"
-#     name: "{{ win_baseline_1379_state_Name }}"
-#     data: "{{ win_baseline_1379_state_Data }}"
-#     type: "{{ win_baseline_1379_state_Type }}"
-#   when:
-#     win_baseline_1379_state_Manage
+- name: "win_baseline_1379_state | Ensure 'Microsoft network client - Digitally sign communications (if server agrees)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1379_state_Path }}"
+    name: "{{ win_baseline_1379_state_Name }}"
+    data: "{{ win_baseline_1379_state_Data }}"
+    type: "{{ win_baseline_1379_state_Type }}"
+  when:
+    win_baseline_1379_state_Manage
 
-# - name: "win_baseline_1380_state | Ensure 'Microsoft network client - Send unencrypted password to third-party SMB servers' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1380_state_Path }}"
-#     name: "{{ win_baseline_1380_state_Name }}"
-#     data: "{{ win_baseline_1380_state_Data }}"
-#     type: "{{ win_baseline_1380_state_Type }}"
-#   when:
-#     win_baseline_1380_state_Manage
+- name: "win_baseline_1380_state | Ensure 'Microsoft network client - Send unencrypted password to third-party SMB servers' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1380_state_Path }}"
+    name: "{{ win_baseline_1380_state_Name }}"
+    data: "{{ win_baseline_1380_state_Data }}"
+    type: "{{ win_baseline_1380_state_Type }}"
+  when:
+    win_baseline_1380_state_Manage
 
-# - name: "win_baseline_1381_state | Ensure 'Microsoft network server - Digitally sign communications (if client agrees)' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1381_state_Path }}"
-#     name: "{{ win_baseline_1381_state_Name }}"
-#     data: "{{ win_baseline_1381_state_Data }}"
-#     type:  "{{ win_baseline_1381_state_Type }}"
-#   when:
-#     win_baseline_1381_state_Manage
+- name: "win_baseline_1381_state | Ensure 'Microsoft network server - Digitally sign communications (if client agrees)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1381_state_Path }}"
+    name: "{{ win_baseline_1381_state_Name }}"
+    data: "{{ win_baseline_1381_state_Data }}"
+    type:  "{{ win_baseline_1381_state_Type }}"
+  when:
+    win_baseline_1381_state_Manage
 
-# - name: "win_baseline_1382_state | Ensure 'Microsoft network server - Disconnect clients when logon hours expire' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1382_state_Path }}"
-#     name: "{{ win_baseline_1382_state_Name }}"
-#     data: "{{ win_baseline_1382_state_Data }}"
-#     type: "{{ win_baseline_1382_state_Type }}"
-#   when:
-#     win_baseline_1382_state_Manage
+- name: "win_baseline_1382_state | Ensure 'Microsoft network server - Disconnect clients when logon hours expire' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1382_state_Path }}"
+    name: "{{ win_baseline_1382_state_Name }}"
+    data: "{{ win_baseline_1382_state_Data }}"
+    type: "{{ win_baseline_1382_state_Type }}"
+  when:
+    win_baseline_1382_state_Manage
 
-# - name: "win_baseline_1383_state | Ensure 'Network access - Let Everyone permissions apply to anonymous users' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1383_state_Path }}"
-#     name: "{{ win_baseline_1383_state_Name }}"
-#     data: "{{ win_baseline_1383_state_Data }}"
-#     type: "{{ win_baseline_1383_state_Type }}"
-#   when:
-#     win_baseline_1383_state_Manage
+- name: "win_baseline_1383_state | Ensure 'Network access - Let Everyone permissions apply to anonymous users' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1383_state_Path }}"
+    name: "{{ win_baseline_1383_state_Name }}"
+    data: "{{ win_baseline_1383_state_Data }}"
+    type: "{{ win_baseline_1383_state_Type }}"
+  when:
+    win_baseline_1383_state_Manage
 
-# - name: "win_baseline_1386_state | Ensure 'Network access - Sharing and security model for local accounts' is 'Classic - local users authenticate as themselves'"
-#   win_regedit:
-#     path: "{{ win_baseline_1386_state_Path }}"
-#     name: "{{ win_baseline_1386_state_Name }}"
-#     data: "{{ win_baseline_1386_state_Data }}"
-#     type: "{{ win_baseline_1386_state_Type }}"
-#   when:
-#     win_baseline_1386_state_Manage
+- name: "win_baseline_1386_state | Ensure 'Network access - Sharing and security model for local accounts' is 'Classic - local users authenticate as themselves'"
+  win_regedit:
+    path: "{{ win_baseline_1386_state_Path }}"
+    name: "{{ win_baseline_1386_state_Name }}"
+    data: "{{ win_baseline_1386_state_Data }}"
+    type: "{{ win_baseline_1386_state_Type }}"
+  when:
+    win_baseline_1386_state_Manage
 
-# - name: "win_baseline_1387_state | Ensure 'Network security - LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM&NTLM'"
-#   win_regedit:
-#     path: "{{ win_baseline_1387_state_Path }}"
-#     name: "{{ win_baseline_1387_state_Name }}"
-#     data: "{{ win_baseline_1387_state_Data }}"
-#     type: "{{ win_baseline_1387_state_Type }}"
-#   when:
-#     win_baseline_1387_state_Manage
+- name: "win_baseline_1387_state | Ensure 'Network security - LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM&NTLM'"
+  win_regedit:
+    path: "{{ win_baseline_1387_state_Path }}"
+    name: "{{ win_baseline_1387_state_Name }}"
+    data: "{{ win_baseline_1387_state_Data }}"
+    type: "{{ win_baseline_1387_state_Type }}"
+  when:
+    win_baseline_1387_state_Manage
 
-# - name: "win_baseline_1388_state | Ensure 'Network security - LDAP client signing requirements' is set to 'Negotiate signing' or higher"
-#   win_regedit:
-#     path: "{{ win_baseline_1388_state_Path }}"
-#     name: "{{ win_baseline_1388_state_Name }}"
-#     data: "{{ win_baseline_1388_state_Data }}"
-#     type: "{{ win_baseline_1388_state_Type }}"
-#   when:
-#     win_baseline_1388_state_Manage
+- name: "win_baseline_1388_state | Ensure 'Network security - LDAP client signing requirements' is set to 'Negotiate signing' or higher"
+  win_regedit:
+    path: "{{ win_baseline_1388_state_Path }}"
+    name: "{{ win_baseline_1388_state_Name }}"
+    data: "{{ win_baseline_1388_state_Data }}"
+    type: "{{ win_baseline_1388_state_Type }}"
+  when:
+    win_baseline_1388_state_Manage
 
-# - name: "win_baseline_1389_state | Ensure 'Network security - Minimum session security for NTLM SSP based (including secure RPC) clients' is set to 'Require NTLMv2 session security, Require 128-bit encryption'"
-#   win_regedit:
-#     path: "{{ win_baseline_1389_state_Path }}"
-#     name: "{{ win_baseline_1389_state_Name }}"
-#     data: "{{ win_baseline_1389_state_Data }}"
-#     type: "{{ win_baseline_1389_state_Type }}"
-#   when:
-#     win_baseline_1389_state_Manage
+- name: "win_baseline_1389_state | Ensure 'Network security - Minimum session security for NTLM SSP based (including secure RPC) clients' is set to 'Require NTLMv2 session security, Require 128-bit encryption'"
+  win_regedit:
+    path: "{{ win_baseline_1389_state_Path }}"
+    name: "{{ win_baseline_1389_state_Name }}"
+    data: "{{ win_baseline_1389_state_Data }}"
+    type: "{{ win_baseline_1389_state_Type }}"
+  when:
+    win_baseline_1389_state_Manage
 
 # - name: "win_baseline_1390_state | Ensure 'Network security - Minimum session security for NTLM SSP based (including secure RPC) servers' is set to 'Require NTLMv2 session security, Require 128-bit encryption'"
 #   win_regedit:
