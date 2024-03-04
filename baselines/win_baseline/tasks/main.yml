@@ -305,6 +305,8 @@
     section: "{{ win_baseline_1318_state_Section }}"
     key: "{{ win_baseline_1318_state_Key }}"
     value: "{{ win_baseline_1318_state_Value }}"
+  when:
+    win_baseline_1318_state_Manage
 
 - name: "win_baseline_1366_state | Ensure 'Accounts - Limit local account use of blank passwords to console logon only' is set to 'Enabled'"
   win_regedit:
@@ -495,104 +497,104 @@
   when:
     win_baseline_1389_state_Manage
 
-# - name: "win_baseline_1390_state | Ensure 'Network security - Minimum session security for NTLM SSP based (including secure RPC) servers' is set to 'Require NTLMv2 session security, Require 128-bit encryption'"
-#   win_regedit:
-#     path: "{{ win_baseline_1390_state_Path }}"
-#     name: "{{ win_baseline_1390_state_Name }}"
-#     data: "{{ win_baseline_1390_state_Data }}"
-#     type: "{{ win_baseline_1390_state_Type }}"
-#   when:
-#     win_baseline_1390_state_Manage
+- name: "win_baseline_1390_state | Ensure 'Network security - Minimum session security for NTLM SSP based (including secure RPC) servers' is set to 'Require NTLMv2 session security, Require 128-bit encryption'"
+  win_regedit:
+    path: "{{ win_baseline_1390_state_Path }}"
+    name: "{{ win_baseline_1390_state_Name }}"
+    data: "{{ win_baseline_1390_state_Data }}"
+    type: "{{ win_baseline_1390_state_Type }}"
+  when:
+    win_baseline_1390_state_Manage
 
-# - name: "win_baseline_1391_state | Ensure 'Recovery Console: Allow automatic administrative logon' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1391_state_Path }}"
-#     name: "{{ win_baseline_1391_state_Name }}"
-#     data: "{{ win_baseline_1391_state_Data }}"
-#     type: "{{ win_baseline_1391_state_Type }}"
-#   when:
-#     win_baseline_1391_state_Manage
+- name: "win_baseline_1391_state | Ensure 'Recovery Console: Allow automatic administrative logon' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1391_state_Path }}"
+    name: "{{ win_baseline_1391_state_Name }}"
+    data: "{{ win_baseline_1391_state_Data }}"
+    type: "{{ win_baseline_1391_state_Type }}"
+  when:
+    win_baseline_1391_state_Manage
 
-# - name: "win_baseline_1392_state | Ensure 'Recovery Console: Allow floppy copy and access to all drives and all folders' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1392_state_Path }}"
-#     name: "{{ win_baseline_1392_state_Name }}"
-#     data: "{{ win_baseline_1392_state_Data }}"
-#     type: "{{ win_baseline_1392_state_Type }}"
-#   when:
-#     win_baseline_1392_state_Manage
+- name: "win_baseline_1392_state | Ensure 'Recovery Console: Allow floppy copy and access to all drives and all folders' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1392_state_Path }}"
+    name: "{{ win_baseline_1392_state_Name }}"
+    data: "{{ win_baseline_1392_state_Data }}"
+    type: "{{ win_baseline_1392_state_Type }}"
+  when:
+    win_baseline_1392_state_Manage
 
-# - name: "win_baseline_1426_state | Ensure 'System objects - Strengthen default permissions of internal system objects (e.g. Symbolic Links)' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1426_state_Path }}"
-#     name: "{{ win_baseline_1426_state_Name }}"
-#     data: "{{ win_baseline_1426_state_Data }}"
-#     type: "{{ win_baseline_1426_state_Type }}"
-#   when:
-#     win_baseline_1426_state_Manage
+- name: "win_baseline_1426_state | Ensure 'System objects - Strengthen default permissions of internal system objects (e.g. Symbolic Links)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1426_state_Path }}"
+    name: "{{ win_baseline_1426_state_Name }}"
+    data: "{{ win_baseline_1426_state_Data }}"
+    type: "{{ win_baseline_1426_state_Type }}"
+  when:
+    win_baseline_1426_state_Manage
 
-# - name: "win_baseline_1430_state | Ensure 'Terminal Services' is set to 'Automatic'"
-#   win_regedit:
-#     path: "{{ win_baseline_1430_state_Path }}"
-#     name: "{{ win_baseline_1430_state_Name }}"
-#     data: "{{ win_baseline_1430_state_Data }}"
-#     type: "{{ win_baseline_1430_state_Type }}"
-#   when:
-#     win_baseline_1430_state_Manage
+- name: "win_baseline_1430_state | Ensure 'Terminal Services' is set to 'Automatic'"
+  win_regedit:
+    path: "{{ win_baseline_1430_state_Path }}"
+    name: "{{ win_baseline_1430_state_Name }}"
+    data: "{{ win_baseline_1430_state_Data }}"
+    type: "{{ win_baseline_1430_state_Type }}"
+  when:
+    win_baseline_1430_state_Manage
 
-# - name: "win_baseline_1432_state | Ensure 'Domain Controller: LDAP server signing requirements' is set to 'Require signing'"
-#   win_regedit:
-#     path: "{{ win_baseline_1432_state_Path }}"
-#     name: "{{ win_baseline_1432_state_Name }}"
-#     data: "{{ win_baseline_1432_state_Data }}"
-#     type: "{{ win_baseline_1432_state_Type }}"
-#   when:
-#     win_baseline_1432_state_Manage
+- name: "win_baseline_1432_state | Ensure 'Domain Controller: LDAP server signing requirements' is set to 'Require signing'"
+  win_regedit:
+    path: "{{ win_baseline_1432_state_Path }}"
+    name: "{{ win_baseline_1432_state_Name }}"
+    data: "{{ win_baseline_1432_state_Data }}"
+    type: "{{ win_baseline_1432_state_Type }}"
+  when:
+    win_baseline_1432_state_Manage
 
-# - name: "win_baseline_1434_state | Ensure 'Network access: Rediect anonymous access to Named Pipes and Shares' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1434_state_Path }}"
-#     name: "{{ win_baseline_1434_state_Name }}"
-#     data: "{{ win_baseline_1434_state_Data }}"
-#     type: "{{ win_baseline_1434_state_Type }}"
-#   when:
-#     win_baseline_1434_state_Manage
+- name: "win_baseline_1434_state | Ensure 'Network access: Rediect anonymous access to Named Pipes and Shares' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1434_state_Path }}"
+    name: "{{ win_baseline_1434_state_Name }}"
+    data: "{{ win_baseline_1434_state_Data }}"
+    type: "{{ win_baseline_1434_state_Type }}"
+  when:
+    win_baseline_1434_state_Manage
 
-# - name: "win_baseline_1436_state | Ensure 'System crytography: Force strong key protection for user keys stored on the computer' is set to 'User must enter a password each time they use a key'"
-#   win_regedit:
-#     path: "{{ win_baseline_1436_state_Path }}"
-#     name: "{{ win_baseline_1436_state_Name }}"
-#     data: "{{ win_baseline_1436_state_Data }}"
-#     type: "{{ win_baseline_1436_state_Type }}"
-#   when:
-#     win_baseline_1436_state_Manage
+- name: "win_baseline_1436_state | Ensure 'System crytography: Force strong key protection for user keys stored on the computer' is set to 'User must enter a password each time they use a key'"
+  win_regedit:
+    path: "{{ win_baseline_1436_state_Path }}"
+    name: "{{ win_baseline_1436_state_Name }}"
+    data: "{{ win_baseline_1436_state_Data }}"
+    type: "{{ win_baseline_1436_state_Type }}"
+  when:
+    win_baseline_1436_state_Manage
 
-# - name: "win_baseline_1458_state | Ensure 'MSS - (SafeDllSearchMode) Enable Safe DLL search mode (recommended)' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1458_state_Path }}"
-#     name: "{{ win_baseline_1458_state_Name }}"
-#     data: "{{ win_baseline_1458_state_Data }}"
-#     type: "{{ win_baseline_1458_state_Type }}"
-#   when:
-#     win_baseline_1458_state_Manage
+- name: "win_baseline_1458_state | Ensure 'MSS - (SafeDllSearchMode) Enable Safe DLL search mode (recommended)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1458_state_Path }}"
+    name: "{{ win_baseline_1458_state_Name }}"
+    data: "{{ win_baseline_1458_state_Data }}"
+    type: "{{ win_baseline_1458_state_Type }}"
+  when:
+    win_baseline_1458_state_Manage
 
-# - name: "win_baseline_1463_state | Ensure 'MSS - (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set"
-#   win_regedit:
-#     path: "{{ win_baseline_1463_state_Path }}"
-#     name: "{{ win_baseline_1463_state_Name }}"
-#     data: "{{ win_baseline_1463_state_Data }}"
-#     type: "{{ win_baseline_1463_state_Type }}"
-#   when:
-#     win_baseline_1463_state_Manage
+- name: "win_baseline_1463_state | Ensure 'MSS - (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set"
+  win_regedit:
+    path: "{{ win_baseline_1463_state_Path }}"
+    name: "{{ win_baseline_1463_state_Name }}"
+    data: "{{ win_baseline_1463_state_Data }}"
+    type: "{{ win_baseline_1463_state_Type }}"
+  when:
+    win_baseline_1463_state_Manage
 
-# - name: "win_baseline_1472_state | Ensure 'Network connections' is set to 'Automatic'"
-#   win_regedit:
-#     path: "{{ win_baseline_1472_state_Path }}"
-#     name: "{{ win_baseline_1472_state_Name }}"
-#     data: "{{ win_baseline_1472_state_Data }}"
-#     type: "{{ win_baseline_1472_state_Type }}"
-#   when:
-#     win_baseline_1472_state_Manage
+- name: "win_baseline_1472_state | Ensure 'Network connections' is set to 'Automatic'"
+  win_regedit:
+    path: "{{ win_baseline_1472_state_Path }}"
+    name: "{{ win_baseline_1472_state_Name }}"
+    data: "{{ win_baseline_1472_state_Data }}"
+    type: "{{ win_baseline_1472_state_Type }}"
+  when:
+    win_baseline_1472_state_Manage
 
 # - name: "win_baseline_1476_state | Ensure 'Romote Access Connection Manager (RasMan)' is set to 'Disabled'"
 #   win_regedit:
