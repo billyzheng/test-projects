@@ -1031,403 +1031,403 @@
   when:
     win_baseline_2635_state_Manage
 
-# - name: "win_baseline_2642_state | Ensure 'Impersonate a client after authentication' is set to 'Administrators, Service, Local Service, Network Service'" # TODO: add IIS_IUSRS
-#   win_user_right:
-#     name: "{{ win_baseline_2642_state_Name }}"
-#     users: "{{ win_baseline_2642_state_Users }}"
-#     action: "{{ win_baseline_2642_state_Action }}"
-#   when:
-#     win_baseline_2642_state_Manage
+- name: "win_baseline_2642_state | Ensure 'Impersonate a client after authentication' is set to 'Administrators, Service, Local Service, Network Service'" # TODO: add IIS_IUSRS
+  win_user_right:
+    name: "{{ win_baseline_2642_state_Name }}"
+    users: "{{ win_baseline_2642_state_Users }}"
+    action: "{{ win_baseline_2642_state_Action }}"
+  when:
+    win_baseline_2642_state_Manage
 
-# - name: "win_baseline_2681_sate | Ensure 'Turn of windows update device driver searching setting' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_2681_state_Path }}"
-#     name: "{{ win_baseline_2681_state_Name }}"
-#     data: "{{ win_baseline_2681_state_Data }}"
-#     type: "{{ win_baseline_2681_state_Type }}"
-#   when:
-#     win_baseline_2681_state_Manage
+- name: "win_baseline_2681_sate | Ensure 'Turn of windows update device driver searching setting' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_2681_state_Path }}"
+    name: "{{ win_baseline_2681_state_Name }}"
+    data: "{{ win_baseline_2681_state_Data }}"
+    type: "{{ win_baseline_2681_state_Type }}"
+  when:
+    win_baseline_2681_state_Manage
 
-# - name: "win_baseline_3242_state | Ensure 'Create Global Objects' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE"
-#   win_user_right:
-#     name: "{{ win_baseline_3242_state_Name }}"
-#     users: "{{ win_baseline_3242_state_Users }}"
-#     action: "{{ win_baseline_3242_state_Action }}"
-#   when:
-#     win_baseline_3242_state_Manage
+- name: "win_baseline_3242_state | Ensure 'Create Global Objects' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE"
+  win_user_right:
+    name: "{{ win_baseline_3242_state_Name }}"
+    users: "{{ win_baseline_3242_state_Users }}"
+    action: "{{ win_baseline_3242_state_Action }}"
+  when:
+    win_baseline_3242_state_Manage
 
-# - name: "win_baseline_3376_state | Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'"
-#   win_security_policy:
-#     section: "{{ win_baseline_3376_state_Section }}"
-#     key: "{{ win_baseline_3376_state_Key }}"
-#     value: "{{ win_baseline_3376_state_Value }}"
-#   when:
-#     win_baseline_3376_state_Manage
+- name: "win_baseline_3376_state | Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'"
+  win_security_policy:
+    section: "{{ win_baseline_3376_state_Section }}"
+    key: "{{ win_baseline_3376_state_Key }}"
+    value: "{{ win_baseline_3376_state_Value }}"
+  when:
+    win_baseline_3376_state_Manage
 
-# - name: "win_baseline_3657_state | Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'"
-#   win_security_policy:
-#     section: "{{ win_baseline_3657_state_Section }}"
-#     key: "{{ win_baseline_3657_state_Key }}"
-#     value: "{{ win_baseline_3657_state_Value }}"
-#   when:
-#     win_baseline_3657_state_Manage
+- name: "win_baseline_3657_state | Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'"
+  win_security_policy:
+    section: "{{ win_baseline_3657_state_Section }}"
+    key: "{{ win_baseline_3657_state_Key }}"
+    value: "{{ win_baseline_3657_state_Value }}"
+  when:
+    win_baseline_3657_state_Manage
 
-# - name: "win_baseline_3719_state | Ensure 'Internet connection sharing' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3719_state_Path }}"
-#     name: "{{ win_baseline_3719_state_Name }}"
-#     data: "{{ win_baseline_3719_state_Data }}"
-#     type: "{{ win_baseline_3719_state_Type }}"
-#   when:
-#     win_baseline_3719_state_Manage
+- name: "win_baseline_3719_state | Ensure 'Internet connection sharing' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_3719_state_Path }}"
+    name: "{{ win_baseline_3719_state_Name }}"
+    data: "{{ win_baseline_3719_state_Data }}"
+    type: "{{ win_baseline_3719_state_Type }}"
+  when:
+    win_baseline_3719_state_Manage
 
-# - name: "win_baseline_3729_state | Ensure 'Server' is set to 'Automatic'"
-#   win_regedit:
-#     path: "{{ win_baseline_3729_state_Path }}"
-#     name: "{{ win_baseline_3729_state_Name }}"
-#     data: "{{ win_baseline_3729_state_Data }}"
-#     type: "{{ win_baseline_3729_state_Type }}"
-#   when:
-#     win_baseline_3729_state_Manage
+- name: "win_baseline_3729_state | Ensure 'Server' is set to 'Automatic'"
+  win_regedit:
+    path: "{{ win_baseline_3729_state_Path }}"
+    name: "{{ win_baseline_3729_state_Name }}"
+    data: "{{ win_baseline_3729_state_Data }}"
+    type: "{{ win_baseline_3729_state_Type }}"
+  when:
+    win_baseline_3729_state_Manage
 
-# - name: "win_baseline_3734_state | Ensure 'Windows installer' is set to 'Automatic'"
-#   win_regedit:
-#     path: "{{ win_baseline_3734_state_Path }}"
-#     name: "{{ win_baseline_3734_state_Name }}"
-#     data: "{{ win_baseline_3734_state_Data }}"
-#     type: "{{ win_baseline_3734_state_Type }}"
-#   when:
-#     win_baseline_3734_state_Manage
+- name: "win_baseline_3734_state | Ensure 'Windows installer' is set to 'Automatic'"
+  win_regedit:
+    path: "{{ win_baseline_3734_state_Path }}"
+    name: "{{ win_baseline_3734_state_Name }}"
+    data: "{{ win_baseline_3734_state_Data }}"
+    type: "{{ win_baseline_3734_state_Type }}"
+  when:
+    win_baseline_3734_state_Manage
 
-# - name: "win_baseline_3737_state | Ensure 'Windows time' is set to 'Automatic'"
-#   win_regedit:
-#     path: "{{ win_baseline_3737_state_Path }}"
-#     name: "{{ win_baseline_3737_state_Name }}"
-#     data: "{{ win_baseline_3737_state_Data }}"
-#     type: "{{ win_baseline_3737_state_Type }}"
-#   when:
-#     win_baseline_3737_state_Manage
+- name: "win_baseline_3737_state | Ensure 'Windows time' is set to 'Automatic'"
+  win_regedit:
+    path: "{{ win_baseline_3737_state_Path }}"
+    name: "{{ win_baseline_3737_state_Name }}"
+    data: "{{ win_baseline_3737_state_Data }}"
+    type: "{{ win_baseline_3737_state_Type }}"
+  when:
+    win_baseline_3737_state_Manage
 
-# - name: "win_baseline_3875_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3875_state_Path }}"
-#     name: "{{ win_baseline_3875_state_Name }}"
-#     data: "{{ win_baseline_3875_state_Data }}"
-#     type: "{{ win_baseline_3875_state_Type }}"
-#   when:
-#     win_baseline_3875_state_Manage
+- name: "win_baseline_3875_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3875_state_Path }}"
+    name: "{{ win_baseline_3875_state_Name }}"
+    data: "{{ win_baseline_3875_state_Data }}"
+    type: "{{ win_baseline_3875_state_Type }}"
+  when:
+    win_baseline_3875_state_Manage
 
-# - name: "win_baseline_3778_state | Ensure 'Login banner' is set to 'This is an interest computer system of ABB...'"
-#   win_regedit:
-#     path: "{{ win_baseline_3778_state_Path }}"
-#     name: "{{ win_baseline_3778_state_Name }}"
-#     data: "{{ win_baseline_3778_state_Data }}"
-#     type: "{{ win_baseline_3778_state_Type }}"
-#   when:
-#     win_baseline_3778_state_Manage
+- name: "win_baseline_3778_state | Ensure 'Login banner' is set to 'This is an interest computer system of ABB...'"
+  win_regedit:
+    path: "{{ win_baseline_3778_state_Path }}"
+    name: "{{ win_baseline_3778_state_Name }}"
+    data: "{{ win_baseline_3778_state_Data }}"
+    type: "{{ win_baseline_3778_state_Type }}"
+  when:
+    win_baseline_3778_state_Manage
 
-# - name: "win_baseline_3876_state | Ensure 'Do not allow passwords to be saved' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3876_state_Path }}"
-#     name: "{{ win_baseline_3876_state_Name }}"
-#     data: "{{ win_baseline_3876_state_Data }}"
-#     type: "{{ win_baseline_3876_state_Type }}"
-#   when:
-#     win_baseline_3876_state_Manage
+- name: "win_baseline_3876_state | Ensure 'Do not allow passwords to be saved' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3876_state_Path }}"
+    name: "{{ win_baseline_3876_state_Name }}"
+    data: "{{ win_baseline_3876_state_Data }}"
+    type: "{{ win_baseline_3876_state_Type }}"
+  when:
+    win_baseline_3876_state_Manage
 
-# - name: "win_baseline_3891_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3891_state_Path }}"
-#     name: "{{ win_baseline_3891_state_Name }}"
-#     data: "{{ win_baseline_3891_state_Data }}"
-#     type: "{{ win_baseline_3891_state_Type }}"
-#   when:
-#     win_baseline_3891_state_Manage
+- name: "win_baseline_3891_state | Ensure 'Do not allow drive redirection' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3891_state_Path }}"
+    name: "{{ win_baseline_3891_state_Name }}"
+    data: "{{ win_baseline_3891_state_Data }}"
+    type: "{{ win_baseline_3891_state_Type }}"
+  when:
+    win_baseline_3891_state_Manage
 
-# - name: "win_baseline_3896_state | Ensure 'Require trusted path for credential entry'"
-#   win_regedit:
-#     path: "{{ win_baseline_3896_state_Path }}"
-#     name: "{{ win_baseline_3896_state_Name }}"
-#     data: "{{ win_baseline_3896_state_Data }}"
-#     type: "{{ win_baseline_3896_state_Type }}"
-#   when:
-#     win_baseline_3896_state_Manage
+- name: "win_baseline_3896_state | Ensure 'Require trusted path for credential entry'"
+  win_regedit:
+    path: "{{ win_baseline_3896_state_Path }}"
+    name: "{{ win_baseline_3896_state_Name }}"
+    data: "{{ win_baseline_3896_state_Data }}"
+    type: "{{ win_baseline_3896_state_Type }}"
+  when:
+    win_baseline_3896_state_Manage
 
-# - name: "win_baseline_3897_state | Ensure 'Enumerate administrator accounts on elevation' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3897_state_Path }}"
-#     name: "{{ win_baseline_3897_state_Name }}"
-#     data: "{{ win_baseline_3897_state_Data }}"
-#     type: "{{ win_baseline_3897_state_Type }}"
-#   when:
-#     win_baseline_3897_state_Manage
+- name: "win_baseline_3897_state | Ensure 'Enumerate administrator accounts on elevation' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_3897_state_Path }}"
+    name: "{{ win_baseline_3897_state_Name }}"
+    data: "{{ win_baseline_3897_state_Data }}"
+    type: "{{ win_baseline_3897_state_Type }}"
+  when:
+    win_baseline_3897_state_Manage
 
-# - name: "win_baseline_3899_state | Ensure 'Configure Solicited Remote Assistance' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3899_state_Path }}"
-#     name: "{{ win_baseline_3899_state_Name }}"
-#     data: "{{ win_baseline_3899_state_Data }}"
-#     type: "{{ win_baseline_3899_state_Type }}"
-#   when:
-#     win_baseline_3899_state_Manage
+- name: "win_baseline_3899_state | Ensure 'Configure Solicited Remote Assistance' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_3899_state_Path }}"
+    name: "{{ win_baseline_3899_state_Name }}"
+    data: "{{ win_baseline_3899_state_Data }}"
+    type: "{{ win_baseline_3899_state_Type }}"
+  when:
+    win_baseline_3899_state_Manage
 
-# - name: "win_baseline_3903_state | Ensure 'Do not process the run once list' is set to Enabled"
-#   win_regedit:
-#     path: "{{ win_baseline_3903_state_Path }}"
-#     name: "{{ win_baseline_3903_state_Name }}"
-#     data: "{{ win_baseline_3903_state_Data }}"
-#     type: "{{ win_baseline_3903_state_Type }}"
-#   when:
-#     win_baseline_3903_state_Manage
+- name: "win_baseline_3903_state | Ensure 'Do not process the run once list' is set to Enabled"
+  win_regedit:
+    path: "{{ win_baseline_3903_state_Path }}"
+    name: "{{ win_baseline_3903_state_Name }}"
+    data: "{{ win_baseline_3903_state_Data }}"
+    type: "{{ win_baseline_3903_state_Type }}"
+  when:
+    win_baseline_3903_state_Manage
 
-# - name: "win_baseline_3904_state | Ensure 'Do not process the legacy run list' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3904_state_Path }}"
-#     name: "{{ win_baseline_3904_state_Name }}"
-#     data: "{{ win_baseline_3904_state_Data }}"
-#     type: "{{ win_baseline_3904_state_Type }}"
-#   when:
-#     win_baseline_3904_state_Manage
+- name: "win_baseline_3904_state | Ensure 'Do not process the legacy run list' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3904_state_Path }}"
+    name: "{{ win_baseline_3904_state_Name }}"
+    data: "{{ win_baseline_3904_state_Data }}"
+    type: "{{ win_baseline_3904_state_Type }}"
+  when:
+    win_baseline_3904_state_Manage
 
-# - name: "win_baseline_3907_state | Ensure 'Windows Messenger Customer Experience Improvement Program' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3907_state_Path }}"
-#     name: "{{ win_baseline_3907_state_Name }}"
-#     data: "{{ win_baseline_3907_state_Data }}"
-#     type: "{{ win_baseline_3907_state_Type }}"
-#   when:
-#     win_baseline_3907_state_Manage
+- name: "win_baseline_3907_state | Ensure 'Windows Messenger Customer Experience Improvement Program' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_3907_state_Path }}"
+    name: "{{ win_baseline_3907_state_Name }}"
+    data: "{{ win_baseline_3907_state_Data }}"
+    type: "{{ win_baseline_3907_state_Type }}"
+  when:
+    win_baseline_3907_state_Manage
 
-# - name: "win_baseline_3908_state | Ensure 'Turn off Search Companion content file updates' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3908_state_Path }}"
-#     name: "{{ win_baseline_3908_state_Name }}"
-#     data: "{{ win_baseline_3908_state_Data }}"
-#     type: "{{ win_baseline_3908_state_Type }}"
-#   when:
-#     win_baseline_3908_state_Manage
+- name: "win_baseline_3908_state | Ensure 'Turn off Search Companion content file updates' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3908_state_Path }}"
+    name: "{{ win_baseline_3908_state_Name }}"
+    data: "{{ win_baseline_3908_state_Data }}"
+    type: "{{ win_baseline_3908_state_Type }}"
+  when:
+    win_baseline_3908_state_Manage
 
-# - name: "win_baseline_3919_state | Ensure 'Turn off printing over HTTP' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3919_state_Path }}"
-#     name: "{{ win_baseline_3919_state_Name }}"
-#     data: "{{ win_baseline_3919_state_Data }}"
-#     type: "{{ win_baseline_3919_state_Type }}"
-#   when:
-#     win_baseline_3919_state_Manage
+- name: "win_baseline_3919_state | Ensure 'Turn off printing over HTTP' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3919_state_Path }}"
+    name: "{{ win_baseline_3919_state_Name }}"
+    data: "{{ win_baseline_3919_state_Data }}"
+    type: "{{ win_baseline_3919_state_Type }}"
+  when:
+    win_baseline_3919_state_Manage
 
-# - name: "win_baseline_3920_state | Ensure 'Turn off Internet download for Web publishing and online ordering wizards' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3920_state_Path }}"
-#     name: "{{ win_baseline_3920_state_Name }}"
-#     data: "{{ win_baseline_3920_state_Data }}"
-#     type: "{{ win_baseline_3920_state_Type }}"
-#   when:
-#     win_baseline_3920_state_Manage
+- name: "win_baseline_3920_state | Ensure 'Turn off Internet download for Web publishing and online ordering wizards' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3920_state_Path }}"
+    name: "{{ win_baseline_3920_state_Name }}"
+    data: "{{ win_baseline_3920_state_Data }}"
+    type: "{{ win_baseline_3920_state_Type }}"
+  when:
+    win_baseline_3920_state_Manage
 
-# - name: "win_baseline_3921_state | Ensure 'Turn off the 'Publish to Web' task for files and folders' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3921_state_Path }}"
-#     name: "{{ win_baseline_3921_state_Name }}"
-#     data: "{{ win_baseline_3921_state_Data }}"
-#     type: "{{ win_baseline_3921_state_Type }}"
-#   when:
-#     win_baseline_3921_state_Manage
+- name: "win_baseline_3921_state | Ensure 'Turn off the 'Publish to Web' task for files and folders' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3921_state_Path }}"
+    name: "{{ win_baseline_3921_state_Name }}"
+    data: "{{ win_baseline_3921_state_Data }}"
+    type: "{{ win_baseline_3921_state_Type }}"
+  when:
+    win_baseline_3921_state_Manage
 
-# - name: "win_baseline_3922_state | Ensure 'Turn off downloading of print drivers over HTTP' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3922_state_Path }}"
-#     name: "{{ win_baseline_3922_state_Name }}"
-#     data: "{{ win_baseline_3922_state_Data }}"
-#     type: "{{ win_baseline_3922_state_Type }}"
-#   when:
-#     win_baseline_3922_state_Manage
+- name: "win_baseline_3922_state | Ensure 'Turn off downloading of print drivers over HTTP' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3922_state_Path }}"
+    name: "{{ win_baseline_3922_state_Name }}"
+    data: "{{ win_baseline_3922_state_Data }}"
+    type: "{{ win_baseline_3922_state_Type }}"
+  when:
+    win_baseline_3922_state_Manage
 
-# - name: "win_baseline_3923_state | Ensure 'Configure registry policy processing - Do not apply during periodic background processing' is set to 'Enabled - FALSE'"
-#   win_regedit:
-#     path: "{{ win_baseline_3923_state_Path }}"
-#     name: "{{ win_baseline_3923_state_Name }}"
-#     data: "{{ win_baseline_3923_state_Data }}"
-#     type: "{{ win_baseline_3923_state_Type }}"
-#   when:
-#     win_baseline_3923_state_Manage
+- name: "win_baseline_3923_state | Ensure 'Configure registry policy processing - Do not apply during periodic background processing' is set to 'Enabled - FALSE'"
+  win_regedit:
+    path: "{{ win_baseline_3923_state_Path }}"
+    name: "{{ win_baseline_3923_state_Name }}"
+    data: "{{ win_baseline_3923_state_Data }}"
+    type: "{{ win_baseline_3923_state_Type }}"
+  when:
+    win_baseline_3923_state_Manage
 
-# - name: "win_baseline_3924_state | Ensure 'Access credential manager as a trusted caller' is set to 'No One'"
-#   win_user_right:
-#     name: "{{ win_baseline_3924_state_Name }}"
-#     users: "{{ win_baseline_3924_state_Users }}"
-#     action: "{{ win_baseline_3924_state_Action }}"
-#   when:
-#     win_baseline_3924_state_Manage
+- name: "win_baseline_3924_state | Ensure 'Access credential manager as a trusted caller' is set to 'No One'"
+  win_user_right:
+    name: "{{ win_baseline_3924_state_Name }}"
+    users: "{{ win_baseline_3924_state_Users }}"
+    action: "{{ win_baseline_3924_state_Action }}"
+  when:
+    win_baseline_3924_state_Manage
 
-# - name: "win_baseline_3925_state | Esure 'Change the time zone privilege' is set to 'Administrators, LOCAL SERVICE'"
-#   win_user_right:
-#     name: "{{ win_baseline_3925_state_Name }}"
-#     users: "{{ win_baseline_3925_state_Users }}"
-#     action: "{{ win_baseline_3925_state_Action }}"
-#   when:
-#     win_baseline_3925_state_Manage
+- name: "win_baseline_3925_state | Esure 'Change the time zone privilege' is set to 'Administrators, LOCAL SERVICE'"
+  win_user_right:
+    name: "{{ win_baseline_3925_state_Name }}"
+    users: "{{ win_baseline_3925_state_Users }}"
+    action: "{{ win_baseline_3925_state_Action }}"
+  when:
+    win_baseline_3925_state_Manage
 
-# - name: "win_baseline_3926_State | Ensure 'Reschedule Automatic Update scheduled installations' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3926_state_Path }}"
-#     name: "{{ win_baseline_3926_state_Name }}"
-#     data: "{{ win_baseline_3926_state_Data }}"
-#     type: "{{ win_baseline_3926_state_Type }}"
-#   when:
-#     win_baseline_3926_state_Manage
+- name: "win_baseline_3926_State | Ensure 'Reschedule Automatic Update scheduled installations' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3926_state_Path }}"
+    name: "{{ win_baseline_3926_state_Name }}"
+    data: "{{ win_baseline_3926_state_Data }}"
+    type: "{{ win_baseline_3926_state_Type }}"
+  when:
+    win_baseline_3926_state_Manage
 
-# - name: "win_baseline_3927_state | Ensure 'Install Updates and Shut Down' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3927_state_Path }}"
-#     name: "{{ win_baseline_3927_state_Name }}"
-#     data: "{{ win_baseline_3927_state_Data }}"
-#     type: "{{ win_baseline_3927_state_Type }}"
-#   when:
-#     win_baseline_3927_state_Manage
+- name: "win_baseline_3927_state | Ensure 'Install Updates and Shut Down' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_3927_state_Path }}"
+    name: "{{ win_baseline_3927_state_Name }}"
+    data: "{{ win_baseline_3927_state_Data }}"
+    type: "{{ win_baseline_3927_state_Type }}"
+  when:
+    win_baseline_3927_state_Manage
 
-# - name: "win_baseline_3939_state | Ensure 'Allow UIAccess applications to prompt for elevation without using the secure desktop' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3939_state_Path }}"
-#     name: "{{ win_baseline_3939_state_Name }}"
-#     data: "{{ win_baseline_3939_state_Data }}"
-#     type: "{{ win_baseline_3939_state_Type }}"
-#   when:
-#     win_baseline_3939_state_Manage
+- name: "win_baseline_3939_state | Ensure 'Allow UIAccess applications to prompt for elevation without using the secure desktop' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_3939_state_Path }}"
+    name: "{{ win_baseline_3939_state_Name }}"
+    data: "{{ win_baseline_3939_state_Data }}"
+    type: "{{ win_baseline_3939_state_Type }}"
+  when:
+    win_baseline_3939_state_Manage
 
-# - name: "win_baseline_3940_state | Ensure 'User Account Control - Virtualize file and registry write failures to per-user locations' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3940_state_Path }}"
-#     name: "{{ win_baseline_3940_state_Name }}"
-#     data: "{{ win_baseline_3940_state_Data }}"
-#     type: "{{ win_baseline_3940_state_Type }}"
-#   when:
-#     win_baseline_3940_state_Manage
+- name: "win_baseline_3940_state | Ensure 'User Account Control - Virtualize file and registry write failures to per-user locations' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_3940_state_Path }}"
+    name: "{{ win_baseline_3940_state_Name }}"
+    data: "{{ win_baseline_3940_state_Data }}"
+    type: "{{ win_baseline_3940_state_Type }}"
+  when:
+    win_baseline_3940_state_Manage
 
-# - name: "win_baseline_3941_state | Ensure 'Create symbolic links' is set to 'Administrators'"
-#   win_user_right:
-#     name: "{{ win_baseline_3941_state_Name }}"
-#     users: "{{ win_baseline_3941_state_Users }}"
-#     action: "{{ win_baseline_3941_state_Action }}"
-#   when:
-#     win_baseline_3941_state_Manage
+- name: "win_baseline_3941_state | Ensure 'Create symbolic links' is set to 'Administrators'"
+  win_user_right:
+    name: "{{ win_baseline_3941_state_Name }}"
+    users: "{{ win_baseline_3941_state_Users }}"
+    action: "{{ win_baseline_3941_state_Action }}"
+  when:
+    win_baseline_3941_state_Manage
 
-# - name: "win_baseline_3942_state | Ensure 'System - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3942_state_Path }}"
-#     name: "{{ win_baseline_3942_state_Name }}"
-#     data: "{{ win_baseline_3942_state_Data }}"
-#     type: "{{ win_baseline_3942_state_Type }}"
-#   when:
-#     win_baseline_3942_state_Manage
+- name: "win_baseline_3942_state | Ensure 'System - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_3942_state_Path }}"
+    name: "{{ win_baseline_3942_state_Name }}"
+    data: "{{ win_baseline_3942_state_Data }}"
+    type: "{{ win_baseline_3942_state_Type }}"
+  when:
+    win_baseline_3942_state_Manage
 
-# - name: "win_baseline_3943_state | Ensure 'Security - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3943_state_Path }}"
-#     name: "{{ win_baseline_3943_state_Name }}"
-#     data: "{{ win_baseline_3943_state_Data }}"
-#     type: "{{ win_baseline_3943_state_Type }}"
-#   when:
-#     win_baseline_3943_state_Manage
+- name: "win_baseline_3943_state | Ensure 'Security - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_3943_state_Path }}"
+    name: "{{ win_baseline_3943_state_Name }}"
+    data: "{{ win_baseline_3943_state_Data }}"
+    type: "{{ win_baseline_3943_state_Type }}"
+  when:
+    win_baseline_3943_state_Manage
 
-# - name: "win_baseline_3944_state | Ensure 'Application - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_3944_state_Path }}"
-#     name: "{{ win_baseline_3944_state_Name }}"
-#     data: "{{ win_baseline_3944_state_Data }}"
-#     type: "{{ win_baseline_3944_state_Type }}"
-#   when:
-#     win_baseline_3944_state_Manage
+- name: "win_baseline_3944_state | Ensure 'Application - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_3944_state_Path }}"
+    name: "{{ win_baseline_3944_state_Name }}"
+    data: "{{ win_baseline_3944_state_Data }}"
+    type: "{{ win_baseline_3944_state_Type }}"
+  when:
+    win_baseline_3944_state_Manage
 
-# - name: "win_baseline_4005_state | Ensure 'DNS Server' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_4005_state_Path }}"
-#     name: "{{ win_baseline_4005_state_Name }}"
-#     data: "{{ win_baseline_4005_state_Data }}"
-#     type: "{{ win_baseline_4005_state_Type }}"
-#   when:
-#     win_baseline_4005_state_Manage
+- name: "win_baseline_4005_state | Ensure 'DNS Server' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_4005_state_Path }}"
+    name: "{{ win_baseline_4005_state_Name }}"
+    data: "{{ win_baseline_4005_state_Data }}"
+    type: "{{ win_baseline_4005_state_Type }}"
+  when:
+    win_baseline_4005_state_Manage
 
-# - name: "win_baseline_4006_state | Ensure 'Windows event collector' is set to 'Automatic'"
-#   win_regedit:
-#     path: "{{ win_baseline_4006_state_Path }}"
-#     name: "{{ win_baseline_4006_state_Name }}"
-#     data: "{{ win_baseline_4006_state_Data }}"
-#     type: "{{ win_baseline_4006_state_Type }}"
-#   when:
-#     win_baseline_4006_state_Manage
+- name: "win_baseline_4006_state | Ensure 'Windows event collector' is set to 'Automatic'"
+  win_regedit:
+    path: "{{ win_baseline_4006_state_Path }}"
+    name: "{{ win_baseline_4006_state_Name }}"
+    data: "{{ win_baseline_4006_state_Data }}"
+    type: "{{ win_baseline_4006_state_Type }}"
+  when:
+    win_baseline_4006_state_Manage
 
-# - name: "win_baseline_4097_state | Ensure 'Windows registration wizard' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_4097_state_Path }}"
-#     name: "{{ win_baseline_4097_state_Name }}"
-#     data: "{{ win_baseline_4097_state_Data }}"
-#     type: "{{ win_baseline_4097_state_Type }}"
-#   when:
-#     win_baseline_4097_state_Manage
+- name: "win_baseline_4097_state | Ensure 'Windows registration wizard' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_4097_state_Path }}"
+    name: "{{ win_baseline_4097_state_Name }}"
+    data: "{{ win_baseline_4097_state_Data }}"
+    type: "{{ win_baseline_4097_state_Type }}"
+  when:
+    win_baseline_4097_state_Manage
 
-# - name: "win_baseline_4110_state | Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_4110_state_Path }}"
-#     name: "{{ win_baseline_4110_state_Name }}"
-#     data: "{{ win_baseline_4110_state_Data }}"
-#     type: "{{ win_baseline_4110_state_Type }}"
-#   when:
-#     win_baseline_4110_state_Manage
+- name: "win_baseline_4110_state | Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_4110_state_Path }}"
+    name: "{{ win_baseline_4110_state_Name }}"
+    data: "{{ win_baseline_4110_state_Data }}"
+    type: "{{ win_baseline_4110_state_Type }}"
+  when:
+    win_baseline_4110_state_Manage
 
-# - name: "win_baseline_4111_state | Ensure 'Require a password when a computer wakes (plugged in)' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_4111_state_Path }}"
-#     name: "{{ win_baseline_4111_state_Name }}"
-#     data: "{{ win_baseline_4111_state_Data }}"
-#     type: "{{ win_baseline_4111_state_Type }}"
-#   when:
-#     win_baseline_4111_state_Manage
+- name: "win_baseline_4111_state | Ensure 'Require a password when a computer wakes (plugged in)' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_4111_state_Path }}"
+    name: "{{ win_baseline_4111_state_Name }}"
+    data: "{{ win_baseline_4111_state_Data }}"
+    type: "{{ win_baseline_4111_state_Type }}"
+  when:
+    win_baseline_4111_state_Manage
 
-# - name: "win_baseline_4193_state_1 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - EnableRegistrars"
-#   win_regedit:
-#     path: "{{ win_baseline_4193_1_state_Path }}"
-#     name: "{{ win_baseline_4193_1_state_Name }}"
-#     data: "{{ win_baseline_4193_1_state_Data }}"
-#     type: "{{ win_baseline_4193_1_state_Type }}"
-#   when:
-#     win_baseline_4193_1_state_Manage
+- name: "win_baseline_4193_state_1 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - EnableRegistrars"
+  win_regedit:
+    path: "{{ win_baseline_4193_1_state_Path }}"
+    name: "{{ win_baseline_4193_1_state_Name }}"
+    data: "{{ win_baseline_4193_1_state_Data }}"
+    type: "{{ win_baseline_4193_1_state_Type }}"
+  when:
+    win_baseline_4193_1_state_Manage
 
-# - name: "win_baseline_4193_state_2 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableUPnPRegistrar"
-#   win_regedit:
-#     path: "{{ win_baseline_4193_2_state_Path }}"
-#     name: "{{ win_baseline_4193_2_state_Name }}"
-#     data: "{{ win_baseline_4193_2_state_Data }}"
-#     type: "{{ win_baseline_4193_2_state_Type }}"
-#   when:
-#     win_baseline_4193_2_state_Manage
+- name: "win_baseline_4193_state_2 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableUPnPRegistrar"
+  win_regedit:
+    path: "{{ win_baseline_4193_2_state_Path }}"
+    name: "{{ win_baseline_4193_2_state_Name }}"
+    data: "{{ win_baseline_4193_2_state_Data }}"
+    type: "{{ win_baseline_4193_2_state_Type }}"
+  when:
+    win_baseline_4193_2_state_Manage
 
-# - name: "win_baseline_4193_state_3 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableInBand802DOT11Registrar"
-#   win_regedit:
-#     path: "{{ win_baseline_4193_3_state_Path }}"
-#     name: "{{ win_baseline_4193_3_state_Name }}"
-#     data: "{{ win_baseline_4193_3_state_Data }}"
-#     type: "{{ win_baseline_4193_3_state_Type }}"
-#   when:
-#     win_baseline_4193_3_state_Manage
+- name: "win_baseline_4193_state_3 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableInBand802DOT11Registrar"
+  win_regedit:
+    path: "{{ win_baseline_4193_3_state_Path }}"
+    name: "{{ win_baseline_4193_3_state_Name }}"
+    data: "{{ win_baseline_4193_3_state_Data }}"
+    type: "{{ win_baseline_4193_3_state_Type }}"
+  when:
+    win_baseline_4193_3_state_Manage
 
-# - name: "win_baseline_4193_state_4 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableFlashConfigRegistrar"
-#   win_regedit:
-#     path: "{{ win_baseline_4193_4_state_Path }}"
-#     name: "{{ win_baseline_4193_4_state_Name }}"
-#     data: "{{ win_baseline_4193_4_state_Data }}"
-#     type: "{{ win_baseline_4193_4_state_Type }}"
-#   when:
-#     win_baseline_4193_4_state_Manage
+- name: "win_baseline_4193_state_4 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableFlashConfigRegistrar"
+  win_regedit:
+    path: "{{ win_baseline_4193_4_state_Path }}"
+    name: "{{ win_baseline_4193_4_state_Name }}"
+    data: "{{ win_baseline_4193_4_state_Data }}"
+    type: "{{ win_baseline_4193_4_state_Type }}"
+  when:
+    win_baseline_4193_4_state_Manage
 
-# - name: "win_baseline_4193_state_5 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableWPDRegistrar"
-#   win_regedit:
-#     path: "{{ win_baseline_4193_5_state_Path }}"
-#     name: "{{ win_baseline_4193_5_state_Name }}"
-#     data: "{{ win_baseline_4193_5_state_Data }}"
-#     type: "{{ win_baseline_4193_5_state_Type }}"
-#   when:
-#     win_baseline_4193_5_state_Manage
+- name: "win_baseline_4193_state_5 | Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableWPDRegistrar"
+  win_regedit:
+    path: "{{ win_baseline_4193_5_state_Path }}"
+    name: "{{ win_baseline_4193_5_state_Name }}"
+    data: "{{ win_baseline_4193_5_state_Data }}"
+    type: "{{ win_baseline_4193_5_state_Type }}"
+  when:
+    win_baseline_4193_5_state_Manage
 
 # - name: "win_baseline_4194_state | Ensure 'Turn off background regresh of group policy' is set to 'Disabled'"
 #   win_regedit:
