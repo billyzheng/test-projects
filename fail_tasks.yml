@@ -133,3 +133,56 @@
     action: "{{ win_baseline_2182_state_Action}}"
   when:
     win_baseline_2182_state_Manage
+
+# ! error, failed to translate the account replicators to a sid
+- name: "win_baseline_2184_state | Ensure 'Adjust memory quotas for a process' is set to 'Guests, Users, Replicators, Backup Operators, Event log Readers, Performance log Users, Print Operators'"
+  win_user_right:
+    name: "{{ win_baseline_2184_state_Name }}"
+    users: "{{ win_baseline_2184_state_Users }}"
+    action: "{{ win_baseline_2184_state_Action }}"
+  when:
+    win_baseline_2184_state_Manage
+
+# ------------------------------------------------------------------
+
+# WinRM
+# - name: "win_baseline_8249_state | Ensure 'Allow Basic authentication (client)' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_8249_state_Path }}"
+#     name: "{{ win_baseline_8249_state_Name }}"
+#     data: "{{ win_baseline_8249_state_Data }}"
+#     type: "{{ win_baseline_8249_state_Type }}"
+#   when: win_baseline_8249_state_Manage
+
+
+# - name: "win_baseline_8250_state | Ensure 'Allow Basic authentication (service)' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_8250_state_Path }}"
+#     name: "{{ win_baseline_8250_state_Name }}"
+#     data: "{{ win_baseline_8250_state_Data }}"
+#     type: "{{ win_baseline_8250_state_Type }}"
+#   when: win_baseline_8250_state_Manage
+
+# - name: "win_baseline_8251_state | Ensure 'Disallow WinRM from storing RunAs credentials' is set to 'Enabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_8251_state_Path }}"
+#     name: "{{ win_baseline_8251_state_Name }}"
+#     data: "{{ win_baseline_8251_state_Data }}"
+#     type: "{{ win_baseline_8251_state_Type }}"
+#   when: win_baseline_8251_state_Manage
+
+# - name: "win_baseline_8252_state | Ensure 'Allow unencrypted traffic (WinRM service)' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_8252_state_Path }}"
+#     name: "{{ win_baseline_8252_state_Name }}"
+#     data: "{{ win_baseline_8252_state_Data }}"
+#     type: "{{ win_baseline_8252_state_Type }}"
+#   when: win_baseline_8252_state_Manage
+
+# - name: "win_baseline_8253_state | Ensure 'Allow unencrypted traffic (WinRM client)' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_8253_state_Path }}"
+#     name: "{{ win_baseline_8253_state_Name }}"
+#     data: "{{ win_baseline_8253_state_Data }}"
+#     type: "{{ win_baseline_8253_state_Type }}"
+#   when: win_baseline_8253_state_Manage
