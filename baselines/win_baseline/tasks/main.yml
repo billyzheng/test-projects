@@ -66,131 +66,131 @@
 # # -----------------------
 # # Windows total playbooks
 # # -----------------------
-# - name: "win_baseline_1048_state | Ensure 'Shutdown - Clear virtual memory pagefile' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1048_state_Path }}"
-#     name: "{{ win_baseline_1048_state_Name }}"
-#     data: "{{ win_baseline_1048_state_Data }}"
-#     type: "{{ win_baseline_1048_state_Type }}"
-#   when:
-#     win_baseline_1048_state_Manage
+- name: "win_baseline_1048_state | Ensure 'Shutdown - Clear virtual memory pagefile' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1048_state_Path }}"
+    name: "{{ win_baseline_1048_state_Name }}"
+    data: "{{ win_baseline_1048_state_Data }}"
+    type: "{{ win_baseline_1048_state_Type }}"
+  when:
+    win_baseline_1048_state_Manage
 
-# - name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)'"
-#   win_security_policy:
-#     section: "{{ win_baseline_1071_state_Section }}"
-#     key: "{{ win_baseline_1071_state_Key }}"
-#     value: "{{ win_baseline_1071_state_Value }}"
-#   when:
-#     win_baseline_1071_state_Manage
+- name: "win_baseline_1071_state | Ensure 'Minimum password length' is set to '14 or more character(s)'"
+  win_security_policy:
+    section: "{{ win_baseline_1071_state_Section }}"
+    key: "{{ win_baseline_1071_state_Key }}"
+    value: "{{ win_baseline_1071_state_Value }}"
+  when:
+    win_baseline_1071_state_Manage
 
-# - name: "win_baseline_1072_state | Ensure 'Minimum password age' is set to '1 or more day(s)'"
-#   win_security_policy:
-#     section: "{{win_baseline_1072_state_Section }}"
-#     key: "{{ win_baseline_1072_state_Key }}"
-#     value: "{{ win_baseline_1072_state_Value }}"
-#   when:
-#     win_baseline_1072_state_Manage
+- name: "win_baseline_1072_state | Ensure 'Minimum password age' is set to '1 or more day(s)'"
+  win_security_policy:
+    section: "{{win_baseline_1072_state_Section }}"
+    key: "{{ win_baseline_1072_state_Key }}"
+    value: "{{ win_baseline_1072_state_Value }}"
+  when:
+    win_baseline_1072_state_Manage
 
-# - name: "win_baseline_1091_state | Ensure 'Interactive logon - Prompt user to change password before expiration' is set to 'between 5 and 14 days'"
-#   win_regedit:
-#     path: "{{ win_baseline_1091_state_Path }}"
-#     name: "{{ win_baseline_1091_state_Name }}"
-#     data: "{{ win_baseline_1091_state_Data }}"
-#     type: "{{ win_baseline_1091_state_Type }}"
-#   when:
-#     win_baseline_1091_state_Manage
+- name: "win_baseline_1091_state | Ensure 'Interactive logon - Prompt user to change password before expiration' is set to 'between 5 and 14 days'"
+  win_regedit:
+    path: "{{ win_baseline_1091_state_Path }}"
+    name: "{{ win_baseline_1091_state_Name }}"
+    data: "{{ win_baseline_1091_state_Data }}"
+    type: "{{ win_baseline_1091_state_Type }}"
+  when:
+    win_baseline_1091_state_Manage
 
-# - name: "win_baseline_1092_state | Ensure 'Password Complexity Requirements' is set to 'Enabled'"
-#   win_security_policy:
-#     section: "{{ win_baseline_1092_state_Section }}"
-#     key: "{{ win_baseline_1092_state_Key }}"
-#     value: "{{ win_baseline_1092_state_Value }}"
-#   when:
-#     win_baseline_1092_state_Manage
+- name: "win_baseline_1092_state | Ensure 'Password Complexity Requirements' is set to 'Enabled'"
+  win_security_policy:
+    section: "{{ win_baseline_1092_state_Section }}"
+    key: "{{ win_baseline_1092_state_Key }}"
+    value: "{{ win_baseline_1092_state_Value }}"
+  when:
+    win_baseline_1092_state_Manage
 
-# - name: "win_baseline_1134_state | Ensure 'Logon banner title' is ser to 'This is an interest computer system of ABB Asea Brown Boveri Ltd'"
-#   win_regedit:
-#     path: "{{ win_baseline_1134_state_Path }}"
-#     name: "{{ win_baseline_1134_state_Name }}"
-#     data: "{{ win_baseline_1134_state_Data }}"
-#     type: "{{ win_baseline_1134_state_Type }}"
-#   when:
-#     win_baseline_1134_state_Manage
+- name: "win_baseline_1134_state | Ensure 'Logon banner title' is ser to 'This is an interest computer system of ABB Asea Brown Boveri Ltd'"
+  win_regedit:
+    path: "{{ win_baseline_1134_state_Path }}"
+    name: "{{ win_baseline_1134_state_Name }}"
+    data: "{{ win_baseline_1134_state_Data }}"
+    type: "{{ win_baseline_1134_state_Type }}"
+  when:
+    win_baseline_1134_state_Manage
 
-# - name: "win_baseline_1156_state | Ensure 'Audit - Shut down system immediately if unable to log security audits' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1156_state_Path }}"
-#     name: "{{ win_baseline_1156_state_Name }}"
-#     data: "{{ win_baseline_1156_state_Data }}"
-#     type: "{{ win_baseline_1156_state_Type }}"
-#   when:
-#     win_baseline_1156_state_Manage
+- name: "win_baseline_1156_state | Ensure 'Audit - Shut down system immediately if unable to log security audits' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1156_state_Path }}"
+    name: "{{ win_baseline_1156_state_Name }}"
+    data: "{{ win_baseline_1156_state_Data }}"
+    type: "{{ win_baseline_1156_state_Type }}"
+  when:
+    win_baseline_1156_state_Manage
 
-# - name: "win_baseline_1162_state | Ensure 'Devices: Restrict floppy access to locally logged-on user only' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1162_state_Path }}"
-#     name: "{{ win_baseline_1162_state_Name }}"
-#     data: "{{ win_baseline_1162_state_Data }}"
-#     type: "{{ win_baseline_1162_state_Type }}"
-#   when:
-#     win_baseline_1162_state_Manage
+- name: "win_baseline_1162_state | Ensure 'Devices: Restrict floppy access to locally logged-on user only' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1162_state_Path }}"
+    name: "{{ win_baseline_1162_state_Name }}"
+    data: "{{ win_baseline_1162_state_Data }}"
+    type: "{{ win_baseline_1162_state_Type }}"
+  when:
+    win_baseline_1162_state_Manage
 
-# - name: "win_baseline_1163_state | Ensure 'Devices - Prevent users from installing printer drivers' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1163_state_Path }}"
-#     name: "{{ win_baseline_1163_state_Name }}"
-#     data: "{{ win_baseline_1163_state_Data }}"
-#     type: "{{ win_baseline_1163_state_Type }}"
-#   when:
-#     win_baseline_1163_state_Manage
+- name: "win_baseline_1163_state | Ensure 'Devices - Prevent users from installing printer drivers' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1163_state_Path }}"
+    name: "{{ win_baseline_1163_state_Name }}"
+    data: "{{ win_baseline_1163_state_Data }}"
+    type: "{{ win_baseline_1163_state_Type }}"
+  when:
+    win_baseline_1163_state_Manage
 
-# - name: "win_baseline_1164_state | Ensure 'Network security - Do not store LAN Manager hash value on next password change' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1164_state_Path }}"
-#     name: "{{ win_baseline_1164_state_Name }}"
-#     data: "{{ win_baseline_1164_state_Data }}"
-#     type: "{{ win_baseline_1164_state_Type }}"
-#   when:
-#     win_baseline_1164_state_Manage
+- name: "win_baseline_1164_state | Ensure 'Network security - Do not store LAN Manager hash value on next password change' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1164_state_Path }}"
+    name: "{{ win_baseline_1164_state_Name }}"
+    data: "{{ win_baseline_1164_state_Data }}"
+    type: "{{ win_baseline_1164_state_Type }}"
+  when:
+    win_baseline_1164_state_Manage
 
-# - name: "win_baseline_1169_state | Ensure 'MSS - (AutoAdminLogon) Enable Automatic Logon (not recommended)' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1169_state_Path }}"
-#     name: "{{ win_baseline_1169_state_Name }}"
-#     data: "{{ win_baseline_1169_state_Data }}"
-#     type: "{{ win_baseline_1169_state_Type }}"
-#   when: win_baseline_1169_state_Manage
+- name: "win_baseline_1169_state | Ensure 'MSS - (AutoAdminLogon) Enable Automatic Logon (not recommended)' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_1169_state_Path }}"
+    name: "{{ win_baseline_1169_state_Name }}"
+    data: "{{ win_baseline_1169_state_Data }}"
+    type: "{{ win_baseline_1169_state_Type }}"
+  when: win_baseline_1169_state_Manage
 
-# - name: "win_baseline_1172_state | Ensure 'MSS - (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)' is set"
-#   win_regedit:
-#     path: "{{ win_baseline_1172_state_Path }}"
-#     name: "{{ win_baseline_1172_state_Name }}"
-#     data: "{{ win_baseline_1172_state_Data }}"
-#     type: "{{ win_baseline_1172_state_Type }}"
-#   when: win_baseline_1172_state_Manage
+- name: "win_baseline_1172_state | Ensure 'MSS - (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)' is set"
+  win_regedit:
+    path: "{{ win_baseline_1172_state_Path }}"
+    name: "{{ win_baseline_1172_state_Name }}"
+    data: "{{ win_baseline_1172_state_Data }}"
+    type: "{{ win_baseline_1172_state_Type }}"
+  when: win_baseline_1172_state_Manage
 
-# - name: "win_baseline_1176_state | Devices: Restrict CD-ROM access to locally logged-on user only"
-#   win_regedit:
-#     path: "{{ win_baseline_1176_state_Path }}"
-#     name: "{{ win_baseline_1176_state_Name }}"
-#     data: "{{ win_baseline_1176_state_Data }}"
-#     type: "{{ win_baseline_1176_state_Type }}"
-#   when: win_baseline_1176_state_Manage
+- name: "win_baseline_1176_state | Devices: Restrict CD-ROM access to locally logged-on user only"
+  win_regedit:
+    path: "{{ win_baseline_1176_state_Path }}"
+    name: "{{ win_baseline_1176_state_Name }}"
+    data: "{{ win_baseline_1176_state_Data }}"
+    type: "{{ win_baseline_1176_state_Type }}"
+  when: win_baseline_1176_state_Manage
 
-# - name: "win_baseline_1177_state | Enure 'Enable IPSec protect Kerberos RSVP traffic' is set to 'Enabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_1177_state_Path }}"
-#     name: "{{ win_baseline_1177_state_Name }}"
-#     data: "{{ win_baseline_1177_state_Data }}"
-#     type: "{{ win_baseline_1177_state_Type }}"
-#   when: win_baseline_1177_state_Manage
+- name: "win_baseline_1177_state | Enure 'Enable IPSec protect Kerberos RSVP traffic' is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_1177_state_Path }}"
+    name: "{{ win_baseline_1177_state_Name }}"
+    data: "{{ win_baseline_1177_state_Data }}"
+    type: "{{ win_baseline_1177_state_Type }}"
+  when: win_baseline_1177_state_Manage
 
-# - name: "win_baseline_1182_state | Ensure 'Simple Netowrk Management Protocol trap' service is set t0 'Disabled'"
-#   win_service:
-#     name: snmptrap
-#     state: stopped
-#   when:
-#     win_baseline_1182_state_Manage
+- name: "win_baseline_1182_state | Ensure 'Simple Netowrk Management Protocol trap' service is set t0 'Disabled'"
+  win_service:
+    name: snmptrap
+    state: stopped
+  when:
+    win_baseline_1182_state_Manage
 
 # - name: "win_baseline_1183_state | Ensure 'Auto run for all drivers' is set to 'All drives'"
 #   win_regedit:
