@@ -143,6 +143,15 @@
   when:
     win_baseline_2184_state_Manage
 
+# ! cannot run twice
+- name: "win_baseline_19336_state | Ensure 'Turn on Module Logging (EnableModuleLogging)' is equal to '1'"
+  win_regedit:
+    path: "{{ win_baseline_19336_state_Path }}"
+    name: "{{ win_baseline_19336_state_Name }}"
+    data: "{{ win_baseline_19336_state_Data }}"
+    type: "{{ win_baseline_19336_state_Type }}"
+  when: win_baseline_19336_state_Manage
+
 # ------------------------------------------------------------------
 
 # WinRM
