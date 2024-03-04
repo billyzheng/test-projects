@@ -2894,40 +2894,40 @@
 #     type: "{{ win_baseline_16104_state_Type }}"
 #   when: win_baseline_16104_state_Manage
 
-- name: "win_baseline_17381_state | Ensure 'Audit token right adjusted' is set to 'Success and Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4471_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4471_state_AuditType }}"
-  when: win_baseline_4471_state_Manage
+# - name: "win_baseline_17381_state | Ensure 'Audit token right adjusted' is set to 'Success and Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4471_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4471_state_AuditType }}"
+#   when: win_baseline_4471_state_Manage
 
-- name: "win_baseline_17707_state | Ensure 'Turn off notifications network usage' is set to 'Enabled'"
-  win_regedit:
-    path: "{{ win_baseline_17707_state_Path }}"
-    name: "{{ win_baseline_17707_state_Name }}"
-    data: "{{ win_baseline_17707_state_Data }}"
-    type: "{{ win_baseline_17707_state_Type }}"
-  when: win_baseline_17707_state_Manage
-
-- name: "win_baseline_17746_state | Ensure 'Turn on Module Logging' is set to 'empty'"
-  win_regedit:
-    path: "{{ win_baseline_17746_state_Path }}"
-    name: "{{ win_baseline_17746_state_Name }}"
-    data: "{{ win_baseline_17746_state_Data }}"
-    type: "{{ win_baseline_17746_state_Type }}"
-  when: win_baseline_17746_state_Manage
-
-- name: "win_baseline_18935_state | Ensure ''TcpReceivePacketSize' is greater than or equal to '0'"
-  win_regedit:
-    path: "{{ win_baseline_18935_state_Path }}"
-    name: "{{ win_baseline_18935_state_Name }}"
-    data: "{{ win_baseline_18935_state_Data }}"
-    type: "{{ win_baseline_18935_state_Type }}"
-  when: win_baseline_18935_state_Manage
-
-# - name: "win_baseline_19336_state | Ensure 'Turn on Module Logging (EnableModuleLogging)' is equal to '1'"
+# - name: "win_baseline_17707_state | Ensure 'Turn off notifications network usage' is set to 'Enabled'"
 #   win_regedit:
-#     path: "{{ win_baseline_19336_state_Path }}"
-#     name: "{{ win_baseline_19336_state_Name }}"
-#     data: "{{ win_baseline_19336_state_Data }}"
-#     type: "{{ win_baseline_19336_state_Type }}"
-#   when: win_baseline_19336_state_Manage
+#     path: "{{ win_baseline_17707_state_Path }}"
+#     name: "{{ win_baseline_17707_state_Name }}"
+#     data: "{{ win_baseline_17707_state_Data }}"
+#     type: "{{ win_baseline_17707_state_Type }}"
+#   when: win_baseline_17707_state_Manage
+
+# - name: "win_baseline_17746_state | Ensure 'Turn on Module Logging' is set to 'empty'"
+#   win_regedit:
+#     path: "{{ win_baseline_17746_state_Path }}"
+#     name: "{{ win_baseline_17746_state_Name }}"
+#     data: "{{ win_baseline_17746_state_Data }}"
+#     type: "{{ win_baseline_17746_state_Type }}"
+#   when: win_baseline_17746_state_Manage
+
+# - name: "win_baseline_18935_state | Ensure ''TcpReceivePacketSize' is greater than or equal to '0'"
+#   win_regedit:
+#     path: "{{ win_baseline_18935_state_Path }}"
+#     name: "{{ win_baseline_18935_state_Name }}"
+#     data: "{{ win_baseline_18935_state_Data }}"
+#     type: "{{ win_baseline_18935_state_Type }}"
+#   when: win_baseline_18935_state_Manage
+
+- name: "win_baseline_19336_state | Ensure 'Turn on Module Logging (EnableModuleLogging)' is equal to '1'"
+  win_regedit:
+    path: "{{ win_baseline_19336_state_Path }}"
+    name: "{{ win_baseline_19336_state_Name }}"
+    data: "{{ win_baseline_19336_state_Data }}"
+    type: "{{ win_baseline_19336_state_Type }}"
+  when: win_baseline_19336_state_Manage
