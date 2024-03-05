@@ -42,7 +42,7 @@ for line in lines:
 
 print(len(registry_paths))
 print(len(registry_names))
-print(len(registry_data))
+print(registry_data)
 
 file.close()
 
