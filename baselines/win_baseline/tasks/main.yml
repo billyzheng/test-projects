@@ -2219,7 +2219,7 @@
     type: "{{ win_baseline_10087_state_Type }}"
   when: win_baseline_10087_state_Manage
 
-- name: "win_baselien_10088_state | Ensure 'Enable Windows NTP Server' is set to 'Disabled'"
+- name: "win_baseline_10088_state | Ensure 'Enable Windows NTP Server' is set to 'Disabled'"
   win_regedit:
     path: "{{ win_baseline_10088_state_Path }}"
     name: "{{ win_baseline_10088_state_Name }}"
@@ -2735,7 +2735,7 @@
     type: "{{ win_baseline_11209_state_Type }}"
   when: win_baseline_11209_state_Manage
 
-- name: "win_basleine_11212_state | Ensure 'Select when feature updates are received - DeferFeatureUpdatesPeriodInDays' is set to '180'"
+- name: "win_baseline_11212_state | Ensure 'Select when feature updates are received - DeferFeatureUpdatesPeriodInDays' is set to '180'"
   win_regedit:
     path: "{{ win_baseline_11212_state_Path }}"
     name: "{{ win_baseline_11212_state_Name }}"
@@ -2743,7 +2743,7 @@
     type: "{{ win_baseline_11212_state_Type }}"
   when: win_baseline_11212_state_Manage
 
-- name: "win_basleine_11213_state | Ensure 'Select when feature updates are received - BranchReadinnessLevel' is set to '32'"
+- name: "win_baseline_11213_state | Ensure 'Select when feature updates are received - BranchReadinnessLevel' is set to '32'"
   win_regedit:
     path: "{{ win_baseline_11213_state_Path }}"
     name: "{{ win_baseline_11213_state_Name }}"

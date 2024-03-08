@@ -11,10 +11,14 @@ for line in lines:
         control_ids.append(int(control_id))
     
 
-print(f'current finished tasks: {len(control_ids)}')
+print(f'items implemented and can run: {len(control_ids)}')
 
 file.close()
 
+manual_add = [2385, 2388, 2396, 2398, 2341, 2343, 2586, 3377, 3928, 4470, 4493, 4491, 1115, 1181, 2182, 2184, 19336, 11507]
+print(f'items implemented but cannot run: {len(manual_add)}')
+control_ids += manual_add
+print(f'current finished tasks: {len(control_ids)}')
 control_ids.sort()
 
 file.close()
@@ -23,11 +27,12 @@ file = open('/Users/ronechen/Ansible/test-projects/control_ids.txt')
 lines = file.readlines()
 lines = lines[0].split(',')
 exported_control_ids = [int(x.strip()) for x in lines]
-print(f'all tasks in baseline: {len(exported_control_ids)}')
+exported_control_ids_len = len(exported_control_ids)
+print(f'all items in the baseline: {len(exported_control_ids)}')
 for id in control_ids:
     try:
         exported_control_ids.remove(id)
     except:
-        print(id)
-print(f'left rate: {len(control_ids) / (len(exported_control_ids)+23)}%')
+        pass
+print(f'finish rate: {100 - (len(exported_control_ids) / exported_control_ids_len) * 100:.4f}%')
 print(f'lefted items: {exported_control_ids}')
