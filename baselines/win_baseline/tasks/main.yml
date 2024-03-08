@@ -362,14 +362,14 @@
   when:
     win_baseline_1372_state_Manage
 
-- name: "win_baseline_1173_state | Ensure 'Domain member - Disable machine account password changes' is set to 'Disabled'"
+- name: "win_baseline_1373_state | Ensure 'Domain member - Disable machine account password changes' is set to 'Disabled'"
   win_regedit:
-    path: "{{ win_baseline_1173_state_Path }}"
-    name: "{{ win_baseline_1173_state_Name }}"
-    data: "{{ win_baseline_1173_state_Data }}"
-    type: "{{ win_baseline_1173_state_Type }}"
+    path: "{{ win_baseline_1373_state_Path }}"
+    name: "{{ win_baseline_1373_state_Name }}"
+    data: "{{ win_baseline_1373_state_Data }}"
+    type: "{{ win_baseline_1373_state_Type }}"
   when:
-    win_baseline_1173_state_Manage
+    win_baseline_1373_state_Manage
 
 - name: "win_baseline_1374_state | Ensure 'Domain member - Maximum machine account password age' is set to '30 or fewer days, but not 0'"
   win_regedit:
@@ -914,14 +914,14 @@
   when:
     win_baseline_2484_state_Manage
 
-- name: "win_baseline_2518_state | Ensure 'Turn off Microsoft Peer-to-Peer Networking Services' is set to 'Enabled'"
+- name: "win_baseline_2581_state | Ensure 'Turn off Microsoft Peer-to-Peer Networking Services' is set to 'Enabled'"
   win_regedit:
-    path: "{{ win_baseline_2518_state_Path }}"
-    name: "{{ win_baseline_2518_state_Name }}"
-    data: "{{ win_baseline_2518_state_Data }}"
-    type: "{{ win_baseline_2518_state_Type }}"
+    path: "{{ win_baseline_2581_state_Path }}"
+    name: "{{ win_baseline_2581_state_Name }}"
+    data: "{{ win_baseline_2581_state_Data }}"
+    type: "{{ win_baseline_2581_state_Type }}"
   when:
-    win_baseline_2518_state_Manage
+    win_baseline_2581_state_Manage
 
 - name: "win_baseline_2582_state | Ensure 'User Account Control - Detect application installations and prompt for elevation' is set to 'Enabled'"
   win_regedit:
@@ -1467,7 +1467,7 @@
   when:
     win_baseline_4473_state_Manage
 
-- name: "win_baseline_4474 | Ensure 'Audit Other System Events' is set to 'Success and Failure'"
+- name: "win_baseline_4474_state | Ensure 'Audit Other System Events' is set to 'Success and Failure'"
   win_audit_policy_system:
     subcategory: "{{ win_baseline_4474_state_Subcategory }}"
     audit_type: "{{ win_baseline_4474_state_AuditType }}"
@@ -2083,7 +2083,7 @@
     type: "{{ win_baseline_9469_state_Type }}"
   when: win_baseline_9469_state_Manage
 
-- name: "win_baseline_10006 | Ensure 'Disallow Autoplay for non-volume devices' is set to 'Enabled'"
+- name: "win_baseline_10006_state | Ensure 'Disallow Autoplay for non-volume devices' is set to 'Enabled'"
   win_regedit:
     path: "{{ win_baseline_10006_state_Path }}"
     name: "{{ win_baseline_10006_state_Name }}"
@@ -2163,7 +2163,7 @@
     type: "{{ win_baseline_10028_state_Type }}"
   when: win_baseline_10028_state_Manage
 
-- name: "win_baseline_10081 | Ensure 'Require domain users to elevate when setting a network's location' is set to 'Enabled'"
+- name: "win_baseline_10081_state | Ensure 'Require domain users to elevate when setting a network's location' is set to 'Enabled'"
   win_regedit:
     path: "{{ win_baseline_10081_state_Path }}"
     name: "{{ win_baseline_10081_state_Name }}"
@@ -2335,13 +2335,13 @@
     audit_type: "{{ win_baseline_10152_state_AuditType }}"
   when: win_baseline_10152_state_Manage
 
-- name: "win_baseline_10354_state | Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'"
+- name: "win_baseline_10353_state | Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'"
   win_regedit:
-    path: "{{ win_baseline_10354_state_Path }}"
-    name: "{{ win_baseline_10354_state_Name }}"
-    data: "{{ win_baseline_10354_state_Data }}"
-    type: "{{ win_baseline_10354_state_Type }}"
-  when: win_baseline_10354_state_Manage
+    path: "{{ win_baseline_10353_state_Path }}"
+    name: "{{ win_baseline_10353_state_Name }}"
+    data: "{{ win_baseline_10353_state_Data }}"
+    type: "{{ win_baseline_10353_state_Type }}"
+  when: win_baseline_10353_state_Manage
 
 - name: "win_baseline_10362_state | Ensure 'Microsoft Support Diagnostic Tool - Turn on MSDT interactive communication with support provider' is set to 'Disabled'"
   win_regedit:
@@ -2471,13 +2471,13 @@
     type: "{{ win_baseline_10379_state_Type }}"
   when: win_baseline_10379_state_Manage
 
-- name: "win_baseline_20380_state | Ensure 'Donly allow SmartScreen Filter warning overrides for unverified files' is set to 'Enabled'"
+- name: "win_baseline_10380_state | Ensure 'Donly allow SmartScreen Filter warning overrides for unverified files' is set to 'Enabled'"
   win_regedit:
-    path: "{{ win_baseline_20380_state_Path }}"
-    name: "{{ win_baseline_20380_state_Name }}"
-    data: "{{ win_baseline_20380_state_Data }}"
-    type: "{{ win_baseline_20380_state_Type }}"
-  when: win_baseline_20380_state_Manage
+    path: "{{ win_baseline_10380_state_Path }}"
+    name: "{{ win_baseline_10380_state_Name }}"
+    data: "{{ win_baseline_10380_state_Data }}"
+    type: "{{ win_baseline_10380_state_Type }}"
+  when: win_baseline_10380_state_Manage
 
 - name: "win_baseline_10382_state | Ensure 'Turn off inPrivate browsing' is set to 'Enabled'"
   win_regedit:

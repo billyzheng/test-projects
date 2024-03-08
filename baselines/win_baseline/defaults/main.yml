@@ -289,12 +289,12 @@ win_baseline_1372_state_Name: "SignSecureChannel"
 win_baseline_1372_state_Data: "1"
 win_baseline_1372_state_Type: dword
 
-# win_baseline_1173_state | Ensure 'Domain member - Disable machine account password changes' is set to 'Disabled'
-win_baseline_1173_state_Manage: True
-win_baseline_1173_state_Path: 'HKLM:\System\Currentcontrolset\Services\Netlogon\Parameters'
-win_baseline_1173_state_Name: "DisablePasswordChange"
-win_baseline_1173_state_Data: "0"
-win_baseline_1173_state_Type: dword
+# win_baseline_1373_state | Ensure 'Domain member - Disable machine account password changes' is set to 'Disabled'
+win_baseline_1373_state_Manage: True
+win_baseline_1373_state_Path: 'HKLM:\System\Currentcontrolset\Services\Netlogon\Parameters'
+win_baseline_1373_state_Name: "DisablePasswordChange"
+win_baseline_1373_state_Data: "0"
+win_baseline_1373_state_Type: dword
 
 # win_baseline_1374_state | Ensure 'Domain member - Maximum machine account password age' is set to '30 or fewer days, but not 0'
 win_baseline_1374_state_Manage: True
@@ -765,12 +765,12 @@ win_baseline_2484_state_Section: "System Access"
 win_baseline_2484_state_Key: "ClearTextPassword"
 win_baseline_2484_state_Value: "0"
 
-# win_baseline_2518_state | Ensure 'Turn off Microsoft Peer-to-Peer Networking Services' is set to 'Enabled'
-win_baseline_2518_state_Manage: True
-win_baseline_2518_state_Path: 'HKLM:\Software\Policies\Microsoft\Peernet'
-win_baseline_2518_state_Name: "Disabled"
-win_baseline_2518_state_Data: "1"
-win_baseline_2518_state_Type: dword
+# win_baseline_2581_state | Ensure 'Turn off Microsoft Peer-to-Peer Networking Services' is set to 'Enabled'
+win_baseline_2581_state_Manage: True
+win_baseline_2581_state_Path: 'HKLM:\Software\Policies\Microsoft\Peernet'
+win_baseline_2581_state_Name: "Disabled"
+win_baseline_2581_state_Data: "1"
+win_baseline_2581_state_Type: dword
 
 # win_baseline_2582_state | Ensure 'User Account Control - Detect application installations and prompt for elevation' is set to 'Enabled'
 win_baseline_2582_state_Manage: True
@@ -2018,12 +2018,12 @@ win_baseline_10152_state_Manage: True
 win_baseline_10152_state_Subcategory: "Group Membership"
 win_baseline_10152_state_AuditType: "success"
 
-# win_baseline_10354_state | Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'
-win_baseline_10354_state_Manage: True
-win_baseline_10354_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\CloudContent'
-win_baseline_10354_state_Name: "DisableWindowsConsumerFeatures"
-win_baseline_10354_state_Data: "1"
-win_baseline_10354_state_Type: dword
+# win_baseline_10353_state | Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'
+win_baseline_10353_state_Manage: True
+win_baseline_10353_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\CloudContent'
+win_baseline_10353_state_Name: "DisableWindowsConsumerFeatures"
+win_baseline_10353_state_Data: "1"
+win_baseline_10353_state_Type: dword
 
 # win_baseline_10362_state | Ensure 'Microsoft Support Diagnostic Tool - Turn on MSDT interactive communication with support provider' is set to 'Disabled'
 win_baseline_10362_state_Manage: True
@@ -2137,12 +2137,12 @@ win_baseline_10379_state_Name: "PreventOverride"
 win_baseline_10379_state_Data: "1"
 win_baseline_10379_state_Type: dword
 
-# win_baseline_20380_state | Ensure 'Donly allow SmartScreen Filter warning overrides for unverified files' is set to 'Enabled'
-win_baseline_20380_state_Manage: True
-win_baseline_20380_state_Path: 'HKLM:\Software\Policies\Microsoft\MicrosoftEdge\PhishingFilter'
-win_baseline_20380_state_Name: "PreventOverrideAppRepUnknown"
-win_baseline_20380_state_Data: "1"
-win_baseline_20380_state_Type: dword
+# win_baseline_10380_state | Ensure 'Donly allow SmartScreen Filter warning overrides for unverified files' is set to 'Enabled'
+win_baseline_10380_state_Manage: True
+win_baseline_10380_state_Path: 'HKLM:\Software\Policies\Microsoft\MicrosoftEdge\PhishingFilter'
+win_baseline_10380_state_Name: "PreventOverrideAppRepUnknown"
+win_baseline_10380_state_Data: "1"
+win_baseline_10380_state_Type: dword
 
 # win_baseline_10382_state | Ensure 'Turn off inPrivate browsing' is set to 'Enabled'
 win_baseline_10382_state_Manage: True
