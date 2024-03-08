@@ -4,5 +4,3 @@ collections:
     source: https://galaxy.ansible.com
 
   - name: ansible.windows
-
-  - name: win_security_policy
