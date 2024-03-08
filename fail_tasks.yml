@@ -152,6 +152,13 @@
     type: "{{ win_baseline_19336_state_Type }}"
   when: win_baseline_19336_state_Manage
 
+# ! cannot find the constant
+- name: "win_baseline_11507_state | Ensure 'Obtain an impersonation token for another user in the same session' is set to 'Administrators, Local Service, Network Service"
+  win_user_right:
+    name: "{{ win_baseline_11507_state_Name }}"
+    users: "{{ win_baseline_11507_state_Users }}"
+    action: "{{ win_baseline_11507_state_Action }}"
+  when: win_baseline_11507_state_Manage
 # ------------------------------------------------------------------
 
 # WinRM

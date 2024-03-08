@@ -7,7 +7,7 @@ flag = False
 control_ids = []
 
 for line in lines:
-    if 'win_security_policy' in line:
+    if 'win_audit_policy_system' in line:
         flag = True
         continue
     if flag:
@@ -32,9 +32,9 @@ registry_data = []
 # find all lines that contain id in control_ids
 for line in lines:
     for control_id in control_ids:
-        if 'win_baseline_' + str(control_id) + '_state_Key' in line:
+        if 'win_baseline_' + str(control_id) + '_state_Subcategory' in line:
             registry_names.append(line.split(': ')[-1].strip().removesuffix('\n'))
-        if 'win_baseline_' + str(control_id) + '_state_Value' in line:
+        if 'win_baseline_' + str(control_id) + '_state_AuditType' in line:
             registry_data.append(line.split(': ')[-1].strip().removesuffix('\n'))
             test_ids.remove(control_id)
 
@@ -44,7 +44,7 @@ print(registry_data)
 
 file.close()
 
-output_file = open('security_policy_value_export2.csv', 'w')
+output_file = open('audit_export.csv', 'w')
 for b, c in zip(registry_names, registry_data):
     output_file.write(b + ',' + c + '\n')
 output_file.close

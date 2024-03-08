@@ -2197,14 +2197,14 @@ win_baseline_10475_state_Type: dword
 # win_baseline_10592_state | Hardened UNC Paths is set to 'Enabled, with 'Require Mutual Authentication' and 'Require Integrity' set for NETLOGON shares'
 win_baseline_10592_state_Manage: True
 win_baseline_10592_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths'
-win_baseline_10592_state_Name: "\\\\*\\NETLOGON"
+win_baseline_10592_state_Name: "\\\\\\\\\\*\\\\NETLOGON"
 win_baseline_10592_state_Data: "RequireMutualAuthentication=1, RequireIntegrity=1"
 win_baseline_10592_state_Type: string
 
 # win_baseline_10593_state | Hardened UNC Paths is set to 'Enabled, with 'Require Mutual Authentication' and 'Require Integrity' set for SYSVOL shares'
 win_baseline_10593_state_Manage: True
 win_baseline_10593_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths'
-win_baseline_10593_state_Name: "\\\\*\\SYSVOL"
+win_baseline_10593_state_Name: "\\\\\\\\\\*\\\\SYSVOL"
 win_baseline_10593_state_Data: "RequireMutualAuthentication=1, RequireIntegrity=1"
 win_baseline_10593_state_Type: string
 
