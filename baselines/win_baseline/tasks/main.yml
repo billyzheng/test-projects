@@ -677,10 +677,13 @@
   ansible.windows.win_user_right:
       name: SeIncreaseQuotaPrivilege
       users:
-          - Administrators
-          - Local Service
-          - Network Service
-      action: remove
+          - Guests
+          - Users
+          - Replicator
+          - Backup Operators
+          - Event log Readers
+          - Performance Log Users
+      action: set
 
 # - name: "win_baseline_2185_state | Ensure 'Allow logon through terminal services' is set to 'Administrators, Remote Desktop Users"
 #   win_user_right:
