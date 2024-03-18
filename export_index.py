@@ -18,7 +18,7 @@ control_ids = set(control_ids)
 table_data.append(['items implemented and can run', len(control_ids)])
 file.close()
 
-manual_add = [2385, 2388, 2396, 2398, 2341, 2343, 2586, 3377, 3928, 4470, 4493, 4491, 1115, 1181, 2182, 2184, 19336, 11507]
+manual_add = [2385, 2388, 2396, 2398, 2343, 2586, 3377, 3928, 4470, 4493, 4491, 1115, 1181, 2182, 2184, 19336, 11507]
 # print(f'items implemented but cannot run: {len(manual_add)}')
 table_data.append(['items implemented but cannot run', len(manual_add)])
 control_ids = control_ids.union(manual_add)
@@ -57,9 +57,10 @@ fail_item = manual_add
 # print(fail_item)
 # print(exported_control_ids)
 fail_set = manual_add + exported_control_ids
+# print(len(fail_set))
 fail_set.sort()
-for i, item in enumerate(fail_set):
-    print(i,item)
+for i, item in enumerate(exported_control_ids):
+    print(i+1,item)
 
 
 print(f'\n4193 contains 5 different tasks.')
