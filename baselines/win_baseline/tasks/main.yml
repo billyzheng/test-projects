@@ -2937,13 +2937,13 @@
 #     type: "{{ win_baseline_17707_state_Type }}"
 #   when: win_baseline_17707_state_Manage
 
-- name: "win_baseline_10707_state | Ensure Network access Restrict clients allowed to make remote calls to SAM is set to 'Enabled'"
+- name: "win_baseline_10968_state | Ensure Network access Restrict clients allowed to make remote calls to SAM is set to 'Enabled'"
   win_regedit:
-    path: "{{ win_baseline_10707_state_Path }}"
-    name: "{{ win_baseline_10707_state_Name }}"
-    data: "{{ win_baseline_10707_state_Data }}"
-    type: "{{ win_baseline_10707_state_Type }}"
-  when: win_baseline_10707_state_Manage
+    path: "{{ win_baseline_10968_state_Path }}"
+    name: "{{ win_baseline_10968_state_Name }}"
+    data: "{{ win_baseline_10968_state_Data }}"
+    type: "{{ win_baseline_10968_state_Type }}"
+  when: win_baseline_10968_state_Manage
 
 # - name: "win_baseline_17746_state | Ensure 'Turn on Module Logging' is set to 'empty'"
 #   win_regedit:

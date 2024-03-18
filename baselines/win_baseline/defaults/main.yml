@@ -2549,12 +2549,12 @@ win_baseline_17707_state_Name: "NoCloudApplicationNotification"
 win_baseline_17707_state_Data: "1"
 win_baseline_17707_state_Type: dword
 
-# win_baseline_10707_state | Ensure Network access Restrict clients allowed to make remote calls to SAM is set to 'Enabled'
-win_baseline_10707_state_Manage: True
-win_baseline_10707_state_Path: 'HKLM:\System\CurrentControlSet\Control\Lsa'
-win_baseline_10707_state_Name: "RestrictRemoteSAM"
-win_baseline_10707_state_Data: "enabled"
-win_baseline_10707_state_Type: string
+# win_baseline_10968_state | Ensure Network access Restrict clients allowed to make remote calls to SAM is set to 'Enabled'
+win_baseline_10968_state_Manage: True
+win_baseline_10968_state_Path: 'HKLM:\System\CurrentControlSet\Control\Lsa'
+win_baseline_10968_state_Name: "RestrictRemoteSAM"
+win_baseline_10968_state_Data: "enabled"
+win_baseline_10968_state_Type: string
 
 
 # win_baseline_17746_state | Ensure 'Turn on Module Logging' is set to 'empty'
