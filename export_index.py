@@ -52,7 +52,14 @@ for row in table_data:
     table.add_row(row)
 
 print(table)
-print(f'lefted items: {(exported_control_ids)}')
-exp = [9301, ]
+# print(f'lefted items: {len(exported_control_ids)}')
+fail_item = manual_add
+# print(fail_item)
+# print(exported_control_ids)
+fail_set = manual_add + exported_control_ids
+fail_set.sort()
+for i, item in enumerate(fail_set):
+    print(i,item)
 
-print(f'4193 contains 5 different tasks.')
+
+print(f'\n4193 contains 5 different tasks.')
