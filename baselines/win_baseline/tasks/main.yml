@@ -1970,26 +1970,26 @@
 #     value: "{{ win_baseline_8279_state_Value }}"
 #   when: win_baseline_8279_state_Manage
 
-- name: "win_baseline_8365_state | Ensure Accounts Administrator account status is set to 'Enabled"
-  win_security_policy:
-    section: "{{ win_baseline_8365_state_Section }}"
-    key: "{{ win_baseline_8365_state_Key }}"
-    value: "{{ win_baseline_8365_state_Value }}"
-  when: win_baseline_8365_state_Manage
+# - name: "win_baseline_8365_state | Ensure Accounts Administrator account status is set to 'Enabled"
+#   win_security_policy:
+#     section: "{{ win_baseline_8365_state_Section }}"
+#     key: "{{ win_baseline_8365_state_Key }}"
+#     value: "{{ win_baseline_8365_state_Value }}"
+#   when: win_baseline_8365_state_Manage
 
-- name: "win_baseline_8366_state | Make Changes To Guest Name."
-  win_security_policy:
-    section: "{{ win_baseline_8366_state_Section }}"
-    key: "{{ win_baseline_8366_state_Key }}"
-    value: "{{ win_baseline_8366_state_Value }}"
-  when: win_baseline_8366_state_Manage
+# - name: "win_baseline_8366_state | Make Changes To Guest Name."
+#   win_security_policy:
+#     section: "{{ win_baseline_8366_state_Section }}"
+#     key: "{{ win_baseline_8366_state_Key }}"
+#     value: "{{ win_baseline_8366_state_Value }}"
+#   when: win_baseline_8366_state_Manage
 
-- name: "win_baseline_8367_state | Make Changes To Admin Name."
-  win_security_policy:
-    section: "{{ win_baseline_8367_state_Section }}"
-    key: "{{ win_baseline_8367_state_Key }}"
-    value: "{{ win_baseline_8367_state_Value }}"
-  when: win_baseline_8367_state_Manage
+# - name: "win_baseline_8367_state | Make Changes To Admin Name."
+#   win_security_policy:
+#     section: "{{ win_baseline_8367_state_Section }}"
+#     key: "{{ win_baseline_8367_state_Key }}"
+#     value: "{{ win_baseline_8367_state_Value }}"
+#   when: win_baseline_8367_state_Manage
 
 # - name: "win_baseline_8397_state | Ensure 'Turn off access to the store' is set to Enabled"
 #   win_regedit:
@@ -2102,6 +2102,23 @@
 #     data: "{{ win_baseline_9025_state_Data }}"
 #     type: "{{ win_baseline_9025_state_Type }}"
 #   when: win_baseline_9025_state_Manage
+
+
+- name: "19.7.4.2 | PATCH | Ensure Notify antivirus programs when opening attachments is set to Enabled"
+  block:
+      - name: "19.7.4.2 | PATCH | Ensure Notify antivirus programs when opening attachments is set to Enabled"
+        ansible.windows.win_regedit:
+            path: HKU:\.DEFAULT\Software\Microsoft\Windows\Currentversion\Policies\Attachments
+            name: ScanWithAntiVirus
+            data: 3
+            type: dword
+
+      - name: "19.7.4.2 | PATCH | Ensure Notify antivirus programs when opening attachments is set to Enabled"
+        ansible.windows.win_regedit:
+            path: HKCU:\Software\Microsoft\Windows\Currentversion\Policies\Attachments
+            name: ScanWithAntiVirus
+            data: 3
+            type: dword
 
 # - name: "win_baseline_9402_state | Ensure 'Turn off the advertising ID' is set to 'Enabled'"
 #   win_regedit:
