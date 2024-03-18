@@ -2103,21 +2103,6 @@
 #     type: "{{ win_baseline_9025_state_Type }}"
 #   when: win_baseline_9025_state_Manage
 
-
-- name: "19.7.4.2 | PATCH | Ensure Notify antivirus programs when opening attachments is set to Enabled"
-  ansible.windows.win_regedit:
-      path: HKU:\.DEFAULT\Software\Microsoft\Windows\Currentversion\Policies\Attachments
-      name: ScanWithAntiVirus
-      data: 3
-      type: dword
-
-- name: "19.7.4.2 | PATCH | Ensure Notify antivirus programs when opening attachments is set to Enabled"
-  ansible.windows.win_regedit:
-      path: HKCU:\Software\Microsoft\Windows\Currentversion\Policies\Attachments
-      name: ScanWithAntiVirus
-      data: 3
-      type: dword
-
 # - name: "win_baseline_9402_state | Ensure 'Turn off the advertising ID' is set to 'Enabled'"
 #   win_regedit:
 #     path: "{{ win_baseline_9402_state_Path }}"
@@ -2951,6 +2936,14 @@
 #     data: "{{ win_baseline_17707_state_Data }}"
 #     type: "{{ win_baseline_17707_state_Type }}"
 #   when: win_baseline_17707_state_Manage
+
+- name: "win_baseline_10707_state | Ensure Network access Restrict clients allowed to make remote calls to SAM is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_10707_state_Path }}"
+    name: "{{ win_baseline_10707_state_Name }}"
+    data: "{{ win_baseline_10707_state_Data }}"
+    type: "{{ win_baseline_10707_state_Type }}"
+  when: win_baseline_10707_state_Manage
 
 # - name: "win_baseline_17746_state | Ensure 'Turn on Module Logging' is set to 'empty'"
 #   win_regedit:
