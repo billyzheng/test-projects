@@ -2541,7 +2541,6 @@ win_baseline_17381_state_Manage: True
 win_baseline_17381_state_Subcategory: "Other Object Access Events"
 win_baseline_17381_state_AuditType: "success, failure"
 
-
 # win_baseline_17707_state | Ensure 'Turn off notifications network usage' is set to 'Enabled'
 win_baseline_17707_state_Manage: True
 win_baseline_17707_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\PushNotifications'
@@ -2556,6 +2555,31 @@ win_baseline_10968_state_Name: "RestrictRemoteSAM"
 win_baseline_10968_state_Data: "enabled"
 win_baseline_10968_state_Type: string
 
+# win_baseline_11028_state | Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled
+win_baseline_11028_state_1_path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
+win_baseline_11028_state_1_name: EnableRegistrars
+win_baseline_11028_state_1_data: 0
+win_baseline_11028_state_1_type: dword
+
+win_baseline_11028_state_2_path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
+win_baseline_11028_state_2_name: DisableUPnPRegistrar
+win_baseline_11028_state_2_data: 0
+win_baseline_11028_state_2_type: dword
+
+win_baseline_11028_state_3_path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
+win_baseline_11028_state_3_name: DisableInBand802DOT11Registrar
+win_baseline_11028_state_3_data: 0
+win_baseline_11028_state_3_type: dword
+
+win_baseline_11028_state_4_path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
+win_baseline_11028_state_4_name: DisableFlashConfigRegistrar
+win_baseline_11028_state_4_data: 0
+win_baseline_11028_state_4_type: dword
+
+win_baseline_11028_state_5_path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
+win_baseline_11028_state_5_name: DisableWPDRegistrar
+win_baseline_11028_state_5_data: 0
+win_baseline_11028_state_5_type: dword
 
 # win_baseline_17746_state | Ensure 'Turn on Module Logging' is set to 'empty'
 win_baseline_17746_state_Manage: True
