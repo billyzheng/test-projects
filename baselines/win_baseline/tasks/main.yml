@@ -1981,7 +1981,7 @@
   community.windows.win_security_policy:
       section: "System Access"
       key: "NewGuestName"
-      vallue: "Account Renamed"
+      value: "Account Renamed"
 
 # - name: "win_baseline_8397_state | Ensure 'Turn off access to the store' is set to Enabled"
 #   win_regedit:
