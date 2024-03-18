@@ -1970,18 +1970,26 @@
 #     value: "{{ win_baseline_8279_state_Value }}"
 #   when: win_baseline_8279_state_Manage
 
-# - name: "win_baseline_8365_state | Ensure Accounts Administrator account status is set to 'Enabled"
-#   win_security_policy:
-#     section: "{{ win_baseline_8365_state_Section }}"
-#     key: "{{ win_baseline_8365_state_Key }}"
-#     value: "{{ win_baseline_8365_state_Value }}"
-#   when: win_baseline_8365_state_Manage
+- name: "win_baseline_8365_state | Ensure Accounts Administrator account status is set to 'Enabled"
+  win_security_policy:
+    section: "{{ win_baseline_8365_state_Section }}"
+    key: "{{ win_baseline_8365_state_Key }}"
+    value: "{{ win_baseline_8365_state_Value }}"
+  when: win_baseline_8365_state_Manage
 
-- name: "2.3.1.6 | AUDIT | Configure Accounts Rename guest account. | Make Changes To Guest Name."
-  community.windows.win_security_policy:
-      section: "System Access"
-      key: "NewGuestName"
-      value: "Account Renamed"
+- name: "win_baseline_8366_state | Make Changes To Guest Name."
+  win_security_policy:
+    section: "{{ win_baseline_8366_state_Section }}"
+    key: "{{ win_baseline_8366_state_Key }}"
+    value: "{{ win_baseline_8366_state_Value }}"
+  when: win_baseline_8366_state_Manage
+
+- name: "win_baseline_8367_state | Make Changes To Admin Name."
+  win_security_policy:
+    section: "{{ win_baseline_8367_state_Section }}"
+    key: "{{ win_baseline_8367_state_Key }}"
+    value: "{{ win_baseline_8367_state_Value }}"
+  when: win_baseline_8367_state_Manage
 
 # - name: "win_baseline_8397_state | Ensure 'Turn off access to the store' is set to Enabled"
 #   win_regedit:
