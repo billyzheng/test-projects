@@ -1971,10 +1971,10 @@
 #   when: win_baseline_8279_state_Manage
 
 - name: "2.3.1.1 | PATCH | Ensure Accounts Administrator account status is set to Disabled MS only"
-  community.windows.win_security_policy:
+  win_security_policy:
       section: System Access
-      key: EnableAdminAccount
-      value: 0
+      key: "EnableAdminAccount"
+      value: 1
 
 # - name: "win_baseline_8397_state | Ensure 'Turn off access to the store' is set to Enabled"
 #   win_regedit:
