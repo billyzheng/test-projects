@@ -2105,20 +2105,18 @@
 
 
 - name: "19.7.4.2 | PATCH | Ensure Notify antivirus programs when opening attachments is set to Enabled"
-  block:
-      - name: "19.7.4.2 | PATCH | Ensure Notify antivirus programs when opening attachments is set to Enabled"
-        ansible.windows.win_regedit:
-            path: HKU:\.DEFAULT\Software\Microsoft\Windows\Currentversion\Policies\Attachments
-            name: ScanWithAntiVirus
-            data: 3
-            type: dword
+  ansible.windows.win_regedit:
+      path: HKU:\.DEFAULT\Software\Microsoft\Windows\Currentversion\Policies\Attachments
+      name: ScanWithAntiVirus
+      data: 3
+      type: dword
 
-      - name: "19.7.4.2 | PATCH | Ensure Notify antivirus programs when opening attachments is set to Enabled"
-        ansible.windows.win_regedit:
-            path: HKCU:\Software\Microsoft\Windows\Currentversion\Policies\Attachments
-            name: ScanWithAntiVirus
-            data: 3
-            type: dword
+- name: "19.7.4.2 | PATCH | Ensure Notify antivirus programs when opening attachments is set to Enabled"
+  ansible.windows.win_regedit:
+      path: HKCU:\Software\Microsoft\Windows\Currentversion\Policies\Attachments
+      name: ScanWithAntiVirus
+      data: 3
+      type: dword
 
 # - name: "win_baseline_9402_state | Ensure 'Turn off the advertising ID' is set to 'Enabled'"
 #   win_regedit:
