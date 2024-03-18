@@ -921,13 +921,33 @@
 #   when:
 #     win_baseline_2342_state_Manage
 
-- name: "win_baseline_2343_state | Ensure 'Reset account lockout counter after' is set less than or equal to '30'"
-  win_security_policy:
-    section: "{{ win_baseline_2343_state_Section }}"
-    key: "{{ win_baseline_2343_state_Key }}"
-    value: "{{ win_baseline_2343_state_Value }}"
-  when:
-    win_baseline_2343_state_Manage
+# - name: "win_baseline_2343_state | Ensure 'Reset account lockout counter after' is set less than or equal to '30'"
+#   win_security_policy:
+#     section: "{{ win_baseline_2343_state_Section }}"
+#     key: "{{ win_baseline_2343_state_Key }}"
+#     value: "{{ win_baseline_2343_state_Value }}"
+#   when:
+#     win_baseline_2343_state_Manage
+
+- name: "Get Built-In Admin Account"
+  block:
+    - name: Query User Accounts
+      community.windows.win_user:
+        name: '*'
+        state: query
+      register: admin_accounts
+
+    - name: Filter Admin Account Names
+      set_fact:
+        filtered_accounts: "{{ admin_accounts.users | map(attribute='name') | select('match', '^(?!Administrator$)') | list }}"
+  rescue:
+      - name: Handle Error
+        debug:
+          msg: "An error occurred while retrieving user accounts."
+
+- name: "Display Filtered Account Names"
+  debug:
+    var: filtered_accounts
 
 # - name: "win_baseline_2484_state | Ensure 'Store passwords using reversible encryption' is set to 'Disabled'"
 #   win_security_policy:
