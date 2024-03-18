@@ -931,17 +931,17 @@
 
 - name: "Get Built-In Admin Account"
   block:
-    - name: Query User Accounts
+    - name: "Query User Accounts"
       community.windows.win_user:
         name: '*'
         state: query
       register: admin_accounts
 
-    - name: Filter Admin Account Names
+    - name: "Filter Admin Account Names"
       set_fact:
         filtered_accounts: "{{ admin_accounts.users | map(attribute='name') | select('match', '^(?!Administrator$)') | list }}"
   rescue:
-      - name: Handle Error
+      - name: "Handle Error"
         debug:
           msg: "An error occurred while retrieving user accounts."
 
