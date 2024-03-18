@@ -1680,6 +1680,12 @@ win_baseline_8279_state_Section: "System access"
 win_baseline_8279_state_Key: "LsaAnonymousNameLookup"
 win_baseline_8279_state_Value: "0"
 
+# win_baseline_8365_state | Ensure Accounts Administrator account status is set to 'Enabled
+win_baseline_8365_state_Manage: True
+win_baseline_8365_state_Section: "System access"
+win_baseline_8365_state_Key: "EnableAdminAccount"
+win_baseline_8365_state_Value: "1"
+
 # win_baseline_8397_state | Ensure 'Turn off access to the store' is set to Enabled
 win_baseline_8397_state_Manage: True
 win_baseline_8397_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Explorer'
