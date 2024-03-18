@@ -1695,7 +1695,7 @@ win_baseline_8366_state_Value: "Account Renamed"
 # win_baseline_8367_state | Make Changes To Admin Name.
 win_baseline_8367_state_Manage: True
 win_baseline_8367_state_Section: "System access"
-win_baseline_8367_state_Key: "NewAdminName"
+win_baseline_8367_state_Key: "NewAdministratorName
 win_baseline_8367_state_Value: "^Account Renamed$"
 
 # win_baseline_8397_state | Ensure 'Turn off access to the store' is set to Enabled
