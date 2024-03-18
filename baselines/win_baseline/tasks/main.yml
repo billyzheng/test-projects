@@ -673,13 +673,13 @@
 #   when:
 #     win_baseline_2183_state_Manage
 
-- name: "win_baseline_2184_state | Ensure Adjust memory quotas for a process is set to 'Guests, Users, Replicator, Backup Operators, Event log Readers, Performance Log Users'"
-  win_user_right:
-    name: "{{ win_baseline_2184_state_Name }}"
-    users: "{{ win_baseline_2184_state_Users }}"
-    action: "{{ win_baseline_2184_state_Action }}"
-  when:
-    win_baseline_2184_state_Manage
+# - name: "win_baseline_2184_state | Ensure Adjust memory quotas for a process is set to 'Guests, Users, Replicator, Backup Operators, Event log Readers, Performance Log Users'"
+#   win_user_right:
+#     name: "{{ win_baseline_2184_state_Name }}"
+#     users: "{{ win_baseline_2184_state_Users }}"
+#     action: "{{ win_baseline_2184_state_Action }}"
+#   when:
+#     win_baseline_2184_state_Manage
 
 # - name: "win_baseline_2185_state | Ensure 'Allow logon through terminal services' is set to 'Administrators, Remote Desktop Users"
 #   win_user_right:
