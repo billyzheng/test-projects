@@ -931,7 +931,7 @@
 
 - name: Get User Accounts
   community.windows.win_user:
-    name: '*'
+    name: 'bob'
     state: query
   register: user_accounts
 
