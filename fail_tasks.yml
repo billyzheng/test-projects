@@ -1,5 +1,5 @@
 # ! error, details in the table
-# - name: "1507 | Ensure 'Generate security audits' is set to 'Administrators, IIS Apppool\\.* Service, Network Service"
+# - name: "2385 | Ensure 'Generate security audits' is set to 'Administrators, IIS Apppool\\.* Service, Network Service"
 #   win_user_right:
 #     name: "{{ win_baseline_2385_state_Name }}"
 #     users: "{{ win_baseline_2385_state_Users }}"

@@ -13,6 +13,7 @@ for line in lines:
         control_ids.append(int(control_id))
     
 
+control_ids = set(control_ids)
 # print(f'items implemented and can run: {len(control_ids)}')
 table_data.append(['items implemented and can run', len(control_ids)])
 file.close()
@@ -20,10 +21,11 @@ file.close()
 manual_add = [2385, 2388, 2396, 2398, 2341, 2343, 2586, 3377, 3928, 4470, 4493, 4491, 1115, 1181, 2182, 2184, 19336, 11507]
 # print(f'items implemented but cannot run: {len(manual_add)}')
 table_data.append(['items implemented but cannot run', len(manual_add)])
-control_ids += manual_add
+control_ids = control_ids.union(manual_add)
+
 # print(f'current finished tasks: {len(control_ids)}')
 table_data.append(['current finished tasks', len(control_ids)])
-control_ids.sort()
+# control_ids.sort()
 
 file.close()
 
@@ -50,4 +52,7 @@ for row in table_data:
     table.add_row(row)
 
 print(table)
-print(f'lefted items: {exported_control_ids}')
+print(f'lefted items: {(exported_control_ids)}')
+exp = [9301, ]
+
+print(f'4193 contains 5 different tasks.')
