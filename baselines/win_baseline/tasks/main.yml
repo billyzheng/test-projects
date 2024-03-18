@@ -929,12 +929,16 @@
 #   when:
 #     win_baseline_2343_state_Manage
 
+- name: Ensure user bob is absent
+  win_user:
+    name: bob
+    state: absent
 
-- name: "Query User Accounts"
-  community.windows.win_user:
-    name: '*'
-    state: query
-  register: admin_accounts
+# - name: "Query User Accounts"
+#   community.windows.win_user:
+#     name: '*'
+#     state: query
+#   register: admin_accounts
 
 #     - name: "Filter Admin Account Names"
 #       set_fact:
@@ -944,9 +948,9 @@
 #         debug:
 #           msg: "An error occurred while retrieving user accounts."
 
-- name: "Display Filtered Account Names"
-  debug:
-    var: filtered_accounts
+# - name: "Display Filtered Account Names"
+#   debug:
+#     var: filtered_accounts
 
 # - name: "win_baseline_2484_state | Ensure 'Store passwords using reversible encryption' is set to 'Disabled'"
 #   win_security_policy:
