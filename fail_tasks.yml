@@ -36,13 +36,7 @@
 #     win_baseline_2398_state_Manage
 
  #!The following tasks should be test one by one, to find the credential problem.
-# - name: "win_baseline_2341_state | Ensure 'Account lockout duration' is set to '30 or more minute(s)'"
-#   win_security_policy:
-#     section: "{{ win_baseline_2341_state_Section }}"
-#     key: "{{ win_baseline_2341_state_Key }}"
-#     value: "{{ win_baseline_2341_state_Value }}"
-#   when:
-#     win_baseline_2341_state_Manage
+
 
 # ! error
 # - name: "win_baseline_2343_state | Ensure 'Reset account lockout counter after' is set to '30 or less minute(s)'"

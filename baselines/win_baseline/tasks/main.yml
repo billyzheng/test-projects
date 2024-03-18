@@ -614,12 +614,12 @@
 #   when:
 #     win_baseline_1509_state_Manage
 
-- name: "win_baseline_1507_state | Ensure 'Automatic update/Windows update' service is set to 'Disabled'"
-  win_service:
-   name: "{{ win_baseline_1507_state_Name }}"
-   state: "{{ win_baseline_1507_state_State }}"
-  when:
-    win_baseline_1507_state_Manage
+# - name: "win_baseline_1507_state | Ensure 'Automatic update/Windows update' service is set to 'Disabled'"
+#   win_service:
+#    name: "{{ win_baseline_1507_state_Name }}"
+#    state: "{{ win_baseline_1507_state_State }}"
+#   when:
+#     win_baseline_1507_state_Manage
 
 # - name: "win_baseline_1510_state | Ensure 'Routing and Remote Access' is set to 'Disabled'"
 #   win_regedit:
@@ -904,6 +904,14 @@
 #     action: "{{ win_baseline_2402_state_Action }}"
 #   when:
 #     win_baseline_2402_state_Manage
+
+- name: "win_baseline_2341_state | Ensure 'Account lockout duration' is set to '30 or more minute(s)'"
+  win_security_policy:
+    section: "{{ win_baseline_2341_state_Section }}"
+    key: "{{ win_baseline_2341_state_Key }}"
+    value: "{{ win_baseline_2341_state_Value }}"
+  when:
+    win_baseline_2341_state_Manage
 
 # - name: "win_baseline_2342_state | Ensure 'Account lockout threshold' is set to '10 or fewer invalid logon attempt(s), but not 0'"
 #   win_security_policy:
