@@ -673,6 +673,15 @@
 #   when:
 #     win_baseline_2183_state_Manage
 
+- name: "2.2.6 | PATCH | Ensure Adjust memory quotas for a process is set to Administrators LOCAL SERVICE NETWORK SERVICE"
+  ansible.windows.win_user_right:
+      name: SeIncreaseQuotaPrivilege
+      users:
+          - Administrators
+          - Local Service
+          - Network Service
+      action: remove
+
 # - name: "win_baseline_2185_state | Ensure 'Allow logon through terminal services' is set to 'Administrators, Remote Desktop Users"
 #   win_user_right:
 #     name: "{{ win_baseline_2185_state_Name }}"
@@ -2945,42 +2954,42 @@
 #     type: "{{ win_baseline_10968_state_Type }}"
 #   when: win_baseline_10968_state_Manage
 
-- name: "win_baseline_11028_state | Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled"
-  block:
-      - name: "win_baseline_11028_state_1 | Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled | EnableRegistrars"
-        ansible.windows.win_regedit:
-          name: "{{ win_baseline_11028_state_1_Name }}"
-          path: "{{ win_baseline_11028_state_1_Path }}"
-          data: "{{ win_baseline_11028_state_1_Data }}"
-          type: "{{ win_baseline_11028_state_1_Type }}"
+# - name: "win_baseline_11028_state | Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled"
+#   block:
+#       - name: "win_baseline_11028_state_1 | Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled | EnableRegistrars"
+#         ansible.windows.win_regedit:
+#           name: "{{ win_baseline_11028_state_1_Name }}"
+#           path: "{{ win_baseline_11028_state_1_Path }}"
+#           data: "{{ win_baseline_11028_state_1_Data }}"
+#           type: "{{ win_baseline_11028_state_1_Type }}"
 
-      - name: "1win_baseline_11028_state_2 | Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled | DisableUPnPRegistrar"
-        ansible.windows.win_regedit:
-          name: "{{ win_baseline_11028_state_2_Name }}"
-          path: "{{ win_baseline_11028_state_2_Path }}"
-          data: "{{ win_baseline_11028_state_2_Data }}"
-          type: "{{ win_baseline_11028_state_2_Type }}"
+#       - name: "1win_baseline_11028_state_2 | Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled | DisableUPnPRegistrar"
+#         ansible.windows.win_regedit:
+#           name: "{{ win_baseline_11028_state_2_Name }}"
+#           path: "{{ win_baseline_11028_state_2_Path }}"
+#           data: "{{ win_baseline_11028_state_2_Data }}"
+#           type: "{{ win_baseline_11028_state_2_Type }}"
 
-      - name: "win_baseline_11028_state_3 | Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled | DisableInBand802DOT11Registrar"
-        ansible.windows.win_regedit:
-          path: "{{ win_baseline_11028_state_3_Path }}"
-          name: "{{ win_baseline_11028_state_3_Name }}"
-          data: "{{ win_baseline_11028_state_3_Data }}"
-          type: "{{ win_baseline_11028_state_3_Type }}"
+#       - name: "win_baseline_11028_state_3 | Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled | DisableInBand802DOT11Registrar"
+#         ansible.windows.win_regedit:
+#           path: "{{ win_baseline_11028_state_3_Path }}"
+#           name: "{{ win_baseline_11028_state_3_Name }}"
+#           data: "{{ win_baseline_11028_state_3_Data }}"
+#           type: "{{ win_baseline_11028_state_3_Type }}"
 
-      - name: "win_baseline_11028_state_4 | Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled | DisableFlashConfigRegistrar"
-        ansible.windows.win_regedit:
-          path: "{{ win_baseline_11028_state_4_Path }}"
-          name: "{{ win_baseline_11028_state_4_Name }}"
-          data: "{{ win_baseline_11028_state_4_Data }}"
-          type: "{{ win_baseline_11028_state_4_Type }}"
+#       - name: "win_baseline_11028_state_4 | Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled | DisableFlashConfigRegistrar"
+#         ansible.windows.win_regedit:
+#           path: "{{ win_baseline_11028_state_4_Path }}"
+#           name: "{{ win_baseline_11028_state_4_Name }}"
+#           data: "{{ win_baseline_11028_state_4_Data }}"
+#           type: "{{ win_baseline_11028_state_4_Type }}"
 
-      - name: "win_baseline_11028_state_5 | Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled | DisableWPDRegistrar"
-        ansible.windows.win_regedit:
-          path: "{{ win_baseline_11028_state_5_Path }}"
-          name: "{{ win_baseline_11028_state_5_Name }}"
-          data: "{{ win_baseline_11028_state_5_Data }}"
-          type: "{{ win_baseline_11028_state_5_Type }}"
+#       - name: "win_baseline_11028_state_5 | Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled | DisableWPDRegistrar"
+#         ansible.windows.win_regedit:
+#           path: "{{ win_baseline_11028_state_5_Path }}"
+#           name: "{{ win_baseline_11028_state_5_Name }}"
+#           data: "{{ win_baseline_11028_state_5_Data }}"
+#           type: "{{ win_baseline_11028_state_5_Type }}"
 
 # - name: "win_baseline_17746_state | Ensure 'Turn on Module Logging' is set to 'empty'"
 #   win_regedit:
