@@ -932,7 +932,8 @@
 - name: Ensure user bob is absent
   win_user:
     name: bob
-    state: absent
+    state: query
+  register: user_bob
 
 # - name: "Query User Accounts"
 #   community.windows.win_user:
@@ -948,9 +949,9 @@
 #         debug:
 #           msg: "An error occurred while retrieving user accounts."
 
-# - name: "Display Filtered Account Names"
-#   debug:
-#     var: filtered_accounts
+- name: "Display Filtered Account Names"
+  debug:
+    var: user_bob
 
 # - name: "win_baseline_2484_state | Ensure 'Store passwords using reversible encryption' is set to 'Disabled'"
 #   win_security_policy:
