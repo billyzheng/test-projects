@@ -931,7 +931,7 @@
 
 - name: Ensure user bob is absent
   win_user:
-    name: bob
+    name: '*'
     state: query
   register: user_bob
 
