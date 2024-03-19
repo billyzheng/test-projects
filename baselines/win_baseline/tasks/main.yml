@@ -1177,7 +1177,7 @@
     $security_eventlog_permissions = {{ security_eventlog_permissions }}
     $file_path = "C:\Windows\System32\winevt\Logs\Security.evtx"
     $group_name = "EventLog"
-    $regex_pattern = "^(?!Administrator$)"
+    $regex_pattern = "^(?!Administrators$)"
     $acl = Get-Acl -Path $file_path
         foreach ($group_name in $security_eventlog_permissions) {
           if ($group_name -match $regex_pattern) {
