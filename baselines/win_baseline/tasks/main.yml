@@ -982,7 +982,6 @@
     - name: "遍历用户列表"
       debug:
         msg: "{{ item }} does not match the naming rules"
-        color: magenta
       loop: "{{ administrator_members.stdout_lines }}"
       when: item is match('^(?!Administrator)')
 
@@ -999,7 +998,6 @@
     - name: "retrieve all members"
       debug:
         msg: "{{ item }} does not match the naming rules"
-        color: magenta
       loop: "{{ guest_members.stdout_lines }}"
       when: item is match('^(?!Guest)')
 
