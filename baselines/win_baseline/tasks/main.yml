@@ -108,14 +108,6 @@
 #   when:
 #     win_baseline_1092_state_Manage
 
-- name: "win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Client' is set to 'Disabled'"
-  win_service:
-    name: "{{ win_baseline_1115_state_Name }}"
-    state: "{{ win_baseline_1115_state_State }}"
-    force_dependent_services: yes
-  when:
-    win_baseline_1115_state_Manage
-
 # - name: "win_baseline_1134_state | Ensure 'Logon banner title' is ser to 'This is an interest computer system of ABB Asea Brown Boveri Ltd'"
 #   win_regedit:
 #     path: "{{ win_baseline_1134_state_Path }}"
@@ -672,6 +664,23 @@
 #     action: "{{ win_baseline_2181_state_Action }}"
 #   when:
 #     win_baseline_2181_state_Manage
+
+- name: "win_baseline_2182_state | Ensure 'Act as part of the operating system' is set to 'No One'"
+  block:
+    - name: "Create a GL-arsservice Users'"
+      win_user:
+        name: "GL-arsservice"
+        password: "123456"
+        state: present
+        groups:
+        - Users
+    - name: "Assign rights"
+      win_user_right:
+        name: "{{ win_baseline_2182_state_Name}}"
+        users: "{{ win_baseline_2182_state_Users}}"
+        action: "{{ win_baseline_2182_state_Action}}"
+      when:
+        win_baseline_2182_state_Manage
 
 # - name: "win_baseline_2183_state | Ensure 'Add workstations to domain' is set to 'Administrators'"
 #   win_user_right:
