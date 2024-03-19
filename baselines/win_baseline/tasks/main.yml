@@ -2090,13 +2090,12 @@
 #     value: "{{ win_baseline_8279_state_Value }}"
 #   when: win_baseline_8279_state_Manage
 
-- name: "win_baseline_8364_state | Ensure 'status of the local Guest' is set to 'Disabled'"
-  win_security_policy:
-    section: "{{ win_baseline_8364_state_Section }}"
-    key: "{{ win_baseline_8364_state_Key }}"
-    value: "{{ win_baseline_8364_state_Value }}"
-  when: win_baseline_8364_state_Manage  
-  
+# - name: "win_baseline_8364_state | Ensure 'status of the local Guest' is set to 'Disabled'"
+#   win_security_policy:
+#     section: "{{ win_baseline_8364_state_Section }}"
+#     key: "{{ win_baseline_8364_state_Key }}"
+#     value: "{{ win_baseline_8364_state_Value }}"
+#   when: win_baseline_8364_state_Manage  
 
 # - name: "win_baseline_8365_state | Ensure Accounts Administrator account status is set to 'Enabled"
 #   win_security_policy:
@@ -2294,6 +2293,19 @@
 #     data: "{{ win_baseline_10011_state_Data }}"
 #     type: "{{ win_baseline_10011_state_Type }}"
 #   when: win_baseline_10011_state_Manage
+
+- name: Get groups and user accounts
+  win_shell: |
+    $rights = Get-WmiObject -Class Win32_UserRightAssignment -Namespace "root\rsop\computer" | Where-Object {$_.Name -eq "SeDenyInteractiveLogonRight"}
+    $accounts = $rights.GetRelated("Win32_Account")
+    foreach ($account in $accounts) {
+      Write-Output $account.Name
+    }
+  register: result
+
+- name: Print the list
+  debug:
+    var: result.stdout_lines
 
 # - name: "win_baseline_10015_state | Ensure 'Do not allow password expiration time longer than required by policy' is set to 'Enabled'"
 #   win_regedit:
