@@ -890,20 +890,20 @@
 #   when:
 #     win_baseline_2395_state_Manage
 
-- name: "win_baseline_2396_state | Ensure 'Profile system performance' is set to 'Administrators, WidServiceHost'"
-  block:
-    - name: "Check 'WdiServiceHost' existed"
-      win_user:
-        name: "WdiServiceHost"
-        password: "Ans!bleBaseline2296"
-        state: present  
-    - name: "Assignt the rights"
-      win_user_right:
-        name: "{{ win_baseline_2396_state_Name }}"
-        users: "{{ win_baseline_2396_state_Users }}"
-        action: "{{ win_baseline_2396_state_Action }}"
-      when:
-        win_baseline_2396_state_Manage
+# - name: "win_baseline_2396_state | Ensure 'Profile system performance' is set to 'Administrators, WidServiceHost'"
+#   block:
+#     - name: "Check 'WdiServiceHost' existed"
+#       win_user:
+#         name: "WdiServiceHost"
+#         password: "Ans!bleBaseline2396"
+#         state: present  
+#     - name: "Assignt the rights"
+#       win_user_right:
+#         name: "{{ win_baseline_2396_state_Name }}"
+#         users: "{{ win_baseline_2396_state_Users }}"
+#         action: "{{ win_baseline_2396_state_Action }}"
+#       when:
+#         win_baseline_2396_state_Manage
 
 # - name: "win_baseline_2397_state | Ensure 'Remove computer from docking station' is set to 'Administrators'"
 #   win_user_right:
@@ -968,6 +968,14 @@
 #     value: "{{ win_baseline_2343_state_Value }}"
 #   when:
 #     win_baseline_2343_state_Manage
+
+  - name: 获取用户列表
+    command: getent passwd
+    register: passwd_output
+
+  - name: 显示用户列表
+    debug:
+      var: passwd_output.stdout_lines
 
 # - name: "win_baseline_2484_state | Ensure 'Store passwords using reversible encryption' is set to 'Disabled'"
 #   win_security_policy:
