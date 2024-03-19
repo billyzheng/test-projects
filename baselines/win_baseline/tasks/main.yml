@@ -112,7 +112,6 @@
   win_service:
     name: "{{ win_baseline_1115_state_Name }}"
     state: "{{ win_baseline_1115_state_State }}"
-    start_mode: "{{ win_baseline_1115_state_Mode }}"
     force_dependent_services: yes
   when:
     win_baseline_1115_state_Manage
