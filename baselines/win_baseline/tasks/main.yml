@@ -190,15 +190,13 @@
   block:
     - name: "main"
       win_service:
-      - name: snmp
-        state: stopped
+        - name: snmp
+          state: stopped
   rescue:
-  - name: "rescue"
-    debug:
-      msg: "Key not found"
-  when:
-    win_baseline_1181_state_Manage
-
+    - name: "rescue"
+      debug:
+        msg: "Key not found"
+  when: win_baseline_1181_state_Manage
 # - name: "win_baseline_1182_state | Ensure 'Simple Netowrk Management Protocol trap' service is set t0 'Disabled'"
 #   win_service:
 #     name: "{{ win_baseline_1182_state_Name }}"
@@ -910,7 +908,7 @@
 #       win_user:
 #         name: "WdiServiceHost"
 #         password: "Ans!bleBaseline2396"
-#         state: present  
+#         state: present
 #     - name: "Assignt the rights"
 #       win_user_right:
 #         name: "{{ win_baseline_2396_state_Name }}"
@@ -1254,7 +1252,7 @@
 #     win_baseline_3891_state_Manage
 
 # - name: "win_baseline_3893_state | Get current list of 'Accounts having empty password fields'"
-#   block: 
+#   block:
 #   - name: "get the account list that have empty password field."
 #     win_shell: "{{ win_baseline_3893_state_Shell }}"
 #     register: account_names
@@ -1413,7 +1411,7 @@
 #       win_group:
 #         name: "Windows Manager Group"
 #         state: present
-  
+
 #     - name: "ensure 'Windows Manager Group' is assigned the right"
 #       win_user_right:
 #         name: "{{ win_baseline_3928_state_Name }}"
@@ -2109,7 +2107,7 @@
 #     section: "{{ win_baseline_8364_state_Section }}"
 #     key: "{{ win_baseline_8364_state_Key }}"
 #     value: "{{ win_baseline_8364_state_Value }}"
-#   when: win_baseline_8364_state_Manage  
+#   when: win_baseline_8364_state_Manage
 
 # - name: "win_baseline_8365_state | Ensure Accounts Administrator account status is set to 'Enabled"
 #   win_security_policy:
@@ -3152,7 +3150,6 @@
 #     data: "{{ win_baseline_8249_state_Data }}"
 #     type: "{{ win_baseline_8249_state_Type }}"
 #   when: win_baseline_8249_state_Manage
-
 
 # - name: "win_baseline_8250_state | Ensure 'Allow Basic authentication (service)' is set to 'Disabled'"
 #   win_regedit:
