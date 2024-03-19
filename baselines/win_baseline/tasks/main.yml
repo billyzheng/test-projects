@@ -1174,14 +1174,20 @@
 
 - name: 移除用户文件访问权限
   win_shell: |
+    $security_eventlog_permissions = {{ security_eventlog_permissions }}
     $file_path = "C:\Windows\System32\winevt\Logs\Security.evtx"
     $group_name = "EventLog"
+    $regex_pattern = "^(?!Administrator$)"
     $acl = Get-Acl -Path $file_path
-    $permissions = $acl.Access | Where-Object {$_.IdentityReference.Value -like "NT AUTHORITY\\$group_name"}
-    foreach ($permission in $permissions) {
-      $acl.RemoveAccessRule($permission)
-    }
-    Set-Acl -Path $file_path -AclObject $acl
+        foreach ($group_name in $security_eventlog_permissions) {
+          if ($group_name -match $regex_pattern) {
+            $permissions = $acl.Access | Where-Object { $_.IdentityReference.Value -eq "BUILTIN\\$group_name" }
+            foreach ($permission in $permissions) {
+              $acl.RemoveAccessRule($permission)
+            }
+          }
+        }
+        Set-Acl -Path $file_path -AclObject $acl
 
 - name: 获取安全事件日志文件的权限集
   win_shell: |
