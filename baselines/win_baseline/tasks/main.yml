@@ -988,7 +988,7 @@
 - name: "win_baseline_2422_state | Ensure 'Guest account' followint the naming rules"
   block:
     - name: "get members of Guest group"
-      win_shell: Get-LocalGroupMember -Group "Guest" | Select-Object -ExpandProperty Name
+      win_shell: Get-LocalGroupMember -Group "Guests" | Select-Object -ExpandProperty Name
       register: guest_members
 
     - name: "display all memberss of Guest goup"
