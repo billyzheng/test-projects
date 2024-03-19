@@ -2243,6 +2243,11 @@ win_baseline_10593_state_Name: "\\\\\\\\\\*\\\\SYSVOL"
 win_baseline_10593_state_Data: "RequireMutualAuthentication=1, RequireIntegrity=1"
 win_baseline_10593_state_Type: string
 
+# win_baseline_10707_state | Ensure 'Audit User/Device Claims' is set to failure
+win_baseline_10707_state_Manage: True
+win_baseline_10707_state_Subcategory: "Audit User/Device Claims"
+win_baseline_10707_state_AuditType: "failure"
+
 # todo the name should be checked
 # win_baseline_10919_state | Ensure 'TLS 1.0 protocol on the client 'DisabledByDefault' is set to '0'
 win_baseline_10919_state_Manage: True

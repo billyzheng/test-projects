@@ -2294,19 +2294,6 @@
 #     type: "{{ win_baseline_10011_state_Type }}"
 #   when: win_baseline_10011_state_Manage
 
-- name: Get groups and user accounts
-  win_shell: |
-    $rights = Get-WmiObject -Class Win32_UserRightAssignment -Namespace "root\rsop\computer" | Where-Object {$_.Name -eq "SeDenyInteractiveLogonRight"}
-    $accounts = $rights.GetRelated("Win32_Account")
-    foreach ($account in $accounts) {
-      Write-Output $account.Name
-    }
-  register: result
-
-- name: Print the list
-  debug:
-    var: result.stdout_lines
-
 # - name: "win_baseline_10015_state | Ensure 'Do not allow password expiration time longer than required by policy' is set to 'Enabled'"
 #   win_regedit:
 #     path: "{{ win_baseline_10015_state_Path }}"
@@ -2726,6 +2713,12 @@
 #     data: "{{ win_baseline_10593_state_Data }}"
 #     type: "{{ win_baseline_10593_state_Type }}"
 #   when: win_baseline_10593_state_Manage
+
+- name: "win_baseline_10707_state | Ensure 'Audit User/Device Claims' is set to failure"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_10707_state_Subcategory }}"
+    audit_type: "{{ win_baseline_10707_state_AuditType }}"
+  when: win_baseline_10707_state_Manage
 
 # - name: "win_baseline_10919_state | Ensure 'TLS 1.0 protocol on the client 'DisabledByDefault' is set to '0'"
 #   win_regedit:
