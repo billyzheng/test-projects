@@ -1249,7 +1249,7 @@
 
   - name: "print the accounts'"
     debug:
-      var: account_names.stdout_lines
+      var: account_names
 
 # - name: "win_baseline_3896_state | Ensure 'Require trusted path for credential entry'"
 #   win_regedit:
