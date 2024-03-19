@@ -970,12 +970,14 @@
 #     win_baseline_2343_state_Manage
 
   - name: 获取用户列表
-    command: getent passwd
-    register: passwd_output
+    community.windows.win_user:
+      name: '*'
+      state: query
+    register: user_accounts
 
   - name: 显示用户列表
     debug:
-      var: passwd_output.stdout_lines
+      var: user_accounts.users
 
 # - name: "win_baseline_2484_state | Ensure 'Store passwords using reversible encryption' is set to 'Disabled'"
 #   win_security_policy:
