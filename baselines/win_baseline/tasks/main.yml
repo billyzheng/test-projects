@@ -977,7 +977,7 @@
 
   - name: "显示用户列表"
     debug:
-      var: user_accounts.users
+      var: user_accounts
 
 # - name: "win_baseline_2484_state | Ensure 'Store passwords using reversible encryption' is set to 'Disabled'"
 #   win_security_policy:
