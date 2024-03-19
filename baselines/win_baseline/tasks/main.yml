@@ -1573,7 +1573,7 @@
     subcategory: "{{ win_state_4470_state_Subcategory }}"
     audit_type: "{{ win_state_4470_state_AuditType}}"
   when:
-    win_state_4470_state_Manage
+    win_baseline_4470_state_Manage
 
 # - name: "win_baseline_4471_state | Ensure 'Audit Security System Extension' is set to 'Success and Failure'"
 #   win_audit_policy_system:
