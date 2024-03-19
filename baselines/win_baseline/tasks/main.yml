@@ -1250,7 +1250,7 @@
 
   - name: "print the accounts'"
     debug:
-      var: account_names
+      msg: "The Account in the following list do not have passwords: {{ account_names.stdout_lines }}"
 
 # - name: "win_baseline_3896_state | Ensure 'Require trusted path for credential entry'"
 #   win_regedit:
