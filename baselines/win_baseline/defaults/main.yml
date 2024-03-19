@@ -1336,9 +1336,9 @@ win_baseline_4492_state_Manage: True
 win_baseline_4492_state_Subcategory: "Filtering Platform Connection"
 win_baseline_4492_state_AuditType: "failure"
 
-# win_baseline_4493_state | Ensure 'Audit Order Object Access Events' is set to 'Success'
+# win_baseline_4493_state | Ensure 'Audit Other Object Access Events' is set to 'Success'
 win_baseline_4493_state_Manage: True
-win_baseline_4493_state_Subcategory: "Object Access"
+win_baseline_4493_state_Subcategory: "Other Object Access Events"
 win_baseline_4493_state_AuditType: "success"
 
 # win_baseline_4494_state | Ensure 'Audit Sensitive Privilege Use' is set to 'Success and Failure'

@@ -78,12 +78,7 @@
 
 
 # ! error, details are in the table
-# - name: "win_baseline_4493_state | Ensure 'Audit Order Object Access Events' is set to 'Success'"
-#   win_audit_policy_system:
-#     subcategory: "{{ win_baseline_4493_state_Subcategory }}"
-#     audit_type: "{{ win_baseline_4493_state_AuditType }}"
-#   when:
-#     win_baseline_4493_state_Manage
+
 
 # ! error, details are in the table
 # - name: "win_baseline_4491_state | Ensure 'Audit Filtering Packet Drop' is set to 'Failure'"

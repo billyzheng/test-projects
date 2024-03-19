@@ -1715,18 +1715,25 @@
 #   when:
 #     win_baseline_4490_state_Manage
 
-- name: "win_baseline_4491_state | Ensure 'Audit Filtering Packet Drop' is set to 'Failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4491_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4491_state_AuditType }}"
-  when:
-    win_baseline_4491_state_Manage
+# - name: "win_baseline_4491_state | Ensure 'Audit Filtering Packet Drop' is set to 'Failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4491_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4491_state_AuditType }}"
+#   when:
+#     win_baseline_4491_state_Manage
 
 # - name: "win_baseline_4492_state | Ensure 'Audit Filtering Platform Connection' is set to 'Failure'"
 #   win_audit_policy_system:
 #     subcategory: "{{ win_baseline_4492_state_Subcategory }}"
 #     audit_type: "{{ win_baseline_4492_state_AuditType }}"
 #   when: win_baseline_4492_state_Manage
+
+- name: "win_baseline_4493_state | Ensure 'Audit Order Object Access Events' is set to 'Success'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4493_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4493_state_AuditType }}"
+  when:
+    win_baseline_4493_state_Manage
 
 # - name: "win_baseline_4494_state | Ensure 'Audit Sensitive Privilege Use' is set to 'Success and Failure'"
 #   win_audit_policy_system:
