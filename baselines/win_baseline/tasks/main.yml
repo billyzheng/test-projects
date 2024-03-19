@@ -971,14 +971,16 @@
 
   - name: "获取用户列表"
     win_shell: |
-      $users = Get-WmiObject -Class Win32_UserAccount
-      $userList = $users | Select-Object -ExpandProperty Name
-      $userList
-    register: userList_output
+      $administrators = Get-WmiObject -Class Win32_UserAccount | Where-Object {$_.Name -eq 'Administrator'}
+        $administratorList = $administrators | Select-Object -ExpandProperty Name
+        $administratorList
+    register: administratorList_output
 
-  - name: "显示用户列表"
+  - name: "遍历用户列表"
     debug:
-      var: userList_output
+      msg: "用户 {{ item }} 满足正则表达式规则"
+    loop: "{{ administratorList_output.stdout_lines }}"
+    when: item is match('^(?!Administrator&)')
 
 # - name: "win_baseline_2484_state | Ensure 'Store passwords using reversible encryption' is set to 'Disabled'"
 #   win_security_policy:
