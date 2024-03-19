@@ -1688,7 +1688,7 @@ win_baseline_8279_state_Value: "0"
 
 # win_baseline_8364_state | Ensure 'status of the local Guest' is set to 'Disabled'
 win_baseline_8364_state_Manage: True
-win_baseline_8364_state_Subcategory: "Guest account status"
+win_baseline_8364_state_Subcategory: "Accounts: Guest account status"
 win_baseline_8364_state_Key: "Disabled"
 
 
