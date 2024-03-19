@@ -1177,7 +1177,7 @@
     $file_path = "C:\Windows\System32\winevt\Logs\Security.evtx"
     $group_name = "EventLog"
     $acl = Get-Acl -Path $file_path
-    $permissions = $acl.Access | Where-Object {$_.IdentityReference.Value -like "BUILTIN\$group_name"}
+    $permissions = $acl.Access | Where-Object {$_.IdentityReference.Value -like "NT AUTHORITY\\$group_name"}
     foreach ($permission in $permissions) {
       $acl.RemoveAccessRule($permission)
     }
