@@ -965,6 +965,13 @@ win_baseline_3891_state_Name: "fDisableCdm"
 win_baseline_3891_state_Data: "1"
 win_baseline_3891_state_Type: dword
 
+# win_baseline_3893_state | Get current list of 'Accounts having empty password fields'
+win_baseline_3893_state_Manage: True
+win_baseline_3893_state_Shell: | 
+      $accounts = Get-WmiObject -Class Win32_UserAccount -Filter "PasswordRequired = 'False'"
+      $account_names = $accounts | Select-Object -ExpandProperty Name
+      Write-Output $account_names
+
 # win_baseline_3896_state | Ensure 'Require trusted path for credential entry'
 win_baseline_3896_state_Manage: True
 win_baseline_3896_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\CredUI'

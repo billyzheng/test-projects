@@ -1239,18 +1239,17 @@
 #   when:
 #     win_baseline_3891_state_Manage
 
-- name: "win_baseline_3898_state | Get current list of 'Accounts having empty password fields'"
+- name: "win_baseline_3893_state | Get current list of 'Accounts having empty password fields'"
   block: 
-  - name: 获取没有密码的账户
-    win_shell: |
-      $accounts = Get-WmiObject -Class Win32_UserAccount -Filter "PasswordRequired = 'False'"
-      $account_names = $accounts | Select-Object -ExpandProperty Name
-      Write-Output $account_names
+  - name: "get the account list that have empty password field."
+    win_shell: "{{ win_baseline_3893_state_Shell }}"
     register: account_names
 
-  - name: "print the accounts'"
+  - name: "print the accounts list'"
     debug:
-      msg: "The Account in the following list do not have passwords: {{ account_names.stdout_lines }}"
+      msg: "The Account in the following list have empty password fields: {{ account_names.stdout_lines }}"
+  when:
+  - win_baseline_3893_state_Manage
 
 # - name: "win_baseline_3896_state | Ensure 'Require trusted path for credential entry'"
 #   win_regedit:
