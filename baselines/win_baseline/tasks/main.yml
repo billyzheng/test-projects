@@ -969,23 +969,13 @@
 #   when:
 #     win_baseline_2343_state_Manage
 
-  - name: "获取用户列表"
-    win_shell: |
-      $users = Get-WmiObject -Class Win32_UserAccount
-        $userList = $users | Select-Object -ExpandProperty Name
-        $userList
-      register: userList_output
-    register: administratorList_output
+- name: "获取Administrator组成员"
+  win_shell: Get-LocalGroupMember -Group "Administrators" | Select-Object -ExpandProperty Name
+  register: administrator_members
 
-  - name: "print all accounts'"
-    debug:
-      var: administratorList_output.stdout_lines
-
-  - name: "遍历用户列表"
-    debug:
-      msg: "用户 {{ item }} 满足正则表达式规则"
-    loop: "{{ administratorList_output.stdout_lines }}"
-    # when: item is match('^(?!Administrator&)')
+- name: "显示Administrator组成员列表"
+  debug:
+    var: administrator_members.stdout_lines
 
 # - name: "win_baseline_2484_state | Ensure 'Store passwords using reversible encryption' is set to 'Disabled'"
 #   win_security_policy:
