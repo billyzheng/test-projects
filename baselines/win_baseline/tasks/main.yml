@@ -670,7 +670,7 @@
     - name: "Create a GL-arsservice Users'"
       win_user:
         name: "GL-arsservice"
-        password: "123456"
+        password: "AnsibleBaseline2!82"
         state: present
         groups:
         - Users
