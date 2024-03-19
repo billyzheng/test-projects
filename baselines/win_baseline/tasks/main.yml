@@ -1393,20 +1393,20 @@
 #   when:
 #     win_baseline_3927_state_Manage
 
-- name: "win_baseline_3928_state | Ensure 'Increase a process working set' is set to 'Windows Manager Group'"
-  block:
-    - name: "ensure 'Windows Manager Group' exists"
-      win_group:
-        name: "Windows Manager Group"
-        state: present
+# - name: "win_baseline_3928_state | Ensure 'Increase a process working set' is set to 'Windows Manager Group'"
+#   block:
+#     - name: "ensure 'Windows Manager Group' exists"
+#       win_group:
+#         name: "Windows Manager Group"
+#         state: present
   
-    - name: "ensure 'Windows Manager Group' is assigned the right"
-      win_user_right:
-        name: "{{ win_baseline_3928_state_Name }}"
-        users: "{{ win_baseline_3928_state_Users }}"
-        action: "{{ win_baseline_3928_state_Action }}"
-  when:
-    win_baseline_3928_state_Manage
+#     - name: "ensure 'Windows Manager Group' is assigned the right"
+#       win_user_right:
+#         name: "{{ win_baseline_3928_state_Name }}"
+#         users: "{{ win_baseline_3928_state_Users }}"
+#         action: "{{ win_baseline_3928_state_Action }}"
+#   when:
+#     win_baseline_3928_state_Manage
 
 # - name: "win_baseline_3939_state | Ensure 'Allow UIAccess applications to prompt for elevation without using the secure desktop' is set to 'Disabled'"
 #   win_regedit:
@@ -1567,6 +1567,13 @@
 #     action: "{{ win_baseline_4232_state_Action }}"
 #   when:
 #     win_baseline_4232_state_Manage
+
+- name: "win_state_4470_state | Ensure 'Audit Security State Change' is set to 'Success and failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_state_4470_state_Subcategory }}"
+    audit_type: "{{ win_state_4470_state_AuditType}}"
+  when:
+    win_state_4470_state_Manage
 
 # - name: "win_baseline_4471_state | Ensure 'Audit Security System Extension' is set to 'Success and Failure'"
 #   win_audit_policy_system:
