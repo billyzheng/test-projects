@@ -18,7 +18,7 @@ control_ids = set(control_ids)
 table_data.append(['items implemented and can run', len(control_ids)])
 file.close()
 
-manual_add = [2385, 2388, 2398, 2586, 3377, 1115, 1181, 19336, 11507]
+manual_add = [2385, 2388, 2398, 2586, 3377, 1115, 19336, 11507]
 # print(f'items implemented but cannot run: {len(manual_add)}')
 table_data.append(['items implemented but cannot run', len(manual_add)])
 control_ids = control_ids.union(manual_add)
