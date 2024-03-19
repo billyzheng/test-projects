@@ -2245,7 +2245,7 @@ win_baseline_10593_state_Type: string
 
 # win_baseline_10707_state | Ensure 'Audit User/Device Claims' is set to failure
 win_baseline_10707_state_Manage: True
-win_baseline_10707_state_Subcategory: "User /Device Claims"
+win_baseline_10707_state_Subcategory: "User / Device Claims"
 win_baseline_10707_state_AuditType: "failure"
 
 # todo the name should be checked
