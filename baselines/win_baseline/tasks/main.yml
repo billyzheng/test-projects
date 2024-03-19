@@ -970,14 +970,15 @@
 #     win_baseline_2343_state_Manage
 
   - name: "获取用户列表"
-    win_user:
-      name: "*"
-      state: query
-    register: user_accounts
+    win_shell: |
+      $users = Get-WmiObject -Class Win32_UserAccount
+      $userList = $users | Select-Object -ExpandProperty Name
+      $userList
+    register: userList_output
 
   - name: "显示用户列表"
     debug:
-      var: user_accounts
+      var: userList_output
 
 # - name: "win_baseline_2484_state | Ensure 'Store passwords using reversible encryption' is set to 'Disabled'"
 #   win_security_policy:
