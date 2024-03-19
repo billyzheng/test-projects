@@ -1328,7 +1328,7 @@ win_baseline_4490_state_AuditType: "failure"
 
 # win_baseline_4491_state | Ensure 'Audit Filtering Packet Drop' is set to 'Failure'
 win_baseline_4491_state_Manage: True
-win_baseline_4491_state_Subcategory: "Filtering Packet Drop"
+win_baseline_4491_state_Subcategory: "Filtering Platform Packet Drop"
 win_baseline_4491_state_AuditType: "failure"
 
 # win_baseline_4492_state | Ensure 'Audit Filtering Platform Connection' is set to 'Failure'
