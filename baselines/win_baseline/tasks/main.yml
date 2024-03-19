@@ -1172,18 +1172,16 @@
   debug:
     var: security_eventlog_permissions.stdout_lines
 
-- name: 删除不匹配正则表达式的用户权限
+- name: 移除用户文件访问权限
   win_shell: |
-    $regexPattern = "Administrator"
-    $permissions = "{{ security_eventlog_permissions.stdout_lines }}"
-    $permissions | ForEach-Object {
-      if ($_.IdentityReference -notmatch $regexPattern) {
-        $acl = Get-Acl -Path "{{ item.path }}"
-        $acl.RemoveAccessRule($_)
-        Set-Acl -Path "{{ item.path }}" -AclObject $acl
-      }
+    $username = "EventLog"
+    $file_path = "C:\Windows\System32\winevt\Logs\Security.evtx"
+    $acl = Get-Acl -Path $file_path
+    $permissions = $acl.Access | Where-Object {$_.IdentityReference.Value -eq $username}
+    foreach ($permission in $permissions) {
+      $acl.RemoveAccessRule($permission)
     }
-  loop: "{{ security_eventlog_permissions.stdout_lines }}"
+    Set-Acl -Path $file_path -AclObject $acl
 
 - name: 获取安全事件日志文件的权限集
   win_shell: |
