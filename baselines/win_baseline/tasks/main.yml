@@ -970,7 +970,7 @@
 #     win_baseline_2343_state_Manage
 
   - name: "获取用户列表"
-    community.windows.win_user:
+    win_user:
       name: "*"
       state: query
     register: user_accounts
