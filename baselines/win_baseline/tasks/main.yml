@@ -192,11 +192,12 @@
       win_service:
         - name: snmp
           state: stopped
-  rescue:
-    - name: "rescue"
-      debug:
-        msg: "Key not found"
+  # rescue:
+  #   - name: "rescue"
+  #     debug:
+  #       msg: "Key not found"
   when: win_baseline_1181_state_Manage
+
 # - name: "win_baseline_1182_state | Ensure 'Simple Netowrk Management Protocol trap' service is set t0 'Disabled'"
 #   win_service:
 #     name: "{{ win_baseline_1182_state_Name }}"
