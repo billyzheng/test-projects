@@ -187,11 +187,9 @@
 #   when: win_baseline_1177_state_Manage
 
 - name: "win_baseline_1181_state | Ensure 'Simple network management protocol (SNMP)' is set to 'Disabled'"
-  block:
-    - name: "main"
-      win_service:
-        - name: snmp
-          state: stopped
+  win_service:
+    - name: snmp
+      state: stopped
   # rescue:
   #   - name: "rescue"
   #     debug:
