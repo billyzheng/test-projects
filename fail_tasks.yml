@@ -76,14 +76,6 @@
 #   when:
 #     win_baseline_3928_state_Manage
 
-# ! cannot choose success and failure at the same time.
-# - name: "win_state_4470_state | Ensure 'Audit Security State Change' is set to 'Success and failure'"
-#   win_audit_policy_system:
-#     subcategory: "{{ win_state_4470_state_Subcategory }}"
-#     audit_type: "{{ win_state_4470_state_AuditType}}"
-#   when:
-#     win_state_4470_state_Manage
-
 
 # ! error, details are in the table
 # - name: "win_baseline_4493_state | Ensure 'Audit Order Object Access Events' is set to 'Success'"

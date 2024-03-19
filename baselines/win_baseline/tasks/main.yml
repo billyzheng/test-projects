@@ -1568,12 +1568,12 @@
 #   when:
 #     win_baseline_4232_state_Manage
 
-- name: "win_state_4470_state | Ensure 'Audit Security State Change' is set to 'Success and failure'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4470_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4470_state_AuditType }}"
-  when:
-    win_baseline_4470_state_Manage
+# - name: "win_state_4470_state | Ensure 'Audit Security State Change' is set to 'Success and failure'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4470_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4470_state_AuditType }}"
+#   when:
+#     win_baseline_4470_state_Manage
 
 # - name: "win_baseline_4471_state | Ensure 'Audit Security System Extension' is set to 'Success and Failure'"
 #   win_audit_policy_system:
@@ -1714,6 +1714,13 @@
 #     audit_type: "{{ win_baseline_4490_state_AuditType }}"
 #   when:
 #     win_baseline_4490_state_Manage
+
+- name: "win_baseline_4491_state | Ensure 'Audit Filtering Packet Drop' is set to 'Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4491_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4491_state_AuditType }}"
+  when:
+    win_baseline_4491_state_Manage
 
 # - name: "win_baseline_4492_state | Ensure 'Audit Filtering Platform Connection' is set to 'Failure'"
 #   win_audit_policy_system:
