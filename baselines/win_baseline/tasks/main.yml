@@ -1159,14 +1159,16 @@
 #   when:
 #     win_baseline_3376_state_Manage
 
-- name: "获取安全事件日志文件的权限集"
-  win_acl:
-    path: C:\Windows\System32\winevt\Logs\Security.evtx
+- name: 获取安全事件日志文件的权限集
+  win_shell: |
+    $file = "C:\Windows\System32\winevt\Logs\Security.evtx"
+    $acl = Get-Acl -Path $file
+    $acl.AccessToString
   register: security_eventlog_permissions
 
-- name: "显示安全事件日志文件的权限集"
+- name: 显示安全事件日志文件的权限集
   debug:
-    var: security_eventlog_permissions
+    var: security_eventlog_permissions.stdout_lines
 
 # - name: "win_baseline_3657_state | Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'"
 #   win_security_policy:
