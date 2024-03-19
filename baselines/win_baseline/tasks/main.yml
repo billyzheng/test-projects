@@ -109,15 +109,6 @@
 #   when:
 #     win_baseline_1092_state_Manage
 
-- name: "win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Client' is set to 'Disabled'"
-  win_service:
-    name: "{{ win_baseline_1115_state_Name }}"
-    state: "{{ win_baseline_1115_state_State }}"
-    start_mode: "{{ win_baseline_1115_state_Mode }}"
-    force_dependent_services: yes
-  when:
-    win_baseline_1115_state_Manage
-
 # - name: "win_baseline_1134_state | Ensure 'Logon banner title' is ser to 'This is an interest computer system of ABB Asea Brown Boveri Ltd'"
 #   win_regedit:
 #     path: "{{ win_baseline_1134_state_Path }}"

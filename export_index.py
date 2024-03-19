@@ -59,7 +59,7 @@ fail_item = manual_add
 fail_set = manual_add + exported_control_ids
 # print(len(fail_set))
 fail_set.sort()
-for i, item in enumerate(fail_set):
+for i, item in enumerate(exported_control_ids):
     print(i+1,item)
 
 
