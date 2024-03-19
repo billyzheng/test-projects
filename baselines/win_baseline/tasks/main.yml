@@ -976,6 +976,10 @@
         $administratorList
     register: administratorList_output
 
+  - name: "print all accounts'"
+    debug:
+      msg: administratorList_output.stdout_lines
+
   - name: "遍历用户列表"
     debug:
       msg: "用户 {{ item }} 满足正则表达式规则"
