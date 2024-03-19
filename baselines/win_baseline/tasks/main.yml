@@ -1728,12 +1728,12 @@
 #     audit_type: "{{ win_baseline_4492_state_AuditType }}"
 #   when: win_baseline_4492_state_Manage
 
-- name: "win_baseline_4493_state | Ensure 'Audit Order Object Access Events' is set to 'Success'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_4493_state_Subcategory }}"
-    audit_type: "{{ win_baseline_4493_state_AuditType }}"
-  when:
-    win_baseline_4493_state_Manage
+# - name: "win_baseline_4493_state | Ensure 'Audit Order Object Access Events' is set to 'Success'"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_4493_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_4493_state_AuditType }}"
+#   when:
+#     win_baseline_4493_state_Manage
 
 # - name: "win_baseline_4494_state | Ensure 'Audit Sensitive Privilege Use' is set to 'Success and Failure'"
 #   win_audit_policy_system:
@@ -2089,6 +2089,16 @@
 #     key: "{{ win_baseline_8279_state_Key }}"
 #     value: "{{ win_baseline_8279_state_Value }}"
 #   when: win_baseline_8279_state_Manage
+
+- name: Get status of local guest account
+  win_shell: |
+    $guestAccount = Get-WmiObject -Class Win32_UserAccount -Filter "Name='Guest'"
+    $status = $guestAccount.Disabled
+  register: status
+
+- name: print
+  debug:
+    var: status
 
 # - name: "win_baseline_8365_state | Ensure Accounts Administrator account status is set to 'Enabled"
 #   win_security_policy:
