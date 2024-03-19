@@ -8,6 +8,7 @@
 #     type: "{{ win_baseline_1052_state_Type }}"
 #   when:
 #     win_baseline_1052_state_Manage
+
 # # win baseline 1149 state
 # - name: "win_baseline_1149_state | Ensure 'Microsoft network client - Digitally sign communications (always)' is set to 'Enabled'"
 #   win_regedit:
@@ -184,6 +185,19 @@
 #     data: "{{ win_baseline_1177_state_Data }}"
 #     type: "{{ win_baseline_1177_state_Type }}"
 #   when: win_baseline_1177_state_Manage
+
+- name: "win_baseline_1181_state | Ensure 'Simple network management protocol (SNMP)' is set to 'Disabled'"
+  block:
+    - name: "main"
+      win_service:
+      - name: snmp
+        state: stopped
+  rescue:
+    - name: "rescue"
+      debug:
+        msg: "Key not found"
+  when:
+    win_baseline_1181_state_Manage
 
 # - name: "win_baseline_1182_state | Ensure 'Simple Netowrk Management Protocol trap' service is set t0 'Disabled'"
 #   win_service:
