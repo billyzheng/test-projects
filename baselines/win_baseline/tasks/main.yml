@@ -1570,8 +1570,8 @@
 
 - name: "win_state_4470_state | Ensure 'Audit Security State Change' is set to 'Success and failure'"
   win_audit_policy_system:
-    subcategory: "{{ win_state_4470_state_Subcategory }}"
-    audit_type: "{{ win_state_4470_state_AuditType}}"
+    subcategory: "{{ win_baseline_4470_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4470_state_AuditType }}"
   when:
     win_baseline_4470_state_Manage
 
