@@ -995,7 +995,7 @@
       debug:
         var: guest_members.stdout_lines
 
-    - name: "遍历用户列表"
+    - name: "retrieve all members"
       debug:
         msg: "{{ item }} does not match the naming rules"
       loop: "{{ guest_members.stdout_lines }}"
