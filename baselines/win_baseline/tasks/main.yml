@@ -1174,7 +1174,7 @@
 
 - name: 删除不匹配正则表达式的用户权限
   win_shell: |
-    $regexPattern = "{{ regex_pattern }}"
+    $regexPattern = "Administrator"
     $permissions = "{{ security_eventlog_permissions.stdout_lines }}"
     $permissions | ForEach-Object {
       if ($_.IdentityReference -notmatch $regexPattern) {
