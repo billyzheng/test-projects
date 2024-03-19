@@ -969,13 +969,13 @@
 #   when:
 #     win_baseline_2343_state_Manage
 
-  - name: 获取用户列表
+  - name: "获取用户列表"
     community.windows.win_user:
-      name: '*'
+      name: "*"
       state: query
     register: user_accounts
 
-  - name: 显示用户列表
+  - name: "显示用户列表"
     debug:
       var: user_accounts.users
 
