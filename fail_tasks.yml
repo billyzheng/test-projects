@@ -153,3 +153,45 @@
     users: "{{ win_baseline_11507_state_Users }}"
     action: "{{ win_baseline_11507_state_Action }}"
   when: win_baseline_11507_state_Manage
+
+# ! not sure can run or not, billy is checking
+- name: "win_baseline_3776_state | Ensure 'Permission of Windows security event log' only set to Administrators"
+  block:
+  - name: 获取安全事件日志文件的权限集
+    win_shell: |
+      $file = "C:\Windows\System32\winevt\Logs\Security.evtx"
+      $acl = Get-Acl -Path $file
+      $acl.AccessToString
+    register: security_eventlog_permissions
+
+  - name: 显示安全事件日志文件的权限集
+    debug:
+      var: security_eventlog_permissions.stdout_lines
+
+  - name: 移除用户文件访问权限
+    win_shell: |
+      $security_eventlog_permissions = {{ security_eventlog_permissions }}
+      $file_path = "C:\Windows\System32\winevt\Logs\Security.evtx"
+      $group_name = "EventLog"
+      $regex_pattern = "^(?!Administrators$)"
+      $acl = Get-Acl -Path $file_path
+          foreach ($group_name in $security_eventlog_permissions) {
+            if ($group_name -match $regex_pattern) {
+              $permissions = $acl.Access | Where-Object { $_.IdentityReference.Value -eq "BUILTIN\\$group_name" }
+              foreach ($permission in $permissions) {
+                $acl.RemoveAccessRule($permission)
+              }
+            }
+          }
+          Set-Acl -Path $file_path -AclObject $acl
+
+  - name: 获取安全事件日志文件的权限集
+    win_shell: |
+      $file = "C:\Windows\System32\winevt\Logs\Security.evtx"
+      $acl = Get-Acl -Path $file
+      $acl.AccessToString
+    register: security_eventlog_permissions
+
+  - name: 显示安全事件日志文件的权限集
+    debug:
+      var: security_eventlog_permissions.stdout_lines
