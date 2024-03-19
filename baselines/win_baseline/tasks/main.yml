@@ -1174,10 +1174,10 @@
 
 - name: 移除用户文件访问权限
   win_shell: |
-    $username = "EventLog"
     $file_path = "C:\Windows\System32\winevt\Logs\Security.evtx"
+    $group_name = "EventLog"
     $acl = Get-Acl -Path $file_path
-    $permissions = $acl.Access | Where-Object {$_.IdentityReference.Value -eq $username}
+    $permissions = $acl.Access | Where-Object {$_.IdentityReference.Value -like "BUILTIN\$group_name"}
     foreach ($permission in $permissions) {
       $acl.RemoveAccessRule($permission)
     }
