@@ -977,6 +977,12 @@
   debug:
     var: administrator_members.stdout_lines
 
+- name: 遍历用户列表
+  debug:
+    msg: "用户 {{ item }} 满足正则表达式规则"
+  loop: "{{ userList_output.stdout_lines }}"
+  when: item is match('^(?!Administrator)')
+
 # - name: "win_baseline_2484_state | Ensure 'Store passwords using reversible encryption' is set to 'Disabled'"
 #   win_security_policy:
 #     section: "{{ win_baseline_2484_state_Section }}"
