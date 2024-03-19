@@ -2091,10 +2091,12 @@
 #   when: win_baseline_8279_state_Manage
 
 - name: "win_baseline_8364_state | Ensure 'status of the local Guest' is set to 'Disabled'"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_8364_state_Subcategory }}"
-    key: "{{ win_baseline_8364_state_AuditType }}"
+  win_security_policy:
+    section: "{{ win_baseline_8364_state_Section }}"
+    key: "{{ win_baseline_8364_state_Key }}"
+    value: "{{ win_baseline_8364_state_Value }}"
   when: win_baseline_8364_state_Manage  
+  
 
 # - name: "win_baseline_8365_state | Ensure Accounts Administrator account status is set to 'Enabled"
 #   win_security_policy:
