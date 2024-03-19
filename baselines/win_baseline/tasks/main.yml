@@ -188,14 +188,14 @@
 
 - name: "win_baseline_1181_state | Ensure 'Simple network management protocol (SNMP)' is set to 'Disabled'"
   block:
-    - name: "main"
-      win_service:
-      - name: snmp
-        state: stopped
+  - name: "main"
+    win_service:
+    - name: snmp
+      state: stopped
   rescue:
-    - name: "rescue"
-      debug:
-        msg: "Key not found"
+  - name: "rescue"
+    debug:
+      msg: "Key not found"
   when:
     win_baseline_1181_state_Manage
 
