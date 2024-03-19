@@ -2714,11 +2714,11 @@
 #     type: "{{ win_baseline_10593_state_Type }}"
 #   when: win_baseline_10593_state_Manage
 
-- name: "win_baseline_10707_state | Ensure 'Audit User/Device Claims' is set to failure"
-  win_audit_policy_system:
-    subcategory: "{{ win_baseline_10707_state_Subcategory }}"
-    audit_type: "{{ win_baseline_10707_state_AuditType }}"
-  when: win_baseline_10707_state_Manage
+# - name: "win_baseline_10707_state | Ensure 'Audit User/Device Claims' is set to failure"
+#   win_audit_policy_system:
+#     subcategory: "{{ win_baseline_10707_state_Subcategory }}"
+#     audit_type: "{{ win_baseline_10707_state_AuditType }}"
+#   when: win_baseline_10707_state_Manage
 
 # - name: "win_baseline_10919_state | Ensure 'TLS 1.0 protocol on the client 'DisabledByDefault' is set to '0'"
 #   win_regedit:
