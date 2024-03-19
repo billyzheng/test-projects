@@ -2090,15 +2090,11 @@
 #     value: "{{ win_baseline_8279_state_Value }}"
 #   when: win_baseline_8279_state_Manage
 
-- name: Get status of local guest account
-  win_shell: |
-    $guestAccount = Get-WmiObject -Class Win32_UserAccount -Filter "Name='Guest'"
-    $status = $guestAccount.Disabled
-  register: status
-
-- name: print
-  debug:
-    var: status
+- name: "win_baseline_8364_state | Ensure 'status of the local Guest' is set to 'Disabled'"
+  win_audit_policy:
+    subcategory: "{{ win_baseline_8364_state_Subcategory }}"
+    key: "{{ win_baseline_8364_state_Key }}"
+  when: win_baseline_8364_state_Manage  
 
 # - name: "win_baseline_8365_state | Ensure Accounts Administrator account status is set to 'Enabled"
 #   win_security_policy:
