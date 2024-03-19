@@ -1247,7 +1247,7 @@
 
   - name: "print the accounts list'"
     debug:
-      msg: "The Account in the following list have empty password fields: {{ account_names.stdout_lines }}"
+      msg: "{{ win_baseline_3893_state_Message }}"
   when:
   - win_baseline_3893_state_Manage
 
