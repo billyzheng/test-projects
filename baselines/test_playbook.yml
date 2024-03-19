@@ -1,6 +1,6 @@
 ---
 - name: "this is a test playbook"
-  hosts: 10.0.0.10
+  hosts: 10.0.0.10 ansible_python_interpreter=C:\Users\azureuser\AppData\Local\Programs\Python\Python312\python.exe
   gather_facts: yes
   roles:
     - win_baseline
