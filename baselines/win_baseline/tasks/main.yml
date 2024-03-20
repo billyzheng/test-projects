@@ -839,13 +839,22 @@
 #   when:
 #     win_baseline_2386_state_Manage
 
-- name: "win_baseline_2385_state | Ensure 'Generate security audits' is set to 'Administrators, IIS Apppool\\.* Service, Network Service"
-  win_user_right:
-    name: "{{ win_baseline_2385_state_Name }}"
-    users: "{{ win_baseline_2385_state_Users }}"
-    action: "{{ win_baseline_2385_state_Action }}"
-  when:
-    win_baseline_2385_state_Manage
+- name: "win_baseline_2385_state | Ensure 'Generate security audits' is set to 'Administrators, IIS Apppool Service, Network Service"
+  block:
+    - name: "Create a IIS Apppool Service Users'"
+      win_user:
+        name: "IIS Apppool Service"
+        password: "Ans!bleBaseline2385"
+        state: present
+        groups:
+        - Users
+    - name: "Assignt the rights"
+      win_user_right:
+        name: "{{ win_baseline_2385_state_Name }}"
+        users: "{{ win_baseline_2385_state_Users }}"
+        action: "{{ win_baseline_2385_state_Action }}"
+      when:
+        win_baseline_2385_state_Manage
 
 # - name: "win_baseline_2387_state | Ensure 'Load and unload device drivers' is set to 'Administrators'"
 #   win_user_right:
