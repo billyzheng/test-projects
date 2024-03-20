@@ -841,9 +841,8 @@
 
 - name: Get user accounts
   win_shell: |
-    $rightName = "SeRemoteShutdownPrivilege"
-    $accounts = (Get-WmiObject -Class Win32_UserRightAssignment -Namespace "root\rsop\computer" | Where-Object {$_.Name -eq $rightName}).GetRelated("Win32_Account") | Select-Object -ExpandProperty Name
-    Write-Output $accounts
+    $rightName = "SeDenyInteractiveLogonRight"
+    $accounts = (Get-CimInstance -ClassName Win32_UserRightAssignment -Namespace "root\cimv2" | Where-Object {$_.Name -eq $rightName}).GetRelated("Win32_Account") | Select-Object -ExpandProperty Name
   register: result
 
 - name: Print the list
