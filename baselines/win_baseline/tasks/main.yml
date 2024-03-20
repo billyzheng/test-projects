@@ -842,13 +842,13 @@
 - name: Get user accounts
   win_shell: |
     $rights = secedit /export /areas USER_RIGHTS /cfg rights.txt
-    $accounts = Select-String -Path rights.txt -Pattern "SeAuditPrivilege=" | ForEach-Object { $_ -replace ".*=" }
+    $accounts = (Get-Content rights.txt | Select-String -Pattern "SeAuditPrivilege=").Line | ForEach-Object { $_ -replace ".*=" }
     Write-Output $accounts
   register: result
 
 - name: Print the list
   debug:
-    var: result
+    var: result.stdout_lines
 
 # - name: "win_baseline_2387_state | Ensure 'Load and unload device drivers' is set to 'Administrators'"
 #   win_user_right:
