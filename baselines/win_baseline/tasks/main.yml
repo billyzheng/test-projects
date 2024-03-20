@@ -841,11 +841,9 @@
 
 - name: Get user accounts
   win_shell: |
-    $rights = Get-WmiObject -Class Win32_UserRightAssignment -Namespace "root\rsop\computer" | Where-Object {$_.Name -eq "SeAuditPrivilege"}
-    $accounts = $rights.GetRelated("Win32_Account")
-    foreach ($account in $accounts) {
-      Write-Output $account.Name
-    }
+    $rights = secedit /export /areas USER_RIGHTS /cfg rights.txt
+    $accounts = Select-String -Path rights.txt -Pattern "SeAuditPrivilege=" | ForEach-Object { $_ -replace ".*=" }
+    Write-Output $accounts
   register: result
 
 - name: Print the list
