@@ -848,7 +848,7 @@
 
 - name: Print the list
   debug:
-    var: result.stdout_lines
+    var: result
 
 # - name: "win_baseline_2387_state | Ensure 'Load and unload device drivers' is set to 'Administrators'"
 #   win_user_right:
