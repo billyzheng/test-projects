@@ -839,6 +839,19 @@
 #   when:
 #     win_baseline_2386_state_Manage
 
+- name: Get user accounts
+  win_shell: |
+    $rights = Get-WmiObject -Class Win32_UserRightAssignment -Namespace "root\rsop\computer" | Where-Object {$_.Name -eq "SeAuditPrivilege"}
+    $accounts = $rights.GetRelated("Win32_Account")
+    foreach ($account in $accounts) {
+      Write-Output $account.Name
+    }
+  register: result
+
+- name: Print the list
+  debug:
+    var: result.stdout_lines
+
 # - name: "win_baseline_2387_state | Ensure 'Load and unload device drivers' is set to 'Administrators'"
 #   win_user_right:
 #     name: "{{ win_baseline_2387_state_Name }}"
