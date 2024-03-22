@@ -1190,7 +1190,7 @@
     $account_names = "{{ account_names.stdout_lines }}"
     foreach ($account_name in $account_names) {
       $user = [ADSI]"WinNT://./$account_name,user"
-      $user.UserFlags.value = $user.UserFlags.value -bor 0x10000
+      $user.UserFlags.value = $user.UserFlags.value -band (-bnot 0x10000)
       $user.SetInfo()
     }
   when: account_names.stdout_lines | length > 0
