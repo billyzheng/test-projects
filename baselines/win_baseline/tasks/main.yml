@@ -982,6 +982,25 @@
 #   when:
 #     win_baseline_2343_state_Manage
 
+- name: Get list of accounts assigned with 'SeAuditPrivilege'
+  win_shell: |
+    $privilege = 'SeAuditPrivilege'
+    $accounts = Get-WmiObject -Class Win32_UserAccount
+    $assigned_accounts = foreach ($account in $accounts) {
+      $username = $account.Name
+      $user = [ADSI]"WinNT://./$username,user"
+      $privileges = $user.Invoke('GetPrivileges')
+      if ($privileges -contains $privilege) {
+        $username
+      }
+    }
+    Write-Output $assigned_accounts
+  register: assigned_accounts
+
+- name: Print accounts
+  debug:
+    msg: "The following accounts are assigned with 'SeAuditPrivilege': {{ assigned_accounts.stdout_lines }}"
+
 # - name: "win_baseline_2421_state | Ensure 'Administrator account' followint the naming rules"
 #   block:
 #     - name: "get members of Administrator group"
@@ -1164,21 +1183,23 @@
 #   when:
 #     win_baseline_3242_state_Manage
 
-- name: "win_baseline_3377_state | Get 'Current list of accounts having the password never expires' setting enabled"
-  block:
-  - name: Set maximum password age to 60 days
-    win_shell: net accounts /maxpwage:60
+# - name: "win_baseline_3377_state | Get 'Current list of accounts having the password never expires' setting enabled"
+#   block:
+#   - name: Set maximum password age to 60 days
+#     win_shell: net accounts /maxpwage:60
     
-  - name: Get list of accounts where 'Password Never Expires' is enabled
-    win_shell: |
-      $accounts = Get-WmiObject -Class Win32_UserAccount -Filter "PasswordExpires = 'False'"
-      $account_names = $accounts | Select-Object -ExpandProperty Name
-      Write-Output $account_names
-    register: account_names
+#   - name: Get list of accounts where 'Password Never Expires' is enabled
+#     win_shell: |
+#       $accounts = Get-WmiObject -Class Win32_UserAccount -Filter "PasswordExpires = 'False'"
+#       $account_names = $accounts | Select-Object -ExpandProperty Name
+#       Write-Output $account_names
+#     register: account_names
 
-  - name: Print accounts
-    debug:
-      msg: "The following accounts have 'Password Never Expires' enabled: {{ account_names.stdout_lines }}"
+#   - name: Print accounts
+#     debug:
+#       msg: "The following accounts have 'Password Never Expires' enabled: {{ account_names.stdout_lines }}"
+#   when:
+#     win_baseline_3377_state_Manage
 
 # - name: "win_baseline_3376_state | Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'"
 #   win_security_policy:
