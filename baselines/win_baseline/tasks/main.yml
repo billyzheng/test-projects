@@ -1171,6 +1171,16 @@
     Write-Output $account_names
   register: account_names
 
+- name: Set 'Password Never Expires' to 'False' for these accounts
+  win_shell: |
+    $account_names = "{{ account_names.stdout_lines }}"
+    foreach ($account_name in $account_names) {
+      $user = [ADSI]"WinNT://./$account_name,user"
+      $user.UserFlags.value = $user.UserFlags.value -bor 0x10000
+      $user.SetInfo()
+    }
+  when: account_names.stdout_lines | length > 0
+
 - name: Print accounts
   debug:
     msg: "The following accounts have 'Password Never Expires' enabled: {{ account_names.stdout_lines }}"
