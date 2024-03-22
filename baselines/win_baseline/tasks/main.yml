@@ -839,16 +839,6 @@
 #   when:
 #     win_baseline_2386_state_Manage
 
-- name: Get user accounts
-  win_shell: |
-    $rightName = "SeDenyInteractiveLogonRight"
-    $accounts = (Get-CimInstance -ClassName Win32_UserRightAssignment -Namespace "root\cimv2" | Where-Object {$_.Name -eq $rightName}).GetRelated("Win32_Account") | Select-Object -ExpandProperty Name
-  register: result
-
-- name: Print the list
-  debug:
-    var: result
-
 # - name: "win_baseline_2387_state | Ensure 'Load and unload device drivers' is set to 'Administrators'"
 #   win_user_right:
 #     name: "{{ win_baseline_2387_state_Name }}"
@@ -1173,6 +1163,17 @@
 #     action: "{{ win_baseline_3242_state_Action }}"
 #   when:
 #     win_baseline_3242_state_Manage
+
+- name: Get list of accounts where 'Password Never Expires' is enabled
+  win_shell: |
+    $accounts = Get-WmiObject -Class Win32_UserAccount -Filter "PasswordExpires = 'False'"
+    $account_names = $accounts | Select-Object -ExpandProperty Name
+    Write-Output $account_names
+  register: account_names
+
+- name: Print accounts
+  debug:
+    msg: "The following accounts have 'Password Never Expires' enabled: {{ account_names.stdout_lines }}"
 
 # - name: "win_baseline_3376_state | Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'"
 #   win_security_policy:
