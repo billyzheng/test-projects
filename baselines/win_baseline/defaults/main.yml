@@ -712,7 +712,7 @@ win_baseline_2397_state_Action: set
 # win_baseline_2398_state | Ensure 'Replace a process level token' is set to 'No One'
 win_baseline_2398_state_Manage: True
 win_baseline_2398_state_Name: "SeAssignPrimaryTokenPrivilege"
-win_baseline_2398_state_Users: "[Local Srevice, Network Service]"
+win_baseline_2398_state_Users: "Local Srevice, Network Service"
 win_baseline_2398_state_Action: set
 
 # win_baseline_2399_state | Ensure 'Restore files and directories' is set to 'Administrators, Backup Operators'
