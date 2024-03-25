@@ -2065,7 +2065,7 @@ win_baseline_10152_state_AuditType: "success"
 # win_baseline_10317_state | Ensure Deny log on locally to include Guests
 win_baseline_10317_state_Manage: True
 win_baseline_10317_state_Name: "SeDenyInteractiveLogonRight"
-win_baseline_10317_state_Usres: "[Guests]"
+win_baseline_10317_state_Users: "Guests"
 win_baseline_10317_state_Action: "add"
 
 # win_baseline_10353_state | Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'
