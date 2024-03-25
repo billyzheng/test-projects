@@ -712,7 +712,7 @@ win_baseline_2397_state_Action: set
 # win_baseline_2398_state | Ensure 'Replace a process level token' is set to 'No One'
 win_baseline_2398_state_Manage: True
 win_baseline_2398_state_Name: "SeAssignPrimaryTokenPrivilege"
-win_baseline_2398_state_Users: "[]"
+win_baseline_2398_state_Users: "[Local Srevice, Network Service]"
 win_baseline_2398_state_Action: set
 
 # win_baseline_2399_state | Ensure 'Restore files and directories' is set to 'Administrators, Backup Operators'
@@ -1812,6 +1812,18 @@ win_baseline_9301_state_Name: "SCRNSAVE.EXE"
 win_baseline_9301_state_Data: "scrnsave.scr"
 win_baseline_9301_state_Type: string
 
+# win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled
+win_baseline_9305_state_Manage: True
+win_baseline_9305_1_state_Path: 'HKU:\.DEFAULT\Software\Microsoft\Windows\Currentversion\Policies\Attachments'
+win_baseline_9305_1_1_state_Name: "ScanWithAntiVirus"
+win_baseline_9305_1_state_Data: "3"
+win_baseline_9305_1_state_Type: dword
+win_baseline_9305_2_state_Path: 'HKCU:\Software\Microsoft\Windows\Currentversion\Policies\Attachments'
+win_baseline_9305_2_1_state_Name: "ScanWithAntiVirus
+win_baseline_9305_2_state_Data: "3"
+win_baseline_9305_2_state_Type: dword
+
+
 # win_baseline_9402_state | Ensure 'Turn off the advertising ID' is set to 'Enabled'
 win_baseline_9402_state_Manage: True
 win_baseline_9402_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AdvertisingInfo'
@@ -2049,6 +2061,12 @@ win_baseline_10151_state_AuditType: "success"
 win_baseline_10152_state_Manage: True
 win_baseline_10152_state_Subcategory: "Group Membership"
 win_baseline_10152_state_AuditType: "success"
+
+# win_baseline_10317_state | Ensure Deny log on locally to include Guests
+win_baseline_10317_state_Manage: True
+win_baseline_10317_state_Name: "SeDenyInteractiveLogonRight"
+win_baseline_10317_state_Usres: "[Guests]"
+win_baseline_10317_state_Action: "add"
 
 # win_baseline_10353_state | Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'
 win_baseline_10353_state_Manage: True
