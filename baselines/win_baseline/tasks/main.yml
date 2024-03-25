@@ -982,24 +982,13 @@
 #   when:
 #     win_baseline_2343_state_Manage
 
-- name: Get list of accounts assigned with 'SeAuditPrivilege'
-  win_shell: |
-    $privilege = 'SeAuditPrivilege'
-    $accounts = Get-WmiObject -Class Win32_UserAccount
-    $assigned_accounts = foreach ($account in $accounts) {
-      $username = $account.Name
-      $user = [ADSI]"WinNT://./$username,user"
-      $privileges = $user.Invoke('GetPrivileges')
-      if ($privileges -contains $privilege) {
-        $username
-      }
-    }
-    Write-Output $assigned_accounts
-  register: assigned_accounts
-
-- name: Print accounts
-  debug:
-    msg: "The following accounts are assigned with 'SeAuditPrivilege': {{ assigned_accounts.stdout_lines }}"
+- name: "win_baseline_2385_state | Get 'Current list of groups and user accounts granted the Generate Security Audits right'"
+  win_user_right:
+      name: "{{ win_baseline_2385_state_Name}}"
+      users: "{{ win_baseline_2385_state_Users }}"
+      action: "{{ win_baseline_2385_state_Action}}"
+  when:
+      - win_baseline_2385_state_Manage
 
 # - name: "win_baseline_2421_state | Ensure 'Administrator account' followint the naming rules"
 #   block:
