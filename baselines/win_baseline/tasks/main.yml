@@ -1188,24 +1188,6 @@
 #   when:
 #     win_baseline_3242_state_Manage
 
-- name: "win_baseline_3377_state | Get 'Current list of accounts having the password never expires' setting enabled"
-  block:
-  - name: Set maximum password age to 60 days
-    win_shell: net accounts /maxpwage:60
-    
-  - name: Get list of accounts where 'Password Never Expires' is enabled
-    win_shell: |
-      $accounts = Get-WmiObject -Class Win32_UserAccount -Filter "PasswordExpires = 'False'"
-      $account_names = $accounts | Select-Object -ExpandProperty Name
-      Write-Output $account_names
-    register: account_names
-
-  - name: Print accounts
-    debug:
-      msg: "The following accounts have 'Password Never Expires' enabled: {{ account_names.stdout_lines }}"
-  when:
-    win_baseline_3377_state_Manage
-
 # - name: "win_baseline_3376_state | Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'"
 #   win_security_policy:
 #     section: "{{ win_baseline_3376_state_Section }}"
@@ -1332,6 +1314,15 @@
 #     type: "{{ win_baseline_3899_state_Type }}"
 #   when:
 #     win_baseline_3899_state_Manage
+
+- name: "win_baseline_3900_state | Ensure 'Offer Remote Assistance' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_3900_state_Path }}"
+    name: "{{ win_baseline_3900_state_Name }}"
+    data: "{{ win_baseline_3900_state_Data }}"
+    type: "{{ win_baseline_3900_state_Type }}"
+  when:
+    win_baseline_3900_state_Manage
 
 # - name: "win_baseline_3903_state | Ensure 'Do not process the run once list' is set to Enabled"
 #   win_regedit:

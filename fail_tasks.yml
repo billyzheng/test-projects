@@ -182,3 +182,21 @@
   - name: 显示安全事件日志文件的权限集
     debug:
       var: security_eventlog_permissions.stdout_lines
+
+# - name: "win_baseline_3377_state | Get 'Current list of accounts having the password never expires' setting enabled"
+#   block:
+#   - name: Set maximum password age to 60 days
+#     win_shell: net accounts /maxpwage:60
+    
+#   - name: Get list of accounts where 'Password Never Expires' is enabled
+#     win_shell: |
+#       $accounts = Get-WmiObject -Class Win32_UserAccount -Filter "PasswordExpires = 'False'"
+#       $account_names = $accounts | Select-Object -ExpandProperty Name
+#       Write-Output $account_names
+#     register: account_names
+
+#   - name: Print accounts
+#     debug:
+#       msg: "The following accounts have 'Password Never Expires' enabled: {{ account_names.stdout_lines }}"
+#   when:
+#     win_baseline_3377_state_Manage

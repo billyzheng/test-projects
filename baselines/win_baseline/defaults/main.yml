@@ -991,6 +991,13 @@ win_baseline_3899_state_Name: "fAllowToGetHelp"
 win_baseline_3899_state_Data: "0"
 win_baseline_3899_state_Type: dword
 
+# win_baseline_3900_state | Ensure 'Offer Remote Assistance' is set to 'Disabled'
+win_baseline_3900_state_Manage: True
+win_baseline_3900_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services'
+win_baseline_3900_state_Name: "fAllowUnsolicited"
+win_baseline_3900_state_Data: "0"
+
+
 # win_baseline_3903_state | Ensure 'Do not process the run once list' is set to Enabled
 win_baseline_3903_state_Manage: True
 win_baseline_3903_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Policies\Explorer'
