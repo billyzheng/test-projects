@@ -982,29 +982,29 @@
 #   when:
 #     win_baseline_2343_state_Manage
 
-- name: "win_baseline_2385_state | Get 'Current list of groups and user accounts granted the Generate Security Audits right'"
-  win_user_right:
-      name: "{{ win_baseline_2385_state_Name}}"
-      users: "{{ win_baseline_2385_state_Users }}"
-      action: "{{ win_baseline_2385_state_Action}}"
-  when:
-      - win_baseline_2385_state_Manage
+# - name: "win_baseline_2385_state | Get 'Current list of groups and user accounts granted the Generate Security Audits right'"
+#   win_user_right:
+#       name: "{{ win_baseline_2385_state_Name}}"
+#       users: "{{ win_baseline_2385_state_Users }}"
+#       action: "{{ win_baseline_2385_state_Action}}"
+#   when:
+#       - win_baseline_2385_state_Manage
 
-- name: "win_baseline_2388_state | Ensure Lock pages in memory is set to No One "
-  win_user_right:
-      name: "{{ win_baseline_2388_state_Name }}"
-      users: "{{ win_baseline_2388_state_Users }}"
-      action: "{{ win_baseline_2388_state_Action }}"
-  when:
-      - win_baseline_2388_state_Manage
+# - name: "win_baseline_2388_state | Ensure Lock pages in memory is set to No One "
+#   win_user_right:
+#       name: "{{ win_baseline_2388_state_Name }}"
+#       users: "{{ win_baseline_2388_state_Users }}"
+#       action: "{{ win_baseline_2388_state_Action }}"
+#   when:
+#       - win_baseline_2388_state_Manage
 
-- name: "win_baseline_2398_state | Ensure Replace a process level token is set to LOCAL SERVICE NETWORK SERVICE"
-  ansible.windows.win_user_right:
-      name: "{{ win_baseline_2398_state_Name }}"
-      users: "{{ win_baseline_2398_state_Users }}"
-      action: "{{ win_baseline_2398_state_Action }}"
-  when:
-      - win_baseline_2398_state_Manage
+# - name: "win_baseline_2398_state | Ensure Replace a process level token is set to LOCAL SERVICE NETWORK SERVICE"
+#   ansible.windows.win_user_right:
+#       name: "{{ win_baseline_2398_state_Name }}"
+#       users: "{{ win_baseline_2398_state_Users }}"
+#       action: "{{ win_baseline_2398_state_Action }}"
+#   when:
+#       - win_baseline_2398_state_Manage
 
 # - name: "win_baseline_2421_state | Ensure 'Administrator account' followint the naming rules"
 #   block:
@@ -1188,23 +1188,23 @@
 #   when:
 #     win_baseline_3242_state_Manage
 
-# - name: "win_baseline_3377_state | Get 'Current list of accounts having the password never expires' setting enabled"
-#   block:
-#   - name: Set maximum password age to 60 days
-#     win_shell: net accounts /maxpwage:60
+- name: "win_baseline_3377_state | Get 'Current list of accounts having the password never expires' setting enabled"
+  block:
+  - name: Set maximum password age to 60 days
+    win_shell: net accounts /maxpwage:60
     
-#   - name: Get list of accounts where 'Password Never Expires' is enabled
-#     win_shell: |
-#       $accounts = Get-WmiObject -Class Win32_UserAccount -Filter "PasswordExpires = 'False'"
-#       $account_names = $accounts | Select-Object -ExpandProperty Name
-#       Write-Output $account_names
-#     register: account_names
+  - name: Get list of accounts where 'Password Never Expires' is enabled
+    win_shell: |
+      $accounts = Get-WmiObject -Class Win32_UserAccount -Filter "PasswordExpires = 'False'"
+      $account_names = $accounts | Select-Object -ExpandProperty Name
+      Write-Output $account_names
+    register: account_names
 
-#   - name: Print accounts
-#     debug:
-#       msg: "The following accounts have 'Password Never Expires' enabled: {{ account_names.stdout_lines }}"
-#   when:
-#     win_baseline_3377_state_Manage
+  - name: Print accounts
+    debug:
+      msg: "The following accounts have 'Password Never Expires' enabled: {{ account_names.stdout_lines }}"
+  when:
+    win_baseline_3377_state_Manage
 
 # - name: "win_baseline_3376_state | Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'"
 #   win_security_policy:
@@ -2285,23 +2285,23 @@
 #     type: "{{ win_baseline_9025_state_Type }}"
 #   when: win_baseline_9025_state_Manage
 
-- name: "win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled"
-  block:
-      - name: "win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled"
-        ansible.windows.win_regedit:
-          path: "{{ win_baseline_9305_1_state_Path }}"
-          name: "{{ win_baseline_9305_1_state_Name }}"
-          data: "{{ win_baseline_9305_1_state_Data }}"
-          type: "{{ win_baseline_9305_1_state_Type }}"
+# - name: "win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled"
+#   block:
+#       - name: "win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled"
+#         ansible.windows.win_regedit:
+#           path: "{{ win_baseline_9305_1_state_Path }}"
+#           name: "{{ win_baseline_9305_1_state_Name }}"
+#           data: "{{ win_baseline_9305_1_state_Data }}"
+#           type: "{{ win_baseline_9305_1_state_Type }}"
 
-      - name: "win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled"
-        ansible.windows.win_regedit:
-          path: "{{ win_baseline_9305_2_state_Path }}"
-          name: "{{ win_baseline_9305_2_state_Name }}"
-          data: "{{ win_baseline_9305_2_state_Data }}"
-          type: "{{ win_baseline_9305_2_state_Type }}"
-  when:
-      - win_baseline_9305_state_Manage
+#       - name: "win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled"
+#         ansible.windows.win_regedit:
+#           path: "{{ win_baseline_9305_2_state_Path }}"
+#           name: "{{ win_baseline_9305_2_state_Name }}"
+#           data: "{{ win_baseline_9305_2_state_Data }}"
+#           type: "{{ win_baseline_9305_2_state_Type }}"
+#   when:
+#       - win_baseline_9305_state_Manage
 
 # - name: "win_baseline_9402_state | Ensure 'Turn off the advertising ID' is set to 'Enabled'"
 #   win_regedit:
@@ -2571,13 +2571,13 @@
 #     audit_type: "{{ win_baseline_10152_state_AuditType }}"
 #   when: win_baseline_10152_state_Manage
 
-- name: "win_baseline_10317_state | Ensure Deny log on locally to include Guests"
-  ansible.windows.win_user_right:
-      name: "{{ win_baseline_10317_state_Name }}"
-      users: "{{ win_baseline_10317_state_Users }}"
-      action: "{{ win_baseline_10317_state_Action }}"
-  when:
-      - win_baseline_10317_state_Manage
+# - name: "win_baseline_10317_state | Ensure Deny log on locally to include Guests"
+#   ansible.windows.win_user_right:
+#       name: "{{ win_baseline_10317_state_Name }}"
+#       users: "{{ win_baseline_10317_state_Users }}"
+#       action: "{{ win_baseline_10317_state_Action }}"
+#   when:
+#       - win_baseline_10317_state_Manage
 
 # - name: "win_baseline_10353_state | Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'"
 #   win_regedit:
