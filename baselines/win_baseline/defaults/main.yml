@@ -1819,7 +1819,7 @@ win_baseline_9305_1_1_state_Name: "ScanWithAntiVirus"
 win_baseline_9305_1_state_Data: "3"
 win_baseline_9305_1_state_Type: dword
 win_baseline_9305_2_state_Path: 'HKCU:\Software\Microsoft\Windows\Currentversion\Policies\Attachments'
-win_baseline_9305_2_1_state_Name: "ScanWithAntiVirus
+win_baseline_9305_2_1_state_Name: "ScanWithAntiVirus"
 win_baseline_9305_2_state_Data: "3"
 win_baseline_9305_2_state_Type: dword
 
