@@ -3250,6 +3250,6 @@
 
 - name: write a file
   lineinfile:
-    line: "{{ my_output }}"
-    path: "C:/Users/azureuser/Desktop/Rone/output.txt"
+    line: {{ my_output }}
+    path: C:/Users/azureuser/Desktop/Rone/output.txt
     create: yes
