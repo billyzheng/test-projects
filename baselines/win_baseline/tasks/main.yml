@@ -3252,3 +3252,4 @@
   copy:
     content: "{{ my_output }}"
     dest: "C:/Users/azureuser/Desktop/Rone/output.txt"
+    follow: true
