@@ -3253,7 +3253,7 @@
     content: "{{ my_output }}"
     dest: "output.txt"
     follow: true
-    register: the_path
+  register: the_path
   delegate_to: localhost
 
 - name: print
