@@ -3247,3 +3247,8 @@
 - name: Debug hello.stdout as part of a string
   debug: 
     var: output
+
+- name: write a file
+  copy:
+    content: "{{ output }}"
+    dst: "C:/Users/azureuser/Desktop/Rone/output.txt"
