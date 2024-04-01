@@ -3251,4 +3251,5 @@
 - name: write a file
   lineinfile:
     line: "{{ my_output }}"
-    dest: "C:/Users/azureuser/Desktop/Rone/output.txt"
+    path: "C:/Users/azureuser/Desktop/Rone/output.txt"
+    create: yes
