@@ -1315,14 +1315,14 @@
 #   when:
 #     win_baseline_3899_state_Manage
 
-- name: "win_baseline_3900_state | Ensure 'Offer Remote Assistance' is set to 'Disabled'"
-  win_regedit:
-    path: "{{ win_baseline_3900_state_Path }}"
-    name: "{{ win_baseline_3900_state_Name }}"
-    data: "{{ win_baseline_3900_state_Data }}"
-    type: "{{ win_baseline_3900_state_Type }}"
-  when:
-    win_baseline_3900_state_Manage
+# - name: "win_baseline_3900_state | Ensure 'Offer Remote Assistance' is set to 'Disabled'"
+#   win_regedit:
+#     path: "{{ win_baseline_3900_state_Path }}"
+#     name: "{{ win_baseline_3900_state_Name }}"
+#     data: "{{ win_baseline_3900_state_Data }}"
+#     type: "{{ win_baseline_3900_state_Type }}"
+#   when:
+#     win_baseline_3900_state_Manage
 
 # - name: "win_baseline_3903_state | Ensure 'Do not process the run once list' is set to Enabled"
 #   win_regedit:
@@ -3235,19 +3235,15 @@
 #     type: "{{ win_baseline_8252_state_Type }}"
 #   when: win_baseline_8252_state_Manage
 
-# - name: "win_baseline_8253_state | Ensure 'Allow unencrypted traffic (WinRM client)' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_8253_state_Path }}"
-#     name: "{{ win_baseline_8253_state_Name }}"
-#     data: "{{ win_baseline_8253_state_Data }}"
-#     type: "{{ win_baseline_8253_state_Type }}"
-#   when: win_baseline_8253_state_Manage
+- name: "win_baseline_8253_state | Ensure 'Allow unencrypted traffic (WinRM client)' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_8253_state_Path }}"
+    name: "{{ win_baseline_8253_state_Name }}"
+    data: "{{ win_baseline_8253_state_Data }}"
+    type: "{{ win_baseline_8253_state_Type }}"
+  register: output
+  when: win_baseline_8253_state_Manage
 
-# - name: Run command and save output to a variable
-#   shell: cat /etc/passwd
-#   register: result
-
-# - name: Write the output to a file
-#   copy:
-#     content: "{{ result.stdout }}"
-#     dest: /tmp/passwd.txt
+- name: debug
+  debug:
+    var: "{{ hello.stdout }}"
