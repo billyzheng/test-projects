@@ -3242,3 +3242,12 @@
 #     data: "{{ win_baseline_8253_state_Data }}"
 #     type: "{{ win_baseline_8253_state_Type }}"
 #   when: win_baseline_8253_state_Manage
+
+- name: Run command and save output to a variable
+  shell: cat /etc/passwd
+  register: result
+
+- name: Write the output to a file
+  copy:
+    content: "{{ result.stdout }}"
+    dest: /tmp/passwd.txt

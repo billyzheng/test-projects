@@ -89,7 +89,7 @@
 #     win_baseline_4491_state_Manage
 
 # # ! error, details in the table
-# - name: "win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Client' is set to 'Disabled'"
+# - name: "win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Server' is set to 'Disabled'"
 #   win_service:
 #     name: "{{ win_baseline_1115_state_Name }}"
 #     state: "{{ win_baseline_1115_state_State }}"

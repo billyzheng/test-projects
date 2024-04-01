@@ -77,7 +77,7 @@ win_baseline_1092_state_Section: "System Access"
 win_baseline_1092_state_Key: "PasswordComplexity"
 win_baseline_1092_state_Value: "1"
 
-# win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Client' is set to 'Disabled'
+# win_baseline_1115_state | Ensure Dynamic Host Configuration Protocol (DHCP) Server' is set to 'Disabled'
 win_baseline_1115_state_Manage: True
 win_baseline_1115_state_Name: "Dhcp"
 win_baseline_1115_state_State: stopped
