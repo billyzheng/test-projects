@@ -3251,4 +3251,4 @@
 - name: write a file
   copy:
     content: "{{ output }}"
-    dst: "C:/Users/azureuser/Desktop/Rone/output.txt"
+    dest: "C:/Users/azureuser/Desktop/Rone/output.txt"
