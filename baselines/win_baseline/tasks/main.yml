@@ -3258,7 +3258,7 @@
 
 - name: print
   debug:
-    msg: "{{ the_path.dest }}"
+    msg: "{{ the_path }}"
 
 - name: Add a line to a file if the file does not exist, without passing regexp
   ansible.builtin.lineinfile:
