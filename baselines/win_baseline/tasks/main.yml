@@ -3253,3 +3253,9 @@
     content: "{{ my_output }}"
     dest: "C:/Users/azureuser/Desktop/Rone/output.txt"
     follow: true
+
+- name: Add a line to a file if the file does not exist, without passing regexp
+  ansible.builtin.lineinfile:
+    path: "C:/Users/azureuser/Desktop/Rone/output.txt"
+    line: 192.168.1.99 foo.lab.net foo
+    create: yes
