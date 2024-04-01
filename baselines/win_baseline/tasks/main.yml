@@ -3246,9 +3246,9 @@
 
 - name: Debug hello.stdout as part of a string
   debug: 
-    var: output
+    var: my_output
 
 - name: write a file
   copy:
-    content: "{{ output }}"
+    content: "{{ my_output }}"
     dest: "C:/Users/azureuser/Desktop/Rone/output.txt"
