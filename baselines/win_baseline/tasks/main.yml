@@ -3254,9 +3254,11 @@
     dest: "output.txt"
     follow: true
     register: the_path
-  debug:
-   msg: the_path
   delegate_to: localhost
+
+- name: print
+  debug:
+    msg: "{{ the_path.dest }}"
 
 - name: Add a line to a file if the file does not exist, without passing regexp
   ansible.builtin.lineinfile:
