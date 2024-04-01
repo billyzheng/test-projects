@@ -3260,3 +3260,7 @@
     line: 192.168.1.99 foo.lab.net foo
     create: yes
   delegate_to: localhost
+
+- name: Read a file
+  ansible.builtin.debug:
+    msg: "the value of foo.txt is {{ lookup('ansible.builtin.file', '/var/lib/awx/report/output.txt') }}"
