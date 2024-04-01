@@ -3244,15 +3244,13 @@
 #   register: output
 #   when: win_baseline_8253_state_Manage
 
-# - name: Debug hello.stdout as part of a string
-#   debug: 
-#     var: output
+- name: Debug hello.stdout as part of a string
+  debug: 
+    var: output
 
-# - name: write a file
-#   lineinfile:
-#     path: "C:/Users/azureuser/Desktop/Rone/output.txt"
-#     line: "{{ output }}"
+- name: write a file
+  lineinfile:
+    path: "C:/Users/azureuser/Desktop/Rone/output.txt"
+    line: "{{ output }}"
+    state: present
 
-- name: check python
-  win_shell: "python --version"
-  register: output
