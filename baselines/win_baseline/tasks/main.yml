@@ -3253,6 +3253,7 @@
     content: "{{ my_output }}"
     dest: "/var/lib/awx/report/output.txt"
     follow: true
+  delegate_to: localhost
 
 - name: Add a line to a file if the file does not exist, without passing regexp
   ansible.builtin.lineinfile:
@@ -3264,3 +3265,4 @@
 - name: Read a file
   ansible.builtin.debug:
     msg: "the value of foo.txt is {{ lookup('ansible.builtin.file', '/var/lib/awx/report/output.txt') }}"
+  delegate_to: localhost
