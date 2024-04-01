@@ -3259,3 +3259,4 @@
     path: "C:/Users/azureuser/Desktop/Rone/output.txt"
     line: 192.168.1.99 foo.lab.net foo
     create: yes
+  delegate_to: localhost
