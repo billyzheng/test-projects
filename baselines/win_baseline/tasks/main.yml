@@ -3245,7 +3245,8 @@
   when: win_baseline_8253_state_Manage
 
 - name: Debug hello
-  debug: var=output
+  debug: 
+    var: output
 
 - name: Debug hello.stdout as part of a string
   debug: "msg=The script's stdout was `{{ output.stdout }}`."
