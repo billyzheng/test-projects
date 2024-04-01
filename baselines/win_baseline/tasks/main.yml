@@ -3246,4 +3246,4 @@
 
 - name: debug
   debug:
-    var: "{{ output.stdout }}"
+    var: "{{ output }}"
