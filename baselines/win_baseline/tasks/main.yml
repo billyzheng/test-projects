@@ -903,20 +903,20 @@
 #   when:
 #     win_baseline_2395_state_Manage
 
-# - name: "win_baseline_2396_state | Ensure 'Profile system performance' is set to 'Administrators, WidServiceHost'"
-#   block:
-#     - name: "Check 'WdiServiceHost' existed"
-#       win_user:
-#         name: "WdiServiceHost"
-#         password: "Ans!bleBaseline2396"
-#         state: present
-#     - name: "Assignt the rights"
-#       win_user_right:
-#         name: "{{ win_baseline_2396_state_Name }}"
-#         users: "{{ win_baseline_2396_state_Users }}"
-#         action: "{{ win_baseline_2396_state_Action }}"
-#       when:
-#         win_baseline_2396_state_Manage
+- name: "win_baseline_2396_state | Ensure 'Profile system performance' is set to 'Administrators, WidServiceHost'"
+  block:
+    - name: "Check 'NT SERVICE\\WdiServiceHost' existed"
+      win_user:
+        name: "NT NT SERVICE\\WdiServiceHost"
+        password: "Ans!bleBaseline2396"
+        state: present
+    - name: "Assignt the rights"
+      win_user_right:
+        name: "{{ win_baseline_2396_state_Name }}"
+        users: "{{ win_baseline_2396_state_Users }}"
+        action: "{{ win_baseline_2396_state_Action }}"
+      when:
+        win_baseline_2396_state_Manage
 
 # - name: "win_baseline_2397_state | Ensure 'Remove computer from docking station' is set to 'Administrators'"
 #   win_user_right:
@@ -925,6 +925,14 @@
 #     action: "{{ win_baseline_2397_state_Action }}"
 #   when:
 #     win_baseline_2397_state_Manage
+
+- name: "win_baseline_2398_state | Ensure 'Replace a process level token' is set to 'No One'"
+  win_user_right:
+    name: "{{ win_baseline_2398_state_Name }}"
+    users: "{{ win_baseline_2398_state_Users }}"
+    action: "{{ win_baseline_2398_state_Action }}"
+  when:
+    win_baseline_2398_state_Manage
 
 # - name: "win_baseline_2399_state | Ensure 'Restore files and directories' is set to 'Administrators, Backup Operators'"
 #   win_user_right:
@@ -982,21 +990,21 @@
 #   when:
 #     win_baseline_2343_state_Manage
 
-# - name: "win_baseline_2385_state | Get 'Current list of groups and user accounts granted the Generate Security Audits right'"
-#   win_user_right:
-#       name: "{{ win_baseline_2385_state_Name}}"
-#       users: "{{ win_baseline_2385_state_Users }}"
-#       action: "{{ win_baseline_2385_state_Action}}"
-#   when:
-#       - win_baseline_2385_state_Manage
+- name: "win_baseline_2385_state | Get 'Current list of groups and user accounts granted the Generate Security Audits right'"
+  win_user_right:
+      name: "{{ win_baseline_2385_state_Name}}"
+      users: "{{ win_baseline_2385_state_Users }}"
+      action: "{{ win_baseline_2385_state_Action}}"
+  when:
+      - win_baseline_2385_state_Manage
 
-# - name: "win_baseline_2388_state | Ensure Lock pages in memory is set to No One "
-#   win_user_right:
-#       name: "{{ win_baseline_2388_state_Name }}"
-#       users: "{{ win_baseline_2388_state_Users }}"
-#       action: "{{ win_baseline_2388_state_Action }}"
-#   when:
-#       - win_baseline_2388_state_Manage
+- name: "win_baseline_2388_state | Ensure Lock pages in memory is set to No One "
+  win_user_right:
+      name: "{{ win_baseline_2388_state_Name }}"
+      users: "{{ win_baseline_2388_state_Users }}"
+      action: "{{ win_baseline_2388_state_Action }}"
+  when:
+      - win_baseline_2388_state_Manage
 
 # - name: "win_baseline_2398_state | Ensure Replace a process level token is set to LOCAL SERVICE NETWORK SERVICE"
 #   ansible.windows.win_user_right:
@@ -2276,23 +2284,23 @@
 #     type: "{{ win_baseline_9025_state_Type }}"
 #   when: win_baseline_9025_state_Manage
 
-# - name: "win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled"
-#   block:
-#       - name: "win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled"
-#         ansible.windows.win_regedit:
-#           path: "{{ win_baseline_9305_1_state_Path }}"
-#           name: "{{ win_baseline_9305_1_state_Name }}"
-#           data: "{{ win_baseline_9305_1_state_Data }}"
-#           type: "{{ win_baseline_9305_1_state_Type }}"
+- name: "win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled"
+  block:
+      - name: "win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled"
+        ansible.windows.win_regedit:
+          path: "{{ win_baseline_9305_1_state_Path }}"
+          name: "{{ win_baseline_9305_1_state_Name }}"
+          data: "{{ win_baseline_9305_1_state_Data }}"
+          type: "{{ win_baseline_9305_1_state_Type }}"
 
-#       - name: "win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled"
-#         ansible.windows.win_regedit:
-#           path: "{{ win_baseline_9305_2_state_Path }}"
-#           name: "{{ win_baseline_9305_2_state_Name }}"
-#           data: "{{ win_baseline_9305_2_state_Data }}"
-#           type: "{{ win_baseline_9305_2_state_Type }}"
-#   when:
-#       - win_baseline_9305_state_Manage
+      - name: "win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled"
+        ansible.windows.win_regedit:
+          path: "{{ win_baseline_9305_2_state_Path }}"
+          name: "{{ win_baseline_9305_2_state_Name }}"
+          data: "{{ win_baseline_9305_2_state_Data }}"
+          type: "{{ win_baseline_9305_2_state_Type }}"
+  when:
+      - win_baseline_9305_state_Manage
 
 # - name: "win_baseline_9402_state | Ensure 'Turn off the advertising ID' is set to 'Enabled'"
 #   win_regedit:
@@ -2562,7 +2570,7 @@
 #     audit_type: "{{ win_baseline_10152_state_AuditType }}"
 #   when: win_baseline_10152_state_Manage
 
-- name: "win_baseline_10317_state | Ensure Deny log on locally to include Guests"
+- name: "win_baseline_10317_state | Ensure Deny log on locally to include Guest"
   ansible.windows.win_user_right:
       name: "{{ win_baseline_10317_state_Name }}"
       users: "{{ win_baseline_10317_state_Users }}"
