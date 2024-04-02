@@ -2562,13 +2562,13 @@
 #     audit_type: "{{ win_baseline_10152_state_AuditType }}"
 #   when: win_baseline_10152_state_Manage
 
-# - name: "win_baseline_10317_state | Ensure Deny log on locally to include Guests"
-#   ansible.windows.win_user_right:
-#       name: "{{ win_baseline_10317_state_Name }}"
-#       users: "{{ win_baseline_10317_state_Users }}"
-#       action: "{{ win_baseline_10317_state_Action }}"
-#   when:
-#       - win_baseline_10317_state_Manage
+- name: "win_baseline_10317_state | Ensure Deny log on locally to include Guests"
+  ansible.windows.win_user_right:
+      name: "{{ win_baseline_10317_state_Name }}"
+      users: "{{ win_baseline_10317_state_Users }}"
+      action: "{{ win_baseline_10317_state_Action }}"
+  when:
+      - win_baseline_10317_state_Manage
 
 # - name: "win_baseline_10353_state | Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'"
 #   win_regedit:
