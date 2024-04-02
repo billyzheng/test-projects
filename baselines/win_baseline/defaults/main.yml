@@ -524,10 +524,10 @@ win_baseline_2181_state_Name: "SeNetworkLogonRight"
 win_baseline_2181_state_Users: "Administrators, Authenticated Users"
 win_baseline_2181_state_Action: set
 
-# win_baseline_2182_state | Ensure 'Act as part of the operating system' right is set to 'Backup Operators, GL-arsservice'
+# win_baseline_2182_state | Ensure 'Act as part of the operating system' right is set to 'Backup Operators'
 win_baseline_2182_state_Manage: True
 win_baseline_2182_state_Name: "SeTcbPrivilege"
-win_baseline_2182_state_Users: "Backup Operators, GL-arsservice"
+win_baseline_2182_state_Users: "Backup Operators"
 win_baseline_2182_state_Action: set
 
 # win_baseline_2183_state | Ensure 'Add workstations to domain' is set to 'Administrators'
@@ -700,7 +700,7 @@ win_baseline_2395_state_Action: set
 # win_baseline_2396_state | Ensure 'Profile system performance' is set to 'Administrators, WidServiceHost'
 win_baseline_2396_state_Manage: True
 win_baseline_2396_state_Name: "SeSystemProfilePrivilege"
-win_baseline_2396_state_Users: "Administrators " # , WdiServiceHost"
+win_baseline_2396_state_Users: "Administrators, NT SERVICE\\WdiServiceHost"
 win_baseline_2396_state_Action: set
 
 # win_baseline_2397_state | Ensure 'Remove computer from docking station' is set to 'Administrators'
@@ -2073,8 +2073,8 @@ win_baseline_10152_state_AuditType: "success"
 # win_baseline_10317_state | Ensure Deny log on locally to include Guests
 win_baseline_10317_state_Manage: True
 win_baseline_10317_state_Name: "SeDenyInteractiveLogonRight"
-win_baseline_10317_state_Users: "Guests"
-win_baseline_10317_state_Action: "add"
+win_baseline_10317_state_Users: "Guest"
+win_baseline_10317_state_Action: "set"
 
 # win_baseline_10353_state | Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'
 win_baseline_10353_state_Manage: True
