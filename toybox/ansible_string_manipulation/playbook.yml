@@ -1,0 +1,31 @@
+---
+- hosts: localhost
+  gather_facts: no
+  vars:
+    input_file: 'export.txt'  # 输入文件名
+    output_file: "{{ lookup('pipe', 'date +%Y%m%d_%H_%M_%S') }}_user_passwords.json"  # 输出文件名，使用当前时间作为文件名
+
+  tasks:
+    - name: Read file  # 读取文件内容
+      command: cat {{ input_file }}
+      register: file_content
+
+    - name: Parse lines  # 解析每一行
+      set_fact:
+        users: >-
+          {{
+            users|default({})|
+            combine({
+              item.split()[0]: {
+                'PasswordExpires': item.split()[1],  
+                'PasswordRequired': item.split()[2]
+              }
+            })
+          }}
+      when: item|length > 0
+      loop: "{{ file_content.stdout_lines[1:] }}"  # 从第二行开始循环处理
+
+    - name: Write to JSON file  # 将结果写入JSON文件
+      copy:
+        content: "{{ users | to_nice_json(indent=4) }}"
+        dest: "{{ output_file }}"

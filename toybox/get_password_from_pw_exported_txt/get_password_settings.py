@@ -8,7 +8,7 @@ import argparse
 def main():
     datetime = time.strftime("%Y%m%d_%H_%M_%S")
 
-    file = open(args.file, 'r', encoding='utf-16')
+    file = open(args.file, 'r', encoding='utf-8')
     lines = file.readlines()
 
     users = {}
