@@ -134,11 +134,11 @@
   when: win_baseline_19336_state_Manage
 
 # ! cannot find the constant
-- name: "win_baseline_12385_state | Ensure 'Obtain an impersonation token for another user in the same session' is set to 'Administrators, Local Service, Network Service"
-  win_user_right:
-    name: "{{ win_baseline_11507_state_Name }}"
-    users: "{{ win_baseline_11507_state_Users }}"
-    action: "{{ win_baseline_11507_state_Action }}"
+- name: "win_baseline_11507_state | Ensure 'Obtain an impersonation token for another user in the same session' is set to 'Administrators, Local Service, Network Service"
+  win_security_policy:
+    section: "{{ win_baseline_11507_state_Section }}"
+    Key: "{{ win_baseline_11507_state_Key }}"
+    value: "{{ win_baseline_11507_state_Value }}"
   when: win_baseline_11507_state_Manage
 
 # ! not sure can run or not, billy is checking
