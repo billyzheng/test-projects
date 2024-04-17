@@ -1,5 +1,6 @@
 ---
-- hosts: localhost
+- name: Get user password settings and export to a json file
+  hosts: localhost
   gather_facts: no
   vars:
     input_file: 'export.txt'  # 输入文件名
