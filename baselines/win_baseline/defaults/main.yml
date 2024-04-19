@@ -2681,9 +2681,15 @@ win_baseline_9003_state_Data: "1"
 win_baseline_9003_state_Type: dword
 
 # win_baseline_10106_state | Ensure Toggle user control over Insider builds is set to Disabled
-
 win_baseline_10106_state_Manage: "True"
-win_baseline_10106_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Installer'
-win_baseline_10106_state_Name: "EnableInsiderBuilds"
+win_baseline_10106_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Previewbuilds'
+win_baseline_10106_state_Name: "AllowBuildPreview"
 win_baseline_10106_state_Data: "0"
 win_baseline_10106_state_Type: dword
+
+# "win_baseline_10348_state | Ensure Do not show feedback notifications is set to Enabled
+win_baseline_10348_state_Manage: "True"
+win_baseline_10348_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Datacollection'
+win_baseline_10348_state_Name: "DoNotShowFeedbackNotifications"
+win_baseline_10348_state_Data: "1"
+win_baseline_10348_state_Type: dword
