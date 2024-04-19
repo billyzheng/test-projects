@@ -990,21 +990,21 @@
 #   when:
 #     win_baseline_2343_state_Manage
 
-- name: "win_baseline_2385_state | Get 'Current list of groups and user accounts granted the Generate Security Audits right'"
-  win_user_right:
-      name: "{{ win_baseline_2385_state_Name}}"
-      users: "{{ win_baseline_2385_state_Users }}"
-      action: "{{ win_baseline_2385_state_Action}}"
-  when:
-      - win_baseline_2385_state_Manage
+# - name: "win_baseline_2385_state | Get 'Current list of groups and user accounts granted the Generate Security Audits right'"
+#   win_user_right:
+#       name: "{{ win_baseline_2385_state_Name}}"
+#       users: "{{ win_baseline_2385_state_Users }}"
+#       action: "{{ win_baseline_2385_state_Action}}"
+#   when:
+#       - win_baseline_2385_state_Manage
 
-- name: "win_baseline_2388_state | Ensure Lock pages in memory is set to No One "
-  win_user_right:
-      name: "{{ win_baseline_2388_state_Name }}"
-      users: "{{ win_baseline_2388_state_Users }}"
-      action: "{{ win_baseline_2388_state_Action }}"
-  when:
-      - win_baseline_2388_state_Manage
+# - name: "win_baseline_2388_state | Ensure Lock pages in memory is set to No One "
+#   win_user_right:
+#       name: "{{ win_baseline_2388_state_Name }}"
+#       users: "{{ win_baseline_2388_state_Users }}"
+#       action: "{{ win_baseline_2388_state_Action }}"
+#   when:
+#       - win_baseline_2388_state_Manage
 
 # - name: "win_baseline_2398_state | Ensure Replace a process level token is set to LOCAL SERVICE NETWORK SERVICE"
 #   ansible.windows.win_user_right:
@@ -2570,13 +2570,13 @@
 #     audit_type: "{{ win_baseline_10152_state_AuditType }}"
 #   when: win_baseline_10152_state_Manage
 
-- name: "win_baseline_10317_state | Ensure Deny log on locally to include Guest"
-  ansible.windows.win_user_right:
-      name: "{{ win_baseline_10317_state_Name }}"
-      users: "{{ win_baseline_10317_state_Users }}"
-      action: "{{ win_baseline_10317_state_Action }}"
-  when:
-      - win_baseline_10317_state_Manage
+# - name: "win_baseline_10317_state | Ensure Deny log on locally to include Guest"
+#   ansible.windows.win_user_right:
+#       name: "{{ win_baseline_10317_state_Name }}"
+#       users: "{{ win_baseline_10317_state_Users }}"
+#       action: "{{ win_baseline_10317_state_Action }}"
+#   when:
+#       - win_baseline_10317_state_Manage
 
 # - name: "win_baseline_10353_state | Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'"
 #   win_regedit:
@@ -3242,3 +3242,12 @@
 #     data: "{{ win_baseline_8252_state_Data }}"
 #     type: "{{ win_baseline_8252_state_Type }}"
 #   when: win_baseline_8252_state_Manage
+
+
+# --------- new added 60 baselines --------------------------------
+- name: "win_baseline_19057_state | Ensure Relax minimum password length limits is set to Enabled."
+  community.windows.win_security_policy:
+      section: "{{ win_baseline_19057_state_Section }}"
+      key: "{{ win_baseline_19057_state_Key }}"
+      value: "{{ win_baseline_19057_state_Value }}"
+  when: "{{ win_baseline_19057_state_Manage }}"

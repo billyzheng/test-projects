@@ -2540,12 +2540,6 @@ win_baseline_11507_state_Section: "System Access"
 win_baseline_11507_state_Key: "Administrators, Local Service, Network Service"
 win_baseline_11507_state_Action: set
 
-win_baseline_1071_state_Manage: True
-win_baseline_1071_state_Section: "System Access"
-win_baseline_1071_state_Key: "MinimumPasswordLength"
-win_baseline_1071_state_Value: "14"
-
-
 # win_baseline_12015_state | Ensure 'Block all consumer Microsoft account user authentication' is set to 'Enabled'
 win_baseline_12015_state_Manage: True
 win_baseline_12015_state_Path: 'HKLM:\Software\Policies\Microsoft'
@@ -2646,3 +2640,13 @@ win_baseline_19336_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\PowerS
 win_baseline_19336_state_Name: "EnableModuleLogging"
 win_baseline_19336_state_Data: "1"
 win_baseline_19336_state_Type: dword
+
+
+# --------- new added 60 baselines --------------------------------
+
+# win_baseline_19057_state | Ensure Relax minimum password length limits is set to Enabled.
+
+win_baseline_19057_state_Manage: True
+win_baseline_19057_state_Section: System Access
+win_baseline_19057_state_Key: RelaxMinimumPasswordLengthLimits
+win_baseline_19057_state_Value: 1
