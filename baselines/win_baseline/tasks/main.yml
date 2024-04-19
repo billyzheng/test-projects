@@ -3252,8 +3252,9 @@
 #       value: "{{ win_baseline_19057_state_Value }}"
 #   when: win_baseline_19057_state_Manage
 
-- name: "1.1.6 | PATCH | Ensure Relax minimum password length limits is set to Enabled."
-  community.windows.win_security_policy:
-      section: System Access
-      key: RelaxMinimumPasswordLengthLimits
-      value: 1
+- name: "win_baseline_2614_state | Ensure Prevent Internet Explorer security prompt for Windows Installer scripts is set to Disabled"
+  ansible.windows.win_regedit:
+      path: "{{ win_baseline_2614_state_Path }}"
+      name: "{{ win_baseline_2614_state_Name }}"
+      data: "{{ win_baseline_2614_state_Data }}"
+      type: "{{ win_baseline_2614_state_Type }}"
