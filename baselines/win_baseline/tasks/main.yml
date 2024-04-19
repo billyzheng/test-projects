@@ -3245,12 +3245,12 @@
 
 
 # --------- new added 60 baselines --------------------------------
-# - name: "win_baseline_19057_state | Ensure Relax minimum password length limits is set to Enabled."
-#   community.windows.win_security_policy:
-#       section: "{{ win_baseline_19057_state_Section }}"
-#       key: "{{ win_baseline_19057_state_Key }}"
-#       value: "{{ win_baseline_19057_state_Value }}"
-#   when: win_baseline_19057_state_Manage
+- name: "win_baseline_19057_state | Ensure Relax minimum password length limits is set to Enabled."
+  community.windows.win_security_policy:
+      section: "{{ win_baseline_19057_state_Section }}"
+      key: "{{ win_baseline_19057_state_Key }}"
+      value: "{{ win_baseline_19057_state_Value }}"
+  when: win_baseline_19057_state_Manage
 
 - name: "win_baseline_2614_state | Ensure Prevent Internet Explorer security prompt for Windows Installer scripts is set to Disabled"
   ansible.windows.win_regedit:
