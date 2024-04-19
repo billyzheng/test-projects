@@ -3245,9 +3245,17 @@
 
 
 # --------- new added 60 baselines --------------------------------
-- name: "win_baseline_19057_state | Ensure Relax minimum password length limits is set to Enabled."
+# - name: "win_baseline_19057_state | Ensure Relax minimum password length limits is set to Enabled."
+#   community.windows.win_security_policy:
+#       section: "{{ win_baseline_19057_state_Section }}"
+#       key: "{{ win_baseline_19057_state_Key }}"
+#       value: "{{ win_baseline_19057_state_Value }}"
+#   when: win_baseline_19057_state_Manage
+
+- name: "1.1.6 | PATCH | Ensure Relax minimum password length limits is set to Enabled."
   community.windows.win_security_policy:
-      section: "{{ win_baseline_19057_state_Section }}"
-      key: "{{ win_baseline_19057_state_Key }}"
-      value: "{{ win_baseline_19057_state_Value }}"
-  when: win_baseline_19057_state_Manage
+      section: System Access
+      key: RelaxMinimumPasswordLengthLimits
+      value: 1
+  when:
+      - win19cis_rule_1_1_6
