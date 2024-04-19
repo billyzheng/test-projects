@@ -2666,9 +2666,16 @@ win_baseline_2618_state_Data: "0"
 win_baseline_2618_state_Type: dword
 
 # win_baseline_2619_state | Ensure Turn off shell protocol protected mode is set to Disabled
-
 win_baseline_2619_state_Manage: "True"
 win_baseline_2619_state_Path: 'HKLM:\Software\Microsoft\Windows\Currentversion\Policies\Explorer'
 win_baseline_2619_state_Name: "PreXPSP2ShellProtocolBehavior"
 win_baseline_2619_state_Data: "0"
 win_baseline_2619_state_Type: dword
+
+# win_baseline_9003_state | Ensure Prevent enabling lock screen camera is set to Enabled
+
+win_baseline_9003_state_Manage: "True"
+win_baseline_9003_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Personalization'
+win_baseline_9003_state_Name: "NoLockScreenCamera"
+win_baseline_9003_state_Data: "1"
+win_baseline_9003_state_Type: dworf
