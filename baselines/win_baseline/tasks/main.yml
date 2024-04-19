@@ -3300,3 +3300,11 @@
       data: "{{ win_baseline_10348_state_Data }}"
       type: "{{ win_baseline_10348_state_Type }}"
   when: win_baseline_10348_state_Manage
+
+- name: "win_baseline_12013_state | Ensure Remote host allows non-exportable credentials is set to Enabled"
+  ansible.windows.win_regedit:
+      path: "{{ win_baseline_12013_state_Path }}"
+      name: "{{ win_baseline_12013_state_Name }}"
+      data: "{{ win_baseline_12013_state_Data }}"
+      type: "{{ win_baseline_12013_state_Type }}"
+  when: win_baseline_12013_state_Manage

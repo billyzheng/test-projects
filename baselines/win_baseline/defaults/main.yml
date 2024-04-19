@@ -2673,7 +2673,6 @@ win_baseline_2619_state_Data: "0"
 win_baseline_2619_state_Type: dword
 
 # win_baseline_9003_state | Ensure Prevent enabling lock screen camera is set to Enabled
-
 win_baseline_9003_state_Manage: "True"
 win_baseline_9003_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Personalization'
 win_baseline_9003_state_Name: "NoLockScreenCamera"
@@ -2693,3 +2692,10 @@ win_baseline_10348_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Dataco
 win_baseline_10348_state_Name: "DoNotShowFeedbackNotifications"
 win_baseline_10348_state_Data: "1"
 win_baseline_10348_state_Type: dword
+
+# win_baseline_12013_state | Ensure Remote host allows non-exportable credentials is set to Enabled
+win_baseline_12013_state_Manage: "True"
+win_baseline_12013_state_Path: 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation'
+win_baseline_12013_state_Name: "AllowProtectedCreds"
+win_baseline_12013_state_Data: "1"
+win_baseline_12013_state_Type: dword
