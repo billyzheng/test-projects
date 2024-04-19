@@ -3250,4 +3250,4 @@
       section: "{{ win_baseline_19057_state_Section }}"
       key: "{{ win_baseline_19057_state_Key }}"
       value: "{{ win_baseline_19057_state_Value }}"
-  when: "{{ win_baseline_19057_state_Manage }}"
+  when: win_baseline_19057_state_Manage
