@@ -2653,7 +2653,7 @@ win_baseline_19057_state_Value: "1"
 
 # win_baseline_2614_state | Ensure Prevent Internet Explorer security prompt for Windows Installer scripts is set to Disabled
 win_baseline_2614_state_Manage: "True"
-win_baseline_2614_state_Path: "HKLM:\Software\Policies\Microsoft\Windows\Installer"
+win_baseline_2614_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Installer'
 win_baseline_2614_state_Name: "SafeForScripting" 
 win_baseline_2614_state_Data: "0"
 win_baseline_2614_state_Type: dword
