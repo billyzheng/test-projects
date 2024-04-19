@@ -2664,3 +2664,11 @@ win_baseline_2618_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Install
 win_baseline_2618_state_Name: "EnableUserControl"
 win_baseline_2618_state_Data: "0"
 win_baseline_2618_state_Type: dword
+
+# win_baseline_2619_state | Ensure Turn off shell protocol protected mode is set to Disabled
+
+win_baseline_2619_state_Manage: "True"
+win_baseline_2619_state_Path: 'HKLM:\Software\Microsoft\Windows\Currentversion\Policies\Explorer'
+win_baseline_2619_state_Name: "PreXPSP2ShellProtocolBehavior"
+win_baseline_2619_state_Data: "0"
+win_baseline_2619_state_Type: dword
