@@ -2699,3 +2699,25 @@ win_baseline_12013_state_Path: 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\Creden
 win_baseline_12013_state_Name: "AllowProtectedCreds"
 win_baseline_12013_state_Data: "1"
 win_baseline_12013_state_Type: dword
+
+# win_baseline_4191_state | Ensure Turn on Mapper I/O LLTDIO driver is set to Disabled
+win_baseline_4191_state_Manage: "True" 
+win_baseline_4191_1_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Lltd'
+win_baseline_4191_1_state_Name: "AllowLLTDIOOnDomain"
+win_baseline_4191_1_state_Data: "0"
+win_baseline_4191_1_state_Type: dword
+
+win_baseline_4191_2_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Lltd'
+win_baseline_4191_2_state_Name: "AllowLLTDIOOnPublicNet"
+win_baseline_4191_2_state_Data: "0"
+win_baseline_4191_2_state_Type: dword
+
+win_baseline_4191_3_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Lltd'
+win_baseline_4191_3_state_Name: "EnableLLTDIO"
+win_baseline_4191_3_state_Data: "0"
+win_baseline_4191_3_state_Type: dword
+
+win_baseline_4191_4_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Lltd'
+win_baseline_4191_4_state_Name: "ProhibitLLTDIOOnPrivateNet"
+win_baseline_4191_4_state_Data: "0"
+win_baseline_4191_4_state_Type: dword

@@ -3308,3 +3308,35 @@
       data: "{{ win_baseline_12013_state_Data }}"
       type: "{{ win_baseline_12013_state_Type }}"
   when: win_baseline_12013_state_Manage
+
+- name: "win_baseline_4191_state | Ensure Turn on Mapper I/O LLTDIO driver is set to Disabled"
+  block:
+      - name: "win_baseline_4191_1_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | AllowLLTDIOOndomain"
+        ansible.windows.win_regedit:
+            path: "{{ win_baseline_4191_1_state_Path }}"
+            name: "{{ win_baseline_4191_1_state_Name }}"
+            data: "{{ win_baseline_4191_1_state_Data }}"
+            type: "{{ win_baseline_4191_1_state_Type }}"
+
+      - name: "win_baseline_4191_2_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | AllowLLTDIOOnPublicNet"
+        ansible.windows.win_regedit:
+            path: "{{ win_baseline_4191_2_state_Path }}"
+            name: "{{ win_baseline_4191_2_state_Name }}"
+            data: "{{ win_baseline_4191_2_state_Data }}"
+            type: "{{ win_baseline_4191_2_state_Type }}"
+
+      - name: "win_baseline_4191_3_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | EnableLLTDIO"
+        ansible.windows.win_regedit:
+            path: "{{ win_baseline_4191_3_state_Path }}"
+            name: "{{ win_baseline_4191_3_state_Name }}"
+            data: "{{ win_baseline_4191_3_state_Data }}"
+            type: "{{ win_baseline_4191_3_state_Type }}"
+
+      - name: "win_baseline_4191_4_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | ProhibitLLTDIOOnPrivateNet"
+        ansible.windows.win_regedit:
+            path: "{{ win_baseline_4191_4_state_Path }}"
+            name: "{{ win_baseline_4191_4_state_Name }}"
+            data: "{{ win_baseline_4191_4_state_Data }}"
+            type: "{{ win_baseline_4191_4_state_Type }}"
+  when:
+      - win_baseline_4191_state_Manage
