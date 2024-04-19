@@ -2678,4 +2678,12 @@ win_baseline_9003_state_Manage: "True"
 win_baseline_9003_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Personalization'
 win_baseline_9003_state_Name: "NoLockScreenCamera"
 win_baseline_9003_state_Data: "1"
-win_baseline_9003_state_Type: dworf
+win_baseline_9003_state_Type: dword
+
+# win_baseline_10106_state | Ensure Toggle user control over Insider builds is set to Disabled
+
+win_baseline_10106_state_Manage: "True"
+win_baseline_10106_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Installer'
+win_baseline_10106_state_Name: "EnableInsiderBuilds"
+win_baseline_10106_state_Data: "0"
+win_baseline_10106_state_Type: dword
