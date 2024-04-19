@@ -2284,23 +2284,23 @@
 #     type: "{{ win_baseline_9025_state_Type }}"
 #   when: win_baseline_9025_state_Manage
 
-- name: "win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled"
-  block:
-      - name: "win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled"
-        ansible.windows.win_regedit:
-          path: "{{ win_baseline_9305_1_state_Path }}"
-          name: "{{ win_baseline_9305_1_state_Name }}"
-          data: "{{ win_baseline_9305_1_state_Data }}"
-          type: "{{ win_baseline_9305_1_state_Type }}"
+# - name: "win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled"
+#   block:
+#       - name: "win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled"
+#         ansible.windows.win_regedit:
+#           path: "{{ win_baseline_9305_1_state_Path }}"
+#           name: "{{ win_baseline_9305_1_state_Name }}"
+#           data: "{{ win_baseline_9305_1_state_Data }}"
+#           type: "{{ win_baseline_9305_1_state_Type }}"
 
-      - name: "win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled"
-        ansible.windows.win_regedit:
-          path: "{{ win_baseline_9305_2_state_Path }}"
-          name: "{{ win_baseline_9305_2_state_Name }}"
-          data: "{{ win_baseline_9305_2_state_Data }}"
-          type: "{{ win_baseline_9305_2_state_Type }}"
-  when:
-      - win_baseline_9305_state_Manage
+#       - name: "win_baseline_9305_state | Ensure Notify antivirus programs when opening attachments is set to Enabled"
+#         ansible.windows.win_regedit:
+#           path: "{{ win_baseline_9305_2_state_Path }}"
+#           name: "{{ win_baseline_9305_2_state_Name }}"
+#           data: "{{ win_baseline_9305_2_state_Data }}"
+#           type: "{{ win_baseline_9305_2_state_Type }}"
+#   when:
+#       - win_baseline_9305_state_Manage
 
 # - name: "win_baseline_9402_state | Ensure 'Turn off the advertising ID' is set to 'Enabled'"
 #   win_regedit:
