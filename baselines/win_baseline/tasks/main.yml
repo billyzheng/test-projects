@@ -3388,3 +3388,11 @@
       data: "{{ win_baseline_5266_state_Data }}"
       type: "{{ win_baseline_5266_state_Type }}"
   when: win_baseline_5266_state_Manage
+
+- name: "win_baseline_8175_state | Ensure Turn on convenience PIN sign-in is set to Disabled"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_8175_state_Path }}"
+    name: "{{ win_baseline_8175_state_Name }}"
+    data: "{{ win_baseline_8175_state_Data }}"
+    type: "{{ win_baseline_8175_state_Type }}"
+  when: win_baseline_8175_state_Manage
