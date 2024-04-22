@@ -9,4 +9,4 @@
 
     - name: Print OS information
       debug:
-        msg: os_info['ansible_facts']['ansible_osversion']
+        msg:"{{ os_info['ansible_facts']['ansible_osversion']}}"
