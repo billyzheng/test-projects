@@ -2755,9 +2755,16 @@ win_baseline_8175_state_Data: "0"
 win_baseline_8175_state_Type: dword
 
 # win_basleine_9404_state | Ensure Prevent the usage of OneDrive for file storage is set to Disabled
-
 win_baseline_9404_state_Manage: "True"
 win_baseline_9404_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\OneDrive'
 win_baseline_9404_state_Name: "DisableFileSyncNGSC"
 win_baseline_9404_state_Data: "0"
 win_baseline_9404_state_Type: dword
+
+# win_baseline_9449_state | Ensure Scan all downloaded files and attachments is set to Enabled
+
+win_baseline_9449_state_Manage: "True"
+win_baseline_9449_state_Path: 'HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection'
+win_baseline_9449_state_Name: "DisableIOAVProtection"
+win_baseline_9449_state_Data: "0"
+win_baseline_9449_state_Type: dword
