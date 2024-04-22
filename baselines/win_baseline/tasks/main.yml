@@ -3412,3 +3412,11 @@
     data: "{{ win_baseline_9449_state_Data }}"
     type: "{{ win_baseline_9449_state_Type }}"
   when: win_baseline_9449_state_Manage
+
+- name: "win_baseline_9461_state | Ensure Turn on behavior monitoring is set to Enabled"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_9461_state_Path }}"
+    name: "{{ win_baseline_9461_state_Name }}"
+    data: "{{ win_baseline_9461_state_Data }}"
+    type: "{{ win_baseline_9461_state_Type }}"
+  when: win_baseline_9461_state_Manage

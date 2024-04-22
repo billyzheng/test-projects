@@ -2762,9 +2762,16 @@ win_baseline_9404_state_Data: "0"
 win_baseline_9404_state_Type: dword
 
 # win_baseline_9449_state | Ensure Scan all downloaded files and attachments is set to Enabled
-
 win_baseline_9449_state_Manage: "True"
 win_baseline_9449_state_Path: 'HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection'
 win_baseline_9449_state_Name: "DisableIOAVProtection"
 win_baseline_9449_state_Data: "0"
 win_baseline_9449_state_Type: dword
+
+# "win_baseline_9461_state | Ensure Turn on behavior monitoring is set to Enabled
+
+win_baseline_9461_state_Manage: "True"
+win_baseline_9461_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender\Real-Time Protection'
+win_baseline_9461_state_Name: "DisableBehaviorMonitoring"
+win_baseline_9461_state_Data: "0"
+win_baseline_9461_state_Type: dword
