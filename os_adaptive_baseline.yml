@@ -1,0 +1,6 @@
+---
+- name: OS adaptive baseline
+  tasks:
+    - name: Print the resolution's width
+      debug:
+        msg: "Here is the print result"
