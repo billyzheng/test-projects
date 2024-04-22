@@ -3340,3 +3340,33 @@
             type: "{{ win_baseline_4191_4_state_Type }}"
   when:
       - win_baseline_4191_state_Manage
+
+- name: "win_baseline_4192_state | Ensure Turn on Responder RSPNDR driver is set to Disabled"
+  block:
+      - name: "18.6.9.2 | PATCH | Ensure Turn on Responder RSPNDR driver is set to Disabled | AllowRspndrOnDomain"
+        ansible.windows.win_regedit:
+            path: "{{ win_baseline_4192_state_Path }}"
+            name: "{{ win_baseline_4192_1_state_Name }}"
+            data: "{{ win_baseline_4192_state_Data }}"
+            type: "{{ win_baseline_4192_state_Type }}"
+
+      - name: "18.6.9.2 | PATCH | Ensure Turn on Responder RSPNDR driver is set to Disabled | AllowRspndrOnPublicNet"
+        ansible.windows.win_regedit:
+            path: "{{ win_baseline_4192_state_Path }}"
+            name: "{{ win_baseline_4192_2_state_Name }}"
+            data: "{{ win_baseline_4192_state_Data }}"
+            type: "{{ win_baseline_4192_state_Type }}"
+
+      - name: "18.6.9.2 | PATCH | Ensure Turn on Responder RSPNDR driver is set to Disabled | EnableRspndr"
+        ansible.windows.win_regedit:
+            path: "{{ win_baseline_4192_state_Path }}"
+            name: "{{ win_baseline_4192_3_state_Name }}"
+            data: "{{ win_baseline_4192_state_Data }}"
+            type: "{{ win_baseline_4192_state_Type }}"
+
+      - name: "18.6.9.2 | PATCH | Ensure Turn on Responder RSPNDR driver is set to Disabled | ProhibitRspndrOnPrivateNet"
+        ansible.windows.win_regedit:
+            path: "{{ win_baseline_4192_state_Path }}"
+            name: "{{ win_baseline_4192_4_state_Name }}"
+            data: "{{ win_baseline_4192_state_Data }}"
+            type: "{{ win_baseline_4192_state_Type }}"

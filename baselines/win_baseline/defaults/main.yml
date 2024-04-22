@@ -2721,3 +2721,14 @@ win_baseline_4191_4_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Lltd'
 win_baseline_4191_4_state_Name: "ProhibitLLTDIOOnPrivateNet"
 win_baseline_4191_4_state_Data: "0"
 win_baseline_4191_4_state_Type: dword
+
+# win_baseline_4192_state | Ensure Turn on Responder RSPNDR driver is set to Disabled
+
+win_baseline_4192_state_Manage: "True"
+win_baseline_4192_1_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Lltd'
+win_baseline_4192_state_Name_1: "AllowRspndrOnDomain"
+win_baseline_4192_state_Name_2: "AllowRspndrOnPublicNet"
+win_baseline_4192_state_Name_3: "EnableRspndr"
+win_baseline_4192_state_Name_4: "ProhibitRspndrOnPrivateNet"
+win_baseline_4192_state_Data: "0"
+win_baseline_4192_state_Type: dword
