@@ -11,11 +11,13 @@
         var: ansible_facts['os_name']
 
     - name: set a variable
-      register: x: 19
+      set_fact:
+        x: 19
       when: ansible_facts['os_name'] == "Microsoft Windows Server 2019 Datacenter"
 
     - name: set a variable
-      register: x: 22
+       set_fact:
+        x: 20
       when: ansible_facts['os_name'] == "Microsoft Windows Server 2022 Standard"
 
     - name: print the variable
