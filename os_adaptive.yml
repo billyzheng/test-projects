@@ -2,11 +2,6 @@
 - name: OS adaptive baseline
   hosts: 10.0.0.10
   tasks:
-    - name: Get OS information
-      ansible.builtin.setup:
-        gather_subset: all
-      register: os_info
-
-    - name: Print OS information
-      debug:
-        msg:"{{ os_info['ansible_facts']['ansible_osversion']}}"
+    - name: Show facts available on the system
+      ansible.builtin.debug:
+        var: ansible_facts
