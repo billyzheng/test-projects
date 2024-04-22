@@ -2781,3 +2781,11 @@ win_baseline_9537_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defende
 win_baseline_9537_state_Name: "DisableEmailScanning"
 win_baseline_9537_state_Data: "0"
 win_baseline_9537_state_Type: dword
+
+# "win_baseline_9656_state | Ensure Configure local setting override for reporting to Microsoft MAPS is set to Disabled
+
+win_baseline_9656_state_Manage: "True"
+win_baseline_9656_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender\Spynet'
+win_baseline_9656_state_Name: "LocalSettingOverrideSpynetReporting"
+win_baseline_9656_state_Data: "0"
+win_baseline_9656_state_Type: dword

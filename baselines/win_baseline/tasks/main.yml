@@ -3428,3 +3428,11 @@
     data: "{{ win_baseline_9537_state_Data }}"
     type: "{{ win_baseline_9537_state_Type }}"
   when: win_baseline_9537_state_Manage
+
+- name: "win_baseline_9656_state | Ensure Configure local setting override for reporting to Microsoft MAPS is set to Disabled"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_9656_state_Path }}"
+    name: "{{ win_baseline_9656_state_Name }}"
+    data: "{{ win_baseline_9656_state_Data }}"
+    type: "{{ win_baseline_9656_state_Type }}"
+  when: win_baseline_9656_state_Manage
