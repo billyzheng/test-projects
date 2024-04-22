@@ -1,5 +1,6 @@
 ---
 - name: OS adaptive baseline
+  hosts: windows_group
   tasks:
     - name: Print the resolution's width
       debug:
