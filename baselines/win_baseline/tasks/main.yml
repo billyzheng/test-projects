@@ -3380,3 +3380,11 @@
       data: "{{ win_baseline_4469_state_Data }}"
       type: "{{ win_baseline_4469_state_Type }}"
   when: win_baseline_4469_state_Manage
+
+- name: "win_baseline_5266_state | Ensure Network security Allow Local System to use computer identity for NTLM is set to Enabled"
+  ansible.windows.win_regedit:
+      path: "{{ win_baseline_5266_state_Path }}"
+      name: "{{ win_baseline_5266_state_Name }}"
+      data: "{{ win_baseline_5266_state_Data }}"
+      type: "{{ win_baseline_5266_state_Type }}"
+  when: win_baseline_5266_state_Manage
