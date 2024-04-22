@@ -1,6 +1,8 @@
 ---
 - name: OS adaptive baseline
   hosts: 10.0.0.10
+  vars:
+    x: 0
   tasks:
     - name: Show facts available on the system
       ansible.builtin.debug:
@@ -10,16 +12,10 @@
       ansible.builtin.debug:
         var: ansible_facts['os_name']
 
-    - name: set a variable
+    - name: Set x based on OS version
       set_fact:
-        x: 19
-      when: ansible_facts['os_name'] == "Microsoft Windows Server 2019 Datacenter"
+      x: "{{ 19 if ansible_facts['os_name'] == 'winserver 2019' else 22 }}"
 
-    - name: set a variable
-       set_fact:
-        x: 20
-      when: ansible_facts['os_name'] == "Microsoft Windows Server 2022 Standard"
-
-    - name: print the variable
-      ansible.builtin.debug:
-      var: x.stdout_lines
+    - name: Show x
+     ansible.builtin.debug:
+        var: x
