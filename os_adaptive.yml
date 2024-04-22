@@ -14,8 +14,8 @@
 
     - name: Set x based on OS version
       set_fact:
-      x: "{{ 19 if ansible_facts['os_name'] == 'winserver 2019' else 22 }}"
+        x: "{{ 19 if ansible_facts['os_name'] == 'winserver 2019' else 22 }}"
 
     - name: Show x
-     ansible.builtin.debug:
-        var: x
+      ansible.builtin.debug:
+          var: x
