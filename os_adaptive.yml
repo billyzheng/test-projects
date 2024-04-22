@@ -9,3 +9,15 @@
     - name: Show facts available on the system
       ansible.builtin.debug:
         var: ansible_facts['os_name']
+
+    - name: set a variable
+      register: x: 19
+      when: ansible_facts['os_name'] == "Microsoft Windows Server 2019 Datacenter"
+
+    - name: set a variable
+      register: x: 22
+      when: ansible_facts['os_name'] == "Microsoft Windows Server 2022 Standard"
+
+    - name: print the variable
+      ansible.builtin.debug:
+      var: x.stdout_lines
