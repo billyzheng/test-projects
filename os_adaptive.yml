@@ -9,4 +9,4 @@
 
     - name: Print OS information
       debug:
-        var: os_info['ansible_osversion']
+        var: os_info['ansible_facts']['ansible_osversion']
