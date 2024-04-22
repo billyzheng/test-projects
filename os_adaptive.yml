@@ -8,8 +8,4 @@
 
     - name: Show facts available on the system
       ansible.builtin.debug:
-        var: ansible_facts['distribution_major_version']
-
-    - name: Show facts available on the system
-      ansible.builtin.debug:
-        var: ansible_facts
+        var: ansible_facts['os_name']
