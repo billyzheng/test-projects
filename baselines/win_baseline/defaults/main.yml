@@ -2753,3 +2753,11 @@ win_baseline_8175_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\System'
 win_baseline_8175_state_Name: "AllowDomainPINLogon"
 win_baseline_8175_state_Data: "0"
 win_baseline_8175_state_Type: dword
+
+# win_basleine_9404_state | Ensure Prevent the usage of OneDrive for file storage is set to Disabled
+
+win_baseline_9404_state_Manage: "True"
+win_baseline_9404_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\OneDrive'
+win_baseline_9404_state_Name: "DisableFileSyncNGSC"
+win_baseline_9404_state_Data: "0"
+win_baseline_9404_state_Type: dword
