@@ -2731,3 +2731,10 @@ win_baseline_4192_3_state_Name: "EnableRspndr"
 win_baseline_4192_4_state_Name: "ProhibitRspndrOnPrivateNet"
 win_baseline_4192_state_Data: "0"
 win_baseline_4192_state_Type: dword
+
+# "win_baseline_4469_state | Ensure Network security Force logoff when logon hours expire is set to Enabled
+win_baseline_4469_state_Manage: "True"
+win_baseline_4469_state_Path: 'HKLM:\System\CurrentControlSet\Services\LanManServer\Parameters'
+win_baseline_4469_state_Name: "EnableForcedLogoff"
+win_baseline_4469_state_Data: "1"
+win_baseline_4469_state_Type: dword

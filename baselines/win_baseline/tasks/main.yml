@@ -3370,3 +3370,13 @@
             name: "{{ win_baseline_4192_4_state_Name }}"
             data: "{{ win_baseline_4192_state_Data }}"
             type: "{{ win_baseline_4192_state_Type }}"
+  when:
+      - win_baseline_4192_state_Manage
+  
+- name: "win_baseline_4469_state | Ensure Network security Force logoff when logon hours expire is set to Enabled"
+  ansible.windows.win_regedit:
+      path: "{{ win_baseline_4469_state_Path }}"
+      name: "{{ win_baseline_4469_state_Name }}"
+      data: "{{ win_baseline_4469_state_Data }}"
+      type: "{{ win_baseline_4469_state_Type }}"
+  when: win_baseline_4469_state_Manage
