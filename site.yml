@@ -1,6 +1,6 @@
 ---
 - name: The main playbooks
-  hosts: 10.0.0.10
+  hosts: tsetserver
   tasks:
   - name: Run common baseline
     ansible.builtin.import_role:
