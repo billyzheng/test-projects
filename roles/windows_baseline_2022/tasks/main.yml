@@ -1,2 +1,5 @@
 ---
 # tasks file for windows_baseline_2022
+- name: Run 2022 tasks
+  ansible.builtin.debug:
+    msg: "Running 2022 tasks"
