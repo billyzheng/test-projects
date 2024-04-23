@@ -2,6 +2,6 @@
 - name: The main playbooks
   hosts: 10.0.0.10
   tasks:
-    - name: Involve a role
-        ansible.builtin.import_role:
-          name: myrole
+  - name: Run
+    ansible.builtin.import_role:
+        name: windows_baseline_common
