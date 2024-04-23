@@ -1,5 +1,6 @@
 ---
 - name: The main playbooks
   hosts: 10.0.0.10
-  roles:
-    - windows_baseline_common
+  tasks:
+    include_role:
+      name: windows_baseline_common
