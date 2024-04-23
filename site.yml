@@ -8,12 +8,6 @@
   
   - name: Windows 2019 baseline
     ansible.builtin.import_role:
-      name: "{{ 'windows_baseline_2019' if '2019' in ansible_facts['os_name']}}"
+      name: windows_baseline_2019
+    when: "'2019' in ansible_facts['os)name']"
     
-   - name: Windows 2016 baseline
-    ansible.builtin.import_role:
-      name: "{{ 'windows_baseline_2016' if '2016' in ansible_facts['os_name']}}"
-
-   - name: Windows 2022 baseline
-    ansible.builtin.import_role:
-      name: "{{ 'windows_baseline_2022' if '2022' in ansible_facts['os_name']}}"
