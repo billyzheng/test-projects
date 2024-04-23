@@ -2,6 +2,11 @@
 - name: The main playbooks
   hosts: 10.0.0.10
   tasks:
-  - name: Run
+  - name: Run common baseline
     ansible.builtin.import_role:
-        name: windows_baseline_common
+      name: windows_baseline_common
+  
+  - name: Windows 2019 baseline
+    ansible.builtin.import_role:
+      name: windows_baseline_2018
+    when:  

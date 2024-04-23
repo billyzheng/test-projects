@@ -1,20 +1,20 @@
 ---
 - name: OS adaptive baseline
-  hosts: 10.0.0.10
+  hosts: localhost
   vars:
     x: 0
   tasks:
-    - name: Show facts available on the system
+    - name: Show facts available on the system 1
       ansible.builtin.debug:
         var: ansible_facts['os_family']
 
-    - name: Show facts available on the system
+    - name: Show facts available on the system 2
       ansible.builtin.debug:
-        var: ansible_facts['os_name']
+        var: ansible_facts['osversion']
 
     - name: Set x based on OS version
       set_fact:
-        x: "{{ 19 if ansible_facts['os_name'] == 'winserver 2019' else 22 }}"
+        x: "{{ 19 if ansible_facts['osversion'] == 'winserver 2019' else 22 }}"
 
     - name: Show x
       ansible.builtin.debug:
