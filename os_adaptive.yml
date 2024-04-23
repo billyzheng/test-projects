@@ -14,7 +14,7 @@
 
     - name: Set x based on OS version
       set_fact:
-        x: "{{ 19 if '2019' in ansible_facts['os_name'] 2019' else 22 }}"
+        x: "{{ 19 if '2019' in ansible_facts['os_name'] else 22 }}"
 
     - name: Show x
       ansible.builtin.debug:
