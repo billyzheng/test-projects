@@ -2807,3 +2807,10 @@ win_baseline_11022_3_state_Name: "EnableLLTDIO"
 win_baseline_11022_4_state_Name: "ProhibitLLTDIOOnPrivateNet"
 win_baseline_11022_state_Data: "0"
 win_baseline_11022_state_Type: dword
+
+# win_baseline_11024_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | ProhibitLLTDIOOnPrivateNet
+win_baseline_11024_state_Manage: "True"
+win_baseline_11024_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Lltd'
+win_baseline_11024_state_Name: "AllowLLTDIOOnDomain"
+win_baseline_11024_state_Data: "0"
+win_baseline_11024_state_Type: dword

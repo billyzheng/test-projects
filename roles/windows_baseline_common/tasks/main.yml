@@ -3475,3 +3475,11 @@
             data: "{{ win_baseline_11022_state_Data }}"
             type: "{{ win_baseline_11022_state_Type }}"
   when: win_baseline_11022_state_Manage
+
+- name: "win_baseline_11024_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | ProhibitLLTDIOOnPrivateNet"
+  ansible.windows.win_regedit:
+      path: "{{ win_baseline_11024_state_Path }}"
+      name: "{{ win_baseline_11024_state_Name }}"
+      data: "{{ win_baseline_11024_state_Data }}"
+      type: "{{ win_baseline_11024_state_Type }}"
+  when: win_baseline_11024_state_Manage
