@@ -2858,3 +2858,10 @@ win_baseline_22349_state_Name: "RestrictDriverInstallationToAdministrators"
 win_baseline_22349_state_Data: "1"
 win_baseline_22349_state_Type: dword
 
+# win_baseline_23128_state | Ensure Turn off cloud consumer account state content is set to Enabled
+win_baseline_23128_state_Manage: "True"
+win_baseline_23128_state_Path: 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\CloudContent'
+win_baseline_23128_state_Name: "DisableConsumerAccountStateContent"
+win_baseline_23128_state_Data: "1"
+win_baseline_23128_state_Type: dword
+
