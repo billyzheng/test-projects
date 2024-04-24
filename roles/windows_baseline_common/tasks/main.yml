@@ -3491,3 +3491,11 @@
       data: "{{ win_baseline_11026_state_Data }}"
       type: "{{ win_baseline_11026_state_Type }}"
   when: win_baseline_11026_state_Manage
+
+- name: "win_baseline_11027_state | Ensure Turn on Responder RSPNDR driver is set to Disabled | ProhibitRspndrOnPrivateNet"
+  ansible.windows.win_regedit:
+      path: "{{ win_baseline_11027_state_Path }}"
+      name: "{{ win_baseline_11027_state_Name }}"
+      data: "{{ win_baseline_11027_state_Data }}"
+      type: "{{ win_baseline_11027_state_Type }}"
+  when: win_baseline_11027_state_Manage

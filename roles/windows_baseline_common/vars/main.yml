@@ -2821,3 +2821,11 @@ win_baseline_11026_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Lltd'
 win_baseline_11026_state_Name: "AllowRspndrOnPublicNet"
 win_baseline_11026_state_Data: "0"
 win_baseline_11026_state_Type: dword
+
+# win_baseline_11027_state | Ensure Turn on Responder RSPNDR driver is set to Disabled | ProhibitRspndrOnPrivateNet
+win_baseline_11027_state_Manage: "True"
+win_baseline_11027_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Lltd'
+win_baseline_11027_state_Name: "ProhibitRspndrOnPrivateNet"
+win_baseline_11027_state_Data: "0"
+win_baseline_11027_state_Type: dword
+
