@@ -2789,3 +2789,13 @@ win_baseline_9656_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defende
 win_baseline_9656_state_Name: "LocalSettingOverrideSpynetReporting"
 win_baseline_9656_state_Data: "0"
 win_baseline_9656_state_Type: dword
+
+# win_baseline_11022_state | Ensure Turn on Mapper I/O LLTDIO driver is set to Disabled
+win_baseline_11022_state_Manage: "True"
+win_baseline_11022_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Lltd'
+win_baseline_11022_1_state_Name: "AllowLLTDIOOnDomain"
+win_baseline_11022_2_state_Name: "AllowLLTDIOOnPublicNet"
+win_baseline_11022_3_state_Name: "EnableLLTDIO"
+win_baseline_11022_4_state_Name: "ProhibitLLTDIOOnPrivateNet"
+win_baseline_11022_state_Data: "0"
+win_baseline_11022_state_Type: dword
