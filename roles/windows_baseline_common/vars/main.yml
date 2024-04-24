@@ -2837,3 +2837,9 @@ win_baseline_11211_state_Name: "ConfigureWindowsSpotlight"
 win_baseline_11211_state_Data: "2"
 win_baseline_11211_state_Type: dword
 
+# win_baseline_14878 | Ensure Turn off notifications network usage is set to Enabled
+win_baseline_14878_Manage: "True"
+win_baseline_14878_Path: 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\PushNotifications'
+win_baseline_14878_Name: "NoCloudApplicationNotification"
+win_baseline_14878_Data: "1"
+win_baseline_14878_Type: dword

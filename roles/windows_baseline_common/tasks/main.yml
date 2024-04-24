@@ -3516,3 +3516,11 @@
           data: "{{ win_baseline_11211_state_Data }}"
           type: "{{ win_baseline_11211_state_Type }}"
   when: win_baseline_11211_state_Manage
+
+- name: "win_baseline_14878 | Ensure Turn off notifications network usage is set to Enabled"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_14878_Path }}"
+    name: "{{ win_baseline_14878_Name }}"
+    data: "{{ win_baseline_14878_Data }}"
+    type: "{{ win_baseline_14878_Type }}"
+  when: win_baseline_14878_Manage
