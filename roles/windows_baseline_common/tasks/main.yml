@@ -3437,7 +3437,13 @@
 #     type: "{{ win_baseline_9656_state_Type }}"
 #   when: win_baseline_9656_state_Manage
 
-
+- name: "win_baseline_10431_state | Ensure Require use of specific security layer for remote RDP connections is set to Enabled SSL"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_10431_state_Path }}"
+    name: "{{ win_baseline_10431_state_Name }}"
+    data: "{{ win_baseline_10431_state_Data }}"
+    type: "{{ win_baseline_10431_state_Type }}"
+  when: win_baseline_10431_state_Manage
 
 - name: "win_baseline_11022_state | Ensure Turn on Mapper I/O LLTDIO driver is set to Disabled"
   block:
@@ -3448,21 +3454,21 @@
             data: "{{ win_baseline_11022_state_Data }}"
             type: "{{ win_baseline_11022_state_Type }}"
 
-      - name: "win_baseline_11022_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | AllowLLTDIOOnPublicNet"
+      - name: "win_baseline_11022_2_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | AllowLLTDIOOnPublicNet"
         ansible.windows.win_regedit:
             path: "{{ win_baseline_11022_state_Path }}"
             name: "{{ win_baseline_11022_2_state_Name }}"
             data: "{{ win_baseline_11022_state_Data }}"
             type: "{{ win_baseline_11022_state_Type }}"
 
-      - name: "win_baseline_11022_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | EnableLLTDIO"
+      - name: "win_baseline_11022_3_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | EnableLLTDIO"
         ansible.windows.win_regedit:
             path: "{{ win_baseline_11022_state_Path }}"
             name: "{{ win_baseline_11022_3_state_Name }}"
             data: "{{ win_baseline_11022_state_Data }}"
             type: "{{ win_baseline_11022_state_Type }}"
 
-      - name: "win_baseline_11022_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | ProhibitLLTDIOOnPrivateNet"
+      - name: "win_baseline_11022_4_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | ProhibitLLTDIOOnPrivateNet"
         ansible.windows.win_regedit:
             path: "{{ win_baseline_11022_state_Path }}"
             name: "{{ win_baseline_11022_4_state_Name }}"

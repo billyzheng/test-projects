@@ -2790,6 +2790,14 @@ win_baseline_9656_state_Name: "LocalSettingOverrideSpynetReporting"
 win_baseline_9656_state_Data: "0"
 win_baseline_9656_state_Type: dword
 
+# win_baseline_10431_state | Ensure Require use of specific security layer for remote RDP connections is set to Enabled SSL
+win_baseline_10431_state_Manage: "True"
+win_baseline_10431_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Nt\Terminal Services'
+win_baseline_10431_state_Name: "SecurityLayer"
+win_baseline_10431_state_Data: "2"
+win_baseline_10431_state_Type: dword
+
+
 # win_baseline_11022_state | Ensure Turn on Mapper I/O LLTDIO driver is set to Disabled
 win_baseline_11022_state_Manage: "True"
 win_baseline_11022_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Lltd'
