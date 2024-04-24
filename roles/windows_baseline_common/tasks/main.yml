@@ -3468,4 +3468,4 @@
             name: "{{ win_baseline_11022_4_state_Name }}"
             data: "{{ win_baseline_11022_state_Data }}"
             type: "{{ win_baseline_11022_state_Type }}"
-  when: win_baseline_11022_Manage
+  when: win_baseline_11022_state_Manage
