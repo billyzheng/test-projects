@@ -2829,3 +2829,11 @@ win_baseline_11027_state_Name: "ProhibitRspndrOnPrivateNet"
 win_baseline_11027_state_Data: "0"
 win_baseline_11027_state_Type: dword
 
+# win_baseline_11211_state | Ensure Configure Windows spotlight on lock screen is set to Disabled
+win_baseline_11211_state_Manage: "True"
+win_baseline_11211_1_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\Search'
+win_baseline_11211_2_state_Path: 'HKU:\.DEFAULT\Software\Policies\Microsoft\Windows\CloudContent'
+win_baseline_11211_state_Name: "ConfigureWindowsSpotlight"
+win_baseline_11211_state_Data: "2"
+win_baseline_11211_state_Type: dword
+

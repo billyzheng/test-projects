@@ -3499,3 +3499,20 @@
       data: "{{ win_baseline_11027_state_Data }}"
       type: "{{ win_baseline_11027_state_Type }}"
   when: win_baseline_11027_state_Manage
+
+- name: "win_baseline_11211_state | Ensure Configure Windows spotlight on lock screen is set to Disabled"
+  block:
+      - name: "win_baseline_11211_1_state | Ensure Configure Windows spotlight on lock screen is set to Disabled"
+        ansible.windows.win_regedit:
+          path: "{{ win_baseline_11211_state_Path }}"
+          name: "{{ win_baseline_11211_1_state_Name }}"
+          data: "{{ win_baseline_11211_state_Data }}"
+          type: "{{ win_baseline_11211_state_Type }}"
+
+      - name: "win_baseline_11211_2_state | Ensure Configure Windows spotlight on lock screen is set to Disabled"
+        ansible.windows.win_regedit:
+          path: "{{ win_baseline_11211_state_Path }}"
+          name: "{{ win_baseline_11211_2_state_Name }}"
+          data: "{{ win_baseline_11211_state_Data }}"
+          type: "{{ win_baseline_11211_state_Type }}"
+  when: win_baseline_11211_state_Manage
