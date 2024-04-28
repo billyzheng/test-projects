@@ -3001,3 +3001,10 @@ win_baseline_10381_state_Path: 'HKLM:\Software\Policies\Microsoft\MicrosoftEdge\
 win_baseline_10381_state_Name: "ShowSearchSuggestionsGlobal"
 win_baseline_10381_state_Data: "1"
 win_baseline_10381_state_Type: dword
+
+# "win_baseline_10373_state | Ensure Let Windows apps sync with devices is set to 'Force Deny
+win_baseline_10373_state_Manage: "True"
+win_baseline_10373_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPrivacy'
+win_baseline_10373_state_Name: "LetAppsSyncWithDevices"
+win_baseline_10373_state_Data: "2"
+win_baseline_10373_state_Type: dword

@@ -3695,10 +3695,18 @@
     type: "{{ win_baseline_4141_state_Type }}"
   when: win_baseline_4141_state_Manage
 
-- name: "win_baseline_10381_state | Ensure 'Turn off address bar search suggestions is set to 'Disabled"
+- name: "win_baseline_10381_state | Ensure Turn off address bar search suggestions is set to 'Disabled"
   ansible.windows.win_regedit:
     path: "{{ win_baseline_10381_state_Path }}"
     name: "{{ win_baseline_10381_state_Name }}"
     data: "{{ win_baseline_10381_state_Data }}"
     type: "{{ win_baseline_10381_state_Type }}"
   when: win_baseline_10381_state_Manage
+
+- name: "win_baseline_10373_state | Ensure Let Windows apps sync with devices is set to 'Force Deny"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_10373_state_Path }}"
+    name: "{{ win_baseline_10373_state_Name }}"
+    data: "{{ win_baseline_10373_state_Data }}"
+    type: "{{ win_baseline_10373_state_Type }}"
+  when: win_baseline_10373_state_Manage
