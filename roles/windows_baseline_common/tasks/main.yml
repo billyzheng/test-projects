@@ -3750,3 +3750,9 @@
     Subcategory: "{{ win_baseline_7360_state_Subcategory }}"
     Setting: "{{ win_baseline_7360_state_Setting }}"
   when: win_baseline_7360_state_Manage
+
+- name: "win_baseline_4515_state | Ensure Directory Service Replication is set to 'No Auditing'"
+  win_audit_policy_system:
+  - Subcategory: "{{ win_baseline_4515_state_Subcategory }}"
+    Setting: "{{ win_baseline_4515_state_Setting }}"
+  when: win_baseline_4515_state_Manage
