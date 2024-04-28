@@ -3778,7 +3778,6 @@
   when: win_baseline_4096_state_Manage
 
 - name: "test"
-  becomes: true
   block:
     - name: Retrieve user SIDs using PowerShell
       win_shell:
