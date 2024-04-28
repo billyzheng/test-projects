@@ -3437,125 +3437,125 @@
 #     type: "{{ win_baseline_9656_state_Type }}"
 #   when: win_baseline_9656_state_Manage
 
-- name: "win_baseline_10431_state | Ensure Require use of specific security layer for remote RDP connections is set to Enabled SSL"
-  ansible.windows.win_regedit:
-    path: "{{ win_baseline_10431_state_Path }}"
-    name: "{{ win_baseline_10431_state_Name }}"
-    data: "{{ win_baseline_10431_state_Data }}"
-    type: "{{ win_baseline_10431_state_Type }}"
-  when: win_baseline_10431_state_Manage
+# - name: "win_baseline_10431_state | Ensure Require use of specific security layer for remote RDP connections is set to Enabled SSL"
+#   ansible.windows.win_regedit:
+#     path: "{{ win_baseline_10431_state_Path }}"
+#     name: "{{ win_baseline_10431_state_Name }}"
+#     data: "{{ win_baseline_10431_state_Data }}"
+#     type: "{{ win_baseline_10431_state_Type }}"
+#   when: win_baseline_10431_state_Manage
 
-- name: "win_baseline_11022_state | Ensure Turn on Mapper I/O LLTDIO driver is set to Disabled"
-  block:
-      - name: "win_baseline_11022_1_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | AllowLLTDIOOndomain"
-        ansible.windows.win_regedit:
-            path: "{{ win_baseline_11022_state_Path }}"
-            name: "{{ win_baseline_11022_1_state_Name }}"
-            data: "{{ win_baseline_11022_state_Data }}"
-            type: "{{ win_baseline_11022_state_Type }}"
+# - name: "win_baseline_11022_state | Ensure Turn on Mapper I/O LLTDIO driver is set to Disabled"
+#   block:
+#       - name: "win_baseline_11022_1_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | AllowLLTDIOOndomain"
+#         ansible.windows.win_regedit:
+#             path: "{{ win_baseline_11022_state_Path }}"
+#             name: "{{ win_baseline_11022_1_state_Name }}"
+#             data: "{{ win_baseline_11022_state_Data }}"
+#             type: "{{ win_baseline_11022_state_Type }}"
 
-      - name: "win_baseline_11022_2_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | AllowLLTDIOOnPublicNet"
-        ansible.windows.win_regedit:
-            path: "{{ win_baseline_11022_state_Path }}"
-            name: "{{ win_baseline_11022_2_state_Name }}"
-            data: "{{ win_baseline_11022_state_Data }}"
-            type: "{{ win_baseline_11022_state_Type }}"
+#       - name: "win_baseline_11022_2_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | AllowLLTDIOOnPublicNet"
+#         ansible.windows.win_regedit:
+#             path: "{{ win_baseline_11022_state_Path }}"
+#             name: "{{ win_baseline_11022_2_state_Name }}"
+#             data: "{{ win_baseline_11022_state_Data }}"
+#             type: "{{ win_baseline_11022_state_Type }}"
 
-      - name: "win_baseline_11022_3_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | EnableLLTDIO"
-        ansible.windows.win_regedit:
-            path: "{{ win_baseline_11022_state_Path }}"
-            name: "{{ win_baseline_11022_3_state_Name }}"
-            data: "{{ win_baseline_11022_state_Data }}"
-            type: "{{ win_baseline_11022_state_Type }}"
+#       - name: "win_baseline_11022_3_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | EnableLLTDIO"
+#         ansible.windows.win_regedit:
+#             path: "{{ win_baseline_11022_state_Path }}"
+#             name: "{{ win_baseline_11022_3_state_Name }}"
+#             data: "{{ win_baseline_11022_state_Data }}"
+#             type: "{{ win_baseline_11022_state_Type }}"
 
-      - name: "win_baseline_11022_4_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | ProhibitLLTDIOOnPrivateNet"
-        ansible.windows.win_regedit:
-            path: "{{ win_baseline_11022_state_Path }}"
-            name: "{{ win_baseline_11022_4_state_Name }}"
-            data: "{{ win_baseline_11022_state_Data }}"
-            type: "{{ win_baseline_11022_state_Type }}"
-  when: win_baseline_11022_state_Manage
+#       - name: "win_baseline_11022_4_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | ProhibitLLTDIOOnPrivateNet"
+#         ansible.windows.win_regedit:
+#             path: "{{ win_baseline_11022_state_Path }}"
+#             name: "{{ win_baseline_11022_4_state_Name }}"
+#             data: "{{ win_baseline_11022_state_Data }}"
+#             type: "{{ win_baseline_11022_state_Type }}"
+#   when: win_baseline_11022_state_Manage
 
-- name: "win_baseline_11024_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | ProhibitLLTDIOOnPrivateNet"
-  ansible.windows.win_regedit:
-      path: "{{ win_baseline_11024_state_Path }}"
-      name: "{{ win_baseline_11024_state_Name }}"
-      data: "{{ win_baseline_11024_state_Data }}"
-      type: "{{ win_baseline_11024_state_Type }}"
-  when: win_baseline_11024_state_Manage
+# - name: "win_baseline_11024_state | Ensure Turn on Mapper IO LLTDIO driver is set to Disabled | ProhibitLLTDIOOnPrivateNet"
+#   ansible.windows.win_regedit:
+#       path: "{{ win_baseline_11024_state_Path }}"
+#       name: "{{ win_baseline_11024_state_Name }}"
+#       data: "{{ win_baseline_11024_state_Data }}"
+#       type: "{{ win_baseline_11024_state_Type }}"
+#   when: win_baseline_11024_state_Manage
 
-- name: "win_baseline_11026_state | Ensure Turn on Responder RSPNDR driver is set to Disabled | AllowRspndrOnPublicNet"
-  ansible.windows.win_regedit:
-      path: "{{ win_baseline_11026_state_Path }}"
-      name: "{{ win_baseline_11026_state_Name }}"
-      data: "{{ win_baseline_11026_state_Data }}"
-      type: "{{ win_baseline_11026_state_Type }}"
-  when: win_baseline_11026_state_Manage
+# - name: "win_baseline_11026_state | Ensure Turn on Responder RSPNDR driver is set to Disabled | AllowRspndrOnPublicNet"
+#   ansible.windows.win_regedit:
+#       path: "{{ win_baseline_11026_state_Path }}"
+#       name: "{{ win_baseline_11026_state_Name }}"
+#       data: "{{ win_baseline_11026_state_Data }}"
+#       type: "{{ win_baseline_11026_state_Type }}"
+#   when: win_baseline_11026_state_Manage
 
-- name: "win_baseline_11027_state | Ensure Turn on Responder RSPNDR driver is set to Disabled | ProhibitRspndrOnPrivateNet"
-  ansible.windows.win_regedit:
-      path: "{{ win_baseline_11027_state_Path }}"
-      name: "{{ win_baseline_11027_state_Name }}"
-      data: "{{ win_baseline_11027_state_Data }}"
-      type: "{{ win_baseline_11027_state_Type }}"
-  when: win_baseline_11027_state_Manage
+# - name: "win_baseline_11027_state | Ensure Turn on Responder RSPNDR driver is set to Disabled | ProhibitRspndrOnPrivateNet"
+#   ansible.windows.win_regedit:
+#       path: "{{ win_baseline_11027_state_Path }}"
+#       name: "{{ win_baseline_11027_state_Name }}"
+#       data: "{{ win_baseline_11027_state_Data }}"
+#       type: "{{ win_baseline_11027_state_Type }}"
+#   when: win_baseline_11027_state_Manage
 
-- name: "win_baseline_11211_state | Ensure Configure Windows spotlight on lock screen is set to Disabled"
-  block:
-      - name: "win_baseline_11211_1_state | Ensure Configure Windows spotlight on lock screen is set to Disabled"
-        ansible.windows.win_regedit:
-          path: "{{ win_baseline_11211_1_state_Path }}"
-          name: "{{ win_baseline_11211_state_Name }}"
-          data: "{{ win_baseline_11211_state_Data }}"
-          type: "{{ win_baseline_11211_state_Type }}"
+# - name: "win_baseline_11211_state | Ensure Configure Windows spotlight on lock screen is set to Disabled"
+#   block:
+#       - name: "win_baseline_11211_1_state | Ensure Configure Windows spotlight on lock screen is set to Disabled"
+#         ansible.windows.win_regedit:
+#           path: "{{ win_baseline_11211_1_state_Path }}"
+#           name: "{{ win_baseline_11211_state_Name }}"
+#           data: "{{ win_baseline_11211_state_Data }}"
+#           type: "{{ win_baseline_11211_state_Type }}"
 
-      - name: "win_baseline_11211_2_state | Ensure Configure Windows spotlight on lock screen is set to Disabled"
-        ansible.windows.win_regedit:
-          path: "{{ win_baseline_11211_1_state_Path }}"
-          name: "{{ win_baseline_11211_state_Name }}"
-          data: "{{ win_baseline_11211_state_Data }}"
-          type: "{{ win_baseline_11211_state_Type }}"
-  when: win_baseline_11211_state_Manage
+#       - name: "win_baseline_11211_2_state | Ensure Configure Windows spotlight on lock screen is set to Disabled"
+#         ansible.windows.win_regedit:
+#           path: "{{ win_baseline_11211_1_state_Path }}"
+#           name: "{{ win_baseline_11211_state_Name }}"
+#           data: "{{ win_baseline_11211_state_Data }}"
+#           type: "{{ win_baseline_11211_state_Type }}"
+#   when: win_baseline_11211_state_Manage
 
-- name: "win_baseline_14878_state | Ensure Turn off notifications network usage is set to Enabled"
-  ansible.windows.win_regedit:
-    path: "{{ win_baseline_14878_state_Path }}"
-    name: "{{ win_baseline_14878_state_Name }}"
-    data: "{{ win_baseline_14878_state_Data }}"
-    type: "{{ win_baseline_14878_state_Type }}"
-  when: win_baseline_14878_state_Manage
+# - name: "win_baseline_14878_state | Ensure Turn off notifications network usage is set to Enabled"
+#   ansible.windows.win_regedit:
+#     path: "{{ win_baseline_14878_state_Path }}"
+#     name: "{{ win_baseline_14878_state_Name }}"
+#     data: "{{ win_baseline_14878_state_Data }}"
+#     type: "{{ win_baseline_14878_state_Type }}"
+#   when: win_baseline_14878_state_Manage
 
-- name: "win_baseline_16871_state | Ensure 'Turn off real-time protection' is set to 'Disabled'"
-  ansible.windows.win_regedit:
-    path: "{{ win_baseline_16871_state_Path }}"
-    name: "{{ win_baseline_16871_state_Name }}"
-    data: "{{ win_baseline_16871_state_Data }}"
-    type: "{{ win_baseline_16871_state_Type }}"
-  when: win_baseline_16871_state_Manage
+# - name: "win_baseline_16871_state | Ensure 'Turn off real-time protection' is set to 'Disabled'"
+#   ansible.windows.win_regedit:
+#     path: "{{ win_baseline_16871_state_Path }}"
+#     name: "{{ win_baseline_16871_state_Name }}"
+#     data: "{{ win_baseline_16871_state_Data }}"
+#     type: "{{ win_baseline_16871_state_Type }}"
+#   when: win_baseline_16871_state_Manage
 
-- name: "win_baseline_22349_state | Ensure Limits print driver installation to Administrators is set to Enabled"
-  ansible.windows.win_regedit:
-    path: "{{ win_baseline_22349_state_Path }}"
-    name: "{{ win_baseline_22349_state_Name }}"
-    data: "{{ win_baseline_22349_state_Data }}"
-    type: "{{ win_baseline_22349_state_Type }}"
-  when: win_baseline_22349_state_Manage
+# - name: "win_baseline_22349_state | Ensure Limits print driver installation to Administrators is set to Enabled"
+#   ansible.windows.win_regedit:
+#     path: "{{ win_baseline_22349_state_Path }}"
+#     name: "{{ win_baseline_22349_state_Name }}"
+#     data: "{{ win_baseline_22349_state_Data }}"
+#     type: "{{ win_baseline_22349_state_Type }}"
+#   when: win_baseline_22349_state_Manage
 
-- name: "win_baseline_23128_state | Ensure Turn off cloud consumer account state content is set to Enabled"
-  ansible.windows.win_regedit:
-    path: "{{ win_baseline_23128_state_Path }}"
-    name: "{{ win_baseline_23128_state_Name }}"
-    data: "{{ win_baseline_23128_state_Data }}"
-    type: "{{ win_baseline_23128_state_Type }}"
-  when: win_baseline_23128_state_Manage
+# - name: "win_baseline_23128_state | Ensure Turn off cloud consumer account state content is set to Enabled"
+#   ansible.windows.win_regedit:
+#     path: "{{ win_baseline_23128_state_Path }}"
+#     name: "{{ win_baseline_23128_state_Name }}"
+#     data: "{{ win_baseline_23128_state_Data }}"
+#     type: "{{ win_baseline_23128_state_Type }}"
+#   when: win_baseline_23128_state_Manage
 
-- name: "win_baseline_13922_state | Ensure Configure Attack Surface Reduction rules is set to Enabled"
-  ansible.windows.win_regedit:
-    path: "{{ win_baseline_13922_state_Path }}"
-    name: "{{ win_baseline_13922_state_Name }}"
-    data: "{{ win_baseline_13922_state_Data }}"
-    type: "{{ win_baseline_13922_state_Type }}"
-  when: win_baseline_13922_state_Manage
+# - name: "win_baseline_13922_state | Ensure Configure Attack Surface Reduction rules is set to Enabled"
+#   ansible.windows.win_regedit:
+#     path: "{{ win_baseline_13922_state_Path }}"
+#     name: "{{ win_baseline_13922_state_Name }}"
+#     data: "{{ win_baseline_13922_state_Data }}"
+#     type: "{{ win_baseline_13922_state_Type }}"
+#   when: win_baseline_13922_state_Manage
 
 - name: "win_baseline_21377_state | Ensure Block persistence through WMI event subscription is set to block"
   ansible.windows.win_regedit:
