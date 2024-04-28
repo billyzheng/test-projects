@@ -1,2 +1,21 @@
 ---
-# vars file for windows_baseline_2019
+# win_baseline_19057_state | Ensure Relax minimum password length limits is set to 'Enabled'
+win_baseline_19057_state_Manage: "True"
+win_baseline_19057_state_Path: 'HKLM:\SYSTEM\CurrentControlSet\Control\SAM'
+win_baseline_19057_state_Name: "RelaxMinimumPasswordLengthLimits"
+win_baseline_19057_state_Data: "1"
+win_baseline_19057_state_Type: dword
+
+# win_baseline_10105_state | Ensure 'Disable pre-release features or settings' is set to 'Disabled'
+win_baseline_10105_state_Manage: True
+win_baseline_10105_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\PreviewBuilds'
+win_baseline_10105_state_Name: "EnableConfigFlighting"
+win_baseline_10105_state_Data: "0"
+win_baseline_10105_state_Type: dword
+
+# "win_baseline_21377_state | Ensure Block persistence through WMI event subscription is set to block
+win_baseline_21377_state_Manage: "True"
+win_baseline_21377_state_Path:  'HKLM:\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules'
+win_baseline_21377_state_Name: "e6db77e5-3df2-4cf1-b95a-636979351e5b"
+win_baseline_21377_state_Data: "1"
+win_baseline_21377_state_Type: dword

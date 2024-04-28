@@ -1,5 +1,25 @@
 ---
 # tasks file for windows_baseline_2019
-- name: Run 2019 tasks
-  ansible.builtin.debug:
-    msg: "Running 2019 tasks" 
+- name: "win_baseline_19057_state | Ensure Relax minimum password length limits is set to 'Enabled'"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_19057_state_Path }}"
+    name: "{{ win_baseline_19057_state_Name }}"
+    data: "{{ win_baseline_19057_state_Data }}"
+    type: "{{ win_baseline_19057_state_Type }}"
+  when: win_baseline_19057_state_Manage
+
+- name: "win_baseline_10105_state | Ensure 'Disable pre-release features or settings' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_10105_state_Path }}"
+    name: "{{ win_baseline_10105_state_Name }}"
+    data: "{{ win_baseline_10105_state_Data }}"
+    type: "{{ win_baseline_10105_state_Type }}"
+  when: win_baseline_10105_state_Manage
+
+- name: "win_baseline_21377_state | Ensure Block persistence through WMI event subscription is set to block"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_21377_state_Path }}"
+    name: "{{ win_baseline_21377_state_Name }}"
+    data: "{{ win_baseline_21377_state_Data }}"
+    type: "{{ win_baseline_21377_state_Type }}"
+  when: win_baseline_21377_state_Manage

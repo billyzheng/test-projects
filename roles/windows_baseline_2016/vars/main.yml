@@ -1,2 +1,14 @@
 ---
-# vars file for windows_baseline_2016
+# win_baseline_10105_state | Ensure 'Disable pre-release features or settings' is set to 'Disabled'
+win_baseline_10105_state_Manage: True
+win_baseline_10105_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\PreviewBuilds'
+win_baseline_10105_state_Name: "EnableConfigFlighting"
+win_baseline_10105_state_Data: "0"
+win_baseline_10105_state_Type: dword
+
+# "win_baseline_10355_state | Ensure Don't allow WebRTC to share the LocalHost IP address is set to 'Enabled'
+win_baseline_10355_state_Manage: True
+win_baseline_10355_state_Path: 'Software\Policies\Microsoft\MicrosoftEdge\Main'
+win_baseline_10355_state_Name: "HideLocalHostIP"
+win_baseline_10355_state_Data: "1"
+win_baseline_10355_state_Type: dword

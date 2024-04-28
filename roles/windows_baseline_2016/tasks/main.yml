@@ -1,5 +1,16 @@
 ---
-# tasks file for windows_baseline_2016
-- name: Run 2016 tasks
-  ansible.builtin.debug:
-    msg: "Running 2016 tasks"
+- name: "win_baseline_10105_state | Ensure 'Disable pre-release features or settings' is set to 'Disabled'"
+  win_regedit:
+    path: "{{ win_baseline_10105_state_Path }}"
+    name: "{{ win_baseline_10105_state_Name }}"
+    data: "{{ win_baseline_10105_state_Data }}"
+    type: "{{ win_baseline_10105_state_Type }}"
+  when: win_baseline_10105_state_Manage
+
+- name: "win_baseline_10355_state | Ensure Don't allow WebRTC to share the LocalHost IP address is set to 'Enabled'"
+  win_regedit:
+    path: "{{ win_baseline_10355_state_Path }}"
+    name: "{{ win_baseline_10355_state_Name }}"
+    data: "{{ win_baseline_10355_state_Data }}"
+    type: "{{ win_baseline_10355_state_Type }}"
+  when: win_baseline_10355_state_Manage

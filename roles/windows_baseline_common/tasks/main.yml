@@ -2526,13 +2526,6 @@
 #     type: "{{ win_baseline_10104_state_Type }}"
 #   when: win_baseline_10104_state_Manage
 
-# - name: "win_baseline_10105_state | Ensure 'Disable pre-release features or settings' is set to 'Disabled'"
-#   win_regedit:
-#     path: "{{ win_baseline_10105_state_Path }}"
-#     name: "{{ win_baseline_10105_state_Name }}"
-#     data: "{{ win_baseline_10105_state_Data }}"
-#     type: "{{ win_baseline_10105_state_Type }}"
-#   when: win_baseline_10105_state_Manage
 
 # - name: "win_baseline_10107_state | Ensure 'Allow Cortana' is set to 'Disabled'"
 #   win_regedit:
@@ -3657,13 +3650,6 @@
     type: "{{ win_baseline_14884_state_Type }}"
   when: win_baseline_14884_state_Manage
 
-- name: "win_baseline_21377_state | Ensure Block persistence through WMI event subscription is set to block"
-  ansible.windows.win_regedit:
-    path: "{{ win_baseline_21377_state_Path }}"
-    name: "{{ win_baseline_21377_state_Name }}"
-    data: "{{ win_baseline_21377_state_Data }}"
-    type: "{{ win_baseline_21377_state_Type }}"
-  when: win_baseline_21377_state_Manage
 
 - name: "win_baseline_21711_state | Ensure Allow Print Spooler to accept client connections is set to Disabled"
   ansible.windows.win_regedit:
@@ -3728,14 +3714,6 @@
     data: "{{ win_baseline_23206_state_Data }}"
     type: "{{ win_baseline_23206_state_Type }}"
   when: win_baseline_23206_state_Manage
-
-- name: "win_baseline_19057_state | Ensure Relax minimum password length limits is set to 'Enabled'"
-  ansible.windows.win_regedit:
-    path: "{{ win_baseline_19057_state_Path }}"
-    name: "{{ win_baseline_19057_state_Name }}"
-    data: "{{ win_baseline_19057_state_Data }}"
-    type: "{{ win_baseline_19057_state_Type }}"
-  when: win_baseline_19057_state_Manage
 
 - name: "win_baseline_17242_state | Require pin for pairing' Enabled 'First Time [OR Always]"
   ansible.windows.win_regedit:
