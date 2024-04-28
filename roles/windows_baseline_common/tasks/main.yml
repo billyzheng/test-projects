@@ -3541,6 +3541,14 @@
 #     type: "{{ win_baseline_22349_state_Type }}"
 #   when: win_baseline_22349_state_Manage
 
+- name: "win_baseline_22350_state | Ensure Script Scanning setting is set to Disabled"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_22350_state_Path }}"
+    name: "{{ win_baseline_22350_state_Name }}"
+    data: "{{ win_baseline_22350_state_Data }}"
+    type: "{{ win_baseline_22350_state_Type }}"
+  when: win_baseline_22350_state_Manage
+
 # - name: "win_baseline_23128_state | Ensure Turn off cloud consumer account state content is set to Enabled"
 #   ansible.windows.win_regedit:
 #     path: "{{ win_baseline_23128_state_Path }}"
