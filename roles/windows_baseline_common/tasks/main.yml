@@ -3734,3 +3734,11 @@
     data: "{{ win_baseline_23206_state_Data }}"
     type: "{{ win_baseline_23206_state_Type }}"
   when: win_baseline_23206_state_Manage
+
+- name: "win_baseline_19057_state | Ensure Relax minimum password length limits is set to 'Enabled'"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_19057_state_Path }}"
+    name: "{{ win_baseline_19057_state_Name }}"
+    data: "{{ win_baseline_19057_state_Data }}"
+    type: "{{ win_baseline_19057_state_Type }}"
+  when: win_baseline_19057_state_Manage
