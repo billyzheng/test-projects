@@ -3557,6 +3557,15 @@
 #     type: "{{ win_baseline_13922_state_Type }}"
 #   when: win_baseline_13922_state_Manage
 
+
+- name: "win_baseline_13930_state | Ensure Block credential stealing from the Windows local security authority subsystem (lsass.exe)"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_13930_state_Path }}"
+    name: "{{ win_baseline_13930_state_Name }}"
+    data: "{{ win_baseline_13930_state_Data }}"
+    type: "{{ win_baseline_13930_state_Type }}"
+  when: win_baseline_13930_state_Manage 
+
 - name: "win_baseline_13932_state | Ensure Block Office applications from creating executable content"
   ansible.windows.win_regedit:
     path: "{{ win_baseline_13932_state_Path }}"
