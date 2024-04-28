@@ -3778,9 +3778,10 @@
   when: win_baseline_4096_state_Manage
 
 - name: "test"
+  becomes: true
   block:
     - name: Retrieve user SIDs using PowerShell
-      win_powershell:
+      win_shell:
         script |-
           Get-LocalUser | Select-Object -ExpandProperty SID
       register: user_sids
