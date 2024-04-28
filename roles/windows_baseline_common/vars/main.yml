@@ -3025,7 +3025,7 @@ win_baseline_9424_state_Type: dword
 
 # win_baseline_23206_state | Ensure Allow Diagnostic Data is set to 'Diagnostic data off'
 win_baseline_23206_state_Manage: "True"
-win_baseline_23206_state_Path: 'SOFTWARE\Policies\Microsoft\Windows\DataCollection'
+win_baseline_23206_state_Path: 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection'
 win_baseline_23206_state_Name: "AllowTelemetry"
 win_baseline_23206_state_Data: "0"
 win_baseline_23206_state_Type: dword
