@@ -3558,6 +3558,17 @@
 #   when: win_baseline_13922_state_Manage
 
 
+
+
+
+- name: "win_baseline_13927_state | Ensure Block JavaScript or VBScript from launching downloaded executable content"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_13927_state_Path }}"
+    name: "{{ win_baseline_13927_state_Name }}"
+    data: "{{ win_baseline_13927_state_Data }}"
+    type: "{{ win_baseline_13927_state_Type }}"
+  when: win_baseline_13927_state_Manage
+
 - name: "win_basleine_13928_state | Ensure Block executable content from email client and webmai"
   ansible.windows.win_regedit:
     path: "{{ win_baseline_13928_state_Path }}"
