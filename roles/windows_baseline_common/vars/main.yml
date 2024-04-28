@@ -2988,3 +2988,9 @@ win_baseline_4842_state_Name: "DisabledComponents"
 win_baseline_4842_state_Data: "17"
 win_baseline_4842_state_Type: dword
 
+# "win_baseline_4141_state | Ensure Configure Microsoft SpyNet Reporting is set to Enabled
+win_baseline_4141_state_Manage: "True"
+win_baseline_4141_state_Path: 'HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet'
+win_baseline_4141_state_Name: "SpynetReporting"
+win_baseline_4141_state_Data: "0"
+win_baseline_4141_state_Type: dword

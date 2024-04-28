@@ -3686,3 +3686,11 @@
     data: "{{ win_baseline_4842_state_Data }}"
     type: "{{ win_baseline_4842_state_Type }}"
   when: win_baseline_4842_state_Manage
+
+- name: "win_baseline_4141_state | Ensure Configure Microsoft SpyNet Reporting is set to Enabled"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_4141_state_Path }}"
+    name: "{{ win_baseline_4141_state_Name }}"
+    data: "{{ win_baseline_4141_state_Data }}"
+    type: "{{ win_baseline_4141_state_Type }}"
+  when: win_baseline_4141_state_Manage
