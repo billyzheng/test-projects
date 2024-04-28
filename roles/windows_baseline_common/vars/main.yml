@@ -2865,13 +2865,6 @@ win_baseline_23128_state_Name: "DisableConsumerAccountStateContent"
 win_baseline_23128_state_Data: "1"
 win_baseline_23128_state_Type: dword
 
-# win_baseline_13918_state | NG Ensure Turn On Virtualization Based Security Require UEFI Memory Attributes Table is set to True checked
-win_baseline_13918_state_Manage: "True"
-win_baseline_13918_state_Path: 'HHKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard'
-win_baseline_13918_state_Name: "HVCIMATRequired"
-win_baseline_13918_state_Data: "1"
-win_baseline_13918_state_Type: dword
-
 # win_baseline_13922_state | Ensure Configure Attack Surface Reduction rules is set to Enabled
 win_baseline_13922_state_Manage: "True"
 win_baseline_13922_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR'
