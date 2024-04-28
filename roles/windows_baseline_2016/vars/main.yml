@@ -8,7 +8,7 @@ win_baseline_10105_state_Type: dword
 
 # "win_baseline_10355_state | Ensure Don't allow WebRTC to share the LocalHost IP address is set to 'Enabled'
 win_baseline_10355_state_Manage: True
-win_baseline_10355_state_Path: 'Software\Policies\Microsoft\MicrosoftEdge\Main'
+win_baseline_10355_state_Path: 'HKLM:\Software\Policies\Microsoft\MicrosoftEdge\Main'
 win_baseline_10355_state_Name: "HideLocalHostIP"
 win_baseline_10355_state_Data: "1"
 win_baseline_10355_state_Type: dword
