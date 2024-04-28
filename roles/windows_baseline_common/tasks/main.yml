@@ -3559,7 +3559,13 @@
 
 
 
-
+- name: "win_basleine_13926_state | Ensure 'Block execution of potentially obfuscated scripts"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_13926_state_Path }}"
+    name: "{{ win_baseline_13926_state_Name }}"
+    data: "{{ win_baseline_13926_state_Data }}"
+    type: "{{ win_baseline_13926_state_Type }}"
+  when: win_baseline_13926_state_Manage
 
 - name: "win_baseline_13927_state | Ensure Block JavaScript or VBScript from launching downloaded executable content"
   ansible.windows.win_regedit:

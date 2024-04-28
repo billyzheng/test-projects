@@ -2868,6 +2868,14 @@ win_baseline_23128_state_Type: dword
 
 
 
+
+# "win_basleine_13926_state | Ensure 'Block execution of potentially obfuscated scripts
+win_baseline_13926_state_Manage: "True"
+win_baseline_13926_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules'
+win_baseline_13926_state_Name: ":5BEB7EFE-FD9A-4556-801D-275E5FFC04CC"
+win_baseline_13926_state_Data: "1"
+win_baseline_13926_state_Type: dword
+
 # "win_baseline_13927_state | Ensure Block JavaScript or VBScript from launching downloaded executable content
 win_baseline_13927_state_Manage: "True"
 win_baseline_13927_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules'
