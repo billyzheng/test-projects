@@ -3558,6 +3558,13 @@
 #   when: win_baseline_13922_state_Manage
 
 
+- name: "win_basleine_13928_state | Ensure Block executable content from email client and webmai"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_13928_state_Path }}"
+    name: "{{ win_baseline_13928_state_Name }}"
+    data: "{{ win_baseline_13928_state_Data }}"
+    type: "{{ win_baseline_13928_state_Type }}"
+  when: win_baseline_13928_state_Manage
 
 - name: "win_baseline_13929_state| Ensure Block untrusted and unsigned processes that run from USB"
   ansible.windows.win_regedit:

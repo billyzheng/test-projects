@@ -2868,6 +2868,17 @@ win_baseline_23128_state_Type: dword
 
 
 
+
+
+
+# win_basleine_13928_state | Ensure Block executable content from email client and webmai
+win_baseline_13928_state_Manage: "True"
+win_baseline_13928_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules'
+win_baseline_13928_state_Name: "BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550"
+win_baseline_13928_state_Data: "1"
+win_baseline_13928_state_Type: dword
+
+
 # win_baseline_13929_state| Ensure Block untrusted and unsigned processes that run from USB
 win_baseline_13929_state_Manage: "True"
 win_baseline_13929_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules'
