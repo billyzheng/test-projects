@@ -2868,6 +2868,14 @@ win_baseline_23128_state_Type: dword
 
 
 
+# win_baseline_13929_state| Ensure Block untrusted and unsigned processes that run from USB
+win_baseline_13929_state_Manage: "True"
+win_baseline_13929_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules'
+win_baseline_13929_state_Name: "b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4"
+win_baseline_13929_state_Data: "1"  
+win_baseline_13929_state_Type: dword
+
+
 # win_baseline_13930_state | Ensure Block credential stealing from the Windows local security authority subsystem (lsass.exe)
 win_baseline_13930_state_Manage: "True"
 win_baseline_13930_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules'
