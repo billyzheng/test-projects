@@ -3768,3 +3768,11 @@
     subcategory: "{{ win_baseline_4506_state_Subcategory }}"
     audit_type: "{{ win_baseline_4506_state_AuditType }}"
   when: win_baseline_4506_state_Manage
+
+- name: "win_baseline_4096_state | Ensure Turn off Internet File Association service is set to '1'"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_4096_state_Path }}"
+    name: "{{ win_baseline_4096_state_Name }}"
+    data: "{{ win_baseline_4096_state_Data }}"
+    type: "{{ win_baseline_4096_state_Type }}"
+  when: win_baseline_4096_state_Manage
