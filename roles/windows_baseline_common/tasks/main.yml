@@ -3718,4 +3718,11 @@
     data: "{{ win_baseline_10363_state_Data }}"
     type: "{{ win_baseline_10363_state_Type }}"
   when: win_baseline_10363_state_Manage
-
+  
+- name: "win_baseline_9424_state | Ensure 'Turn off the offer to update to the latest version of Windows is set to 'Enabled'"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_9424_state_Path }}"
+    name: "{{ win_baseline_9424_state_Name }}"
+    data: "{{ win_baseline_9424_state_Data }}"
+    type: "{{ win_baseline_9424_state_Type }}"
+  when: win_baseline_9424_state_Manage

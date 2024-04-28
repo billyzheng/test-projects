@@ -3015,3 +3015,10 @@ win_baseline_10363_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPri
 win_baseline_10363_state_Name: "LetAppsAccessMotion"
 win_baseline_10363_state_Data: "2"
 win_baseline_10363_state_Type: dword
+
+# win_baseline_9424_state | Ensure 'Turn off the offer to update to the latest version of Windows is set to 'Enabled'"
+win_baseline_9424_state_Manage: "True"
+win_baseline_9424_state_Path: 'HKLM:\Software\Policies\Microsoft\WindowsStore'
+win_baseline_9424_state_Name: "DisableOSUpgrade"
+win_baseline_9424_state_Data: "1"
+win_baseline_9424_state_Type: dword
