@@ -3029,3 +3029,10 @@ win_baseline_19057_state_Path: 'HKLM:\SYSTEM\CurrentControlSet\Control\SAM'
 win_baseline_19057_state_Name: "RelaxMinimumPasswordLengthLimits"
 win_baseline_19057_state_Data: "1"
 win_baseline_19057_state_Type: dword
+
+# win_baseline_17242_state | Require pin for pairing' Enabled 'First Time OR Always
+win_baseline_17242_state_Manage: "True"
+win_baseline_17242_state_Path: 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\Connect'
+win_baseline_17242_state_Name: "RequirePinForPairing"
+win_baseline_17242_state_Data: "1"
+win_baseline_17242_state_Type: dword
