@@ -2869,6 +2869,29 @@ win_baseline_23128_state_Type: dword
 
 
 
+# "win_baseline_13923_state | Ensure Block Office applications from injecting code into other processes
+win_baseline_13923_state_Manage: "True"
+win_baseline_13923_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules'
+win_baseline_13923_state_Name: "75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84"
+win_baseline_13923_state_Data: "1"
+win_baseline_13923_state_Type: dword
+
+
+# win_baseline_13924_state | Ensure Block all Office applications from creating child processes
+win_baseline_13924_state_Manage: "True"
+win_baseline_13924_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules'
+win_baseline_13924_state_Name: "D4F940AB-401B-4EFC-AADC-AD5F3C50688A"
+win_baseline_13924_state_Data: "1"
+win_baseline_13924_state_Type: dword
+
+# win_baseline_13925_state | Ensure 'Block Win32 API calls from Office macro
+win_baseline_13925_state_Manage: "True"
+win_baseline_13925_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rule'
+win_baseline_13925_state_Name: "92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B"
+win_baseline_13925_state_Data: "1"
+win_baseline_13925_state_Type: dword
+
+
 # "win_basleine_13926_state | Ensure 'Block execution of potentially obfuscated scripts
 win_baseline_13926_state_Manage: "True"
 win_baseline_13926_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules'

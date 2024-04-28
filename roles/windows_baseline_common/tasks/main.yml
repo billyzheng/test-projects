@@ -3558,6 +3558,29 @@
 #   when: win_baseline_13922_state_Manage
 
 
+- name: "win_baseline_13923_state | Ensure Block Office applications from injecting code into other processes"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_13923_state_Path }}"
+    name: "{{ win_baseline_13923_state_Name }}"
+    data: "{{ win_baseline_13923_state_Data }}"
+    type: "{{ win_baseline_13923_state_Type }}"
+  when: win_baseline_13923_state_Manage
+
+- name: "win_baseline_13924_state | Ensure Block all Office applications from creating child processes"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_13924_state_Path }}"
+    name: "{{ win_baseline_13924_state_Name }}"
+    data: "{{ win_baseline_13924_state_Data }}"
+    type: "{{ win_baseline_13924_state_Type }}"
+  when: win_baseline_13924_state_Manage
+
+- name: "win_baseline_13925_state | Ensure 'Block Win32 API calls from Office macro"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_13925_state_Path }}"
+    name: "{{ win_baseline_13925_state_Name }}"
+    data: "{{ win_baseline_13925_state_Data }}"
+    type: "{{ win_baseline_13925_state_Type }}"
+  when: win_baseline_13925_state_Manage
 
 - name: "win_basleine_13926_state | Ensure 'Block execution of potentially obfuscated scripts"
   ansible.windows.win_regedit:
