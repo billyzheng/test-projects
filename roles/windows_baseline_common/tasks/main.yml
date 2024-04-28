@@ -3549,13 +3549,13 @@
 #     type: "{{ win_baseline_23128_state_Type }}"
 #   when: win_baseline_23128_state_Manage
 
-# - name: "win_baseline_13922_state | Ensure Configure Attack Surface Reduction rules is set to Enabled"
-#   ansible.windows.win_regedit:
-#     path: "{{ win_baseline_13922_state_Path }}"
-#     name: "{{ win_baseline_13922_state_Name }}"
-#     data: "{{ win_baseline_13922_state_Data }}"
-#     type: "{{ win_baseline_13922_state_Type }}"
-#   when: win_baseline_13922_state_Manage
+- name: "win_baseline_13922_state | Ensure Configure Attack Surface Reduction rules is set to Enabled"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_13922_state_Path }}"
+    name: "{{ win_baseline_13922_state_Name }}"
+    data: "{{ win_baseline_13922_state_Data }}"
+    type: "{{ win_baseline_13922_state_Type }}"
+  when: win_baseline_13922_state_Manage
 
 
 - name: "win_baseline_13923_state | Ensure Block Office applications from injecting code into other processes"
