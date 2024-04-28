@@ -2874,7 +2874,7 @@ win_baseline_13922_state_Type: dword
 
 # "win_baseline_21377_state | Ensure Block persistence through WMI event subscription is set to block
 win_baseline_21377_state_Manage: "True"
-win_baseline_21377_state_Path:  HKLM\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules'
+win_baseline_21377_state_Path:  HKLM:\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules'
 win_baseline_21377_state_Name: "e6db77e5-3df2-4cf1-b95a-636979351e5b"
 win_baseline_21377_state_Data: "1"
 win_baseline_21377_state_Type: dword
