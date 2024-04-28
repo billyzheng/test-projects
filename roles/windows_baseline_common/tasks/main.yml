@@ -3747,12 +3747,12 @@
 
 - name: "win_baseline_7360_state | Ensure Audit Account Logon Events is set to 'Success and Failure'"
   win_audit_policy_system:
-    Subcategory: "{{ win_baseline_7360_state_Subcategory }}"
-    Setting: "{{ win_baseline_7360_state_Setting }}"
+    subcategory: "{{ win_baseline_7360_state_Subcategory }}"
+    audit_type: "{{ win_baseline_7360_state_AuditType }}"
   when: win_baseline_7360_state_Manage
 
 - name: "win_baseline_4515_state | Ensure Directory Service Replication is set to 'No Auditing'"
   win_audit_policy_system:
-  - Subcategory: "{{ win_baseline_4515_state_Subcategory }}"
-    Setting: "{{ win_baseline_4515_state_Setting }}"
+    subcategory: "{{ win_baseline_4515_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4515_state_AuditType }}"
   when: win_baseline_4515_state_Manage
