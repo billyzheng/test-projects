@@ -3556,3 +3556,11 @@
     data: "{{ win_baseline_13922_state_Data }}"
     type: "{{ win_baseline_13922_state_Type }}"
   when: win_baseline_13922_state_Manage
+
+- name: "win_baseline_21711_state | Ensure Allow Print Spooler to accept client connections is set to Disabled"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_21711_state_Path }}"
+    name: "{{ win_baseline_21711_state_Name }}"
+    data: "{{ win_baseline_21711_state_Data }}"
+    type: "{{ win_baseline_21711_state_Type }}"
+  when: win_baseline_21711_state_Manage
