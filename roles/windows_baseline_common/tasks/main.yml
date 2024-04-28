@@ -3781,15 +3781,15 @@
   block:
       - name: "win_baseline_23138_1_state | Ensure Turn off Spotlight collection on Desktop is set to Enabled"
         ansible.windows.win_regedit:
-            path: "{{ win_baseline_23138_state_Path }}"
-            name: "{{ win_baseline_23138_1_state_Name }}"
+            path: "{{ win_baseline_23138_1_state_Path }}"
+            name: "{{ win_baseline_23138_state_Name }}"
             data: "{{ win_baseline_23138_state_Data }}"
             type: "{{ win_baseline_23138_state_Type }}"
 
       - name: "win_baseline_23138_2_state | Ensure Turn off Spotlight collection on Desktop is set to Enabled"
         ansible.windows.win_regedit:
-            path: "{{ win_baseline_23138_state_Path }}"
-            name: "{{ win_baseline_23138_2_state_Name }}"
+            path: "{{ win_baseline_23138_2_state_Path }}"
+            name: "{{ win_baseline_23138_state_Name }}"
             data: "{{ win_baseline_23138_state_Data }}"
             type: "{{ win_baseline_23138_state_Type }}"
   when: win_baseline_23138_state_Manage
