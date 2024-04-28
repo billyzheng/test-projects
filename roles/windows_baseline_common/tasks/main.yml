@@ -3673,77 +3673,77 @@
 #     type: "{{ win_baseline_21711_state_Type }}"
 #   when: win_baseline_21711_state_Manage
 
-- name: "win_baseline_4842_state | Ensure Internet Protocol version 6 (IPv6) components is set to '17"
-  ansible.windows.win_regedit:
-    path: "{{ win_baseline_4842_state_Path }}"
-    name: "{{ win_baseline_4842_state_Name }}"
-    data: "{{ win_baseline_4842_state_Data }}"
-    type: "{{ win_baseline_4842_state_Type }}"
-  when: win_baseline_4842_state_Manage
+# - name: "win_baseline_4842_state | Ensure Internet Protocol version 6 (IPv6) components is set to '17"
+#   ansible.windows.win_regedit:
+#     path: "{{ win_baseline_4842_state_Path }}"
+#     name: "{{ win_baseline_4842_state_Name }}"
+#     data: "{{ win_baseline_4842_state_Data }}"
+#     type: "{{ win_baseline_4842_state_Type }}"
+#   when: win_baseline_4842_state_Manage
 
-- name: "win_baseline_4141_state | Ensure Configure Microsoft SpyNet Reporting is set to Enabled"
-  ansible.windows.win_regedit:
-    path: "{{ win_baseline_4141_state_Path }}"
-    name: "{{ win_baseline_4141_state_Name }}"
-    data: "{{ win_baseline_4141_state_Data }}"
-    type: "{{ win_baseline_4141_state_Type }}"
-  when: win_baseline_4141_state_Manage
+# - name: "win_baseline_4141_state | Ensure Configure Microsoft SpyNet Reporting is set to Enabled"
+#   ansible.windows.win_regedit:
+#     path: "{{ win_baseline_4141_state_Path }}"
+#     name: "{{ win_baseline_4141_state_Name }}"
+#     data: "{{ win_baseline_4141_state_Data }}"
+#     type: "{{ win_baseline_4141_state_Type }}"
+#   when: win_baseline_4141_state_Manage
 
-- name: "win_baseline_10381_state | Ensure Turn off address bar search suggestions is set to 'Disabled"
-  ansible.windows.win_regedit:
-    path: "{{ win_baseline_10381_state_Path }}"
-    name: "{{ win_baseline_10381_state_Name }}"
-    data: "{{ win_baseline_10381_state_Data }}"
-    type: "{{ win_baseline_10381_state_Type }}"
-  when: win_baseline_10381_state_Manage
+# - name: "win_baseline_10381_state | Ensure Turn off address bar search suggestions is set to 'Disabled"
+#   ansible.windows.win_regedit:
+#     path: "{{ win_baseline_10381_state_Path }}"
+#     name: "{{ win_baseline_10381_state_Name }}"
+#     data: "{{ win_baseline_10381_state_Data }}"
+#     type: "{{ win_baseline_10381_state_Type }}"
+#   when: win_baseline_10381_state_Manage
 
-- name: "win_baseline_10373_state | Ensure Let Windows apps sync with devices is set to 'Force Deny"
-  ansible.windows.win_regedit:
-    path: "{{ win_baseline_10373_state_Path }}"
-    name: "{{ win_baseline_10373_state_Name }}"
-    data: "{{ win_baseline_10373_state_Data }}"
-    type: "{{ win_baseline_10373_state_Type }}"
-  when: win_baseline_10373_state_Manage
+# - name: "win_baseline_10373_state | Ensure Let Windows apps sync with devices is set to 'Force Deny"
+#   ansible.windows.win_regedit:
+#     path: "{{ win_baseline_10373_state_Path }}"
+#     name: "{{ win_baseline_10373_state_Name }}"
+#     data: "{{ win_baseline_10373_state_Data }}"
+#     type: "{{ win_baseline_10373_state_Type }}"
+#   when: win_baseline_10373_state_Manage
 
-- name: "win_basleine_10363_state | Ensure Let Windows apps access motion' is set to 'Force Deny'"
-  ansible.windows.win_regedit:
-    path: "{{ win_baseline_10363_state_Path }}"
-    name: "{{ win_baseline_10363_state_Name }}"
-    data: "{{ win_baseline_10363_state_Data }}"
-    type: "{{ win_baseline_10363_state_Type }}"
-  when: win_baseline_10363_state_Manage
+# - name: "win_basleine_10363_state | Ensure Let Windows apps access motion' is set to 'Force Deny'"
+#   ansible.windows.win_regedit:
+#     path: "{{ win_baseline_10363_state_Path }}"
+#     name: "{{ win_baseline_10363_state_Name }}"
+#     data: "{{ win_baseline_10363_state_Data }}"
+#     type: "{{ win_baseline_10363_state_Type }}"
+#   when: win_baseline_10363_state_Manage
 
-- name: "win_baseline_9424_state | Ensure 'Turn off the offer to update to the latest version of Windows is set to 'Enabled'"
-  ansible.windows.win_regedit:
-    path: "{{ win_baseline_9424_state_Path }}"
-    name: "{{ win_baseline_9424_state_Name }}"
-    data: "{{ win_baseline_9424_state_Data }}"
-    type: "{{ win_baseline_9424_state_Type }}"
-  when: win_baseline_9424_state_Manage
+# - name: "win_baseline_9424_state | Ensure 'Turn off the offer to update to the latest version of Windows is set to 'Enabled'"
+#   ansible.windows.win_regedit:
+#     path: "{{ win_baseline_9424_state_Path }}"
+#     name: "{{ win_baseline_9424_state_Name }}"
+#     data: "{{ win_baseline_9424_state_Data }}"
+#     type: "{{ win_baseline_9424_state_Type }}"
+#   when: win_baseline_9424_state_Manage
 
-- name: "win_baseline_23206_state | Ensure Allow Diagnostic Data is set to 'Diagnostic data off'"
-  ansible.windows.win_regedit:
-    path: "{{ win_baseline_23206_state_Path }}"
-    name: "{{ win_baseline_23206_state_Name }}"
-    data: "{{ win_baseline_23206_state_Data }}"
-    type: "{{ win_baseline_23206_state_Type }}"
-  when: win_baseline_23206_state_Manage
+# - name: "win_baseline_23206_state | Ensure Allow Diagnostic Data is set to 'Diagnostic data off'"
+#   ansible.windows.win_regedit:
+#     path: "{{ win_baseline_23206_state_Path }}"
+#     name: "{{ win_baseline_23206_state_Name }}"
+#     data: "{{ win_baseline_23206_state_Data }}"
+#     type: "{{ win_baseline_23206_state_Type }}"
+#   when: win_baseline_23206_state_Manage
 
-- name: "win_baseline_19057_state | Ensure Relax minimum password length limits is set to 'Enabled'"
-  ansible.windows.win_regedit:
-    path: "{{ win_baseline_19057_state_Path }}"
-    name: "{{ win_baseline_19057_state_Name }}"
-    data: "{{ win_baseline_19057_state_Data }}"
-    type: "{{ win_baseline_19057_state_Type }}"
-  when: win_baseline_19057_state_Manage
+# - name: "win_baseline_19057_state | Ensure Relax minimum password length limits is set to 'Enabled'"
+#   ansible.windows.win_regedit:
+#     path: "{{ win_baseline_19057_state_Path }}"
+#     name: "{{ win_baseline_19057_state_Name }}"
+#     data: "{{ win_baseline_19057_state_Data }}"
+#     type: "{{ win_baseline_19057_state_Type }}"
+#   when: win_baseline_19057_state_Manage
 
-- name: "win_baseline_17242_state | Require pin for pairing' Enabled 'First Time [OR Always]"
-  ansible.windows.win_regedit:
-    path: "{{ win_baseline_17242_state_Path }}"
-    name: "{{ win_baseline_17242_state_Name }}"
-    data: "{{ win_baseline_17242_state_Data }}"
-    type: "{{ win_baseline_17242_state_Type }}"
-  when: win_baseline_17242_state_Manage
+# - name: "win_baseline_17242_state | Require pin for pairing' Enabled 'First Time [OR Always]"
+#   ansible.windows.win_regedit:
+#     path: "{{ win_baseline_17242_state_Path }}"
+#     name: "{{ win_baseline_17242_state_Name }}"
+#     data: "{{ win_baseline_17242_state_Data }}"
+#     type: "{{ win_baseline_17242_state_Type }}"
+#   when: win_baseline_17242_state_Manage
 
 - name: "win_baseline_7360_state | Ensure Audit Account Logon Events is set to 'Success and Failure'"
   win_audit_policy_system:
@@ -3756,3 +3756,9 @@
     subcategory: "{{ win_baseline_4515_state_Subcategory }}"
     audit_type: "{{ win_baseline_4515_state_AuditType }}"
   when: win_baseline_4515_state_Manage
+
+- name: "win_baseline_4516_state | Ensure Detailed Directory Service Replication is set to 'No Auditing'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4516_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4516_state_AuditType }}"
+  when: win_baseline_4516_state_Manage
