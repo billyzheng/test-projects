@@ -3727,3 +3727,10 @@
     type: "{{ win_baseline_9424_state_Type }}"
   when: win_baseline_9424_state_Manage
 
+- name: "win_baseline_23206_state | Ensure Allow Diagnostic Data is set to 'Diagnostic data off'"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_23206_state_Path }}"
+    name: "{{ win_baseline_23206_state_Name }}"
+    data: "{{ win_baseline_23206_state_Data }}"
+    type: "{{ win_baseline_23206_state_Type }}"
+  when: win_baseline_23206_state_Manage
