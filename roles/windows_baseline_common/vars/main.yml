@@ -2877,7 +2877,7 @@ win_baseline_21377_state_Manage: "True"
 win_baseline_21377_state_Path:  HKLM\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit\DeviceGuard\ASR'
 win_baseline_21377_state_Name: "Rules:e6db77e5-3df2-4cf1-b95a-636979351e5b"
 win_baseline_21377_state_Data: "1"
-win_baseline_21377_state_Data_Type: dword
+win_baseline_21377_state_Type: dword
 
 # win_baseline_21711_state | Ensure Allow Print Spooler to accept client connections is set to Disabled
 win_baseline_21711_state_Manage: "True"
