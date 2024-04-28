@@ -3008,3 +3008,10 @@ win_baseline_10373_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPri
 win_baseline_10373_state_Name: "LetAppsSyncWithDevices"
 win_baseline_10373_state_Data: "2"
 win_baseline_10373_state_Type: dword
+
+# "win_basleine_10363_state | Ensure Let Windows apps access motion' is set to 'Force Deny'
+win_baseline_10363_state_Manage: "True"
+win_baseline_10363_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows\AppPrivacy'
+win_baseline_10363_state_Name: "LetAppsAccessMotion"
+win_baseline_10363_state_Data: "2"
+win_baseline_10363_state_Type: dword

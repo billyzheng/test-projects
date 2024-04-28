@@ -3710,3 +3710,12 @@
     data: "{{ win_baseline_10373_state_Data }}"
     type: "{{ win_baseline_10373_state_Type }}"
   when: win_baseline_10373_state_Manage
+
+- name: "win_basleine_10363_state | Ensure Let Windows apps access motion' is set to 'Force Deny'"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_10363_state_Path }}"
+    name: "{{ win_baseline_10363_state_Name }}"
+    data: "{{ win_baseline_10363_state_Data }}"
+    type: "{{ win_baseline_10363_state_Type }}"
+  when: win_baseline_10363_state_Manage
+
