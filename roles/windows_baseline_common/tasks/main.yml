@@ -3557,6 +3557,14 @@
 #     type: "{{ win_baseline_13922_state_Type }}"
 #   when: win_baseline_13922_state_Manage
 
+- name: "win_baseline_14883_state | Ensure Office communication application from creating child processes"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_14883_state_Path }}"
+    name: "{{ win_baseline_14883_state_Name }}"
+    data: "{{ win_baseline_14883_state_Data }}"
+    type: "{{ win_baseline_14883_state_Type }}"
+  when: win_baseline_14883_state_Manage
+
 - name: "win_baseline_14884_state | Ensure Block Adobe Reader from creating clid processes"
   ansible.windows.win_regedit:
     path: "{{ win_baseline_14884_state_Path }}"

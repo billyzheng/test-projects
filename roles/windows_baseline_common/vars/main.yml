@@ -2872,10 +2872,19 @@ win_baseline_13922_state_Name: "ExploitGuard_ASR_Rules"
 win_baseline_13922_state_Data: "1"
 win_baseline_13922_state_Type: dword
 
+# "win_baseline_14883_state | Ensure Office communication application from creating child processes
+
+win_baseline_14883_state_Manage: "True"
+win_baseline_14883_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules'
+win_baseline_14883_state_Name: ":26190899-1602-49e8-8b27-eb1d0a1ce869"
+win_baseline_14883_state_Data: "1"
+win_baseline_14883_state_Type: dword
+
+
 
 # "win_baseline_14884_state | Ensure Block Adobe Reader from creating clid processes
 win_baseline_14884_state_Manage: "True"
-win_baseline_14884_state_Path: 'HKLM\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules'
+win_baseline_14884_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules'
 win_baseline_14884_state_Name: "7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c"
 win_baseline_14884_state_Data: "1"
 win_baseline_14884_state_Type: dword
