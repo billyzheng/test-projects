@@ -3776,3 +3776,17 @@
     data: "{{ win_baseline_4096_state_Data }}"
     type: "{{ win_baseline_4096_state_Type }}"
   when: win_baseline_4096_state_Manage
+
+- name: "test"
+  block:
+    - name: Retrieve user SIDs using PowerShell
+      win_powershell:
+        script |-
+          Get-LocalUser | Select-Object -ExpandProperty SID
+      register: user_sids
+
+    - name: Display each user SID
+      debug:
+        msg: "User SID: {{ item }}"
+      loop: "{{ user_sids.stdout_lines }}"
+      when: user_sids.stdout_lines is defined
