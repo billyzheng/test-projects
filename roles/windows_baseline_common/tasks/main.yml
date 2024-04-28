@@ -3678,3 +3678,11 @@
     data: "{{ win_baseline_21711_state_Data }}"
     type: "{{ win_baseline_21711_state_Type }}"
   when: win_baseline_21711_state_Manage
+
+- name: "win_baseline_4842_state | Ensure Internet Protocol version 6 (IPv6) components is set to '17"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_4842_state_Path }}"
+    name: "{{ win_baseline_4842_state_Name }}"
+    data: "{{ win_baseline_4842_state_Data }}"
+    type: "{{ win_baseline_4842_state_Type }}"
+  when: win_baseline_4842_state_Manage
