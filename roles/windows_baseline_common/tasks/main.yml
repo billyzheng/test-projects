@@ -3781,8 +3781,7 @@
   block:
     - name: Retrieve user SIDs using PowerShell
       win_shell:
-        script |-
-          Get-LocalUser | Select-Object -ExpandProperty SID
+        script | Get-LocalUser | Select-Object -ExpandProperty SID
       register: user_sids
 
     - name: Display each user SID
