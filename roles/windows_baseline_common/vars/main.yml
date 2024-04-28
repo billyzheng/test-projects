@@ -3048,7 +3048,11 @@ win_baseline_4515_state_Subcategory: "Directory Service Replication"
 win_baseline_4515_state_AuditType: "none"
 
 # win_baseline_4516_state | Ensure Detailed Directory Service Replication is set to 'No Auditing'
-
 win_baseline_4516_state_Manage: "True"
 win_baseline_4516_state_Subcategory: "Detailed Directory Service Replication"
 win_baseline_4516_state_AuditType: "none"
+
+# win_basleine_4506_state | Ensure Other Policy Change Events is set to 'Success and Failure'
+win_baseline_4506_state_Manage: "True"
+win_baseline_4506_state_Subcategory: "Other Policy Change Events"
+win_baseline_4506_state_AuditType: "success, failure"

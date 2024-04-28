@@ -3762,3 +3762,9 @@
     subcategory: "{{ win_baseline_4516_state_Subcategory }}"
     audit_type: "{{ win_baseline_4516_state_AuditType }}"
   when: win_baseline_4516_state_Manage
+
+- name: "win_basleine_4506_state | Ensure Other Policy Change Events is set to 'Success and Failure'"
+  win_audit_policy_system:
+    subcategory: "{{ win_baseline_4506_state_Subcategory }}"
+    audit_type: "{{ win_baseline_4506_state_AuditType }}"
+  when: win_baseline_4506_state_Manage
