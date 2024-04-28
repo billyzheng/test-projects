@@ -3063,3 +3063,11 @@ win_baseline_4096_state_Path: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\P
 win_baseline_4096_state_Name: "NoInternetOpenWith"
 win_baseline_4096_state_Data: "1"
 win_baseline_4096_state_Type: dword
+
+# win_baseline_23138_state | Ensure Turn off Spotlight collection on Desktop is set to Enabled
+win_baseline_23138_state_Manage: "True"
+win_baseline_23138_1_state_Path: 'HKU:\.DEFAULT\Software\Policies\Microsoft\Windows\CloudContent'
+win_baseline_23138_2_state_Path: 'HKCU:\Software\Policies\Microsoft\Windows\CloudContent'
+win_baseline_23138_state_Name: "DisableSpotlightCollectionOnDesktop"
+win_baseline_23138_state_Data: "1"
+win_baseline_23138_state_Type: dword

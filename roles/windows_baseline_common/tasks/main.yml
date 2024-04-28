@@ -3777,15 +3777,19 @@
     type: "{{ win_baseline_4096_state_Type }}"
   when: win_baseline_4096_state_Manage
 
-- name: "test"
+- name: "win_baseline_23138_state | Ensure Turn off Spotlight collection on Desktop is set to Enabled"
   block:
-    - name: Retrieve user SIDs using PowerShell
-      win_shell:
-        script | Get-LocalUser | Select-Object -ExpandProperty SID
-      register: user_sids
+      - name: "win_baseline_23138_1_state | Ensure Turn off Spotlight collection on Desktop is set to Enabled"
+        ansible.windows.win_regedit:
+            path: "{{ win_baseline_23138_state_Path }}"
+            name: "{{ win_baseline_23138_1_state_Name }}"
+            data: "{{ win_baseline_23138_state_Data }}"
+            type: "{{ win_baseline_23138_state_Type }}"
 
-    - name: Display each user SID
-      debug:
-        msg: "User SID: {{ item }}"
-      loop: "{{ user_sids.stdout_lines }}"
-      when: user_sids.stdout_lines is defined
+      - name: "win_baseline_23138_2_state | Ensure Turn off Spotlight collection on Desktop is set to Enabled"
+        ansible.windows.win_regedit:
+            path: "{{ win_baseline_23138_state_Path }}"
+            name: "{{ win_baseline_23138_2_state_Name }}"
+            data: "{{ win_baseline_23138_state_Data }}"
+            type: "{{ win_baseline_23138_state_Type }}"
+  when: win_baseline_23138_state_Manage
