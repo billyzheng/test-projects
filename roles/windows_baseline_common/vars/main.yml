@@ -3036,3 +3036,8 @@ win_baseline_17242_state_Path: 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\Connec
 win_baseline_17242_state_Name: "RequirePinForPairing"
 win_baseline_17242_state_Data: "1"
 win_baseline_17242_state_Type: dword
+
+# win_baseline_7360_state | Ensure Audit Account Logon Events is set to 'Success and Failure'
+win_baseline_7460_state_Manage: "True"
+win_baseline_7460_state_Subcategory: "Account Logon"
+win_baseline_7460_state_AuditType: "success, failure"
