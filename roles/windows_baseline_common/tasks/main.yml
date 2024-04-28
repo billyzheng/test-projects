@@ -3694,3 +3694,11 @@
     data: "{{ win_baseline_4141_state_Data }}"
     type: "{{ win_baseline_4141_state_Type }}"
   when: win_baseline_4141_state_Manage
+
+- name: "win_baseline_10381_state | Ensure 'Turn off address bar search suggestions is set to 'Disabled"
+  ansible.windows.win_regedit:
+    path: "{{ win_baseline_10381_state_Path }}"
+    name: "{{ win_baseline_10381_state_Name }}"
+    data: "{{ win_baseline_10381_state_Data }}"
+    type: "{{ win_baseline_10381_state_Type }}"
+  when: win_baseline_10381_state_Manage

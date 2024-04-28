@@ -2994,3 +2994,10 @@ win_baseline_4141_state_Path: 'HKLM:\SOFTWARE\Policies\Microsoft\Windows Defende
 win_baseline_4141_state_Name: "SpynetReporting"
 win_baseline_4141_state_Data: "0"
 win_baseline_4141_state_Type: dword
+
+# win_baseline_10381_state | Ensure 'Turn off address bar search suggestions is set to 'Disabled
+win_baseline_10381_state_Manage: "True"
+win_baseline_10381_state_Path: 'HKLM:\Software\Policies\Microsoft\MicrosoftEdge\SearchScopes'
+win_baseline_10381_state_Name: "ShowSearchSuggestionsGlobal"
+win_baseline_10381_state_Data: "1"
+win_baseline_10381_state_Type: dword
