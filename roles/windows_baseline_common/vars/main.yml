@@ -2860,7 +2860,7 @@ win_baseline_22349_state_Type: dword
 
 # win_baseline_22350_state | Ensure Script Scanning setting is set to Disabled
 win_baseline_22350_state_Manage: "True"
-win_baseline_22350_state_Path: ' HKEY_LOCAL_MACHINE:\Software\Policies\Microsoft\Windows Defender\Real-Time Protection'
+win_baseline_22350_state_Path: 'HKLM:\Software\Policies\Microsoft\Windows Defender\Real-Time Protection'
 win_baseline_22350_state_Name: "DisableScriptScanning"      
 win_baseline_22350_state_Data: "1"
 win_baseline_22350_state_Type: dword
