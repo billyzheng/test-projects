@@ -2867,6 +2867,12 @@ win_baseline_23128_state_Type: dword
 
 
 
+# win_baseline_13918_state | Ensure Turn On Virtualization Based Security: Require UEFI Memory Attributes Table is set to Enable
+win_baseline_13918_state_Manage: "True"
+win_baseline_13918_state_Path: 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard'
+win_baseline_13918_state_Name: "HVCIMATRequired"
+win_baseline_13918_state_Data: "1"
+win_baseline_13918_state_Type: dword
 
 
 # "win_baseline_13923_state | Ensure Block Office applications from injecting code into other processes
